@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(update-config)",
+      "Skill(schedule)",
+      "Bash(python *)",
+      "PowerShell([System.Guid]::NewGuid\\(\\).ToString\\(\\))"
+    ]
+  }
+}
