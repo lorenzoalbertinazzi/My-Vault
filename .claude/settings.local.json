@@ -4,7 +4,11 @@
       "Skill(update-config)",
       "Skill(schedule)",
       "Bash(python *)",
-      "PowerShell([System.Guid]::NewGuid\\(\\).ToString\\(\\))"
+      "PowerShell([System.Guid]::NewGuid\\(\\).ToString\\(\\))",
+      "Bash(Remove-Item \"C:\\\\Users\\\\lalbe\\\\OneDrive\\\\Desktop\\\\My Vault\\\\Finance\\\\2026-05-26-finance.md\" -Force)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\lalbe\\\\OneDrive\\\\Desktop\\\\My Vault\\\\Tech & AI\\\\2026-05-26-tech-ai.md\" -Force)",
+      "Bash(Write-Output \"Deleted\")",
+      "PowerShell(New-Item *)"
     ]
   }
 }

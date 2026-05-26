@@ -11,10 +11,14 @@
             "id": "2bc67b197ec664c7",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "yield-curve-and-bonds.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "yield-curve-and-bonds"
             }
           }
         ]
@@ -160,16 +164,27 @@
               "icon": "lucide-list",
               "title": "Outline of Ideas"
             }
+          },
+          {
+            "id": "4a8864617ceb8822",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -181,22 +196,36 @@
   },
   "active": "f74dece3d1e478cd",
   "lastOpenFiles": [
+    "yield-curve-and-bonds.md",
+    "Psychology/cognitive-biases.md",
+    "Finance/portfolio-theory.md",
+    "Finance/macroeconomics-101.md",
+    "Psychology/48-laws-of-power.md",
+    "Psychology/48-laws-of-power.md.tmp.2472.84cd1b2a9815",
+    "Psychology/mental-models.md",
+    "Psychology/mental-models.md.tmp.2472.4a5ff0741606",
+    "Psychology/cognitive-biases.md.tmp.2472.837ff9f5949c",
+    "Psychology/cialdini-influence.md",
+    "Psychology/cialdini-influence.md.tmp.2472.36d148f2c7ef",
+    "Tech & AI/machine-learning-fundamentals.md",
+    "Tech & AI/machine-learning-fundamentals.md.tmp.2472.769cc67dba7a",
+    "Tech & AI/prompt-engineering.md",
+    "Tech & AI/prompt-engineering.md.tmp.2472.9ccd2cecba9b",
+    "Tech & AI/transformer-architecture.md",
+    "Tech & AI/transformer-architecture.md.tmp.2472.c61fd390a57d",
+    "Finance/portfolio-theory.md.tmp.2472.5a145acd253a",
+    "Finance/valuation-fundamentals.md",
+    "Finance/options-basics.md",
+    "Finance/options-basics.md.tmp.2472.ca236863e99f",
+    "Finance/macroeconomics-101.md.tmp.2472.55a033369d06",
+    "Tech & AI/2026-05-26-tech-ai.md",
+    "Finance/2026-05-26-finance.md",
     "README.md",
     "CLAUDE.md",
-    "CLAUDE.md.tmp.38364.b8104d8c304a",
-    "_Inbox",
-    "Work",
-    "Psychology",
-    "World Events",
-    "Geopolitics",
-    "Finance",
-    "Tech & AI",
     "6 - Main Notes/following the tutorial at 9am.md",
     "2 - Source Material/Past Notes/La psicologia delle folle.md",
     "1 - Rough Notes/Ideas.md",
-    "2 - Source Material/Past Notes",
     "5 - Templates/Main Note.md",
-    "6 - Main Notes",
     "2 - Source Material/Books.md",
     "2 - Source Material/Podcasts.md",
     "Welcome.md"
