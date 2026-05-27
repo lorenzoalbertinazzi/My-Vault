@@ -1,160 +1,187 @@
 ---
-title: Retrieval-Augmented Generation (RAG)
+title: Retrieval-Augmented Generation (RAG) — Architecture, Mechanics, and Best Practices
 date: 2026-05-27
-tags: [ai, llm, rag, vector-databases, information-retrieval]
+tags: [ai, llm, rag, retrieval, vector-databases, embeddings, nlp]
 source: research
 last_updated: 2026-05-27
 ---
 
 ## Summary
-Retrieval-Augmented Generation (RAG) is an AI architecture pattern that combines large language model generation with dynamic retrieval from an external knowledge base, solving the core limitations of LLMs: static training data, hallucination on specific facts, and inability to reason over private or recent information. Rather than embedding all knowledge in model weights, RAG queries a document store at inference time and injects relevant context into the prompt. It has become the dominant pattern for building production AI applications grounded in real-world data.
+Retrieval-Augmented Generation (RAG) is an architecture that enhances large language models (LLMs) by grounding their responses in dynamically retrieved external documents rather than relying solely on parametric memory baked into weights at training time. First proposed by Lewis et al. (Meta AI, 2020), RAG has become the dominant pattern for building knowledge-intensive AI applications because it reduces hallucinations, keeps information current without retraining, and provides transparent sourcing.
 
 ## Key Points
-- LLMs hallucinate facts not well-represented in training data; RAG grounds responses in retrieved evidence
-- The pipeline: query → embed → vector similarity search → retrieve chunks → inject into prompt → generate response
-- Chunking strategy and embedding quality are the two biggest levers for retrieval performance
-- Advanced patterns: HyDE, re-ranking, multi-hop retrieval, graph RAG, and agentic RAG
-- Evaluation metrics: retrieval recall, answer faithfulness, answer relevance (RAGAs framework)
+- RAG = Retriever + Generator: a retrieval system finds relevant documents; an LLM reads them to produce grounded answers
+- **Vector embeddings** encode semantic meaning numerically; cosine similarity retrieves the most relevant chunks
+- The core pipeline: Query → Embed query → Vector search → Retrieve top-k chunks → Augment prompt → LLM generates answer
+- RAG solves the **knowledge cutoff problem** and dramatically reduces hallucination rates on factual queries
+- **Chunking strategy** is one of the highest-leverage decisions in RAG quality
+- Advanced patterns: HyDE, re-ranking, parent-child chunking, query decomposition, recursive RAG
 
 ## Details
 
-### Why RAG Exists: The LLM Knowledge Problem
+### Why RAG Exists: The Core Problem
 
-Large language models encode knowledge in their weights during training. This creates fundamental limitations:
+LLMs learn facts from their training data and store them in their billions of parameters (hence "parametric memory"). This creates three problems:
+1. **Knowledge cutoff**: the model knows nothing after its training date
+2. **Hallucination**: when the model lacks a fact, it often confabulates a plausible-sounding answer
+3. **No sourcing**: users cannot verify where a claim came from
 
-1. **Staleness**: Training data has a cutoff date. GPT-4's knowledge stops at a fixed date; it cannot know yesterday's news, your company's latest product specs, or a paper published last month.
-2. **Hallucination**: LLMs generate statistically plausible text, not verified facts. When asked about specific details not in training data, they confabulate confidently.
-3. **Privacy and proprietary data**: You cannot fine-tune a public LLM on your company's internal documents for every use case — it's expensive, slow, and creates IP exposure risks.
-4. **Context window limits**: Even with large context windows (128K–1M tokens), loading an entire document corpus into every prompt is impractical.
+The naive solution — retraining or fine-tuning the model on new data — is prohibitively expensive for most use cases and still doesn't provide citation-level traceability.
 
-RAG solves all four by separating *storage* from *generation*: knowledge lives in a queryable database; the LLM is the reasoning engine.
+RAG solves this by externalizing knowledge. Instead of baking facts into weights, you retrieve them at inference time from a live, updateable knowledge base.
 
-### The Basic RAG Pipeline
+### Core Architecture
 
 ```
 User Query
-    ↓
-[Embedding Model] → Query Vector
-    ↓
-[Vector Database] ← Document Embeddings (pre-indexed)
-    ↓
-Top-K Similar Chunks Retrieved
-    ↓
-[Prompt Construction] — Query + Retrieved Context + Instructions
-    ↓
-[LLM] → Generated Response (grounded in retrieved docs)
+    │
+    ▼
+[Query Encoder / Embedding Model]
+    │  (converts query to dense vector)
+    ▼
+[Vector Store / Index]  ◄─── Pre-indexed Documents
+    │  (ANN search: returns top-k most similar chunks)
+    ▼
+[Retrieved Chunks (Context)]
+    │
+    ▼
+[Prompt Assembly]
+    │  "Answer the question using the context below: <chunks> \n\n Question: <query>"
+    ▼
+[LLM Generator]
+    │
+    ▼
+[Grounded Response + Citations]
 ```
 
-**Step 1: Indexing (offline)**
-- Split documents into chunks (typically 200–1000 tokens)
-- Embed each chunk using an embedding model (OpenAI text-embedding-3, Cohere embed, BGE, etc.)
-- Store embeddings + metadata in a vector database (Pinecone, Weaviate, Chroma, pgvector, etc.)
+### Step 1: Document Ingestion and Chunking
 
-**Step 2: Retrieval (at inference)**
-- Embed the user's query with the same embedding model
-- Run approximate nearest neighbor (ANN) search against the vector database
-- Retrieve top-K most semantically similar chunks (typically K=3–10)
+Before retrieval can happen, documents must be indexed. The pipeline:
 
-**Step 3: Generation (at inference)**
-- Construct a prompt: `[System instructions] + [Retrieved chunks] + [User query]`
-- Send to LLM
-- LLM generates a response grounded in the retrieved evidence
+1. **Load** raw documents (PDFs, web pages, databases, APIs)
+2. **Clean** (strip HTML, normalise whitespace)
+3. **Chunk** — split into segments the LLM can process
+4. **Embed** each chunk using an embedding model
+5. **Store** in a vector database
 
-### Chunking Strategies
-Chunking is often the most impactful design decision in a RAG system.
+**Chunking strategies** — arguably the most important RAG design decision:
 
-**Fixed-size chunking**: Split every N tokens with some overlap. Simple but can split mid-sentence or mid-concept.
+| Strategy | How it works | Best for |
+|---|---|---|
+| **Fixed-size (token) chunking** | Split every N tokens with overlap | Simple baseline |
+| **Sentence/paragraph splitting** | Split at natural boundaries | General text |
+| **Semantic chunking** | Group sentences by semantic similarity | Heterogeneous documents |
+| **Parent-child chunking** | Small chunks for retrieval, large parent chunks for context | Precise retrieval + full context |
+| **Recursive character splitting** | Try multiple separators hierarchically | Code, structured text |
 
-**Semantic chunking**: Split at natural boundaries (paragraphs, sections, sentence groups with similar embedding). Higher quality but more complex.
+**Overlap**: adding 10–20% overlap between chunks prevents answers spanning chunk boundaries from being missed.
 
-**Hierarchical chunking**: Index both large parent chunks (for context) and small child chunks (for precise retrieval). Retrieve small chunks but pass large chunks to the LLM.
+### Step 2: Embedding Models
 
-**Document-structure chunking**: Respect the document's structure (headings, tables, code blocks). Essential for technical documentation.
-
-**Key chunking considerations**:
-- Chunks must be self-contained enough to be useful without surrounding context
-- Overlap (10–20% typically) prevents important information from falling at boundaries
-- Metadata (source, date, section, page) should be attached to every chunk
-
-### Embedding Models
-Embeddings map text to dense vectors in high-dimensional space (typically 768–3072 dimensions) such that semantically similar text is close together.
+An embedding model converts text to a dense vector (e.g., 1536 dimensions). Similar texts have vectors with high cosine similarity.
 
 Popular embedding models:
-- **OpenAI text-embedding-3-small/large**: High quality, API-based, ~$0.02/million tokens
-- **Cohere Embed v3**: Strong multilingual support
-- **BGE (Beijing Academy AI)**: Strong open-source models, can run locally
-- **Jina Embeddings**: Good for long documents (8K token context)
-- **Nomic Embed**: Open-source, competitive with commercial options
+- **OpenAI text-embedding-3-small/large**: strong general-purpose performance
+- **Cohere Embed v3**: multilingual, efficient
+- **BGE / E5 (BAAI)**: high-performing open-source options
+- **Jina Embeddings**: long-context specialised
+- **Voyage AI**: often top-of-leaderboard on MTEB benchmarks
 
-**Critical**: Always use the same embedding model for both indexing and query-time. Mixing models breaks the semantic space.
+Key properties: **context length** (how much text per chunk), **dimensionality** (higher = more expressive but more storage), **domain specificity** (code, legal, medical embeddings exist).
 
-### Vector Databases
-Specialized databases that index and query high-dimensional vectors efficiently using ANN algorithms (HNSW, IVF, LSH).
+### Step 3: Vector Databases
 
-| Database | Best For |
-|----------|---------|
-| **Pinecone** | Managed SaaS, easiest to get started |
-| **Weaviate** | Hybrid search (vector + keyword), self-hosted or cloud |
-| **Chroma** | Local/embedded, great for prototyping |
-| **pgvector** | PostgreSQL extension, ideal if you already use Postgres |
-| **Qdrant** | High performance, rich filtering, open-source |
-| **Milvus** | Large-scale enterprise deployments |
-| **FAISS** | Facebook's library, best for pure in-memory ANN |
+Vector databases store embeddings and perform Approximate Nearest Neighbour (ANN) search at scale.
 
-Most vector databases support **hybrid search**: combining dense vector similarity with sparse keyword (BM25) matching. This often outperforms pure vector search, especially for proper nouns and technical terms.
+| Database | Notes |
+|---|---|
+| **Pinecone** | Fully managed, production-grade |
+| **Weaviate** | Open source, strong hybrid search |
+| **Qdrant** | Open source, Rust-based, fast |
+| **Chroma** | Lightweight, great for development |
+| **pgvector** | Postgres extension — vectors inside existing DB |
+| **FAISS** | Meta's in-memory library, not a full DB |
+| **Milvus** | Enterprise open-source scale |
+
+**Hybrid search**: combining dense vector search (semantic) with sparse BM25 keyword search often outperforms either alone. Useful when exact term matching matters (proper nouns, SKUs, codes).
+
+### Step 4: Retrieval Quality
+
+Metrics:
+- **Recall@k**: percentage of truly relevant documents in the top-k results
+- **Precision@k**: percentage of retrieved documents that are actually relevant
+- **MRR (Mean Reciprocal Rank)**: how early the first relevant result appears
+- **NDCG**: accounts for graded relevance and rank position
+
+**Re-ranking**: a second-stage model (e.g., Cohere Reranker, cross-encoder) scores the top-k retrieved chunks for relevance to the specific query. Computationally expensive but significantly improves precision.
+
+### Step 5: Prompt Augmentation and Generation
+
+The retrieved chunks are injected into the prompt context window:
+
+```
+System: You are a helpful assistant. Answer using ONLY the context provided. 
+If the answer is not in the context, say "I don't know."
+
+Context:
+[Chunk 1 text]
+---
+[Chunk 2 text]
+---
+[Chunk 3 text]
+
+User: What is the refund policy?
+```
+
+**Critical design choices:**
+- **Context window management**: with many chunks, prioritise most relevant, or use a "lost in the middle" mitigation strategy (most important content at start and end)
+- **Citation instructions**: instruct the LLM to cite specific chunks (enables verifiability)
+- **Handling "no answer found"**: explicit instruction to abstain reduces hallucination
 
 ### Advanced RAG Patterns
 
-**HyDE (Hypothetical Document Embeddings)**
-Instead of embedding the query directly, ask the LLM to generate a hypothetical answer, then embed that. The hypothesis often sits closer in embedding space to real answers than a short question does. Improves retrieval for complex queries.
+**HyDE (Hypothetical Document Embeddings)**: instead of embedding the query directly, use the LLM to generate a hypothetical answer, then embed that. The hypothetical answer's embedding is closer in space to real document embeddings, improving recall.
 
-**Re-ranking**
-Initial vector retrieval returns the top-K (e.g., 20) candidates by embedding similarity. A cross-encoder re-ranker (e.g., Cohere Rerank, BGE-reranker) then scores each candidate much more precisely against the query and re-orders them. Pass only the top-3 to the LLM. Significantly improves precision at a small latency cost.
+**Query Decomposition / Multi-query retrieval**: break complex queries into sub-questions, retrieve for each, then synthesise. Improves coverage for multi-part questions.
 
-**Multi-hop Retrieval**
-For complex questions requiring synthesis across multiple documents, perform iterative retrieval: retrieve, generate an intermediate answer, use that to formulate a new query, retrieve again. Used in systems like IRCoT (Interleaved Reasoning and Retrieval).
+**Agentic RAG / Self-RAG**: the LLM decides whether to retrieve, what to retrieve, and whether retrieved content is sufficient. Allows iterative retrieval until confidence threshold is met.
 
-**Graph RAG**
-Build a knowledge graph from documents (entity extraction, relationship mapping). Retrieve via graph traversal rather than just vector similarity. Especially powerful for questions about relationships between entities. Microsoft's GraphRAG is the leading open-source implementation.
+**Recursive retrieval (RAG over RAG)**: first retrieve a summary index to identify relevant document sections, then retrieve fine-grained chunks only from those sections — reduces noise.
 
-**Agentic RAG**
-Give an LLM agent tools to perform retrieval as needed within a reasoning loop (ReAct, function calling). The agent decides when to search, what to search for, and how many times to iterate. More flexible and powerful than pipeline RAG for complex tasks.
+**RAPTOR**: hierarchically cluster and summarise document chunks, enabling retrieval at multiple levels of abstraction.
 
-### Evaluation: The RAGAs Framework
-RAG systems are notoriously hard to evaluate. The RAGAs framework defines four core metrics:
+### Evaluation Framework
 
-1. **Context Recall**: Did the retrieval surface all necessary information? (Reference needed)
-2. **Context Precision**: Of retrieved chunks, how many were actually relevant?
-3. **Answer Faithfulness**: Does the generated answer stick to what the retrieved context says? (Hallucination detection)
-4. **Answer Relevance**: Does the answer actually address the question asked?
+RAG quality is assessed at three levels:
 
-Good RAG systems optimize all four. Common failure modes:
-- Low recall: Key information wasn't retrieved (chunking or embedding problem)
-- Low faithfulness: LLM ignored retrieved context and hallucinated
-- Low relevance: LLM answered something adjacent but not the actual question
+| Component | What to measure | Tool |
+|---|---|---|
+| **Retrieval** | Are the right chunks retrieved? | Recall@k, NDCG |
+| **Generation** | Is the answer faithful to retrieved context? | Faithfulness (RAGAS) |
+| **End-to-end** | Is the final answer correct? | Answer Relevancy, F1 |
 
-### RAG vs. Fine-tuning
-A common question: should I RAG or fine-tune?
+**RAGAS** (RAG Assessment) is the dominant open-source framework. Key metrics:
+- **Faithfulness**: does the answer stick to retrieved context (no hallucination)?
+- **Answer Relevancy**: how relevant is the answer to the question?
+- **Context Precision/Recall**: did retrieval find the right and complete context?
 
-| | RAG | Fine-tuning |
-|---|-----|-------------|
-| **Best for** | Dynamic/changing knowledge, specific facts, private data | Style, format, behavior, reasoning patterns |
-| **Update cost** | Re-index documents (cheap, fast) | Re-train model (expensive, slow) |
-| **Interpretability** | High — can cite sources | Low — knowledge is baked into weights |
-| **Hallucination** | Reduced (grounded in retrieved text) | May still hallucinate |
-| **Setup cost** | Medium | High |
+### When NOT to Use RAG
 
-In practice, the best systems combine both: fine-tune for behavior and style, use RAG for factual grounding.
+RAG is powerful but not always the right tool:
+- **Structured queries over databases** → use Text-to-SQL instead
+- **Simple FAQ matching** → fine-tuned classifier or keyword search may be faster
+- **Real-time computation** → RAG retrieves documents, not live APIs; use function calling
+- **Very long document reasoning** → sometimes full-document context (very long context LLMs) beats RAG
+- **Low-latency applications** → each RAG call adds latency (embedding + retrieval + reranking)
 
 ### Production Considerations
-- **Latency**: Retrieval adds ~100–500ms. Can be parallelized with LLM call for some architectures.
-- **Security**: Inject retrieved content carefully — prompt injection via malicious documents is a real attack vector.
-- **Cost**: Embedding API calls and vector database hosting add to total cost. Monitor chunk sizes.
-- **Freshness**: Set up incremental indexing pipelines to keep the vector database current.
-- **Source attribution**: Always return source metadata with responses — critical for trust in enterprise applications.
+
+- **Embedding model consistency**: you MUST use the same embedding model at indexing and query time; changing models requires full re-indexing
+- **Chunk version control**: when documents update, delta-index only changed chunks
+- **Security**: filter retrieval results by user access permissions before injecting into prompt (authorization must happen at retrieval layer)
+- **Observability**: log every retrieval call — what was retrieved, what was generated, user feedback — to continuously improve
 
 ## Related
 - [[transformer-architecture]]
 - [[machine-learning-fundamentals]]
 - [[prompt-engineering]]
-- [[vector-databases-and-embeddings]]
