@@ -1,0 +1,104 @@
+---
+title: Behavioral Finance and Investor Psychology
+date: 2026-05-27
+tags: [finance, behavioral-finance, psychology, investing, biases]
+source: research
+last_updated: 2026-05-27
+---
+
+## Summary
+Behavioral finance studies how psychological biases and cognitive errors systematically cause investors to deviate from rational decision-making, often destroying wealth in the process. Pioneered by Daniel Kahneman and Amos Tversky through Prospect Theory, the field bridges psychology and economics to explain market anomalies that classical finance cannot. Understanding these biases is the first step toward guarding against them.
+
+## Key Points
+- **Prospect Theory**: People feel losses roughly twice as powerfully as equivalent gains (loss aversion coefficient ≈ 2.25)
+- **Overconfidence** is the most dangerous individual bias — investors overestimate their skill vs. luck
+- **Herding** and **anchoring** drive momentum crashes and valuation bubbles simultaneously
+- **Mental accounting** leads to irrational portfolio decisions (treating money differently based on its source)
+- Markets are not perfectly efficient precisely *because* behavioral biases are systematic and widespread
+- Correcting for biases requires process-level guardrails, not just awareness
+
+## Details
+
+### What Is Behavioral Finance?
+Classical finance theory (Efficient Market Hypothesis, Modern Portfolio Theory) assumes investors are rational utility-maximizers with full information. Behavioral finance challenges this assumption by documenting that humans are *predictably irrational* — and that these irrationalities have real, measurable impacts on asset prices and personal wealth.
+
+The field emerged from the work of **Daniel Kahneman** and **Amos Tversky** in the 1970s, culminating in Kahneman's Nobel Prize in Economics (2002). Their landmark contribution, **Prospect Theory**, replaced the classical utility function with a value function that is:
+- Defined over *gains and losses* from a reference point, not absolute wealth
+- **Concave for gains** (diminishing sensitivity to additional gains)
+- **Convex for losses** (diminishing sensitivity to additional losses)
+- **Steeper for losses than for gains** — the core of loss aversion
+
+### Core Biases and Their Market Effects
+
+#### 1. Loss Aversion
+The pain of a $1,000 loss is emotionally equivalent to the pleasure of roughly a $2,000-$2,500 gain. This drives several damaging behaviors:
+- **Disposition effect**: Investors hold losers too long (avoiding the pain of realizing a loss) and sell winners too early (locking in the pleasure of a gain) — exactly the opposite of tax-optimal and momentum-following strategy
+- **Risk aversion in the gain domain + risk-seeking in the loss domain**: Investors take too little risk when winning and gamble recklessly when down
+
+#### 2. Overconfidence
+Studies consistently show investors overestimate their ability to pick stocks and time the market. Men tend to be more overconfident than women in financial contexts. Consequences include:
+- **Excessive trading** — the more you trade, the more you underperform after costs (Barber & Odean, 2000)
+- **Under-diversification** — overconfidence in one's own judgment leads to concentrated bets
+- **Planning fallacy** — underestimating how long or expensive a financial project will be
+
+#### 3. Anchoring
+People fixate on an arbitrary reference number and adjust insufficiently from it. In investing:
+- An investor buys a stock at $100; it drops to $60. They anchor to $100 as "fair value" and hold, refusing to accept the new information
+- IPO prices anchor analysts' expectations
+- 52-week highs and lows serve as psychological anchors that influence buy/sell decisions even when fundamentally irrelevant
+
+#### 4. Herding
+Investors observe and imitate the actions of the crowd, leading to:
+- **Momentum** in the short term (as more investors pile in)
+- **Crashes and reversals** when the herd reverses (dot-com bubble, 2008, meme stocks)
+- Herding is rational at the individual level (you might be missing information the crowd has) but devastating at the systemic level
+
+#### 5. Recency Bias and Availability Heuristic
+People overweight recent events and vivid, easily recalled information:
+- After a bull market, investors extrapolate continued gains and take on excessive risk
+- After a crash, they become irrationally risk-averse and exit at the worst possible time
+- The **availability heuristic** makes dramatic events (plane crashes, Enron fraud) feel more likely than they statistically are
+
+#### 6. Confirmation Bias
+Investors seek out information that confirms their existing thesis and discount contradictory evidence. This creates:
+- Echo chambers in investment communities (e.g., Reddit forums on a stock)
+- Reluctance to cut losses when thesis is clearly broken
+- Overweighting of bull/bear cases in analyst research
+
+#### 7. Mental Accounting
+People treat money differently based on arbitrary categorization:
+- "House money effect" — profits are gambled more recklessly than original capital, even though $1 is always $1
+- Treating a tax refund as "found money" and spending it impulsively
+- Holding a losing stock in a retirement account to avoid seeing the loss, while selling winners in a taxable account (worst tax outcome)
+
+### Market-Level Implications
+Behavioral biases aggregate into market-wide anomalies:
+- **Momentum factor**: Stocks that rose in the past 12 months tend to continue rising (herd + recency bias)
+- **Value premium**: Cheap stocks outperform over time because investors extrapolate recent bad performance too far (overreaction)
+- **January effect**: Tax-loss selling in December creates buying opportunities in January
+- **Volatility clustering**: Fear and greed amplify price swings beyond fundamental justification
+
+### How to Guard Against Your Own Biases
+
+| Bias | Mitigation Strategy |
+|------|---------------------|
+| Loss aversion | Pre-commit stop-loss rules; evaluate portfolios less frequently |
+| Overconfidence | Use base rates; track decision outcomes in a journal |
+| Anchoring | Ask "what would I pay for this if I didn't know the current price?" |
+| Herding | Build a contrarian checklist; require independent primary research |
+| Recency bias | Study long-run historical base rates; use valuation multiples |
+| Confirmation bias | Actively seek out the bear case; assign a "devil's advocate" |
+| Mental accounting | Treat all wealth as a single unified pool |
+
+### Key Thinkers
+- **Daniel Kahneman** — *Thinking, Fast and Slow* — System 1 vs. System 2 thinking
+- **Amos Tversky** — co-creator of Prospect Theory
+- **Richard Thaler** — mental accounting, nudge theory, Nobel 2017
+- **Robert Shiller** — irrational exuberance, CAPE ratio, narrative economics
+- **Brad Barber & Terrance Odean** — empirical work on overconfidence and trading costs
+
+## Related
+- [[cognitive-biases]]
+- [[mental-models]]
+- [[value-investing-methodology]]
+- [[portfolio-theory]]
