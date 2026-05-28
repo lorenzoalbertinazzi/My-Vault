@@ -3,7 +3,7 @@ title: Mental Models — Thinking Frameworks
 date: 2026-05-26
 tags: [psychology, mental-models, decision-making, thinking, Munger]
 source: research
-last_updated: 2026-05-26
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -121,6 +121,85 @@ Returns reinvested generate returns on returns. The most powerful force in finan
 **Key insight**: The early period looks flat (invisible progress). The later period looks explosive (suddenly obvious). Most people quit during the flat part.
 
 Munger: "The best thing a human being can do is to help another human being know more." Every interaction where you compound someone's knowledge creates asymmetric value.
+
+### Antifragility (Nassim Taleb)
+
+Taleb distinguishes three responses to disorder and volatility:
+- **Fragile**: harmed by volatility (a wine glass)
+- **Robust**: unaffected by volatility (a rock)
+- **Antifragile**: benefits from volatility (an immune system, a muscle, evolution)
+
+Most systems designed by humans are fragile because they're optimized for predicted conditions. But the world is characterized by Black Swans — unexpected, high-impact events that models can't predict.
+
+**Applications**:
+- **Career**: multiple income streams, optionality, avoiding irreversible commitments
+- **Portfolio**: barbell approach — some assets that benefit from volatility (long options, venture) + very safe core
+- **Personal resilience**: voluntary stressors (exercise, cold exposure, fasting) make you stronger; comfort eliminates the stressor input that drives adaptation
+- **Innovation**: trial-and-error systems (startups, evolution) are antifragile; bureaucracies that prevent failure are fragile
+
+Key insight: some amount of disorder and failure in a system is necessary to reveal weaknesses before they become catastrophic. Suppressing small forest fires creates conditions for massive ones.
+
+---
+
+### The Pareto Principle (80/20 Rule)
+
+In most systems, approximately 80% of effects come from 20% of causes. Vilfredo Pareto observed this in land distribution in Italy (1896) and it has been observed across many domains:
+- 20% of customers generate 80% of revenue
+- 20% of bugs cause 80% of software crashes
+- 20% of exercises produce 80% of fitness gains
+- 20% of relationships produce 80% of meaning and support
+
+**Why it matters**: The distribution is not uniform — resources spent on the less-important 80% of causes produce disproportionately little impact. Identifying and concentrating on the vital 20% is the core of productivity, business strategy, and personal effectiveness.
+
+**Caution**: The exact ratio varies; the principle is the skewed distribution, not the specific numbers.
+
+---
+
+### Goodhart's Law
+
+> **"When a measure becomes a target, it ceases to be a good measure."**
+
+When a proxy metric becomes an official performance target, people optimize for the metric rather than the underlying goal it was supposed to measure, corrupting the measurement:
+
+- UK hospitals given waiting-time targets: manipulated by keeping patients in ambulances until the clock started
+- Schools given test-score targets: teach to the test, cut art and recess; test scores rise but learning doesn't
+- Soviet factories given output quotas in tons: made products heavier to meet targets
+
+**The deeper principle**: Any sufficiently complex system (economy, education, human motivation) cannot be captured in a single metric. Multiple competing metrics constrain gaming, but eventually any fixed metric gets gamed.
+
+---
+
+### The Principal-Agent Problem
+
+A principal (owner, employer, voter) delegates work to an agent (manager, employee, politician) whose interests may diverge from the principal's. The agent has:
+- More information than the principal (information asymmetry)
+- Different incentives (agent cares about salary, status, ease; principal cares about long-run outcomes)
+
+**Classic examples**:
+- Fund managers (agents) churn portfolios to generate fees even when buy-and-hold would serve investors (principals) better
+- Real estate agents sell your home faster/cheaper than optimal because their commission on a higher price doesn't justify the extra effort
+- Corporate executives (agents) take excessive risk with shareholder (principal) capital when they're compensated with large bonuses
+
+**Mitigations**: Equity compensation (aligning agent with long-run owner outcomes), transparent reporting, reputation systems, competition, and independent monitoring.
+
+---
+
+### Dunbar's Number
+
+Robin Dunbar (Oxford anthropologist) estimated in 1992 that the cognitive limit of stable social relationships a human can maintain is approximately **150**. This number appears across anthropological data:
+- Average village size in hunter-gatherer societies: ~150
+- Effective military unit size (Roman maniples, British military companies): ~150
+- Amish church communities split when they exceed ~150
+
+**Layered structure**:
+- ~5 intimate relationships (family, best friends)
+- ~15 close friends (confide personal problems)
+- ~50 good friends (regular social contact)
+- ~150 acquaintances (stable social relationships)
+- ~500 known faces
+- ~1,500 people whose names you can reliably recall
+
+**Business implication**: Organizations above ~150 people require formal management structures, rules, and processes. Below this threshold, mutual accountability and social norms can govern behavior. Above it, impersonal institutional mechanisms take over — hence why many successful small businesses struggle to scale past this threshold without a deliberate management transition.
 
 ## Related
 - [[cognitive-biases]]

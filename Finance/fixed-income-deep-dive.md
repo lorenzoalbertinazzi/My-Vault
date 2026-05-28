@@ -3,7 +3,7 @@ title: Fixed Income Deep Dive — Bonds, Yield Curves, and Credit Risk
 date: 2026-05-27
 tags: [finance, bonds, fixed-income, yield-curve, credit-risk, interest-rates]
 source: research
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -119,6 +119,54 @@ By 2026, with fiscal deficits running high globally, the long end of the yield c
 - **Inflation hedge**: TIPS, floating rate notes, short-duration ladders
 
 The classic 60/40 portfolio (60% equities, 40% bonds) was stress-tested in 2022 when both fell together. Critics argue duration risk needs to be actively managed rather than assumed as automatically defensive.
+
+### Duration Matching and Portfolio Immunization
+
+**Immunization** is the strategy of constructing a bond portfolio so that its value is protected against interest rate changes by matching its duration to a known future liability date. A pension fund paying benefits in 10 years should hold a portfolio with duration ≈ 10 — then if rates rise (reducing portfolio value), the discount rate applied to liabilities also rises (reducing the PV of liabilities by a matching amount).
+
+**Key condition for immunization**: Duration match is not sufficient alone; the portfolio's convexity must be ≥ the liability's convexity. If the portfolio has higher convexity than the liability, any rate change (up or down) creates a surplus — this is the "convexity bonus."
+
+**Cash flow matching** (a stricter form): Structure coupon/principal payments to literally match liability cash flows date by date — eliminates reinvestment risk entirely.
+
+### Inflation-Linked Securities and Breakeven Rates
+
+**TIPS mechanics**: The principal adjusts daily with CPI. A $1,000 TIPS bond with 2% coupon pays 2% × (adjusted principal). After 3 years of 4% inflation, the principal becomes $1,124.86; coupon payments have risen proportionally.
+
+**Inflation breakeven** = Nominal yield − TIPS real yield. If a 10-year Treasury yields 4.5% and the 10-year TIPS yields 1.8%, the breakeven inflation rate is 2.7% — the market's implied inflation expectation. If actual inflation > breakeven, TIPS outperform. If actual < breakeven, nominal Treasuries outperform.
+
+**Breakeven as a market signal**: Central banks track breakeven rates closely because they reveal whether long-term inflation expectations are "anchored." Breakevens above 2.5–3% for extended periods historically prompt tighter monetary policy.
+
+### Spread Duration
+
+While regular duration measures sensitivity to risk-free rate changes, **spread duration** measures a bond's price sensitivity to changes in its credit spread. For an investment-grade corporate bond with 5-year modified duration trading at a 150 bps spread, a 50 bps widening (e.g., due to credit deterioration) causes roughly a 2.5% price decline from the spread component alone — independent of any change in Treasury yields.
+
+In a credit-focused portfolio:
+- **Total return** = Risk-free rate return ± credit spread change ± spread carry (the yield premium itself)
+- During risk-off events, spread duration dominates performance — even if the Fed cuts rates (helping rate duration), widening credit spreads can overwhelm the benefit
+
+### Structured Products: CLOs
+
+**Collateralized Loan Obligations (CLOs)** are securitization vehicles that pool hundreds of leveraged loans (bank loans to sub-investment-grade companies) and issue tranches of varying seniority:
+
+| Tranche | Rating | Yield | Takes First Loss? |
+|---------|--------|-------|-------------------|
+| AAA senior | AAA | SOFR + ~1.5% | No — last to take losses |
+| AA | AA | SOFR + ~2.0% | No |
+| A | A | SOFR + ~2.5% | No |
+| BBB | BBB | SOFR + ~4–5% | No |
+| BB | BB | SOFR + ~7–8% | No |
+| Equity tranche | Unrated | 15–20% target | Yes — first loss position |
+
+The CLO manager actively trades the loan pool within constraints. The equity tranche captures the excess return after paying all tranches — but absorbs first losses. CLOs have historically had excellent performance for investment-grade tranches, with near-zero defaults during the 2008 crisis at AAA level despite the underlying loans being leveraged.
+
+### Duration Risk Across the Curve: "Bull Steepener" vs. "Bear Flattener"
+
+Bond portfolio managers track not just absolute yields but yield curve dynamics:
+
+- **Bull steepener**: Short rates fall (policy easing) while long rates fall less or rise — curve steepens; long-duration bonds benefit less than short-duration bonds
+- **Bear steepener**: Long rates rise faster than short rates — punishment for long-duration positions even if policy rates are stable; reflects rising term premium or inflation concerns (as in 2023–2026)
+- **Bull flattener**: Long rates fall (flight-to-safety) while short rates fall less — classic "recession trade"
+- **Bear flattener**: Short rates rise (tightening) faster than long rates — curve inversion; classic late-cycle pattern before recessions
 
 ## Related
 - [[portfolio-theory]]

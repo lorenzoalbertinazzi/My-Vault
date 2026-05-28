@@ -3,7 +3,7 @@ title: US-China Great Power Competition and the Fragmenting World Order
 date: 2026-05-27
 tags: [geopolitics, us-china, great-power-competition, multipolar, trade-war]
 source: https://www.weforum.org/press/2026/01/global-risks-report-2026-geopolitical-and-economic-risks-rise-in-new-age-of-competition/
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -99,6 +99,23 @@ The structural trajectory favors continued intensification of competition:
 - Risk of miscalculation is high: spy balloons, military near-misses over the South China Sea, and cyber incidents create escalation pathways
 
 The critical question for the next five years is whether the rivalry remains managed competition or tips toward direct confrontation — most likely trigger being Taiwan or a severe economic shock blamed on the other side.
+
+### Update — May 28, 2026
+
+**Trump-Xi Beijing Summit (May 14, 2026)**: Presidents Trump and Xi met in Beijing — the first direct summit since Trump's return to office. Agenda included:
+- Chinese purchases of US agricultural and industrial goods
+- Tariff rollback framework
+- Taiwan (no public statement of any agreement)
+- Rare earths (China controls ~80% of global processing; leverage in negotiations)
+- Iran: Both sides have divergent interests — the US is in conflict with Iran; China is Iran's largest oil customer
+
+**Tariff situation as of May 2026**: Even after coming down from brief triple-digit levels in 2025, US tariffs on Chinese goods remain at approximately 48% effective rate — the highest against any major trading partner. The US and China appear to have agreed in principle on restoring pre-tariff-war Section 301 rates as a starting framework, but no formal extension of the trade truce has been signed. US Treasury Secretary Bessent indicated China "would accept the restoration of prior rates as long as they don't go higher."
+
+**Supply chain decoupling accelerating**: Apple has moved a significant portion of iPhone production to India; Nike has shifted to Vietnam. The structural supply chain diversification out of China is gaining momentum, with companies treating China+1 strategies as permanent policy rather than contingency planning.
+
+**Iran as a wedge**: The US-Iran conflict (see separate note) is creating a significant point of friction. China has major oil purchase agreements with Iran and has been calling for restraint. The conflict tests whether China will use its leverage with Iran to support a diplomatic solution (gaining US goodwill) or protect its energy interests (maintaining Iran relationship). As of late May 2026, China is pursuing back-channel mediation while continuing to purchase Iranian oil.
+
+**Assessment**: The Trump-Xi summit signals both sides prefer "managed rivalry" to open confrontation, but structural tensions in technology, Taiwan, and now Iran remain unresolved. The tariff level of ~48% represents a new floor for the economic relationship — both sides appear to have accepted permanent elevated tariffs as the baseline.
 
 ## Related
 - [[2026-05-27-us-iran-conflict-hormuz]]

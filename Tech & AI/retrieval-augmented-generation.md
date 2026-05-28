@@ -3,7 +3,7 @@ title: Retrieval-Augmented Generation (RAG) — Architecture, Mechanics, and Bes
 date: 2026-05-27
 tags: [ai, llm, rag, retrieval, vector-databases, embeddings, nlp]
 source: research
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -180,6 +180,86 @@ RAG is powerful but not always the right tool:
 - **Chunk version control**: when documents update, delta-index only changed chunks
 - **Security**: filter retrieval results by user access permissions before injecting into prompt (authorization must happen at retrieval layer)
 - **Observability**: log every retrieval call — what was retrieved, what was generated, user feedback — to continuously improve
+
+### GraphRAG (Microsoft, 2024)
+
+Standard vector RAG retrieves semantically similar chunks but misses **cross-document relationships** — facts that require synthesizing information across many disparate sources.
+
+**GraphRAG** builds a knowledge graph from the document corpus before retrieval:
+1. Extract entities and relationships from all documents using LLMs
+2. Build a graph with entities as nodes, relationships as edges
+3. Cluster graph communities (Leiden algorithm)
+4. Summarize each community and its key themes
+5. At query time, retrieve both: community summaries (for broad context) + specific entity chunks (for precise answers)
+
+**When GraphRAG outperforms standard RAG**:
+- Queries that ask "what are the main themes across all documents?"
+- Questions requiring multi-hop reasoning: "How did X influence Y through Z?"
+- Entity-centric queries across a large, heterogeneous document set
+
+**Tradeoff**: GraphRAG is expensive to build (LLM calls for entity extraction on every document) and slower to query. It is overkill for simple factual Q&A but transformative for complex analytical workloads over large corpora.
+
+---
+
+### Corrective RAG (CRAG)
+
+Standard RAG trusts retrieved chunks even when they're irrelevant or incorrect. **Corrective RAG** (Yan et al., 2024) adds a validation and correction step:
+
+1. Retrieve top-k chunks (standard)
+2. **Evaluate relevance** of retrieved chunks using a lightweight classifier
+3. If chunks are high-quality → use directly
+4. If chunks are ambiguous → supplement with web search
+5. If chunks are entirely irrelevant → discard and rely on web search + knowledge distillation
+
+This dynamic correction loop reduces hallucinations from poor retrieval without requiring a full re-engineering of the retrieval pipeline.
+
+---
+
+### Long-Context LLMs vs. RAG
+
+As LLM context windows have expanded (GPT-4 128K → Gemini 1.5 1M → Claude 3.5 200K+), the question arises: can you simply throw the entire document corpus into the context and skip RAG entirely?
+
+**When full-context beats RAG**:
+- The corpus fits in the context window
+- Reasoning requires holistic understanding (not specific fact retrieval)
+- Very long novels, codebases, or legal documents where any chunk might be relevant
+
+**When RAG beats full-context**:
+- Corpus is too large for any context window
+- Low-latency is required (vector search is faster than attention over millions of tokens)
+- Cost efficiency (filling 1M token context is extremely expensive per query)
+- Dynamic, updateable knowledge bases (can't update a static context)
+
+**The emerging hybrid**: Use RAG to retrieve the top candidates, then use a long-context model to reason over the full retrieved content without further chunking — "RAG over long context." Combines RAG's scalability with full-document reasoning.
+
+---
+
+### RAG Evaluation with LLM-as-Judge
+
+Human evaluation of RAG systems is slow and expensive. **LLM-as-judge** automates evaluation at scale:
+
+**RAGAS framework** scores:
+- **Faithfulness**: Does the answer make claims that are actually supported by the retrieved context? (Detected by asking the LLM: "Can each claim in this answer be traced to the context?")
+- **Answer Relevancy**: Does the answer address the actual question? (LLM generates hypothetical questions from the answer; cosine similarity with original question)
+- **Context Recall**: Is all necessary information present in the retrieved context? (Requires ground truth)
+- **Context Precision**: How much irrelevant content was retrieved?
+
+**G-Eval** (NLG evaluation): Multi-step LLM evaluation prompting the model to reason through specific evaluation criteria before scoring. Outperforms simple scoring prompts.
+
+**Pitfall**: LLM judges have systematic biases (prefer longer answers, prefer their own outputs, sensitive to presentation order). Mitigation: use multiple judge models, swap answer order, evaluate specific dimensions separately.
+
+---
+
+### Modular RAG: Compose, Don't Inherit
+
+The field has moved beyond the monolithic RAG pipeline toward **modular RAG** — compose specialized modules for each stage:
+
+- **Retrieval module**: swap vector search, BM25, SPLADE, or GraphRAG depending on query type
+- **Refinement module**: re-ranking, compression, or filtering
+- **Generation module**: choose LLM based on task (cheap small model for simple Q&A; large model for complex synthesis)
+- **Memory module**: episodic memory (conversation history), semantic memory (user preferences), procedural memory (which tools/modules to use when)
+
+This composable architecture — exemplified by frameworks like LlamaIndex, Haystack, and LangChain — enables production systems to route queries to the appropriate sub-pipeline rather than applying the same approach to every query.
 
 ## Related
 - [[transformer-architecture]]

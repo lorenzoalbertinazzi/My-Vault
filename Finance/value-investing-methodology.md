@@ -3,7 +3,7 @@ title: Value Investing Methodology
 date: 2026-05-27
 tags: [finance, investing, value-investing, fundamentals]
 source: research
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -99,6 +99,66 @@ The strategy's greatest challenge is psychological, not analytical:
 Long-term academic evidence strongly supports value investing. From 1926–2020, value stocks (low P/B) outperformed growth stocks by ~4% per year in the US (Fama-French). The "value premium" has been documented globally. However, it can underperform for extended periods (e.g., 2007–2020 in the US, as growth/tech dominated). This very underperformance is what maintains the opportunity: if value always worked immediately, it would be arbitraged away.
 
 Notable practitioners: Warren Buffett (Berkshire Hathaway), Charlie Munger, Walter Schloss, Seth Klarman, Joel Greenblatt, Howard Marks, Mohnish Pabrai.
+
+### Joel Greenblatt's Magic Formula
+
+Greenblatt (*The Little Book That Beats the Market*, 2005) proposed a systematic ranking system combining:
+1. **Earnings Yield** = EBIT / Enterprise Value (inverted P/E, capital-structure neutral)
+2. **Return on Capital** = EBIT / (Net Working Capital + Net Fixed Assets)
+
+Rank all stocks in the market on each metric, sum the ranks, buy the top-ranked 20–30 stocks, hold one year, rebalance. Backtests (1988–2004) showed ~30% annual returns — though live results post-publication have been more modest as the effect partly arbitraged away and the strategy underperforms for multi-year stretches.
+
+The formula operationalizes "buying good businesses at cheap prices" mechanically — avoiding the psychological difficulties of individual stock selection.
+
+### Benjamin Graham's Net-Net Formula
+
+Graham's most conservative screen: buy stocks trading below their **Net Current Asset Value (NCAV)**:
+
+> **NCAV = Current Assets − Total Liabilities**
+> **Buy if Price < NCAV × 0.67** (i.e., paying 67 cents for $1 of NCAV)
+
+The logic: you're buying the liquid assets alone for less than they're worth, getting the business itself for free. The business may be mediocre or even loss-making — Graham didn't care. At 67 cents on the dollar of conservatively measured liquid assets, the downside is limited by asset value.
+
+This approach was prolific in the 1930s–1950s when markets were thin and analysts were few. Today, US net-nets are extremely rare. Japan has historically offered more net-net opportunities due to its corporate governance structure (excess cash hoarding), a dynamic that attracted Warren Buffett to buy Japan's five major trading companies in 2020.
+
+### Growth at a Reasonable Price (GARP)
+
+A hybrid approach between pure value and pure growth investing, popularized by Peter Lynch (Fidelity Magellan Fund). The key metric:
+
+> **PEG Ratio = P/E ÷ Earnings Growth Rate**
+> 
+> PEG < 1.0 → potentially cheap for its growth rate
+
+Lynch's principle: a company growing earnings at 15% is reasonably priced at a P/E of 15 (PEG = 1). It's cheap at P/E of 10 (PEG = 0.67) and expensive at P/E of 25 (PEG = 1.67).
+
+GARP avoids the value trap of buying genuinely declining businesses just because they're statistically cheap, while avoiding the growth trap of overpaying for high-growth companies. Lynch produced 29% annual returns over 13 years at Magellan — one of the great long-run track records.
+
+### Capital Allocation Quality: The True Driver of Compounding
+
+Buffett's evolution beyond Graham culminated in recognizing that the **quality of capital allocation by management** is the ultimate driver of long-run stock performance. A business can earn high returns on its existing assets but destroy value if it reinvests earnings at low returns.
+
+**Reinvestment rate × Return on incremental invested capital = intrinsic growth rate**
+
+A business earning 20% ROIC and reinvesting 50% of earnings grows intrinsic value at 10% per year — compounding without needing any external capital. This "flywheel" dynamic is the mechanism behind Berkshire, Constellation Software, Danaher, and other compounders.
+
+**Capital allocation hierarchy** (from value-accretive to value-destructive):
+1. High-return organic reinvestment (best, if available)
+2. Acquisitions at attractive prices with genuine synergies
+3. Debt repayment (when leverage is elevated)
+4. Share buybacks (accretive only when stock is below intrinsic value)
+5. Dividends (neutral to value; returns capital to shareholders)
+6. Value-destroying acquisitions at excessive premiums (worst)
+
+Studying a management team's capital allocation history — not just their strategic narrative — is one of the highest-leverage activities in fundamental research.
+
+### The Value Premium: Why It Persists
+
+Academic debate on whether the value premium (cheap stocks outperforming) is:
+1. **A risk premium**: Value stocks are genuinely riskier (more distressed, more economically sensitive) — the premium is fair compensation
+2. **A behavioral anomaly**: Investors systematically overpay for glamour (growth) and underpay for boring/distressed businesses — price eventually reverts to fundamentals
+3. **A structural artifact**: Institutional benchmarking against indices discourages value tilts that deviate significantly from benchmark weights
+
+The practical implication differs: if it's a risk premium, it should persist indefinitely. If behavioral, it may be partially arbitraged away as more smart money pursues it. Evidence suggests both components are real — the premium exists but has been weaker in recent decades as access to value strategies has democratized.
 
 ## Related
 - [[valuation-fundamentals]]

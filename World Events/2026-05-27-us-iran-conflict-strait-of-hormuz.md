@@ -3,7 +3,7 @@ title: US-Iran Conflict and the Strait of Hormuz Crisis (2026)
 date: 2026-05-27
 tags: [world-events, us-iran, middle-east, strait-of-hormuz, oil, nuclear]
 source: https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -90,6 +90,24 @@ This conflict sits at the intersection of three of the world's most dangerous dy
 The Strait of Hormuz at 30% capacity is already a partial economic disaster. A full closure or a shooting war with Iranian ballistic missiles hitting US bases in the Gulf would be a historic rupture with cascading consequences globally.
 
 The next 60–90 days are likely decisive: either a ceasefire/negotiating framework emerges, or the military logic takes over. Historical precedent (Gulf of Tonkin, Suez, Gulf War) suggests that once military confrontations reach this scale, off-ramps are harder to find than they appear.
+
+### Update — May 28, 2026
+
+**Ceasefire framework emerging but fragile**: As of May 25–27, 2026, Iran and the US are negotiating a memorandum of understanding to transform the existing ceasefire into a more formal settlement. The proposed structure:
+- **60-day ceasefire extension** with Hormuz reopened during that window
+- Iran permitted to sell oil freely (major sanctions relief that addresses Iran's immediate fiscal crisis)
+- Nuclear talks to begin within the 60-day window
+- Trump has characterized the deal as "largely negotiated, subject to finalization"
+
+**Iran's nuclear leverage**: Iran holds approximately **440 kg of highly enriched uranium** (HEU), enriched to 60–84% purity — far beyond civilian energy needs and close to weapons grade (90%). This stockpile is the US's primary demand: Iran must relinquish or verifiably neutralize it. Iran's counter-position: security and economic guarantees must come first; nuclear talks second. This sequencing dispute is the core obstacle.
+
+**Active hostilities alongside talks (May 25)**: US forces struck Iranian missile launch sites and small naval vessels on May 25, 2026, even as diplomatic talks proceeded — confirming the Trump administration's "talks and pressure simultaneously" approach. Iran's response was limited, suggesting they are not willing to collapse the negotiating track over tactical military exchanges.
+
+**Hezbollah factor**: Hostilities between Israel and Hezbollah in Lebanon have intensified alongside the Iran-US conflict. Hezbollah, Iran's most capable proxy, represents a significant complication — any Iran deal must implicitly address (or fail to address) what Hezbollah does after a ceasefire. An Iran deal that leaves Hezbollah in an aggressive posture would likely not survive Israeli opposition.
+
+**Axis of Resistance posture**: Even with Iran under military pressure, Houthi attacks on Red Sea shipping have continued, and Shia militias in Iraq have continued harassing US assets. Iran has not ordered a full stand-down of its proxy network — it is keeping these cards in play as leverage.
+
+**Outlook**: A 60-day ceasefire is achievable within days if both sides can agree on the sequencing of nuclear vs. economic concessions. A permanent settlement is much harder — the fundamental Iran nuclear dispute has resisted resolution for 20+ years. The most likely near-term outcome is a temporary agreement that reduces immediate violence and reopens Hormuz, with deeper nuclear talks beginning (and potentially stalling) during the ceasefire window.
 
 ## Related
 - [[2026-05-27-us-china-great-power-competition]]

@@ -3,7 +3,7 @@ title: Robert Greene — The 48 Laws of Power (Key Laws)
 date: 2026-05-26
 tags: [psychology, power, Robert-Greene, strategy, social-dynamics]
 source: research
-last_updated: 2026-05-26
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -124,6 +124,47 @@ Reading across the 48 laws, the consistent themes are:
 
 ### The Ethical Dimension
 Greene explicitly says the laws describe power as it is, not as it should be. The book is most useful as a **defensive manual** — recognizing when these dynamics are being deployed against you — rather than as an instruction manual for domination.
+
+### Additional Laws Worth Knowing
+
+**Law 2 — Never Put Too Much Trust in Friends, Learn How to Use Enemies**
+Friends take your favors for granted and become envious of your success. Former enemies, converted to allies, have more to prove and remain more vigilant. Historically, rulers who employed former adversaries in key positions often got more loyalty than from long-standing friends who felt entitled.
+
+**Law 4 — Always Say Less Than Necessary**
+Power lies in what is unsaid. When you speak more than necessary, you reveal your limits and give others material to find vulnerabilities. The powerful say little, forcing others to fill silence with their own interpretations — which usually work in your favor.
+
+**Law 5 — So Much Depends on Reputation — Guard It with Your Life**
+Reputation precedes you, and a damaged one is almost impossible to rebuild. Build it on one quality — make it so strong it protects you in future controversies. Reputation can be used as a tool to intimidate opponents before any action is taken.
+
+**Law 11 — Learn to Keep People Dependent on You**
+Unlike Law 5 (reputation) and Law 4 (silence), Law 11 concerns structural dependency. The person others can't replace is never disposable. Create value so specialized that removing you creates an unsolvable problem. Hephaestus, the Olympian blacksmith, was the ugliest god but could not be expelled because he alone made the gods' weapons.
+
+**Law 16 — Use Absence to Increase Respect and Honor**
+Value is determined by scarcity. Constant presence breeds familiarity and contempt. Strategically withdrawing — becoming less available — increases demand and appreciation. The law is why successful people never respond immediately to every message.
+
+---
+
+### Historical Case Studies for Covered Laws
+
+**Law 1 (Never Outshine the Master) — Nicolas Fouquet vs. Louis XIV (1661)**
+Fouquet built Vaux-le-Vicomte, a chateau so magnificent it dwarfed Versailles. He threw a party for Louis XIV that made the king feel inferior in his own kingdom. Fouquet was arrested three weeks later on charges of embezzlement (the real reason: he had outshone his master). Louis then hired Fouquet's own architects and gardeners to build an even grander Versailles.
+
+**Law 9 (Win Through Actions) — Cesare Borgia**
+Borgia never argued about his right to power — he demonstrated it by taking decisive action that left no room for debate. His swift capture of towns in the Romagna (which Machiavelli observed directly) established his reputation before enemies could organize opposition.
+
+**Law 38 (Think as You Like but Behave Like Others) — Galileo**
+Galileo initially published his heliocentric findings carefully, in Latin, to limit the audience. When he later published in Italian and dedicated *Dialogue* to the Pope, the mass audience created political pressure that forced his trial. Greene uses this as a cautionary example of violating Law 38.
+
+---
+
+### The "Laws of Power" in Greene's Later Work
+
+Greene extended his framework in subsequent books:
+- *The Art of Seduction* (2001): Seduction as a power game — creating desire by withdrawing, creating mystery, targeting weaknesses
+- *The 33 Strategies of War* (2006): Military strategy applied to business and personal conflict
+- *Mastery* (2012): The power of deep expertise — achieved through apprenticeship, deliberate practice, and mastering one's field before attempting to change it
+
+**The progression**: *48 Laws* teaches social power. *Mastery* teaches that the deepest, most durable power comes from mastering something the world values — the craftsman's power, not the courtier's.
 
 ## Related
 - [[cialdini-influence]]

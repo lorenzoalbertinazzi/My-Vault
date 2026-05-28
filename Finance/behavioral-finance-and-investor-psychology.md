@@ -3,7 +3,7 @@ title: Behavioral Finance and Investor Psychology
 date: 2026-05-27
 tags: [finance, behavioral-finance, psychology, investing, biases]
 source: research
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -96,6 +96,36 @@ Behavioral biases aggregate into market-wide anomalies:
 - **Richard Thaler** — mental accounting, nudge theory, Nobel 2017
 - **Robert Shiller** — irrational exuberance, CAPE ratio, narrative economics
 - **Brad Barber & Terrance Odean** — empirical work on overconfidence and trading costs
+
+### Self-Attribution Bias
+Investors credit their skill when trades succeed and blame external factors when they fail. This asymmetric attribution inflates self-assessed ability over time, reinforcing overconfidence. Studies of retail options traders show they consistently overestimate the skill component of winning trades even when performance is statistically indistinguishable from chance.
+
+### Narrative Economics (Robert Shiller)
+Shiller's *Narrative Economics* (2019) extends behavioral finance beyond individual biases to the economy-wide level. Economic narratives — stories that go viral and shape behavior — can move markets and GDP just as surely as fundamentals. The dot-com narrative ("the internet changes everything"), the housing narrative ("real estate never falls nationally"), and the Bitcoin narrative ("digital gold") each powered bubbles whose price dynamics cannot be explained by fundamentals alone. The contagion rate of narratives follows epidemiological models (like infectious disease spread), not rational updating.
+
+### Noise Trader Risk (De Long et al., 1990)
+Classical arbitrage theory says rational investors will correct mispricing quickly. But if irrational "noise traders" are numerous and can push prices further from fundamentals before reverting, rational arbitrageurs face a risk: they may be correct on fundamentals but still lose money before the price corrects. This noise trader risk limits arbitrage and explains why mispricings persist even when smart money recognizes them — exemplified by the 1998 Long-Term Capital Management collapse.
+
+### Behavioral Finance in Crypto Markets
+Cryptocurrency markets provide a particularly rich laboratory for behavioral finance because:
+- **Lack of intrinsic value anchors** makes prices almost entirely sentiment-driven, amplifying recency bias and narrative contagion
+- **24/7 markets** eliminate forced pauses and worsen impulsive trading
+- **Anonymous retail-dominated trading** reduces institutional correction mechanisms
+- **Narrative velocity** is extreme — assets can 10× on a single tweet (Elon Musk's DOGE promotion in 2021)
+Bitcoin's historical drawdowns of 80–90% from peaks (2018, 2022) and subsequent recoveries perfectly illustrate the cycle of greed-herding to fear-capitulation.
+
+### Prospect Theory: Practical Applications
+
+The value function's shape creates specific, actionable predictions:
+
+| Situation | Prospect Theory Prediction | Investment Implication |
+|-----------|---------------------------|----------------------|
+| Holding a loser | Pain avoidance delays sale | Disposition effect — hold too long |
+| Small gains | Concave gain function — take certain gains | Sell winners too early |
+| Large losses | Convex loss function — take risks to recover | "Doubling down" in casinos and trading |
+| Framing as loss vs. gain | Same outcome feels different | "Avoid -3% drawdown" more motivating than "add 3% gain" |
+
+**Fourfold pattern** (Kahneman-Tversky): People are risk-averse over moderate/large gains, risk-seeking over moderate/large losses, risk-seeking over small-probability large gains (lottery), and risk-averse over small-probability large losses (insurance). This single pattern explains lottery popularity, insurance demand, excessive risk-taking to recover losses, and premature profit-taking simultaneously.
 
 ## Related
 - [[cognitive-biases]]

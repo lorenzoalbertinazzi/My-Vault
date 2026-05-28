@@ -3,7 +3,7 @@ title: Negotiation Tactics — Chris Voss and Roger Fisher
 date: 2026-05-27
 tags: [psychology, negotiation, persuasion, communication, voss, fisher]
 source: research
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -101,6 +101,63 @@ Voss spent 24 years as an FBI hostage negotiator. His insight: in high-stakes ne
 3. **Silence is power** — after a label, a mirror, or an offer, shut up
 4. **Never split the difference on important issues** — it creates a bad deal for both
 5. **Build the relationship before making demands**
+
+### ZOPA — Zone of Possible Agreement
+
+The **ZOPA** is the range between the two parties' reservation points (the worst deal each would accept):
+- If your minimum acceptable price to sell is $80K and the buyer's maximum acceptable price is $100K, the ZOPA is $80K–$100K
+- If the seller's minimum is $110K and the buyer's maximum is $90K, there is **no ZOPA** — no deal is possible without one party moving their reservation point
+
+Understanding the ZOPA frame:
+1. A wider ZOPA means more room to claim value through anchoring and negotiation tactics
+2. A narrow ZOPA means the primary work is creating value (expanding the pie) before dividing it
+3. No ZOPA means you must either change the deal structure (add variables) or walk away
+
+**Key insight**: Most negotiations have a wider ZOPA than either party realizes, because each party overestimates how close the other is to their reservation point.
+
+---
+
+### 3D Negotiation (Lax & Sebenius)
+
+Harvard Business School's David Lax and James Sebenius expanded Fisher's framework with a three-dimensional approach:
+1. **At the table (tactics)**: The communication and techniques covered by Voss and Fisher
+2. **Deal design**: Structuring the deal creatively — adding variables, sequencing, finding trades that are cheap for you but valuable for them
+3. **Setup**: The most powerful but underused dimension — who is at the table, in what order do you approach parties, what precedents are set, what information reaches which party and when
+
+Most negotiators only think about dimension 1. But dimensions 2 and 3 often determine whether a deal is possible before the parties ever sit down. Setting up the negotiation architecture (who you exclude, what you sequence, what leverage you build first) is frequently more important than in-room tactics.
+
+---
+
+### Cultural Differences in Negotiation
+
+Negotiation style varies significantly across cultures — ignoring this is a common source of failed deals:
+
+| Dimension | Low-Context (US, Germany, Scandinavia) | High-Context (Japan, China, Arab states) |
+|-----------|---------------------------------------|------------------------------------------|
+| Communication | Direct, explicit | Indirect, implicit; "yes" may mean "I heard you" |
+| Time | Short-term; quick deals preferred | Long-term; relationship before business |
+| Contracts | Written agreement is binding | Relationship is binding; contract is a starting point |
+| Decision-making | Individual can decide | Consensus-building required; decisions take longer |
+| Conflict | Direct confrontation is acceptable | Face-saving is paramount; never back someone into a corner publicly |
+
+**Practical implications**:
+- In Japanese negotiations, long silences are normal; filling them with concessions is a mistake
+- In Chinese negotiations, a dinner before the business meeting isn't social — it IS part of the negotiation; relationship credibility is established there
+- In Middle Eastern contexts, "let me think about it" is often a polite "no"; pushing for a definitive answer is counterproductive
+- The first meeting in many high-context cultures has NO commercial purpose; its only function is to establish that you are a trustworthy, patient person worth doing business with
+
+---
+
+### Adam Grant's Givers, Matchers, and Takers
+
+Organizational psychologist Adam Grant (*Give and Take*) classified negotiators by their default orientation:
+- **Givers**: Tend toward others' interests; ask "What can I do for you?"
+- **Takers**: Prioritize their own interests; treat negotiation as zero-sum
+- **Matchers**: Reciprocate based on what the other party does; tit-for-tat
+
+In negotiations, givers perform both worst (easily exploited by takers) AND best (trusted for creative, durable deals) — depending on the context. Against takers, givers must signal they are not doormats (the "generous but firm" stance). Among matchers and givers, a generous-by-default approach builds reputation and social capital that compounds over many negotiations.
+
+**Practical synthesis**: Enter with a giver's intent (genuinely seek to create value for both sides) while maintaining a matcher's contingency rules (don't continue giving to someone who is purely taking).
 
 ## Related
 - [[cialdini-influence]]

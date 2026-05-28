@@ -3,7 +3,7 @@ title: India-Pakistan 2025 War and Its Aftermath
 date: 2026-05-27
 tags: [geopolitics, India, Pakistan, Kashmir, nuclear, South-Asia, conflict]
 source: https://www.unsw.edu.au/newsroom/news/2026/05/one-year-after-their-brief-war-how-close-are-india-and-pakistan-to-another-conflict
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -71,6 +71,16 @@ One year after the ceasefire, the situation remains fragile:
 2. **Regional security architecture**: No functioning crisis communication mechanism exists between Delhi and Islamabad — the hotline established after Kargil was reportedly not reliably used
 3. **China's role**: China, Pakistan's "all-weather ally," called for restraint but did not meaningfully constrain Pakistan. India must calculate that any India-Pakistan conflict creates space for Chinese opportunism on the Himalayan border
 4. **South Asian stability**: The episode revealed how quickly crisis can escalate in South Asia and how dependent the region is on US crisis management — a fragile arrangement in an era of American strategic retrenchment
+
+### Update — May 28, 2026
+
+**Ceasefire confirmed holding at one year**: A Washington Post opinion piece (May 5, 2026) assessed that one year after the conflict, India and Pakistan are "technically at peace — in the way that two people who once threw furniture at each other are technically peaceful roommates." The description captures the fragile, low-trust stability: the ceasefire holds but there is no normalization, no formal peace process, and no structural resolution.
+
+**Military hotlines operational**: Following the ceasefire, military hotlines between the two DGMOs (Directors General of Military Operations) were formally activated. This fills a critical gap — the hotline established after Kargil had reportedly functioned unreliably during the May 2025 conflict. Having working communication channels reduces the risk of accidental escalation from misread military movements.
+
+**No diplomatic thaw at political level**: Despite quiet back-channel signals noted previously, as of late May 2026 no formal talks at the foreign minister or head-of-government level have resumed. The fundamental disputes — Kashmir's status, cross-border militant activity, nuclear doctrines — remain completely unaddressed. The ceasefire is a pause, not a peace.
+
+**Strategic assessment**: The conflict demonstrated that both sides crossed significant thresholds (ballistic missiles, strikes in Punjab) without triggering nuclear use, which both de-risks and re-risks future crises: it showed the nuclear threshold is higher than feared, which may encourage more aggressive conventional operations in the next confrontation.
 
 ## Related
 - [[2026-05-27-us-china-great-power-competition]]

@@ -3,7 +3,7 @@ title: Machine Learning Fundamentals
 date: 2026-05-26
 tags: [tech, AI, machine-learning, neural-networks, deep-learning]
 source: research
-last_updated: 2026-05-26
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -105,6 +105,71 @@ The sweet spot: a model complex enough to capture real patterns, but not so comp
 - **F1 Score**: Harmonic mean of precision and recall. Good for imbalanced problems.
 - **AUC-ROC**: Discrimination ability across all classification thresholds. Best for binary classifiers.
 - **Perplexity**: Language model metric. Lower = better. How "surprised" the model is by the test data.
+
+### Mixture of Experts (MoE)
+
+Standard ("dense") transformers pass every input token through every parameter on every forward pass. This is computationally expensive at scale.
+
+**MoE** replaces some FFN layers with a set of "expert" sub-networks, plus a learned router that selects which experts to activate for each token:
+
+- A model might have 64 expert FFNs but only activate 2 per token
+- Total parameters are large (e.g., 1.7T) but computation per token is ~1/32 of what a dense model of that size would require
+- Different experts specialize in different patterns — some handle code, others factual recall, others reasoning
+
+**GPT-4, Gemini 1.5, Mixtral 8x7B, and Grok** all use MoE. The architecture explains why the largest modern models can have enormous parameter counts without proportionally more compute per token.
+
+**Challenge**: Load balancing — if all tokens route to the same few experts, others are wasted. Auxiliary "load balancing loss" encourages even distribution.
+
+---
+
+### Knowledge Distillation
+
+Training large models is expensive; deploying them is slow. **Knowledge distillation** transfers knowledge from a large "teacher" model to a small "student" model:
+
+1. The teacher generates **soft probability distributions** (not just the top class, but probabilities across all classes)
+2. The student is trained to match these distributions, not the hard labels
+3. Soft probabilities contain information about relative similarity between classes — the teacher's knowledge is richer than just "the answer"
+
+**Result**: A small student model often substantially outperforms a model of the same size trained from scratch. Many deployed models (DistilBERT at 60% of BERT's size but 97% of performance; TinyLlama; Phi-3) are distilled from larger teachers.
+
+---
+
+### Model Compression: Quantization and Pruning
+
+**Quantization**: Reduce numerical precision of model weights:
+- Full precision: float32 (32 bits per weight)
+- Half precision: float16 / bfloat16 (16 bits) — ~2× memory reduction with minimal quality loss
+- int8 quantization: 8 bits — ~4× reduction, modest quality loss
+- 4-bit quantization (GGUF, AWQ, GPTQ): ~8× reduction — enables 70B models to run on consumer GPUs
+
+**Why it works**: Most model weights are nearly zero; most information is in a small fraction. Quantization sacrifices representation precision for memory and speed, with surprisingly small accuracy loss when done carefully.
+
+**Pruning**: Remove entire neurons, attention heads, or layers that contribute little to outputs. Can reduce model size 30–50% with careful structured pruning + fine-tuning.
+
+---
+
+### Constitutional AI (Anthropic)
+
+**Constitutional AI** (Bai et al., 2022) is a method for training AI systems to follow a set of principles ("constitution") while reducing the need for human feedback on harmful outputs:
+
+1. **SL-CAI**: Generate responses, then have the model critique its own response using the constitution ("Does this response support autonomy? Is it honest?"), revise, and train on the revised pairs
+2. **RL-CAI**: Use the AI itself (not human raters) to rank responses on principle adherence for the RLHF reward model
+
+**Advantages**: Scales safely without requiring human raters to see harmful content; makes AI values transparent and auditable via the written constitution; allows systematic value updates by editing the constitution rather than retraining.
+
+This approach is used in Claude's training at Anthropic and represents a significant methodological alternative to pure human-feedback RLHF.
+
+---
+
+### The Scaling Law Debate: When Does Bigger Stop Helping?
+
+The original Kaplan scaling laws predicted smooth, predictable improvement with more compute. But several phenomena complicate this:
+
+**Emergent abilities**: Certain capabilities (multi-step arithmetic, code generation, analogical reasoning) appear suddenly at specific scale thresholds — they are essentially absent below the threshold and present above it. This is not predicted by smooth scaling laws and creates genuine uncertainty about what larger models will be able to do.
+
+**Diminishing returns vs. new capabilities**: Larger models get better at known tasks more slowly, but may unlock qualitatively new task types. The frontier is not just doing the same things better.
+
+**Data quality wall**: Post-2023, pre-training datasets approach exhaustion of high-quality text. Training on synthetic data (generated by existing models) and multi-modal data (images, video, audio) may be necessary to continue scaling beyond current limits. Chinchilla scaling assumed fixed, clean data — that assumption is increasingly strained.
 
 ## Related
 - [[transformer-architecture]]

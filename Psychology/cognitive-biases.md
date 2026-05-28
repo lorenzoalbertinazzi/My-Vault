@@ -3,7 +3,7 @@ title: Cognitive Biases — A Practical Map
 date: 2026-05-26
 tags: [psychology, cognitive-biases, decision-making, mental-models]
 source: research
-last_updated: 2026-05-26
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -108,6 +108,61 @@ Most biases are System 1 errors applied in situations that require System 2 thin
 - [ ] What is driving my urgency — real deadline, or manufactured scarcity?
 - [ ] What would I advise a friend in this exact situation?
 - [ ] Have I sought out someone who disagrees and genuinely engaged with their argument?
+
+### The Narrative Fallacy (Nassim Taleb)
+
+Humans construct causal stories to explain sequences of events, even when those events were random. After the fact, any outcome feels inevitable — we link the events into a coherent narrative that appears to explain the outcome.
+
+The danger: the narrative creates a false sense of understanding. We think we understand *why* the 2008 crisis happened because we can tell a coherent story; in fact the story was assembled after the fact from surviving evidence. This leads to overconfidence in future predictions and underestimation of randomness.
+
+**Practical fix**: Before explaining *why* something happened, ask whether a random process could have produced the same sequence. The more salient and coherent the explanation, the more suspicious you should be.
+
+---
+
+### Hindsight Bias
+
+"I knew it all along." After an event occurs, people systematically overestimate how predictable it was beforehand. Hindsight bias:
+- Distorts learning ("we knew this would fail" → wrong lessons extracted)
+- Corrupts performance evaluation ("they should have seen it coming" → unfair judgments)
+- Makes history feel inevitable, suppressing appreciation for genuine uncertainty
+
+**Medical study example**: Doctors shown case histories and told the diagnosis rated the diagnosis as "obvious" far more often than doctors who had to diagnose without knowing the outcome. This corrupts feedback loops in high-stakes domains.
+
+---
+
+### Curse of Knowledge
+
+Once you know something, it is extremely difficult to imagine not knowing it. This impairs:
+- **Teaching**: Experts explain at a level incomprehensible to beginners because they've forgotten what ignorance feels like
+- **Design**: Product designers build features they understand but users cannot navigate
+- **Communication**: Executives assume employees understand context that wasn't shared
+
+Classic demonstration: In a study, "tappers" who tapped out well-known songs estimated that 50% of listeners would recognize the song — actual recognition rate was 2.5%. The tappers heard the full melody in their heads; listeners heard only random knocks.
+
+---
+
+### Scope Insensitivity
+
+People's emotional and motivational response to a problem does not scale proportionally with its magnitude. Saving 2,000 birds produces nearly the same emotional response as saving 200,000 birds — because we respond to the vivid image of "a bird covered in oil," not to numerical abstractions.
+
+This creates systematic distortions in:
+- **Charitable giving**: Small, identifiable beneficiaries raise more funds than large statistical ones (the "identifiable victim effect" — Stalin's quote that "the death of one man is a tragedy; the death of a million is a statistic")
+- **Environmental policy**: Small local disasters attract more resources than larger distributed ones
+- **Risk assessment**: Dramatic but rare risks receive disproportionate policy attention vs. silent, diffuse but larger risks
+
+---
+
+### Base Rate Neglect (Kahneman's Cab Example)
+
+People dramatically underweight statistical base rates when given specific case information. In Kahneman's famous example:
+- A city has 85% green cabs, 15% blue cabs
+- A witness reports seeing a blue cab; the witness is 80% accurate
+- Most people answer "80% chance it was blue"
+- Correct Bayesian answer: ~41% (base rate of blue cabs is so low it strongly offsets the witness's testimony)
+
+In practice: when evaluating an investment, new job, or strategy, the **outside view** (base rate: how do similar cases actually turn out?) is consistently more predictive than the **inside view** (the specific features of this particular case).
+
+---
 
 ## Related
 - [[cialdini-influence]]

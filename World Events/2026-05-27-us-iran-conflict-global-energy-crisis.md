@@ -3,7 +3,7 @@ title: US-Iran Military Conflict and the Global Energy Crisis (2026)
 date: 2026-05-27
 tags: [world-events, Iran, US, war, energy-crisis, Strait-of-Hormuz, oil, Middle-East]
 source: https://en.wikipedia.org/wiki/Portal:Current_events/May_2026
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -105,6 +105,25 @@ The US-Iran conflict is interacting with ongoing regional tensions:
 - Hormuz flow remains severely reduced
 - International community calling for de-escalation
 - Situation remains highly fluid — monitor for ceasefire developments, escalation, or broadening of conflict to involve other actors
+
+### Update — May 28, 2026
+
+**Deal "largely negotiated" — Trump announcement (May 23, 2026)**: President Trump posted on social media that an Iran deal is "largely negotiated, subject to finalization." This follows several weeks of shuttle diplomacy. The proposed framework involves:
+- A **60-day ceasefire extension** (not a permanent settlement)
+- Iran reopens the Strait of Hormuz to normal traffic during the ceasefire
+- Iran allowed to freely sell oil (partial sanctions relief)
+- Negotiations on Iran's nuclear program to begin during the ceasefire window
+
+**Key sticking points** (as of May 24–25, 2026 reporting):
+- **Iran's uranium stockpile**: Trump insists Iran must relinquish its 440+ kg of highly enriched uranium (HEU near weapons grade). Iranian officials say nuclear negotiations cannot begin until the war-ending memorandum is first signed
+- **Frozen assets**: Iran demands immediate unfreezing of billions in overseas accounts; the US is conditioning this on nuclear concessions
+- **Sequencing dispute**: Iran wants security guarantees first, nuclear talk second; the US wants nuclear framework agreed before lifting economic pressure
+
+**Strikes continuing despite talks (May 25–26, 2026)**: CNN reported US military strikes against Iranian missile launch sites and naval assets on May 25 even as negotiations proceeded — classic "maximum pressure + talks simultaneously" approach. Iran threatened retaliation, raising risks of the negotiating environment collapsing.
+
+**Hormuz flow implications**: The proposed deal's central economic prize is Hormuz reopening. At 30% of normal flow, every additional week of closure deepens the global energy crisis. If the 60-day ceasefire is agreed and Hormuz flow normalizes even partially, oil markets could see a significant price correction downward.
+
+**Historical parallel — next 60–90 days decisive**: The situation mirrors the structure of past Iran nuclear negotiations: mutual maximum pressure, a framework announcement declared premature, followed by either collapse or a partial deal that holds imperfectly. The parties are in a race between diplomatic momentum and military escalation on the ground.
 
 ## Related
 - [[2026-05-27-us-china-strategic-competition]]

@@ -3,7 +3,7 @@ title: Stoicism and Stoic Philosophy
 date: 2026-05-27
 tags: [psychology, philosophy, stoicism, resilience, mental-models]
 source: research
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -102,6 +102,43 @@ Modern practitioners and authors who have popularized Stoicism:
 - **Tim Ferriss**: Calls Stoicism his "operating system for life"
 - **Naval Ravikant**: Frequently cites Stoic principles in his philosophy of wealth and happiness
 - **Viktor Frankl**: Concentration camp survivor whose logotherapy shares deep Stoic DNA — meaning can be found in any circumstance
+
+### The Preferred Indifferents — A Closer Look
+
+The Stoic category of "preferred indifferents" (Greek: *proēgmena adiaphora*) is one of the philosophy's most nuanced and misunderstood elements. The full picture:
+
+**Indifferents** are things neither virtuous nor vicious — they do not contribute to or detract from the only true good (virtue). Health, wealth, reputation, pleasure are all indifferents.
+
+But some indifferents are **"preferred"** — they are worth pursuing because they are *in accordance with nature*, meaning they serve the natural functions of a rational social animal. Chrysippus argued it is natural to prefer health over illness, life over death, and social harmony over conflict. You should pursue these — but hold them lightly, prepared to release them if doing so is what virtue requires.
+
+**The practical hierarchy**:
+1. Act to secure preferred indifferents through virtuous means
+2. When forced to choose between preferred indifferents and virtue, choose virtue
+3. Accept the loss of preferred indifferents with equanimity when they are taken from you
+
+This is NOT indifference in the colloquial sense. A Stoic who loses wealth isn't supposed to feel nothing — they're supposed to grieve appropriately, then re-engage with full energy. The Stoic sage is not a robot; they experience joy, love, and grief — but these are *eupatheiai* (appropriate responses) rather than *pathe* (passionate disturbances that compromise reason).
+
+---
+
+### Stoic Influence on Modern Therapy Beyond CBT
+
+Beyond CBT, Stoicism directly influenced:
+
+**Acceptance and Commitment Therapy (ACT)**: Encourages accepting thoughts and feelings rather than fighting them, then committing to action aligned with values. The ACT "defusion" technique (observing thoughts as passing events, not facts) is a direct descendant of Epictetan observation: "It is not the event, but the judgment about the event."
+
+**Dialectical Behavior Therapy (DBT)**: Marsha Linehan explicitly drew on Stoic and Buddhist sources for the "radical acceptance" principle — acknowledging reality as it is rather than fighting it — combined with commitment to change what can be changed.
+
+**Logotherapy**: Viktor Frankl's meaning-centered therapy explicitly cites Epictetus as a precursor. The core technique — finding meaning and inner freedom in circumstances you cannot change — is pure Stoicism applied to psychopathology.
+
+---
+
+### The "Sage" — An Ideal, Not a Description
+
+The Stoic "sage" (sophos) who has perfect virtue and perfect reason is explicitly described even by ancient Stoics as vanishingly rare — perhaps no more than two or three humans in all of history. Chrysippus reportedly said the sage might be "as rare as the Ethiop Phoenix."
+
+This matters because it prevents Stoicism from becoming a performance of invulnerability. Epictetus, Marcus Aurelius, and Seneca are not claiming to have achieved the ideal — they are aspirants, working toward it daily and failing regularly. Marcus Aurelius's *Meditations* is full of self-reproach, re-commitment, and honest acknowledgment of failures.
+
+The honest Stoic position: "I am a student of philosophy, not a sage. I will fall short today. Tomorrow I will try again." This humility makes the practice sustainable and distinguishes authentic Stoicism from the toxic stoicism of suppressed emotion and performed toughness.
 
 ## Related
 - [[mental-models]]

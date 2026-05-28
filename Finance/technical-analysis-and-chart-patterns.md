@@ -3,7 +3,7 @@ title: Technical Analysis and Chart Patterns
 date: 2026-05-27
 tags: [finance, technical-analysis, trading, chart-patterns, markets]
 source: research / technical analysis literature
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -126,6 +126,58 @@ Japanese candlestick charts originate from 18th-century rice trading in Japan (M
 4. **Works better in trending markets**: Oscillators and patterns underperform in choppy, sideways conditions.
 
 Despite criticisms, technical analysis is widely used by professional traders for timing entries/exits even when fundamental analysis drives the underlying thesis.
+
+### Fibonacci Retracements
+
+Drawn from a major swing high to a swing low (or vice versa), Fibonacci retracement levels mark potential support/resistance zones at:
+- **23.6%**, **38.2%**, **50%**, **61.8%** (the "golden ratio"), **78.6%**
+
+The theory: after a trending move, price often retraces to one of these levels before resuming the trend. The 61.8% retracement (derived from the Fibonacci sequence, where each number is 61.8% of the next) is considered the most significant.
+
+**Use in practice**: Traders combine Fibonacci levels with other signals (volume, candlestick reversals, prior S/R). A 61.8% retrace that also coincides with a prior support level and shows a hammer candlestick pattern is a much higher-probability setup than any single signal alone.
+
+### Volume Profile and Market Profile
+
+Unlike standard volume (how many shares traded per period), **Volume Profile** shows how much volume traded at each price level over a period. Key concepts:
+
+- **Point of Control (POC)**: The price level with the highest traded volume — represents the "fairest price" where the most business occurred; acts as a magnet
+- **Value Area**: The range containing 70% of all volume (one standard deviation equivalent)
+- **High Volume Node (HVN)**: Consolidation zone — price slows down here on revisits
+- **Low Volume Node (LVN)**: Area of fast price movement — price tends to move through these quickly; rarely offers support/resistance
+
+**Practical application**: A stock rallying through a Low Volume Node from a High Volume Node has weak resistance ahead; price can accelerate rapidly. Conversely, approaching a High Volume Node from below often stalls the rally.
+
+### Ichimoku Cloud
+
+A comprehensive Japanese technical system developed by journalist Goichi Hosoda in the 1930s (published 1969). Five components:
+
+| Component | Calculation | Interpretation |
+|-----------|------------|----------------|
+| **Tenkan-sen** (conversion) | (9-period high + low) / 2 | Short-term trend direction |
+| **Kijun-sen** (base) | (26-period high + low) / 2 | Medium-term trend; support/resistance |
+| **Senkou Span A** | (Tenkan + Kijun) / 2, plotted 26 periods ahead | Cloud boundary — dynamic support/resistance |
+| **Senkou Span B** | (52-period high + low) / 2, plotted 26 ahead | Cloud boundary — stronger support/resistance |
+| **Chikou Span** (lagging) | Close, plotted 26 periods back | Confirms trend by comparing current price to past |
+
+The "cloud" (kumo) between Span A and Span B is the most distinctive element. Price above the cloud = bullish; below = bearish; inside = uncertain. Thick clouds are stronger support/resistance than thin ones.
+
+### Elliott Wave Theory
+
+Ralph Elliott (1938) proposed that markets move in recurring wave patterns driven by investor psychology, alternating between five-wave impulse moves and three-wave corrective moves:
+
+**Impulse wave structure** (in the direction of larger trend): Waves 1-2-3-4-5
+- Wave 3 is always the longest and strongest; never the shortest
+- Wave 4 never overlaps Wave 1 (in price) for equity markets
+- Waves 1, 3, 5 are in the trend direction; 2, 4 are corrective
+
+**Corrective structure**: A-B-C
+- Wave A corrects the prior impulse
+- Wave B partially retraces A
+- Wave C makes new lows/highs beyond A
+
+**Fractal nature**: Each wave subdivides into smaller waves of the same structure — making the framework applicable across any timeframe simultaneously.
+
+**Criticism**: Wave counts are highly subjective; analysts regularly disagree about which wave the market is in. Best used as a probabilistic framework for understanding where in the cycle we are, not as a precise prediction tool.
 
 ## Related
 - [[behavioral-finance-and-investor-psychology]]

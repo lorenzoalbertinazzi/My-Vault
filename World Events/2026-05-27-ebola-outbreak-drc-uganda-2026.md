@@ -3,7 +3,7 @@ title: 2026 Ebola Outbreak — DRC and Uganda (Bundibugyo Virus)
 date: 2026-05-27
 tags: [world-events, health, Ebola, DRC, Uganda, WHO, pandemic, Africa]
 source: https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -101,6 +101,22 @@ The risk to North America and Europe is assessed as **low** but not negligible, 
 2. **Vaccine gap exposed**: The world invested heavily in Zaire-specific countermeasures after 2014-2016; the emergence of a Bundibugyo outbreak reveals the vulnerability of strain-specific vaccine strategies
 3. **DRC as perpetual epicenter**: The DRC has experienced more Ebola outbreaks than any other country — structural issues (conflict, weak healthcare infrastructure, poverty) mean the country will continue to be a source of zoonotic spillover events
 4. **Global health architecture test**: This is an early test of the post-COVID pandemic preparedness reforms (WHO pandemic treaty, 100 Days Mission) — whether the world can respond faster than in previous outbreaks
+
+### Update — May 28, 2026
+
+**Official DRC outbreak declaration (May 15, 2026)**: The Ministry of Public Health, Hygiene and Social Welfare of the DRC formally declared this the **17th Ebola Disease outbreak in DRC** — a sobering marker of the country's disproportionate burden of Ebola events.
+
+**First international case in a Western country — American healthcare worker in Germany**: On May 17, 2026, an American healthcare worker who had been caring for Ebola patients in the DRC tested positive for Bundibugyo virus. The patient was medically evacuated to Germany for treatment and care. This is significant for several reasons:
+- It confirms that even healthcare workers with full PPE protocols face exposure risk in overwhelmed treatment settings
+- Germany's acceptance represents the first treatment of the 2026 outbreak in a high-income country
+- Travel/screening protocols are now being reviewed at major international airports with DRC/Uganda transit connections
+- The case heightened global media attention and may accelerate international funding mobilization
+
+**Case count confirmation**: WHO Disease Outbreak News (DON602) as of May 27, 2026 confirms the numbers previously reported: 121 confirmed cases / 17 confirmed deaths in DRC + 1,077 suspected cases / 238 suspected deaths. Uganda: 7 confirmed, 1 death. The large gap between confirmed and suspected continues to reflect laboratory bottlenecks, not evidence that suspected cases are false positives.
+
+**Experimental vaccine access**: WHO and Gavi are working to expedite emergency use authorization for ChAd3-BDBV (the Oxford/NIAID Phase 2 candidate). Ring vaccination of contacts of confirmed cases with experimental vaccines is being discussed as a priority containment strategy, mirroring the approach that ultimately controlled the 2018–2020 Zaire outbreak.
+
+**CDC mobilization**: The US CDC has formally mobilized international response resources, deploying field epidemiologists, laboratory support, and community engagement specialists to the affected provinces — the most substantial US public health engagement in the DRC since the 2018–2020 outbreak.
 
 ## Related
 - [[2026-05-27-us-iran-conflict-strait-of-hormuz]]

@@ -3,7 +3,7 @@ title: US-China Strategic Competition — The Defining Geopolitical Rivalry of t
 date: 2026-05-27
 tags: [geopolitics, US, China, trade-war, Taiwan, tech-war, decoupling, great-power-competition]
 source: https://www.cfr.org/articles/visualizing-2026-five-foreign-policy-trends-watch
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -96,6 +96,18 @@ The outcome of US-China competition will determine:
 - Whether the rules-based international order (UN, WTO, IMF) remains US-anchored or fractures into spheres of influence
 - The pace of global economic growth (any Taiwan conflict would trigger a depression)
 - The future of dollar hegemony and global financial architecture
+
+### Update — May 28, 2026
+
+**Trade truce framework and tariff levels**: Following the May 14 Trump-Xi summit, US-China tariffs remain at ~48% effective rate but a framework for restoration of pre-escalation Section 301 tariff rates is under discussion. Neither side has extended the trade truce formally, creating uncertainty. Effective US tariff rate on Chinese goods remains the highest of any country at ~30% on many categories.
+
+**Technology decoupling: Supply chain migration accelerating**: Apple has formally moved portions of iPhone assembly to India (the India production ramp represents the most visible proof of the "China+1" strategy becoming permanent). Nike, Hasbro, and numerous other US brands have shifted production to Vietnam, India, and Mexico. This represents structural, not cyclical, decoupling of manufacturing.
+
+**Rare earths as a counter-leverage**: China controls ~80% of global rare earth processing. In the context of the May 2026 summit, rare earths were explicitly on the agenda — China has periodically threatened and partially enacted export restrictions on rare earth materials. This is Beijing's primary economic counter-leverage against semiconductor export controls. The US is investing in domestic and allied (Australia, Canada, Africa) rare earth processing to reduce this vulnerability.
+
+**Iran divergence testing the relationship**: The US-Iran conflict (which broke out in early 2026) directly affects US-China relations. China is Iran's largest oil customer and has significant economic interests in Iranian energy. US pressure on China to restrict oil purchases from Iran in exchange for tariff relief is a new point of leverage — and a new friction. China's position: calling for negotiations while continuing purchases.
+
+**AI governance talks beginning but unproductive**: Low-level dialogues on AI safety and governance have been initiated between US and Chinese officials, but as of mid-2026 have produced no binding agreements. Both sides appear to view AI governance talks more as a communication channel to reduce misunderstanding than as a path to enforceable rules.
 
 ## Related
 - [[2026-05-27-us-iran-conflict]]

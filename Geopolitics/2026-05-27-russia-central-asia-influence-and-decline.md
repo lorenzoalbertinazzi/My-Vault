@@ -3,7 +3,7 @@ title: Russia's Fading Grip on Central Asia — The New Great Game, 2026
 date: 2026-05-27
 tags: [geopolitics, russia, central-asia, kazakhstan, uzbekistan, china, belt-and-road, SCO]
 source: https://www.realclearworld.com/articles/2026/05/12/how_central_asia_became_russias_quiet_economic_lifeline_1182149.html / https://thediplomat.com/2026/02/is-central-asia-still-russias-backyard/ / https://www.hudson.org/foreign-policy/new-great-game-emerges-central-asia-drifts-away-moscow-tsiporah-fried
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -119,6 +119,18 @@ The Taliban's control of Afghanistan since 2021 has heightened regional security
 Russia is unlikely to lose all influence in Central Asia in the near term. Structural dependencies — remittances, energy grids, Russian as a working language, institutional memberships — persist. But the nature of the relationship has shifted from Moscow-as-hegemon to Moscow-as-one-partner-among-many. Central Asian states have learned they can resist Russian pressure without facing consequences; Russia needs them as much as they need Russia.
 
 The region is genuinely multipolar in 2026: China is the economic giant, Russia retains security relevance and labour ties, the Gulf provides capital, Turkey offers cultural solidarity, and the West provides technology and a counterbalancing option. Each Central Asian state calibrates its position based on domestic interests, geography, and the specific issue at stake — not as bloc followers of any great power.
+
+### Update — May 28, 2026
+
+**Solovyov's threat and Central Asian backlash (January 2026)**: Kremlin propagandist Vladimir Solovyov publicly referred to Central Asia as Russia's "sphere of influence" and suggested Russia could launch a "strategic operation" in Central Asia similar to the invasion of Ukraine. The statement caused significant diplomatic pushback: Uzbekistan's deputy senate chairman responded that such statements "contradict strategic partnership and have a destabilizing effect on bilateral relations." The episode reveals Moscow's post-imperial anxiety — even its own propagandists reveal the insecurity of a power that feels its backyard slipping away. Central Asian governments, previously cautious in their public criticism of Russia, are now willing to rebuke Kremlin voices directly.
+
+**China's economic dominance deepening (Q1 2026)**: FPRI analysis published May 2026 describes "Reordering Central Asia: China's Emerging Economic Hierarchy" — documenting that China has now overtaken Russia as the dominant economic partner in 4 of the 5 Central Asian states by trade volume. The China-Kyrgyzstan-Tajikistan railway negotiations have advanced to detailed engineering phases, which would physically bypass Russian territory for the first time for significant trans-Asian freight flows.
+
+**Sanctions corridor role entrenching**: The economic lifeline role Central Asia plays for Russia is hardening into a structural dependency. Trade data through Q1 2026 shows Kazakhstan, Kyrgyzstan, and Uzbekistan's exports to Russia running 40–60% above pre-war levels — the parallel import corridor is now too economically significant for Central Asian governments to dismantle, even if they wanted to satisfy Western pressure. This mutual entrenchment means Moscow cannot pressure these states too hard without risking the corridor.
+
+**Shoigu's diplomatic signaling**: On May 27, 2026, Russia's Security Council Secretary Shoigu publicly stated that maintaining "stable and good-neighborly relations" with Central Asia is "an absolute priority" — unusually conciliatory language from Moscow, likely a response to the Solovyov backlash and an attempt to reassure regional leaders after the threatening rhetoric.
+
+**Assessment**: Russia's influence in Central Asia is in managed decline. The pattern is now clear: Moscow needs Central Asia economically (for sanctions evasion); Central Asia needs Moscow's security presence against Afghanistan/Islamist threats and its labor migration market. Neither side can afford a rupture, so both tolerate each other's diversification. China is filling the economic and soft-power vacuum without the same security footprint.
 
 ## Related
 - [[2026-05-27-us-china-great-power-competition]]

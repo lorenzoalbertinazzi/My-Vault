@@ -3,7 +3,7 @@ title: Vector Databases and Embeddings
 date: 2026-05-27
 tags: [tech, AI, machine-learning, embeddings, vector-databases, semantic-search]
 source: research
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -125,6 +125,59 @@ Key decisions in this pipeline:
 - **Domain shift**: A general-purpose embedding model may perform poorly on specialized domains (medical, legal, code) — fine-tuning or domain-specific models may be needed
 - **Index build time**: HNSW indexes are fast to query but slow to build and memory-intensive (roughly 1–2 bytes/dimension/vector)
 - **Stale embeddings**: If the underlying model changes, all stored embeddings must be recomputed
+
+### Matryoshka Representation Learning (MRL)
+
+Traditional embedding models produce a fixed-dimension vector (e.g., 1536D). You cannot reduce dimensionality without retraining the model.
+
+**Matryoshka Representation Learning** (Kusupati et al., 2022 — named for Russian nesting dolls) trains a single model to produce embeddings where the first D dimensions are useful, the first 2D dimensions are more useful, the first 4D dimensions even more so:
+
+- A 1536D MRL embedding can be truncated to 64D, 128D, 256D, 512D with graceful quality degradation
+- This enables dynamic precision-performance tradeoffs at query time
+- First, retrieve broadly with 64D (fast); re-rank with 512D (precise) only top candidates
+
+OpenAI's `text-embedding-3-*` models use MRL, which is why their API supports custom `dimensions` parameter. This is not dimension reduction — it is a fundamentally different training objective that builds hierarchical structure into the representation.
+
+---
+
+### Binary and Scalar Quantization for Storage
+
+Embeddings are expensive to store at full float32 precision. Quantization compresses them:
+
+**Binary quantization**: Convert each dimension to a single bit (positive/zero → 1, negative → 0). A 1536D float32 embedding (6,144 bytes) becomes 192 bytes — **32× compression** with ~8–15% quality loss. Search uses Hamming distance (XOR and popcount — extremely fast on modern CPUs).
+
+**Scalar quantization (int8)**: Map each float to a signed 8-bit integer. **4× compression**, ~1–2% quality loss. Better quality-per-bit than binary.
+
+**Product Quantization (PQ)**: Divide the vector into sub-vectors; quantize each sub-vector's position in a learned codebook. Can achieve 32–64× compression with reasonable quality. Used in FAISS IVF+PQ indexes for billion-scale search.
+
+---
+
+### Sparse Embeddings: SPLADE and BM25 Hybrids
+
+Dense embeddings capture *semantic similarity* but can miss exact keyword matches. **SPLADE** (Formal et al., 2021) produces sparse embedding vectors where most dimensions are zero, but non-zero dimensions correspond to vocabulary terms — bridging dense semantic search and traditional sparse (BM25/TF-IDF) retrieval.
+
+| Approach | Strength | Weakness |
+|----------|---------|---------|
+| Dense (HNSW) | Semantic similarity, paraphrase matching | Misses exact term matches, harder to debug |
+| BM25 (sparse) | Exact term matching, interpretable | No semantic understanding |
+| SPLADE (learned sparse) | Semantic + term expansion; interpretable | Slower to generate than dense |
+| Hybrid (dense + BM25) | Best of both worlds | Two indexes to maintain |
+
+Most production RAG systems use **hybrid search** — retrieving with both dense and sparse indexes, then combining scores via Reciprocal Rank Fusion (RRF) or weighted combination.
+
+---
+
+### ColBERT: Late Interaction Multi-Vector Retrieval
+
+Standard bi-encoder models encode both query and document to a single vector; similarity is one dot product. This loses fine-grained term-level interactions.
+
+**ColBERT** (Khattab & Zaharia, 2020) stores a vector for *every token* in every document. At query time, it embeds query tokens, then for each document computes the maximum similarity ("MaxSim") between each query token and any document token:
+
+> Score = Σᵢ max_j (query_token_i · doc_token_j)
+
+**Result**: 2–10× more relevant retrieval than bi-encoder on many benchmarks. ColBERT v2 compresses the per-token vectors heavily (residual compression) to make storage practical.
+
+**Tradeoff**: Storing per-token vectors multiplies storage by average document length (~100–500×). Hybrid approaches use ColBERT for re-ranking (not first-stage retrieval) to balance cost and quality.
 
 ## Related
 - [[retrieval-augmented-generation]]

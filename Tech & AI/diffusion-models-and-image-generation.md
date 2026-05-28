@@ -3,7 +3,7 @@ title: Diffusion Models and AI Image Generation
 date: 2026-05-27
 tags: [ai, machine-learning, diffusion-models, generative-ai, computer-vision, stable-diffusion, dall-e]
 source: research / academic literature
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -168,6 +168,55 @@ Diffusion has generalised beyond images:
 3. **Compositionality**: Struggles to reliably combine multiple distinct objects, attributes, and spatial relationships
 4. **Hallucination / faithfulness**: Generating exactly what is described remains challenging for complex prompts
 5. **Safety and misuse**: Potential for deepfakes, non-consensual imagery, copyright concerns
+
+### Flow Matching and Rectified Flow
+
+**Flow matching** (Lipman et al., 2022; Liu et al., 2022) is an alternative to diffusion that has largely superseded DDPM-based approaches in state-of-the-art models:
+
+Instead of adding and reversing Gaussian noise, flow matching learns to transform data by finding **probability flows** — paths through data space that connect a source distribution (usually Gaussian noise) to the target data distribution.
+
+**Rectified Flow** (Liu et al., 2022): learns flows that follow straight-line trajectories between noise and data. The key advantage: straight paths require far fewer integration steps to traverse, enabling high-quality generation in 1–4 steps (vs. DDPM's 50–1000). Stability AI's SD3, Flux, and Sora all use flow matching rather than traditional DDPM.
+
+**Mathematical intuition**: DDPM's noise schedule curves through space in a complex arc; flow matching finds the shortest path. Fewer "turns" = fewer steps needed = faster inference.
+
+### Diffusion Transformer (DiT) Architecture
+
+The Flux model from Black Forest Labs and OpenAI's Sora replaced the U-Net with a **Diffusion Transformer (DiT)**. Key differences:
+
+- **U-Net**: Spatial encoder-decoder with skip connections — good at preserving fine-grained detail but less scalable
+- **DiT**: Pure transformer operating on image patches (like ViT) — scales better with compute and parameters, better global coherence
+
+DiT treats the noisy image as a sequence of patches, applies transformer blocks with self-attention and cross-attention (for text conditioning), and outputs the denoised patches. The architecture scales predictably: larger DiT models consistently outperform smaller ones.
+
+### Model Distillation for Fast Inference
+
+Running full 50-step inference is too slow for many applications. **Distillation** compresses the multi-step process:
+
+**Consistency Models** (Song et al., 2023): Train a model to directly output a clean sample from any noisy input in a single step, by enforcing that all points on the same ODE trajectory map to the same clean image. Can generate in 1–4 steps with quality comparable to 50-step models.
+
+**Progressive distillation**: Start with a 1000-step teacher, distill to 500-step student, then to 250-step, etc. Each generation requires only 2× fewer steps per distillation round.
+
+**LCM (Latent Consistency Models)**: Applied consistency distillation to LDMs — enables SDXL-quality output in 4 steps. Used in SDXL-Turbo and Lightning LoRAs.
+
+### Personalization: DreamBooth and LoRA
+
+**DreamBooth** (Ruiz et al., 2022): Fine-tune a diffusion model on 3–10 images of a specific subject (person, object, style) using a rare token identifier. The model learns to associate the token with the subject, enabling generation of that specific subject in novel contexts. Requires full model fine-tuning (~several GPU-hours).
+
+**LoRA (Low-Rank Adaptation)**: Rather than fine-tuning all model weights, LoRA adds small trainable rank-decomposition matrices to specific weight matrices. A typical LoRA for a diffusion model is <100MB vs. the multi-GB base model. Enables rapid personalization that can run on consumer hardware.
+
+**Style LoRAs**: The Stable Diffusion community has created thousands of LoRAs capturing specific artistic styles (anime, hyperrealism, specific illustrators) — applied by adding them to the inference pipeline with a weight coefficient.
+
+### Video Diffusion Models
+
+Extending image diffusion to video requires modeling temporal consistency:
+
+**Sora (OpenAI, 2024)**: The first public demonstration of high-quality long-form video generation using a DiT architecture. Conditions on text and optionally image frames; generates physically plausible videos up to 60 seconds. Uses a "spacetime patch" approach — the video is tokenized into 3D patches rather than 2D image patches, allowing full spatial and temporal attention.
+
+**Gen-3 (Runway)**: Commercial video generation with strong motion quality. Used in professional film and advertising production.
+
+**Kling (Kuaishou)**: Chinese alternative with competitive quality; demonstrates rapid non-US capabilities in generative video.
+
+**Key challenge**: Video generation requires temporal coherence — objects must maintain their appearance and physics across frames. Current models still fail on complex physics (realistic water, collisions) and long-form consistency (characters change appearance across shots).
 
 ## Related
 - [[transformer-architecture]]

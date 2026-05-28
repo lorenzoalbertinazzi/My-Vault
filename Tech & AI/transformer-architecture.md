@@ -3,7 +3,7 @@ title: Transformer Architecture — How LLMs Work
 date: 2026-05-26
 tags: [tech, AI, LLM, transformer, deep-learning]
 source: research
-last_updated: 2026-05-26
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -84,6 +84,64 @@ At inference time, the model receives a prompt and generates tokens one at a tim
 **KV Cache**: Store computed Key/Value matrices for all previous tokens, so you don't recompute them each step. Critical for fast inference.
 
 **Context window**: Maximum tokens the model can process at once. Determined by positional encoding and memory constraints. Current frontier models: 128K–1M+ tokens.
+
+### Grouped-Query Attention (GQA) and Multi-Query Attention (MQA)
+
+Standard multi-head attention uses N separate Key and Value projection matrices for N heads. During inference, the KV cache grows with both sequence length and number of heads — consuming huge memory for long-context generation.
+
+**Multi-Query Attention (MQA)**: All query heads share a single K/V projection. Dramatically reduces KV cache memory (N× reduction) with modest quality loss.
+
+**Grouped-Query Attention (GQA)**: Middle ground — groups of query heads share a single K/V projection. Llama 2/3, Mistral, Gemma all use GQA. Balances KV cache efficiency with quality.
+
+**Why this matters for inference speed**: With a large KV cache, memory bandwidth becomes the bottleneck (not compute). GQA enables longer contexts and larger batches on the same hardware.
+
+---
+
+### RoPE: Rotary Position Embedding
+
+Standard absolute positional embeddings (sinusoidal or learned) struggle to generalize to sequences longer than the training context. **RoPE** (Su et al., 2021) applies rotation matrices to query and key vectors such that attention scores depend on the *relative distance* between tokens, not their absolute positions.
+
+**Key advantages**:
+- Long-context generalization: trained at 4K context, can extrapolate to 32K+ with techniques like YaRN
+- Relative position is encoded implicitly in the attention scores — the model "automatically" sees the gap between any two tokens
+- Used in Llama, Mistral, PaLM, Falcon, and most modern open-source models
+
+---
+
+### Flash Attention
+
+The naive attention algorithm requires O(N²) memory to store the attention matrix (where N = sequence length). For N=100K tokens, this is 100B entries — impossible in GPU memory.
+
+**Flash Attention** (Dao et al., 2022) and **Flash Attention 2/3** reorder the computation so the full attention matrix is never materialized. Instead, it computes attention in tiles that fit in GPU SRAM (fast, small), streaming through them. The result:
+- **Memory**: O(N) instead of O(N²)
+- **Speed**: 2–4× faster than standard attention due to fewer HBM (slow) memory reads
+- **Same mathematical output**: Flash Attention is exact, not approximate
+
+Flash Attention is now standard in virtually all serious transformer implementations. It is the primary reason long-context (100K+) inference is feasible.
+
+---
+
+### Speculative Decoding
+
+LLM inference is memory-bandwidth bound: generating each token requires reading all model weights from GPU memory. **Speculative decoding** (Chen et al., 2023) dramatically speeds this up:
+
+1. A small "draft" model (e.g., 7B) generates N candidate tokens quickly
+2. The large "target" model verifies all N tokens in a *single* forward pass (parallel verification is possible because all candidate tokens are known)
+3. If the large model agrees with the small model's tokens, all N are accepted; if it disagrees at token k, all tokens after k are rejected and regenerated
+
+**Result**: Effectively 2–3× generation speedup with no quality loss (the output distribution is identical to the large model alone). Used in production systems at Google, Anthropic, and others.
+
+---
+
+### Sparse Attention: Efficient Long-Context Processing
+
+Full self-attention is O(N²) in sequence length. Several sparse attention patterns reduce this:
+
+**Longformer** (Beltagy et al., 2020): Combines local sliding-window attention (each token attends to a fixed neighborhood) with global attention (certain "global" tokens attend to the full sequence). O(N×window_size) rather than O(N²). Effective for documents.
+
+**BigBird** (Google, 2020): Adds random attention (each token attends to a random subset) to the Longformer pattern. Theoretically proven to be a universal approximator.
+
+**Sliding window + global attention** is now widely used in production models for document processing tasks that don't require full pairwise attention.
 
 ## Related
 - [[prompt-engineering]]

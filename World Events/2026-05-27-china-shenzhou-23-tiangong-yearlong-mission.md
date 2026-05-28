@@ -3,7 +3,7 @@ title: China's Shenzhou-23 Mission — Year-Long Stay and Hong Kong's First Astr
 date: 2026-05-27
 tags: [world-events, china, space, tiangong, shenzhou, astronaut, space-race, technology]
 source: https://www.npr.org/2026/05/25/g-s1-124179/china-launches-shenzhou-23-spacecraft / https://english.news.cn/20260525/e71e193dd1d14e1193edc9173f3f0477/c.html / https://www.euronews.com/next/2026/05/25/what-is-chinas-shenzhou-23-mission-inside-the-year-long-space-experiment
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -122,6 +122,16 @@ The mission has been prominently covered in Hong Kong media, with CNSA (China Na
 - **Ongoing**: Science data from 100+ experiments to be analysed and published, contributing to global microgravity research literature
 - **2027–2029**: Further Shenzhou missions will likely include additional international partner collaboration (China has invited astronauts from several countries to train for Tiangong missions)
 - **Pre-2030**: Chang'e lunar landing missions enter crewed phase
+
+### Update — May 28, 2026
+
+**Crew rotation complete**: The Shenzhou-23 crew successfully docked with Tiangong on May 25, 2026 and completed the crew handover with the Shenzhou-21 crew, who had been aboard for more than 200 days. The previous crew is returning to Earth, completing a standard six-month rotation. Tiangong now hosts Zhu Yangzhu (commander), Zhang Zhiyuan (flight engineer), and Li Jiaying (payload specialist — Hong Kong's first astronaut).
+
+**Li Jiaying's Hong Kong significance confirmed**: Multiple news outlets (NPR, Xinhua, TechTimes) confirmed Li Jiaying / Lai Ka-ying's historic status as the first astronaut from Hong Kong. The launch was broadcast on Chinese state television with dedicated educational programming organized in Hong Kong schools. The mission has achieved its intended dual scientific-political purpose: she is both a legitimately qualified payload specialist (PhD in computer forensics) and a symbolic bridge between Hong Kong and the mainland's national achievements.
+
+**Year-long mission scientific objectives confirmed**: The one-year stay (by one crew member, identity to be confirmed as mission progresses) is focused specifically on generating Chinese longitudinal data on bone density, muscle atrophy, cardiovascular deconditioning, and cognitive performance beyond the 6-month mark — directly replicating and extending the Scott Kelly year-in-space data that NASA generated via the ISS. This data is essential for the crewed lunar mission program targeting pre-2030.
+
+**Strategic space race context**: The mission proceeds in the context of NASA's Artemis program facing ongoing delays and funding pressures. The competition for the lunar south pole — where both programs are targeting — has intensified. China's methodical station-building, crew rotation, and long-duration spaceflight research represents a credible parallel program to ISS that operates entirely independently of US involvement (and explicitly excluded from ISS participation by the Wolf Amendment).
 
 ## Related
 - [[2026-05-27-us-china-strategic-competition]]

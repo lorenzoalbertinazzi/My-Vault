@@ -3,7 +3,7 @@ title: Cialdini — The 6 Principles of Influence
 date: 2026-05-26
 tags: [psychology, influence, persuasion, Cialdini, social-proof]
 source: research
-last_updated: 2026-05-26
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -125,6 +125,43 @@ Different from liking — not "I like you" but "you are one of us." Family, ethn
 
 ### Using These Principles Ethically
 Cialdini distinguishes **persuasion** (creating the conditions for someone to see the real merits of your case) from **manipulation** (using triggers to get compliance that doesn't serve the person's genuine interests). The principles work in both directions — use them to communicate truth more effectively, not to deceive.
+
+### Pre-Suasion: The Channel Before the Message
+
+In *Pre-Suasion* (2016), Cialdini introduced a concept that extends beyond the six principles: **what you direct attention to immediately before making a request determines what mental framework people use to evaluate it**.
+
+Before asking for a large favor, a skilled communicator arranges the environment so that the concept of generosity or collaboration is already primed. Examples:
+- A website with fluffy clouds (vs. pennies) in the background led visitors to prioritize comfort (vs. price) in product choices — they weren't told to; the background primed the relevant concept
+- Asking someone "Do you consider yourself adventurous?" before presenting a new product makes them more likely to try it — they've just confirmed an identity that supports the behavior
+- Playing French music in a wine store increases French wine sales vs. German music; customers report the music had no effect — but their choices say otherwise
+
+**The unity principle in practice**: "I need your advice on something..." converts an influencer into a collaborator — co-creation invokes ownership and commitment that dramatically increases follow-through versus simply asking for compliance.
+
+### The Door-in-the-Face Technique (vs. Foot-in-the-Door)
+
+These are opposing applications of Reciprocity and Commitment respectively:
+
+**Foot-in-the-Door** (Commitment): Start with a small request → comply → larger request. Works because people stay consistent with their prior self-image as someone who "does this kind of thing."
+
+**Door-in-the-Face** (Reciprocity): Start with an unreasonably large request (guaranteed rejection) → follow with a smaller, real request. Works because the concession (from big to small) creates reciprocal pressure — the prospect feels they must give something back by accepting the smaller request.
+
+When to use which:
+- FITD works best when the requests share the same category and are separated by time
+- DITF works best for immediate, in-person requests where the concession is visible
+
+### That's-Not-All Technique
+
+A retail variant of reciprocity: quote a price → before the prospect responds, add an extra feature or discount ("And that's not all — I'll throw in X"). The brain interprets this as a concession even though the offer was never finalized. Research shows it consistently outperforms simply offering the combined package upfront, even when the total value is identical.
+
+### Cialdini's Ethical Framework
+
+Cialdini draws a sharp distinction that many practitioners miss:
+
+**Legitimate persuasion**: Surface existing authentic evidence that genuinely matches your case — help people see the true value that is already there. The six principles then act as channels through which genuine worth flows.
+
+**Manipulation**: Manufacturing evidence, creating false scarcity, faking social proof — triggering the principles with false signals.
+
+The practical and ethical case for legitimate use: manipulated compliance generates resentment, returns, complaints, and damaged relationships when discovered. Genuine persuasion creates satisfied customers who become advocates.
 
 ## Related
 - [[48-laws-of-power]]

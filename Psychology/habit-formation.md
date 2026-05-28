@@ -3,7 +3,7 @@ title: Habit Formation — Atomic Habits, the Habit Loop, and Behaviour Change
 date: 2026-05-27
 tags: [psychology, habits, behaviour-change, atomic-habits, neuroscience, self-improvement]
 source: research / James Clear "Atomic Habits" / Charles Duhigg "The Power of Habit"
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -132,6 +132,62 @@ Behavioural economists Thaler and Sunstein showed that default choices — the e
 5. **Track habits** visually (habit tracker, calendar X's).
 6. **Start absurdly small** — the goal is consistency before intensity.
 7. **Attach new habits to identity**: "I am someone who..."
+
+### Dopaminergic Prediction Error (Wolfram Schultz)
+
+Neuroscientist Wolfram Schultz discovered in the 1990s that dopamine neurons fire not when a reward is received but when a reward is *predicted but unexpected*. Once a reward becomes expected (habitual), dopamine fires at the cue, not the reward. If the predicted reward fails to materialize, dopamine drops below baseline — creating the craving that drives the next repetition.
+
+**Implication for habit design**: The dopamine spike at the cue (not the reward) means habits are being reinforced during the anticipation phase. This is why implementation intentions ("at 7 AM I will go to the gym") are so powerful — they associate a specific cue with a predicted reward, triggering the dopaminergic anticipation system before the behavior even starts.
+
+**Variable reward schedules**: Dopamine spikes highest when rewards are unpredictable. This is the mechanism behind slot machines, social media (will there be a new like?), and trading — variable reward schedules create the strongest and most addictive behavioral loops.
+
+---
+
+### BJ Fogg's Tiny Habits (Stanford Behavior Model)
+
+BJ Fogg (Stanford Persuasive Tech Lab) proposed the **Behavior = Motivation × Ability × Prompt** model (B=MAP):
+
+- **Motivation** alone is unreliable and fluctuates; it's the hardest variable to control
+- **Ability** is the key lever: making behaviors easier (reducing friction) dramatically increases success rates
+- **Prompt** (anchor or reminder) is the trigger that initiates the behavior
+
+Fogg's insight: most behavior change programs fail because they demand high motivation for behaviors that require high ability (effort). Instead, design for **low ability + reliable prompt + modest motivation** — a "Tiny Habit":
+
+> "After I [ANCHOR HABIT], I will [TINY BEHAVIOR], and then I will celebrate."
+
+The celebration immediately after the behavior installs a positive emotional signal (his term: "Shine" or "Sparkle") — a manufactured reward that reinforces the neural pathway. Even a brief fist pump or internal "Yes!" counts.
+
+**Key difference from Clear**: Fogg emphasizes emotion/celebration as the primary reinforcer (not identity); Clear emphasizes identity as the foundation with satisfaction as confirmation.
+
+---
+
+### Habit Reversal Training (HRT)
+
+Developed by Nathan Azrin and R. Gregory Nunn in the 1970s, HRT is the evidence-based clinical approach for breaking unwanted habits (nail-biting, hair-pulling, tics, stuttering):
+
+1. **Awareness training**: Describe the habit in detail — identify every antecedent, every movement, every context where it occurs. Many habits are so automatic that people are genuinely unaware of them in the moment
+2. **Competing response training**: Develop a physically incompatible response to the habit's trigger — one that can be maintained for 1–3 minutes. For nail-biting: make a fist or grasp an object when the urge arises
+3. **Social support**: Enlist someone to point out when the habit occurs, providing external awareness
+4. **Motivation**: Identify why the habit is disruptive and what benefits its removal brings
+
+HRT has 80–90% success rates for motor habits in clinical settings, far outperforming simple "willpower" approaches.
+
+---
+
+### Self-Efficacy and Habits (Albert Bandura)
+
+Albert Bandura's **self-efficacy theory** — one's belief in their ability to succeed in specific situations — is a critical but often-overlooked factor in habit formation. High self-efficacy:
+- Increases persistence after setbacks ("I missed yesterday, but I can and will get back on track")
+- Broadens the identity shift that Clear describes ("I AM a runner" requires believing running is within your capabilities)
+- Predicts follow-through on implementation intentions better than motivation alone
+
+**Building self-efficacy**: 
+1. *Mastery experiences* — succeed at small versions of the target behavior (this is why Fogg's Tiny Habits work: each tiny success is a mastery experience)
+2. *Vicarious experiences* — watch similar people succeed ("if they can do it, I can")
+3. *Social persuasion* — credible others affirm your capability
+4. *Physiological states* — interpreting nervousness as excitement rather than fear
+
+The connection: self-efficacy is the psychological infrastructure that allows identity-based habit change to function. Without believing you are capable of being that person, the identity shift rings hollow.
 
 ## Related
 - [[cognitive-biases]]

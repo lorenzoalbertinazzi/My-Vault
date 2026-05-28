@@ -3,7 +3,7 @@ title: Options — Fundamentals and Strategies
 date: 2026-05-26
 tags: [finance, options, derivatives, trading]
 source: research
-last_updated: 2026-05-26
+last_updated: 2026-05-28
 ---
 
 ## Summary
@@ -73,6 +73,62 @@ IV is the market's expectation of future price movement, backed out from current
 
 ### Theta Decay Curve
 Time value doesn't decay linearly — it accelerates. An option with 30 days to expiry loses less per day than one with 7 days. This is why short-term option sellers have an edge in collecting premium quickly, while long options buyers are in a race against the clock.
+
+### Put-Call Parity
+
+A fundamental no-arbitrage relationship linking the prices of calls and puts with the same strike and expiry:
+
+> **C − P = S − PV(K)**
+
+Where C = call price, P = put price, S = current stock price, PV(K) = present value of strike (discounted at risk-free rate). If this relationship breaks down, a riskless profit is possible. In practice it holds tightly for liquid options.
+
+**Practical use**: If you want to synthetically replicate a long call, you can buy a put, buy the stock, and borrow PV(K). Any option position can be reconstructed from its put-call parity equivalent.
+
+### Volatility Skew and the Smile
+
+Real options markets do not price all strikes at the same implied volatility (IV). The pattern varies by asset class:
+
+**Equity skew** (most stocks and indices): OTM puts trade at higher IV than OTM calls. This reflects demand for downside protection ("portfolio insurance") and the empirical fact that crashes are more severe and faster than rallies. The VIX spike on a down day is typically 3–5× larger than the IV decline on an equivalent up day.
+
+**Implied volatility smile** (commodities, FX, some indices): IV is higher for both deep OTM calls and deep OTM puts relative to ATM. This reflects "fat tails" — the market assigns higher probability than log-normal distributions predict to large moves in either direction.
+
+**Practical implication**: When selling OTM puts for income, you receive a volatility risk premium (VRP) — you're being paid to supply insurance. This is why systematic put-selling strategies have historically been profitable but carry left-tail (crash) risk that can wipe out months of premium in one event.
+
+### Volatility Term Structure
+
+Just as interest rates have a yield curve, IV has a term structure. Typically:
+- Short-dated IV is more volatile and often higher (near-term event uncertainty)
+- Long-dated IV is calmer (mean reversion assumptions)
+
+In normal markets, the term structure is upward sloping (contango in VIX futures). During crises, it inverts (backwardation): short-dated IV spikes massively while long-dated IV rises less — because the market expects the panic to resolve but fears it acutely right now.
+
+### LEAPS (Long-Term Equity Anticipation Securities)
+
+Options with expiry beyond one year (up to three years). Used for:
+- **Long-term bullish bets**: Deep ITM LEAPS on quality businesses offer significant leverage with defined-risk profile
+- **Reducing cost basis**: Sell covered calls against LEAPS position to collect premium over time
+- **Buffett's use**: Berkshire has sold long-dated puts on equity indices — receiving premium upfront, with the view that over multi-year periods indices almost certainly recover from temporary declines
+
+### Gamma Scalping
+
+A delta-neutral trading strategy that profits from realized volatility exceeding implied volatility:
+1. Buy an option (long gamma)
+2. Delta-hedge by selling/buying the underlying to stay neutral
+3. Each time the stock moves, delta-hedge back to neutral — this generates cash from the moves
+4. If realized vol > IV paid for the option, the hedging profits exceed theta decay → net positive P&L
+
+Market makers who buy options systematically gamma-scalp to monetize their position. The strategy's profitability depends on the spread between realized and implied volatility.
+
+### Tail Hedging and VIX Products
+
+**Tail hedges** are options positions designed to profit massively in market crashes, offsetting portfolio losses:
+- Long OTM put spreads on SPY
+- Long VIX call spreads (profit when the VIX spikes)
+- Long UVXY (2× leveraged VIX ETP) — but severe decay in contango regimes
+
+**VIX ETP decay problem**: Because VIX futures are usually in contango (short-dated futures are cheaper than longer-dated), rolling VIX ETPs from front-month to next-month futures creates a systematic drag. UVXY loses ~50–80% of its value per year in calm markets even as a hedge against spikes. Sophisticated tail hedgers prefer options on VIX rather than ETPs.
+
+**Universa/Taleb approach**: A small allocation (e.g., 3.3%) to tail hedges that cost ~0% in expected value but pay 100%+ in crashes can provide asymmetric portfolio protection — the "convex position" in a barbell.
 
 ## Related
 - [[valuation-fundamentals]]
