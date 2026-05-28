@@ -11,14 +11,10 @@
             "id": "2bc67b197ec664c7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "yield-curve-and-bonds.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "yield-curve-and-bonds"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -180,7 +176,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -194,40 +191,44 @@
       "bases:Create new base": false
     }
   },
-  "active": "f74dece3d1e478cd",
+  "active": "2bc67b197ec664c7",
   "lastOpenFiles": [
+    "Finance/yield-curve-and-bonds.md",
+    "Finance/yield-curve-and-bonds.md.tmp.22428.4fbdc8563597",
     "yield-curve-and-bonds.md",
-    "Psychology/cognitive-biases.md",
-    "Finance/portfolio-theory.md",
+    "Finance/behavioral-finance-and-investor-psychology.md",
     "Finance/macroeconomics-101.md",
-    "Psychology/48-laws-of-power.md",
+    "Finance/options-basics.md",
+    "Finance/portfolio-theory.md",
+    "Finance/technical-analysis-and-chart-patterns.md",
+    "Finance/valuation-fundamentals.md",
+    "Finance/value-investing-methodology.md",
+    "Geopolitics/2026-05-27-india-pakistan-2025-war-and-aftermath.md",
+    "Tech & AI/vector-databases-and-embeddings.md",
+    "World Events/2026-05-27-china-shenzhou-23-tiangong-yearlong-mission.md",
+    "Untitled.canvas",
+    "Geopolitics/2026-05-27-russia-central-asia-influence-and-decline.md",
+    "World Events/2026-05-27-ebola-outbreak-drc-uganda-2026.md",
+    "Tech & AI/prompt-engineering.md",
+    "Tech & AI/machine-learning-fundamentals.md",
+    "Psychology/stoicism.md",
+    "Tech & AI/diffusion-models-and-image-generation.md",
+    "Psychology/habit-formation.md",
+    "Psychology/negotiation-tactics.md",
+    "World Events/2026-05-27-us-iran-conflict-global-energy-crisis.md",
+    "Psychology/stoicism-and-stoic-philosophy.md",
+    "Geopolitics/2026-05-27-us-china-strategic-competition.md",
+    "Finance/fixed-income-deep-dive.md",
+    "World Events/2026-05-27-us-iran-conflict-strait-of-hormuz.md",
+    "Tech & AI/retrieval-augmented-generation.md",
     "Psychology/48-laws-of-power.md.tmp.2472.84cd1b2a9815",
-    "Psychology/mental-models.md",
     "Psychology/mental-models.md.tmp.2472.4a5ff0741606",
     "Psychology/cognitive-biases.md.tmp.2472.837ff9f5949c",
-    "Psychology/cialdini-influence.md",
     "Psychology/cialdini-influence.md.tmp.2472.36d148f2c7ef",
-    "Tech & AI/machine-learning-fundamentals.md",
     "Tech & AI/machine-learning-fundamentals.md.tmp.2472.769cc67dba7a",
-    "Tech & AI/prompt-engineering.md",
     "Tech & AI/prompt-engineering.md.tmp.2472.9ccd2cecba9b",
-    "Tech & AI/transformer-architecture.md",
     "Tech & AI/transformer-architecture.md.tmp.2472.c61fd390a57d",
     "Finance/portfolio-theory.md.tmp.2472.5a145acd253a",
-    "Finance/valuation-fundamentals.md",
-    "Finance/options-basics.md",
-    "Finance/options-basics.md.tmp.2472.ca236863e99f",
-    "Finance/macroeconomics-101.md.tmp.2472.55a033369d06",
-    "Tech & AI/2026-05-26-tech-ai.md",
-    "Finance/2026-05-26-finance.md",
-    "README.md",
-    "CLAUDE.md",
-    "6 - Main Notes/following the tutorial at 9am.md",
-    "2 - Source Material/Past Notes/La psicologia delle folle.md",
-    "1 - Rough Notes/Ideas.md",
-    "5 - Templates/Main Note.md",
-    "2 - Source Material/Books.md",
-    "2 - Source Material/Podcasts.md",
-    "Welcome.md"
+    "Finance/options-basics.md.tmp.2472.ca236863e99f"
   ]
 }

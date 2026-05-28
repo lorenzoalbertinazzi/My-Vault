@@ -8,7 +8,19 @@
       "Bash(Remove-Item \"C:\\\\Users\\\\lalbe\\\\OneDrive\\\\Desktop\\\\My Vault\\\\Finance\\\\2026-05-26-finance.md\" -Force)",
       "Bash(Remove-Item \"C:\\\\Users\\\\lalbe\\\\OneDrive\\\\Desktop\\\\My Vault\\\\Tech & AI\\\\2026-05-26-tech-ai.md\" -Force)",
       "Bash(Write-Output \"Deleted\")",
-      "PowerShell(New-Item *)"
+      "PowerShell(New-Item *)",
+      "PowerShell(git *)",
+      "Bash(git fetch *)",
+      "Bash(git pull *)",
+      "Bash(git push *)",
+      "Bash(git -C \"C:\\\\Users\\\\lalbe\\\\OneDrive\\\\Desktop\\\\My Vault\" fetch origin)",
+      "Bash(git -C \"C:\\\\Users\\\\lalbe\\\\OneDrive\\\\Desktop\\\\My Vault\" log origin/main --oneline -8)",
+      "Bash(git -C \"C:\\\\Users\\\\lalbe\\\\OneDrive\\\\Desktop\\\\My Vault\" log origin/main --oneline --since=\"2026-05-27T20:00:00\" --format=\"%h %ai %s\")",
+      "Bash(git -C \"C:\\\\Users\\\\lalbe\\\\OneDrive\\\\Desktop\\\\My Vault\" show --stat 26d5cbd)",
+      "Bash(git -C \"C:\\\\Users\\\\lalbe\\\\OneDrive\\\\Desktop\\\\My Vault\" show --stat d230a3f)",
+      "PowerShell(schtasks *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
     ]
   }
 }

@@ -84,16 +84,16 @@ Other ANN approaches: IVF (Inverted File Index), ScaNN (Google), DiskANN (for di
 
 ### Vector Database Landscape
 
-| Database | Type | Best For | Notes |
-|----------|------|----------|-------|
-| **Pinecone** | Managed cloud | Production, scale, simplicity | No infrastructure management |
-| **Weaviate** | Open-source / cloud | Multi-modal, graph + vector | Built-in modules (LLM, image) |
-| **Qdrant** | Open-source / cloud | Rust-based, payload filtering | Fast, strong filtering on metadata |
-| **Chroma** | Open-source | Development, prototyping | Python-native, simple API |
-| **Milvus** | Open-source | Billion-scale enterprise | Most mature open-source option |
-| **pgvector** | PostgreSQL extension | Existing PostgreSQL users | SQL + vector in one system |
-| **Redis VSS** | Redis module | Low-latency, in-memory | Combines caching + vector search |
-| **LanceDB** | Open-source | Embedded, serverless | Built on Apache Lance format |
+| Database      | Type                 | Best For                      | Notes                              |
+| ------------- | -------------------- | ----------------------------- | ---------------------------------- |
+| **Pinecone**  | Managed cloud        | Production, scale, simplicity | No infrastructure management       |
+| **Weaviate**  | Open-source / cloud  | Multi-modal, graph + vector   | Built-in modules (LLM, image)      |
+| **Qdrant**    | Open-source / cloud  | Rust-based, payload filtering | Fast, strong filtering on metadata |
+| **Chroma**    | Open-source          | Development, prototyping      | Python-native, simple API          |
+| **Milvus**    | Open-source          | Billion-scale enterprise      | Most mature open-source option     |
+| **pgvector**  | PostgreSQL extension | Existing PostgreSQL users     | SQL + vector in one system         |
+| **Redis VSS** | Redis module         | Low-latency, in-memory        | Combines caching + vector search   |
+| **LanceDB**   | Open-source          | Embedded, serverless          | Built on Apache Lance format       |
 
 ### Metadata Filtering: The Critical Feature
 Raw vector similarity search returns results "semantically close" but may ignore hard constraints. A real-world query might be: "Find documents similar to this query, BUT only from user_id=42, created after 2025-01-01, in the 'finance' category."
