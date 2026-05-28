@@ -4,7 +4,10 @@ date: 2026-05-27
 tags: [psychology, philosophy, stoicism, resilience, mental-models]
 source: research
 last_updated: 2026-05-28
+enriched: 2026-05-28
 ---
+
+> **Note:** This note is an earlier version. The primary, fully enriched reference is [[stoicism-and-stoic-philosophy]], which contains all material from this note plus substantially deeper coverage of Chrysippus's logical foundations, Musonius Rufus, Pierre Hadot's spiritual exercises framework, the Stoicism vs. Epicureanism and Buddhism comparisons, modern case studies (Stockdale, Mandela, Frankl), the Oikeiosis theory, and full Cross-Disciplinary Connections. Please update references to point to that note.
 
 ## Summary
 Stoicism is an ancient Greek and Roman philosophy founded around 300 BCE that teaches individuals to cultivate virtue, reason, and resilience by focusing exclusively on what is within their control. It has experienced a massive modern revival as a practical framework for emotional regulation, decision-making, and finding meaning amid adversity. Its core insight — that suffering comes not from events themselves but from our judgments about them — anticipates much of modern cognitive-behavioral therapy.
@@ -178,7 +181,10 @@ The Stoics (particularly Hierocles and Cicero) used the metaphor of **concentric
 **Practical significance**: Oikeiosis explains why Stoicism is not a philosophy of cold indifference but of expanding care. Marcus Aurelius's famous directive to "act for the common good" is grounded in oikeiosis — the recognition that rational beings share a common nature (logos) that makes all humans kin. The Stoic sage doesn't stop caring; they expand the boundary of who they care about until it encompasses everyone.
 
 ## Related
+- [[stoicism-and-stoic-philosophy]] — primary enriched version of this note
 - [[mental-models]]
 - [[cognitive-biases]]
 - [[48-laws-of-power]]
-- [[viktor-frankl-logotherapy]]
+- [[habit-formation]]
+- [[emotional-intelligence]]
+- [[value-investing-methodology]]

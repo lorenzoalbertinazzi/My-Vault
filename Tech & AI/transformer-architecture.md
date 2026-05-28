@@ -197,7 +197,35 @@ A critical practical limitation of long-context models: **LLMs systematically pe
 
 This phenomenon means that naive "stuff everything in the context window" approaches degrade as context grows — RAG with targeted retrieval often outperforms long-context ingestion for specific factual queries even when the full document fits.
 
+## Cross-Disciplinary Connections
+
+### Transformers and the Economics of Intelligence
+
+The transformer's scaling laws — the empirical finding that model performance improves predictably as a power-law function of parameters, data, and compute — resemble nothing so much as the production functions studied in macroeconomics. Just as economists describe output as a function of capital and labor inputs, Kaplan's scaling laws describe model quality as a function of compute capital. This analogy is more than superficial: the race to train ever-larger models has driven capital expenditures measured in the billions of dollars, reshaping the economics of AI development in a way that strongly favors incumbents with access to large GPU clusters. The barrier to entry created by these capital requirements mirrors classic industrial economics — it is not unlike the capital moats that protect semiconductor fabs or oil refineries. This structural dynamic has profound implications for the US-China great power competition explored in [[2026-05-27-us-china-great-power-competition]], where access to leading-edge AI chips has become a first-order strategic variable, and the US export controls on NVIDIA H100/A100 GPUs represent an attempt to constrain an adversary's ability to scale on the same curve.
+
+### Attention, Cognition, and Cognitive Bias
+
+The self-attention mechanism is, at its core, a learned salience function: for any given token, it computes which other tokens are most relevant to its interpretation. This mirrors well-established theories of human selective attention in cognitive psychology. Both biological and artificial attention systems face the same fundamental tradeoff between breadth (attending to many things weakly) and depth (attending to few things strongly). The "lost in the middle" phenomenon — where transformers systematically underweight information positioned in the middle of a long context — is directly analogous to the primacy and recency effects documented in human memory research, subjects in psychological experiments consistently recall the first and last items in a list better than middle items. The mechanism differs (transformers show U-shaped attention distributions due to positional encoding and training dynamics; humans show serial position effects due to working memory constraints) but the behavioral signature is identical. This is not coincidental: both systems are trained on sequential data and must develop representations that are useful for predicting what comes next, and that training pressure biases both toward attending to contextual boundaries. The [[cognitive-biases]] note covers primacy/recency effects in human judgment, and practitioners building RAG systems would benefit from understanding both the human and computational versions of the same phenomenon — both argue for placing critical information at the beginning and end of any sequence.
+
+### Transformers as Infrastructure for the Entire AI Stack
+
+Understanding the transformer architecture is prerequisite to understanding the entire downstream technology stack in this vault. The self-attention mechanism is directly responsible for the quality of vector embeddings used in [[vector-databases-and-embeddings]]: encoder-only transformers (BERT, E5, BGE) produce the dense semantic representations that make similarity search meaningful. Without the transformer's ability to capture long-range contextual relationships, an embedding of "bank" could not distinguish between the financial institution and the riverbank. The quality of retrieval in [[retrieval-augmented-generation]] pipelines is therefore fundamentally bottlenecked by the expressiveness of transformer-generated embeddings. Similarly, the prompt engineering techniques in [[prompt-engineering]] are most precisely understood as techniques for manipulating the probability distribution over next tokens — chain-of-thought prompting works because intermediate reasoning tokens provide context that dramatically shifts the probability distribution toward correct downstream tokens, exploiting the transformer's ability to condition generation on arbitrarily long prior context.
+
+### Scaling Laws, Finance, and the Limits of Extrapolation
+
+The investor psychology literature in [[behavioral-finance-and-investor-psychology]] describes how investors systematically over-extrapolate recent trends — the gambler's fallacy in reverse, assuming that recent strong performance predicts future performance. The AI industry's relationship to scaling laws has exhibited exactly this pattern. The smooth power-law improvements from 2018 to 2022 led to widespread belief that scaling alone would produce artificial general intelligence on a predictable timeline, an assumption priced into the valuations of AI companies. The emergence of phenomena like "emergent capabilities" — where new abilities appear discontinuously at scale thresholds — and the potential flattening of returns from pretraining data exhaustion represent exactly the kind of regime-change risk that trend extrapolators miss. The Chinchilla scaling paper itself was a correction to over-extrapolation: earlier models were undertrained relative to their parameter count because researchers were extrapolating the wrong scaling curve. For investors evaluating AI companies, this history argues strongly against naive trend extrapolation — the same cognitive error that drives momentum investing also shapes AI hype cycles.
+
+### State Space Models and Mean-Reversion in Technology
+
+The emergence of Mamba and state space models as transformer alternatives illustrates a broader pattern in technology cycles: apparent monocultures are always challenged by architectures that address the dominant architecture's structural weaknesses. The transformer's O(N²) attention complexity makes it fundamentally expensive for very long contexts; SSMs address this but sacrifice associative recall quality. This tradeoff structure — incumbents with superior performance on known benchmarks, challengers with superior efficiency on new task dimensions — resembles the dynamics of market competition analyzed in [[value-investing-methodology]], where moats erode precisely at the boundaries of existing strengths. The hybrid Jamba/Zamba architectures (interleaving transformer and Mamba layers) represent the technological equivalent of conglomerate strategies: capturing complementary strengths while accepting the management complexity of maintaining two distinct operating models.
+
 ## Related
 - [[prompt-engineering]]
-- [[llm-landscape]]
 - [[machine-learning-fundamentals]]
+- [[vector-databases-and-embeddings]]
+- [[retrieval-augmented-generation]]
+- [[diffusion-models-and-image-generation]]
+- [[2026-05-27-us-china-great-power-competition]]
+- [[cognitive-biases]]
+- [[behavioral-finance-and-investor-psychology]]
+- [[value-investing-methodology]]

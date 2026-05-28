@@ -109,5 +109,41 @@ The outcome of US-China competition will determine:
 
 **AI governance talks beginning but unproductive**: Low-level dialogues on AI safety and governance have been initiated between US and Chinese officials, but as of mid-2026 have produced no binding agreements. Both sides appear to view AI governance talks more as a communication channel to reduce misunderstanding than as a path to enforceable rules.
 
+## Cross-Disciplinary Connections
+
+### Currency Competition, Dollar Dominance, and the Long Game of Financial Architecture
+
+The US-China strategic rivalry plays out with particular intensity in the currency and financial system arena, where structural power is harder to observe than military force but more durably consequential. The dollar's reserve currency status — underpinned by the depth of US Treasury markets, the rule of law in American financial institutions, and the network effects of dollar-denominated commodity pricing — represents an asymmetric advantage that China has spent two decades attempting to erode. The renminbi's internationalization has been deliberate but slow: RMB's share of global payments (per SWIFT data) remains below 4%, compared to the dollar's ~42%, reflecting the fundamental tension between China's capital controls (necessary for domestic financial stability and CCP control over credit allocation) and the openness required for a credible reserve currency. The digital yuan (e-CNY) is an attempt to thread this needle — enabling international RMB payments through a state-controlled digital infrastructure that avoids full capital account liberalization — but as of 2026, adoption outside China has been limited primarily to bilateral arrangements with economies highly dependent on Chinese investment.
+
+The May 2026 tariff truce (US tariffs from ~145% to ~30%; Chinese tariffs on US goods to ~10%) reveals important asymmetries in currency dynamics. A 30% tariff on Chinese goods is effectively a negative supply shock to US consumers, generating inflationary pressure that the Federal Reserve must weigh against growth concerns — a situation that constrains Fed policy independence and represents a form of indirect Chinese influence over US monetary conditions. Meanwhile, the yuan's managed float means China can absorb some tariff impact through controlled depreciation, though the PBOC faces its own constraints: excessive depreciation would trigger capital flight, which is why China's foreign exchange reserves (still approximately $3.2 trillion) function partly as a credibility buffer for the managed exchange rate regime. For fixed-income investors, this dynamic is captured in the yield spread between US Treasuries and Chinese government bonds — a spread that has widened and narrowed with trade war escalations and truces in ways that directly reflect geopolitical risk pricing by bond markets.
+
+### AI Supremacy as the Decisive Front
+
+The competition's technology dimension maps precisely onto machine learning fundamentals in ways that both sides understand with unusual clarity. China's "New Generation AI Development Plan" (2017) established explicit national targets for AI leadership by 2030, treating AI capability as the determining factor in 21st-century economic and military power. This strategic clarity is well-founded: the scaling laws governing large language models and multi-modal AI systems mean that compute availability (a function of chip access and energy infrastructure), data quality and scale (where China's large population and limited privacy regulation provide structural advantages), and talent density (a function of educational investment and migration policy) determine who leads. The US semiconductor export controls are an attempt to block the compute axis — the one China cannot easily substitute domestically at frontier levels. China's counter-strategy has been to pursue efficiency-focused architectures that achieve competitive capability at lower compute levels. Huawei's investment in domestic AI chips (Ascend series) and Chinese researchers' focus on model distillation and efficient training represent a genuine effort to compete at lower compute — with uncertain long-term success.
+
+The implications extend to the transformer architecture that underlies virtually all frontier AI systems. The attention mechanism — first described in the 2017 "Attention Is All You Need" paper by Google researchers — is not subject to export controls, but the compute to implement transformers at frontier scale is. This creates an unusual situation where scientific knowledge is freely shared (the papers are published openly) but the industrial capability to exploit it at scale is a controlled resource — a distinction that has no precedent in prior technology competitions.
+
+### The BRI as Applied Macroeconomics and the Limits of Debt Diplomacy
+
+China's Belt and Road Initiative can be analyzed through the lens of development economics with unusual precision. The BRI's model — state-directed lending by China Development Bank and Export-Import Bank of China for infrastructure projects in recipient countries, often with Chinese labor and materials — follows a pattern closer to mercantile economics than the Bretton Woods development finance model. The World Bank and IMF lend in dollars on standardized concessional terms with governance conditions; China lends in RMB or dollars on project-specific terms, typically requiring resource offtake agreements or port access rights as collateral. The "debt trap" critique (exemplified by Hambantota Port in Sri Lanka, ceded to a Chinese company on a 99-year lease after Sri Lanka defaulted) overstates the degree of deliberate strategic planning — many BRI projects reflected local political corruption and poor project selection rather than a coordinated Beijing strategy. Nevertheless, the infrastructure investments create genuine switching costs: once a country's rail network, port operations, or power grid depends on Chinese equipment and maintenance contracts, changing providers involves enormous transition costs, creating the kind of lock-in effects familiar from platform economics. The EU's Global Gateway initiative and the US-led Partnership for Global Infrastructure and Investment (PGII) represent belated attempts to offer a competitive alternative — but they face the same structural challenge that private capital faces vs. state-directed lending: private investors require commercial returns on infrastructure projects that often have long payback periods and public-good characteristics that private finance systematically undervalues.
+
+### Negotiation Theory and the "Two-Level Game" in US-China Diplomacy
+
+The Trump-Xi summit dynamic and the trade truce process illustrates Robert Putnam's "two-level game" theory of international negotiations with remarkable clarity. Each leader is simultaneously negotiating internationally (with the other side) and domestically (with their own political base). Trump faces a Republican Party that views China as an existential threat and would regard significant concessions as weakness; Xi faces a CCP system that has staked nationalist legitimacy on resistance to American hegemony and cannot publicly accept US "decoupling" narrative without losing face. The result is a pattern familiar from repeated negotiations: public toughness, back-channel pragmatism, and deals framed in domestically compatible language. The "minor inconsistencies" in US and Chinese summit readouts documented by NPR are not a diplomatic failure — they are a deliberate feature of the two-level game, where each side interprets the same agreement in the terms most acceptable to its domestic audience.
+
 ## Related
-- [[2026-05-27-us-iran-conflict]]
+- [[2026-05-27-us-china-great-power-competition]]
+- [[2026-05-27-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
+- [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
+- [[2026-05-27-russia-central-asia-influence-and-decline]]
+- [[2026-05-27-china-shenzhou-23-tiangong-yearlong-mission]]
+- [[currency-markets-and-fx]]
+- [[macroeconomics-101]]
+- [[machine-learning-fundamentals]]
+- [[transformer-architecture]]
+- [[docker-and-containerization]]
+- [[fixed-income-deep-dive]]
+- [[portfolio-theory]]
+- [[negotiation-tactics]]
+- [[mental-models]]
+- [[cognitive-biases]]

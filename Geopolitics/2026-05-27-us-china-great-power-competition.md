@@ -117,7 +117,40 @@ The critical question for the next five years is whether the rivalry remains man
 
 **Assessment**: The Trump-Xi summit and May 12 trade truce signal both sides prefer "managed rivalry" to open confrontation, but structural tensions in technology, Taiwan, and now Iran remain unresolved. The new tariff floor of ~30% (US on China) and ~10% (China on US) represents a significantly lower level than the 2025 escalation peak — a genuine de-escalation in the trade dimension, even as technology decoupling and military posturing continue to intensify.
 
+## Cross-Disciplinary Connections
+
+### Currency War, Dollar Hegemony, and the Architecture of Financial Power
+
+The US-China competition is, at its deepest level, a contest over who writes the rules of the global financial system — and currency markets are both the battleground and the scorecard. The dollar's "exorbitant privilege" (a term coined by French Finance Minister Valéry Giscard d'Estaing in the 1960s) allows the United States to run persistent current account deficits, borrow at lower rates than any other sovereign, and impose crippling financial sanctions via SWIFT access. China's multi-decade strategy to internationalize the renminbi (RMB) — through CIPS, bilateral currency swap agreements, petroyuan arrangements with Saudi Arabia and Russia, and the digital yuan (e-CNY) — represents a systematic effort to erode this privilege rather than directly challenge it in a single confrontation. The May 2026 Trump-Xi summit trade truce, which reduced US tariffs from ~145% to ~30%, illustrates the paradox of economic interdependence as a weapon: both sides have inflicted genuine damage (supply chain disruption, inflation, investment uncertainty), but neither can push past a threshold without self-harm that exceeds the cost imposed on the adversary. The ~$800B in Chinese holdings of US Treasuries creates what strategists call a "financial mutually assured destruction" — a deterrence logic structurally similar to nuclear deterrence but operating through bond markets rather than warheads.
+
+From a portfolio theory perspective, the US-China competition has fundamentally altered the efficient frontier for globally diversified investors. The correlation structure between US and Chinese equities — previously a diversification benefit — has become increasingly unreliable as policy risk dwarfs fundamental valuation signals. The VIX (volatility index) spikes that accompany Taiwan Strait exercises or tariff announcements represent priced geopolitical risk that did not exist in the pre-2017 era of "engagement." Behavioral finance concepts apply directly: investors exhibit recency bias (overweighting the benign 1990-2015 period and underpricing structural decoupling risk), while institutional investors in US pension funds holding Chinese equities face the classic anchoring problem — anchored to pre-tension valuations in markets that have structurally changed.
+
+### The Semiconductor Chokepoint as Industrial Policy Economics
+
+The US semiconductor export controls represent the most consequential application of export control theory since the CoCom (Coordinating Committee for Multilateral Export Controls) regime of the Cold War. The economic logic is straightforward in outline but complex in execution: semiconductor manufacturing involves a global supply chain with extraordinary concentration at specific nodes — ASML's monopoly on EUV lithography machines, TSMC's dominance of advanced fabrication, and American dominance of electronic design automation (EDA) software from Synopsys and Cadence. By restricting access at these chokepoints, the US can theoretically prevent China from achieving frontier semiconductor capability indefinitely, as each node is sufficiently complex and capital-intensive that China cannot replicate it quickly despite unlimited state investment. China's SMIC achieving 7nm production (announced in 2023 via Huawei's Kirin 9000s chip) proved that workarounds are possible — but also illustrated the limitation: SMIC used older DUV machines in multiple patterning steps, a process that is slower, lower yield, and higher cost than EUV-based 7nm, making it uncompetitive at scale. The macroeconomic implication is significant: Chinese AI and military systems built on domestically produced 7nm chips will operate at meaningfully higher cost per unit of compute than US systems on TSMC 3nm, creating a structural military and commercial disadvantage that compounds over time.
+
+This connects directly to machine learning fundamentals: compute is the binding constraint on AI capability at the frontier. The scaling laws documented by researchers at OpenAI, DeepMind, and Anthropic show that model capability is roughly a power-law function of training compute. A persistent 2–3 generation disadvantage in chip capability translates, via these scaling laws, into a compounding disadvantage in AI capability that cannot be overcome by architectural cleverness alone at scale. This is why the semiconductor war is, at its root, an AI war — and why both Beijing and Washington treat chip access as a national security matter of the first order.
+
+### Tech Decoupling and the Containerization of Supply Chains
+
+Apple's migration of iPhone production from China to India, Nike's shift to Vietnam, and the broader "China+1" strategy visible in corporate supply chains as of 2026 can be analyzed through the lens of systems architecture — specifically, the same containerization logic that transformed software deployment. Docker and Kubernetes enable applications to run in modular, portable, loosely-coupled units that are not tied to a single server. The "China+1" strategy applies an analogous logic to physical supply chains: build modularity and redundancy into manufacturing networks so that no single geopolitical node (China) represents a critical dependency. The irony is that China's own economic success was built on the *opposite* principle — hyper-concentrated, deeply integrated supply chains that achieved efficiency through geographical co-location. The geopolitical decoupling reverses the last 30 years of supply chain optimization, accepting permanent efficiency losses in exchange for resilience — a trade-off that only makes sense if one assigns sufficient probability weight to the tail risk of Taiwan conflict or trade war rupture.
+
+### The Thucydides Trap, Cognitive Biases, and Conflict Escalation Risk
+
+Graham Allison's "Thucydides Trap" — derived from Thucydides' account of why Sparta went to war with Athens ("It was the rise of Athens and the fear that this inspired in Sparta that made war inevitable") — provides the structural framework, but cognitive biases at the leadership level determine whether structural pressures translate into actual conflict. The availability heuristic causes American strategists to overweight recent Chinese assertiveness (South China Sea islands, Taiwan exercises, Xinjiang) and underweight the enormous costs China has absorbed to maintain economic integration. Conversely, Chinese strategists show classic loss aversion around Taiwan: the CCP frames reunification not as a gain to be pursued when optimal but as a loss to be prevented (loss of face, historical mission unfulfilled), making the calculus more aggressive than a pure expected-value calculation would suggest. Mental models matter here: the risk management framework that worked for the US-Soviet relationship (nuclear deterrence, clear red lines, back-channel communication) does not transfer cleanly to the US-China relationship, where economic interdependence creates ambiguous incentives that nuclear-only deterrence frameworks cannot capture.
+
 ## Related
-- [[2026-05-27-us-iran-conflict-hormuz]]
-- [[multipolar-world-order]]
-- [[taiwan-strait-crisis]]
+- [[2026-05-27-us-china-strategic-competition]]
+- [[2026-05-27-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
+- [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
+- [[2026-05-27-russia-central-asia-influence-and-decline]]
+- [[2026-05-27-us-iran-conflict-strait-of-hormuz]]
+- [[2026-05-27-china-shenzhou-23-tiangong-yearlong-mission]]
+- [[currency-markets-and-fx]]
+- [[macroeconomics-101]]
+- [[machine-learning-fundamentals]]
+- [[docker-and-containerization]]
+- [[portfolio-theory]]
+- [[behavioral-finance-and-investor-psychology]]
+- [[mental-models]]
+- [[cognitive-biases]]
