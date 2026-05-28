@@ -117,6 +117,49 @@ Historical Minsky Moments: 2007–2008 (mortgage market), 1997–1998 (Asian fin
 
 Critics point to evidence that the 1980s tax cuts increased deficits without proportional growth effects. Proponents argue the counterfactual (continued stagflation) was avoided. The debate remains live in fiscal policy discussions today.
 
+### Secular Stagnation (Larry Summers)
+
+**Secular stagnation** (originally Alvin Hansen, 1938; revived by Larry Summers, 2013) is the hypothesis that developed economies can experience sustained periods where private investment demand is chronically insufficient to absorb available savings at positive real interest rates — leaving the economy stuck in low growth, low inflation, and near-zero interest rates even with accommodative monetary policy.
+
+**Structural drivers proposed**:
+- **Demographics**: Aging populations save more and consume less; longer life expectancy extends the savings horizon
+- **Income inequality**: Wealthier households save a higher fraction of income than lower-income households; rising inequality concentrates income in high-saving hands
+- **Falling relative price of capital goods**: Robots and software are cheaper than factories; the same real investment requires less nominal spending
+- **Productivity slowdown**: Less investment opportunity reduces demand for capital at any given interest rate
+
+The secular stagnation view explains why central banks struggled to raise rates to "normal" levels in the 2010s even during the long economic recovery — r* had fallen structurally, not cyclically. The 2022–2024 rate hiking cycle temporarily challenged this view; whether secular stagnation re-emerges as post-pandemic demand normalizes remains an open debate.
+
+### Modern Monetary Theory (MMT) — Claims and Critiques
+
+**MMT** holds that governments that issue their own sovereign currency and carry no foreign-currency debt cannot become involuntarily insolvent — they can always create more money. Key MMT claims:
+- The primary fiscal constraint is **inflation, not solvency** — spend freely until inflation rises
+- Taxes serve to regulate aggregate demand (remove money from the economy), not to "fund" government spending
+- The government deficit is, by accounting identity, the private sector's surplus
+- Unemployment is always a policy choice — the government can offer a "job guarantee" as employer of last resort
+
+**Critiques**:
+- Confuses the accounting identity (government deficits = private surpluses) with a policy prescription — accounting correctness does not validate unlimited spending
+- Ignores confidence effects: bond markets may require higher rates if they doubt fiscal sustainability, raising interest costs and potentially triggering the crises MMT claims cannot occur
+- The inflation constraint is acknowledged but underspecified — how much spending is too much is unclear until it's too late
+- Less applicable to small open economies or countries that borrow in foreign currencies (most of the developing world)
+
+**Practical relevance**: US post-COVID fiscal stimulus, partly justified by MMT framing that dismissed inflation risk, was followed by the highest inflation in 40 years — a live empirical test that mainstream economists interpret as evidence against MMT's benign view of deficit spending.
+
+### The Debt Supercycle (Ray Dalio)
+
+Dalio's framework identifies two recurring patterns that explain long-run economic dynamics:
+
+**Short-term debt cycle (5–10 years)**: The standard business cycle — credit expansion, peak, contraction, monetary policy response. What most economists study.
+
+**Long-term debt cycle (50–75 years)**: A broader accumulation of debt across multiple short cycles until debt levels become so extreme that conventional monetary policy (rate cuts) loses effectiveness. The debt burden itself becomes deflationary as servicing costs crowd out productive spending.
+
+**The deleveraging process** unfolds through a balance of four forces: austerity (spending cuts), debt restructuring, wealth redistribution, and money printing. Dalio identifies:
+- **"Beautiful" deleveraging**: The four forces balanced — nominal growth exceeds the interest rate burden; debt-to-GDP gradually falls
+- **"Ugly" deflationary deleveraging**: Excessive austerity with insufficient money printing → depression
+- **"Ugly" inflationary deleveraging**: Excessive money printing → hyperinflation (Weimar Germany, Zimbabwe)
+
+By 2026, global sovereign debt levels are at peacetime highs. Dalio argues developed markets are in the late stages of a long-term debt cycle where fiscal space is constrained and monetary policy has diminishing returns — historically resolved through inflation, default, currency devaluation, or a combination of all three.
+
 ## Related
 - [[valuation-fundamentals]]
 - [[portfolio-theory]]

@@ -166,6 +166,36 @@ Greene extended his framework in subsequent books:
 
 **The progression**: *48 Laws* teaches social power. *Mastery* teaches that the deepest, most durable power comes from mastering something the world values — the craftsman's power, not the courtier's.
 
+### Additional Laws Worth Mastering
+
+**Law 7 — Get Others to Do the Work for You, but Always Take the Credit**
+Use the skill and knowledge of others to forward your own cause. This is not simply plagiarism — it's recognizing that effort is abundant but credit and positioning are scarce. The person who synthesizes and presents the work of others often accrues more power than those who do the work.
+
+**Law 10 — Infection: Avoid the Unhappy and the Unlucky**
+Emotional states are contagious. Misfortune can be visited upon you simply by association with people who carry it. This is not cruelty — it is a recognition that some people carry a pattern of dysfunction that infects those around them. The powerful learn to assess social environments and exit toxic ones before they absorb the ambient dysfunction.
+
+**Law 20 — Do Not Commit to Anyone**
+Maintain independence. The moment you commit to one side, you lose freedom of manoeuvre and become dependent on your patron's fortunes. By remaining unattached, you become a prize others court — you preserve optionality and allow competing parties to bid for your allegiance. The corollary: never commit to a cause greater than your own interests without calculating what you get in return.
+
+**Law 25 — Re-create Yourself**
+Forge a new identity that commands attention and never reveals everything. Do not accept the roles society has forced on you. Use the theater of power — consciously craft your public persona, your manner, your appearance, the story told about you. The self-made myth is more powerful than the most impressive pedigree.
+
+---
+
+### The 48 Laws vs. Machiavelli's *The Prince*
+
+Greene explicitly draws from Machiavelli's *The Prince* (1532), the foundational text of realist political philosophy. The comparison illuminates both:
+
+| Dimension | Machiavelli | Greene |
+|-----------|-------------|--------|
+| Audience | A prince (ruler) seeking and maintaining state power | Anyone navigating social/professional hierarchies |
+| Method | Political/military analysis; historical case studies | Psychological principles; narrative anecdotes from all of history |
+| Tone | Clinical, analytical; occasionally despairing | Detached, observational; occasionally provocative |
+| Core insight | A ruler must know how to use both force (the lion) and cunning (the fox); morality is a tool of statecraft, not a constraint | Power operates through perception management, dependency creation, and information control |
+| Key difference | Focused on *sovereignty* (territorial power) | Focused on *influence* (social power at any level) |
+
+Both Machiavelli and Greene have been condemned as amoral — and both would likely argue that their texts describe reality rather than endorse it. The practical reader uses them as maps of a terrain that exists whether or not they consult the map.
+
 ## Related
 - [[cialdini-influence]]
 - [[mental-models]]

@@ -99,7 +99,7 @@ The outcome of US-China competition will determine:
 
 ### Update — May 28, 2026
 
-**Trade truce framework and tariff levels**: Following the May 14 Trump-Xi summit, US-China tariffs remain at ~48% effective rate but a framework for restoration of pre-escalation Section 301 tariff rates is under discussion. Neither side has extended the trade truce formally, creating uncertainty. Effective US tariff rate on Chinese goods remains the highest of any country at ~30% on many categories.
+**May 12 trade truce — tariffs reduced**: In the lead-up to the summit, the US and China agreed a formal trade truce on May 12, reducing US tariffs on Chinese goods to approximately 30% (from ~145% peak) while China reduced tariffs on US products to 10%. Both sides agreed to discuss a $30B+ reciprocal tariff reduction framework. The May 15 Beijing summit confirmed this framework; business executives including Musk (Tesla), Cook (Apple), Fink (BlackRock), and Ortberg (Boeing) accompanied Trump, signaling corporate re-engagement. A comparison of US and Chinese summit readouts by NPR revealed "minor inconsistencies" on agriculture, tariffs, and rare earths, suggesting that beneath the diplomatic thaw, negotiating gaps remain significant.
 
 **Technology decoupling: Supply chain migration accelerating**: Apple has formally moved portions of iPhone assembly to India (the India production ramp represents the most visible proof of the "China+1" strategy becoming permanent). Nike, Hasbro, and numerous other US brands have shifted production to Vietnam, India, and Mexico. This represents structural, not cyclical, decoupling of manufacturing.
 

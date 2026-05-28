@@ -127,6 +127,39 @@ The value function's shape creates specific, actionable predictions:
 
 **Fourfold pattern** (Kahneman-Tversky): People are risk-averse over moderate/large gains, risk-seeking over moderate/large losses, risk-seeking over small-probability large gains (lottery), and risk-averse over small-probability large losses (insurance). This single pattern explains lottery popularity, insurance demand, excessive risk-taking to recover losses, and premature profit-taking simultaneously.
 
+### The Endowment Effect
+
+First documented by Kahneman, Knetsch, and Thaler (1991), the **endowment effect** is the finding that people value objects more highly simply because they own them. In a classic experiment, participants randomly given a coffee mug demanded twice as much to sell it as non-owners were willing to pay — even though the mug's objective value was identical. Ownership triggers psychological attachment that inflates perceived value.
+
+**Investment implications**:
+- Investors hold losing positions not just due to loss aversion but because they irrationally overvalue what they already own
+- The endowment effect explains concentrated positions in employer stock held long past rational diversification points
+- It makes portfolio rebalancing psychologically difficult — selling winners feels like giving something away
+- **Countermeasure**: Ask "If I received cash for this position today and had no prior ownership, would I reinvest at this price?" This forces an unbiased current assessment.
+
+### Representativeness Heuristic — Gambler's Fallacy vs. Hot Hand Fallacy
+
+The **representativeness heuristic** (Kahneman/Tversky) causes people to judge probability by how closely something resembles a prototype, ignoring base rates. Two paradoxical biases stem from the same root:
+
+**Gambler's Fallacy**: Believing that after a streak of one outcome, the opposite becomes more likely ("the sequence needs to balance out"). A coin showing heads five times is NOT more likely to show tails — each flip is independent. Investors who sell after a multi-year bull run because "it has to correct soon" fall for this.
+
+**Hot Hand Fallacy**: Believing a streak of success indicates skill that will continue. The hot hand fallacy in investing causes over-attribution of recent fund manager outperformance to skill rather than luck. Studies consistently show that past 3-year fund performance has little predictive power for the next 3 years.
+
+**The investor tension**: The same investor may simultaneously think "this stock has risen 30%, it can't keep going" (Gambler's Fallacy) while also thinking "this fund manager has beaten the market 5 years running, she must be a genius" (Hot Hand Fallacy). Navigating between them requires distinguishing independent random events (coin flips, dice rolls) from genuinely autocorrelated processes (market momentum, business quality compounding).
+
+### Hot-Cold Empathy Gap (George Loewenstein)
+
+Coined by George Loewenstein, the **hot-cold empathy gap** is the difficulty of predicting your own behavior in a different emotional state (hot = emotional/aroused vs. cold = calm/rational):
+
+- In a cold state, investors systematically underestimate how panic-inducing a 30% drawdown will feel and overestimate their tolerance for volatility
+- In a hot state (during a crash), investors underestimate how quickly their fear will subside if they simply hold
+- This creates a mismatch between stated risk tolerance (measured in calm surveys) and actual behavior during market stress
+
+**Investment applications**:
+- Asset allocation based purely on cold questionnaires systematically assigns too much risk
+- The cure: vividly imagine the scenarios before they happen (related to Stoic *premeditatio malorum*) and precommit to rules that override hot-state decisions
+- Automatic rebalancing and dollar-cost averaging are institutional solutions to the hot-cold empathy gap — they remove real-time emotional decision-making
+
 ## Related
 - [[cognitive-biases]]
 - [[mental-models]]

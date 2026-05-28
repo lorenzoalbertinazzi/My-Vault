@@ -201,6 +201,60 @@ Robin Dunbar (Oxford anthropologist) estimated in 1992 that the cognitive limit 
 
 **Business implication**: Organizations above ~150 people require formal management structures, rules, and processes. Below this threshold, mutual accountability and social norms can govern behavior. Above it, impersonal institutional mechanisms take over — hence why many successful small businesses struggle to scale past this threshold without a deliberate management transition.
 
+### Survivorship Bias
+
+We systematically observe only the survivors — the successes that made it through a filter — and construct misleading lessons from an unrepresentative sample.
+
+**Classic illustration**: During WWII, the US military studied bullet holes in returning aircraft to determine where to add armor. The statistician Abraham Wald pointed out the fatal flaw: the analysis showed where the *surviving* planes had been hit, not where they were vulnerable. Planes hit in the unrepresented areas (engines, fuel tanks) didn't survive to be counted. Wald's recommendation: armor the locations with the *fewest* holes on returning planes.
+
+**Common manifestations**:
+- **Business advice**: "Successful entrepreneurs dropped out of college, so college is overrated" — ignoring the thousands of dropouts who failed
+- **Investment**: "Hedge funds that survived 20 years have great track records" — ignoring the funds that closed (half of hedge funds fail within 5 years)
+- **Science**: Published studies report positive findings; null results are rarely published — scientific literature is biased toward effects that appear real
+- **History**: We read the books of authors who found audiences; the far larger output of failed writers is invisible
+
+**Fix**: Actively identify what you're *not* seeing. Ask: "What would the complete picture look like if I could observe the failures too?"
+
+### The Cynefin Framework (Dave Snowden)
+
+The **Cynefin Framework** (pronounced "kuh-NEV-in," Welsh for "habitat") is a sense-making tool developed by Dave Snowden at IBM in 1999, classifying situations into five domains to guide appropriate decision-making approaches:
+
+| Domain | Characteristics | Appropriate Response |
+|--------|----------------|---------------------|
+| **Clear (Simple)** | Best practices exist; cause-effect obvious to all | Sense → Categorize → Respond (apply established protocols) |
+| **Complicated** | Multiple right answers; experts needed; cause-effect requires analysis | Sense → Analyze → Respond (bring in expertise, structured analysis) |
+| **Complex** | Cause-effect only visible in retrospect; many interacting agents; unpredictable | Probe → Sense → Respond (run safe-to-fail experiments, amplify what works) |
+| **Chaotic** | No perceivable cause-effect relationships; crisis | Act → Sense → Respond (stabilize first, then understand) |
+| **Disorder** | Unknown which domain applies | Break into components; assign each to a domain |
+
+**The most important distinction for leaders**: Most organizational problems are **complex** (not complicated). Complicated problems yield to expertise and analysis. Complex problems require experimentation — designing for learning rather than implementing pre-determined solutions. Applying complicated-domain management to complex problems (strategic planning with detailed forecasts, rigid rollout plans) systematically fails.
+
+### The Lindy Effect
+
+Proposed by Nassim Taleb (extending an observation from the comedy world): **the life expectancy of a non-perishable idea, technology, or institution is proportional to its current age.** A book that has survived 100 years will likely survive another 100 years; one that was published last month will probably not.
+
+**Mechanism**: For things that don't decay biologically, survival to a given age implies some form of robustness or adaptability. Each additional year of survival is evidence — not just correlation — of durability.
+
+**Applications**:
+- Investing: Technologies, business models, and institutions with long track records are more likely to persist than new entrants, *ceteris paribus*
+- Information: Classical texts (Marcus Aurelius, Euclid, Adam Smith) that have survived centuries are likely to be more useful than this year's bestsellers — the filtering mechanism of time is more rigorous than any contemporary reviewer
+- Career: Skills with deep historical roots (writing clearly, reasoning under uncertainty, persuading others) are more robust career investments than skills tied to specific platforms or tools that may disappear
+
+**The Lindy limit**: The Lindy Effect applies to *ideas and institutions*, not to organisms or physical objects (which age biologically). Apply it to evaluate the longevity of information and practices, not the health of individuals.
+
+### The Eisenhower Matrix (Urgent vs. Important)
+
+President Dwight D. Eisenhower is credited with the observation: "What is important is seldom urgent, and what is urgent is seldom important." Stephen Covey popularized it as the **Eisenhower Matrix** — a 2×2 grid for prioritizing tasks:
+
+| | **Urgent** | **Not Urgent** |
+|---|---|---|
+| **Important** | Quadrant 1: Do now (crises, deadlines) | Quadrant 2: Schedule (strategy, relationships, learning, prevention) |
+| **Not Important** | Quadrant 3: Delegate (interruptions, some meetings) | Quadrant 4: Eliminate (trivial time sinks) |
+
+**The key insight**: Most people spend disproportionate time in Quadrant 3 (urgent but not important) — responding to others' priorities — at the expense of Quadrant 2 (not urgent but important). Quadrant 2 is where the highest-leverage activities live: strategic planning, relationship building, health maintenance, skill development. These activities prevent Quadrant 1 crises from occurring in the first place.
+
+**Operationalizing it**: Block protected time for Quadrant 2 activities *before* the week fills with Quadrant 3. Calendar blocking of strategic/learning time is necessary, not optional — the urgent will always crowd out the important unless the important is explicitly protected.
+
 ## Related
 - [[cognitive-biases]]
 - [[cialdini-influence]]

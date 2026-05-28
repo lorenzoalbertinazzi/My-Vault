@@ -103,6 +103,35 @@ FX markets can be calm for extended periods, then experience explosive moves. Ke
 - **FX as an asset class**: Systematic strategies (momentum, carry, value, quality) can generate returns over time
 - **Emerging market investing** requires deep attention to currency dynamics, as EM currencies can be highly volatile
 
+### Interest Rate Parity: Covered and Uncovered
+
+Two foundational frameworks describe how interest rate differentials relate to exchange rates:
+
+**Covered Interest Rate Parity (CIP)**: An arbitrage condition that must hold in practice. If US rates are 5% and EUR rates are 3%, the 2% differential must be exactly offset by the forward discount on EUR vs. USD in the currency forward market. If not, arbitrageurs would borrow in EUR, convert to USD, invest at US rates, and lock in a profit via the forward contract — instantly eliminated. CIP holds tightly in liquid markets but visibly broke during the 2008 financial crisis and March 2020, revealing how funding stress can temporarily break fundamental financial relationships.
+
+**Uncovered Interest Rate Parity (UIP)**: A theoretical prediction that expected exchange rate movements will perfectly offset interest rate differentials over time. A high-rate country's currency should depreciate to equalize returns. UIP holds poorly in practice — empirically, high-rate currencies tend to *appreciate* in the short-to-medium run (the basis for profitable carry trades). This "forward premium puzzle" remains one of the most studied anomalies in international finance.
+
+**Practical lesson**: CIP is an arbitrage condition enforced by professionals. UIP is a theoretical equilibrium that need not hold because it's not directly arbitrageable — sentiment and risk appetite drive persistent deviations.
+
+### The Triffin Dilemma and Reserve Currency Tensions
+
+The **Triffin Dilemma** (Robert Triffin, 1960) describes a fundamental contradiction in reserve currency systems: to supply the world's reserve asset (US dollars), the US must run persistent current account deficits — exporting dollars by importing more than it exports. But persistent deficits ultimately undermine confidence in the reserve currency itself.
+
+This creates inherent instability: the world demands ever-more dollar liquidity for global trade, yet the US must accumulate ever-larger deficits to provide it, eventually straining dollar credibility. Triffin predicted the dollar's Bretton Woods gold link would break — and it did in 1971 (Nixon shock). Today the dollar floats freely, but the same underlying tension persists and intensifies as global trade grows.
+
+**Modern manifestations**: The US's "exorbitant privilege" (borrowing cheaply in its own currency) comes at the cost of a structural trade deficit and the role of global shock absorber. When the Fed tightens, it can trigger EM currency crises through dollar strength regardless of EM countries' own policies — the "original sin" of dollar dependence on borrowed capital.
+
+### De-Dollarization and the Emerging Multi-Currency World (2025–2026)
+
+Post-2022 sanctions on Russia — particularly freezing ~$300B in Russian central bank reserves held in Western jurisdictions — accelerated fears among non-Western governments that holding dollar reserves creates geopolitical vulnerability. Active, if modest, efforts to reduce dollar dependence have followed:
+
+- **BRICS payment systems**: Discussion of a BRICS currency basket or gold-backed settlement mechanism intensified at the 2023 Johannesburg summit, though no concrete alternative has launched
+- **Petrodollar erosion**: Saudi Arabia has accepted yuan for a portion of oil sales to China; Russia required ruble payments for gas to Europe
+- **Digital yuan (e-CNY)**: China's CBDC is designed partly to conduct trade without SWIFT; adoption remains limited outside China's immediate trade partners
+- **Bilateral currency swap lines**: China has expanded swap lines with over 40 countries, providing yuan liquidity outside the dollar system
+
+**Assessment**: Dollar reserve currency status remains durable in the medium term because no alternative has the market depth, legal infrastructure, or global network effects of USD assets. However, the direction of travel — gradual, slow erosion of dollar dominance — is increasingly plausible over decades. For investors, this implies modest structural dollar headwind as a long-run factor and continued demand for real assets and non-dollar diversification in institutional portfolios.
+
 ## Related
 - [[Macroeconomics 101]]
 - [[Fixed Income Deep Dive]]

@@ -179,6 +179,44 @@ Ralph Elliott (1938) proposed that markets move in recurring wave patterns drive
 
 **Criticism**: Wave counts are highly subjective; analysts regularly disagree about which wave the market is in. Best used as a probabilistic framework for understanding where in the cycle we are, not as a precise prediction tool.
 
+### Market Breadth Analysis
+
+Breadth indicators measure how many individual stocks participate in a market move — distinguishing broad rallies from narrow ones driven by a few large-cap names.
+
+**Key breadth indicators**:
+
+**Advance-Decline (A/D) Line**: A cumulative running total of (advancing stocks − declining stocks) on a given exchange. A/D line rising with the index confirms broad participation. **Breadth divergence** — index makes new highs but the A/D line does not — warns that leadership is narrowing and the rally may be unsustainable. The 2015 S&P 500 peak was preceded by months of A/D line divergence.
+
+**McClellan Oscillator**: Tracks the 19-day EMA minus the 39-day EMA of daily advances-minus-declines. Extreme readings signal short-term overbought/oversold across the entire market, not just in price terms. The cumulative **McClellan Summation Index** tracks the longer-term breadth trend.
+
+**New Highs vs. New Lows**: The number of stocks making 52-week highs vs. lows. In healthy bull markets, new highs dwarf new lows. When new lows start rising even as the index holds near highs, internal deterioration is occurring — a classic early warning signal.
+
+**% of Stocks Above 200-Day Moving Average**: Proportion of stocks in long-term uptrends. Above 70% = broad bull market. Below 30% = broad oversold conditions. Divergence between this measure and the index reveals whether leadership is concentrated or genuine.
+
+**Practical use**: Breadth analysis is most valuable as a confirmation and warning tool. It rarely provides precise timing signals but reliably identifies when rallies are becoming internally fragile — powered by a dwindling number of stocks while most of the market is quietly rolling over.
+
+### The Wyckoff Method
+
+Richard Wyckoff (1873–1934) developed a comprehensive framework for understanding market cycles in terms of the battle between large institutional operators (the "Composite Man") and the retail public. Though developed in the early 20th century, the method remains widely used by institutional technical analysts.
+
+**Core concept**: Wyckoff personified institutional operators as a single large entity that systematically accumulates shares at low prices (before a bull move) and distributes them at high prices (before a bear move), exploiting retail investors' emotional patterns.
+
+**Four phases of the Wyckoff cycle**:
+
+1. **Accumulation**: The Composite Man quietly buys shares within a sideways trading range. Prices are held in a range — not allowed to fall further (sellers absorbed) but not yet driven up (to avoid alerting the public). Volume analysis reveals buying volume on up-days exceeds selling volume on down-days.
+
+2. **Markup**: Once accumulation is complete, prices are driven upward. Retail investors see the strength and buy; the Composite Man is now the seller into retail demand.
+
+3. **Distribution**: At the top, the Composite Man sells (distributes) inventory into retail buying. Another trading range forms — but now selling volume exceeds buying volume. Price "tests" of the high confirm supply has entered the market.
+
+4. **Markdown**: The down-trending phase as the Composite Man withdraws buying support or actively shorts.
+
+**Key Wyckoff price actions to recognize**:
+- **Selling Climax (SC)**: Panic-selling bottom — high volume, wide-range down-bar, closes off lows. Marks end of distribution/start of accumulation.
+- **Automatic Rally (AR)**: Bounce from the SC; sets the top of the accumulation range.
+- **Last Point of Support (LPS)**: Final test of support before markup — higher low on declining volume (supply exhausted).
+- **Sign of Weakness (SOW)**: First break below support in distribution — confirms the uptrend is ending.
+
 ## Related
 - [[behavioral-finance-and-investor-psychology]]
 - [[options-basics]]

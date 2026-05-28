@@ -82,5 +82,9 @@ One year after the ceasefire, the situation remains fragile:
 
 **Strategic assessment**: The conflict demonstrated that both sides crossed significant thresholds (ballistic missiles, strikes in Punjab) without triggering nuclear use, which both de-risks and re-risks future crises: it showed the nuclear threshold is higher than feared, which may encourage more aggressive conventional operations in the next confrontation.
 
+**Back-channel meetings documented (May 23, 2026)**: Al Jazeera reported that approximately four back-channel meetings have taken place since the ceasefire, involving former officials, retired generals, intelligence figures, and parliamentarians from both sides — the most sustained informal engagement since relations broke down in 2019. Former Indian Army Chief General Manoj Naravane has publicly endorsed dialogue, stating that "the common man has nothing to do with politics" and that people-to-people ties naturally improve state relations. The Modi government has not formally responded, but the willingness of senior retired figures to advocate publicly for talks suggests tacit permission.
+
+**India-US strain narrows Washington's role**: India-US relations are under pressure from Trump-era tariffs on Indian goods and immigration restrictions — reducing the strategic space in which New Delhi can count on Washington to defer to its regional preferences on Pakistan. Simultaneously, Pakistan's successful mediation of the US-Iran ceasefire (April 2026) has significantly raised Islamabad's diplomatic standing. These two shifts — India's reduced leverage over Washington, and Pakistan's elevated global profile — are gradually altering the terms of any India-Pakistan normalization process.
+
 ## Related
 - [[2026-05-27-us-china-great-power-competition]]

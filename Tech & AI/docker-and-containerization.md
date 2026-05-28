@@ -151,6 +151,59 @@ Containers have become the foundation of modern software delivery:
 - **MLOps**: Model serving and training jobs are containerized for reproducibility
 - **Platform engineering**: Internal developer platforms built on Kubernetes abstract infrastructure from application teams
 
+### Multi-Stage Builds — Optimizing Production Images
+
+Multi-stage builds are one of the most impactful Dockerfile optimizations for production deployments. They allow using a large, feature-rich build image to compile/build, then copying only the artifacts into a minimal runtime image:
+
+```dockerfile
+# Stage 1: Build
+FROM golang:1.22 AS builder
+WORKDIR /app
+COPY . .
+RUN go build -o /app/server ./cmd/server
+
+# Stage 2: Runtime (minimal)
+FROM gcr.io/distroless/static:nonroot
+COPY --from=builder /app/server /server
+ENTRYPOINT ["/server"]
+```
+
+The final image contains only the compiled binary in a distroless base — no shell, no package manager, no build tools. Result: images of 5–30 MB instead of 500–1000 MB, dramatically reducing attack surface and registry storage costs.
+
+**Distroless images** (Google's contribution): Container images with no shell or OS utilities — only the language runtime and application. They cannot be accessed interactively, which is a security advantage in production (an attacker who achieves code execution has no shell to drop into).
+
+### WebAssembly (WASM/WASI) — A Container Alternative?
+
+**WebAssembly (WASM)** was originally designed for browser performance but has emerged as a potential alternative to containers for certain workloads via **WASI** (WebAssembly System Interface) — a standard for running WASM outside the browser.
+
+**Why WASM is interesting as a container alternative**:
+- **Near-native performance** with a smaller startup overhead than containers (microseconds vs. milliseconds)
+- **Language-agnostic**: Compile to WASM from Rust, Go, C/C++, Python (experimental)
+- **Stronger sandboxing**: No kernel sharing — WASM modules cannot access host resources without explicit capability grants, making them more secure than containers by design
+- **Truly portable**: Run the same WASM binary on any OS/CPU architecture that has a WASM runtime (Docker still needs platform-specific images for ARM vs. x86)
+
+**Current limitations**: Mature tooling exists only for Rust and Go; the ecosystem is not production-ready for most workloads; network stacks and file I/O are less mature than containers.
+
+**Docker + WASM**: Docker has added experimental WASM support, allowing WASM modules to run as first-class containers. Solomon Hykes (Docker's creator) has called WASM what Docker would have been if it existed in 2008. Watch this space.
+
+### Service Mesh — Microservices Communication Layer
+
+As organizations scale Kubernetes deployments to hundreds of services, direct service-to-service communication becomes a management challenge: security (TLS between services), observability (tracing requests across services), reliability (retries, circuit breaking), and traffic management (canary deployments).
+
+A **service mesh** addresses this by deploying a lightweight proxy sidecar alongside every container, transparently handling all service-to-service communication:
+
+**Istio** (Google/IBM/Lyft): The most feature-rich service mesh. Deploys Envoy sidecars via automatic injection. Provides:
+- **mTLS**: Mutual TLS between all services automatically, without changing application code
+- **Traffic management**: Canary deployments, blue/green rollouts, A/B testing via routing rules
+- **Observability**: Distributed tracing (Jaeger/Zipkin), metrics, and service topology visualization
+- **Circuit breaking**: Automatic failure isolation when a downstream service becomes unhealthy
+
+**Linkerd** (CNCF): Lighter-weight alternative to Istio with simpler configuration; uses Rust-based proxies with very low overhead.
+
+**Cilium** (eBPF-based): Uses Linux eBPF (extended Berkeley Packet Filter) instead of sidecar proxies — higher performance, lower overhead. Becoming the preferred approach for performance-sensitive deployments.
+
+**Tradeoff**: Service meshes add significant operational complexity. Only justified at sufficient scale (typically 10+ microservices with traffic management requirements). Teams under this threshold should use simpler approaches (gateway-based routing, HTTP middleware).
+
 ## Related
 - [[Cloud Computing Fundamentals]]
 - [[REST APIs and HTTP]]

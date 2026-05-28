@@ -179,6 +179,69 @@ Standard bi-encoder models encode both query and document to a single vector; si
 
 **Tradeoff**: Storing per-token vectors multiplies storage by average document length (~100–500×). Hybrid approaches use ColBERT for re-ranking (not first-stage retrieval) to balance cost and quality.
 
+### Cross-Lingual and Multilingual Embeddings
+
+Standard embedding models trained predominantly on English produce vectors where "dog" and "chien" (French for dog) are far apart in space — they cannot perform cross-lingual retrieval.
+
+**Multilingual embedding models** address this by training on parallel corpora (translation pairs) so that semantically equivalent sentences in different languages map to nearby vectors regardless of language:
+
+| Model | Languages | Dimensions | Notes |
+|-------|-----------|------------|-------|
+| **multilingual-e5-large** | 94 | 1024 | Strong cross-lingual retrieval |
+| **paraphrase-multilingual-MiniLM** | 50+ | 384 | Fast, lightweight |
+| **Cohere embed-multilingual-v3** | 100+ | 1024 | Production-grade, top leaderboard |
+| **LaBSE** (Google) | 109 | 768 | Optimized for cross-lingual sentence similarity |
+| **text-embedding-3-large** | ~100+ | 3072 | OpenAI; strong multilingual despite primary English training |
+
+**Cross-lingual retrieval pattern**: Index documents in their native language (French, German, Arabic). At query time, embed the English query using a multilingual model. The query vector will be close to relevant foreign-language document vectors. This enables building a single unified index over a multilingual corpus without translation.
+
+**Performance gap**: Cross-lingual retrieval still lags monolingual retrieval by ~10–20% on most benchmarks. For high-stakes deployments in a single language, a monolingual model outperforms multilingual alternatives. For genuinely multilingual corpora, multilingual models are the right choice.
+
+---
+
+### Embedding Fine-Tuning
+
+Off-the-shelf embedding models are general-purpose. For specialized domains (legal contracts, biomedical literature, financial filings, code repositories), fine-tuning the embedding model on domain-specific data often yields substantial retrieval quality improvements.
+
+**Why fine-tuning helps**: General embeddings don't understand that "consideration" in a legal context means something different from everyday usage, or that "BP" in a medical note means blood pressure. Fine-tuning aligns the embedding space to domain-specific semantic relationships.
+
+**Training approaches**:
+
+**Contrastive fine-tuning with triplets**:
+```
+Anchor: "What is the statute of limitations for negligence claims?"
+Positive: "In most U.S. jurisdictions, negligence claims must be filed within 2–3 years of the injury."
+Negative: "The limitations on the budget were discussed in the board meeting."
+```
+Train the model to bring anchor-positive together and push anchor-negative apart. Requires labeled (query, positive, negative) triplets — the main data bottleneck.
+
+**MNRL (Multiple Negatives Ranking Loss)**: The dominant loss function for embedding fine-tuning. For a batch of (query, positive) pairs, all other positives in the batch act as negatives. Scales efficiently — no need for explicit negative mining.
+
+**Synthetic training data**: Use an LLM to generate (query, answer) pairs from domain documents, then fine-tune on these synthetic pairs. Removes the human labeling bottleneck. Quality depends on the LLM's understanding of the domain.
+
+**Frameworks**: `sentence-transformers` (HuggingFace), Jina Finetuner, Cohere's fine-tuning API. Typical fine-tuning run: 1–3 hours on a single GPU with a few thousand examples.
+
+**Retrieval improvement from fine-tuning**: Expect 10–30% recall improvement on domain-specific queries relative to a general-purpose model. The improvement scales with how different the domain vocabulary is from general English.
+
+---
+
+### Embedding Caching and Efficiency Patterns
+
+In production RAG systems, embedding generation is often the latency and cost bottleneck — especially when re-embedding the same content repeatedly.
+
+**Query embedding caching**: Cache embeddings for repeated queries using an exact-match cache (Redis, memcached). In customer-facing applications, many users ask the same questions — a 30–40% cache hit rate is common, cutting embedding API costs substantially.
+
+**Semantic caching**: Beyond exact-match, cache at the semantic level. When a new query comes in, first check if a semantically similar query (cosine similarity > 0.95) was recently answered. Return the cached answer if so. Tools: GPTCache, Zep. More complex to implement but reduces LLM generation costs (not just embedding costs).
+
+**Batch embedding**: When indexing documents, always embed in large batches (512–2048 documents per API call) rather than one at a time. Most embedding APIs are 10–100× more throughput-efficient in batch mode.
+
+**Tiered retrieval for cost efficiency**:
+1. First-stage: fast, cheap embedding (small model, high recall)
+2. Second-stage: re-rank top-50 with a slower, more accurate cross-encoder
+3. Third-stage: generate with LLM using top-5 chunks
+
+This pyramid avoids running expensive models on all candidate documents.
+
 ## Related
 - [[retrieval-augmented-generation]]
 - [[transformer-architecture]]

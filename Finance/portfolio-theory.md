@@ -125,6 +125,56 @@ VaR's critical limitation: it says nothing about the SIZE of losses beyond the t
 
 **CVaR (Conditional VaR / Expected Shortfall)**: the expected loss given that the loss exceeds the VaR threshold. CVaR = average of the worst 5% of outcomes (if using 95% confidence). Regulators (Basel III/IV) now prefer CVaR over VaR for capital requirements because it captures tail severity, not just probability.
 
+### The Yale Endowment Model (David Swensen)
+
+David Swensen managed Yale's endowment from 1985 until his death in 2021, growing it from $1B to over $42B through an approach that transformed institutional investing. His model has four core principles:
+
+1. **Equities-heavy**: Move aggressively away from bonds and cash toward equity-like assets with long-run return premium
+2. **Alternative assets**: Heavy allocation to private equity, venture capital, absolute return (hedge funds), and real assets (real estate, timber, natural resources) — typically 70–80% of the Yale portfolio
+3. **Illiquidity premium harvesting**: Endowments with perpetual horizons and no near-term liquidity needs can earn the illiquidity premium unavailable to individuals
+4. **Active management in inefficient markets**: Index approaches for liquid public markets; active selection in private markets where information advantages are durable
+
+**Illustrative Yale-style allocation**:
+- Private equity/buyout: ~35–40%
+- Venture capital: ~20%
+- Absolute return/hedge funds: ~20%
+- Real assets: ~10%
+- Public equities/bonds: ~10–15%
+
+**Why most investors cannot replicate it**:
+- Illiquid assets require patient capital — individuals with retirement needs cannot lock up 60%+ of assets
+- Access to top-quartile PE and VC funds is relationship-constrained and unavailable to most allocators
+- The model was stress-tested in 2008–2009 when Yale faced a liquidity crisis: committed capital calls had to be funded even as portfolio values had fallen 25%+ and the endowment was temporarily unable to fund its full budget contribution to Yale University
+
+### Sequence-of-Returns Risk
+
+**Sequence-of-returns risk** is the danger that the *timing* of investment returns — not just their average — can destroy a retirement portfolio. Two investors with identical average returns but different sequences have dramatically different outcomes if they are withdrawing funds.
+
+**Example**: Both A and B average 5% annual returns over 20 years. A experiences a crash in years 1–3 (bad sequence early) while B experiences the crash in years 18–20 (bad sequence late).
+- A is forced to sell depressed assets to fund withdrawals in years 1–3 — those sold assets cannot participate in the recovery. Portfolio is permanently impaired.
+- B's portfolio has compounded for 17 years before the crash — the absolute loss is large but the relative impact is manageable.
+
+**The practical implication**: Monte Carlo simulation (showing the distribution of outcomes across thousands of simulated sequences) is far more useful for retirement planning than average return projections. The **safe withdrawal rate** concept (historically ~4% for 30-year retirements) explicitly accounts for sequence risk.
+
+**Mitigation strategies**:
+- **Bucket strategy**: Maintain 1–2 years of expenses in cash/short bonds; refill from longer-term buckets in recovery years, avoiding forced equity selling in crashes
+- **Dynamic withdrawal rules**: Reduce spending in down years (the "guardrails approach" — cut withdrawals if portfolio falls below a threshold)
+- **CAPE-based allocation**: Reduce equity allocation when starting valuations are high (high CAPE implies worse early-year returns, worsening sequence risk for new retirees)
+
+### The Rebalancing Premium
+
+Systematic portfolio rebalancing — periodically selling outperformers and buying underperformers to maintain target weights — generates a mathematical return benefit above the weighted average of component returns.
+
+**The mechanism**: Rebalancing forces automatic buy-low/sell-high execution. When stocks outperform and rise above target weight, rebalancing sells stocks and buys bonds — capturing mean reversion in asset prices. This is the **volatility harvesting** effect: higher volatility + lower inter-asset correlation → larger rebalancing premium.
+
+**Quantitative estimate**: Studies find the rebalancing premium at approximately 0.2–0.5% per year for diversified portfolios. It is larger when assets have higher volatility and lower correlation (so they diverge more from target weights, creating more frequent rebalancing opportunities).
+
+**Calendar vs. threshold rebalancing**:
+- *Calendar* (annual/quarterly): Simple to implement but rebalances at potentially suboptimal times
+- *Threshold* (rebalance when weights drift 5% or 10% from target): More tax-efficient, fewer transactions, generally better risk-adjusted outcomes than fixed-calendar
+
+**Tax caveat**: In taxable accounts, rebalancing triggers capital gains. Tax-aware rebalancing uses new contributions and dividend reinvestment to restore balance where possible, reserving asset sales for tax-advantaged accounts — preserving the premium while minimizing the tax drag.
+
 ## Related
 - [[valuation-fundamentals]]
 - [[macroeconomics-101]]

@@ -125,5 +125,11 @@ The US-Iran conflict is interacting with ongoing regional tensions:
 
 **Historical parallel — next 60–90 days decisive**: The situation mirrors the structure of past Iran nuclear negotiations: mutual maximum pressure, a framework announcement declared premature, followed by either collapse or a partial deal that holds imperfectly. The parties are in a race between diplomatic momentum and military escalation on the ground.
 
+**Hormuz traffic near zero (late May 2026)**: CNN shipping data visualization (April 29, 2026) and UANI tracking confirm that since approximately May 6, 2026, open vessel transits through the Strait have fallen to near zero per day, compared to approximately 3,000 vessels per month before hostilities began in February. This near-total blockade — not merely reduced flow — represents an energy supply emergency of historical proportions. The 30% flow figure cited by the EIA for Q1 2026 reflects partial movement through alternative routes (Saudi East-West pipeline, UAE pipeline, Cape of Good Hope diversions); the actual Strait itself is essentially closed.
+
+**IRGC redefines the Strait's geographic extent**: Iran's IRGC Navy announced that the Strait of Hormuz has been redefined as a "vast operational area" stretching from Jask (on Iran's southeastern coast) to Siri Island — far broader than the historically recognized 21-mile-wide corridor. This expansion of claimed operational space complicates deal terms: any agreement specifying "reopening of the Strait" requires both sides to agree on what that means geographically.
+
+**Bloomberg: normalization within a month of deal**: Bloomberg reported (May 27, 2026), citing Iranian state television, that maritime traffic could return to normal levels within one month of a deal being finalized. This timeline, if accurate, gives global energy markets a specific window for price recovery after agreement — a significant economic incentive for all parties to finalize terms quickly.
+
 ## Related
 - [[2026-05-27-us-china-strategic-competition]]

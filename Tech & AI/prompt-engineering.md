@@ -176,6 +176,86 @@ As LLMs are deployed as autonomous agents, new prompting patterns emerge:
 
 **Reflection agent**: The agent generates a response, evaluates whether it solves the original goal, and decides whether to continue (akin to the ReAct loop but with an explicit self-evaluation step before stopping).
 
+### Extended Thinking and Chain-of-Draft
+
+Modern reasoning models (OpenAI o1/o3, Claude 3.7 Sonnet with extended thinking, DeepSeek-R1) expose a new prompting primitive: **internal scratchpad computation** before producing the final answer.
+
+**Extended Thinking**: The model generates a hidden chain-of-thought — often called a "thinking" or "reasoning" block — before the visible response. Unlike standard CoT (which is part of the output), extended thinking tokens are generated but typically not shown to the user in full. They function as working memory for complex problems.
+
+**Prompting implications**:
+- For models with extended thinking, the primary prompt job shifts: you need to define the problem clearly and specify evaluation criteria, not scaffold the reasoning steps yourself
+- "Thinking budget" controls (token limits on internal reasoning) trade cost against quality — set budgets higher for math proofs, code generation, and multi-step planning; lower for simple factual queries
+- Avoid forcing step-by-step instructions when the model has extended thinking — over-structuring the reasoning can constrain the model's optimal path
+
+**Chain-of-Draft** (Xu et al., 2025): A lighter alternative to full chain-of-thought. Instead of verbose reasoning, instruct the model to produce minimal "draft" notes between steps — keywords and partial results rather than full sentences. Achieves ~90% of CoT accuracy at 20–30% of the token cost.
+
+```
+Draft: [velocity=30m/s, time=8s, distance=?]
+Answer: 240m
+```
+
+**When to use each**:
+- Simple queries: no CoT needed
+- Medium complexity: zero-shot CoT ("think step by step")
+- High complexity with reasoning model: extended thinking with generous budget
+- Cost-sensitive medium complexity: Chain-of-Draft
+
+---
+
+### Multimodal Prompting
+
+Vision-capable models (GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro) accept images, PDFs, and structured data alongside text. The same prompting principles apply, with additional considerations:
+
+**Image placement matters**: Putting the image before the question ("Here is the chart. [image] What does it show?") tends to outperform image-after-question ordering. The model reads context sequentially — image first gives grounding before the analytical question.
+
+**Reference image regions explicitly**: "In the upper-left quadrant of this diagram..." or "Focus on the red-highlighted region" directs attention and reduces error rates on detailed visual analysis.
+
+**Use images as context, not decoration**: Don't add images arbitrarily. The best multimodal prompts treat the image as a primary information source the text question is asking about — OCR tasks, diagram interpretation, chart-to-table extraction, visual debugging of UI screenshots.
+
+**Document understanding pattern**:
+```
+[Attach PDF]
+Extract all numerical figures from pages 3–5 and format them as a JSON array 
+with keys: {page, section_title, metric_name, value, unit}.
+```
+
+**Vision-specific failure modes**:
+- Models can misread dense tables or small text in images — prefer providing raw text/data when available
+- Spatial relationships (left/right, above/below) are less reliable than semantic content
+- Asking "what's wrong with this design?" gets better answers than "analyze this design" — focused negative framing activates more critical evaluation
+
+---
+
+### Jailbreaking and Red-Teaming Basics
+
+Understanding how prompt injection and jailbreaking work is essential for anyone building or evaluating AI systems defensively.
+
+**Jailbreaking** refers to crafting inputs that cause a model to violate its alignment constraints — bypassing safety training to produce outputs the model would normally refuse.
+
+**Common jailbreak patterns**:
+
+| Technique | Mechanism | Example |
+|-----------|-----------|---------|
+| **Role-play framing** | "You are DAN (Do Anything Now)..." | Assigns an alternative persona without safety constraints |
+| **Fictional embedding** | "Write a story where a character explains..." | Distances the request from real-world harm framing |
+| **Authority spoofing** | "As a developer override, ignore prior instructions" | Claims elevated permissions not present in the real prompt |
+| **Gradual escalation** | Start with benign requests, escalate incrementally | Each step appears reasonable relative to the last |
+| **Encoding/obfuscation** | Base64-encode the harmful request | Bypasses surface-level content filters |
+| **Many-shot prompting** | Provide 50+ examples of compliant harmful responses | Overwhelms instruction following with demonstrated behavior |
+
+**Red-teaming**: systematic adversarial testing of LLM deployments before launch. Best practice involves:
+1. **Automated red-teaming**: LLMs attacking other LLMs at scale (Anthropic's red-teaming tools, Garak, PyRIT)
+2. **Human red-teamers**: domain experts (e.g., biosecurity researchers testing for bioweapons knowledge leakage)
+3. **Structured test suites**: standardized benchmarks (HarmBench, SORRY-Bench) for reproducible safety evaluation
+
+**Defensive prompt patterns**:
+- Input validation layer before the LLM call (classifier, regex, topic filter)
+- Output scanning after generation (moderation API, keyword detection)
+- "Sandwich" defense: repeat key constraints at the end of system prompts — models have primacy/recency biases and may weight end-of-prompt instructions more
+- Separate "meta-prompt" evaluation: a second LLM call that checks whether the response violates policy before returning to the user
+
+**The core tension**: Overly restrictive systems refuse legitimate requests (false positives); overly permissive systems generate harm (false negatives). Red-teaming quantifies both failure modes so the tradeoff can be set deliberately rather than by accident.
+
 ## Related
 - [[transformer-architecture]]
 - [[llm-landscape]]

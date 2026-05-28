@@ -132,6 +132,14 @@ The region is genuinely multipolar in 2026: China is the economic giant, Russia 
 
 **Assessment**: Russia's influence in Central Asia is in managed decline. The pattern is now clear: Moscow needs Central Asia economically (for sanctions evasion); Central Asia needs Moscow's security presence against Afghanistan/Islamist threats and its labor migration market. Neither side can afford a rupture, so both tolerate each other's diversification. China is filling the economic and soft-power vacuum without the same security footprint.
 
+**Putin's Kazakhstan state visit (May 27, 2026)**: Putin arrived in Kazakhstan on a state visit — his first visit to a Central Asian capital in months. Kremlin-aligned media framed it as evidence of enduring partnership; Central Asian observers noted the visit's symbolic necessity for Moscow at a moment when Russian influence is visibly declining.
+
+**History wars intensifying**: At a joint Kyrgyz-Russian Expert Council on History meeting in Moscow, Russian scholars attempted to have Kyrgyz counterparts revise language describing Tsarist and Soviet rule as "colonialism." The Kyrgyz historians refused outright, arguing both eras were colonial in character. This reflects a deeper shift: Central Asian intellectual and political classes are no longer accommodating the Russian historical narrative — a change that has accelerated dramatically since 2022. Decolonial discourse in Kyrgyzstan now focuses on exposing atrocities under Russian rule through military campaigns, economic exploitation, and Soviet-era nuclear testing.
+
+**Labor migration diversifying away from Russia**: Central Asian workers are finding alternatives to Russian labor markets at an accelerating pace. A striking indicator: 78% of all UK seasonal worker visas issued in 2024 went to citizens of Kyrgyzstan, Uzbekistan, Tajikistan, or Kazakhstan. As the remittance corridor that tied Central Asian economies to Russia weakens, so does one of Moscow's most durable structural levers.
+
+**Russia anxious over Western rare earth competition**: Russia's Foreign Ministry has accused the West of seeking an "anti-Russian staging ground" in Central Asia, and Russian media reports indicate Moscow is alarmed by growing US and EU investment in Central Asian rare earth processing — a sector Russia previously treated as within its own economic orbit. The rare earth concern is strategic: Central Asian reserves (uranium, copper, lithium) are increasingly coveted by Western supply chain planners seeking to reduce China dependence, and Russia fears being cut out of that economic network entirely.
+
 ## Related
 - [[2026-05-27-us-china-great-power-competition]]
 - [[2026-05-27-us-china-strategic-competition]]

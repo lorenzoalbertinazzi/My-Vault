@@ -164,6 +164,57 @@ In practice: when evaluating an investment, new job, or strategy, the **outside 
 
 ---
 
+### The Conjunction Fallacy (Linda Problem)
+
+Kahneman and Tversky's classic demonstration: "Linda is 31, single, outspoken, bright. She majored in philosophy and is deeply concerned with issues of discrimination. Rank the probability of: (A) Linda is a bank teller. (B) Linda is a bank teller who is active in the feminist movement."
+
+Most people rank B as more probable than A — a logical impossibility, since (A∩B) ≤ (A) always. The description of Linda so strongly represents "feminist" that people override basic probability rules.
+
+**Why it matters in practice**:
+- Investors rate detailed business narratives as "more likely to succeed" than the same businesses described simply — adding plausible detail increases perceived probability even when each detail is uncertain
+- Analysts who construct elaborate, internally coherent stories about a company's trajectory are more persuasive (and more dangerous) than those who rely on base rates
+- **Fix**: Strip away the narrative and ask: "What category does this situation belong to, and what's the base rate for that category?"
+
+### The Decoy Effect (Asymmetric Dominance)
+
+When a third "decoy" option is added to a two-option choice, it systematically changes preferences between the original options — even though the decoy itself is never chosen.
+
+**Classic example**: Subscription pricing:
+- Digital only: $59
+- Print only: $125
+- Print + Digital: $125
+
+The "print only" option (clearly dominated by print+digital at the same price) makes the print+digital option look like extraordinary value compared to digital-only. The Economist used exactly this structure in a landmark study; with the decoy, 84% chose print+digital vs. 32% without.
+
+**Broader applications**:
+- Real estate agents show clients an inferior property to make their target listing look better
+- Salary negotiations: presenting a third (low) reference salary makes the actual offer seem more reasonable
+- Restaurant menus place a very expensive item at the top to make mid-range items seem reasonable by comparison (the "anchor-decoy" combination)
+
+### Zero-Risk Bias
+
+People irrationally prefer to *completely eliminate* a small risk over *significantly reducing* a larger risk — even when the total expected harm reduction of the latter is mathematically superior.
+
+**Example**: People prefer reducing a risk from 2% to 0% (eliminating it entirely) over reducing a risk from 10% to 5% (halving a much larger risk), even though the second intervention prevents five times more harm.
+
+**Policy manifestations**:
+- Aviation safety receives disproportionate investment relative to car safety, despite orders-of-magnitude higher car fatality rates, because the goal of "zero aviation deaths" feels more achievable
+- Environmental policy often focuses on completely eliminating minor local contaminants rather than reducing major distributed risks
+- Personal finance: people over-insure trivial risks (phone screen insurance, credit card theft) while underinsuring catastrophic ones (disability, liability)
+
+**Root cause**: Loss aversion + psychological comfort from categorical certainty. "Zero" is psychologically qualitatively different from "very small" — a cognitive discontinuity that drives systematic misallocation of safety resources.
+
+### Inattentional Blindness
+
+When attention is focused on one task, people fail to notice unexpected stimuli — even obvious ones directly in their field of view. The classic demonstration: Simons and Chabris' "invisible gorilla" study (1999), where participants counting basketball passes failed to notice a person in a gorilla costume walking through the scene.
+
+**In high-stakes decision environments**:
+- Traders focused on a specific position miss broader market signals that should trigger a position review
+- Analysts conducting due diligence on a specific financial metric miss qualitative red flags visible in management behavior
+- Surgeons focused on the primary procedure have missed sponges left in patients (the prompt for surgical checklists)
+
+**The relevance to cognitive bias**: Inattentional blindness is not a bias in the traditional sense — it's a fundamental architectural feature of selective attention. The cure is explicit checklist-based review that forces attention to categories outside the current focus, not just awareness that the bias exists.
+
 ## Related
 - [[cialdini-influence]]
 - [[mental-models]]

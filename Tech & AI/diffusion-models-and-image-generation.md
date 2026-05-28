@@ -218,6 +218,48 @@ Extending image diffusion to video requires modeling temporal consistency:
 
 **Key challenge**: Video generation requires temporal coherence — objects must maintain their appearance and physics across frames. Current models still fail on complex physics (realistic water, collisions) and long-form consistency (characters change appearance across shots).
 
+### Score-Based Generative Models — The Mathematical Unification
+
+While DDPM and flow matching are presented as distinct methods, Yang Song (2020) showed they are instances of a single mathematical framework: **score-based generative models** (also called stochastic differential equations, SDEs).
+
+**The core insight**: Instead of defining a fixed Markov chain (DDPM) or a deterministic flow (rectified flow), the framework defines a continuous-time **stochastic differential equation** that gradually transforms data into noise:
+
+```
+dx = f(x, t)dt + g(t)dW  [forward SDE: adds noise]
+```
+
+The reverse of this SDE exists and can be used for generation:
+```
+dx = [f(x, t) − g(t)² ∇ₓ log p_t(x)] dt + g(t)dW̄  [reverse SDE: removes noise]
+```
+
+The key term is **∇ₓ log p_t(x)** — the "score function," the gradient of the log probability density of the noisy data at time t. If you can estimate this score (which a neural network learns to do), you can reverse the diffusion.
+
+**Unification significance**: DDPM, NCSN (noise-conditioned score networks), flow matching, and rectified flow are all special cases of this SDE framework with different choices of f and g. This theoretical unification enables principled design of new training objectives, sampling algorithms, and noise schedules — and explains why "noise prediction" (DDPM) and "score matching" (NCSN) produce equivalent results in practice.
+
+### Real Image Editing via Diffusion Inversion
+
+A practical limitation of early diffusion models: they could generate new images from noise but couldn't *edit* existing real photographs. The solution is **DDIM Inversion** — running the deterministic DDIM sampler in reverse to find the noise latent that corresponds to a given real image:
+
+1. Feed a real photograph into the VAE encoder (for LDMs) → get latent representation
+2. Run DDIM sampler *backward* → gradually add the correct noise to recover the input's latent code at each timestep
+3. Now you have the "noise" from which this real image would have been generated
+4. Modify the image by editing in noise space or by steering the reverse process with a modified text prompt
+
+**Prompt-to-Prompt editing** (Prompt2Prompt, Google, 2022): By controlling which attention maps are shared or swapped between two inference runs, specific elements of an image can be changed without re-generating the rest. "A photo of a cat" → "A photo of a dog" with identical composition.
+
+**Null-Text Inversion** (MendelBoum et al., 2022): A refinement of DDIM inversion that produces near-perfect reconstruction, enabling more precise editing of real photographs. These techniques are the foundation of modern AI photo editing tools.
+
+### Text-to-3D Generation
+
+Diffusion models have extended to **3D content generation** — representing one of the most active research frontiers in generative AI as of 2026:
+
+**DreamFusion** (Poole et al., 2022): Pioneered "Score Distillation Sampling" (SDS) — using a 2D diffusion model's score function as a supervisory signal to optimize a 3D representation (Neural Radiance Field / NeRF). Given a text prompt, a NeRF is optimized so that all 2D renders of it look like realistic images as judged by the diffusion model. Slow but conceptually important.
+
+**Gaussian Splatting** (3DGS, 2023): A radically faster alternative to NeRF that represents 3D scenes as millions of colored Gaussian "splats." Generation quality and speed have improved dramatically with subsequent work combining 3DGS with diffusion model guidance.
+
+**Current leaders (2025–2026)**: Stability AI's TripoSR, Meshy, and Luma AI's Genie offer near-real-time text-to-3D generation with commercial quality — representing the productization of 3 years of academic research. Key remaining limitations: complex topology, fine details (hands, text), and physically accurate materials remain challenging.
+
 ## Related
 - [[transformer-architecture]]
 - [[machine-learning-fundamentals]]

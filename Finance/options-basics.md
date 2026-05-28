@@ -130,6 +130,38 @@ Market makers who buy options systematically gamma-scalp to monetize their posit
 
 **Universa/Taleb approach**: A small allocation (e.g., 3.3%) to tail hedges that cost ~0% in expected value but pay 100%+ in crashes can provide asymmetric portfolio protection — the "convex position" in a barbell.
 
+### Calendar Spreads (Time Spreads)
+
+A **calendar spread** (also: horizontal spread, time spread) involves buying and selling options on the same underlying and same strike, but with different expirations:
+
+**Long calendar spread**: Buy a longer-dated option, sell a shorter-dated option at the same strike.
+- **Motivation**: Exploit the differential in time decay rates. The short near-term option loses time value faster than the long far-term option (theta is highest near expiration). If the stock remains near the strike through the near-term expiration, the short option expires worthless and the long option retains most of its value — effectively reducing the cost of the long option.
+- **Maximum profit**: Achieved when the stock is exactly at the strike at near-term expiration — the short option has maximum theta decay while the long option retains value.
+- **Risk**: If the stock moves significantly in either direction before near-term expiry, both options go OTM and the spread loses.
+
+**Earnings calendar spreads**: Sell the front-month option (inflated IV before earnings = expensive premium) while buying the next-month option (lower IV). Profit from IV crush on the front-month option when it expires. The long option retains exposure to the post-earnings story.
+
+**Diagonal spread**: Combines different strike AND different expiration — the most flexible spread structure. A common implementation: buy a deep ITM LEAPS call and sell a near-term OTM call repeatedly against it (synthetic covered call).
+
+### Employee Stock Options (ESOs) in Corporate Compensation
+
+Employee stock options differ structurally from exchange-traded options in important ways:
+
+**Key ESO features**:
+- **Strike price** = stock price on grant date
+- **Vesting schedule**: Typically 4-year vesting with a 1-year cliff (25% after year 1, then monthly/quarterly)
+- **Expiration**: Typically 10 years from grant (exchange options max ~3 years)
+- **Non-transferable**: Cannot be sold; the only monetization path is exercise
+- **Exercise price is fixed**: ESOs have positive value only if the stock rises above the strike
+
+**US tax treatment**:
+- **Non-Qualified Stock Options (NSOs)**: Spread between exercise price and market price at exercise is ordinary income; company gets a corresponding deduction
+- **Incentive Stock Options (ISOs)**: No ordinary income tax at exercise (only capital gains tax at eventual sale), but spread at exercise counts toward Alternative Minimum Tax. ISO treatment caps at $100K/year in options becoming exercisable.
+
+**Valuation nuances**: ESOs are worth *less* than equivalent exchange-traded options because (a) they cannot be sold or hedged; (b) employees are undiversified and bear concentrated company risk; (c) early exercise is common due to liquidity needs, destroying time value. Companies use Black-Scholes or binomial models for financial statement reporting (ASC 718), typically discounting for expected early exercise.
+
+**Behavioral note**: ESOs create strong anchoring to the grant-date strike price. Employees irrationally attach to options near their strike and are reluctant to sell shares acquired through exercise even when diversification would be optimal — a classic endowment effect plus anchoring combination.
+
 ## Related
 - [[valuation-fundamentals]]
 - [[portfolio-theory]]

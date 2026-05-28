@@ -73,6 +73,18 @@ Extreme heat is increasingly a global phenomenon, but the 2026 European heatwave
 3. **Cascading effects**: Heat stress on agriculture (critical for European food production), infrastructure failure risks (rail lines buckle, roads melt), and increased wildfire risk all have economic consequences that extend beyond the immediate health emergency
 4. **Precedent for adaptation urgency**: Events like this build the political will — and public demand — for accelerated adaptation investment, from passive house retrofitting to urban tree canopy expansion
 
+### Update — May 28, 2026
+
+**France death toll and broader European geography**: French government spokesperson Maud Bregeon confirmed at least seven deaths in France potentially related to the heat — including five drownings and two deaths at sports competitions. Combined with the five UK deaths, the May 2026 heatwave has killed at least twelve people across Western Europe, underscoring that spring heat events carry real mortality even when temperatures are lower than summer peaks, because populations and emergency services are caught less prepared.
+
+**Iberian Peninsula extreme**: Seville recorded approximately 38°C (100°F) during the weekend before the UK peak — unusually severe for late May. Large parts of the Iberian Peninsula experienced temperatures 5–10°C above normal, suggesting the heat dome's hottest core moved from southwest to northwest Europe over the multi-day event.
+
+**Temperatures peaked May 26–27**: Irish Times and severe-weather.eu coverage confirmed the dome's peak was Monday–Tuesday (May 26–27), with temperatures beginning to ease by mid-week as the blocking high-pressure system weakened. This gives the event a defined arc: 4–5 days of extreme anomaly followed by a relatively rapid return toward seasonal norms.
+
+**Statistical rarity is rapidly changing**: Climate attribution researchers note that an extreme May heat event of this magnitude was approximately a 1-in-100 year event under pre-industrial climate conditions. Under current (2026) climate conditions, that same event is estimated to occur roughly once every 33 years — a threefold increase in probability from human-caused warming. As emissions continue, that frequency will continue to rise, meaning "unprecedented" May heat events of this type will become increasingly routine within decades.
+
+**European energy grid stress**: Surging electricity demand for air conditioning and cooling fans, layered on top of already-elevated energy prices from the US-Iran Hormuz disruption, pushed European power grids and spot energy prices to unusual levels. The convergence of a geopolitical energy crisis and a climate-driven heat event simultaneously represents a new category of compounding risk that European energy planners are only beginning to incorporate into resilience frameworks.
+
 ## Related
 - [[2026-05-27-ebola-outbreak-drc-uganda-2026]]
 - [[2026-05-27-us-iran-conflict-global-energy-crisis]]

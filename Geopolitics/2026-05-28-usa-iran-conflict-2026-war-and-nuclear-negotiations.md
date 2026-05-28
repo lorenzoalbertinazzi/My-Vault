@@ -74,6 +74,12 @@ As of 24–25 May 2026, reports from CNN, NPR, and Al Jazeera indicated a **memo
 
 **Pakistan's Rise as Mediator**: Pakistan's successful brokering of the ceasefire represents a significant diplomatic moment for Islamabad, especially given its own fraught relationship with the US and its ongoing tensions with India (following their 2025 conflict). It signals Pakistan's ambition for a more assertive regional diplomatic role.
 
+**IRGC redefines the Strait (late May 2026)**: Iran's Islamic Revolutionary Guard Corps Navy announced that Iran has redefined the Strait of Hormuz as a "vast operational area" extending from the Iranian port city of Jask to Siri Island — a significantly broader zone than the historically understood narrow corridor. IRGC official Mohammad Akbarzadeh stated the strait is "no longer viewed as the narrow maritime corridor surrounding the islands of Hormuz and Hengam." This reframing has strategic implications: it expands the area in which Iran claims operational authority and complicates any deal specifying "reopening of the Strait," as Iran and the US may now disagree on what that phrase means geographically.
+
+**Force withdrawal dispute**: Iran's state media claims an unofficial draft of the peace deal includes a requirement for US military force withdrawal from the region. The US has flatly denied this, calling the claim a fabrication. This dispute over the existence and content of draft terms reflects the significant trust deficit in negotiations and suggests both sides are managing domestic audiences as much as each other.
+
+**Hormuz normalization timeline (Bloomberg, May 27)**: Bloomberg reported, citing Iranian state television, that maritime traffic through the Strait could return to normal within one month of an agreement being finalized — suggesting Iran has a specific operational plan for reopening. This timeline, if accurate, gives both sides a concrete economic incentive: oil markets could see a significant downward price correction within 30 days of a deal, generating immediate political dividends for both the Trump administration and Iran's post-war economic recovery.
+
 ## Related
 - [[2026-05-27-us-china-strategic-competition]]
 - [[2026-05-27-india-pakistan-2025-war-and-aftermath]]

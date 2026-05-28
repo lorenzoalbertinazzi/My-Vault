@@ -163,6 +163,46 @@ Cialdini draws a sharp distinction that many practitioners miss:
 
 The practical and ethical case for legitimate use: manipulated compliance generates resentment, returns, complaints, and damaged relationships when discovered. Genuine persuasion creates satisfied customers who become advocates.
 
+### The Elaboration Likelihood Model (ELM)
+
+Petty and Cacioppo's **Elaboration Likelihood Model** (1986) is the dominant academic framework for understanding *how* people process persuasive messages — and maps directly onto when Cialdini's principles work best:
+
+**Central Route**: The target thinks carefully, analyzes arguments, and evaluates the quality of evidence. Persuasion via this route produces **lasting attitude change** and behavioral consistency. Cialdini's principles are less effective here — rational scrutiny can overcome social proof or authority.
+
+**Peripheral Route**: The target processes shortcuts (heuristics) rather than argument quality. Low motivation (the issue doesn't matter much) or low ability (too complex or too busy to think carefully) drives peripheral processing. **This is where Cialdini's six principles operate** — they are peripheral cues that trigger automatic compliance without deep deliberation.
+
+**Practical implication**: For high-stakes decisions (buying a home, choosing a doctor, signing a major contract), people usually switch to central route processing and scrutinize more carefully. For low-stakes or time-pressured decisions, peripheral cues dominate. Designing for the right route depends on what you want — fast compliance (peripheral) or durable attitude change (central).
+
+### Dark Patterns — Cialdini's Principles in Digital Design
+
+UX and product designers have systematically weaponized influence principles in digital interfaces, creating **dark patterns** — designs that exploit psychological shortcuts to drive behavior against the user's genuine interests:
+
+| Principle | Dark Pattern Example |
+|-----------|---------------------|
+| **Scarcity** | "Only 2 rooms left at this price!" (often fabricated or auto-reset) |
+| **Social proof** | "12 people looking at this right now" (real-time counters of unverifiable activity) |
+| **Commitment** | Pre-checked boxes for newsletter sign-ups; default opt-ins to data sharing |
+| **Authority** | Fake "Dr. Approved" or "Award-Winning" labels with no verifiable source |
+| **Reciprocity** | Free trials that require credit card and auto-convert to paid subscriptions |
+| **Liking** | Personalization theater — using first names to simulate personal relationship |
+| **Unity** | "Join X million members" creating false tribal identification |
+
+The EU's Digital Services Act (2024) and the FTC's increasing dark pattern enforcement in the US represent regulatory efforts to constrain the most exploitative applications.
+
+### Inoculation Theory — Counter-Influence
+
+Just as biological vaccines expose the immune system to weakened pathogens to build resistance, **inoculation theory** (William McGuire, 1961; revived by Jon Roozenbeek and Sander van der Maas, 2020) proposes that people can build resistance to manipulation by being pre-exposed to weakened versions of persuasion attempts.
+
+**The mechanism**: A two-step process:
+1. **Warning**: Alert people that manipulation is coming ("You may encounter misleading claims that...")
+2. **Weakened exposure + refutation**: Show the technique in action + immediately explain how it works and why it's manipulative
+
+**Prebunking vs. debunking**: Inoculation (prebunking) is more effective than debunking (correcting misinformation after the fact) because:
+- Debunking fights the availability heuristic — the original claim remains more accessible
+- Prebunking creates cognitive frameworks that make the manipulation visible when encountered
+
+**Applications**: Cambridge University's "Bad News" game and similar inoculation games have shown measurable improvements in manipulation resistance, particularly for misinformation. Commercially, teaching sales teams about influence principles is itself a form of inoculation — making them more ethical practitioners and better detectors of manipulation used against them.
+
 ## Related
 - [[48-laws-of-power]]
 - [[cognitive-biases]]

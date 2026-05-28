@@ -99,6 +99,50 @@ LBO model sets a **floor** for company value in M&A — a strategic acquirer mus
 
 A common phenomenon: holding company **discount to NAV** (e.g., Berkshire Hathaway, Exor) — the holding company trades below the sum of its parts due to complexity discount, governance concerns, or lack of liquidity of the underlying stakes. Activists often target holding companies trading at wide NAV discounts.
 
+### WACC Decomposition — Cost of Capital in Practice
+
+The **Weighted Average Cost of Capital (WACC)** is the hurdle rate used to discount cash flows in a DCF, representing the blended required return of all capital providers:
+
+> **WACC = (E/V) × Ke + (D/V) × Kd × (1 − Tax Rate)**
+
+Where E = equity market value, D = debt market value, V = E + D.
+
+**Cost of Equity (Ke) via CAPM**:
+> **Ke = Rf + β × (Rm − Rf)**
+- **Rf** (risk-free rate): Typically the 10-year Treasury yield (~4–5% in 2026)
+- **β** (beta): Market sensitivity, estimated from historical regression against the market index. For private companies: "unlever" the beta of public comparables, then re-lever at the target company's capital structure
+- **(Rm − Rf)** (equity risk premium, ERP): Historical premium of stocks over bonds, typically estimated at 4–6% in the US. Damodaran (NYU) publishes monthly updates
+
+**Cost of Debt (Kd)**: Yield to maturity on existing debt, or estimated from credit rating → yield spread + risk-free rate. Tax-adjusted (×(1 − Tax Rate)) because interest payments are deductible.
+
+**Common errors in practice**:
+- Using book value weights rather than market value weights for E and D
+- Applying a single WACC to all business divisions when they have different risk profiles
+- Ignoring the "circularity": WACC depends on target capital structure → enterprise value → which informs the capital structure weights
+- Using a short-term tax rate instead of the normalized long-run marginal rate
+
+### The Dividend Discount Model (DDM)
+
+The **DDM** values a stock as the present value of all future dividend payments — the purest expression of the intrinsic value framework for dividend-paying companies:
+
+> **Gordon Growth Model (constant growth): P = D1 / (Ke − g)**
+
+Where D1 = next year's expected dividend, Ke = cost of equity, g = perpetual growth rate.
+
+**The denominator sensitivity**: When Ke − g is small, the multiplier explodes. If Ke = 10% and g = 8%, the fair value P/E is 50×. If g = 7%, it's 33×. A 1% change in the perpetual growth assumption changes value by ~50% — making the terminal assumption the dominant uncertainty.
+
+**Multi-stage DDM** (more realistic):
+1. **High-growth phase** (years 1–5): Project specific dividend amounts from earnings growth and payout ratio
+2. **Transition phase** (years 6–10): Growth rate gradually converges toward the terminal rate
+3. **Terminal phase**: Apply Gordon Growth Model with a stable, conservative long-run g (≤ nominal GDP growth)
+
+**When DDM is most useful**:
+- Mature companies with stable, predictable dividends (utilities, consumer staples, regulated infrastructure)
+- Financial companies (banks, insurers) where free cash flow is difficult to define but dividends are well-defined regulatory distributions of excess capital
+- Any business where shareholder returns are primarily delivered via dividends rather than buybacks or reinvestment
+
+**DDM limitations**: Useless for non-dividend-paying companies (Berkshire Hathaway, Amazon). Can be extended to the **dividend + buyback** framework — treating buybacks as equivalent to dividends — which is the correct generalization. DDM and DCF yield identical values when consistently applied; they are different ways of expressing the same present value mathematics.
+
 ## Related
 - [[portfolio-theory]]
 - [[macroeconomics-101]]

@@ -261,6 +261,70 @@ The field has moved beyond the monolithic RAG pipeline toward **modular RAG** �
 
 This composable architecture — exemplified by frameworks like LlamaIndex, Haystack, and LangChain — enables production systems to route queries to the appropriate sub-pipeline rather than applying the same approach to every query.
 
+### Self-RAG — Adaptive, Self-Reflective Retrieval
+
+Standard RAG always retrieves, even for queries where retrieval is unnecessary or harmful (e.g., asking "what is 2+2?" triggers a retrieval call that adds noise). **Self-RAG** (Asai et al., 2023) trains the model to:
+
+1. **Decide whether to retrieve**: Generate a special `[Retrieve]` or `[No Retrieve]` token before answering. Retrieval only happens if the model determines it needs external grounding.
+2. **Evaluate retrieved passages**: Generate `[Relevant]` / `[Partially Relevant]` / `[Irrelevant]` tokens for each retrieved passage.
+3. **Assess its own output**: Generate `[Fully Supported]` / `[Partially Supported]` / `[No Support]` tokens rating whether its answer is grounded in retrieved content.
+4. **Critique overall quality**: Generate `[Utility: 1–5]` score to distinguish high-quality supported answers from hedged or incomplete ones.
+
+**What this achieves**: The model becomes a self-regulating RAG system — it retrieves only when needed, filters bad retrievals, and rates its own faithfulness. At inference, you can weight retrieval vs. self-reliance and faithfulness vs. utility according to the application's needs.
+
+**Training requirement**: Self-RAG requires specialized fine-tuning on data that includes these reflection tokens. It is not a prompting technique applied to off-the-shelf models.
+
+---
+
+### Multimodal RAG
+
+Standard RAG handles text; **multimodal RAG** extends retrieval to images, tables, charts, diagrams, and audio.
+
+**The challenge**: Embedding text and images into the same vector space so a text query can retrieve relevant images (and vice versa).
+
+**Approaches**:
+
+| Approach | How it works | Trade-off |
+|----------|-------------|-----------|
+| **CLIP-based retrieval** | CLIP embeds text and images in the same space; cosine similarity works cross-modally | Good zero-shot performance; CLIP embeddings less rich than specialized text embeddings |
+| **Caption-then-retrieve** | Use a vision model to caption images; embed and index captions as text | Simple to implement; loses fine-grained visual detail |
+| **Multi-modal embeddings (ColPali)** | Embed full page images as tokens; late interaction retrieval | State-of-the-art for document retrieval; high storage cost |
+| **Table/chart extraction** | Parse tables to structured data or text descriptions; retrieve as structured content | Accurate for numbers; requires specialized parsers |
+
+**ColPali** (Faysse et al., 2024): Instead of extracting text from PDFs, ColPali embeds the full visual representation of each PDF page as a sequence of patch embeddings (using PaliGemma). Retrieval uses late-interaction scoring (similar to ColBERT but over image patches). Achieves state-of-the-art on document question answering benchmarks by avoiding OCR errors entirely.
+
+**Production pattern for mixed document corpora**:
+1. Parse documents → extract text blocks, tables, and images separately
+2. Text blocks → standard text embedding pipeline
+3. Images/charts → caption with vision model, store both caption embedding and raw image
+4. At retrieval: retrieve text chunks AND relevant images; inject both into the multimodal LLM's context
+
+---
+
+### RAG vs. Fine-Tuning: Decision Framework
+
+The choice between RAG and fine-tuning is one of the most consequential architectural decisions in applied LLM work. They are often presented as alternatives, but they address different problems.
+
+| Dimension | RAG | Fine-Tuning |
+|-----------|-----|-------------|
+| **Problem solved** | Access to external knowledge the model doesn't have | Style, format, specialized reasoning, domain behavior |
+| **Knowledge currency** | Real-time — update the index without retraining | Static — knowledge frozen at training time |
+| **Traceability** | Citable sources from retrieved chunks | Opaque — no way to trace where knowledge came from |
+| **Cost to update** | Low — just re-index changed documents | High — full fine-tuning run required |
+| **Latency** | Higher — retrieval + inference | Standard — just inference |
+| **What it changes** | What the model knows at query time | How the model behaves / reasons |
+| **Failure mode** | Poor retrieval → poor answer | Catastrophic forgetting; overfitting |
+
+**Decision heuristics**:
+
+- **Use RAG when**: The use case requires up-to-date or proprietary knowledge; you need citations; the knowledge base changes frequently; you want to control exactly what information the model can access.
+
+- **Use fine-tuning when**: You need the model to adopt a specific output format or persona consistently; you're adapting to a specialized domain where base model reasoning patterns are inadequate; you want to inject frequently-used patterns into weights to reduce prompt overhead; you need latency too low to afford retrieval.
+
+- **Use both when**: Fine-tune for domain behavior and format; RAG for dynamic factual knowledge. This is the pattern used in enterprise deployments: a fine-tuned model with domain vocabulary and communication style, augmented with a RAG system for current company data.
+
+**The fine-tuning trap**: Many teams fine-tune to inject factual knowledge (e.g., "add our product catalog to the model"). This rarely works well — facts are hard to reliably inject via fine-tuning and easy to retrieve via RAG. Fine-tuning is most effective for *behavioral* changes, not *knowledge* injection.
+
 ## Related
 - [[transformer-architecture]]
 - [[machine-learning-fundamentals]]

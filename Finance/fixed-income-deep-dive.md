@@ -168,6 +168,47 @@ Bond portfolio managers track not just absolute yields but yield curve dynamics:
 - **Bull flattener**: Long rates fall (flight-to-safety) while short rates fall less — classic "recession trade"
 - **Bear flattener**: Short rates rise (tightening) faster than long rates — curve inversion; classic late-cycle pattern before recessions
 
+### The Repo Market — Plumbing of Fixed Income
+
+The **repurchase agreement (repo) market** is the largest short-term funding market in the world and the critical plumbing of global fixed income. In a repo transaction:
+
+1. A securities dealer sells Treasuries to a money market fund overnight for $1,000 cash
+2. With a simultaneous agreement to repurchase them the next day for $1,000 + repo rate
+
+**Economically**: this is a collateralized overnight loan. The dealer gets short-term funding; the fund earns a small return on cash with near-zero risk (holding Treasuries as collateral). The **repo rate** is effectively the overnight borrowing rate for secured lending against government securities.
+
+**Why it matters**:
+- The Fed's **Reverse Repo Facility (RRP)** pays a floor rate for overnight cash deposited by money market funds — a key tool for setting a floor on all short-term rates
+- Repo stress reveals funding fragility: the September 2019 "repo spike" (overnight rates to 10%+) exposed hidden leverage and prompted Fed intervention
+- During crises, repo markets can freeze even for "safe" assets: in March 2020, Treasuries became briefly illiquid as forced selling overwhelmed repo financing capacity
+- **Haircuts**: The collateral discount applied in repo transactions (a $1,000 Treasury might only provide $990 in funding). Haircut increases during stress create procyclical deleveraging.
+
+### Green Bonds and Sustainable Fixed Income
+
+**Green bonds** are debt securities where proceeds are contractually earmarked for environmental projects (renewable energy, energy efficiency, clean transportation, sustainable water). The market grew from near-zero in 2012 to over $2 trillion in cumulative issuance by 2025.
+
+**Key structural features**:
+- **Use of proceeds**: The defining characteristic — unlike conventional bonds, green bond proceeds are restricted to eligible project categories per the bond's framework
+- **Green Bond Principles (GBP)**: Voluntary ICMA guidelines covering eligible project categories, management of proceeds, reporting requirements, and third-party verification
+- **Greenium**: Some green bonds trade at slightly lower yields (2–10 bps) than equivalent conventional bonds — investors accept marginally lower returns for ESG credentials. The greenium is small and inconsistent
+- **Greenwashing risk**: Without rigorous third-party certification, issuers can label any project "green." The EU's Green Bond Standard (2024 implementation) requires 85% of proceeds to finance EU Taxonomy-aligned activities and mandatory external review
+
+**Taxonomy and beyond**: Sustainability-Linked Bonds (SLBs) differ structurally — the coupon steps up if the issuer fails to meet specified sustainability KPIs. This creates financial accountability but also a conflict of interest in how KPIs are set and measured.
+
+### Sovereign Debt Crisis Dynamics
+
+When a country borrows excessively relative to its economic capacity, a **sovereign debt crisis** unfolds in a predictable pattern:
+
+**The debt spiral trigger**: A country's debt becomes unsustainable when the interest rate on debt (r) exceeds the nominal GDP growth rate (g). The primary balance (revenue minus non-interest spending) must then be in *surplus* simply to stabilize the debt ratio:
+
+> **Required primary surplus = (r − g) × Debt/GDP**
+
+When this surplus is politically infeasible, default or restructuring becomes inevitable. Greece in 2010 illustrates: with debt/GDP > 160%, negative growth, and 6%+ borrowing rates, the required primary surplus was impossible to achieve while implementing austerity simultaneously.
+
+**The doom loop**: Sovereign distress weakens banks (which hold sovereign bonds as "safe assets"), bank weakness requires sovereign bailouts, which further weakens the sovereign. This self-reinforcing cycle — the "diabolic loop" — was the defining dynamic of the 2010–2015 European sovereign debt crisis.
+
+**Restructuring mechanics**: Sovereign defaults rarely involve non-payment; they typically involve renegotiating terms (haircuts on principal, extended maturities, interest rate reductions). The *holdout creditor problem* — individual creditors refusing to accept restructured terms, suing for full payment — is addressed by **Collective Action Clauses (CACs)** now standard in sovereign bonds.
+
 ## Related
 - [[portfolio-theory]]
 - [[macroeconomics-101]]

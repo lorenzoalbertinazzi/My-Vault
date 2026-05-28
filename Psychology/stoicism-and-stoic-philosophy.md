@@ -155,6 +155,36 @@ Caesar reportedly said: "I resent your death, Cato, since you denied me the plea
 
 **Viktor Frankl** (concentration camps): Frankl's logotherapy and Stockdale's experience converge on the same Epictetan insight: the last human freedom is the ability to choose one's response to any situation. Even in the camps, Frankl observed that prisoners who retained a sense of meaning and internal purpose survived longer and maintained more dignity than those who collapsed psychologically.
 
+### Musonius Rufus — The Stoic Teacher of Epictetus
+
+**Musonius Rufus** (~30–100 CE) was the Roman Stoic philosopher who taught Epictetus, yet remains far less known than his student. His surviving lectures (recorded by students) offer the most practical, embodied version of Stoic philosophy — closer to daily life than Marcus Aurelius's meditations or Seneca's letters.
+
+His distinctive contributions:
+
+**On Practical Virtue**: Musonius insisted that philosophy must be *practiced*, not merely learned. He was infamous for requiring his students to farm alongside him — manual labor was a philosophical exercise, not just a metaphor. Virtue exists only in action; theoretical knowledge of virtue that does not change behavior is not knowledge but self-delusion.
+
+**On Women and Philosophy**: Remarkably radical for his time, Musonius argued explicitly that women require the same philosophical education as men, since virtue is the same in both (wisdom, justice, courage, temperance). He had female students — extraordinarily unusual in antiquity. His argument: if the goal is a virtuous life, and women live lives, then women need the same training. The conclusion follows from the premise.
+
+**On Diet and Self-Discipline**: Musonius argued for a frugal diet (preferring plant-based food, avoiding meat where possible) not for health reasons but philosophical ones — expensive, pleasurable eating cultivates appetite and dependence, undermining the Stoic project of freedom from external things.
+
+**On Marriage and Children**: Unlike most Stoic philosophers who treated family as a distraction, Musonius saw marriage and parenthood as primary arenas for the practice of justice and love — not impediments to philosophical life but its most demanding practical school.
+
+### Pierre Hadot's "Spiritual Exercises" — Stoicism as Practice, Not Theory
+
+**Pierre Hadot** (1922–2010), a French philosopher and classicist, revolutionized the study of ancient philosophy with his insight that ancient philosophical schools were primarily *ways of life* — therapeutic practices for transforming the practitioner — not primarily theoretical systems.
+
+In *Philosophy as a Way of Life* (1981) and *The Inner Citadel* (his study of Marcus Aurelius, 1992), Hadot identified specific **spiritual exercises** that the Stoics practiced:
+
+**Attention to the present moment (prosoche)**: The continuous practice of vigilance over one's own thoughts, maintaining awareness of the dichotomy of control in each moment. Not a meditation session — a continuous dispositional orientation.
+
+**Meditation on death and impermanence**: Not morbid rumination but the regular practice of seeing each moment as if it might be the last — which Marcus Aurelius encoded in his personal journal as a daily discipline.
+
+**The view from above (hupsos)**: Deliberately adopting a cosmic perspective, as if looking at human affairs from a satellite. Hadot traced this practice from Marcus Aurelius back through Plato and into Pythagorean cosmological meditation — a pan-philosophical practice of gaining perspective through scale.
+
+**Hadot's key thesis**: The *Meditations* are not a treatise — they are Marcus Aurelius's personal philosophical exercise book, written to himself to remind him of principles he already knows but constantly forgets under the pressure of ruling an empire. Philosophy is not known; it is *practiced* and repeatedly re-practiced until it becomes character.
+
+This framing is the most practically useful reading of Stoicism: the goal is not to intellectually understand the dichotomy of control but to practice applying it, daily, until the response becomes automatic.
+
 ## Related
 - [[mental-models]]
 - [[cognitive-biases]]

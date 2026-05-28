@@ -140,6 +140,43 @@ This matters because it prevents Stoicism from becoming a performance of invulne
 
 The honest Stoic position: "I am a student of philosophy, not a sage. I will fall short today. Tomorrow I will try again." This humility makes the practice sustainable and distinguishes authentic Stoicism from the toxic stoicism of suppressed emotion and performed toughness.
 
+### Stoicism vs. Buddhism — Convergences and Divergences
+
+Stoicism and Buddhism independently developed remarkably similar insights about the nature of suffering, yet reached different practical conclusions:
+
+**Convergences**:
+- Both identify **attachment to impermanent things as the root of suffering**: Stoicism calls them "preferred indifferents"; Buddhism calls them "objects of clinging" (upadana)
+- Both recommend **contemplative practices** to cultivate equanimity: Stoic journaling and negative visualization parallel Buddhist meditation
+- Both emphasize **present-moment awareness**: Stoic *prosoche* (attention) parallels Buddhist mindfulness (sati)
+- Both teach that **events themselves don't cause suffering** — only our relationship to events does (Epictetus: "Men are disturbed not by things, but by opinions about things"; the Buddha: "Pain is inevitable, suffering is optional")
+
+**Key divergences**:
+
+| Dimension | Stoicism | Buddhism |
+|-----------|----------|----------|
+| **The Self** | A rational, unified soul that participates in the Logos | No permanent self (anatta) — the self is a construction |
+| **Social Engagement** | Cosmopolitan duty — the Stoic must engage fully in civic and family life | Historically, monastic withdrawal; though Mahayana bodhisattva ideal approaches Stoic civic duty |
+| **Emotion** | Destructive passions arise from false judgments; correct the judgment and the passion dissolves | Emotions are impermanent phenomena to be observed with equanimity; don't identify with them |
+| **The Body** | Preferred indifferent — worth caring for, but not the source of wellbeing | More ambivalent — the body is both the site of practice and a source of craving |
+| **Ultimate Goal** | Virtue and eudaimonia in this life, lived fully among others | Liberation (nirvana) from the cycle of rebirth; suffering as a structural feature of conditioned existence |
+
+**For the practical reader**: The Stoic and Buddhist frameworks are more complementary than competitive. Stoicism provides a social and civic ethics for active engagement in the world; Buddhism provides deep practices for non-identification with thought and emotion. Modern therapeutic frameworks (CBT, ACT, MBSR) consciously integrate both traditions.
+
+### Oikeiosis — The Stoic Theory of Natural Affiliation
+
+**Oikeiosis** (Greek: *οἰκείωσις*, meaning "appropriation" or "affiliation") is one of the most important and least-discussed Stoic concepts — the foundation of Stoic ethics.
+
+The concept describes the natural, innate inclination of every creature to value and preserve itself, and to recognize its own interests as its own. This is not selfishness in the pejorative sense — it is the starting point from which the Stoics build their entire ethical system outward:
+
+**The expanding circle of oikeiosis**:
+1. Every creature begins with self-affiliation — valuing its own preservation and wellbeing
+2. This naturally extends to offspring (parents recognize children's interests as their own)
+3. Then to family members, then to fellow citizens, then — for the Stoic — to all of humanity
+
+The Stoics (particularly Hierocles and Cicero) used the metaphor of **concentric circles** to describe this expansion: a person stands at the center, surrounded by successively wider circles — immediate family, extended family, neighbors, fellow citizens, all of humanity. The Stoic practice is to draw those outer circles inward — treating strangers more like family, and all humans as members of a single community (*cosmopolis*).
+
+**Practical significance**: Oikeiosis explains why Stoicism is not a philosophy of cold indifference but of expanding care. Marcus Aurelius's famous directive to "act for the common good" is grounded in oikeiosis — the recognition that rational beings share a common nature (logos) that makes all humans kin. The Stoic sage doesn't stop caring; they expand the boundary of who they care about until it encompasses everyone.
+
 ## Related
 - [[mental-models]]
 - [[cognitive-biases]]

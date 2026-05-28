@@ -109,6 +109,12 @@ The next 60–90 days are likely decisive: either a ceasefire/negotiating framew
 
 **Outlook**: A 60-day ceasefire is achievable within days if both sides can agree on the sequencing of nuclear vs. economic concessions. A permanent settlement is much harder — the fundamental Iran nuclear dispute has resisted resolution for 20+ years. The most likely near-term outcome is a temporary agreement that reduces immediate violence and reopens Hormuz, with deeper nuclear talks beginning (and potentially stalling) during the ceasefire window.
 
+**Strait traffic near zero since May 6**: UANI ship tracking and CNN shipping data confirm that open transits through the Strait have fallen to approximately zero vessels per day since May 6, 2026, compared to the pre-war norm of ~3,000 vessels per month. The 30% EIA figure for Q1 covers oil moved via alternative routes (Saudi Petroline, UAE pipeline, Cape diversion); the Strait itself is effectively closed rather than merely reduced.
+
+**IRGC redefines the Strait's boundaries**: In May 2026, the IRGC Navy formally announced it has redefined the Strait of Hormuz as a "vast operational area" extending from Jask to Siri Island — a significantly broader zone than the narrow 21-mile corridor historically designated. IRGC official Mohammad Akbarzadeh stated the Strait is "no longer viewed as the narrow maritime corridor surrounding the islands of Hormuz and Hengam." This creates ambiguity in any deal language referencing Hormuz reopening, as Iran and the US may define the reopened area differently.
+
+**Bloomberg: one-month normalization timeline**: Bloomberg (May 27, 2026) reported, citing Iranian state television, that shipping traffic through the Strait could return to normal within one month of a peace deal being finalized. If accurate, this gives energy markets a specific horizon for price recovery — oil exporters, importers, and shipping companies would all benefit immediately from deal finalization, creating economic momentum for agreement.
+
 ## Related
 - [[2026-05-27-us-china-great-power-competition]]
 - [[middle-east-iran-nuclear-program]]

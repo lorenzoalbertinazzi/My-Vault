@@ -189,6 +189,42 @@ Albert Bandura's **self-efficacy theory** — one's belief in their ability to s
 
 The connection: self-efficacy is the psychological infrastructure that allows identity-based habit change to function. Without believing you are capable of being that person, the identity shift rings hollow.
 
+### Sleep and Habit Consolidation
+
+Sleep is not passive downtime — it is the critical consolidation phase for newly learned behaviors. During sleep, the brain transfers information from the hippocampus (conscious, effortful learning) to the basal ganglia (automatic, procedural storage). This is the same neural pathway that underlies habit formation.
+
+**Key mechanisms**:
+- **Slow-wave sleep (SWS)**: Replays newly learned sequences, strengthening the neural pathways that encode procedural habits. Disrupted SWS delays habit automaticity
+- **REM sleep**: Integrates new habits with existing schemas and emotional context — helping the brain "decide" how the new behavior fits into the broader behavioral repertoire
+- **Sleep deprivation**: Even a single night of poor sleep reduces prefrontal cortex function, making resistance to established bad habits harder and new habit formation less effective (the basal ganglia becomes more dominant relative to prefrontal oversight)
+
+**Practical implication**: The standard "21 days to form a habit" advice assumes adequate sleep. Sleep deprivation extends the time required for automaticity. The sequence is: deliberate practice during the day → sleep consolidation at night → repeat. Missing the sleep step slows the process significantly.
+
+### Ultradian Rhythms and Peak Performance Windows
+
+Beyond the well-known circadian rhythm (24-hour sleep/wake cycle), the body operates on **ultradian rhythms** — approximately 90–120 minute cycles of high and low alertness throughout the day, first described by Peretz Lavie and later popularized by performance researcher Nathaniel Kleitman.
+
+**The 90-minute performance architecture**:
+- During the high phase: focused, alert, high cognitive capacity — ideal for demanding habit practice that requires concentration (deep work, deliberate practice)
+- During the low phase: fatigue, mind-wandering, reduced working memory — the body signals a need for rest or lighter activity
+- Ignoring the low phase and "pushing through" with caffeine or willpower degrades the quality of subsequent high phases
+
+**Andrew Huberman's operationalization**: Based on the ultradian literature, the recommendation is to structure focused practice/work sessions in 90-minute blocks, followed by genuine rest (10–20 minutes). This aligns deliberate practice windows with natural neurological performance peaks, compressing the time required to build high-quality habits.
+
+**Application to habit stacking**: Schedule new, demanding habits at the start of your first or second 90-minute high-alertness window (typically 1–3 hours after waking for most people). Don't rely on willpower during the low phase — save routine/easy habits for those windows.
+
+### Ulysses Contracts — Precommitment Devices
+
+A **Ulysses contract** (named for Odysseus's strategy of binding himself to the mast to hear the Sirens without being lured into the sea) is a precommitment device that constrains future behavior by a current, rational self who anticipates that a future, tempted self will make poor decisions.
+
+**Examples in habit architecture**:
+- Removing alcohol from the house (making the bad habit physically impossible rather than relying on in-the-moment willpower)
+- Putting your phone in another room before bed (sleep habit)
+- Using apps like Freedom or Cold Turkey to block social media during focus hours
+- Leaving gym clothes by the bed (complementary: making the good habit maximally easy)
+
+**The behavioral economics insight** (O'Donoghue & Rabin, 1999): Most people are "naively present-biased" — they know their future self will cave to temptation but believe (incorrectly) that their future self will have stronger willpower than they actually do. Ulysses contracts bypass this miscalibration by removing the decision entirely. This connects to BJ Fogg's friction principle (making bad habits difficult) but extends it to the dimension of *precommitment* — the decision to create friction is made in advance, not in the moment of temptation.
+
 ## Related
 - [[cognitive-biases]]
 - [[mental-models]]

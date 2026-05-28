@@ -142,6 +142,41 @@ Buying a bond with slightly longer maturity than your holding period, then selli
 
 This cycle was a textbook illustration of every concept above — flattening, inversion, bear steepening, and eventual re-normalization.
 
+### Term Premium Decomposition — The ACM Model
+
+The **term premium** is the extra return investors demand for holding a longer-dated bond versus rolling over short-term bonds repeatedly. It is the component of long yields that is *not* explained by expected future short rates.
+
+**Why this decomposition matters**: A 10-year yield of 4.5% can reflect:
+- Expected average short rate over 10 years: 3.5% (the market's rate forecast)
+- Term premium: 1.0% (compensation for duration risk, inflation uncertainty, fiscal supply)
+
+The Federal Reserve Bank of New York's **Adrian-Crump-Moench (ACM) model** is the most widely cited methodology for this decomposition. Key empirical findings:
+- Term premiums were *negative* for extended periods from 2013–2021 — QE suppressed them artificially, meaning investors were NOT being compensated for bearing duration risk
+- Term premiums surged in 2023–2024 as QT (quantitative tightening) reduced Fed holdings and mounting fiscal deficits required more Treasury issuance from private buyers
+- By 2025–2026, term premiums normalized to historical levels (~1–1.5%), explaining why long yields remained elevated even after the Fed began cutting short rates
+
+**Investment implication**: When term premiums are negative (as in 2019–2021), long bonds are overpriced relative to their risk. When term premiums are high (as in the 2023 bear steepener), long bonds offer genuine excess return compensation. Duration positioning should incorporate term premium estimates alongside rate forecasts.
+
+### International Yield Curve Divergence (2024–2026)
+
+A defining feature of 2024–2026 fixed income markets has been dramatic divergence between global yield curves — driven by dramatically different monetary policy paths:
+
+**Bank of Japan (BOJ) — unwinding ultra-easy policy**:
+- Japan maintained negative interest rates and Yield Curve Control (YCC, capping 10Y JGB yields near 0%) from 2016 until 2024
+- With Japanese inflation finally and persistently exceeding the 2% target, the BOJ raised rates for the first time in 17 years in March 2024 and continued tightening through 2025
+- JGB yields rose from near-zero to 1.5%+, causing global ripple effects: Japanese life insurers and pension funds (historically the world's largest buyers of foreign bonds) began repatriating capital, reducing demand for US Treasuries and European government bonds and putting upward pressure on yields globally
+
+**European Central Bank (ECB) — cutting ahead of the Fed**:
+- With euro area inflation falling faster than US inflation and weaker European growth, the ECB began cutting in June 2024 — several months before the Fed
+- The resulting policy divergence widened the Bund-Treasury spread and supported USD strength vs. EUR
+
+**Practical arbitrage opportunities from divergence**:
+- Currency carry trades (long high-rate USD, short low-rate JPY) — extremely profitable in 2024 until the August 2024 carry trade unwind caused a sharp global equity sell-off
+- Relative value trades (long Bunds vs. short Treasuries when the spread reaches historically wide or narrow extremes)
+- Duration allocation across sovereign markets based on relative term premium and policy cycle positioning
+
+The unwind of highly leveraged **basis trades** (arbitrage between Treasury futures and cash bonds) remains a systemic risk in this environment of elevated term premiums and policy divergence — the March 2020 Treasury market dysfunction was primarily a basis trade deleveraging episode.
+
 ## Related
 - [[fixed-income-deep-dive]]
 - [[macroeconomics-101]]

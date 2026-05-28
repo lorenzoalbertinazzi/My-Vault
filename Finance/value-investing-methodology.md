@@ -160,6 +160,45 @@ Academic debate on whether the value premium (cheap stocks outperforming) is:
 
 The practical implication differs: if it's a risk premium, it should persist indefinitely. If behavioral, it may be partially arbitraged away as more smart money pursues it. Evidence suggests both components are real — the premium exists but has been weaker in recent decades as access to value strategies has democratized.
 
+### Checklist Manifesto Applied to Investing
+
+Inspired by Atul Gawande's *The Checklist Manifesto* (which documented how checklists dramatically reduced surgical errors in medicine), several value investors — most prominently Mohnish Pabrai — have developed formal investment checklists to prevent known cognitive errors.
+
+**The problem checklists solve**: Investment failures are rarely caused by ignorance of financial metrics. They're caused by forgetting to check something you already know to check, or by emotional state overriding rational process under time pressure. Checklists counteract overconfidence and provide discipline when conviction is highest and scrutiny most needed.
+
+**Elements of a rigorous investment checklist** (drawn from Pabrai, Vitaliy Katsenelson, and others):
+- Is this business inside my circle of competence?
+- What is the base rate for this type of business/situation (how do similar cases actually turn out)?
+- What are the 3 most likely ways this investment could permanently destroy capital?
+- What does the management team's capital allocation history (past 10 years) reveal?
+- Have I genuinely engaged with the strongest version of the bear case — not just acknowledged it?
+- Am I buying because the business is genuinely cheap, or because I have anchored to a prior bull thesis?
+- Have I independently verified the key claims in the company's annual report?
+- What is the competitive moat scenario in 10 years — what could destroy it?
+- Am I being influenced by recency bias (recent great/poor performance coloring my current view)?
+
+**The process benefit**: The value of a checklist is not each individual item (most are "obvious") but the discipline of systematically addressing each one before committing capital. Like a surgical checklist, it converts best practices from variable habits into consistent, reliable process.
+
+### Activist Value Investing
+
+**Activist investors** buy significant stakes in undervalued companies and then push for changes — improving capital allocation, replacing management, spinning off divisions, or forcing a sale. The catalyst for value realization comes from the investor's own actions, not just waiting for the market to recognize value.
+
+**Key practitioners**: Carl Icahn (Hertz, Dell, Apple), Bill Ackman (Pershing Square), Elliott Management (thousands of campaigns since the 1970s), ValueAct, Jana Partners, Third Point (Daniel Loeb).
+
+**Common activist strategies**:
+- **Capital return campaigns**: Company sits on cash or generates FCF without deploying it productively — activist pushes for buybacks, dividends, or special distributions
+- **Strategic separation**: Conglomerate discount — break up a holding company into pure-play divisions, each valued more richly independently
+- **Management change**: Replace underperforming CEO/board; often the clearest path to unlocking embedded value
+- **Strategic sale**: Force the company to run a formal sale process or merge with a better-positioned acquirer
+- **Balance sheet optimization**: Use leverage to fund buybacks and increase capital efficiency
+
+**The structural risks**:
+- Adversarial management responses (poison pills, staggered boards, litigation, "white knight" deals) can neutralize activist pressure
+- Concentrated, illiquid positions mean activists take on significant single-stock risk — if the thesis is wrong or delayed, losses can be severe
+- Short-term financial engineering (cutting R&D, capex, or headcount to boost near-term earnings) can destroy long-term competitive position
+
+**The short-termism debate**: Critics argue activism extracts short-term shareholder value at the expense of long-run investment and employment. The empirical evidence is mixed: peer-reviewed studies generally show activist targets outperform over 3–5 years, but clear cases of value destruction from forced financial engineering also exist — particularly in capital-intensive industries where long-investment-cycle businesses need patient capital.
+
 ## Related
 - [[valuation-fundamentals]]
 - [[portfolio-theory]]

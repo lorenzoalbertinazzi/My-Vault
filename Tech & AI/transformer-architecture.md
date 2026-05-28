@@ -143,6 +143,60 @@ Full self-attention is O(N²) in sequence length. Several sparse attention patte
 
 **Sliding window + global attention** is now widely used in production models for document processing tasks that don't require full pairwise attention.
 
+### State Space Models — The Transformer Alternative
+
+Transformers have a fundamental scaling problem: self-attention is O(N²) in sequence length. For very long sequences (100K+ tokens), this becomes prohibitively expensive. **State Space Models (SSMs)** offer an alternative with O(N) scaling.
+
+**The core idea**: SSMs model sequences using a hidden state that is updated at each step, similar to an RNN — but with a structured mathematical form that allows parallel training (unlike RNNs which must process sequentially).
+
+**Mamba** (Gu & Dao, 2023) is the leading SSM architecture. Its key innovation: **selective state spaces** — the state update parameters are input-dependent, allowing the model to selectively remember or forget information based on content (not just position). This gives it associative recall capabilities closer to attention than prior SSMs.
+
+| Property | Transformer | Mamba (SSM) |
+|----------|------------|-------------|
+| Training complexity | O(N²) attention | O(N) with parallel scan |
+| Inference complexity | O(N) per token (with KV cache) | O(1) per token (fixed hidden state) |
+| Memory at inference | Grows with context length (KV cache) | Fixed — state size constant |
+| Long-context ability | Degrades (lost in the middle) | Maintains quality at very long sequences |
+| Associative recall | Excellent (direct attention) | Weaker than transformers on some retrieval tasks |
+
+**RWKV** (Peng et al., 2023): Another linear-attention alternative that formulates attention as an RNN at inference time. Can be trained as a transformer (parallel) but runs as an RNN (O(1) memory). The RWKV-7 model demonstrates competitive performance with transformer models of similar scale.
+
+**The hybrid approach**: Pure SSM models underperform transformers on some recall-intensive tasks. **Jamba** (AI21 Labs), **Zamba**, and **Falcon Mamba** use interleaved transformer and Mamba layers — capturing long-range dependencies efficiently while maintaining strong associative recall. This hybrid architecture is likely the direction for next-generation frontier models.
+
+---
+
+### Mixture of Depths (MoD)
+
+Standard transformers apply the same amount of computation to every token at every layer. Most tokens are simple (stop words, punctuation, common phrases) and don't benefit from full computation.
+
+**Mixture of Depths** (Raposo et al., 2024) makes compute allocation adaptive:
+- A learned router at each layer decides which tokens "participate" in the full computation of that layer
+- Tokens deemed unimportant are passed through via a residual connection (skip this layer's attention + FFN)
+- A fixed fraction of tokens (e.g., 12.5%) participate at each layer; the rest skip
+
+**Result**: Same quality as a standard transformer at 50–70% of the FLOPs, because compute is concentrated where it matters most. MoD complements Mixture of Experts (MoE) — MoE routes tokens to different experts horizontally (different FFN networks at the same layer); MoD routes tokens vertically (skip entire layers).
+
+**Combined MoE + MoD**: Route both which experts process a token AND which layers process it. This is the frontier of compute-efficient transformer design as of 2026.
+
+---
+
+### The "Lost in the Middle" Phenomenon
+
+A critical practical limitation of long-context models: **LLMs systematically perform worse on information positioned in the middle of a long context window**, even though the same information at the beginning or end is retrieved accurately.
+
+**The finding** (Liu et al., 2023, Stanford): When relevant information is buried in the middle of a 20-document context, model performance drops 30–50% relative to when the same information is at the start or end. This holds across GPT-3.5, GPT-4, and Claude.
+
+**Why it happens**: Attention distributions show U-shaped recency/primacy bias — models attend most to the beginning (system prompt, first few documents) and end (most recent tokens) of the context. Middle content is attended to proportionally less.
+
+**Practical mitigations**:
+- **Position important content at the start and end** of the context window
+- **Retrieve fewer, more relevant chunks** rather than many weakly-relevant chunks (reduce needle-in-haystack problem)
+- **Reorder retrieved chunks** so the most relevant appear first and last
+- **Use long-context models designed to mitigate this** (Gemini 1.5's "needle in a haystack" benchmarks were specifically designed to test for this; their sliding attention patterns partially mitigate it)
+- **Post-retrieval compression**: use a re-ranking step to reduce the number of chunks before generation
+
+This phenomenon means that naive "stuff everything in the context window" approaches degrade as context grows — RAG with targeted retrieval often outperforms long-context ingestion for specific factual queries even when the full document fits.
+
 ## Related
 - [[prompt-engineering]]
 - [[llm-landscape]]

@@ -159,6 +159,40 @@ In negotiations, givers perform both worst (easily exploited by takers) AND best
 
 **Practical synthesis**: Enter with a giver's intent (genuinely seek to create value for both sides) while maintaining a matcher's contingency rules (don't continue giving to someone who is purely taking).
 
+### Game Theory in Negotiation — Nash Equilibrium and the Prisoner's Dilemma
+
+**Game theory** provides the mathematical foundation for understanding strategic interactions where one party's outcome depends on what others do. Two concepts are most relevant to negotiation:
+
+**Nash Equilibrium** (John Nash, 1950): A set of strategies where no player can improve their outcome by unilaterally changing their own strategy, given the other players' strategies. In negotiations:
+- The Nash equilibrium is not necessarily the best joint outcome — it is merely the stable resting point where neither party has incentive to deviate
+- Many negotiations get "stuck" at a Nash equilibrium (e.g., neither party is willing to make the first concession) even when a mutually superior deal exists
+- Breaking out of Nash equilibria requires changing the game structure: adding variables, changing parties, or creating credible pre-commitments
+
+**Prisoner's Dilemma**: The classic illustration of why individually rational choices produce collectively suboptimal outcomes:
+- If both parties cooperate (integrate their interests), they achieve the best joint outcome
+- But each individual has incentive to defect (claim maximum value) if they think the other will cooperate
+- Equilibrium is mutual defection — worse for both
+
+**Iterated Prisoner's Dilemma** (Axelrod, 1984): When the game repeats, cooperation can become stable. Robert Axelrod's tournament found that **Tit-for-Tat** — cooperate on the first round, then mirror whatever the other player did last round — was the most successful strategy across repeated interactions. This is the game-theoretic basis for the "generous but firm" stance Adam Grant advocates: lead with cooperation, reciprocate defection, but return to cooperation when the other party does.
+
+**The practical takeaway**: In one-shot negotiations (buying a car, one-time deal), the game-theoretic pressure toward defection is strongest. In repeated relationships (vendor, employer, long-term client), the iterated game makes cooperation rational — reputation and future rounds change the calculus fundamentally.
+
+### Anchoring in Salary and Compensation Negotiations
+
+The anchoring effect is especially powerful in salary negotiations, and its dynamics have been precisely measured:
+
+**First-mover advantage**: Research by Mussweiler, Strack, and Englich (2001–2007) showed that the first number stated in a salary negotiation strongly anchors the final settlement. The first mover captures approximately 3–4× more value when anchoring high than they lose from being perceived as aggressive.
+
+**Extreme anchoring**: First offers significantly above (or below) the ZOPA shift the entire negotiation range. When a candidate asks for $150K in a role budgeted at $100K, even if the final offer is $110K, the candidate has materially benefited from the anchor. The employer's internal "reasonable" range shifted upward.
+
+**Precision anchoring**: Studies show that precise anchors ($96,500 vs. $100,000) signal that the anchor is calculated and researched, producing less aggressive counter-offers. Round numbers signal a rough estimate that invites larger counter-moves.
+
+**Counter-strategy for receiving an anchor**:
+1. Pause before responding — the anchor is most damaging in the immediate moment
+2. Actively reconsider your independent estimate (explicitly counter the bias)
+3. Counter-anchor with an extreme in the opposite direction before negotiating toward the midpoint
+4. Or reject the anchor explicitly: "Let me set that aside and tell you what the role is worth based on market data..."
+
 ## Related
 - [[cialdini-influence]]
 - [[48-laws-of-power]]
