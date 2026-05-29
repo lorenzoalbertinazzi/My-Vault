@@ -3,7 +3,7 @@ title: US-China Strategic Competition — The Defining Geopolitical Rivalry of t
 date: 2026-05-27
 tags: [geopolitics, US, China, trade-war, Taiwan, tech-war, decoupling, great-power-competition]
 source: https://www.cfr.org/articles/visualizing-2026-five-foreign-policy-trends-watch
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -130,6 +130,16 @@ China's Belt and Road Initiative can be analyzed through the lens of development
 ### Negotiation Theory and the "Two-Level Game" in US-China Diplomacy
 
 The Trump-Xi summit dynamic and the trade truce process illustrates Robert Putnam's "two-level game" theory of international negotiations with remarkable clarity. Each leader is simultaneously negotiating internationally (with the other side) and domestically (with their own political base). Trump faces a Republican Party that views China as an existential threat and would regard significant concessions as weakness; Xi faces a CCP system that has staked nationalist legitimacy on resistance to American hegemony and cannot publicly accept US "decoupling" narrative without losing face. The result is a pattern familiar from repeated negotiations: public toughness, back-channel pragmatism, and deals framed in domestically compatible language. The "minor inconsistencies" in US and Chinese summit readouts documented by NPR are not a diplomatic failure — they are a deliberate feature of the two-level game, where each side interprets the same agreement in the terms most acceptable to its domestic audience.
+
+### Update — May 29, 2026
+
+**Xi-Putin: strong signal, no pipeline deal (May 20, 2026)**: Xi Jinping met Vladimir Putin on May 20, reaffirming the "no limits" partnership rhetoric — but crucially failing to finalize the Power of Siberia-2 pipeline agreement. This pipeline is Moscow's economic lifeline: it would redirect Siberian gas from lost European markets to China. China's continued stalling on the deal is a clear demonstration of how far the Russia-China relationship has shifted from partnership toward dependency: Beijing is extracting maximum leverage before committing. From a US-China strategic perspective, Russia's deepening economic subordination to China reduces Moscow's independent capacity for strategic maneuvering and simplifies Washington's assessment of the Russia factor in great power competition.
+
+**Taiwan WHA exclusion — 10th consecutive year (May 2026)**: The World Health Organization's World Health Assembly again blocked Taiwan's observer participation, maintaining China's decade-long institutional veto. The US and EU both expressed support for Taiwan's inclusion. The episode illustrates Beijing's institutional leverage: China can use its WTO, WHO, and UN influence to impose real costs on Taiwan without military action, maintaining pressure short of the threshold that would trigger US military responses. From a strategic competition standpoint, Taiwan's institutional isolation is an ongoing Chinese operation, not merely a passive diplomatic outcome.
+
+**Japan's security network expansion (May 2026)**: Japan under PM Takaichi signed a Reciprocal Access Agreement with the Philippines (joining Australia and UK as RAA partners), met South Korean President Lee Jae Myung to affirm trilateral US-Japan-South Korea security cooperation, and has maintained strong defense spending above 2% of GDP. Japan is now arguably the most strategically consequential US ally in the Indo-Pacific — its archipelago geography directly constrains PLA Navy access to the Pacific, its defense industry provides key US force multipliers, and its RAA network is creating a de facto security coalition that doesn't require US treaty commitments to function. This represents the most significant expansion of Japan's strategic role since its post-war constitution was reinterpreted in 2015.
+
+**Nvidia and AI: still the central front**: Despite the May 12 trade truce reducing headline tariffs, semiconductor export controls remain fully in force. Nvidia's restriction from selling its most advanced AI chips to China continues. The Trump-Xi summit discussed AI governance but reached no binding agreements, consistent with the pattern identified previously: AI governance talks as a communication channel rather than a path to enforceable rules. China's domestic AI competition — Baidu, Alibaba, Tencent, Zhipu AI — continues to advance while remaining 1–2 generations behind US frontier models in raw compute capability.
 
 ## Related
 - [[2026-05-27-us-china-great-power-competition]]

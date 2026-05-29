@@ -3,7 +3,7 @@ title: Europe Heatwave 2026 — Record-Breaking May Temperatures and Deaths
 date: 2026-05-28
 tags: [world-events, climate, heatwave, europe, uk, france, spain, global-warming]
 source: https://en.wikipedia.org/wiki/2026_European_heatwaves
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -84,6 +84,16 @@ Extreme heat is increasingly a global phenomenon, but the 2026 European heatwave
 **Statistical rarity is rapidly changing**: Climate attribution researchers note that an extreme May heat event of this magnitude was approximately a 1-in-100 year event under pre-industrial climate conditions. Under current (2026) climate conditions, that same event is estimated to occur roughly once every 33 years — a threefold increase in probability from human-caused warming. As emissions continue, that frequency will continue to rise, meaning "unprecedented" May heat events of this type will become increasingly routine within decades.
 
 **European energy grid stress**: Surging electricity demand for air conditioning and cooling fans, layered on top of already-elevated energy prices from the US-Iran Hormuz disruption, pushed European power grids and spot energy prices to unusual levels. The convergence of a geopolitical energy crisis and a climate-driven heat event simultaneously represents a new category of compounding risk that European energy planners are only beginning to incorporate into resilience frameworks.
+
+### Update — May 29, 2026
+
+**Ireland sets new national May temperature records**: Ireland recorded its highest May temperature in national history during the heatwave's peak. Both **Clonmel and Killarney recorded 28.8°C**, breaking the previous May record of 28.4°C in Kerry from 1997. Shannon Airport (Co. Clare) recorded **30.6°C** on May 26, an extraordinary figure for Ireland in any month. These records underscore that the 2026 May heatwave was not a UK-centric event but a true Western European climatic anomaly, affecting the full Atlantic margin including Ireland — countries climatically furthest from continental heat sources and thus typically most buffered against extreme events.
+
+**Temperatures peaked May 26–27 and are now easing**: Severe Weather Europe's recap (confirmed by the Irish Times' forecasting guidance) indicates the blocking high-pressure dome peaked on Monday–Tuesday May 26–27 and is weakening as of May 28–29. Atlantic airflow from the west is progressively displacing the continental heat plume, with temperatures expected to return toward seasonal norms by early June. The event thus has a defined duration: approximately 5 days of extreme anomaly (May 24–28), with the most extreme readings compressed into a 48-hour window. This rapid return to normal is climatologically significant — heat domes can persist for weeks (as the 2021 Pacific Northwest heat dome did, killing ~1,000 people), and the European event's shorter duration likely limited what could have been a substantially higher death toll.
+
+**Attribution science: 3x more likely under current climate**: ClimaMeter analysis of the May 23–25 EU heatwave event confirms that under pre-industrial climate conditions, an event of this magnitude in late May would have been approximately a 1-in-100-year occurrence. Under current 2026 climate conditions, the same event is estimated to occur roughly once every 33 years — a threefold increase in probability attributable to human-caused warming. As emissions trajectories continue, this 33-year recurrence interval will shorten further, meaning Western Europe will face "unprecedented" late-May heat events on a decadal rather than centennial timescale within the next 30–40 years.
+
+**Energy grid stress quantified**: European power spot prices reached unusual levels during the heatwave's peak as cooling demand surged simultaneously with already-elevated baseline energy costs from the Hormuz crisis. The specific mechanism: industrial cooling systems, residential fans and air conditioning units (whose penetration in Europe is growing rapidly after each heat event), and London Underground ventilation systems all drew peak electricity load precisely when European grid operators were managing expensive LNG alternatives to unavailable Hormuz-transit gas. This simultaneous demand-side and supply-side stress to the same energy grid is the compounding scenario that most European energy resilience frameworks had not modeled as a simultaneous occurrence.
 
 ## Cross-Disciplinary Connections
 

@@ -3,7 +3,7 @@ title: US-Iran Military Conflict and the Global Energy Crisis (2026)
 date: 2026-05-27
 tags: [world-events, Iran, US, war, energy-crisis, Strait-of-Hormuz, oil, Middle-East]
 source: https://en.wikipedia.org/wiki/Portal:Current_events/May_2026
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -150,6 +150,16 @@ The May Day 2026 global protests — combining anti-war demands with cost-of-liv
 ### Interconnected Crises and Portfolio Risk Management
 
 From a portfolio theory perspective, the 2026 energy crisis illustrates the failure of standard correlation-based diversification during tail events. The assumption embedded in mean-variance optimization (Markowitz) is that asset returns are drawn from a relatively stable joint distribution. The Hormuz crisis violates this assumption: it creates simultaneous negative shocks to equities (recession risk), bonds (inflation risk), and currencies of oil-importing nations (current account deterioration), while positively shocking oil producers' assets and commodity indices. An investor "diversified" across global equities, global bonds, and commodities might find all three legs of the portfolio moving adversely simultaneously — the classic scenario that drives the "risk parity" and "all-weather" portfolio debates. The practical implication is that geopolitical tail risk requires instruments beyond correlation diversification: physical commodity exposure, energy equity positions, inflation-linked bonds (TIPS), or explicit options strategies (buying long-dated call options on crude futures as a tail hedge) that pay off specifically in the Hormuz closure scenario.
+
+### Update — May 29, 2026
+
+**Oil prices quantified**: The energy market impact of the deal negotiations is now measurable in specific price data. As of May 27, Brent crude fell 3.83% to $95.77/barrel and WTI dropped 4.75% to $88.57/barrel on cumulative deal optimism — representing approximately an 11% decline from the Hormuz-crisis peak prices. This price action illustrates the energy market's sensitivity to diplomatic signals: each credible step toward an MOU triggers a measurable downward correction, while hawkish signals (strikes continuing, IRGC disputes about deal terms) push prices back up. The net effect is a highly volatile energy market in which deal uncertainty functions as a price premium of roughly 15–20% over where oil would trade if Hormuz were fully open.
+
+**Piper Sandler contrarian warning (May 26)**: Investment bank Piper Sandler issued a note warning that even if a deal is signed, the Strait of Hormuz could remain effectively closed for months due to the practical complexities of mine clearance (Iran must remove mines within 30 days under the proposed MOU, but commercial shippers will face weeks of risk aversion even after formal clearance), Iranian military repositioning, and insurer risk assessments. Piper Sandler predicted oil could reach new highs if deal momentum collapses or if the mine clearance process is delayed or contested. This is a critical asymmetric risk: the upside of a deal (oil drops to pre-crisis levels over weeks) is real, but so is the downside (oil resumes upward trajectory toward historical highs if talks fail).
+
+**Russia's Oreshnik strikes compound global energy instability (May 23–24, 2026)**: Russia launched its largest single attack on Kyiv of the entire full-scale war on May 23–24, deploying an Oreshnik hypersonic ballistic missile alongside 600 drones and 90 other missiles. The attack killed at least 4 people, injured approximately 100, and damaged or destroyed around 30 residential buildings in Kyiv. It was the third use of the Oreshnik in the war. European leaders condemned it as "nuclear brinkmanship." The significance for energy markets is indirect but real: simultaneous major military escalation in Ukraine and the Persian Gulf reinforces the "geopolitical risk premium" across all energy assets, reduces institutional appetite for rolling back strategic reserve releases, and creates additional upward pressure on European natural gas prices already stressed by Hormuz LNG disruption.
+
+**Trump's final determination pending (May 29)**: Trump entered the Situation Room on May 29 to make his "final determination" on the Iran MOU. The proposed deal framework includes Hormuz reopening, 30-day mine clearance, phased sanctions relief, and Iranian commitment to never build a nuclear weapon — but Iran's new Supreme Leader Mojtaba Khamenei has not yet formally confirmed acceptance. The energy market implication: a Trump "yes" today could trigger another significant downward oil price move within hours; a "no" or delay could reverse the recent decline.
 
 ## Related
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]

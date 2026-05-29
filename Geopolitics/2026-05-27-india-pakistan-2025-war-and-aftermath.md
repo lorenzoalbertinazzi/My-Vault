@@ -3,7 +3,7 @@ title: India-Pakistan 2025 War and Its Aftermath
 date: 2026-05-27
 tags: [geopolitics, India, Pakistan, Kashmir, nuclear, South-Asia, conflict]
 source: https://www.unsw.edu.au/newsroom/news/2026/05/one-year-after-their-brief-war-how-close-are-india-and-pakistan-to-another-conflict
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -109,6 +109,16 @@ For the US-China competition more broadly, the episode represents an inadvertent
 ### Negotiation Theory and the Back-Channel Dynamic
 
 The post-ceasefire diplomacy illustrates several classic negotiation dynamics. The four documented back-channel meetings involving retired generals, former intelligence officials, and parliamentarians represent what Roger Fisher and William Ury identified in "Getting to Yes" as the necessary condition for progress when formal channels are politically blocked: creating a Track II process that allows both sides to explore concessions without committing their governments. The Modi government's tacit permission for retired figures to advocate publicly for dialogue — while maintaining official silence — is a textbook application of the "good cop / good cop" dynamic in two-level games: sending a signal to Islamabad while maintaining domestic political cover. Pakistan's elevated diplomatic standing from its Iran mediation success further complicates India's calculus, reducing New Delhi's ability to treat Islamabad as a supplicant seeking dialogue from a position of weakness.
+
+### Update — May 29, 2026
+
+**"Modi's efforts to isolate Pakistan have backfired" — Al Jazeera analysis (May 29, 2026)**: A major Al Jazeera analysis published today crystallizes the emerging diplomatic verdict on India's post-conflict strategy. Modi had spent years pursuing Pakistan's international isolation — refusing SAARC summits, cutting diplomatic ties, pressuring Western capitals to ostracize Islamabad. The analysis finds that strategy has comprehensively failed: Pakistan has strengthened ties with China, rebuilt its relationship with the Trump administration, positioned itself as the essential mediator between the US and Iran, and improved relations with Bangladesh following Prime Minister Sheikh Hasina's ouster (Hasina was seen as an Indian ally). India's economic and institutional investments in SAARC have been squandered, and the regional integration architecture Modi abandoned in the name of isolating Pakistan has atrophied without benefit.
+
+**Trump has not visited India — but offered to fly to Pakistan**: The diplomatic signal is concrete and cutting: Trump has visited China (May 14 Beijing summit) and publicly offered to fly to Pakistan to personally sign the US-Iran peace agreement if terms are finalized. He has made no corresponding visit to India and no equivalent personal gesture toward the Modi government. This asymmetry — China gets a state visit, Pakistan gets an offer of a presidential visit for deal-signing, India gets neither — reflects the structural consequences of India's post-conflict posture. Pakistan's Iran mediation success has given Islamabad something India cannot currently offer Washington: an indispensable diplomatic service.
+
+**RSS calling for dialogue — and Pakistan welcoming it**: Dattatreya Hosabale, the general secretary of the Rashtriya Swayamsevak Sangh (RSS) — the ideological parent organization of Modi's BJP and India's most influential Hindu majoritarian body — publicly stated that New Delhi should explore dialogue with Pakistan. Pakistan's Foreign Office spokesperson described this as a "positive development," though declining to confirm back-channel contacts. The significance is structural: when the RSS endorses dialogue, it provides domestic political cover for the Modi government that was previously absent. Senior Kashmiri political figures including Farooq Abdullah and Mehbooba Mufti — both former chief ministers of Jammu & Kashmir — have also publicly backed peace talks. The political ecosystem for dialogue is forming.
+
+**Strategic assessment as of May 29**: India enters the one-year anniversary month of the ceasefire in a diplomatically weakened position relative to Pakistan, despite having won the military exchange decisively. India struck Pakistani Punjab, destroyed militant infrastructure, and demonstrated the willingness to use ballistic missiles. But it also depended on US mediation to end the conflict, and has watched Pakistan leverage the ceasefire outcome into a diplomatic renaissance that directly challenges India's decade-long isolation strategy. The bitter irony: India's military success created the conditions under which Pakistan rebuilt its international standing.
 
 ## Related
 - [[2026-05-27-us-china-great-power-competition]]

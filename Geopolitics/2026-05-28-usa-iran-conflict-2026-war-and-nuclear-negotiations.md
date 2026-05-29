@@ -3,7 +3,7 @@ title: USA–Iran Conflict 2026 — War, Nuclear Program, and Ceasefire Negotiat
 date: 2026-05-28
 tags: [geopolitics, iran, usa, nuclear, middle-east, war, ceasefire, strait-of-hormuz]
 source: https://en.wikipedia.org/wiki/2026_Iran_war
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -101,6 +101,25 @@ The Iran negotiations illustrate a classic problem in negotiation theory: the se
 ### The Currency of Geopolitical Standing: Pakistan's Mediation Premium
 
 Pakistan's emergence as the successful mediator between the US and Iran carries direct implications for the India-Pakistan conflict's aftermath and for currency market dynamics. A state that successfully brokers a major power ceasefire acquires what international relations scholars call "reputation capital" — a track record that makes future mediation offers credible. This reputation capital is, in a formal sense, a geopolitical asset that translates into economic benefits: enhanced access to Gulf capital markets, IMF credibility, and the informal leverage that comes from being a trusted interlocutor. For a country whose PKR had lost 8–12% against the dollar in the immediate aftermath of its 2025 conflict with India, Pakistan's Iran mediation success represents a partial restoration of international standing that has measurable currency market implications — reducing the geopolitical risk premium that had been priced into Pakistani sovereign debt yields.
+
+### Update — May 29, 2026
+
+**Trump enters Situation Room for "final determination" (May 29, 2026)**: In the most significant development of the negotiation process to date, President Trump publicly announced on May 29 that he was entering the White House Situation Room to convene his national security team and make a "final determination" on the Iran deal. The MOU text had been agreed between US and Iranian negotiators by approximately May 27, but Trump told mediators he needed additional time to make his decision. The same day, Iran's IRGC-affiliated Fars News agency described Trump's characterization of the deal as "a mix of truth and lies," signaling that Iranian domestic communication on the deal remained contested and that Supreme Leader Mojtaba Khamenei — who assumed the position after his father Ali Khamenei was killed in the February 2026 strikes — had not yet formally confirmed acceptance of the MOU terms.
+
+**Deal terms now largely disclosed**: Axios, CNBC, and CNN reporting from May 24–29 has made the proposed MOU terms substantially clear:
+- **60-day ceasefire extension**, renewable by mutual consent
+- **Strait of Hormuz reopens immediately** with "no tolls, no harassment" of commercial shipping
+- **Iran must remove all mines from the Strait within 30 days** of the MOU's signing — a concrete, verifiable military obligation
+- **Iran's highly enriched uranium (HEU) stockpile** (~440 kg) to be "unearthed by the United States" and destroyed in coordination with Iran — a remarkable formulation suggesting US physical custody of the material
+- **Phased sanctions relief**: Iran receives financial relief as it complies with each obligation, rather than upfront sanctions removal (addressing the sequencing dispute that had blocked earlier frameworks)
+- "No money will be exchanged until further notice" — Trump's formulation suggesting frozen assets remain frozen pending compliance verification
+- Iran to commit that it "will never have a Nuclear Weapon or Bomb"
+
+**Abraham Accords complication**: An opinion piece in *The Washington Post* (May 2026) argued that Trump's simultaneous push for Iran to join the Abraham Accords normalization framework — which would require Iran to recognize Israel — is making the already-complicated nuclear deal significantly harder to reach. Adding a normalization-with-Israel demand to nuclear and ceasefire talks may be a bridge too far for any Iranian government willing to accept the nuclear terms, even under military duress.
+
+**Oil markets pricing deal hope but divided**: Brent crude dropped 3.83% to $95.77/barrel and WTI fell 4.75% to $88.57/barrel on deal hopes in the days before May 29, with oil prices having fallen approximately 11% from their Hormuz-crisis peak on cumulative deal optimism. However, Piper Sandler issued a contrarian warning (CNBC, May 26) that the Strait of Hormuz could remain effectively closed for months even after a deal is signed — citing the practical complexity of mine clearance, Iranian military repositioning, and commercial shipper risk aversion — and predicted oil could reach new highs if deal momentum collapses.
+
+**Two skirmishes in Hormuz in 48 hours**: Even as final MOU negotiations were underway, CBS News reported that US and Iranian forces had two skirmishes in the Strait in the 48 hours preceding May 29 — confirming that the "maximum pressure alongside talks" approach carries real collision risk, and that the ceasefire remains extremely fragile at the tactical military level.
 
 ## Related
 - [[2026-05-27-us-china-strategic-competition]]
