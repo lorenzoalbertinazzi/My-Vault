@@ -3,7 +3,7 @@ title: Cialdini — The 6 Principles of Influence
 date: 2026-05-26
 tags: [psychology, influence, persuasion, Cialdini, social-proof]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 enriched: 2026-05-28
 ---
 
@@ -203,6 +203,75 @@ Just as biological vaccines expose the immune system to weakened pathogens to bu
 - Prebunking creates cognitive frameworks that make the manipulation visible when encountered
 
 **Applications**: Cambridge University's "Bad News" game and similar inoculation games have shown measurable improvements in manipulation resistance, particularly for misinformation. Commercially, teaching sales teams about influence principles is itself a form of inoculation — making them more ethical practitioners and better detectors of manipulation used against them.
+
+### Experimental Evidence: Key Studies with Quantitative Data
+
+The principles of influence are not merely theoretical — they rest on experimental findings with documented effect sizes. The following are the most important original studies with sample sizes and results.
+
+**Reciprocity**:
+- Regan (1971): Subjects were more likely to buy raffle tickets from an experimenter who had previously given them a soft drink (without asking). Effect: **2× purchase rate** vs. control. N = 78. The gift was unsolicited and the requester was someone they had just met — demonstrating that even small, unrequested gifts create powerful obligation.
+- Cialdini (1984) charitable giving: Charities including a small gift (pre-printed address labels, pens) with donation requests increased response rates by **18–28%** vs. identical requests without the gift, despite the gift costing the charity far less than the incremental donations generated.
+
+**Commitment and Consistency (Foot-in-the-Door)**:
+- Freedman and Fraser (1966) — the original FITD study: Householders asked to put a 3-inch "Be a safe driver" sign in their window almost all agreed (small request). Two weeks later, 76% of those who had agreed to the small sign also agreed to a much larger, intrusive "Drive Carefully" billboard in their yard, vs. **17% of control subjects** who received only the large request. Effect size: 4.5× increase.
+- Written vs. verbal commitments: Cialdini's field research at car dealerships documented the "lowballing" technique — dealers get written commitment on a favorable price, then raise it with justification. Written commitments create ~40% lower backing-out rates than oral commitments for equivalent deals.
+
+**Social Proof**:
+- Milgram, Bickman, Berkowitz (1969): One person looking up at a building stopped 4% of passersby; five people looking stopped 18%; 15 people stopped 40%. Effect: the social proof trigger was roughly linear with crowd size up to ~15 people.
+- Pluralistic ignorance — Latané and Darley (1968) bystander effect: Only 31% of subjects in a room with two passive confederates reported an emergency vs. 75% in solo condition — social proof of "no emergency" from passive bystanders dominated the urgency signal from actual emergency evidence.
+
+**Authority**:
+- Milgram (1963) obedience to authority: 65% of subjects administered what they believed to be dangerous electric shocks when instructed by a scientist in a white coat (N = 40). When the experimenter wore casual clothes, obedience rate fell to ~20%. The authority signal (white coat, scientific title) nearly tripled compliance with a harmful request.
+- Bickman (1974) uniform experiment: 92% of passersby complied with a man in a security guard uniform telling them to pick up litter vs. 49% for the same man in casual clothes. Compliance occurred even after the uniformed person walked away.
+
+**Scarcity**:
+- Worchel, Lee, Adewole (1975) cookie jar study: Cookies rated as more desirable when taken from a jar with 2 cookies vs. 10 cookies. Same cookies, same taste — the scarcity signal changed the evaluation by 17–25% in desirability ratings. Effect was stronger when the scarcity was caused by social demand ("others wanted them") vs. an accident.
+- Lynn (1989) meta-analysis of scarcity in consumer contexts: 14 studies showed a mean effect size (Cohen's d) of **0.53** — a moderate-to-large effect, indicating scarcity reliably increases perceived value across a wide range of contexts.
+
+**Liking**:
+- Shallow (1971): Attractive confederates were given lighter sentences in mock jury studies; unattractive defendants received sentences 33% longer for equivalent crimes. The halo effect from physical attractiveness is one of the most robust findings in social psychology (Langlois et al., 2000 meta-analysis: d = 0.80 for attractiveness-competence attribution).
+- Similarity: Cialdini and colleagues documented that simply sharing a birthday or a first name with a charity requester increased donation rates by **17–20%** — demonstrating the extraordinary ease with which similarity triggers liking.
+
+---
+
+### Evolutionary and Neurobiological Basis for Each Principle
+
+The influence principles are not arbitrary — each reflects an adaptive heuristic shaped by evolutionary pressure.
+
+**Reciprocity (Trivers, 1971)**:
+The biological mechanism is **reciprocal altruism** — cooperation with unrelated individuals becomes evolutionarily stable if both parties benefit over time and cheaters are detected and punished. Reciprocity is found in all human cultures (Henrich et al., 2005 across 15 small-scale societies) and in non-human primates (chimpanzees, capuchin monkeys show clear food-sharing reciprocity). The neural substrate involves the dorsomedial prefrontal cortex (tracking social debts) and the ventral striatum (reward from receiving/giving).
+
+**Social Proof (Cascade)**:
+In environments of genuine uncertainty — where information is sparse and individual knowledge limited — copying the behavior of others is a statistically optimal learning strategy. The failure mode (mass herding on incorrect information) is the price of a generally adaptive strategy. The neural basis: mirror neuron systems and the default mode network both contribute to imitative behavior; mentalizing circuits (temporo-parietal junction) process others' actions as informative.
+
+**Authority (Respect for Competence)**:
+In environments with genuine expertise differentials, deference to those with more knowledge is efficient. The costs of independent investigation often exceed the benefits. The failure mode is over-generalization from genuine expertise in one domain to unverified expertise in another. The neural basis: authority priming activates ventromedial PFC (associated with trust and compliance), with reduced conflict-monitoring signal — explaining why authority signals reduce the deliberation that might catch errors.
+
+**Scarcity (Loss Aversion + Opportunity Costs)**:
+Resources that are scarce are genuinely more valuable — this is basic economics. The heuristic "rare = valuable" is accurate on average. The failure mode is when artificial scarcity is manufactured. The neural basis: the amygdala's threat response activates when scarcity is perceived, triggering urgency — the same mechanism behind loss aversion (Tversky, Kahneman), confirming the deep connection between scarcity bias and loss aversion at the neural level.
+
+**Liking (Kin Recognition + Coalitional Psychology)**:
+The evolutionary basis for liking similar others: in ancestral environments, similarity (shared appearance, dialect, kinship markers) was a reliable cue to genetic relatedness — making cooperation more likely to benefit copies of one's own genes. The failure mode is over-generalization to superficial similarities exploited by salespeople. The neural circuit: the medial prefrontal cortex (mPFC) activates more strongly to in-group faces, and the anterior insula shows stronger empathic response to similar vs. dissimilar others.
+
+---
+
+### Pre-Suasion in Practice — Attention Architecture and Priming
+
+Cialdini's *Pre-Suasion* (2016) introduced a framework for what is now called **attention architecture** — the systematic pre-arrangement of what people attend to just before a message to prime the interpretive frame.
+
+**The "Privileged Moments" concept**: Immediately after someone's attention is captured by a stimulus, they are in a heightened state of receptivity to messages consistent with the primed concept. The primed concept becomes temporarily more accessible, fluent, and associated with truth.
+
+**Documented priming effects**:
+- **French vs. German music in a wine store** (North, Hargreaves, McKendrick 1999): When French accordion music played, 77% of wine sold was French; when German Bierkeller music played, 73% was German. Customers surveyed denied the music influenced them. Effect size in French wine sales: approximately **4× higher** in French music condition. Pre-suasion through ambient audio.
+- **Clouds vs. coins website backgrounds**: Website visitors who saw fluffy cloud backgrounds rated comfort (a cloud-consistent concept) as more important in their purchase decision; those who saw penny backgrounds rated cost more important. Neither group was aware of the influence.
+- **Hard vs. soft chairs in negotiation**: People seated in hard chairs during salary negotiations maintained their initial positions more firmly and made fewer concessions vs. those in soft chairs — physical hardness primed conceptual hardness.
+
+**The Attention-Importance Equivalence**: Cialdini's core pre-suasion principle: *what people are attending to is automatically evaluated as important*. This is why news coverage shapes not just what people think about an issue but how important they think it is (agenda-setting, McCombs and Shaw, 1972). Pre-suaders use this to make focal concepts seem important before making requests connected to those concepts.
+
+**Practical applications**:
+- Asking "Are you adventurous?" before presenting a new product → activates self-concept of adventurousness → increases purchase intention for novel products by ~30%
+- Showing customers reviews of "satisfied customers" before a product presentation → social proof pre-suasion → increases sales conversion
+- Beginning a difficult conversation with "I'd like your honest feedback" → activates the identity of "honest person" → increases the recipient's willingness to give and receive critical information
 
 ## Cross-Disciplinary Connections
 

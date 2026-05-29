@@ -3,7 +3,7 @@ title: Technical Analysis and Chart Patterns
 date: 2026-05-27
 tags: [finance, technical-analysis, trading, chart-patterns, markets]
 source: research / technical analysis literature
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -216,6 +216,80 @@ Richard Wyckoff (1873–1934) developed a comprehensive framework for understand
 - **Automatic Rally (AR)**: Bounce from the SC; sets the top of the accumulation range.
 - **Last Point of Support (LPS)**: Final test of support before markup — higher low on declining volume (supply exhausted).
 - **Sign of Weakness (SOW)**: First break below support in distribution — confirms the uptrend is ending.
+
+### Quantitative Backtesting of Technical Patterns: What the Evidence Shows
+
+Academic and practitioner backtesting has produced a clearer picture of which technical methods have genuine edge and which are primarily psychological constructs.
+
+**Moving Average Crossover Systems**:
+The Golden Cross (50-day MA crosses above 200-day MA) has been extensively tested.
+
+- US S&P 500 (1950–2020): A simple Golden Cross/Death Cross strategy returned approximately 9.2% annually vs. buy-and-hold 11.5% — suggesting the strategy **underperforms** buy-and-hold on a raw return basis, though it does reduce maximum drawdown (from 57% in 2008–2009 to ~25%)
+- The key trade-off: lower downside capture, but also lower upside capture, and significant transaction costs from whipsawing in sideways markets
+- In trend-following applications (using longer-term 12-month MA), the results are more favorable: trend-following across multiple asset classes (not just equities) generates positive returns with low correlation to traditional assets (Moskowitz, Ooi, Pedersen 2012)
+
+**Momentum (12-1 Month)**:
+- Jegadeesh and Titman (1993): Going long past 12-month winners and short past 12-month losers generates approximately 1% per month (12%/year) in US stocks from 1965–1989
+- This is the most replicated result in quantitative finance — Fama himself acknowledged it as a genuine anomaly
+- Momentum crashes: The strategy lost ~83% from March 2009 to May 2009 as the market crashed then violently reversed — the worst 3-month drawdown of any documented investment strategy. In practice, momentum requires strict drawdown controls
+
+**RSI Oscillator Backtesting**:
+- Standard tests of buying when RSI < 30 and selling when RSI > 70 show mixed results, with small positive returns only in certain regimes
+- More reliable: extreme RSI divergences (price makes new high, RSI does not) have better predictive power, but require subjective identification
+- The RSI strategy works better in mean-reverting (range-bound) markets and fails in strongly trending markets — precisely the regime challenge that makes systematic implementation difficult
+
+**Head and Shoulders Pattern**:
+- Bulkowski (Encyclopedia of Chart Patterns, 2005): Studied 831 Head and Shoulders patterns in US stocks. Success rate (price moved in predicted direction): 59% — better than chance, but not dramatically so
+- After the neckline break, the price target (neckline distance projected downward) was reached only 45% of the time
+- The pattern had a mean decline of −22% when the target was reached, vs. a mean failure gain of +6% — so the pattern has positive expected value despite low hit rate, because wins are larger than losses
+
+**Cup and Handle (O'Neil's CANSLIM)**:
+- O'Neil (How to Make Money in Stocks): Cup-and-handle breakouts from proper bases in stocks with strong earnings growth achieved average gains of +20-25% over 8-week periods in bull markets
+- The pattern's edge may derive as much from the earnings and relative-strength criteria of CANSLIM as from the pattern itself — separating chart pattern from fundamental filter is difficult
+
+**Key Academic Findings Summary**:
+- Simple patterns (crossovers, oscillators): marginal or no edge after transaction costs in developed markets post-2000
+- Momentum: genuine edge, but with crash risk requiring active management
+- The academic consensus (e.g., Lo, Mamaysky, Wang 2000): "Technical analysis has predictive power for 10 of the 10 tested patterns" — but effect sizes are modest (1–3% monthly) and have likely shrunk since publication
+- The practitioner consensus: technical analysis is most valuable for timing (entry/exit on positions justified by fundamental or macro thesis) rather than as a standalone alpha source
+
+---
+
+### Order Flow and Market Microstructure — How Prices Are Actually Made
+
+Understanding how prices are mechanically formed at the microscopic level reveals dynamics invisible to candlestick charts.
+
+**The Bid-Ask Spread Decomposition**:
+A market maker's spread compensates for three components:
+1. **Inventory risk**: The dealer holds risky inventory while waiting for the offsetting trade
+2. **Adverse selection**: Some traders (informed traders with private information) systematically trade against the market maker; the spread must cover expected losses to informed traders
+3. **Order processing costs**: Operational costs of running the trading desk
+
+The **Glosten-Milgrom model (1985)** formalizes this: when informed traders arrive, they always trade in the direction that is unfavorable to the market maker. If 20% of traders are informed and informed traders are right 70% of the time about the stock's direction, the market maker must widen the spread to compensate for expected losses to informed flow.
+
+**Price Impact and the Kyle Lambda**:
+Albert Kyle's (1985) market microstructure model introduces the **lambda (λ)** parameter — the price impact of order flow:
+
+> ΔP = λ × Q
+
+Where Q is the signed order quantity (positive = buy, negative = sell). A larger λ means a less liquid market where orders have greater price impact.
+
+For highly liquid markets (S&P 500 futures at peak hours): λ might be 0.001 bps per contract — virtually no impact for institutional trades  
+For illiquid small-caps: λ might be 10–50 bps per $1M traded — executing even a modest position moves the price significantly
+
+**Dealer Gamma Positioning and Pinning**:
+When dealers are net short options (they have sold calls and puts to clients), they hedge by delta-hedging in the underlying:
+- **Short gamma dealers**: Must sell when stock falls (to reduce delta exposure), buy when stock rises → amplifies moves, creates momentum
+- **Long gamma dealers**: Must buy when stock falls, sell when stock rises → dampens moves, creates mean-reversion
+
+The **gamma imbalance** around major options expiration (monthly/quarterly) creates observable price behavior:
+- Options open interest concentrated at round-number strikes (AAPL at $200, SPY at $500) creates "pinning" — the stock is attracted to that strike as expiration approaches, because delta-hedging flows converge
+- JPMorgan estimates that dealer gamma exposure regularly explains 5–15% of daily S&P 500 price variance — a non-fundamental driver invisible to fundamental analysis but visible in options market data (provided by services like SpotGamma)
+
+**The VPIN Indicator (Volume-Synchronized Probability of Informed Trading)**:
+Easley, López de Prado, and O'Hara (2012) developed VPIN as a real-time measure of order flow toxicity (the proportion of informed trading). High VPIN → market makers are losing to informed traders → they widen spreads or withdraw → liquidity dries up → price discovery becomes inefficient.
+
+The 2010 Flash Crash: VPIN reached extreme levels (>0.90) approximately 65 minutes before the crash, and remained elevated throughout — providing a potentially actionable warning signal of impending liquidity crisis that traditional technical indicators did not generate.
 
 ## Cross-Disciplinary Connections
 

@@ -3,7 +3,7 @@ title: Mental Models — Thinking Frameworks
 date: 2026-05-26
 tags: [psychology, mental-models, decision-making, thinking, Munger]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 enriched: 2026-05-28
 ---
 
@@ -255,6 +255,93 @@ President Dwight D. Eisenhower is credited with the observation: "What is import
 **The key insight**: Most people spend disproportionate time in Quadrant 3 (urgent but not important) — responding to others' priorities — at the expense of Quadrant 2 (not urgent but important). Quadrant 2 is where the highest-leverage activities live: strategic planning, relationship building, health maintenance, skill development. These activities prevent Quadrant 1 crises from occurring in the first place.
 
 **Operationalizing it**: Block protected time for Quadrant 2 activities *before* the week fills with Quadrant 3. Calendar blocking of strategic/learning time is necessary, not optional — the urgent will always crowd out the important unless the important is explicitly protected.
+
+### Game Theory as a Mental Model
+
+Game theory, formalized by John von Neumann and Oskar Morgenstern in *Theory of Games and Economic Behavior* (1944) and extended by John Nash (1950), provides a rigorous framework for analyzing strategic interactions where outcomes depend on multiple actors' choices simultaneously.
+
+**The Nash Equilibrium**: A strategy profile where no player can improve their outcome by unilaterally changing their own strategy. Nash proved (1950) that every finite game has at least one equilibrium (possibly in mixed strategies). The equilibrium is not necessarily the best collective outcome — it is merely the stable one.
+
+**The Prisoner's Dilemma** — the foundational game:
+
+Two suspects are interrogated separately. Each can Cooperate (stay silent) or Defect (betray):
+
+| | **B Cooperates** | **B Defects** |
+|--|--|--|
+| **A Cooperates** | A: −1yr, B: −1yr | A: −10yr, B: 0 |
+| **A Defects** | A: 0, B: −10yr | A: −5yr, B: −5yr |
+
+Nash equilibrium: both Defect (−5, −5). The Pareto-optimal outcome (−1, −1) requires mutual cooperation that neither party can trust the other to sustain. This tension appears in: price wars, arms races, environmental agreements, and corporate over-hiring in boom cycles.
+
+**Iterated Games and Cooperation — Axelrod (1984)**: Robert Axelrod ran a computer tournament where 200 submitted strategies competed in repeated Prisoner's Dilemmas (many rounds, same partners). The winner, across all formats, was **Tit for Tat** (TFT): cooperate on round 1; thereafter, copy what your opponent did last round. TFT won because it is *nice* (never defects first), *retaliatory* (punishes defection immediately), *forgiving* (returns to cooperation once the opponent does), and *transparent* (opponents quickly understand the strategy and can coordinate). The lesson: cooperation emerges in iterated games when the shadow of future interaction is large enough and punishment of defection is swift and proportionate.
+
+**Applications**:
+- *Oligopoly pricing*: Airlines, oil companies, and semiconductor firms cycle between destructive price wars (mutual defection) and implicit coordination (sustained cooperation) — the iterated game structure means cooperation is strategically rational, not altruistic
+- *Negotiation*: In repeated vendor or employer relationships, TFT-style reciprocity produces better joint outcomes than fixed-position bargaining
+- *Platform ecosystems*: Network-effects platforms create a coordination game where migrating to the largest platform is rational regardless of product quality — the Nash equilibrium in winner-take-most markets is not determined by merit
+
+---
+
+### Bayesian Thinking: The Quantitative Framework for Updating Beliefs
+
+Bayesian reasoning formalizes how to update probability estimates when new evidence arrives. It is perhaps the single most powerful quantitative mental model for navigating uncertainty correctly.
+
+**Bayes' Theorem**:
+
+$$P(H \mid E) = \frac{P(E \mid H) \times P(H)}{P(E)}$$
+
+- **P(H)** = prior (what you believed before the evidence)
+- **P(E|H)** = likelihood (probability of the evidence if the hypothesis is true)
+- **P(E)** = total probability of the evidence across all hypotheses
+- **P(H|E)** = posterior (what you should believe after the evidence)
+
+**Worked Numerical Example — Medical Testing**:
+
+A disease affects **1% of the population**. A test has:
+- **99% sensitivity** (true positive rate when disease is present)
+- **99% specificity** (true negative rate when disease is absent)
+
+You test positive. What is the probability you actually have the disease?
+
+Most people (including physicians) intuit ≈ 99%. The Bayesian calculation:
+
+- P(Disease) = 0.01; P(No Disease) = 0.99
+- P(Positive | Disease) = 0.99
+- P(Positive | No Disease) = 0.01 (false positive rate = 1 − specificity)
+- P(Positive) = (0.99 × 0.01) + (0.01 × 0.99) = 0.0099 + 0.0099 = **0.0198**
+
+$$P(\text{Disease} \mid \text{Positive}) = \frac{0.99 \times 0.01}{0.0198} = \frac{0.0099}{0.0198} \approx \mathbf{50\%}$$
+
+A positive result from a near-perfect test only gives 50% probability of disease when prevalence is 1%. Casscells et al. (1978) tested this exact problem on Harvard Medical School faculty and students — only **18%** gave the correct answer. This is base rate neglect: without weighting by the prior probability, test accuracy is meaningless.
+
+**Investment applications**:
+- Before accepting an expert's "high-conviction" call, ask: "What fraction of similarly confident expert predictions in this domain proved correct?" (base rate for analyst buy recommendations: roughly 50% underperform over 12 months)
+- A CEO announces transformative technology: prior on tech transformations delivering ≈ 10–20%; update only as far as evidence warrants
+- Intelligence analysis: the Iraq WMD failure was in part a failure to weight the low prior probability that any country would maintain WMD under intensive UN inspection
+
+---
+
+### Reference Class Forecasting and the Planning Fallacy
+
+Kahneman and Tversky (1979) identified the **planning fallacy**: the systematic tendency to estimate project costs, durations, and risks optimistically by taking the "inside view" (focusing on the specific project's details) rather than the "outside view" (the empirical distribution of outcomes for similar projects).
+
+**Flyvbjerg's Megaproject Audit (2003–2020)**: Bent Flyvbjerg audited **2,062 megaprojects** across 104 countries and found:
+- Average cost overrun: **+39.2%** (road projects +20%, rail +44%, IT projects +73%)
+- **80%** of projects delivered late; average schedule overrun +27%
+- Demand shortfalls: actual ridership averaged **20.4% below** forecasts for rail projects
+
+Crucially, overruns showed **no improvement over 70 years** (1927–2020) — this is not a knowledge problem solvable with better models, but a systematic optimism bias baked in because the people who commission forecasts are the same people who need optimistic numbers to get projects approved.
+
+**Reference class forecasting procedure** (Kahneman/Flyvbjerg):
+1. Identify the reference class of genuinely similar past projects
+2. Get the empirical distribution of outcomes for that class (cost, time, benefit)
+3. Use that distribution as your base forecast — your project is a draw from this distribution
+4. Adjust *only* for specific features that genuinely distinguish your project, with evidence
+5. Expect your intuitive adjustment to be insufficient — stay closer to the base rate than feels comfortable
+
+This is the outside view operationalized: the compelling narrative about why your project is different is almost always less informative than the historical distribution of similar projects.
+
+---
 
 ## Cross-Disciplinary Connections
 

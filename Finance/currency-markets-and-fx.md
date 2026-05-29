@@ -3,7 +3,7 @@ title: Currency Markets and Foreign Exchange (FX)
 date: 2026-05-28
 tags: [finance, forex, currency, macroeconomics, trading]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -131,6 +131,97 @@ Post-2022 sanctions on Russia — particularly freezing ~$300B in Russian centra
 - **Bilateral currency swap lines**: China has expanded swap lines with over 40 countries, providing yuan liquidity outside the dollar system
 
 **Assessment**: Dollar reserve currency status remains durable in the medium term because no alternative has the market depth, legal infrastructure, or global network effects of USD assets. However, the direction of travel — gradual, slow erosion of dollar dominance — is increasingly plausible over decades. For investors, this implies modest structural dollar headwind as a long-run factor and continued demand for real assets and non-dollar diversification in institutional portfolios.
+
+### Worked Numerical Example: Carry Trade Mechanics
+
+The carry trade is one of the most important strategies in FX markets. Here is a complete worked example of the mechanics, profitability, and risks.
+
+**Setup (2024 conditions)**:
+- Fund rate (Japan): 0.10% (BoJ ultra-easy policy)
+- 90-day deposit rate (AUD): 4.35% (RBA holding rates elevated)
+- Current spot rate: AUD/JPY = 98.50 (1 AUD buys 98.50 JPY)
+- Position size: Borrow ¥1,000,000,000 (1 billion yen)
+
+**Step 1: Borrow JPY**
+- Borrow ¥1B at 0.10% annual → quarterly cost = 0.025%
+- Quarterly interest expense = ¥1B × 0.025% = ¥250,000
+
+**Step 2: Convert to AUD**
+- ¥1,000,000,000 / 98.50 = **AUD 10,152,284**
+
+**Step 3: Invest in AUD instruments**
+- Deposit AUD 10,152,284 at 4.35% → quarterly return = 1.0875%
+- Quarterly interest income = AUD 10,152,284 × 1.0875% = **AUD 110,406**
+
+**Step 4: Unwind after 90 days (assume spot unchanged at 98.50)**
+- Sell AUD principal + interest: AUD 10,262,690 × 98.50 = ¥1,010,875,165
+- Repay JPY borrowing: ¥1,000,000,000 + ¥250,000 = ¥1,000,250,000
+- **Net profit: ¥10,625,165 ≈ USD 70,000** (at 150 ¥/$ rate)
+
+**Carry return** = (4.35% − 0.10%) × 0.25 = **1.06% quarterly** on the notional (before hedging costs)
+
+**The Risk: AUD/JPY Depreciation**
+
+If AUD/JPY falls from 98.50 to 94.00 (a -4.6% move — not unusual in 90 days):
+- AUD 10,262,690 converted at 94.00 = ¥964,693,000
+- Net JPY position: ¥964,693,000 − ¥1,000,250,000 = **¥−35,557,000 loss** (~USD 237,000)
+
+The carry profit (+¥10.6M) is overwhelmed by the currency loss (−¥35.6M). The carry trade is profitable in calm, trend-stable markets but has **negative skewness** — small frequent gains, large infrequent losses. The 2007 carry trade unwind, the 2015 SNB shock, and the August 2024 yen appreciation all represented tail events where years of carry profits were erased in days.
+
+**Sharpe ratio of carry**: Academic research (Lustig and Verdelhan, 2007; Burnside et al., 2011) estimates the annualized Sharpe ratio of diversified FX carry strategies at ~0.5–0.8 in normal markets, comparable to equities — but with crash risk that Sharpe ratios mask. A drawdown-adjusted metric (Sortino ratio or Calmar ratio) shows much lower risk-adjusted performance.
+
+---
+
+### Currency Crisis Anatomy: The Flood-Garber-Krugman Framework
+
+Currency crises follow a predictable three-stage pattern identified by Paul Krugman (1979) and refined by Flood and Garber (1984):
+
+**Stage 1: Fundamental Imbalance Builds**
+A country maintains a fixed exchange rate (peg) while running inconsistent macro policies — typically monetizing a fiscal deficit (printing money). This gradually depletes foreign reserves as the central bank buys its own currency to defend the peg.
+
+Formally: if money supply grows at rate μ and the peg requires no growth, reserves R fall at rate μ × (1/v) where v is velocity. The peg is sustainable only until R → 0.
+
+**Stage 2: Speculative Attack**
+
+Rational speculators do not wait for reserves to hit zero — they attack when the "shadow floating rate" (what the exchange rate would be absent intervention) equals the pegged rate. At that point, selling domestic currency and buying hard currency yields a certain profit.
+
+The **speculative attack timing**: Attack occurs at time T* when:  
+> R(T*) = R₀ − μ × (1/v) × T* is about to be exhausted
+
+Even if the attack forces early reserve depletion, the speculator profits because:
+1. Buy hard currency at the pegged rate just before the peg breaks
+2. Rate immediately depreciates to shadow rate
+3. Sell back hard currency at the new higher rate → guaranteed profit
+
+**Stage 3: Devaluation and Financial Crisis**
+
+After reserves are exhausted, the currency is freed (or devalued). If domestic banks hold large dollar-denominated liabilities (original sin), the devaluation immediately makes their balance sheets insolvent. The currency crisis cascades into a banking crisis and sovereign debt crisis.
+
+**Historical calibrations**:
+- Mexico, 1994–1995: Peso devalued 50% in days; GDP fell 6% in 1995; $50B international bailout required
+- Asia 1997: Thai baht, Indonesian rupiah, Korean won each fell 30–60%; total output loss across the region $200B+
+- Argentina 2001: Peso-dollar convertibility collapsed; GDP fell 10.9% in 2002; $100B debt default
+- Turkey 2018: Lira fell 28% in 6 months; CPI peaked at 25%; required IMF-style policy adjustment
+
+**The Speculative Attack Identification**: Forex reserve data published by central banks is the leading indicator — a central bank whose reserves are falling despite a stable exchange rate is defending a peg under attack. When reserves fall to 3 months of import coverage (IMF minimum safety threshold), the peg is typically in imminent danger.
+
+---
+
+### Purchasing Power Parity: Empirical Evidence and Limitations
+
+**Absolute PPP** claims exchange rates should equalize price levels: if a basket of goods costs $100 in the US and €90 in Germany, PPP implies EUR/USD = 100/90 = 1.11.
+
+**The Big Mac Index** (The Economist, launched 1986): A humorous but informative application. A Big Mac cost $5.58 in the US and 30.90 yuan in China as of January 2024. Implied PPP rate: 30.90/5.58 = 5.54 yuan per dollar vs. actual market rate of ~7.10. The yuan appears **22% undervalued** by this measure — consistent with China's managed currency and export-competitive strategy.
+
+**Limitations of Big Mac PPP**: Big Mac prices reflect local non-tradable inputs (labor, real estate) as well as tradable ingredients. Countries with lower labor costs will always show "undervalued" currencies by this measure, which reflects structural cost differences rather than currency misalignment.
+
+**Relative PPP** (more empirically useful): Exchange rate changes should equal inflation differentials over time.
+
+> %ΔS(t) = π_domestic − π_foreign
+
+If Turkey runs 20% inflation and the US runs 3%, the lira should depreciate ~17% per year. Over the 2018–2026 period, Turkey's cumulative inflation advantage (actual inflation minus US inflation) was approximately 350%+; the lira depreciated approximately 80% over this period — broadly consistent with relative PPP over the long run, though the adjustment came in dramatic discrete steps rather than smoothly.
+
+**Empirical evidence on PPP holding**: Studies consistently show that PPP holds in the very long run (5–15 year horizons) but fails systematically in the short run. The half-life of PPP deviations is approximately 3–5 years — meaning it takes 3–5 years for half the overvaluation/undervaluation to correct. This is far too slow to be useful for trading or even short-term investment decisions, but useful for long-horizon currency exposure management.
 
 ## Cross-Disciplinary Connections
 

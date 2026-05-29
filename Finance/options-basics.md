@@ -3,7 +3,7 @@ title: Options — Fundamentals and Strategies
 date: 2026-05-26
 tags: [finance, options, derivatives, trading]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -161,6 +161,149 @@ Employee stock options differ structurally from exchange-traded options in impor
 **Valuation nuances**: ESOs are worth *less* than equivalent exchange-traded options because (a) they cannot be sold or hedged; (b) employees are undiversified and bear concentrated company risk; (c) early exercise is common due to liquidity needs, destroying time value. Companies use Black-Scholes or binomial models for financial statement reporting (ASC 718), typically discounting for expected early exercise.
 
 **Behavioral note**: ESOs create strong anchoring to the grant-date strike price. Employees irrationally attach to options near their strike and are reluctant to sell shares acquired through exercise even when diversification would be optimal — a classic endowment effect plus anchoring combination.
+
+### The Black-Scholes Model — Derivation, Assumptions, and Worked Example
+
+Fischer Black, Myron Scholes, and Robert Merton derived the landmark options pricing formula in 1973. Scholes and Merton received the Nobel Prize in 1997 (Black had died in 1995). It remains the foundation of modern derivatives pricing.
+
+**Key assumptions**:
+1. The underlying asset follows geometric Brownian motion: dS = μS dt + σS dW
+2. No dividends, frictionless trading, continuous hedging, no arbitrage
+3. Risk-free rate (r) and volatility (σ) are constant over the option's life
+4. European options only (no early exercise)
+
+**The Black-Scholes Formula** for a European call:
+
+> **C = S·N(d₁) − K·e^(−rT)·N(d₂)**
+
+Where:  
+> d₁ = [ln(S/K) + (r + σ²/2)·T] / (σ·√T)  
+> d₂ = d₁ − σ·√T
+
+And N(·) is the cumulative standard normal distribution function.
+
+**Variables**:
+- S = current stock price
+- K = strike price
+- r = risk-free rate (continuously compounded)
+- T = time to expiration (in years)
+- σ = annualized implied volatility
+
+**Put price** (via put-call parity):  
+> P = K·e^(−rT)·N(−d₂) − S·N(−d₁)
+
+---
+
+**Fully Worked Numerical Example**:
+
+Assume:
+- S = $100 (stock at par)
+- K = $100 (at-the-money)
+- r = 5% (risk-free rate)
+- T = 0.25 years (3-month option)
+- σ = 20% annual volatility
+
+Step 1: Compute d₁  
+d₁ = [ln(100/100) + (0.05 + 0.04/2) × 0.25] / (0.20 × √0.25)  
+d₁ = [0 + 0.0175] / (0.20 × 0.5)  
+d₁ = 0.0175 / 0.10 = **0.175**
+
+Step 2: Compute d₂  
+d₂ = 0.175 − 0.10 = **0.075**
+
+Step 3: Look up N(d₁) and N(d₂) from standard normal table  
+N(0.175) ≈ 0.5694  
+N(0.075) ≈ 0.5299
+
+Step 4: Compute present value of strike  
+K·e^(−rT) = 100 × e^(−0.05×0.25) = 100 × e^(−0.0125) ≈ 100 × 0.9876 = $98.76
+
+Step 5: Compute call price  
+C = 100 × 0.5694 − 98.76 × 0.5299  
+C = 56.94 − 52.34 = **$4.60**
+
+So a 3-month ATM call on a $100 stock with 20% volatility and 5% rates is worth approximately **$4.60**, or 4.6% of spot.
+
+**Put price** (put-call parity): P = C − S + K·e^(−rT) = 4.60 − 100 + 98.76 = **$3.36**
+
+**Sanity check**: Call > put because the 5% risk-free rate makes the forward price F = 100 × e^(0.05×0.25) ≈ $101.26 > $100 strike, meaning the ATM call has a slight edge.
+
+---
+
+**The Greeks Derived from Black-Scholes**:
+
+| Greek | Formula (call) | Example Value |
+|-------|---------------|---------------|
+| **Delta** | N(d₁) | 0.5694 (above) |
+| **Gamma** | N'(d₁) / (S·σ·√T) | 0.0793 |
+| **Theta** | −[S·N'(d₁)·σ/(2√T)] − r·K·e^(−rT)·N(d₂) | −$0.044/day (approximate) |
+| **Vega** | S·N'(d₁)·√T | $19.88 per 100% vol move; $0.199 per 1% vol move |
+| **Rho** | K·T·e^(−rT)·N(d₂) | $12.97 per 100% rate move |
+
+Where N'(d) = e^(−d²/2) / √(2π) (the standard normal PDF).
+
+**Intuition for Vega**: A 1% increase in implied volatility (from 20% to 21%) increases the call value by ~$0.199. The option is worth approximately $4.60 at 20% vol and ~$4.80 at 21% vol. This confirms why option buyers want volatility to increase after purchase and option sellers want it to decrease.
+
+**Limitations of Black-Scholes in Practice**:
+- Assumes constant volatility — violated empirically (hence the volatility smile/skew)
+- Assumes continuous hedging — impossible in practice, creating gamma/delta-hedging errors
+- Assumes lognormal returns — real returns have fat tails (crash risk is underpriced by Black-Scholes)
+- Assumes no transaction costs — puts a floor on practical delta hedging frequency
+- Ignores liquidity risk — option bid-ask spreads can be 5-20% of option value
+
+Despite these limitations, Black-Scholes remains the market standard for quoting options (via implied volatility), communicating Greeks, and constructing initial hedges — even when practitioners use more sophisticated models (stochastic volatility models like Heston, local volatility models, jump-diffusion models) for actual pricing.
+
+---
+
+### Delta Hedging: A Worked Numerical Example
+
+A **delta-neutral** portfolio has no directional exposure to the underlying. Market makers who sell options typically delta-hedge to eliminate this directional risk while retaining the volatility exposure.
+
+**Setup**: A dealer has sold 100 call contracts (10,000 shares notional) on the $100 stock from the above example, at a delta of 0.5694.
+
+**Initial delta hedge**:
+- Short 10,000 calls has a delta of: −10,000 × 0.5694 = **−5,694 delta**
+- To neutralize, **buy 5,694 shares** at $100 each (cost: $569,400)
+
+**After the stock moves to $105 (+5%)**:
+Using Black-Scholes, d₁ at S=$105 ≈ 0.436 (recalculated), giving N(d₁) ≈ 0.669
+New delta: 10,000 × 0.669 = **6,690**
+Current hedge: 5,694 shares
+**Rebalancing required**: Buy 996 additional shares at $105 (cost: $104,580)
+
+**P&L decomposition**:
+- Gain on 5,694 shares from $100 to $105 = 5,694 × $5 = +$28,470 (delta profit)
+- Mark-to-market loss on short calls (call price rose from ~$4.60 to ~$8.10) = −10,000 × ($8.10 − $4.60) = −$35,000
+- **Net P&L ≈ −$6,530** (delta hedging was imperfect because the position had positive gamma exposure that cost more than the delta gain)
+- Theta collected: +~$440 per day (offsetting the gamma losses over time)
+
+This illustrates the fundamental market-maker trade-off: short options = short gamma (exposed to big moves) + long theta (collecting time decay). The market maker profits if the realized volatility of the stock over the option's life is less than the implied volatility they sold — the **volatility risk premium (VRP)**.
+
+**Average VRP**: Empirically, the VIX (30-day implied vol) has exceeded subsequent realized S&P 500 volatility roughly 80% of the time over rolling 30-day windows since 1990. The average excess of implied over realized is approximately **3-5 volatility points** (e.g., VIX at 18%, realized vol at 14%). This persistent premium is the compensation to option sellers for providing insurance and bearing jump risk.
+
+---
+
+### The VIX — Calculation and Interpretation
+
+The **CBOE Volatility Index (VIX)** is the market's real-time gauge of expected 30-day volatility on the S&P 500, based on a replication-weighted portfolio of options.
+
+**How VIX is calculated** (post-2003 methodology):
+The VIX does not use Black-Scholes. Instead, it calculates model-free implied variance by summing contributions from a strip of OTM options across all available strikes:
+
+> σ² = (2/T) × Σ [ΔK_i / K_i²] × e^(rT) × Q(K_i) − (1/T) × [F/K₀ − 1]²
+
+where Q(K_i) is the midprice of the call (for K > F) or put (for K < F) at strike K_i, F is the forward price, K₀ is the first strike below F.
+
+VIX = 100 × √(σ²) expressed as an annualized percentage.
+
+**Interpretation levels**:
+- VIX < 15: Complacency; low fear; typically associated with bull market conditions
+- VIX 15–25: Normal market uncertainty
+- VIX 25–35: Elevated fear; market stress
+- VIX > 35: Panic territory; historically rare; often an excellent contrarian buying signal
+- VIX > 50 (recorded in Oct 2008: 80.86; March 2020: 85.47): Extreme panic
+
+**Volatility of Volatility (VVIX)**: The VIX itself has a volatility — the VVIX index. High VVIX indicates uncertainty about future uncertainty, which historically precedes major market dislocations. VVIX above 100 has been a reliable warning of coming VIX spikes.
 
 ## Cross-Disciplinary Connections
 

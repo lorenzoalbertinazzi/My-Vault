@@ -3,7 +3,7 @@ title: Stoicism and Stoic Philosophy
 date: 2026-05-27
 tags: [psychology, philosophy, stoicism, resilience, mental-models]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 enriched: 2026-05-28
 ---
 

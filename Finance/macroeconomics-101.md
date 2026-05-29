@@ -3,7 +3,7 @@ title: Macroeconomics 101
 date: 2026-05-26
 tags: [finance, macro, economics, monetary-policy, fiscal-policy]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -159,6 +159,102 @@ Dalio's framework identifies two recurring patterns that explain long-run econom
 - **"Ugly" inflationary deleveraging**: Excessive money printing → hyperinflation (Weimar Germany, Zimbabwe)
 
 By 2026, global sovereign debt levels are at peacetime highs. Dalio argues developed markets are in the late stages of a long-term debt cycle where fiscal space is constrained and monetary policy has diminishing returns — historically resolved through inflation, default, currency devaluation, or a combination of all three.
+
+### The IS-LM Model — The Short-Run Macro Framework
+
+The **IS-LM model** (John Hicks, 1937; Alvin Hansen, 1949) is the workhorse framework for understanding short-run interactions between goods markets and money markets. Despite being over 80 years old, it remains indispensable for understanding how fiscal and monetary policy interact.
+
+**IS Curve (Investment-Saving equilibrium)**:
+Represents all (output Y, interest rate r) combinations where the goods market is in equilibrium.
+
+Derived from: Y = C(Y−T) + I(r) + G + NX
+
+Where:
+- C is consumption (increasing function of disposable income Y−T)
+- I is investment (decreasing function of interest rate r)
+- G is government spending
+- NX is net exports
+
+**Slope**: Downward — lower interest rates stimulate investment, raising output.  
+**Shifters**: Increases in G, decreases in T, or improvement in NX shift IS rightward (higher output at any given rate).
+
+**LM Curve (Liquidity preference-Money supply equilibrium)**:
+Represents all (Y, r) combinations where the money market is in equilibrium.
+
+Derived from: M/P = L(r, Y)
+
+Where M/P is real money supply and L is money demand (decreasing in r, increasing in Y).
+
+**Slope**: Upward — higher output raises money demand, requiring higher interest rates to restore equilibrium.  
+**Shifters**: An increase in M (money supply) or decrease in P (price level) shifts LM rightward.
+
+**Equilibrium**: IS and LM intersect at a unique (Y*, r*) — the short-run equilibrium output and interest rate.
+
+**Fiscal policy in IS-LM**: A $500B increase in government spending shifts IS right. In the Keynesian case (horizontal LM — zero lower bound), output rises by the full multiplier effect: ΔY = ΔG / (1−MPC). If MPC = 0.75, the multiplier is 4, and output rises by $2T. In the classical case (vertical LM — full crowding out), the rise in r fully offsets stimulus; output unchanged.
+
+**Monetary policy in IS-LM**: Fed increases money supply (shifts LM right) → r falls → I rises → Y rises. The effectiveness depends on the slope of IS (investment sensitivity to rates) and LM (money demand interest sensitivity). The **liquidity trap** occurs when LM is horizontal: cutting rates produces no output boost because r cannot fall below zero and investment doesn't respond. This is the theoretical basis for fiscal stimulus at the zero lower bound — a lesson relearned in 2009 and 2020.
+
+**Worked numerical example**:  
+Suppose IS: Y = 1000 − 50r, and LM: Y = 500 + 100r.  
+Setting equal: 1000 − 50r = 500 + 100r → 500 = 150r → r* = 3.33%  
+Y* = 1000 − 50(3.33) = 1000 − 166.7 = **833.3 (output in $B)**
+
+Now fiscal stimulus: G rises by $100B, shifting IS to Y = 1100 − 50r.  
+New equilibrium: 1100 − 50r = 500 + 100r → 600 = 150r → r* = 4.0%  
+Y* = 1100 − 50(4.0) = 900 → **increase of $66.7B** (not the full $100B due to crowding out)
+
+The $100B fiscal expansion produced only $66.7B of output gain — the **fiscal multiplier was 0.67**, not 1. The remaining $33.3B was "crowded out" by higher interest rates reducing private investment.
+
+---
+
+### The Phillips Curve — Evolution and Breakdown
+
+The **Phillips Curve** describes the empirical relationship between unemployment and inflation — one of the most controversial and consequential relationships in macroeconomics.
+
+**Original formulation (A.W. Phillips, 1958)**: Studying UK data from 1861–1957, Phillips found a stable, nonlinear inverse relationship between wage growth and unemployment. Samuelson and Solow (1960) translated this to a trade-off between price inflation and unemployment — the policy implication being that policymakers could "choose" a point on the curve.
+
+**The curve equation** (simple form):  
+π = −α(U − UN) + π^e
+
+Where:
+- π = actual inflation
+- UN = natural rate of unemployment (NAIRU)
+- U = actual unemployment rate
+- π^e = expected inflation
+- α = sensitivity parameter (empirically estimated ~0.5–1.0)
+
+**The Friedman-Phelps critique (1968)**: Milton Friedman and Edmund Phelps independently argued the Phillips curve was not a long-run menu of choices. Once workers and firms form **adaptive expectations** about inflation, they build it into wage demands. The Phillips curve shifts: any attempt to maintain unemployment below the natural rate requires *accelerating* inflation. The "Expectations-Augmented Phillips Curve" includes π^e explicitly.
+
+**Empirical breakdown in the 1970s**: The US experienced both high unemployment AND high inflation simultaneously (stagflation during 1973–1975 and 1979–1981), which the original stable Phillips curve said was impossible. The curve had shifted right (higher inflation at every unemployment level) as inflationary expectations became "unanchored."
+
+**The modern NAIRU estimate**: The Fed estimates NAIRU at approximately 4.0–4.5% for the US (2026). Below this level, inflation typically accelerates; above it, inflation typically moderates. But NAIRU is not directly observable — it must be estimated from inflation dynamics, and those estimates have large uncertainty bands (±1-1.5 percentage points).
+
+**The "missing disinflation" puzzle (2014–2019)**: After the 2008 recession, unemployment fell from ~10% in 2009 to ~3.5% by 2019, yet core PCE inflation barely reached 2%. The Phillips curve appeared extremely flat — leading many economists to question whether the relationship had permanently weakened due to globalization (global goods prices anchoring domestic inflation), technology (e-commerce price transparency reducing local market power), and better-anchored expectations.
+
+**The 2021–2022 revival**: Inflation surged to 9% CPI in 2022 despite unemployment at 3.7%, appearing to re-validate the Phillips curve — but critics noted the driver was supply-side shocks, not demand-driven overheating, meaning the curve was not the right analytical tool. The unresolved debate: is the Phillips curve a reliable policy instrument or a loose empirical correlation that breaks down precisely when it matters most?
+
+---
+
+### Balance of Payments — Accounting and Investment Implications
+
+The **Balance of Payments (BOP)** is the systematic record of all economic transactions between a country's residents and the rest of the world. By accounting identity, it always sums to zero:
+
+> **Current Account + Capital Account + Financial Account = 0**
+
+**Current Account (CA)**: Trade in goods and services, primary income (investment returns), and secondary income (transfers). A deficit means the country is consuming more than it produces (importing capital from abroad); a surplus means the reverse.
+
+US Current Account: Structural deficit since ~1980, deepening from −1.5% of GDP in 1980 to −5.8% at its 2006 peak, stabilizing at −3 to −4% in 2026. The deficit is mechanically financed by the financial account.
+
+**Financial Account**: Net acquisition/disposal of financial assets — foreign investment in US assets (inflows) and US investment in foreign assets (outflows). The US financial account surplus precisely offsets the current account deficit: foreigners must purchase US assets (Treasuries, equities, real estate) to "pay for" the goods they sell to the US.
+
+**The Bretton Woods identity**: Every dollar the US spends on imports returns to the US financial system. Oil-exporting nations receive dollars for oil → they must invest those dollars somewhere → historically, they've recycled them into US Treasuries ("petrodollar recycling"). This is the mechanical basis for the US's ability to run persistent deficits: the world's demand for dollar-denominated safe assets creates a structural buyer for US government debt.
+
+**Savings-Investment identity**:  
+Current Account Balance = National Saving − Domestic Investment = (Private Saving − Private Investment) + (Tax Revenue − Government Spending)
+
+This identity has a precise implication: a country with a large government budget deficit (spending > taxes) MUST either have high private saving or a current account deficit (importing foreign saving). The US budget deficits of the 2020s are arithmetically connected to the current account deficit — addressing the external imbalance requires either raising private saving or reducing the fiscal deficit.
+
+**Investment implications**: Countries with current account surpluses (Germany, Japan, South Korea, China) are net savers — they have excess domestic production that they invest abroad, building claims on the rest of the world. Countries with deficits (US, UK, Australia) are net borrowers — they live beyond domestic production, building foreign liabilities. Over long cycles, current account positions predict capital flows, currency trends, and sovereign credit dynamics in ways that simple macro indicators miss.
 
 ## Cross-Disciplinary Connections
 

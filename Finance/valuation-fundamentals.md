@@ -3,7 +3,7 @@ title: Valuation Fundamentals
 date: 2026-05-26
 tags: [finance, valuation, investing, DCF]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -142,6 +142,113 @@ Where D1 = next year's expected dividend, Ke = cost of equity, g = perpetual gro
 - Any business where shareholder returns are primarily delivered via dividends rather than buybacks or reinvestment
 
 **DDM limitations**: Useless for non-dividend-paying companies (Berkshire Hathaway, Amazon). Can be extended to the **dividend + buyback** framework — treating buybacks as equivalent to dividends — which is the correct generalization. DDM and DCF yield identical values when consistently applied; they are different ways of expressing the same present value mathematics.
+
+### Full Worked DCF Valuation: A Realistic Example
+
+Consider a hypothetical mid-cap software company with the following characteristics (2026 starting figures):
+- Revenue: $500M, growing at 20% for 5 years, then 10% for 5 years, then 3% terminal
+- EBIT margins: 15% currently, expanding to 25% by year 5, then stable
+- Tax rate: 25%
+- Depreciation: 5% of revenue; Capex: 7% of revenue; Working capital builds: 2% of revenue growth
+- Net Debt: $200M; Shares outstanding: 50M
+- WACC: 11% (5% risk-free + 6% ERP × 1.0 beta = 11%)
+
+**Year-by-Year Free Cash Flow Projections** ($M):
+
+| Year | Revenue | EBIT Margin | EBIT | NOPAT (75%) | D&A | Capex | ΔWC | FCF |
+|------|---------|-------------|------|-------------|-----|-------|-----|-----|
+| 1 | 600 | 16.5% | 99 | 74.3 | 30 | 42 | 2 | 60.3 |
+| 2 | 720 | 18.0% | 130 | 97.4 | 36 | 50 | 2.4 | 81.0 |
+| 3 | 864 | 19.5% | 168 | 126.4 | 43 | 60 | 2.9 | 106.5 |
+| 4 | 1037 | 21.5% | 223 | 167.3 | 52 | 73 | 3.5 | 142.8 |
+| 5 | 1244 | 25.0% | 311 | 233.3 | 62 | 87 | 4.1 | 204.2 |
+| 6–10 | +10%/yr | 25.0% | (computed) | — | — | — | — | ~300→490 |
+
+**Terminal Value** (end of Year 10):
+FCF₁₀ ≈ $490M growing at terminal g = 3.0%  
+Terminal Value = FCF₁₀ × (1+g) / (WACC − g) = 490 × 1.03 / (0.11 − 0.03) = 504.7 / 0.08 = **$6,309M**
+
+**Present Value Calculation**:
+- PV of FCFs years 1–10: Sum of each year's FCF discounted at 11% ≈ **$1,420M**
+- PV of Terminal Value: 6,309 / (1.11)^10 = 6,309 / 2.839 ≈ **$2,223M**
+- Enterprise Value = 1,420 + 2,223 = **$3,643M**
+- Less Net Debt: −$200M
+- **Equity Value = $3,443M**
+- **Per Share Value = $3,443M / 50M = $68.86/share**
+
+**Terminal value as % of total**: 2,223 / 3,643 = 61% — in the typical 60–80% range, confirming terminal assumptions dominate.
+
+**Sensitivity Analysis** (equity value per share at different WACC and terminal growth):
+
+| WACC \ g | 2.0% | 2.5% | 3.0% | 3.5% | 4.0% |
+|----------|------|------|------|------|------|
+| 9.0% | $88 | $96 | $107 | $121 | $141 |
+| 10.0% | $76 | $82 | $90 | $100 | $114 |
+| **11.0%** | **$66** | **$71** | **$69** | **$85** | **$95** |
+| 12.0% | $57 | $61 | $66 | $72 | $80 |
+| 13.0% | $50 | $53 | $57 | $62 | $68 |
+
+The sensitivity table reveals the 2× range from most bearish (13% WACC, 2% growth = $50/share) to most bullish (9% WACC, 4% growth = $141/share). A 30% margin of safety on the central case ($68.86 × 0.70 = $48.20) would require purchasing below $48/share.
+
+---
+
+### Industry EV/EBITDA Multiple Reference Guide (2026 Estimates)
+
+Relative valuation requires context. Current multiples reflect 2026 market conditions with normalized rates.
+
+| Sector | EV/EBITDA Range | Notes |
+|--------|----------------|-------|
+| Technology — SaaS | 15–35× | Depends heavily on growth; profitability premium in 2024+ |
+| Technology — Semiconductors | 12–25× | Cycle-dependent; NVIDIA at peak >30×; value names at 10–15× |
+| Healthcare — Biotech/Pharma | 12–20× | Pipeline optionality drives wide dispersion |
+| Consumer Staples | 10–16× | Defensive; resilient margins → premium |
+| Energy — Integrated | 5–8× | Depressed by transition fears; ROIC-driven |
+| Energy — E&P | 4–7× | Highly commodity-sensitive |
+| Financial Services — Banks | P/B 0.7–1.8× | EBITDA not meaningful; use P/B and P/E |
+| Real Estate (REITs) | P/FFO 12–20× | Use FFO, not EBITDA |
+| Industrials — Diversified | 10–15× | |
+| Utilities | 8–12× | Regulated; low growth; rate-sensitive |
+| Telecom | 6–10× | High capex; mature |
+| Retail — Specialty | 7–12× | E-commerce disruption pressure |
+| Private Equity (buyout) | 10–13× entry | Typically sell at 15–20× if multiple expansion |
+
+**Control premiums in M&A**: Public company comps trade at market prices; precedent transactions add a **control premium** (20–35% average, per Thomson Reuters data 2015–2024) because acquirers pay for synergies, certainty of control, and the optionality to redirect management. This is why LBO valuations (floor value) typically sit 20–30% below strategic M&A valuations (ceiling value).
+
+---
+
+### Damodaran's Country Risk Premium (CRP) Framework
+
+For companies operating across multiple markets, Aswath Damodaran (NYU Stern) developed a rigorous framework to adjust the cost of equity for country-specific political, economic, and currency risk.
+
+**The CRP Formula**:
+> Ke = Rf + β × ERP_US + λ × CRP_country
+
+Where:
+- ERP_US = US equity risk premium (~5.5% in 2026 per Damodaran's January update)
+- CRP_country = Additional risk premium for the specific country
+- λ = Company's exposure to that country's risk (% of revenues from country / % of company revenue from all sources, scaled)
+
+**CRP Calculation Method**:
+> CRP = Country Default Spread × (σ_equity / σ_bonds)
+
+Country default spreads are available from sovereign CDS spreads or Moody's country ratings. The scaling factor (σ_equity / σ_bonds ≈ 1.5) adjusts for the fact that equity is riskier than debt even in the same country.
+
+**2026 CRP Examples** (approximate, Damodaran methodology):
+- Germany, Australia, Canada: ~0% (negligible premium)
+- Japan: ~0.5%
+- South Korea, Israel: ~0.7%
+- China: ~1.5–2.0%
+- Brazil: ~3.0%
+- India: ~2.5%
+- Turkey: ~5.0–6.0%
+- Argentina: ~8–12%
+- Iran, Russia (sanctioned): Not investable; theoretical CRP meaningless
+
+**Lambda (λ) calculation**: A US-listed consumer brand generating 40% of revenue from China and 60% from the US:  
+λ = 0.40 (proportional to China revenue exposure)  
+Additional cost of equity vs. pure domestic: λ × CRP_China = 0.40 × 1.75% = **+0.70% uplift**
+
+This may seem small, but at a 30× P/E multiple, a 70bp increase in the discount rate reduces the fair multiple by roughly 3–4× — from 30× to 26–27×. For a $30B company, that's $3–4B of lost market cap from China exposure alone, entirely captured in the Ke adjustment.
 
 ## Cross-Disciplinary Connections
 

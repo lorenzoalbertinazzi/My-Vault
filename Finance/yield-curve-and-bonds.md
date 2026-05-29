@@ -3,7 +3,7 @@ title: Yield Curve Analysis — Shapes, Inversions, and Market Signals
 date: 2026-05-28
 tags: [finance, bonds, yield-curve, interest-rates, macroeconomics, fixed-income]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -176,6 +176,95 @@ A defining feature of 2024–2026 fixed income markets has been dramatic diverge
 - Duration allocation across sovereign markets based on relative term premium and policy cycle positioning
 
 The unwind of highly leveraged **basis trades** (arbitrage between Treasury futures and cash bonds) remains a systemic risk in this environment of elevated term premiums and policy divergence — the March 2020 Treasury market dysfunction was primarily a basis trade deleveraging episode.
+
+### Forward Rate Calculation — The Implied Future Rate Structure
+
+Forward rates are interest rates implied by the current yield curve for future time periods. They translate the yield curve into the market's explicit forecast of where short rates will be at specific future dates.
+
+**The Relationship Between Spot and Forward Rates**:
+
+For a 1-year forward rate starting in 1 year (f(1,1) — the "1×2 forward"):
+
+> (1 + spot₂)² = (1 + spot₁) × (1 + f(1,1))
+
+Therefore:  
+> f(1,1) = [(1 + spot₂)² / (1 + spot₁)] − 1
+
+**Worked Example** (using 2024 yield curve data):
+- 1-year spot rate (spot₁) = 5.30%
+- 2-year spot rate (spot₂) = 4.70%
+
+f(1,1) = [(1.0470)² / (1.0530)] − 1  
+= [1.09621 / 1.0530] − 1  
+= 1.04105 − 1  
+= **4.10%**
+
+The market implies a **1-year rate 1 year from now of 4.10%** — meaning the 2-year yield (4.70%) is a geometric average of the current 1-year rate (5.30%) and the implied future 1-year rate (4.10%). The declining forward rate is the curve's pricing in of Fed rate cuts.
+
+**Extending to longer forwards**:
+
+5-year rate starting in 5 years (f(5,5) — the "5×10 forward"):
+
+> (1 + spot₁₀)^10 = (1 + spot₅)^5 × (1 + f(5,5))^5
+
+f(5,5) = [(1 + spot₁₀)^10 / (1 + spot₅)^5]^(1/5) − 1
+
+Using 2024 data (spot₁₀ = 4.5%, spot₅ = 4.3%):  
+f(5,5) = [(1.045)^10 / (1.043)^5]^(1/5) − 1  
+= [1.5530 / 1.2337]^(1/5) − 1  
+= [1.2588]^(1/5) − 1  
+= 1.0472 − 1  
+= **4.72%**
+
+The 5-year rate starting in 5 years is 4.72% — higher than the current 10-year spot rate (4.5%), implying the market expects rates to be somewhat higher in the long run than current levels. This is the term premium showing through: investors demand extra return for future uncertainty.
+
+**Practical use of forward rates**:
+- If a fixed income manager believes the actual future 5-year rate will be **lower** than the implied forward (4.72%), they should buy 10-year bonds (which are effectively "cheap" vs. their break-even); if they expect higher rates, sell
+- The break-even rate is the forward rate: if rates end up exactly at the forward, the bond returns its YTM; higher actual rates = underperformance; lower = outperformance
+- This is why forward rates are the correct benchmark for any duration trade: not "will rates rise?" but "will rates rise more than the forwards already imply?"
+
+---
+
+### The Expectations Hypothesis vs. Term Premium: Mathematical Framework
+
+The long-term yield can be decomposed into two components:
+
+> y(n) = E[average short rate over n periods] + TP(n)
+
+Where TP(n) is the term premium — the extra compensation for holding long-term bonds rather than rolling short-term bonds.
+
+**The Expectations Hypothesis (EH)**: Assumes TP = 0. Long rates are simply averages of expected future short rates. Under pure EH, the slope of the yield curve measures only expected rate changes.
+
+**Problem with pure EH**: Empirically fails — a positively sloped yield curve does NOT reliably predict that future short rates will be higher. In fact, the excess return on long bonds over short bonds has historically been positive (the long bond earns a premium), contradicting EH.
+
+**The Term Premium Decomposition (ACM Model)**:
+
+The Adrian-Crump-Moench (ACM) model, published by the Federal Reserve Bank of New York, uses a five-factor affine term structure model to decompose any Treasury yield into:
+
+> 10Y yield = 10Y risk-neutral rate + 10Y term premium
+
+Where the risk-neutral rate is the average expected short rate over 10 years under a risk-neutral measure, and the term premium captures all compensation for duration risk.
+
+**Historical ACM estimates**:
+
+| Year | 10Y Treasury | Risk-Neutral Rate | Term Premium |
+|------|-------------|------------------|--------------|
+| 2000 | 6.03% | 5.50% | 0.53% |
+| 2005 | 4.29% | 3.80% | 0.49% |
+| 2012 | 1.80% | 1.20% | 0.60% |
+| 2015 | 2.09% | 1.30% | 0.79% |
+| 2019 | 2.14% | 2.20% | **−0.06%** |
+| 2021 | 1.45% | 0.90% | **−0.45%** |
+| 2023 | 4.90% | 3.50% | **1.40%** |
+| 2025 | 4.50% | 3.20% | **1.30%** |
+
+**The 2013–2021 negative term premium period** was historically unprecedented. Investors accepted lower yields on long bonds than their expected return from rolling short-term bills — essentially paying a premium for the insurance and liquidity value of long bonds (driven by QE suppressing term premiums, global savings glut, and regulatory demand for high-quality liquid assets). The normalization of term premiums in 2022–2025 (from −0.45% to +1.30%) was a 175bp swing that explained much of the bear market in long bonds, independent of Fed rate hiking.
+
+**Investment rule from ACM decomposition**:
+- **When term premium is near zero or negative**: Long bonds are overpriced; their expected return is approximately equal to short rates (no premium for duration risk). Underweight long duration.
+- **When term premium is historically high (>1.5%)**: Long bonds offer genuine extra return for duration risk; overweight long duration relative to strategic benchmark.
+
+This framework converts yield curve reading from a narrative exercise ("rates might rise") into a quantitative assessment of relative value across the curve.
 
 ## Cross-Disciplinary Connections
 

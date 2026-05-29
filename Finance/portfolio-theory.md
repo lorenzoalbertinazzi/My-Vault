@@ -3,7 +3,7 @@ title: Portfolio Theory and Risk Management
 date: 2026-05-26
 tags: [finance, portfolio, risk, MPT, investing]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -174,6 +174,99 @@ Systematic portfolio rebalancing — periodically selling outperformers and buyi
 - *Threshold* (rebalance when weights drift 5% or 10% from target): More tax-efficient, fewer transactions, generally better risk-adjusted outcomes than fixed-calendar
 
 **Tax caveat**: In taxable accounts, rebalancing triggers capital gains. Tax-aware rebalancing uses new contributions and dividend reinvestment to restore balance where possible, reserving asset sales for tax-advantaged accounts — preserving the premium while minimizing the tax drag.
+
+### Factor Return Data: Historical Evidence (1926–2024)
+
+The Fama-French factor model and its extensions are grounded in empirical data spanning nearly a century. The following tables represent the documented historical premiums in US markets:
+
+**Fama-French Three-Factor Model (1993) — Annual Premiums (1926–2023):**
+
+| Factor | Annual Premium | Std Dev | t-Statistic | Sharpe Ratio |
+|--------|---------------|---------|-------------|--------------|
+| Market (MKT−Rf) | 8.3% | 20.1% | 2.83 | 0.41 |
+| Size (SMB — Small minus Big) | 2.9% | 11.0% | 1.79 | 0.26 |
+| Value (HML — High minus Low P/B) | 4.4% | 13.5% | 2.23 | 0.33 |
+
+**Fama-French Five-Factor Model — Additional Factors (1963–2023):**
+
+| Factor | Annual Premium | Key Paper |
+|--------|---------------|-----------|
+| Profitability (RMW) | 3.1% | Fama-French (2015) |
+| Investment (CMA) | 3.4% | Fama-French (2015) |
+| Momentum (WML) | 8.3% | Jegadeesh-Titman (1993) |
+| Low Volatility (BAB) | 5.7% | Frazzini-Pedersen (2014) |
+
+**Momentum (Carhart, 1997)**: The most powerful single-factor premium. Stocks that have outperformed over the past 12 months (skipping the most recent month to avoid reversal) continue to outperform over the next 12 months by ~8% annually. The momentum crash of 2009 (when the factor lost ~83% in 6 months) illustrates the left-tail risk of momentum strategies.
+
+**Value Factor Controversy (2007–2020)**: The HML premium was essentially zero or negative in the US from 2007 to 2020, as growth/technology stocks massively outperformed value. Researchers debated whether value was permanently impaired (by intangibles not captured in book value), temporarily stretched, or exhibiting normal multi-year underperformance. From 2021 onwards, as rates rose, value reasserted with strong performance — consistent with the view that the premium is cyclical, not extinct.
+
+**International Factor Evidence**: Fama-French documented the size and value premiums across 23 developed markets (1991–2016). The value premium was positive in 21 of 23 markets; size in 15 of 23. This international evidence is important: the premiums appear in data independent of the original US sample, reducing the chance they are data-mined artifacts.
+
+**Factor Timing and Cyclicality**:
+- Value outperforms in early-cycle recoveries (cheap assets rebound) and underperforms in late-cycle growth-driven bull markets
+- Momentum outperforms in trending markets and crashes in sharp reversals (requires swift exit)
+- Low-volatility outperforms risk-adjusted in most environments but lags in strong bull markets
+- Quality (profitability) is the most defensively stable factor — holds up during recessions
+
+---
+
+### Mean-Variance Optimization: A Worked Two-Asset Example
+
+**Setup**: Portfolio of two assets — S&P 500 (E) and 10-Year Treasuries (B):
+- E[r_E] = 10%, σ_E = 20%
+- E[r_B] = 4%, σ_B = 7%
+- Correlation ρ_EB = −0.20 (historically typical during normal regimes)
+
+**Portfolio variance formula**:  
+σ²_p = w²_E × σ²_E + w²_B × σ²_B + 2 × w_E × w_B × σ_E × σ_B × ρ_EB
+
+**At 60/40 (w_E = 0.60, w_B = 0.40)**:  
+σ²_p = (0.36)(0.04) + (0.16)(0.0049) + 2(0.60)(0.40)(0.20)(0.07)(−0.20)  
+σ²_p = 0.0144 + 0.000784 − 0.001344 = **0.01384**  
+σ_p = √0.01384 ≈ **11.76%**
+
+Expected return: 0.60 × 10% + 0.40 × 4% = **7.6%**  
+Sharpe ratio: (7.6% − 4.5%) / 11.76% = **0.264** (using 4.5% risk-free rate)
+
+**If correlation rises to +0.30 (inflationary regime like 2022)**:  
+σ²_p = 0.0144 + 0.000784 + 2(0.60)(0.40)(0.20)(0.07)(0.30)  
+σ²_p = 0.0144 + 0.000784 + 0.002016 = **0.0172**  
+σ_p = **13.12%** — portfolio volatility rises 12% just from correlation shift
+
+Expected return unchanged at 7.6%, but Sharpe ratio drops to **0.238** — a significant deterioration. This is the mathematical demonstration of why the 60/40 portfolio is vulnerable in inflationary regimes: the diversification benefit collapses as equity-bond correlation flips positive.
+
+**The Global Minimum Variance Portfolio (GMVP)**:  
+Minimizing σ²_p with respect to w_E (subject to w_E + w_B = 1):
+
+w*_E = (σ²_B − ρ·σ_E·σ_B) / (σ²_E + σ²_B − 2ρ·σ_E·σ_B)
+
+At ρ = −0.20:  
+w*_E = (0.0049 − (−0.20)(0.20)(0.07)) / (0.04 + 0.0049 + 2(0.20)(0.20)(0.07))  
+w*_E = (0.0049 + 0.0028) / (0.04 + 0.0049 + 0.0056)  
+w*_E = 0.0077 / 0.0505 ≈ **15.2%**
+
+The minimum variance portfolio holds only 15.2% in equities — far less than the intuitive 60/40, demonstrating that minimum variance and maximum Sharpe are very different objectives.
+
+---
+
+### Performance Attribution — The Brinson-Hood-Beebower Framework
+
+The **Brinson-Hood-Beebower (BHB) study (1986)** is the most cited paper in portfolio management, examining the performance of 91 large US pension funds from 1974–1983. Its main finding: **91.5% of portfolio return variation was explained by asset allocation policy** (the strategic mix of asset classes), while market timing and security selection together explained less than 10%.
+
+This finding has been debated and partially revised (Ibbotson and Kaplan, 2000 found it explains ~40% of return *levels* across funds), but the practical insight stands: for most institutional portfolios, getting the asset class mix right matters more than picking individual securities.
+
+**The BHB attribution framework** decomposes total active return into three sources:
+
+> Total Active Return = Allocation Effect + Selection Effect + Interaction Effect
+
+- **Allocation Effect** = (Portfolio weight − Benchmark weight) × (Benchmark return − Total benchmark return)  
+  Measures value added by overweighting/underweighting asset classes
+- **Selection Effect** = Benchmark weight × (Portfolio return − Benchmark return)  
+  Measures value added by selecting better securities within asset classes
+- **Interaction Effect** = (Portfolio weight − Benchmark weight) × (Portfolio return − Benchmark return)  
+  Captures the joint effect of allocation and selection decisions
+
+**Example**: A fund overweights technology by 5% in a year when tech returns 25% (benchmark returns 10%). The allocation effect on that decision = 5% × (25% − 10%) = +75 basis points of contribution. If the fund's tech stock picks return 30% vs. the tech benchmark's 25%, the selection effect = benchmark tech weight × (30% − 25%) = additional contribution from security selection.
 
 ## Cross-Disciplinary Connections
 

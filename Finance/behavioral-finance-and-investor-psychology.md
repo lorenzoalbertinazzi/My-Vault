@@ -3,7 +3,7 @@ title: Behavioral Finance and Investor Psychology
 date: 2026-05-27
 tags: [finance, behavioral-finance, psychology, investing, biases]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -159,6 +159,97 @@ Coined by George Loewenstein, the **hot-cold empathy gap** is the difficulty of 
 - Asset allocation based purely on cold questionnaires systematically assigns too much risk
 - The cure: vividly imagine the scenarios before they happen (related to Stoic *premeditatio malorum*) and precommit to rules that override hot-state decisions
 - Automatic rebalancing and dollar-cost averaging are institutional solutions to the hot-cold empathy gap — they remove real-time emotional decision-making
+
+### The Adaptive Markets Hypothesis (Andrew Lo, 2004)
+
+The Efficient Market Hypothesis (EMH) and behavioral finance have spent decades in conflict: EMH says markets are efficient and biases are arbitraged away; behavioral finance says they are systematically exploitable. Andrew Lo's **Adaptive Markets Hypothesis (AMH)** reconciles them by applying evolutionary biology to market dynamics.
+
+**Core thesis**: Market participants — investors, fund managers, institutions — are not perfectly rational (EMH) nor uniformly irrational (behavioral). They are *adaptive*: they use heuristics shaped by past experience, and those heuristics evolve as the environment changes. Markets are efficient *relative to the current population of strategies competing in them* — but that population evolves, meaning efficiency itself is time-varying.
+
+**Key predictions of the AMH**:
+- Risk premiums are not constant but vary with the current population of investors and their risk tolerances. After a crash, risk premiums rise because the population of risk-tolerant investors has been wiped out; the surviving population is risk-averse, pushing up the equity risk premium
+- Alpha opportunities emerge, get discovered, get arbitraged away, then re-emerge as the environment changes — the "alpha half-life" is finite but nonzero
+- Historically stable relationships (like the negative equity-bond correlation) can and do break down when the environment shifts sufficiently (as in 2022's inflationary regime)
+- Innovation in financial instruments creates ecological niches for new strategies before they are competed away
+
+**Empirical evidence**: Lo tested the AMH using rolling regressions of the market's return autocorrelation over time — a classic test of random walk vs. predictability. The finding: autocorrelation varies significantly across decades and regimes, consistent with a population-level efficiency that changes rather than a fixed level. The October 1987 crash, the LTCM crisis of 1998, and the 2008 financial crisis all produced temporary spikes in return predictability as behavioral dynamics overwhelmed algorithmic correction.
+
+**Investment implication**: Rather than asking "does the market factor work?" (a static EMH question), the AMH asks "what is the current competitive environment for this factor?" A behavioral anomaly (like momentum) that is well-documented and widely implemented by sophisticated quants faces maximum competition and minimum alpha. The same anomaly in small-cap emerging markets — where quant capital cannot deploy at scale — may retain substantial alpha precisely because the population of strategies competing for it is small. Regime-switching portfolio management — adjusting factor tilts based on the competitive and macro environment rather than applying a fixed allocation — is the direct practical implementation of the AMH.
+
+---
+
+### Quantitative Prospect Theory: The Value Function and Probability Weighting
+
+Kahneman and Tversky's Prospect Theory is not merely a verbal description — it has precise mathematical forms that generate specific quantitative predictions.
+
+**The Value Function** V(x):
+
+For gains (x > 0): V(x) = x^α  
+For losses (x < 0): V(x) = −λ(−x)^β
+
+where α = β ≈ 0.88 (the curvature parameter, same for gains and losses in the 1992 cumulative version)  
+and λ ≈ 2.25 (the loss aversion coefficient — losses weighted roughly 2.25× more than gains)
+
+**Interpretation**:
+- α < 1 produces concavity in gains (diminishing sensitivity to additional gains): going from $0 to $500 feels much better than going from $500 to $1,000, even though both are $500 gains
+- β < 1 produces convexity in losses (diminishing sensitivity to additional losses): losing $500 doesn't feel as bad as losing $0 to -$500 does
+- λ > 1 produces the steeper loss slope: the same-magnitude loss feels worse than the gain feels good
+
+**Worked numerical example**: Consider a 50/50 gamble: win $200 or lose $100. Expected value is positive (+$50).  
+Classical expected utility would predict acceptance.  
+Prospect Theory calculation:
+- Value of $200 gain: (200)^0.88 ≈ 130.7
+- Value of $100 loss: −2.25 × (100)^0.88 ≈ −2.25 × 67.6 ≈ −152.1
+- Weighted value: 0.5 × 130.7 + 0.5 × (−152.1) = −10.7 → negative → reject the gamble
+
+This explains why people reject positive expected value bets when losses are possible — a direct demonstration that loss aversion is not irrationality but a different value function.
+
+**The Probability Weighting Function** w(p):
+
+People do not treat stated probabilities at face value. They over-weight small probabilities (lottery effect) and under-weight moderate-to-large probabilities (excessive certainty effect):
+
+w(p) = p^γ / (p^γ + (1−p)^γ)^(1/γ)   where γ ≈ 0.65
+
+This produces a distinctive inverse-S shape: w(0.01) ≈ 0.05 (small probs over-weighted), w(0.50) ≈ 0.42 (moderate probs under-weighted), w(0.99) ≈ 0.95 (large probs slightly under-weighted).
+
+**Investment implications of probability weighting**:
+- The over-weighting of small probabilities explains lottery popularity AND why tail risk insurance is systematically overpriced (both long-shot tickets and catastrophe insurance are bought at premiums beyond actuarial value)
+- The under-weighting of moderate probabilities explains why investors underestimate the probability of "likely but not certain" negative scenarios — a 40% probability of recession is treated as if it were 25-30%
+- The combination produces the fourfold pattern: risk-averse for moderate-probability gains (take the sure thing), risk-seeking for moderate-probability losses (gamble to avoid a likely loss), risk-seeking for small-probability gains (buy lottery tickets), risk-averse for small-probability losses (buy insurance)
+
+---
+
+### The Equity Premium Puzzle — A Behavioral Finance Deep Dive
+
+The **Equity Premium Puzzle** (Mehra and Prescott, 1985) is one of the most famous anomalies in financial economics. It asks: why are equities so much more rewarding than bonds, given a utility function calibrated to match observed consumption behavior?
+
+**The puzzle quantified**: From 1926–2023, US equities returned ~10.5% annually vs. 5.0% for long-term Treasuries — an equity premium of ~5.5%. Mehra and Prescott showed that to explain this premium through a standard consumption-based asset pricing model (CCAPM), investors would need a coefficient of relative risk aversion (CRRA) of approximately **30–60** — implying they would be indifferent between a certain $100,000 and a 50/50 gamble between $51,209 and $196,000. No empirically plausible level of risk aversion comes close to generating the observed premium.
+
+**Behavioral explanations**:
+
+**1. Myopic Loss Aversion (Benartzi and Thaler, 1995)**: Combining Prospect Theory's loss aversion (λ ≈ 2.25) with mental accounting over short evaluation horizons ("myopic" evaluation) produces the observed equity premium.
+
+Their key insight: the more frequently an investor evaluates their portfolio, the more short-term losses they observe (equities experience negative returns in ~30% of months), and the more loss aversion matters. They calculated the evaluation horizon at which an investor with Prospect Theory preferences would be indifferent between stocks and bonds: **approximately 12–13 months**. This matches the empirical observation that US investors historically evaluate portfolios roughly annually.
+
+Simulation: An investor with λ = 2.25 who evaluates monthly would require roughly the observed equity premium to hold equities. An investor who evaluates every 30 years would accept an equity premium near zero. The puzzle disappears when you replace rational expected utility with Prospect Theory + realistic evaluation frequency.
+
+**2. Habit Formation (Campbell and Cochrane, 1999)**: Investors have habit-forming consumption preferences — their utility depends not on absolute consumption but on consumption relative to recent habit levels. This creates time-varying risk aversion: when consumption falls near the habit level, investors become extremely risk-averse (consistent with Prospect Theory loss aversion), producing the large equity risk premium during recessions when it is actually observed.
+
+**3. Rare Disasters (Rietz, Barro)**: The equity premium may partly reflect compensation for very rare, catastrophic events (20%+ economic declines) that don't appear frequently in the 100-year US sample but are observed in international data. Behavioral amplification of this genuine risk premium is consistent with the probability over-weighting of rare catastrophic losses.
+
+---
+
+### Calendar Anomalies: Behavioral Finance's Most Reproducible Market Effects
+
+Calendar anomalies — systematic return patterns tied to specific times — are among the oldest behavioral finance evidence and remain incompletely explained by rational models.
+
+**The January Effect**: US small-cap stocks have historically outperformed in January, particularly in the first trading week. From 1926–2000, the excess January return for small-caps was approximately 3-5% above the annual average monthly return. The standard explanation: **tax-loss harvesting** in December creates artificial selling pressure in underperforming stocks, depressing prices; in January, this pressure reverses. The anomaly implies behavioral timing — the willingness to take tax losses at year-end rather than when optimal — concentrated into a calendar window.
+
+**The Monday Effect (Weekend Effect)**: Stock returns have historically been lower (or negative on average) on Mondays compared to other days. The original documentation (Cross, 1973; French, 1980) showed S&P 500 returns were negative on Mondays on average, +0.09% on other weekdays. Behavioral explanation: negative news releases are timed to weekends to minimize immediate market impact, and investors arrive Monday with more pessimistic sentiment accumulated over two days of news without trading safety valve.
+
+**The Turn-of-the-Month Effect**: Returns are systematically higher in the last trading day and first four trading days of a month than in other periods. This explains roughly 67% of positive monthly returns occurring in just 10–11 trading days. The effect correlates with institutional cash flows, consistent with mechanical demand from monthly salary deposits entering equity funds.
+
+**Disposition Effect Quantification** (Odean, 1998): Analyzing 10,000 brokerage accounts from 1987-1993, Odean found that investors were **1.5× more likely** to sell winners than losers, controlling for returns. Specifically, the Proportion of Gains Realized (PGR) was 14.8% vs. Proportion of Losses Realized (PLR) of 9.8% — a 52% higher rate of taking gains than losses. Critically, the stocks investors sold (winners) went on to outperform the stocks they held (losers) by 3.4% over the subsequent year — the foregone alpha of the disposition effect.
 
 ## Cross-Disciplinary Connections
 

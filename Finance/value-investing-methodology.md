@@ -3,7 +3,7 @@ title: Value Investing Methodology
 date: 2026-05-27
 tags: [finance, investing, value-investing, fundamentals]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -198,6 +198,108 @@ Inspired by Atul Gawande's *The Checklist Manifesto* (which documented how check
 - Short-term financial engineering (cutting R&D, capex, or headcount to boost near-term earnings) can destroy long-term competitive position
 
 **The short-termism debate**: Critics argue activism extracts short-term shareholder value at the expense of long-run investment and employment. The empirical evidence is mixed: peer-reviewed studies generally show activist targets outperform over 3–5 years, but clear cases of value destruction from forced financial engineering also exist — particularly in capital-intensive industries where long-investment-cycle businesses need patient capital.
+
+### The Compounding Math of ROIC — Why Returns on Capital Are Everything
+
+Charlie Munger's core insight into business quality can be expressed mathematically: **intrinsic value grows at (ROIC × Reinvestment Rate)**. A business that earns high ROIC and reinvests aggressively compounds wealth at rates that dwarf businesses with low ROIC or high payouts.
+
+**The ROIC Compounding Formula**:
+
+> Intrinsic Value Growth Rate = ROIC × Reinvestment Rate
+
+Where Reinvestment Rate = (CapEx + Working Capital Build − Depreciation) / NOPAT = net capital invested back into the business / earnings
+
+**Worked Example — Two Businesses at the Same Price**:
+
+| | Business A | Business B |
+|--|------------|------------|
+| NOPAT (Year 1) | $100M | $100M |
+| ROIC | 30% | 8% |
+| Reinvestment Rate | 50% | 50% |
+| **Value Growth Rate** | **15%/yr** | **4%/yr** |
+| WACC | 10% | 10% |
+| Excess Return (ROIC − WACC) | +20% | −2% |
+
+Business A compounds intrinsic value at 15%/year. Business B at 4%. After 10 years, Business A's normalized earnings are $400M; Business B's are $148M. Purchased at the same initial multiple, Business A delivers 2.7× more intrinsic value growth.
+
+**The Greenwald Earning Power Framework** formalizes this:
+
+> Value = Earnings Power Value (EPV) + Growth Value
+
+- **EPV** = NOPAT / WACC (assume zero growth; what is the business worth if it earns current earnings forever?)
+- If EPV > Reproduction Cost (what it costs to build the same assets from scratch), the business has a genuine competitive moat
+- **Growth Value** = EPV × [(ROIC − WACC) / WACC] × [Reinvestment Rate / (ROIC − g)] → positive only when ROIC > WACC
+
+For a business with NOPAT = $100M, WACC = 10%:
+EPV = $100M / 10% = **$1,000M** (value assuming no growth)
+
+If ROIC = 30% and reinvestment rate = 50%, growth value adds:  
+Growth Value = EPV × (0.20 / 0.10) × (0.50 / (0.30 − 0.15)) ≈ $667M  
+Total value ≈ **$1,667M** vs. $1,000M EPV — growth creates 67% additional value due to above-cost-of-capital reinvestment.
+
+For Business B (ROIC = 8%, WACC = 10%), growth **destroys** value — the growth value term is negative because ROIC < WACC. Growth for a business earning below its cost of capital makes shareholders poorer, not richer. This is the mathematical proof behind Buffett's axiom: "Growth is value-destroying for businesses earning below their cost of capital."
+
+---
+
+### Value Premium: Decade-by-Decade Performance Data
+
+Understanding when value works requires examining its track record in detail, not just in aggregate.
+
+**Annual outperformance of Value (HML factor) vs. Growth by decade, US stocks:**
+
+| Period | Value Premium (HML) | Context |
+|--------|--------------------|---------| 
+| 1926–1939 | +9.8% p.a. | Depression era; distressed assets cheap; Graham's era |
+| 1940–1959 | +5.2% p.a. | Post-war recovery; value abundant in industrial stocks |
+| 1960–1979 | +3.1% p.a. | Inflationary period; value held up, growth struggled |
+| 1980–1999 | +4.7% p.a. | Strong general equity bull market; value premium held |
+| 2000–2006 | +8.9% p.a. | Post dot-com bust; tech crash punished growth |
+| 2007–2020 | −2.4% p.a. | Technology dominated; QE inflated growth multiples |
+| 2021–2024 | +6.3% p.a. | Rate normalization punished long-duration growth stocks |
+
+**Total 98-year average**: approximately +4.4% per annum (Fama-French data).
+
+**The 2007–2020 drought** nearly coincided with the rise of mega-cap platform technology: Apple, Google, Amazon, Facebook, and Microsoft together grew from ~$1T combined market cap to ~$7T. Their extraordinary economics (high ROIC, light asset intensity, massive network effects) made them technically "value" by quality metrics but "growth" by P/B — blurring the factor boundaries and making traditional value screens miss them entirely. This explains the academic debate about whether the value premium is dead or merely mismeasured.
+
+**Ben Graham's net-net strategy** (buying at 67% of NCAV): From 1926–1970, the strategy returned an estimated 20–29% annually in the US when sufficient securities were available. Oppenheimer (1986) documented 30%+ annual returns from 1970–1983. Today US net-nets are extremely scarce; Japan offered 400+ genuine net-nets in 2010–2020, explaining why Warren Buffett bought Japanese trading companies in 2020 at 0.6–0.8× P/B.
+
+---
+
+### Qualitative Moat Analysis — The Five Forces and the Moat Scoring System
+
+Pat Dorsey (Morningstar) formalized economic moat analysis into a scoring framework applicable to any business. The four moat sources Dorsey identifies, with quantitative signals:
+
+**1. Intangible Assets (brands, patents, regulatory licenses)**:
+- Signal: Pricing power above inflation for 10+ consecutive years
+- Measurement: Gross margin stability and trend over 10+ years (stable/rising = moat; declining = moat erosion)
+- Examples: Hermès (gross margins ~69%), Coca-Cola (~60%), Apple devices (~38%)
+- Non-moat comparison: commodity chemicals, standard contract manufacturing (gross margins 10–20%, declining)
+
+**2. Switching Costs**:
+- Signal: Revenue retention rate (especially for SaaS) > 95%; net revenue retention (NRR) > 110% (existing customers spend more each year even without new logos)
+- Measurement: Customer churn rate, contract length, professional services attachment rate (high services attachment = high switching cost, e.g., SAP)
+- Extreme case: Oracle database customers average 7+ years on contract with switching costs estimated at 18–24 months of total contract value in migration and re-training costs
+
+**3. Network Effects**:
+- Signal: ARPU (average revenue per user) rises as the network grows; cost per incremental user falls as the network grows
+- Measurement: Monthly active user growth vs. revenue per user — Metcalfe's Law predicts value scales as N², so revenue should accelerate relative to users in strong network-effect businesses
+- Data: Visa/Mastercard networks: the 8th bank added to the network is worth far more to Visa than the 1st because every new bank immediately connects to all existing ones
+
+**4. Cost Advantages**:
+- Signal: COGS / Revenue declining while peer margins stable or declining
+- Sources: scale (unit cost falls with volume), proprietary process (lower input costs per unit), geographic advantage (proximity to raw materials or customers reduces transport costs)
+- Costco example: Membership fee revenue ($4.6B in FY2023) exceeds total operating income ($7.3B) — meaning the core retail operation runs at near-zero margin by design, creating a structurally impossible competition point for retailers without the membership model
+
+**5. Efficient Scale**:
+- Signal: Industry has 1–3 players; entry of a 4th would cause all players including the entrant to earn below-cost-of-capital returns
+- Examples: regulated utilities (single transmission grid per region), niche market dominance (dental supply distributors, professional licensing software)
+
+**Moat duration taxonomy**:
+- **Wide moat**: Competitive advantage highly likely to persist 20+ years
+- **Narrow moat**: Competitive advantage likely to persist 10–20 years
+- **No moat**: No durable advantage; earnings above cost of capital will be competed away within 10 years
+
+Morningstar's empirical analysis shows that Wide Moat stocks have outperformed the Russell 1000 by ~3.5% per annum over 20 years (2002–2022), validating that moat identification is a practically useful investment tool, not just a qualitative framework.
 
 ## Cross-Disciplinary Connections
 

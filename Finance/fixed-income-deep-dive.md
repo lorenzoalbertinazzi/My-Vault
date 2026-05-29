@@ -3,7 +3,7 @@ title: Fixed Income Deep Dive — Bonds, Yield Curves, and Credit Risk
 date: 2026-05-27
 tags: [finance, bonds, fixed-income, yield-curve, credit-risk, interest-rates]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -208,6 +208,139 @@ When this surplus is politically infeasible, default or restructuring becomes in
 **The doom loop**: Sovereign distress weakens banks (which hold sovereign bonds as "safe assets"), bank weakness requires sovereign bailouts, which further weakens the sovereign. This self-reinforcing cycle — the "diabolic loop" — was the defining dynamic of the 2010–2015 European sovereign debt crisis.
 
 **Restructuring mechanics**: Sovereign defaults rarely involve non-payment; they typically involve renegotiating terms (haircuts on principal, extended maturities, interest rate reductions). The *holdout creditor problem* — individual creditors refusing to accept restructured terms, suing for full payment — is addressed by **Collective Action Clauses (CACs)** now standard in sovereign bonds.
+
+### Duration Calculation: A Complete Worked Numerical Example
+
+**Setup**: A 5-year, 6% annual coupon bond, face value $1,000, YTM = 5%.
+
+**Step 1: Calculate the Bond Price**
+
+Price = Σ [CF_t / (1 + YTM)^t]  
+= 60/1.05 + 60/1.05² + 60/1.05³ + 60/1.05⁴ + 1060/1.05⁵  
+= 57.14 + 54.42 + 51.83 + 49.36 + 830.57  
+= **$1,043.32**
+
+**Step 2: Calculate Macaulay Duration**
+
+Macaulay Duration = Σ [t × PV(CF_t)] / Price
+
+| Year (t) | Cash Flow | PV of CF | t × PV(CF) |
+|----------|-----------|----------|------------|
+| 1 | $60 | $57.14 | $57.14 |
+| 2 | $60 | $54.42 | $108.84 |
+| 3 | $60 | $51.83 | $155.49 |
+| 4 | $60 | $49.36 | $197.44 |
+| 5 | $1,060 | $830.57 | $4,152.85 |
+| **Total** | | **$1,043.32** | **$4,671.76** |
+
+Macaulay Duration = $4,671.76 / $1,043.32 = **4.48 years**
+
+**Step 3: Modified Duration**
+
+Modified Duration = Macaulay Duration / (1 + YTM) = 4.48 / 1.05 = **4.267 years**
+
+**Step 4: Price Sensitivity Estimate**
+
+If YTM rises by 50 basis points (from 5.0% to 5.5%):
+
+ΔPrice ≈ −Modified Duration × ΔYield × Price  
+= −4.267 × 0.005 × $1,043.32  
+= −**$22.26** (−2.13% price decline)
+
+**Verification** (exact calculation): Price at 5.5% YTM = $1,021.27 → actual decline = **$22.05** (2.11%)  
+The duration approximation ($22.26) is very close because the 50bp move is small. For larger moves (e.g., +200bps), the convexity correction becomes important.
+
+**Step 5: Convexity Correction**
+
+Convexity = Σ [t(t+1) × PV(CF_t)] / [Price × (1+YTM)²]
+
+Simplified: for this bond, Convexity ≈ 23.5 (years²)
+
+Full price change formula:  
+ΔP/P ≈ −ModDur × Δy + (1/2) × Convexity × (Δy)²
+
+For +200bp move:  
+ΔP/P ≈ −4.267 × 0.02 + 0.5 × 23.5 × (0.02)² = −0.0853 + 0.0047 = **−8.06%**
+
+Without convexity adjustment: −4.267 × 0.02 = −8.53% (overstates the decline by 47bps — meaningful for large portfolios)
+
+**Key Rule of Thumb**: A bond's modified duration is approximately its price sensitivity in years: a 10-year duration bond loses ~10% in price for a 100bp yield rise. Duration of common instrument types:
+- 3-month T-Bill: ~0.25 years
+- 2-year Treasury: ~1.9 years
+- 10-year Treasury: ~8.5 years
+- 30-year Treasury: ~17–19 years
+- Zero-coupon bond (30-year): exactly 30 years
+
+---
+
+### Credit Default Swaps (CDS) — Mechanics and Pricing
+
+A **Credit Default Swap** is a bilateral contract that transfers credit risk from the protection buyer to the protection seller. It is the primary instrument for trading credit risk.
+
+**Basic structure**:
+1. Protection buyer pays a **quarterly premium** (the "CDS spread," expressed in basis points per annum)
+2. In exchange, if the reference entity experiences a **credit event** (default, restructuring, failure to pay), the protection seller pays the difference between par ($1,000) and the recovery value
+3. Physical settlement: buyer delivers defaulted bonds; seller pays par. Or cash settlement: seller pays (1 − Recovery Rate) × Notional
+
+**Example**: 5-year CDS on Ford Motor Credit at 250bps:
+- Notional: $10M
+- Quarterly premium: $10M × 2.50% / 4 = $62,500
+- If Ford defaults with 40% recovery: Protection seller pays $10M × (1 − 0.40) = **$6M**
+- Net CDS buyer cost vs. benefit: paid ~10 years of premiums ($2.5M total on a 10-year contract) to insure against $6M loss
+
+**CDS spread as credit indicator**: The CDS spread is the market's price for default risk, more timely than credit ratings (which lag). The CDS spread implies a market-derived default probability:
+
+> Default Probability (annual) ≈ CDS Spread / (1 − Recovery Rate)
+
+Using Ford example: Implied annual default probability ≈ 250bps / (1 − 0.40) = 250 / 60 = **4.2% per year**
+
+For 5 years, assuming independence: Cumulative default probability ≈ 1 − (1 − 0.042)^5 ≈ 19% — the market assigns roughly a 1-in-5 chance of default over 5 years at 250bps.
+
+**CDS Index Products**:
+- **CDX NA IG** (125 investment-grade US names): The most liquid IG credit indicator
+- **CDX NA HY** (100 high-yield US names): Liquid HY indicator
+- **iTraxx Europe** (125 European IG names)
+
+When these indices widen significantly (CDS spreads rising), it signals credit stress across entire corporate debt markets — a leading indicator for recessions. In 2008, CDX NA HY widened from ~250bps in 2007 to over 1,800bps at the crisis peak — signaling a near-50% expected loss rate on the high-yield index basket, far above the historical ~5-7% annual default rate.
+
+---
+
+### High-Yield Bond Analysis: The Distressed Framework
+
+For below-investment-grade bonds (rated BB+/Ba1 or lower), the analytical framework shifts from duration and spread to **credit fundamentals and recovery analysis**.
+
+**Key analytical framework for high-yield issuers**:
+
+**1. Leverage Metrics**:
+- Net Debt / EBITDA: ≤ 3.0× (safer), 3–5× (moderate), >5× (elevated), >7× (distressed territory)
+- Total Debt / Equity ratio
+- Interest Coverage: EBITDA / Interest Expense; ≥ 3.0× (healthy), 1.5–3.0× (stressed), <1.5× (distressed)
+
+**2. Free Cash Flow Analysis**:
+FCF Yield = FCF / Enterprise Value; HY bonds become dangerous when FCF yield is negative (company cannot service debt from operations and must rely on refinancing or asset sales)
+
+**3. Maturity Wall / Refinancing Risk**:
+A "debt maturity wall" occurs when a company has multiple tranches of debt coming due in a short window. If credit markets are closed (risk-off environment) when the wall approaches, the company faces forced restructuring regardless of operational performance. In 2009 and 2020, companies with 2011–2013 maturity walls faced existential refinancing risk even if fundamentals were stable.
+
+**4. Covenant Analysis**:
+High-yield bonds often have **incurrence covenants** (triggered when a new action is taken, like a dividend payment or new debt issuance) vs. investment-grade bonds' **maintenance covenants** (must maintain a ratio at all times). Covenant-light HY bonds (most issued post-2012) offer less lender protection — one of the structural changes in HY credit markets that has shifted default recovery analysis.
+
+**Recovery Rate Data**:
+- Senior secured debt: Average recovery ~65–70% in bankruptcy
+- Senior unsecured debt: Average recovery ~35–45%
+- Subordinated/mezzanine: Average recovery ~20–30%
+- Equity: Average recovery <5% (often zero)
+
+These recovery rates form the basis for calculating expected loss (EL = Probability of Default × Loss Given Default = PD × (1 − Recovery Rate)) and therefore the minimum credit spread required to compensate for expected losses on a HY bond.
+
+**Real case: Bed Bath & Beyond (2023)**:
+By September 2022, the company had:
+- Net Debt / EBITDA: ~12× (EBITDA declining rapidly)
+- Interest Coverage: <1.0× (not covering interest from operations)
+- Negative FCF: burning >$500M/year
+- Upcoming maturity: $340M notes due 2024
+
+Bonds traded at ~30 cents on the dollar, implying ~70% expected loss. Company filed Chapter 11 in April 2023; unsecured creditors received pennies. A distressed analyst who ran the leverage and FCF analysis in mid-2022 had months of warning before the bankruptcy — demonstrating why fundamental credit analysis is more predictive than ratings (S&P still rated BBBY BB in early 2022).
 
 ## Cross-Disciplinary Connections
 
