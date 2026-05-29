@@ -3,7 +3,7 @@ title: Machine Learning Fundamentals
 date: 2026-05-26
 tags: [tech, AI, machine-learning, neural-networks, deep-learning]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -214,6 +214,163 @@ Post-2023, a critical limitation has emerged: high-quality human-generated text 
 - **Distributional narrowing**: Synthetic data tends to be more formulaic than human-generated content — reducing the unexpected connections and diverse styles that make large training corpora valuable.
 
 **The frontier**: Synthetic data works excellently for structured domains (math, code, logic) where outputs can be verified. For open-ended creative or reasoning tasks, quality control remains an unsolved challenge.
+
+---
+
+### Historical Development
+
+The history of machine learning is a series of three paradigm shifts separated by "AI winters" — periods of funding collapse and disillusionment when promises outran capability.
+
+**1943 — The First Neuron**: Warren McCulloch (neurophysiologist) and Walter Pitts (logician) publish "A Logical Calculus of the Ideas Immanent in Nervous Activity," modelling neurons as binary threshold units. The paper demonstrates that networks of such units can compute any logical function — laying the conceptual foundation for neural networks. The model is mathematical but unlearnable: no training procedure exists.
+
+**1958 — The Perceptron**: Frank Rosenblatt at Cornell Aeronautical Laboratory builds the Mark I Perceptron — a physical hardware implementation of a single-layer learnable network. The perceptron learning rule converges provably for linearly separable datasets. The New York Times announces: "Navy Reveals Device That Thinks." Overhype begins immediately.
+
+**1969 — Minsky & Papert Kill the Perceptron**: MIT's Marvin Minsky and Seymour Papert publish *Perceptrons*, proving that single-layer perceptrons cannot learn the XOR function — or any non-linearly separable mapping. Funding collapses; the first AI winter begins.
+
+**1986 — Backpropagation Resurrected**: Rumelhart, Hinton, and Williams publish "Learning Representations by Back-Propagating Errors" in *Nature*, demonstrating that multi-layer networks trained with the chain rule can learn complex non-linear functions. The paper solves Minsky & Papert's XOR problem trivially. But computers in 1986 lack the power to train large networks, limiting practical impact.
+
+**1989 — Universal Approximation Theorem**: Hornik, Stinchcombe, and White prove that a single hidden-layer network with sufficient neurons can approximate any continuous function to arbitrary precision. This establishes the theoretical foundation: neural networks can, in principle, learn anything. The question becomes purely about capacity and optimisation, not expressiveness.
+
+**1998 — LeNet and Convolutional Neural Networks**: Yann LeCun (AT&T Bell Labs) introduces LeNet-5 — a convolutional network that reads handwritten ZIP codes for the US Postal Service, processing ~10% of all cheques in the US by 2000. LeCun demonstrates that the right inductive biases (translational invariance, local feature detection) dramatically reduce the number of parameters needed for image tasks. The second AI winter (1987–1993) was ending, but deep learning remained a niche field.
+
+**2006 — Deep Learning Rebranding and Pretraining**: Geoffrey Hinton (University of Toronto), Yoshua Bengio (Université de Montréal), and Yann LeCun begin publishing a series of papers on "deep belief networks" and unsupervised pretraining — using greedy layer-wise pretraining to initialise deep networks before fine-tuning. The term "deep learning" is coined. Hinton's 2006 Science paper demonstrates that deep networks can be trained effectively if initialised properly.
+
+**2012 — AlexNet: The Deep Learning Revolution**: Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton train AlexNet on two NVIDIA GTX 580 GPUs (3GB VRAM each). On ImageNet ILSVRC 2012 (1.2M images, 1,000 categories), AlexNet achieves **15.3% top-5 error** — vs. 26.2% for the best non-deep-learning submission. The 10.9 percentage point margin is unprecedented. More importantly, AlexNet introduces: ReLU activations (defeating vanishing gradients), dropout (preventing overfitting), and GPU training (enabling scale). Every major technology company immediately pivots to deep learning.
+
+**ImageNet Progress (Top-5 Error Rate)**:
+- 2012: AlexNet (Krizhevsky/Hinton) — 15.3%
+- 2013: ZFNet (Zeiler/Fergus, NYU) — 11.2%
+- 2014: VGGNet (Oxford) / GoogLeNet (Google) — 6.7% / 6.7%
+- 2015: ResNet (He et al., Microsoft) — **3.6%** — surpassing human-level (5.1%)
+- 2017: SENet (Squeeze-and-Excitation) — 2.25% (competition closed; task essentially solved)
+
+**2015 — ResNets Solve Training Deep Networks**: Kaiming He et al. (Microsoft Research Asia) introduce residual connections — the "skip connection" that allows gradients to flow past any layer. ResNets train 152-layer networks (vs. prior art of ~22 layers) by providing a direct gradient highway. The residual connection is now universal: used in transformers, diffusion models, and virtually every modern architecture.
+
+**2016 — AlphaGo (DeepMind/Google)**: A deep reinforcement learning system defeats Go world champion Lee Sedol 4-1. Go was considered computationally intractable for AI due to its branching factor (~250 vs. chess's ~35). AlphaGo uses deep convolutional value and policy networks trained with MCTS self-play — the first convincing demonstration of superhuman performance in an open-ended strategic domain.
+
+**2017 — The Transformer and the NLP Revolution**: (see [[transformer-architecture]] for full timeline). BERT (2018) and GPT-2 (2019) establish the pretraining paradigm for NLP, displacing task-specific architectures entirely.
+
+**2020–2026 — Scale, Alignment, and Multimodality**: The defining trend is scale (GPT-3 175B → GPT-4 ~1T MoE), RLHF-based alignment, multimodal training, and the emergence of test-time compute scaling. The three "heroes" of deep learning — Hinton, LeCun, Bengio — shared the 2018 Turing Award for their foundational contributions to a field that has since escaped any single institution's control.
+
+---
+
+### Mathematical Foundation: Backpropagation Derivation
+
+Backpropagation is an application of the **chain rule of calculus** to compute gradients through a computational graph. Here is the derivation for a 2-layer network.
+
+**Setup**: Input **x** ∈ ℝ^d. Layer 1 weights **W₁** ∈ ℝ^(h×d), bias **b₁** ∈ ℝ^h. Layer 2 weights **W₂** ∈ ℝ^(c×h), bias **b₂** ∈ ℝ^c. Output class scores **ŷ** ∈ ℝ^c. True label *y* (integer). Loss: cross-entropy L = -log(softmax(**ŷ**)_y).
+
+**Forward pass**:
+```
+z₁ = W₁·x + b₁          [pre-activation, layer 1]
+a₁ = ReLU(z₁) = max(0, z₁)   [activation, layer 1]
+z₂ = W₂·a₁ + b₂          [pre-activation, layer 2 = logits]
+p = softmax(z₂)           [class probabilities]
+L = -log(p_y)             [cross-entropy loss]
+```
+
+**Backward pass** (computing ∂L/∂W₁, ∂L/∂W₂ via chain rule):
+
+**Step 1** — gradient of loss w.r.t. logits **z₂**:
+```
+∂L/∂z₂ = p - e_y      [where e_y is the one-hot vector for true class y]
+```
+This elegant result comes from differentiating softmax cross-entropy: the gradient is simply the predicted probability vector minus the one-hot target. All other classes get their probability subtracted.
+
+**Step 2** — gradient w.r.t. **W₂**:
+```
+∂L/∂W₂ = (∂L/∂z₂) · a₁ᵀ
+```
+Outer product of the loss gradient and the layer-1 activations.
+
+**Step 3** — gradient propagated back to **a₁**:
+```
+∂L/∂a₁ = W₂ᵀ · (∂L/∂z₂)
+```
+
+**Step 4** — gradient through ReLU (elementwise):
+```
+∂L/∂z₁ = (∂L/∂a₁) ⊙ 𝟙[z₁ > 0]
+```
+ReLU's derivative is 0 for negative pre-activations, 1 for positive — it "gates" the gradient.
+
+**Step 5** — gradient w.r.t. **W₁**:
+```
+∂L/∂W₁ = (∂L/∂z₁) · xᵀ
+```
+
+**Vanishing gradient problem**: In deep networks (L layers), gradients are multiplied by ∂a_i/∂z_i at each layer. For sigmoid activations, this derivative is σ(z)(1-σ(z)) ≤ 0.25. After L=10 layers: 0.25^10 ≈ 10^-6 — the gradient is effectively zero, and early layers learn nothing. ReLU (derivative = 1 for z > 0) and residual connections (gradient = 1 on the skip path) solve this.
+
+**Adam Optimizer** — the default for transformer training:
+```
+m_t = β₁·m_{t-1} + (1-β₁)·g_t        [1st moment — velocity]
+v_t = β₂·v_{t-1} + (1-β₂)·g_t²       [2nd moment — per-parameter variance]
+
+m̂_t = m_t / (1-β₁ᵗ)                  [bias correction]
+v̂_t = v_t / (1-β₂ᵗ)
+
+θ_t = θ_{t-1} - α · m̂_t / (√v̂_t + ε)
+```
+Default hyperparameters (nearly universal): β₁ = 0.9, β₂ = 0.999, ε = 10⁻⁸, weight decay λ = 0.01 (AdamW). The per-parameter adaptive learning rate (dividing by √v̂_t) makes Adam robust to different gradient scales across layers — critical for training transformers where gradient magnitudes vary dramatically between attention and FFN layers.
+
+---
+
+### Benchmarks and Performance
+
+#### Computer Vision
+**ImageNet-1K (Top-1 Accuracy)** — classifying 1.28M images into 1,000 categories:
+- ResNet-50 (2015): 76.1% — the "standard" baseline for years
+- EfficientNet-B7 (2019, Google): 84.3%
+- ViT-G/14 (2022, Google): 90.45%
+- EVA (2023, BAAI): 89.6% on ViT-Giant variant
+- Human estimated accuracy: ~95%
+
+**COCO Object Detection (mAP)** — detecting and localising objects in 123K images:
+- Faster R-CNN (2015): 42.7 mAP
+- DETR (2020, Facebook): 42.0 mAP (same quality with cleaner architecture)
+- DINO (2022, Meta): 63.3 mAP
+
+#### Natural Language Processing
+Key benchmarks with scores documenting the deep learning revolution:
+
+| Benchmark | Task | GPT-3 (2020) | GPT-4 (2023) | Best 2025 |
+|-----------|------|-------------|-------------|-----------|
+| MMLU | Knowledge breadth | 43.9% | 86.4% | 96.7% (o3) |
+| HellaSwag | Commonsense reasoning | 78.9% | 95.3% | ~98% |
+| TruthfulQA | Factual accuracy | 21% | 59% | ~80% |
+| GSM8K (math) | Grade-school math | 17.5% | 92.0% | 99.3% (o3) |
+| HumanEval (code) | Python functions | 11.4% | 67.0% | 93.4% |
+
+#### Reinforcement Learning
+**Atari 57 Games (median human-normalised score)**:
+- DQN (DeepMind, 2015): 0.79× human performance — superhuman on some games
+- Rainbow DQN (2017): 1.53× — aggregate superhuman
+- Agent57 (2020): 1.02× — superhuman on all 57 games
+- MuZero (2020): generalises across Atari, Go, chess, shogi without environment model
+
+**OpenAI Five (Dota 2, 2019)**: RL agent that defeated the world champions in a game with ~1,000× more possible states per turn than chess, requiring long-horizon cooperation and imperfect information. Trained using 180 years of self-play per day on 128,000 CPU cores and 256 GPUs.
+
+#### Quantisation Performance Benchmarks
+Effect of quantisation on Llama 3 70B (MMLU, 5-shot):
+- fp16 (full precision): 82.0%
+- int8 (LLM.int8()): 81.8% — essentially lossless
+- GPTQ 4-bit: 81.2% — 0.8% degradation, 4× memory reduction
+- GGUF Q4_K_M: 80.9% — suitable for consumer GPU (48GB VRAM)
+- GGUF Q3_K_M: 79.1% — runs on 24GB VRAM; notable but acceptable degradation
+
+---
+
+### Limitations and Open Problems
+
+**The Data Wall**: The most immediate practical constraint on continued scaling is training data exhaustion. Estimates suggest that high-quality web text (the primary pretraining source) will be substantially incorporated into existing large models by 2026–2027. The response — synthetic data generation and multi-modal training — introduces new problems (model collapse, distributional narrowing) that are not yet solved.
+
+**Reasoning vs. Pattern Matching**: The field debates whether LLMs perform genuine reasoning or sophisticated pattern matching. The emergence of test-time compute scaling (o1, DeepSeek-R1) demonstrates that reasoning quality can be improved by allowing more computation — suggesting genuine symbolic-style computation is occurring. But failure modes on novel logical puzzles not seen in training (e.g., specific ARC-AGI tasks) suggest the system has not learned abstract reasoning rules, only their instantiations in training data.
+
+**Catastrophic Forgetting**: Neural networks cannot be updated on new data without forgetting previously learned information (unless the entire dataset is re-used). This is a fundamental obstacle to lifelong learning — models effectively cannot "learn new facts" after deployment without full retraining.
+
+**Interpretability Gap**: Despite mechanistic interpretability progress (superposition hypothesis, induction heads, ROME), we cannot reliably explain why a specific model produces a specific output in terms of interpretable computational steps. This limits our ability to predict failure modes, audit for safety-relevant capabilities, or make certified guarantees about behaviour.
+
+**Sample Efficiency**: The human brain learns complex visual concepts from ~10 examples; neural networks require thousands or millions. While few-shot prompting in LLMs addresses this at the task level, the underlying model still required trillions of tokens to learn its representations. Truly sample-efficient learning remains an open problem.
 
 ## Cross-Disciplinary Connections
 

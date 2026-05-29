@@ -3,7 +3,7 @@ title: Vector Databases and Embeddings
 date: 2026-05-27
 tags: [tech, AI, machine-learning, embeddings, vector-databases, semantic-search]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -241,6 +241,149 @@ In production RAG systems, embedding generation is often the latency and cost bo
 3. Third-stage: generate with LLM using top-5 chunks
 
 This pyramid avoids running expensive models on all candidate documents.
+
+---
+
+### Historical Development
+
+The history of embeddings is inseparable from the history of distributional semantics — the long-held linguistic intuition that meaning is defined by context.
+
+**1957 — The Distributional Hypothesis**: J.R. Firth (SOAS, University of London) writes "you shall know a word by the company it keeps" — the foundational thesis that words appearing in similar contexts have similar meanings. This is not yet a computational model, but it is the premise of everything that follows.
+
+**1972 — TF-IDF**: Karen Spärck Jones formalises term frequency–inverse document frequency as a relevance scoring function for information retrieval. TF-IDF represents documents as sparse vectors in vocabulary-dimension space. The key insight: words that appear frequently in a specific document but rarely across all documents are characteristic of that document's topic.
+
+**1988–1992 — LSA (Latent Semantic Analysis)**: Deerwester, Dumais, Furnas, Landauer, and Harshman (Bellcore) publish "Indexing by Latent Semantic Analysis" (1990). LSA applies Singular Value Decomposition (SVD) to a term-document matrix, reducing it to a lower-dimensional "latent" space. Documents and words are projected into the same space — enabling semantic similarity queries. LSA cannot handle new words without recomputation and is computationally expensive at large scale.
+
+**2003 — Neural Language Models and Distributed Representations**: Bengio, Ducharme, Vincent, Jauvin (Université de Montréal) publish "A Neural Probabilistic Language Model" — the first neural model that jointly learns word representations (embeddings) and a language model in an end-to-end fashion. The embeddings in this model are learned as a side effect of training for prediction, not explicitly designed. This paper establishes that neural models can learn continuous word representations from co-occurrence.
+
+**January 2013 — Word2Vec (Google)**: Tomáš Mikolov, Kai Chen, Gregory Corrado, and Jeffrey Dean (Google Brain) publish "Efficient Estimation of Word Representations in Vector Space" — introducing Word2Vec. Two architectures: CBOW (predict centre word from context) and Skip-gram (predict context words from centre word). Word2Vec trains on 100B Google News words in ~1 day on a single machine. The breakthrough: linear arithmetic in embedding space. `vec("king") - vec("man") + vec("woman") ≈ vec("queen")`. This was not an intentional design feature — it emerged from the training objective. The paper creates the modern embedding paradigm.
+
+**October 2014 — GloVe (Stanford)**: Pennington, Socher, and Manning (Stanford) publish GloVe (Global Vectors for Word Representation), combining Word2Vec's local context window with LSA's global co-occurrence statistics. GloVe produces embeddings that capture both local and global structure, outperforming Word2Vec on analogy and word similarity tasks.
+
+**2018 — ELMo and Contextual Embeddings**: Peters et al. (Allen Institute for AI) publish ELMo (Embeddings from Language Models) — the first mainstream system to produce contextual embeddings, where the representation of a word depends on its context. "bank" in "river bank" and "savings bank" now produces different vectors. ELMo uses a deep bidirectional LSTM. The release of ELMo triggers a 3–5% improvement on virtually every NLP benchmark in months.
+
+**October 2018 — BERT and the Sentence Embedding Era**: Devlin et al. (Google) release BERT. Researchers immediately fine-tune BERT for sentence similarity, producing powerful sentence embeddings. Reimers & Gurevych release Sentence-BERT (2019) — optimised for producing comparable sentence-level embeddings using Siamese BERT networks with triplet loss. SBERT becomes the foundation for most production semantic search systems.
+
+**2019 — First Production Vector Databases**: Faiss (Facebook AI Similarity Search, released 2017) provides fast ANN search as a library. Milvus (Zilliz, China) releases the first dedicated open-source vector database (October 2019), providing production-ready infrastructure for embedding-based search at scale.
+
+**2021 — CLIP and Multi-Modal Embeddings**: OpenAI releases CLIP (Contrastive Language-Image Pre-Training) — trained on 400M image-text pairs from the internet, CLIP encodes images and text in a shared embedding space. A text query "a photo of a dog" produces a vector near images of dogs. This enables zero-shot image classification and cross-modal retrieval.
+
+**2022 — Commercial Vector Database Explosion**: Pinecone (founded 2019) raises $100M Series B (February 2022). Weaviate raises $50M (April 2022). Qdrant releases v1.0 (December 2022). The RAG paradigm, formalised in 2020, drives massive investment in vector database infrastructure.
+
+**2022 — MTEB Benchmark**: Muennighoff et al. release the Massive Text Embedding Benchmark (MTEB) — 56 tasks across 7 categories covering retrieval, clustering, classification, and semantic similarity in 112 languages. MTEB becomes the standard leaderboard for embedding models.
+
+**2023–2024 — Long-Context and Specialised Embeddings**: Models that handle 8,192-token chunks (vs. 512 for early BERT-based models) emerge — critical for embedding entire documents. Voyage AI and Cohere introduce domain-specialised embedding models (legal, code, medical). MRL (Matryoshka Representation Learning) training enables dynamic dimensionality at inference.
+
+---
+
+### Mathematical Foundation: Contrastive Learning
+
+Modern embedding models are trained with **contrastive learning** — a framework for learning representations by comparing similar and dissimilar examples.
+
+**The core objective**: Given an anchor sample **x**, a positive sample **x⁺** (similar to x), and a negative sample **x⁻** (dissimilar), learn an encoder f(·) such that:
+```
+||f(x) - f(x⁺)|| << ||f(x) - f(x⁻)||
+```
+
+**InfoNCE Loss** (van den Oord et al., 2018) — the foundation of most modern contrastive training:
+```
+L_InfoNCE = -log [exp(f(x)·f(x⁺)/τ) / Σ_{j=1}^{K} exp(f(x)·f(x_j)/τ)]
+```
+Where τ is a temperature parameter (typically 0.05–0.1) and the sum is over one positive and K-1 negatives. This objective encourages the model to assign maximum probability to the correct positive within a batch of K options — equivalent to K-way classification.
+
+**Temperature τ effect**: Low τ makes the loss focus on hard negatives (the most similar incorrect samples), creating a sharper loss landscape. High τ treats all negatives equally, giving a smoother gradient. Optimal τ depends on the quality of negative mining.
+
+**Multiple Negatives Ranking (MNR) Loss** — the most widely used loss for embedding fine-tuning:
+```
+L_MNR = (1/B) Σ_{i=1}^{B} [-sim(q_i, d_i⁺) + log Σ_{j=1}^{B} exp(sim(q_i, d_j))]
+```
+In a batch of B (query, positive document) pairs, each query's other positives in the batch serve as "in-batch negatives." This requires no explicit negative mining — the batch itself provides negatives. Works best when queries and documents in the same batch are genuinely different (diverse sampling).
+
+**HNSW Construction — the Index Building Algorithm**:
+HNSW builds a multi-layer graph where the probability of a node appearing at layer *l* is exponentially decreasing:
+```
+P(node at layer l) = exp(-l / m_L)
+where m_L = 1 / ln(max_connections M)
+```
+At query time, search begins at the single entry point in the top layer, greedily navigating toward the query using neighbours as stepping stones, then descending to the next layer and repeating. This achieves O(log N) expected comparisons per query, enabling sub-millisecond search over 100M vectors.
+
+**HNSW complexity**:
+- Index construction: O(N · log(N) · M²) — O(N log N) layers × O(M) comparisons per node per layer
+- Query time: O(log N · ef) — ef = search expansion factor (traded against recall)
+- Memory: O(N · M · d) — each of the N vectors × M connections × d-dimensional float32 vector
+
+**Typical HNSW parameters**: M = 16 (connections per layer), ef_construction = 200 (search expansion during build), ef_search = 100 (search expansion during query). These give ~95% recall with sub-millisecond query time over 10M vectors.
+
+---
+
+### Benchmarks and Performance
+
+#### MTEB Benchmark (as of May 2026, Retrieval Track NDCG@10)
+The MTEB retrieval track is the gold standard for comparing embedding models:
+
+| Model | Provider | Avg MTEB Retrieval | Dimensions | Max Tokens |
+|-------|----------|-------------------|-----------|------------|
+| text-embedding-ada-002 | OpenAI | 49.3 | 1,536 | 8,191 |
+| text-embedding-3-small | OpenAI | 51.7 | 1,536 (flex) | 8,191 |
+| text-embedding-3-large | OpenAI | 55.4 | 3,072 (flex) | 8,191 |
+| embed-english-v3.0 | Cohere | 55.0 | 1,024 | 512 |
+| embed-multilingual-v3 | Cohere | 54.1 | 1,024 | 512 |
+| e5-large-v2 | BAAI/HuggingFace | 56.2 | 1,024 | 512 |
+| BGE-M3 | BAAI | 57.8 | 1,024 | 8,192 |
+| GTE-Qwen2-7B | Alibaba | 61.0 | 3,584 | 32,768 |
+| Voyage-3 | Voyage AI | 62.5 | 1,024 | 32,000 |
+
+**Key insight**: The jump from text-embedding-ada-002 (49.3) to current leaders (~62.5) represents a ~27% improvement in retrieval quality — significant enough to meaningfully change production RAG system accuracy.
+
+#### ANN Index Performance (1 Billion Vector SIFT Benchmark)
+The ANN Benchmark (ann-benchmarks.com) measures recall@10 vs. queries per second:
+
+| Algorithm | Recall@10 | QPS (1M vectors) | Memory Overhead |
+|-----------|-----------|-----------------|----------------|
+| Brute force (exact) | 100% | ~100 | None |
+| HNSW (FAISS) | 98.5% | ~5,000 | ~1.5× vector size |
+| HNSW (Qdrant) | 97.8% | ~8,000 | ~1.2× vector size |
+| IVF-PQ (FAISS) | 93.0% | ~50,000 | ~4× compression |
+| ScaNN (Google) | 98.1% | ~12,000 | ~1.3× vector size |
+
+For 1B vectors (100GB at float32, 128 dimensions):
+- HNSW: ~150GB RAM, 5ms latency, 98.5% recall
+- IVF-PQ: ~25GB RAM (compressed), 10ms latency, 93% recall
+- DiskANN (Microsoft): ~200GB disk + 5GB RAM, 15ms latency, 97% recall (enables billion-scale on a single server)
+
+#### Embedding Dimensionality vs. Quality (text-embedding-3-small, MRL)
+OpenAI's MRL implementation allows truncating to any dimension:
+
+| Dimensions | MTEB Avg | Storage per vector | Relative cost |
+|-----------|---------|-------------------|--------------|
+| 1,536 (full) | 62.3 | 6,144 bytes | 1.0× |
+| 512 | 61.1 | 2,048 bytes | 0.33× |
+| 256 | 60.0 | 1,024 bytes | 0.17× |
+| 64 | 54.4 | 256 bytes | 0.04× |
+
+**Practical implication**: For a 100M document corpus, using 256D instead of 1536D reduces vector storage from 600GB to 100GB while sacrificing only ~3% retrieval quality — often the right trade-off.
+
+#### Domain-Specific Fine-Tuning Impact
+| Domain | Base Model (NDCG@10) | Fine-Tuned Model | Improvement |
+|--------|---------------------|-----------------|-------------|
+| Legal (contract clauses) | 51.2 | 68.4 | +17.2 pp |
+| Biomedical (PubMed) | 48.7 | 63.1 | +14.4 pp |
+| Code (CodeSearchNet) | 43.0 | 72.6 | +29.6 pp |
+| Financial filings (10-K) | 50.1 | 61.5 | +11.4 pp |
+
+Code shows the largest gain because code has unique structural semantics (function names, variable patterns) not well-captured by general-text training.
+
+---
+
+### Real-World Deployment Scale
+
+**Spotify**: Uses embedding-based recommendations for 100M+ songs across 600M+ users. Their Two-Tower model (separate encoder for user, separate for item) produces embeddings updated in near-real-time. Runs ANN search over 100M+ item embeddings to generate personalised playlists and recommendations. Estimated to serve hundreds of millions of queries per day.
+
+**YouTube**: ANN search over video embeddings is a core component of recommendation serving hundreds of millions of users. The Two-Tower retrieval model (introduced in 2019) retrieves candidate videos using approximate nearest-neighbour search over learned video embeddings, then re-ranks with more expensive models.
+
+**Pinecone**: As of 2025, processes >100 billion vector operations per month across customer deployments. Enterprise customers include OpenAI, Microsoft, Salesforce, and hundreds of AI startups. Indexed corpus sizes regularly exceed 1 billion vectors.
+
+**Semantic Scholar (Allen Institute)**: Full academic paper search over 200M+ papers using dense embeddings — enabling semantic research paper discovery. Built on SPECTER (domain-specific citation-informed embeddings for scientific literature).
 
 ## Cross-Disciplinary Connections
 

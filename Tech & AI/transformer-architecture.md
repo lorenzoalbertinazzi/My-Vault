@@ -3,7 +3,7 @@ title: Transformer Architecture — How LLMs Work
 date: 2026-05-26
 tags: [tech, AI, LLM, transformer, deep-learning]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -196,6 +196,182 @@ A critical practical limitation of long-context models: **LLMs systematically pe
 - **Post-retrieval compression**: use a re-ranking step to reduce the number of chunks before generation
 
 This phenomenon means that naive "stuff everything in the context window" approaches degrade as context grows — RAG with targeted retrieval often outperforms long-context ingestion for specific factual queries even when the full document fits.
+
+---
+
+### Historical Development
+
+The transformer did not emerge from a vacuum — it was the culmination of three decades of sequence modelling research, each phase solving one limitation of the previous architecture.
+
+**1986 — Backpropagation and the RNN**: Rumelhart, Hinton & Williams formalise backpropagation through time (BPTT), making it theoretically possible to train Recurrent Neural Networks (RNNs) on sequential data. RNNs process sequences token-by-token, passing a hidden state forward — but gradients vanish over long sequences, preventing the model from learning long-range dependencies.
+
+**1997 — LSTM (Long Short-Term Memory)**: Hochreiter & Schmidhuber (Technische Universität München) introduce gated memory cells — forget gate, input gate, output gate — that allow gradients to flow across hundreds of time steps. LSTMs become the dominant sequence architecture for the next 20 years, powering Google Translate (launched 2016), Apple's Siri neural network backend, and Amazon Alexa.
+
+**2014 — Neural Attention**: Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio (Université de Montréal) publish "Neural Machine Translation by Jointly Learning to Align and Translate." They add an attention mechanism to an encoder-decoder RNN, allowing the decoder to look back at all encoder states rather than relying on a single compressed context vector. BLEU scores on English→French translation improve by ~4 points — a massive jump. The paper introduces the query/key/value framing that the 2017 transformer will formalise.
+
+**2015 — Sequence-to-Sequence with Attention (Google Brain)**: Vinyals, Le et al. demonstrate that attention-augmented RNNs can handle variable-length output sequences. The architecture dominates machine translation, summarisation, and question answering benchmarks through 2017.
+
+**June 2017 — "Attention Is All You Need"**: Eight authors at Google Brain and Google Research — Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan Gomez, Łukasz Kaiser, and Illia Polosukhin — publish the transformer. The key insight: discard the RNN entirely. Replace sequential processing with parallel self-attention over the full sequence. On WMT 2014 English-to-German translation, the transformer achieves 28.4 BLEU — surpassing all prior models at a fraction of the training cost (12 hours on 8 P100 GPUs vs. weeks for the best RNN ensemble). The paper is presented at NeurIPS 2017 and becomes the most-cited machine learning paper in history, with over 100,000 citations by 2026.
+
+**June 2018 — GPT-1 (OpenAI)**: Alec Radford, Karthik Narasimhan, Tim Salimans, and Ilya Sutskever train a 117M-parameter decoder-only transformer on BooksCorpus (7,000 books, ~1B words). Fine-tuned on downstream tasks with only small datasets, GPT-1 outperforms task-specific models — establishing the "pre-train on general text, fine-tune on task" paradigm.
+
+**October 2018 — BERT (Google)**: Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova train a 340M-parameter encoder-only transformer with bidirectional masked language modelling (MLM). BERT achieves state-of-the-art on 11 NLP benchmarks simultaneously, including the GLUE benchmark (80.5 vs. previous SOTA of 72.1 — an 8-point jump). BERT demonstrates that the same architecture, simply pretrained differently, can serve both generation and understanding tasks.
+
+**February 2019 — GPT-2 (OpenAI, 1.5B parameters)**: Trained on WebText (40GB of Reddit outlinks, ~8M documents). OpenAI stages the release over 9 months citing "misuse concerns" — the first major AI safety-motivated staged release, igniting a public debate about responsible disclosure. GPT-2 produces remarkably coherent long-form text but is still unreliable for factual tasks.
+
+**May 2020 — GPT-3 (OpenAI, 175B parameters)**: Brown et al. train on ~500B tokens (Common Crawl, Books1, Books2, Wikipedia). Crucially, GPT-3 demonstrates **few-shot learning** at scale: given 3–5 examples in the prompt, it performs competitively with fine-tuned models on many tasks. This eliminates the need for task-specific training for the first time. Training cost: approximately $4.6M in cloud compute.
+
+**2020 — Scaling Laws (Kaplan et al.)**: OpenAI publishes the first systematic scaling laws paper, quantifying power-law relationships between model size, data, compute, and loss. This gives the field a roadmap: performance is predictable.
+
+**November 2022 — ChatGPT / InstructGPT**: OpenAI releases ChatGPT (RLHF-trained GPT-3.5), achieving 1 million users in 5 days and 100 million in 2 months — the fastest-growing consumer application in history. RLHF transforms the research architecture into a product, demonstrating that alignment training is the critical last mile.
+
+**March 2023 — GPT-4 (OpenAI)**: Multimodal (vision + language), achieves 90th percentile on the Uniform Bar Exam, 88th percentile on LSAT. Estimated 1 trillion parameters with Mixture of Experts architecture (never confirmed by OpenAI).
+
+**2023–2026 — Open-Source and Competition**: Meta releases Llama (February 2023, 65B), then Llama 2 (July 2023), then Llama 3 (April 2024, 70B/405B). Mistral AI (founded by former DeepMind/Meta researchers, Paris, June 2023) releases Mistral 7B and Mixtral 8x7B (MoE). Google releases Gemini Ultra (December 2023), Gemma (February 2024). Anthropic releases Claude 3 Opus/Sonnet/Haiku (March 2024). DeepSeek (Hangzhou, China) releases DeepSeek-V3 (December 2024) and R1 (January 2025) — matching GPT-4-class performance at dramatically lower training cost (~$6M claimed), reshaping market expectations about compute requirements.
+
+---
+
+### Mathematical Foundation
+
+#### The Full Attention Computation
+
+Let the input sequence have length *N* and each token be represented by a *d_model*-dimensional vector. The input matrix **X** ∈ ℝ^(N × d_model).
+
+For one attention head with key dimension *d_k*:
+
+```
+Q = X · W_Q    (query projection)     W_Q ∈ ℝ^(d_model × d_k)
+K = X · W_K    (key projection)       W_K ∈ ℝ^(d_model × d_k)
+V = X · W_V    (value projection)     W_V ∈ ℝ^(d_model × d_v)
+
+Attention(Q, K, V) = softmax(Q·Kᵀ / √d_k) · V
+```
+
+**The √d_k scaling factor**: Without this, for large *d_k*, the dot products Q·Kᵀ grow large in magnitude, pushing softmax into regions of near-zero gradient (the "flat" tails of the softmax function), making training unstable. Dividing by √d_k keeps the variance of the dot product roughly 1.0 regardless of *d_k*.
+
+**The softmax**: For attention row *i*, the unnormalised scores are **a**_i = Q_i · Kᵀ / √d_k. The softmax converts these to normalised weights:
+
+```
+softmax(a_i)_j = exp(a_{ij}) / Σ_k exp(a_{ik})
+```
+
+This ensures each row of the attention matrix sums to 1.0 — the output is a weighted average of the value vectors.
+
+**Multi-head attention** with *h* heads, each with d_k = d_v = d_model/h:
+
+```
+MultiHead(Q, K, V) = Concat(head_1, ..., head_h) · W_O
+
+where head_i = Attention(Q·W_Qi, K·W_Ki, V·W_Vi)
+
+W_O ∈ ℝ^(h·d_v × d_model)  [output projection to restore d_model dimensions]
+```
+
+**FLOP count for a single forward pass** through a transformer with *L* layers, *N* sequence length, *d_model* embedding dimension, *h* heads, and FFN hidden dimension *d_ffn* = 4·d_model:
+
+- Attention QKV projections: 3 × 2·N·d_model² per layer = 6N·d_model²·L
+- Attention matrix (Q·Kᵀ): 2·N²·d_k = 2N²·d_model per layer (L layers) = 2N²·d_model·L
+- FFN: 2 × 2·N·d_model·d_ffn·L = 16N·d_model²·L
+
+**Total ≈ 24N·d_model²·L** FLOPs per forward pass (for N << d_model), dominated by the matrix multiplications. Training requires ~6 FLOPs per parameter per token (2 forward pass, 4 backward pass). GPT-3's training compute: 175B params × 300B tokens × 6 ≈ 3.14 × 10²³ FLOP.
+
+#### Causal Masking
+
+Decoder-only models prevent each token from attending to future tokens by setting attention scores to -∞ before the softmax for the upper triangle of the attention matrix:
+
+```
+score_{ij} = { Q_i · K_j / √d_k    if j ≤ i
+             { -∞                    if j > i
+```
+
+After softmax, -∞ becomes 0.0 — the token attends only to its context.
+
+#### Layer Normalisation (Pre-Norm vs. Post-Norm)
+
+**Post-Norm** (original 2017 paper): LayerNorm applied *after* residual connection:
+```
+x' = LayerNorm(x + Sublayer(x))
+```
+Requires careful learning rate warmup to train stably.
+
+**Pre-Norm** (GPT-2, Llama, all modern models): LayerNorm applied *before* the sublayer:
+```
+x' = x + Sublayer(LayerNorm(x))
+```
+More stable to train (gradient flows cleanly through the residual), works with higher learning rates. The residual connection ensures x' ≈ x at initialisation — the sublayer learns a small residual correction.
+
+**SwiGLU FFN** (Noam Shazeer, 2020; used in Llama, PaLM):
+```
+FFN_SwiGLU(x) = (SiLU(W₁x) ⊙ W₂x) · W₃
+```
+Uses two separate linear projections in the first layer, with elementwise gating. Empirically outperforms vanilla ReLU FFN by ~0.5-1.0 perplexity points at equal parameter count.
+
+---
+
+### Benchmarks and Performance
+
+The following tables document capability milestones with specific numbers, providing a quantitative record of the transformer era.
+
+#### Language Understanding and Reasoning (MMLU — Massive Multitask Language Understanding)
+MMLU (Hendrycks et al., 2020) tests 57 subjects from elementary mathematics to professional law and medicine. Random baseline: 25%. Human expert: ~89%.
+
+| Model | Release | MMLU (5-shot) | Notes |
+|-------|---------|--------------|-------|
+| GPT-3 (175B) | May 2020 | 43.9% | First large-scale demonstration of few-shot learning |
+| Gopher (280B, DeepMind) | Dec 2021 | 60.0% | Scaling LLMs beyond GPT-3 |
+| Chinchilla (70B, DeepMind) | Mar 2022 | 67.5% | Smaller model, optimal training data ratio |
+| GPT-4 | Mar 2023 | 86.4% | First model approaching human expert range |
+| Claude 3 Opus | Mar 2024 | 86.8% | Competitive with GPT-4 |
+| Gemini Ultra | Dec 2023 | 90.0% | First model exceeding human expert baseline |
+| GPT-4o | May 2024 | 88.7% | Multimodal at GPT-4 quality |
+| Claude 3.5 Sonnet | Jun 2024 | 88.7% | Matches GPT-4o at lower inference cost |
+| DeepSeek-V3 | Dec 2024 | 88.5% | Chinese frontier model at dramatically lower training cost |
+| o3 (OpenAI) | Apr 2025 | 91.6% | Extended thinking model |
+
+#### Mathematical Reasoning (MATH — Hendrycks et al.)
+MATH contains 12,500 competition math problems (AMC, AIME level). Human expert: ~90%.
+
+| Model | MATH Score | Notes |
+|-------|-----------|-------|
+| GPT-4 (standard) | 52.0% | 2023 baseline |
+| Gemini Ultra | 53.2% | Comparable to GPT-4 |
+| GPT-4o | 76.6% | Major improvement via training refinements |
+| o1 (OpenAI) | 94.2% | Extended thinking; 2024 |
+| DeepSeek-R1 | 97.3% | Extended thinking; January 2025 |
+| o3 | 96.7% | Top-tier as of 2025 |
+
+#### Code Generation (HumanEval — pass@1)
+HumanEval (Chen et al., 2021): 164 Python programming problems. Tests basic algorithmic implementation.
+
+| Model | HumanEval pass@1 | Notes |
+|-------|-----------------|-------|
+| GPT-3 (few-shot) | 11.4% | Codex paper baseline |
+| Codex (12B, 2021) | 28.8% | Fine-tuned on GitHub code |
+| GPT-4 | 67.0% | 2023 |
+| Claude 3 Opus | 84.9% | 2024 |
+| Claude 3.5 Sonnet | 92.0% | Mid-2024; near-human ceiling on easy problems |
+| GPT-4o | 90.2% | 2024 |
+
+#### Long-Context Retrieval (Needle in a Haystack)
+This test embeds a specific fact ("The best thing to do in San Francisco is eat a sandwich") at various positions within contexts of up to 1M tokens, then queries for it. Gemini 1.5 Pro (February 2024) was the first model to achieve near-perfect (~99%) recall across all positions in a 1M-token context.
+
+#### Inference Efficiency
+- **KV Cache memory**: For Llama 3 70B with GQA (8 KV heads), 128K context, bf16 precision: KV cache = 2 × 8 × 128,000 × 8,192 / 8 (GQA reduction) × 2 bytes ≈ 33 GB. Without GQA (standard MHA): 264 GB — the difference between fitting on 4× A100s vs. requiring 16×.
+- **Speculative decoding speedup**: 2–3× throughput improvement with a draft model of ~1/10th the target model's size (e.g., 7B draft for 70B target), with zero quality loss (mathematically identical output distribution).
+
+---
+
+### Current Research Frontier
+
+**Long-Context Scaling**: Gemini 1.5 Pro demonstrated 1M-token context; Google's 2025 models support 2M tokens. The key research question is whether models with very long contexts can maintain genuine reasoning quality (not just retrieval) across the full window. Current evidence suggests they cannot yet — the "lost in the middle" effect persists even at 1M tokens.
+
+**Multimodality as First-Class**: GPT-4o, Gemini 1.5/2, Claude 3/3.5/4 are natively multimodal — trained on interleaved text, image, audio, and video tokens from the start rather than patching modalities onto a text model. The research frontier is video understanding with long temporal reasoning (hours of video, not seconds).
+
+**Test-Time Compute Scaling**: OpenAI o1/o3, DeepSeek-R1, and Claude's extended thinking mode all demonstrate that allowing a model to generate internal reasoning tokens before answering can match or exceed the capability gains of training a model 10× larger. The current research questions are: how to train optimal thinking patterns (process reward models vs. MCTS vs. policy gradient), how to efficiently route queries to the appropriate thinking budget, and whether there is a ceiling to test-time scaling.
+
+**Architecture Hybridisation**: Pure transformer vs. pure SSM (Mamba) is giving way to hybrid architectures. Jamba (AI21 Labs, 2024) interleaves transformer and Mamba layers 1:7. The 2026 research direction is principled layer-type assignment — understanding which layers in a transformer benefit from full attention vs. linear attention vs. SSM, enabling architecturally-optimal hybrid designs.
+
+**Post-Training Alignment at Frontier Scale**: RLHF with PPO has been largely displaced by DPO (Direct Preference Optimisation) and its variants (ORPO, SimPO, IPO) for computational efficiency reasons. The active research frontier is scalable oversight — how to maintain alignment as models become more capable than human raters at the tasks being evaluated. Constitutional AI (Anthropic), debate (DeepMind), and process reward models are the leading approaches.
 
 ## Cross-Disciplinary Connections
 

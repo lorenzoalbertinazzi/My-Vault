@@ -3,7 +3,7 @@ title: Diffusion Models and AI Image Generation
 date: 2026-05-27
 tags: [ai, machine-learning, diffusion-models, generative-ai, computer-vision, stable-diffusion, dall-e]
 source: research / academic literature
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -259,6 +259,172 @@ Diffusion models have extended to **3D content generation** — representing one
 **Gaussian Splatting** (3DGS, 2023): A radically faster alternative to NeRF that represents 3D scenes as millions of colored Gaussian "splats." Generation quality and speed have improved dramatically with subsequent work combining 3DGS with diffusion model guidance.
 
 **Current leaders (2025–2026)**: Stability AI's TripoSR, Meshy, and Luma AI's Genie offer near-real-time text-to-3D generation with commercial quality — representing the productization of 3 years of academic research. Key remaining limitations: complex topology, fine details (hands, text), and physically accurate materials remain challenging.
+
+---
+
+### Historical Development
+
+The path to modern diffusion models runs through three distinct research traditions: variational autoencoders, generative adversarial networks, and statistical thermodynamics. Each contributed pieces that converged in DDPM.
+
+**1985 — Boltzmann Machines**: Hinton & Sejnowski introduce Boltzmann Machines — energy-based probabilistic models that learn by slowly adding and removing noise from data. The concept of learning by iterative noise is established, but training is intractable for large models.
+
+**2013 — Variational Autoencoders (VAEs)**: Kingma & Welling (University of Amsterdam) publish "Auto-Encoding Variational Bayes" — a generative model that learns a structured latent space by encoding data to a Gaussian distribution and decoding back. VAEs produce diverse samples but blurry images due to the isotropic Gaussian assumption. The paper's reparameterization trick (sampling ε ~ N(0,I), then computing z = μ + σ·ε to allow gradient flow) becomes ubiquitous.
+
+**2014 — GANs**: Ian Goodfellow, Yoshua Bengio, and colleagues at Université de Montréal introduce Generative Adversarial Networks — a min-max game between a generator G and discriminator D. Goodfellow famously wrote the original code at a post-dissertation party. GANs produce sharp images but suffer mode collapse and training instability.
+
+**2015 — Score Matching and Denoising**: Hyvärinen (2005) had introduced score matching — estimating the gradient of the data log-density without requiring the normalising constant. Alain & Bengio (2014) showed that denoising autoencoders implicitly learn score functions. Vincent (2011) proved that training a denoising autoencoder minimises the Fisher divergence between the data distribution and the learned distribution. These theoretical results sit dormant for years.
+
+**2019 — NCSNs (Yang Song, Stanford)**: Yang Song and Stefano Ermon publish "Generative Modeling by Estimating Gradients of the Data Distribution" (NeurIPS 2019). They propose Noise Conditioned Score Networks: train a network to estimate the score function (∇ log p(x)) at multiple noise levels, then use Langevin dynamics to sample from the data distribution by iteratively following the estimated gradient. NCSN generates high-quality images but with a complex multi-scale training procedure. This is the direct ancestor of diffusion models.
+
+**June 2020 — DDPM**: Jonathan Ho, Ajay Jain, and Pieter Abbeel (UC Berkeley) publish "Denoising Diffusion Probabilistic Models" (NeurIPS 2020). The critical contributions:
+1. A simplified training objective (predict the noise ε, not the score) that is mathematically equivalent but far easier to optimise
+2. A specific noise schedule that empirically works well
+3. A connection between score matching and denoising — unifying NCSN and VAE perspectives
+
+On CIFAR-10, DDPM achieves FID of 3.17 — beating the previous GAN state-of-the-art (StyleGAN2: 2.92) on diversity while achieving comparable FID. For the first time, a non-GAN model challenges GANs on image quality.
+
+**2021 — Improved DDPM and ADM**: Nichol & Dhariwal (OpenAI) publish "Improved Denoising Diffusion Probabilistic Models" — adding a learned noise schedule and cosine noise schedule, improving FID from 3.17 to 2.94 on CIFAR-10 and demonstrating scaling to 256×256. ADM (Dhariwal & Nichol, 2021) uses a classifier to guide generation — the first demonstration that diffusion models could surpass GANs even on large-resolution images (ADM beats BigGAN on ImageNet 256×256 with FID 3.85 vs. 6.95).
+
+**January 2022 — DALL·E 2 (OpenAI)**: Ramesh et al. combine CLIP embeddings with a diffusion model for text-conditioned generation. Not public, but demonstrates photorealistic text-to-image generation to the research community.
+
+**April 2022 — Latent Diffusion Models (LDMs)**: Robin Rombach, Andreas Blattmann, Dominik Lorenz, Patrick Esser, Björn Ommer (LMU Munich / Runway ML) publish "High-Resolution Image Synthesis with Latent Diffusion Models." The key innovation: perform diffusion in a VAE's compressed latent space (64×64 instead of 512×512 pixel space), reducing compute by ~64×. This makes diffusion tractable for consumer hardware. The paper becomes the foundation for Stable Diffusion.
+
+**August 2022 — Stable Diffusion Public Release**: Stability AI releases Stable Diffusion 1.4 under an open-weight licence — the first high-quality text-to-image model accessible to anyone with a consumer GPU (6–8 GB VRAM). Within weeks, a community of researchers, artists, and developers creates thousands of fine-tuned variants. By end of 2022, Stable Diffusion has been run on over 10 million machines.
+
+**November 2022 — Midjourney v4**: Jumps from cartoon-like outputs to photorealistic generation, triggering mainstream media coverage and the first serious public debate about AI-generated imagery.
+
+**2023 — ControlNet, SDXL, DALL·E 3**:
+- February: ControlNet (Stanford) enables spatial control over generation
+- July: SDXL (Stability AI, 3.5B parameters) — massive quality improvement
+- October: DALL·E 3 (OpenAI) — prompt adherence breakthrough via image captioning training
+
+**2024 — Flow Matching Displaces DDPM**:
+- March: Stable Diffusion 3 (Stability AI) uses flow matching — first major commercial model to abandon DDPM
+- August: Flux (Black Forest Labs, co-founded by original Stable Diffusion authors) releases Flux.1 with DiT architecture and flow matching — sets new open-source quality standard
+- February: OpenAI releases Sora for video generation, demonstrating DiT architectures at video scale
+
+---
+
+### Mathematical Foundation: The ELBO and Variational Lower Bound
+
+DDPM is a specific instance of a **hierarchical variational autoencoder** (HVAE). Understanding this connection reveals why the training objective works.
+
+**The goal**: Learn a model p_θ(x₀) that assigns high probability to real data x₀.
+
+**The forward process** q(x_{1:T} | x₀) is fixed (not learned) — it progressively adds Gaussian noise:
+```
+q(x_t | x_{t-1}) = N(x_t; √(1-β_t)·x_{t-1}, β_t·I)
+```
+
+The entire forward trajectory can be sampled in closed form using the reparameterisation:
+```
+x_t = √ᾱ_t · x₀ + √(1-ᾱ_t) · ε,    ε ~ N(0, I)
+
+where ᾱ_t = Π_{s=1}^{t} (1-β_s)   [cumulative noise product]
+```
+
+As T → ∞ and β_t → 0 appropriately, ᾱ_T → 0, meaning x_T ~ N(0, I) — pure noise.
+
+**The reverse process** p_θ(x_{t-1} | x_t) is learned — a neural network that predicts the denoised image:
+```
+p_θ(x_{t-1} | x_t) = N(x_{t-1}; μ_θ(x_t, t), Σ_θ(x_t, t))
+```
+
+**The Evidence Lower Bound (ELBO)**: Maximum likelihood training — maximise log p_θ(x₀) — is intractable because it requires marginalising over all T latent variables. Using Jensen's inequality:
+```
+log p_θ(x₀) ≥ E_q[log p_θ(x₀|x₁) - Σ_{t=2}^{T} KL(q(x_{t-1}|x_t,x₀) || p_θ(x_{t-1}|x_t)) - KL(q(x_T|x₀) || p(x_T))]
+```
+
+The key term: at each timestep, the KL divergence between the true reverse posterior q(x_{t-1}|x_t, x₀) and the learned reverse p_θ(x_{t-1}|x_t). Since both are Gaussian (for the linear noise schedule), the KL has a closed form.
+
+**Ho et al.'s simplified objective**: Computing the full ELBO is complex. Ho et al. showed that reparameterising the network to predict the noise ε_θ(x_t, t) rather than the mean μ_θ(x_t, t) gives a simplified objective that is equivalent to a reweighted ELBO:
+```
+L_simple = E_{t, x₀, ε} [ ||ε - ε_θ(√ᾱ_t · x₀ + √(1-ᾱ_t) · ε, t)||² ]
+```
+
+**Why this works intuitively**: The network learns to undo the specific noise that was added at each timestep. At low t (slight noise), the prediction is mostly about fine details. At high t (heavy noise), the prediction is about coarse structure. Together, they learn the full data distribution.
+
+**Classifier-Free Guidance derivation**:
+The guided score function is:
+```
+∇_x log p(x|y) = ∇_x log p(y|x) + ∇_x log p(x)
+```
+By Bayes' rule, ∇_x log p(y|x) = ∇_x log p(x|y) - ∇_x log p(x). So:
+```
+∇_x log p(x|y) = ∇_x log p(x) + w · [∇_x log p(x|y) - ∇_x log p(x)]
+                = (1+w) · score(cond) - w · score(uncond)
+```
+Setting w = 0 gives the unconditional score; w = 7 means the conditional score is amplified 8× — stronger conditioning but less diversity.
+
+---
+
+### Benchmarks and Performance
+
+#### Image Generation Quality (FID — Fréchet Inception Distance)
+FID measures the distance between the distribution of generated images and real images in feature space (using an Inception network). **Lower is better.** Human FID is ~0.
+
+**CIFAR-10 (32×32 images, 10 classes)**:
+| Model | Year | FID | Notes |
+|-------|------|-----|-------|
+| DCGAN | 2016 | 37.7 | Early GAN baseline |
+| BigGAN (256 class-conditional) | 2019 | 14.7 | Best GAN of the era |
+| StyleGAN2 | 2020 | 2.92 | GAN peak quality on CIFAR |
+| DDPM (Ho et al.) | 2020 | 3.17 | First competitive diffusion model |
+| DDPM (improved) | 2021 | 2.94 | Beat StyleGAN2 on FID |
+
+**ImageNet 256×256 (class-conditional)**:
+| Model | Year | FID | Notes |
+|-------|------|-----|-------|
+| BigGAN-deep | 2019 | 6.95 | Prior GAN SOTA |
+| ADM (diffusion) | 2021 | 3.85 | Beat BigGAN; 2021 milestone |
+| DiT-XL/2 | 2023 | 2.27 | Transformer backbone for diffusion |
+| Simple Diffusion | 2023 | 1.75 | Google; optimised training |
+
+#### Text-to-Image Human Evaluation
+FID poorly captures prompt adherence. Human preference studies show:
+- **DrawBench** (Google, 2022): Imagen > DALL·E 2 > Stable Diffusion 1.x by human rater preference on prompt faithfulness and photorealism
+- **PartiPrompts** (2022, 1,600 prompts): Human evaluators rate Parti (Google, 20B autoregressive) comparable to Imagen on complex compositional prompts
+- **GenAI-Bench** (2024): Flux.1 [dev] scores 0.69 on compositional prompts (multiple objects with attributes); DALL·E 3: 0.71; SD3: 0.65
+
+#### Inference Speed (SDXL, 1024×1024, A100 GPU)
+| Sampler | Steps | Time | Notes |
+|---------|-------|------|-------|
+| DDPM | 1000 | ~420s | Baseline, impractical |
+| DDIM | 50 | ~22s | First practical fast sampler |
+| DPM-Solver++ 2M | 20 | ~9s | Good quality/speed |
+| LCM (distilled) | 4 | ~2s | Latent Consistency Model |
+| SDXL-Turbo | 1 | ~0.5s | Adversarial distillation; quality trade-off |
+| Flux.1 [schnell] | 4 | ~3s (H100) | Flow matching, 4-step |
+
+#### Video Generation Progress
+| Model | Year | Max Length | Resolution | Key Achievement |
+|-------|------|-----------|------------|----------------|
+| ModelScope | 2023 | 4 seconds | 256×256 | First open video diffusion |
+| Gen-2 (Runway) | 2023 | 16 seconds | 1280×768 | Commercial quality |
+| Sora (OpenAI) | 2024 | 60 seconds | 1920×1080 | Long coherent video; DiT architecture |
+| Kling 1.5 (Kuaishou) | 2024 | 120 seconds | 1080p | Chinese competitor |
+| Wan 2.1 (Alibaba) | 2025 | 90 seconds | 1080p | State-of-the-art open-weight video model |
+
+#### Real-World Scale
+- **Stable Diffusion**: As of 2025, estimated 50M+ users across all deployment channels; Stability AI processes ~3 billion image generation requests per month on their hosted infrastructure
+- **Midjourney**: ~18M active users (2024); generated over 1 billion images by 2024; raised no external funding ($0) while generating ~$300M annual recurring revenue
+- **Adobe Firefly**: Integrated into Photoshop and Illustrator; generated 12 billion images in its first year (2023–2024)
+- **DALL·E 3**: Available to all ChatGPT Plus subscribers; generates millions of images daily
+- **Commercial video**: Runway Gen-3 used in 8 major film/TV productions in 2024 including promotional content for major studios
+
+---
+
+### Limitations and Open Problems
+
+**Compositionality failures**: Current models struggle to reliably combine multiple attributes with multiple objects. "A red cube on top of a blue sphere to the left of a yellow cylinder" still fails ~40% of the time even for frontier models. The spatial and attribute-binding capabilities of diffusion models appear limited by how language is encoded in cross-attention layers.
+
+**Temporal consistency in video**: Video generation models cannot maintain object identity, physics, or scene lighting consistently across more than ~5–10 seconds of generated video. A character's face changes subtly between frames; water behaves unrealistically; complex collisions produce non-physical results. Solving this likely requires an integrated physics simulation or a fundamentally different temporal representation.
+
+**Copyright and style ownership**: The legal status of training on copyrighted images and generating in copyrighted styles is unresolved globally. Getty Images sued Stability AI in January 2023; multiple class-action suits are ongoing. The technical question of whether style can be protected independently of content (a specific illustrator's style) is contested by legal systems designed for pre-AI creative production.
+
+**Bias in the generated distribution**: Stable Diffusion generates images that skew heavily toward Western aesthetics, lighter skin tones for neutral prompts, and stereotypical gender and racial associations (e.g., "nurse" → predominantly female; "CEO" → predominantly male). These are direct encodings of biases in the web-scraped training data (primarily LAION-5B).
+
+**Evaluation metrics poorly aligned with human judgment**: FID captures distributional similarity but not prompt adherence, coherence, or aesthetics. Human evaluations are expensive and subjective. The field lacks a universally agreed evaluation protocol — making benchmark comparisons between models difficult to interpret.
 
 ## Cross-Disciplinary Connections
 

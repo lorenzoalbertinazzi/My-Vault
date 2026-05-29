@@ -3,7 +3,7 @@ title: Retrieval-Augmented Generation (RAG) — Architecture, Mechanics, and Bes
 date: 2026-05-27
 tags: [ai, llm, rag, retrieval, vector-databases, embeddings, nlp]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -324,6 +324,160 @@ The choice between RAG and fine-tuning is one of the most consequential architec
 - **Use both when**: Fine-tune for domain behavior and format; RAG for dynamic factual knowledge. This is the pattern used in enterprise deployments: a fine-tuned model with domain vocabulary and communication style, augmented with a RAG system for current company data.
 
 **The fine-tuning trap**: Many teams fine-tune to inject factual knowledge (e.g., "add our product catalog to the model"). This rarely works well — facts are hard to reliably inject via fine-tuning and easy to retrieve via RAG. Fine-tuning is most effective for *behavioral* changes, not *knowledge* injection.
+
+---
+
+### Historical Development
+
+RAG synthesises information retrieval (a field dating to the 1960s) with neural language generation — two traditions that developed largely in parallel until 2020.
+
+**1960s–1990s — Classical Information Retrieval**: The Cranfield experiments (1960–1966, UK) established evaluation frameworks for document retrieval systems. TF-IDF (term frequency–inverse document frequency) becomes the dominant relevance scoring function, formalised by Karen Spärck Jones (1972) and extended by Robertson & Ogilvie (BM25, 1994). These sparse keyword-matching approaches underpin Google Search's early architecture and remain competitive for many retrieval tasks through the present.
+
+**1990s–2000s — Question Answering Systems**: IBM's Watson (built 2010, won Jeopardy 2011) represents the peak of pre-neural QA: a pipeline of 100+ handcrafted components — named entity recognition, passage retrieval, semantic role labelling, answer scoring — operating over a structured knowledge base and Wikipedia. Watson retrieves relevant passages and synthesises answers from them — a conceptual ancestor of RAG without neural components.
+
+**2017 — Dense Passage Retrieval Experiments**: With BERT's release (2018), researchers begin replacing sparse BM25 retrieval with dense neural embeddings. Experiments show that BERT-based bi-encoders significantly outperform BM25 on the Natural Questions benchmark for the first time.
+
+**2019 — Dense Passage Retrieval (DPR, Facebook AI)**: Karpukhin et al. demonstrate that DPR trained on question-passage pairs dramatically outperforms BM25 on Natural Questions and TriviaQA — closing the gap between retrieval quality and downstream QA performance. DPR introduces the bi-encoder architecture (separate encoders for query and document, trained with in-batch negatives) that underlies all modern embedding models.
+
+**September 2020 — RAG (Lewis et al., Meta AI)**: Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, and Douwe Kiela publish "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks" (NeurIPS 2020). Key contributions:
+1. End-to-end differentiable retrieval: the retriever (DPR) and generator (BART) are jointly fine-tuned
+2. Marginalisation over retrieved documents: generate answers that are consistent with multiple retrieved passages
+3. State-of-the-art on Natural Questions, TriviaQA, and fact verification without any task-specific fine-tuning
+This paper coins the term "RAG" and establishes the architecture.
+
+**2021 — REALM and the Pre-Training Era**: Guu et al. (Google) publish REALM: Retrieval-Enhanced Language Model Pretraining — a system where retrieval is integrated into the pretraining process itself. REALM pretrained a model to retrieve Wikipedia passages as part of masked language modelling. While REALM is computationally expensive and superseded, it establishes the principle that retrieval can be deeply integrated, not just bolted on.
+
+**2022 — Scaling and Productisation**:
+- Langchain (October 2022): Harrison Chase releases the first RAG orchestration framework, reaching 10,000 GitHub stars within weeks. Provides abstractions for chunking, embedding, retrieval, and generation that make RAG accessible to developers without ML expertise.
+- Llama Index (October 2022, originally GPT Index): Jerry Liu releases a competing framework focused specifically on RAG architectures over complex document corpora.
+
+**2023 — Advanced RAG Patterns Proliferate**:
+- HyDE (Gao et al., May 2023): Hypothetical Document Embeddings — generate a fake answer, retrieve documents similar to the fake answer. +5–15% recall on TREC and MS MARCO.
+- Self-RAG (Asai et al., October 2023, CMU/UW/Allen Institute): Fine-tune models to generate special reflection tokens that control retrieval and self-evaluate quality
+- GraphRAG (Microsoft, November 2023): Knowledge graph extraction + community summarisation for complex analytical queries
+
+**2024 — Multimodal, Long-Context, and Production at Scale**:
+- ColPali (February 2024): Multi-vector visual document retrieval — embed full PDF page images without OCR
+- Corrective RAG (January 2024): Adaptive fallback to web search when retrieved documents are low quality
+- The emergence of 128K–1M token context windows challenges the assumption that RAG is always necessary for large corpora
+
+**2025–2026 — Enterprise RAG at Scale**: Most Fortune 500 companies have RAG deployments in production. Benchmarks show that enterprise RAG deployments with well-structured chunking and re-ranking reduce hallucination rates from ~40–60% (base LLM on knowledge-intensive queries) to ~5–15%, making the technology viable for customer-facing applications.
+
+---
+
+### Mathematical Foundation
+
+#### Vector Similarity Search
+The core retrieval operation: given a query embedding **q** ∈ ℝ^d and a corpus of N document embeddings {**d₁**, **d₂**, ..., **d_N**} ⊂ ℝ^d, find the top-k most similar documents.
+
+**Cosine similarity** (most common for text):
+```
+sim(q, dᵢ) = (q · dᵢ) / (||q|| · ||dᵢ||)
+```
+
+If all vectors are L2-normalised (||v|| = 1), cosine similarity reduces to dot product — enabling efficient matrix multiplication: sim(**q**, **D**) = **q** · **Dᵀ**, where **D** ∈ ℝ^(N×d) is the matrix of document embeddings.
+
+**BM25 scoring** (sparse baseline):
+```
+BM25(q, d) = Σ_{term t in q} IDF(t) · [TF(t,d) · (k₁+1)] / [TF(t,d) + k₁·(1-b+b·|d|/avgdl)]
+```
+Where:
+- IDF(t) = log[(N - df_t + 0.5) / (df_t + 0.5) + 1] — penalises common terms
+- TF(t,d) = count of term t in document d
+- k₁ ∈ [1.2, 2.0] — term saturation parameter (default 1.5)
+- b ∈ [0, 1] — length normalisation (default 0.75)
+- avgdl = average document length in tokens
+
+**Reciprocal Rank Fusion (RRF)** — combining dense and sparse scores:
+```
+RRF_score(d) = Σ_{ranker r} 1 / (k + rank_r(d))
+```
+Where k = 60 (empirically robust constant). For each ranked list (dense, sparse), each document gets a score inversely proportional to its rank. RRF is parameter-free, robust to scale differences between scorers, and empirically outperforms weighted combination in most benchmarks.
+
+#### The RAGAS Evaluation Framework
+RAGAS (Retrieval Augmented Generation Assessment) provides automated evaluation via LLM-as-judge:
+
+**Faithfulness** — fraction of answer claims that can be traced to retrieved context:
+```
+Faithfulness = |{claims in answer that are supported by context}| / |{total claims in answer}|
+```
+Computed by prompting a judge LLM to decompose the answer into atomic claims and verify each claim against the retrieved chunks.
+
+**Answer Relevancy** — semantic similarity between the actual question and questions that the answer implies:
+```
+AnswerRelevancy = (1/n) Σᵢ cos_sim(q, qᵢ')
+```
+Where qᵢ' are questions generated by an LLM from the answer alone. If the answer actually addresses the question, generated questions should be similar to the original.
+
+**Context Precision@k**:
+```
+CP@k = (1/k) Σ_{i=1}^{k} [Precision@i · rel(i)]
+```
+Where rel(i) = 1 if the i-th retrieved chunk is relevant, 0 otherwise.
+
+---
+
+### Benchmarks and Performance
+
+#### Hallucination Reduction
+The primary motivation for RAG is hallucination reduction. Empirical measurements from production deployments:
+
+| Setup | Hallucination Rate | Source |
+|-------|-------------------|--------|
+| GPT-4 (no retrieval, knowledge-intensive QA) | 38–52% | Various enterprise evals |
+| GPT-3.5 (no retrieval) | 60–75% | Various benchmarks |
+| RAG with basic chunking (text-embedding-ada-002 + GPT-4) | 12–20% | RAGAS benchmark studies |
+| RAG with re-ranking (BGE-reranker + GPT-4) | 6–10% | Enterprise case studies |
+| RAG with parent-child chunking + re-ranking | 4–8% | Advanced production benchmarks |
+| Fine-tuned LLM on domain data (no RAG) | 15–25% | Fine-tuning typically doesn't eliminate hallucination |
+
+#### BEIR Benchmark (Thakur et al., 2021)
+BEIR is the standard retrieval quality benchmark — 18 diverse datasets including TREC News, Natural Questions, ArguAna, and BioASQ. Measured as NDCG@10 (normalised discounted cumulative gain at rank 10).
+
+| Retriever | Avg NDCG@10 (BEIR) | Notes |
+|-----------|-------------------|-------|
+| BM25 | 42.8 | Surprisingly strong baseline |
+| DPR (bi-encoder, fine-tuned NQ) | 33.8 | Generalises poorly out-of-domain |
+| OpenAI text-embedding-3-large | 55.4 | Top commercial model |
+| E5-large-v2 | 56.2 | Strong open-source |
+| BGE-M3 | 57.0 | BAAI; multi-lingual, multi-granularity |
+| Voyage-3 | 62.5 | Top leaderboard (MTEB) as of 2025 |
+| BM25 + Dense (RRF hybrid) | ~60–63 | Consistently beats either alone |
+
+#### Natural Questions (Open-Domain QA)
+Lewis et al. (2020) RAG paper results vs. alternatives:
+
+| Model | NQ Exact Match | TriviaQA EM |
+|-------|---------------|-------------|
+| T5-11B (no retrieval) | 34.5 | 37.4 |
+| DPR + FiD (dense retrieval + reader) | 51.4 | 67.6 |
+| RAG (Lewis et al. 2020) | 44.5 | 56.8 |
+| RAG + RLHF fine-tuned model | 58.2 | 71.9 |
+| GPT-4 + RAG (2023 systems) | ~65+ | ~80+ |
+
+#### Production Latency
+Typical RAG pipeline latency breakdown (cloud deployment, 2025):
+- Query embedding (text-embedding-3-small): ~15ms
+- Vector search (Pinecone, 1M vectors): ~20–40ms
+- Re-ranking (Cohere Reranker v3, top 50→5): ~100–150ms
+- LLM generation (GPT-4o, 500 output tokens): ~1.5–3s
+- **Total end-to-end: ~2–4 seconds**
+
+Without re-ranking: ~1.5–2.5 seconds. The re-ranking step adds ~15–25% latency but typically improves answer quality by 15–30%.
+
+---
+
+### Real-World Deployment Case Studies
+
+**Morgan Stanley Wealth Management (2023)**: Deployed RAG over 100,000+ internal research documents and financial reports to help financial advisors retrieve precise answers. Using OpenAI embeddings + GPT-4, the system processes ~50,000 advisor queries per week. Reported 40% reduction in time advisors spend searching for information.
+
+**Klarna Customer Service (2023)**: Deployed an LLM + RAG system over support documentation in 35 languages, handling 2.3 million customer conversations in the first month. Achieved equivalent satisfaction scores to human agents on ~67% of queries, reducing average resolution time from 11 minutes to 2 minutes.
+
+**Harvey AI (Legal, 2023–2025)**: RAG over case law, statutory databases, and client documents for legal research and contract analysis. Used by major law firms including Allen & Overy, PwC Legal. Processes briefs, precedents, and discovery documents. The key technical challenge: legal documents use specialised terminology requiring domain-specific embedding fine-tuning.
+
+**Notion AI (2023)**: RAG over a user's entire Notion workspace — notes, databases, documents — to answer personal knowledge questions. The engineering challenge: real-time indexing as documents are edited, with access control (only retrieve documents the user has permission to read).
+
+**GitHub Copilot Chat (2023)**: RAG over the local code repository — embedding code files, function signatures, and documentation — so the chat assistant can answer questions about the specific codebase. Technical challenge: code embeddings must capture structural relationships (call graphs, imports) not just textual similarity.
 
 ## Cross-Disciplinary Connections
 

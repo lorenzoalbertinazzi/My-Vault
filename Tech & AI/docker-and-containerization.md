@@ -3,7 +3,7 @@ title: Docker and Containerization
 date: 2026-05-28
 tags: [tech, devops, docker, containers, infrastructure, deployment]
 source: research
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -203,6 +203,161 @@ A **service mesh** addresses this by deploying a lightweight proxy sidecar along
 **Cilium** (eBPF-based): Uses Linux eBPF (extended Berkeley Packet Filter) instead of sidecar proxies — higher performance, lower overhead. Becoming the preferred approach for performance-sensitive deployments.
 
 **Tradeoff**: Service meshes add significant operational complexity. Only justified at sufficient scale (typically 10+ microservices with traffic management requirements). Teams under this threshold should use simpler approaches (gateway-based routing, HTTP middleware).
+
+---
+
+### Historical Development
+
+The path to Docker runs through the Unix philosophy, the rise of cloud computing, and a decade of progressively sophisticated process isolation techniques.
+
+**1979 — chroot (Unix V7)**: Ken Thompson implements `chroot` — the first OS-level mechanism for constraining a process to a subtree of the filesystem. A process in a chroot jail cannot access files outside its designated directory tree. This is the conceptual ancestor of container isolation, though it provides only filesystem isolation, not network or process isolation.
+
+**1991 — FreeBSD Jails**: FreeBSD introduces "jails" — a more complete isolation mechanism that constrains a process's view of the filesystem, network, and process table simultaneously. Jails are used in production by high-security web hosting providers throughout the 2000s. The concept proves that OS-level virtualisation (not full VM-level) can provide meaningful security boundaries.
+
+**2004 — Solaris Zones**: Sun Microsystems introduces Solaris Zones (renamed Solaris Containers) — full operating system virtualisation within a single Solaris instance. Zones can have their own network interfaces, user spaces, and process trees. Solaris Zones represent the most sophisticated pre-Linux container technology and directly influenced later developments.
+
+**2006 — Linux namespaces (cgroups, namespaces)**: Google engineers Paul Menage and Rohit Seth begin contributing cgroups (Control Groups) to the Linux kernel — a mechanism for limiting, accounting, and isolating the resource usage (CPU, memory, disk I/O) of groups of processes. Combined with Linux namespaces (network, PID, mount, UTS, IPC, user namespaces added progressively 2008–2013), cgroups form the kernel-level foundation for Docker.
+
+**2007 — LXC (Linux Containers)**: IBM and Red Hat engineers develop LXC — the first Linux container implementation using cgroups and namespaces directly. LXC provides "OS-level containers" that share the host kernel but have isolated userspace. Docker's initial implementation is a wrapper around LXC.
+
+**2008–2010 — Cloud and the "Works on My Machine" Crisis**: AWS EC2 (launched 2006) enables renting VMs at scale, but deployment reproducibility remains a challenge. The gap between developer laptops (varied configurations) and production servers (different configurations) causes constant friction. The industry is ready for a better solution.
+
+**March 2013 — Docker Launch**: Solomon Hykes, Sébastien Pahl, and Andrea Luzzardi (at dotCloud, a PaaS startup struggling to compete with Heroku and AWS) release Docker as an open-source project at PyCon 2013. Docker is initially a thin wrapper around LXC that adds: layered image system (copy-on-write), a simple CLI (`docker run`, `docker build`, `docker push`), and Docker Hub for sharing images. The 5-minute demo causes a sensation — developers can now run anything anywhere with a single command.
+
+**Within months**: 10,000+ GitHub stars; Hykes presents at LinuxCon (late 2013) to standing-room audiences. Major companies (Google, Red Hat, IBM, Microsoft) announce contributions.
+
+**September 2013 — Docker Hub Launches**: The public registry makes sharing container images trivial — `docker pull nginx` installs and configures the Nginx web server in seconds. By 2014, Docker Hub hosts 10,000+ public images.
+
+**October 2013 — Docker replaces LXC with libcontainer**: Docker 0.9 introduces libcontainer, a Go-based container runtime that interfaces directly with Linux kernel features without LXC intermediary. Docker becomes architecturally independent of LXC and more portable.
+
+**2014 — The Container Cambrian Explosion**:
+- June 2014: Google announces Kubernetes at DockerCon (open-sourced July 2014) — based on internal Borg system managing Google's own container workloads at scale (millions of containers per week)
+- CoreOS releases `rkt` (rocket) as a Docker alternative with different security model
+- Amazon releases ECS (Elastic Container Service)
+- Google releases GKE (Google Kubernetes Engine)
+
+**2015 — OCI and Standardisation**: Docker, CoreOS, and others found the Open Container Initiative (OCI) — a standards body defining container image format and runtime specifications. This prevents vendor lock-in and enables multiple container runtimes (Docker, containerd, CRI-O) to use the same image format.
+
+**2016–2017 — Kubernetes Wins the Orchestration War**: Kubernetes defeats Docker Swarm, Apache Mesos, and CoreOS Fleet to become the de facto container orchestration standard. Red Hat invests heavily in Kubernetes (OpenShift). All major cloud providers offer managed Kubernetes (AWS EKS launched 2018, GKE 2014, AKS 2017). Docker Swarm never recovers market share.
+
+**2017 — Docker Inc. Financial Difficulties**: Despite driving the container revolution, Docker Inc. struggles to monetise the open-source project. Mirantis acquires Docker Enterprise in 2019. Docker Inc. survives by focusing on developer tools (Docker Desktop).
+
+**2019 — Containerd as Infrastructure**: Docker's container runtime (containerd) is donated to the CNCF and becomes the de facto low-level container runtime used by Kubernetes directly, separating the runtime from Docker's higher-level tooling.
+
+**2020–2026 — Kubernetes Matures and Extends**: Helm (package management), Argo CD (GitOps deployment), Istio (service mesh), Prometheus/Grafana (observability) form the CNCF ecosystem around Kubernetes. The Cloud Native Computing Foundation (CNCF) hosts 200+ projects. Container adoption becomes universal: by 2025, ~90% of enterprise applications run in containers in production.
+
+---
+
+### Mathematical Foundation: Namespaces and cgroups
+
+Docker's isolation is implemented through two Linux kernel primitives. Understanding them explains both Docker's capabilities and its security model.
+
+**Linux Namespaces** — each namespace type wraps a different resource:
+```
+unshare(CLONE_NEWPID)   → New PID namespace: process IDs restart at 1, can't see host PIDs
+unshare(CLONE_NEWNET)   → New network namespace: isolated network stack, no shared interfaces
+unshare(CLONE_NEWNS)    → New mount namespace: isolated filesystem mount table
+unshare(CLONE_NEWUTS)   → New UTS namespace: isolated hostname and domain name
+unshare(CLONE_NEWIPC)   → New IPC namespace: isolated shared memory, semaphores
+unshare(CLONE_NEWUSER)  → New user namespace: remap UID/GID (enable rootless containers)
+```
+
+A Docker container is a process with all 6 namespaces applied. Inside the container, the process sees PID 1, its own network interface, its own filesystem root — completely isolated from host and sibling containers.
+
+**cgroups (Control Groups)** — resource accounting and limiting:
+
+Memory limit enforcement:
+```
+echo 512m > /sys/fs/cgroup/memory/my_container/memory.limit_in_bytes
+```
+When the container process attempts to allocate memory beyond 512MB, the kernel sends SIGKILL (or triggers OOM kill if configured). This is how `--memory 512m` in Docker works at the kernel level.
+
+CPU throttling:
+```
+echo 100000 > /sys/fs/cgroup/cpu/my_container/cpu.cfs_period_us  # 100ms window
+echo 50000  > /sys/fs/cgroup/cpu/my_container/cpu.cfs_quota_us   # 50ms CPU per 100ms
+```
+This limits the container to 50% CPU — `--cpus 0.5` in Docker maps directly to these values.
+
+**Copy-on-Write (CoW) Image Layers** — the storage efficiency mechanism:
+
+Docker images are stored as a stack of read-only layers using a union filesystem (overlay2 on modern Linux). When a container modifies a file:
+```
+Layer 3 (read-only): app code + config (COPY . .)
+Layer 2 (read-only): dependencies (RUN pip install ...)
+Layer 1 (read-only): Python runtime (FROM python:3.11)
+Container layer (writable): ONLY stores changes from base
+```
+
+When the container writes to `/app/logs/app.log`, the overlay2 filesystem:
+1. Copies `/app/logs/app.log` from the read-only layer to the container's writable layer
+2. All subsequent writes go to the copy in the writable layer
+3. The original read-only layer is unchanged
+
+This means: 100 containers from the same image share the read-only layers in memory and disk, each with only a tiny writable overlay. A 500MB base image shared by 100 containers uses ~500MB disk, not 50GB.
+
+---
+
+### Benchmarks and Performance
+
+#### Container vs. VM Startup Time
+| Technology | Cold Start | Notes |
+|-----------|-----------|-------|
+| Virtual Machine (KVM) | 5–60 seconds | Boots full OS kernel |
+| LXC Container | 0.5–1 second | Starts process in isolated namespace |
+| Docker Container | 0.1–0.5 second | docker run + container entrypoint |
+| Firecracker MicroVM (AWS Lambda) | ~125ms | Lightweight VM with container-like startup |
+| WASM (Wasmtime) | ~1ms | Near-instantaneous; no OS boot |
+
+#### Resource Overhead
+**Memory overhead per instance** (running a simple Python web server):
+| Technology | Memory Per Instance | Overhead vs. Bare Metal |
+|-----------|--------------------|-----------------------|
+| Bare metal process | ~50MB app | Baseline |
+| Docker container | ~52MB (app + ~2MB overlay) | ~4% overhead |
+| KVM virtual machine | ~350MB (app + guest OS) | ~600% overhead |
+| Firecracker MicroVM | ~100MB (app + minimal kernel) | ~100% overhead |
+
+**CPU overhead (Apache HTTP benchmark, 1000 concurrent requests)**:
+- Bare metal: 12,400 req/s
+- Docker container: 12,100 req/s (2.4% overhead — negligible)
+- KVM VM: 10,800 req/s (13% overhead — network virtualization cost)
+
+#### Image Size Optimisation (Go web service example)
+| Approach | Image Size | Notes |
+|----------|-----------|-------|
+| ubuntu:22.04 + Go 1.22 + compile | 1.2GB | Naive approach |
+| golang:1.22-alpine | 450MB | Alpine base |
+| Multi-stage + alpine runtime | 15MB | Build-then-copy pattern |
+| Multi-stage + distroless | 8MB | No OS utilities |
+| Multi-stage + scratch | 6MB | Just the binary |
+
+The 200× size reduction (1.2GB → 6MB) translates directly to: faster container pulls, smaller attack surface, less registry storage cost, faster cold starts.
+
+#### Kubernetes at Scale
+Real-world cluster sizes (2024 data):
+- **Airbnb**: ~1,000 nodes, ~20,000 pods across multiple clusters
+- **Spotify**: ~3,000+ nodes, running ~40,000 pods
+- **Yelp**: ~4,000 nodes across 3 regions
+- **Google (internal GKE)**: Millions of containers per week across Google Kubernetes Engine (based on Borg's historical scale)
+- **Alibaba**: ~1 million+ containers orchestrated at peak traffic (Alibaba Double 11 shopping festival)
+
+#### Container Registry Statistics (2025)
+- **Docker Hub**: 14 million public images; 13 billion+ pull requests per month
+- **GitHub Container Registry**: 500M+ container images stored
+- **AWS ECR**: 100B+ container image layers stored globally
+
+---
+
+### Limitations and Open Problems
+
+**The Kubernetes Complexity Tax**: Kubernetes is enormously powerful but adds significant operational overhead. A 2024 CNCF survey found that 49% of organisations cite complexity as the top challenge with Kubernetes adoption. Simpler alternatives (Docker Compose in production, Nomad, Fly.io's Firecracker-based platform) are gaining traction for teams whose scale doesn't justify full Kubernetes operational overhead.
+
+**Container Security Gaps**: Containers share the host kernel — a kernel vulnerability can potentially be exploited to escape the container and affect other containers or the host. High-profile container escapes (CVE-2019-5736 runc vulnerability, CVE-2020-15257 containerd) demonstrate that the isolation is not absolute. For highly sensitive workloads, Kata Containers (hardware-isolated containers using lightweight VMs) or Firecracker provides stronger guarantees.
+
+**Stateful Applications Remain Challenging**: Databases, message queues, and other stateful services in containers require careful handling of persistent volumes, backup procedures, and failover — significantly more complex than stateless services. Many organisations run stateful workloads on dedicated VMs or managed cloud services and containerise only stateless application tiers.
+
+**Image Supply Chain Security**: The Docker Hub ecosystem of public images is a significant attack surface — malicious packages have been found in popular public images. The SolarWinds-style supply chain attack risk extends to container registries: a compromised dependency image can compromise any container built from it.
 
 ## Cross-Disciplinary Connections
 

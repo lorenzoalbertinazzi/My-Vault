@@ -268,6 +268,56 @@ This finding has been debated and partially revised (Ibbotson and Kaplan, 2000 f
 
 **Example**: A fund overweights technology by 5% in a year when tech returns 25% (benchmark returns 10%). The allocation effect on that decision = 5% × (25% − 10%) = +75 basis points of contribution. If the fund's tech stock picks return 30% vs. the tech benchmark's 25%, the selection effect = benchmark tech weight × (30% − 25%) = additional contribution from security selection.
 
+---
+
+### Historical Development of Portfolio Theory
+
+Modern portfolio theory is less than a century old, yet it is built on intellectual foundations stretching back to probability theory and the mathematics of risk.
+
+**Pre-1952 — The Intuitive Era**: Before Markowitz, portfolio management was largely a craft based on diversification intuition. Benjamin Graham's *Security Analysis* (1934) taught stock selection, not portfolio construction. The dominant wisdom was "don't put all your eggs in one basket" — understood qualitatively but never formalised mathematically. There was no rigorous framework for measuring portfolio risk or quantifying the diversification benefit.
+
+**1952 — Markowitz: The Mathematical Birth of Portfolio Theory**: Harry Markowitz, a 25-year-old PhD student at the University of Chicago, publishes "Portfolio Selection" in the *Journal of Finance*. The paper introduces three foundational ideas:
+1. Investors should care about the **entire portfolio's** return and variance, not individual securities in isolation
+2. The **covariance** between securities is the key variable — not just individual volatility
+3. There exists an **efficient frontier** — the set of portfolios with maximum expected return for each level of variance
+
+The paper is almost rejected because it is "too mathematical" for a finance journal and "too financial" for a math journal. Markowitz's thesis advisor, Milton Friedman, reportedly tells him at his defence that portfolio theory cannot be economics. The paper is now one of the most cited in all of social science. Markowitz receives the Nobel Prize in Economics in 1990.
+
+**Computational challenge**: Markowitz's mean-variance optimisation requires estimating N variances + N(N-1)/2 covariances for an N-asset portfolio. For 500 stocks, this means 125,250 parameters — far exceeding what 1952 computers could handle. The theory is theoretically complete but computationally impractical.
+
+**1963 — Sharpe's Single Index Model**: William Sharpe (PhD student at UCLA, working with Markowitz) publishes "A Simplified Model for Portfolio Analysis" — dramatically reducing the computation. Instead of estimating pairwise covariances, represent each stock's co-movement with a single index (the market). This reduces the required estimates from N(N-1)/2 covariances to just N beta coefficients — a reduction from 125,250 to 500 for our example. This computational simplification makes mean-variance optimisation practically executable.
+
+**1964 — Sharpe Publishes CAPM**: Building on his single-index model, Sharpe publishes "Capital Asset Prices: A Theory of Market Equilibrium Under Conditions of Risk" — the Capital Asset Market Pricing Model (CAPM). Simultaneously and independently, John Lintner (Harvard, 1965) and Jan Mossin (Norwegian School of Economics, 1966) derive similar results. Key insight: in equilibrium, every investor holds the same risky portfolio (the market portfolio), and the only risk that is compensated is undiversifiable systematic risk — captured by beta. The CAPM's formula Ke = Rf + β(Rm − Rf) becomes the foundation of every DCF model, WACC calculation, and performance attribution system in finance. Sharpe receives the Nobel in 1990 alongside Markowitz.
+
+**1966 — Sharpe Ratio**: Sharpe introduces the "reward-to-variability ratio" (later named the Sharpe ratio) — a single number for comparing the risk-adjusted return of any portfolio. Its elegance makes it the dominant performance metric in finance for the next 60 years.
+
+**1968 — Jensen's Alpha**: Michael Jensen (Columbia) publishes "The Performance of Mutual Funds in the Period 1945–1964" — the first systematic academic study of active fund management. Result: the average mutual fund underperforms the market by approximately 1.1% per year after fees. This finding, combined with CAPM, provides the theoretical and empirical foundation for index investing. Jensen also formalises "alpha" — excess return beyond the CAPM prediction — as the measure of genuine investment skill.
+
+**1970 — Fama's Efficient Market Hypothesis**: Eugene Fama (Chicago) publishes his taxonomy of market efficiency — weak form, semi-strong form, strong form. The semi-strong form (prices reflect all public information) directly challenges fundamental analysis; the strong form (prices reflect all information including private) challenges even insider trading's profitability. Fama and Sharpe's combined work intellectually underpins index investing.
+
+**1976 — Ross's Arbitrage Pricing Theory (APT)**: Stephen Ross (Yale) derives a more general pricing model that does not require the strong assumptions of CAPM (normal distributions, mean-variance preferences, single period). APT states that expected return is determined by multiple factors: returns are driven by systematic risks plus idiosyncratic risk that can be diversified away. APT does not specify what the factors are — this becomes an empirical question.
+
+**1976 — Index Funds Born**: The First Index Investment Trust (now Vanguard 500 Index Fund) is launched by John Bogle on August 31, 1976 — the practical realisation of Jensen's empirical findings. Wall Street derides it as "Bogle's Folly." By 2026, Vanguard manages over $8 trillion in assets; index funds hold more US equity than active funds for the first time (crossing 50% in 2019). The theoretical case for indexing (CAPM + Jensen's alpha) translated into one of the most significant financial innovations of the 20th century.
+
+**1990 — Black-Litterman**: Fischer Black (Goldman Sachs) and Robert Litterman publish "Asset Allocation: Combining Investor Views with Market Equilibrium" — solving Markowitz's practical problem of optimisation instability. The model combines market-cap implied equilibrium returns with investor views in a Bayesian framework, producing stable, intuitive portfolio allocations. Adopted by Goldman Sachs' quantitative investment management group and later by most major asset managers.
+
+**1992 — Fama-French Three-Factor Model**: Eugene Fama and Kenneth French challenge CAPM empirically. Using CRSP data from 1963–1990, they find that:
+- Small-cap stocks outperformed large-cap stocks (size effect)
+- Value stocks (low P/B) outperformed growth stocks (high P/B)
+- These effects are not captured by beta alone
+Their three-factor model (market + size + value) explains a far larger fraction of cross-sectional return variation than CAPM. This launches the factor investing revolution and provides the academic foundation for "smart beta" strategies. Fama receives the Nobel in 2013.
+
+**2015 — Five-Factor Model**: Fama and French extend to five factors, adding profitability (high-profitability firms outperform) and investment (low-investment firms outperform). The model captures ~95% of cross-sectional variation in expected returns across a wide variety of portfolios — essentially a near-complete description of how systematic factors drive returns.
+
+**1990s–Present — Risk Parity and Alternative Strategies**: Ray Dalio (Bridgewater) develops Risk Parity in the 1990s, launching "All Weather" in 1996 — a portfolio that weights assets by their risk contribution rather than dollar value, designed to perform across economic regimes. Cliff Asness (AQR, founded 1998) systematises factor investing, applying Fama-French insights at scale using long-short factor portfolios. The period 2000–2020 sees alternative asset classes (private equity, hedge funds, real assets) become standard allocations for institutional portfolios, transforming the "60/40" model into a multi-factor, multi-asset class framework.
+
+**Empirical benchmarks for the modern era**: US equity market (S&P 500) annualised returns, dividends reinvested:
+- 1926–2025 (100 years): ~10.3% nominal, ~7.1% real
+- 1970–2025: ~10.7% nominal
+- 2000–2025 (includes two market crashes + recovery): ~7.9% nominal
+
+The long-run equity risk premium over T-bills: ~5.5–6.5% historically; current forward-looking estimates by Damodaran (NYU) are 4.5–5.5% given elevated starting valuations.
+
 ## Cross-Disciplinary Connections
 
 ### The Behavioral Critique: Why Optimal Portfolios Are Never Held
