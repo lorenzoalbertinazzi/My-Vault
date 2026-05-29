@@ -85,6 +85,53 @@ At inference time, the model receives a prompt and generates tokens one at a tim
 
 **Context window**: Maximum tokens the model can process at once. Determined by positional encoding and memory constraints. Current frontier models: 128K–1M+ tokens.
 
+### The KV Cache: Memory Architecture of LLM Inference
+
+The KV cache is the single most important engineering concept for understanding LLM inference performance. Without it, generating each new token would require recomputing attention over the entire prior context from scratch — O(N²) compute per token. With it, generation is O(N) in total.
+
+**What the KV cache stores**: During a forward pass through a transformer layer, each input token is projected into Query, Key, and Value vectors. For a new token being generated, we need to compute attention over ALL previous tokens — but those tokens' K and V projections are the same every time (they don't depend on what comes after them in a decoder-only model). We cache them:
+
+```
+# First forward pass (prompt processing):
+for each layer l:
+    K_cache[l] = [k_1, k_2, ..., k_N]   # shape: [N, num_kv_heads, d_head]
+    V_cache[l] = [v_1, v_2, ..., v_N]   # shape: [N, num_kv_heads, d_head]
+
+# Each generation step (generating token N+t):
+new_K = W_K · x_{N+t}  # compute K for new token only
+new_V = W_V · x_{N+t}  # compute V for new token only
+K_cache[l] = append(K_cache[l], new_K)  # grow cache by 1
+attention = softmax(Q · K_cache[l]^T / sqrt(d_k)) @ V_cache[l]  # attend over full cache
+```
+
+**KV cache memory formula**:
+```
+KV_cache_bytes = 2 × num_layers × num_kv_heads × d_head × max_seq_len × bytes_per_element
+```
+
+For Llama 3 70B (80 layers, 8 KV heads, d_head=128, bf16=2 bytes):
+```
+KV_cache = 2 × 80 × 8 × 128 × seq_len × 2 bytes = 327,680 × seq_len bytes
+```
+At seq_len=8192: ~2.5GB. At seq_len=128K: ~40GB. This is why long-context generation requires so much memory — the KV cache grows linearly with context length.
+
+**Why GQA reduces this**: Standard multi-head attention (MHA) uses num_heads KV heads (e.g., 64 for a 70B model). GQA groups query heads to share KV projections — Llama 3 70B uses 64 query heads but only 8 KV heads (8:1 ratio), reducing KV cache memory by 8×. At 128K context: ~40GB → ~5GB. This is what makes long-context inference feasible on consumer hardware.
+
+**Paged attention (vLLM)**: Traditional KV cache implementation pre-allocates the maximum sequence length, wasting memory for shorter sequences. PagedAttention (Kwon et al., 2023, vLLM) manages KV cache as non-contiguous pages (like OS virtual memory):
+- Pages are allocated on demand as context grows
+- Pages can be shared across parallel generation runs (beam search, sampling multiple outputs)
+- Fragmentation-free: no wasted pre-allocated memory
+- Result: 2–4× more concurrent users per GPU vs. HuggingFace Transformers baseline
+
+vLLM is now the dominant LLM serving framework, with production deployments at OpenAI, Anthropic, and most major cloud LLM services.
+
+**KV cache quantization**: At long contexts, KV cache memory dominates. Quantizing KV cache values to int8 or even int4 reduces memory 2–4×:
+- int8 KV quantization: ~1–2% quality degradation on most benchmarks
+- int4 KV quantization: ~3–5% quality degradation, 4× memory savings
+- Used in: llama.cpp, TensorRT-LLM, vLLM (optional)
+
+---
+
 ### Grouped-Query Attention (GQA) and Multi-Query Attention (MQA)
 
 Standard multi-head attention uses N separate Key and Value projection matrices for N heads. During inference, the KV cache grows with both sequence length and number of heads — consuming huge memory for long-context generation.
@@ -97,9 +144,54 @@ Standard multi-head attention uses N separate Key and Value projection matrices 
 
 ---
 
+### Tokenization: The Input Layer That Determines Everything
+
+Before attention is computed, text must be converted to tokens. The tokenization scheme is a foundational design decision that affects vocabulary coverage, multilingual performance, arithmetic ability, and security.
+
+**Byte Pair Encoding (BPE)**: The dominant tokenization algorithm (GPT-2, GPT-3, GPT-4, Llama, Mistral). BPE starts with a vocabulary of individual bytes (256 entries), then iteratively merges the most frequent adjacent pair until the target vocabulary size is reached (commonly 32K, 50K, or 100K). Properties:
+- Rare words decompose into subword pieces: "cryptocurrency" → ["crypto", "currency"]
+- Very rare words decompose to bytes: "Müller" → ["M", "ü", "ller"] (for models trained on English-heavy data)
+- Numbers tokenize unpredictably: "1234567" may be ["123", "456", "7"] — causing arithmetic difficulties because multi-digit numbers are not consistently representable
+
+**SentencePiece and Unigram**: Llama 2 uses SentencePiece with a unigram language model tokenizer. Unlike BPE (deterministic merges), unigram training starts with a large vocabulary and prunes tokens by removing those with smallest probability under a unigram LM. Properties:
+- Language-agnostic (works directly on raw bytes)
+- More balanced coverage across languages
+- Llama 2's 32K vocabulary vs. GPT-4's 100K: fewer tokens = more context-efficient for English but less efficient for code and non-English languages
+
+**Vocabulary size trade-offs**:
+- Larger vocabulary → fewer tokens per sentence (more efficient, longer effective context) → but larger embedding matrix (100K × d_model)
+- GPT-4's ~100K vocabulary: the embedding matrix alone is 100K × 12,288 × 2 bytes ≈ 2.4GB
+- Multilingual tokenization efficiency: GPT-4 requires ~1.5× more tokens to represent Chinese text than English; some models trained on diverse data achieve near-parity
+
+**Tokenization and security**: Prompt injection attacks sometimes exploit tokenization quirks. Adversarial suffixes (Zou et al., 2023, GCG attack) work by finding token sequences that, when appended to a harmful prompt, cause the model to ignore alignment training. The attack specifically searches for token sequences whose gradient-weighted impact on model behavior is maximal — exploiting the gap between token-level optimization and semantic-level safety training.
+
+---
+
 ### RoPE: Rotary Position Embedding
 
 Standard absolute positional embeddings (sinusoidal or learned) struggle to generalize to sequences longer than the training context. **RoPE** (Su et al., 2021) applies rotation matrices to query and key vectors such that attention scores depend on the *relative distance* between tokens, not their absolute positions.
+
+**The mathematical formulation**: RoPE rotates query and key vectors by an angle proportional to their position. For a 2D sub-vector at position m:
+```
+RoPE(x, m) = x · R(m)
+
+where R(m) = [cos(mθ) -sin(mθ)]
+              [sin(mθ)  cos(mθ)]
+```
+For the full d_k-dimensional vector, it is partitioned into d_k/2 pairs, each rotated by different frequencies:
+```
+θ_i = 1 / (10000^(2i/d_k))    for i = 0, 1, ..., d_k/2 - 1
+```
+This matches the sinusoidal encoding's multi-frequency structure but applied as a rotation rather than an additive offset. The critical property: the dot product of query at position m and key at position n depends only on (m-n), the relative offset:
+```
+Q_m · K_n = f(x_m, x_n, m-n)
+```
+This is the source of RoPE's strong length generalisation — the model sees only relative distances, making it natural to extrapolate beyond training context length.
+
+**YaRN (Yet another RoPE extensioN, Peng et al., 2023)**: Extends RoPE models to longer contexts than their training length by scaling and interpolating the base frequencies. For a model trained at 4K context but needing 32K:
+- NTK-aware scaling adjusts the base θ_i to spread position encodings more coarsely
+- Attention temperature scaling compensates for the softmax distribution becoming too sharp with longer sequences
+- YaRN achieves near-perfect long-context performance (Llama 2 7B at 4K context → 128K context with fine-tuning on a small long-context dataset)
 
 **Key advantages**:
 - Long-context generalization: trained at 4K context, can extrapolate to 32K+ with techniques like YaRN
@@ -358,6 +450,37 @@ This test embeds a specific fact ("The best thing to do in San Francisco is eat 
 #### Inference Efficiency
 - **KV Cache memory**: For Llama 3 70B with GQA (8 KV heads), 128K context, bf16 precision: KV cache = 2 × 8 × 128,000 × 8,192 / 8 (GQA reduction) × 2 bytes ≈ 33 GB. Without GQA (standard MHA): 264 GB — the difference between fitting on 4× A100s vs. requiring 16×.
 - **Speculative decoding speedup**: 2–3× throughput improvement with a draft model of ~1/10th the target model's size (e.g., 7B draft for 70B target), with zero quality loss (mathematically identical output distribution).
+
+---
+
+### Pretraining Data: What Transformers Are Actually Trained On
+
+The capability of a transformer model is determined at least as much by its training data as by its architecture. Understanding the composition, quality, and biases of pretraining datasets is essential for understanding model strengths and failure modes.
+
+**GPT-3 training data composition** (Brown et al., 2020):
+| Dataset | Tokens | Weight | Notes |
+|---------|--------|--------|-------|
+| Common Crawl (filtered) | 410B | 60% | Web-scraped text; filtered by proximity to known quality text |
+| WebText2 | 19B | 22% | Reddit outlinks (≥3 karma); better quality than raw Common Crawl |
+| Books1 | 12B | 8% | Internet fiction book corpus |
+| Books2 | 55B | 8% | Unknown specific source |
+| Wikipedia (English) | 3B | 3% | High-quality factual text |
+
+Common Crawl is the backbone but requires aggressive filtering: raw Common Crawl is mostly spam, boilerplate, and duplicate content. GPT-3's filtering pipeline used classifier-based quality scoring, LSH deduplication (removing near-duplicate documents), and similarity-based filtering to high-quality documents.
+
+**The Common Crawl filtering problem**: Common Crawl archives the entire web (~3 petabytes per crawl). Useful training text is perhaps 1-5% of this. Facebook's CCNet (Wenzek et al., 2019) and Dolma (Allen AI, 2024) represent the state-of-the-art in web data quality filtering:
+1. Language identification (fastText classifier) — filter to target language(s)
+2. Quality filtering: keep documents whose language model perplexity (under a domain-specific KenLM model) is below a threshold — noisy, fragmented text has high perplexity
+3. Content filtering: remove adult content, PII, duplicates
+4. Deduplication: suffix array exact deduplication + MinHash near-deduplication
+
+**Data deduplication and its effects**: Training on duplicated data degrades model quality in two ways: (1) overfitting to duplicated content, producing models that memorize specific text, and (2) capability imbalance, where over-represented domains (popular websites, certain author styles) dominate model behavior. Lee et al. (2022) showed that aggressive deduplication of C4 (a Common Crawl subset) improves downstream task performance 1-3% at equal training token count.
+
+**The instruction data flywheel**: RLHF and SFT rely on high-quality (prompt, response) pairs. In 2020-2022, these were expensive to produce (human contractors at $15-25/hour). The 2023 discovery that GPT-4 could generate high-quality instruction data (Alpaca used GPT-3.5; WizardLM used GPT-4 evolutionary approaches) created a synthetic data flywheel — better models generate better instruction data to train even better models. DeepSeek's reported ~$6M training budget for V3 relied heavily on this synthetic data flywheel.
+
+**The Pile (EleutherAI, 2020)**: An 825GB diverse open-source pretraining dataset combining 22 distinct sources including Pile-CC (Common Crawl subset), PubMed Central, ArXiv, GitHub, FreeLaw, Stack Exchange, and DM Mathematics. Used to train GPT-Neo, GPT-J, and GPT-NeoX — the first competitive open-source pretraining datasets. Demonstrated that curated diverse data sources outperform naive Common Crawl at equivalent scale.
+
+**Llama's training data philosophy** (Meta, 2023): Llama 1 was trained on 1T tokens from publicly available data only (to enable reproducible research). Llama 3 (2024) used a much larger 15T token corpus including a larger proportion of code and multilingual content, with a focus on data quality through aggressive deduplication and quality filtering. The code emphasis directly explains Llama 3's strong coding performance relative to its parameter count.
 
 ---
 

@@ -106,7 +106,46 @@ The sweet spot: a model complex enough to capture real patterns, but not so comp
 - **AUC-ROC**: Discrimination ability across all classification thresholds. Best for binary classifiers.
 - **Perplexity**: Language model metric. Lower = better. How "surprised" the model is by the test data.
 
-### Mixture of Experts (MoE)
+### Reinforcement Learning from Human Feedback (RLHF): The Full Training Loop
+
+RLHF is the alignment technique that transformed raw pretrained language models into the instruction-following assistants used by billions of people. Understanding its mechanics reveals both why it works and why it creates new failure modes.
+
+**Stage 1 — Supervised Fine-Tuning (SFT)**: A pretrained base model is fine-tuned on a curated dataset of (prompt, ideal response) pairs, typically ~10,000–100,000 examples written or validated by human contractors. This teaches the model to follow instructions and respond in the expected format. SFT alone is insufficient — the model learns to mimic the style of the demonstrations but doesn't reliably produce the *best possible* response, only a response that resembles those in the training set.
+
+**Stage 2 — Reward Model Training**: Human raters evaluate pairs of SFT model outputs for the same prompt, selecting which response is better according to defined criteria (helpfulness, accuracy, safety, honesty). These preference pairs (prompt, response_chosen, response_rejected) are used to train a **reward model** (RM) — a separate neural network that takes a (prompt, response) pair and outputs a scalar score predicting human preference:
+```
+r_θ(x, y) = [scalar quality score]
+```
+The RM is trained with a pairwise ranking loss:
+```
+L_RM = -log σ(r_θ(x, y_chosen) - r_θ(x, y_rejected))
+```
+This pushes the reward score of chosen responses above rejected ones. OpenAI's InstructGPT used ~50,000 comparisons; modern RLHF systems use millions.
+
+**Stage 3 — PPO Fine-Tuning**: The SFT model (now the "policy" in RL terminology) is fine-tuned to maximize expected reward while staying close to the original SFT model (to prevent reward hacking). The Proximal Policy Optimization (PPO) objective:
+```
+L_PPO = E[min(r_t(θ)·Â_t, clip(r_t(θ), 1-ε, 1+ε)·Â_t)] - β·KL(π_θ || π_ref)
+```
+Where:
+- r_t(θ) = π_θ(a_t|s_t) / π_θ_old(a_t|s_t) is the probability ratio between new and old policy
+- Â_t is the advantage estimate (how much better than expected this action was)
+- The clip operation prevents excessively large policy updates
+- The KL term penalizes deviation from the reference SFT model (β typically 0.01–0.1)
+
+**The reward hacking problem**: PPO is notorious for exploiting the reward model's imperfections. Notable examples:
+- **Length exploitation**: Reward models trained by humans who associate length with thoroughness cause the model to generate unnecessarily verbose responses
+- **Sycophancy**: Models learn to tell users what they want to hear, not what is accurate, because human raters tend to rate agreeable responses higher
+- **Repetition loops**: In early RLHF systems, degenerate repetitive text sometimes achieved high reward because the reward model assigned high scores to the pattern
+
+**DPO (Direct Preference Optimization, Rafailov et al., 2023)**: A key insight is that the optimal RLHF policy can be expressed in closed form in terms of preference probabilities, eliminating the need for a separate reward model and PPO:
+```
+L_DPO = -log σ(β · log(π_θ(y_w|x)/π_ref(y_w|x)) - β · log(π_θ(y_l|x)/π_ref(y_l|x)))
+```
+Where y_w is the preferred response and y_l the dispreferred response. DPO trains the policy directly from preferences, removing PPO's instability and reward model training cost. By 2025, DPO and its variants (ORPO, SimPO, IPO) have largely displaced PPO in practice for language model alignment — they are simpler, more stable, and produce comparable quality.
+
+---
+
+### Mixture of Experts (MoE): Architecture and Routing Mechanics
 
 Standard ("dense") transformers pass every input token through every parameter on every forward pass. This is computationally expensive at scale.
 
@@ -117,6 +156,29 @@ Standard ("dense") transformers pass every input token through every parameter o
 - Different experts specialize in different patterns — some handle code, others factual recall, others reasoning
 
 **GPT-4, Gemini 1.5, Mixtral 8x7B, and Grok** all use MoE. The architecture explains why the largest modern models can have enormous parameter counts without proportionally more compute per token.
+
+**The routing mechanism — top-k gating**:
+For each token x, a learned gating network G computes routing probabilities and selects the top-k experts:
+```
+h(x) = W_g · x                          [gate logits, one per expert]
+G(x) = softmax(TopK(h(x) + noise, k))    [sparse gating weights]
+```
+Where TopK sets all but the top-k values to -∞ before the softmax, producing a sparse distribution. The MoE layer output:
+```
+MoE(x) = Σ_{i ∈ TopK} G(x)_i · Expert_i(x)
+```
+In Mixtral 8x7B: 8 experts per MoE layer, k=2. Each token activates 2 experts; their outputs are weighted and summed.
+
+**Load balancing loss** — the critical training regularizer:
+Without explicit balancing, the router converges to routing all tokens to the same 2–3 experts ("expert collapse"), wasting the other 5–6. The auxiliary load balancing loss:
+```
+L_load = α · Σ_i f_i · P_i
+```
+Where f_i is the fraction of tokens routed to expert i, and P_i is the mean routing probability for expert i. Minimizing this loss encourages uniform expert utilization. In practice, α ≈ 0.01 — small enough not to dominate the main language modeling loss but sufficient to prevent collapse.
+
+**Expert parallelism in distributed training**: Each expert resides on a separate GPU or server. When a batch of tokens is processed, the routing decision determines which tokens go to which GPU. All-to-all collective communication is required to dispatch tokens to their assigned experts and collect results. This communication overhead is the main scalability challenge for MoE training — as the number of experts grows, the all-to-all bandwidth demands grow proportionally. Expert parallelism combined with data parallelism requires extremely high-bandwidth interconnects (NVLink 400GB/s, InfiniBand HDR).
+
+**DeepSeek MoE (2024)**: DeepSeek-V2 introduced Fine-Grained Expert Segmentation — rather than 8 large experts, use 64 small "micro-experts" with k=2, enabling each token to access a finer-grained mixture of specializations. Also introduced Shared Expert Routing: a small number of "shared" experts are always activated regardless of routing, ensuring universal capabilities are always present. These innovations improved quality at the same compute cost.
 
 **Challenge**: Load balancing — if all tokens route to the same few experts, others are wasted. Auxiliary "load balancing loss" encourages even distribution.
 
@@ -158,6 +220,46 @@ Training large models is expensive; deploying them is slow. **Knowledge distilla
 **Advantages**: Scales safely without requiring human raters to see harmful content; makes AI values transparent and auditable via the written constitution; allows systematic value updates by editing the constitution rather than retraining.
 
 This approach is used in Claude's training at Anthropic and represents a significant methodological alternative to pure human-feedback RLHF.
+
+---
+
+### Gradient Checkpointing and Memory-Efficient Training
+
+Training large neural networks requires managing GPU memory across three major consumers: model parameters, gradients, and activations.
+
+**The activation memory problem**: During the forward pass, PyTorch's autograd engine stores all intermediate activation tensors so they can be used during backpropagation. For a transformer with L layers, N sequence length, d_model hidden dimension, and batch size B, the activation memory scales as O(L · N · d_model · B). For GPT-3 (96 layers, d_model=12288): activation memory alone at batch=1, N=2048 exceeds 300GB — far beyond any single GPU.
+
+**Gradient checkpointing (activation recomputation)**: Instead of storing all activations, only store activations at "checkpoint" boundaries (e.g., every transformer layer boundary). During backpropagation, when gradients are needed for a segment between checkpoints, recompute the forward pass of that segment from the saved checkpoint. The trade-off:
+- **Memory saving**: ~10–20× reduction in activation memory (from storing every layer's activations to storing one per checkpoint layer)
+- **Compute cost**: ~33% more total compute (one extra forward pass per segment)
+- **Implementation**: In PyTorch, `torch.utils.checkpoint.checkpoint(module, inputs)` wraps any module; in Hugging Face, `model.gradient_checkpointing_enable()`.
+
+At GPT-3 scale with gradient checkpointing enabled, activation memory drops from ~300GB to ~30GB — the difference between infeasible and barely feasible on a 64×80GB-A100 node.
+
+**Mixed precision training (AMP)**:
+Modern training uses two precision levels simultaneously:
+- **Forward pass + activations**: float16 or bfloat16 (2 bytes/element) — halves memory vs. float32
+- **Master weights + optimizer states**: float32 (4 bytes/element) — prevents accumulation of rounding errors
+
+The Adam optimizer stores two moment estimates per parameter (m and v), both in float32: at 70B parameters, optimizer states alone require 70B × 2 × 4 bytes = 560GB. This is why distributed optimizer state sharding is essential.
+
+**Bfloat16 vs. float16**: bfloat16 (brain float 16) uses 8 exponent bits + 7 mantissa bits vs. float16's 5 exponent + 10 mantissa. The larger exponent range (~10⁻³⁸ to 10³⁸ for bf16 vs. ~6×10⁻⁵ to 65,504 for fp16) prevents NaN/Inf overflows in large-model training, which plagued early fp16 training. NVIDIA Ampere and later GPUs have hardware bf16 support. All frontier model training as of 2025 uses bf16.
+
+**ZeRO (Zero Redundancy Optimizer, Rajbhandari et al., Microsoft 2020)**:
+
+Distributed training naively replicates all model states across all GPUs. ZeRO eliminates redundancy by sharding different state components across GPUs:
+
+- **ZeRO Stage 1**: Shard optimizer states across N GPUs → N× memory reduction for optimizer states
+- **ZeRO Stage 2**: Also shard gradients → further 2× reduction
+- **ZeRO Stage 3 (ZeRO-3)**: Also shard model parameters → each GPU holds only 1/N of the parameters
+
+ZeRO-3 on 128 A100s (80GB each) provides 10,240 GB of effectively available parameter memory — enabling training of ~1T parameter models. The cost is all-reduce communication for parameter gathers; at fast interconnect (NVLink, 600GB/s), this overhead is ~5–15%.
+
+**Pipeline parallelism vs. tensor parallelism**:
+- **Tensor parallelism** (Megatron-LM): Split each matrix multiplication across GPUs (column-split or row-split). Requires all-reduce every layer — high communication bandwidth demand.
+- **Pipeline parallelism**: Assign different layers to different GPUs; micro-batching fills the "bubble" in the pipeline. Lower bandwidth demand but introduces pipeline latency.
+
+At 1,000-GPU training clusters, all three are combined: data parallelism (ZeRO-3) × tensor parallelism × pipeline parallelism. GPT-3 was trained with 2D tensor parallelism; GPT-4-scale models use 3D parallelism.
 
 ---
 
@@ -214,6 +316,49 @@ Post-2023, a critical limitation has emerged: high-quality human-generated text 
 - **Distributional narrowing**: Synthetic data tends to be more formulaic than human-generated content — reducing the unexpected connections and diverse styles that make large training corpora valuable.
 
 **The frontier**: Synthetic data works excellently for structured domains (math, code, logic) where outputs can be verified. For open-ended creative or reasoning tasks, quality control remains an unsolved challenge.
+
+---
+
+### Computational Costs and Environmental Impact of Modern ML
+
+Training and deploying large models at scale has costs — financial, computational, and environmental — that any practitioner must understand to make rational engineering decisions.
+
+**Training compute for landmark models**:
+| Model | Year | Training Compute (FLOPs) | GPU-hours (estimated) | Cost Estimate |
+|-------|------|------------------------|-----------------------|--------------|
+| BERT-base (110M) | 2018 | ~1.8×10²⁰ | ~1,600 V100-hours | ~$5,000 |
+| GPT-2 (1.5B) | 2019 | ~1.5×10²¹ | ~8,000 V100-hours | ~$25,000 |
+| GPT-3 (175B) | 2020 | ~3.1×10²³ | ~350,000 A100-hours | ~$4.6M |
+| Chinchilla (70B) | 2022 | ~5.7×10²³ | ~500,000 A100-hours | ~$6.5M |
+| GPT-4 (estimated ~1T MoE) | 2023 | ~5×10²⁴ | ~4M A100-hours | ~$50-100M |
+| Llama 3 70B | 2024 | ~7×10²³ | ~600,000 H100-hours | ~$5M |
+| DeepSeek-V3 (671B MoE) | 2024 | ~2.8×10²³ | ~2M H100-hours | ~$5.6M claimed |
+
+**The compute efficiency metric**: The typical rule is ~6 FLOPs per parameter per training token (2 for forward pass, 4 for backward pass). GPT-3: 175B × 300B tokens × 6 ≈ 3.15 × 10²³ FLOPs. An H100 delivers ~2×10¹⁵ FLOPs/second in bf16 MFU (Model FLOP Utilization); achieving 40-50% MFU in practice, actual throughput is ~8×10¹⁴ effective FLOPs/s. GPT-3 on a single H100: ~3.15×10²³ / 8×10¹⁴ ≈ 394,000 seconds ≈ 4.6 years. With 512 H100s: ~3 days.
+
+**Inference compute at scale**:
+- GPT-4 inference: estimated $700K/day in compute costs at peak (2023), ~$0.02-0.05 per query
+- Gemini Ultra: estimated similar; Google's total AI inference costs estimated $1-2B annually (2024)
+- DeepSeek's efficiency advantage: DeepSeek-V3 achieves GPT-4-class performance at ~10× lower inference cost per token, reshaping pricing expectations globally
+
+**Environmental impact**:
+Training a GPT-3-scale model produces approximately 500 tonnes CO₂e (equivalent to ~100 transatlantic flights). Inference is the larger long-run concern: GPT-3 serving millions of queries daily produces more CO₂ in 6 months than its training did.
+
+Key comparisons for calibration:
+- Single GPT-3 training run: ~500 tonnes CO₂e
+- Single Google search: ~0.2g CO₂e; single LLM query: ~50× more ≈ 10g CO₂e
+- The entire global AI industry's training compute (2023): estimated ~50,000–100,000 tonnes CO₂e — comparable to a small country's annual industrial carbon output
+
+**Cloud provider renewable energy**: Google Cloud claims 100% renewable energy matching (though not 100% carbon-free). AWS's net-zero pledge targets 100% renewable by 2025. Microsoft Azure: 100% renewable since 2012, carbon negative by 2030 commitment. The actual grid carbon intensity varies enormously by region — training workloads sent to Iowa (80% renewable grid) vs. Singapore (mostly gas) have 5× different actual carbon footprints per FLOPs.
+
+**Memory requirements at inference** (for serving reference):
+| Model | Params | FP16 Weights | KV Cache (8K ctx) | Min VRAM |
+|-------|--------|-------------|-------------------|----------|
+| Llama 3 8B | 8B | 16GB | ~2GB | 20GB |
+| Llama 3 70B (GQA) | 70B | 140GB | ~5GB | 145GB (2×A100 80GB) |
+| Mixtral 8x7B | 46B active | 92GB | ~4GB | 96GB |
+| Claude 3 Opus | unknown | unknown | ~10GB | cloud-only |
+| GPT-4 (estimated) | ~1T MoE | ~200GB active | ~20GB | cloud-only |
 
 ---
 

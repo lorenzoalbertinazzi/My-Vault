@@ -4,11 +4,25 @@ date: 2026-05-26
 tags: [psychology, cognitive-biases, decision-making, mental-models]
 source: research
 last_updated: 2026-05-29
-enriched: 2026-05-28
+enriched: 2026-05-29
 ---
 
 ## Summary
 Cognitive biases are systematic errors in thinking that arise from the brain's shortcuts (heuristics). They evolved because fast, good-enough judgments usually beat slow, perfect ones. Understanding biases doesn't make you immune, but it gives you the vocabulary to catch them — especially in high-stakes decisions. Kahneman's System 1 / System 2 framework (fast/intuitive vs. slow/deliberate thinking) is the organizing model.
+
+### Intellectual History: From Irrationality as Exception to Irrationality as Architecture
+
+The scientific study of cognitive bias has a precise origin point, an explosive development phase, and a contemporary crisis of replication that has refined but not overturned its core findings.
+
+**Pre-history (Before 1970)**: Classical economics and decision theory assumed rational agents who maximize expected utility (Bernoulli, 1738; von Neumann and Morgenstern, 1944). Psychology's mainstream tradition — behaviorism — deliberately avoided studying internal mental processes. The assumption of rationality was not empirically established; it was a modeling convenience that dominated academic and policy thinking for 200 years.
+
+**The Heuristics and Biases Program (Tversky and Kahneman, 1970–1979)**: Amos Tversky and Daniel Kahneman began collaborating at Hebrew University in 1969 in an unusual way — by trying to identify what *was wrong* with each other's intuitive statistical judgments. Their discovery that even trained psychologists systematically violated basic probability rules led to the landmark 1974 *Science* paper "Judgment Under Uncertainty: Heuristics and Biases" and the 1979 *Econometrica* paper introducing Prospect Theory. These two papers effectively launched behavioral economics and cognitive bias research as major scientific programs. The 1974 paper alone has been cited over 40,000 times.
+
+**The expansion era (1980s–2000s)**: Following Tversky and Kahneman, researchers identified hundreds of specific cognitive biases. Richard Thaler demonstrated bias effects in economic markets (mental accounting, endowment effect). Robert Cialdini showed their implications for compliance and persuasion. Paul Slovic mapped risk perception biases. Gerd Gigerenzer offered the first serious intellectual challenge — arguing that heuristics are not merely biases but *ecologically rational* tools that perform better than complex statistical algorithms in real-world (non-laboratory) environments.
+
+**The Replication Crisis (2011–present)**: The Open Science Collaboration's replication project (2015) found that only ~39% of 100 psychology studies replicated successfully. Several cognitive bias effects were significantly attenuated in pre-registered replication attempts. Key findings that held up robustly: loss aversion, anchoring, availability heuristic, and hindsight bias. The ego depletion effect (willpower as a depletable resource — foundational to much debiasing advice) has replicated poorly; its theoretical status is now contested. The lesson: the core heuristics-and-biases program is robust; specific derived findings require more caution.
+
+**Kahneman's System 1/System 2 Framework (2011)**: *Thinking, Fast and Slow* synthesized decades of research into a unified framework. "System 1" (fast, automatic, associative) and "System 2" (slow, effortful, deliberate) are shorthand for two processing modes, not anatomically distinct brain systems. Kahneman explicitly warns that the framework is a simplification — the brain does not have two discrete systems — but it is a practically useful model for identifying when fast thinking is likely to produce biased output.
 
 ## Key Points
 - Biases are features, not bugs — they're shortcuts that work most of the time
@@ -326,6 +340,21 @@ In negotiation contexts, cognitive biases operate at multiple levels simultaneou
 ### Scope Insensitivity, Policy, and Geopolitical Resource Allocation
 
 The same scope insensitivity that makes charitable campaigns feature a single identifiable child rather than statistical millions operates powerfully in geopolitical and policy contexts. Media coverage of dramatic, concentrated events (a single hostage crisis, a plane crash, a celebrity illness) commands massively disproportionate policy attention relative to diffuse, statistical harms of much greater magnitude. This is not merely a communication problem — it reflects the brain's fundamental architecture: we evolved to respond to vivid, immediate, identifiable threats, not to statistical abstractions. In the context of the US-China great power competition, for instance, highly salient incidents — a military confrontation in the South China Sea, a technology espionage indictment — receive policy response disproportionate to their strategic significance relative to slower-moving but larger structural shifts (the semiconductor supply chain, demographic divergence, institutional credibility). The policymaker who wants to allocate attention and resources rationally must deliberately apply base-rate thinking to counteract the availability heuristic and scope insensitivity that otherwise dominate institutional attention allocation.
+
+### The Gigerenzer Debate: Are Heuristics Biases or Optimal Tools?
+
+The most important intellectual challenge to the Kahneman-Tversky framework comes from Gerd Gigerenzer (Max Planck Institute for Human Development), who has argued since the 1990s that the bias framing fundamentally mischaracterizes human cognition.
+
+**Gigerenzer's Ecological Rationality Thesis**: The benchmark against which heuristics are judged "biased" in laboratory experiments is formal statistical rationality — Bayesian updating, expected utility maximization. But these formal norms assume that the decision-maker has complete, reliable information. In the real-world environments in which the brain evolved, and in which people make consequential decisions, information is partial, uncertain, and costly to acquire. In these conditions, simple heuristics — "take the best" (use the single best cue and stop), "recognition heuristic" (prefer the recognized option), "one-and-done" (apply a simple rule and don't deliberate further) — can outperform complex statistical algorithms because they are robust to overfitting and informationally efficient.
+
+**Empirical Evidence for Ecological Rationality**:
+- In studies of stock market performance, portfolios selected using the "recognition heuristic" (buy stocks whose names are recognized) outperformed market indices and more sophisticated models in several domains (Borges et al., 1999)
+- Goldstein and Gigerenzer (2002, N = 97 students) demonstrated that the recognition heuristic correctly predicted the winner in 72% of Wimbledon tennis matches vs. human experts' 66% — despite (or because of) using dramatically less information
+- Czerlinski, Gigerenzer, and Goldstein (1999): "Take the best" (one-reason decision-making) outperformed multiple regression in 4 of 5 out-of-sample prediction tasks across 20 real-world datasets
+
+**The Resolution**: The Kahneman and Gigerenzer positions are more complementary than contradictory. Kahneman's System 1 heuristics are systematically exploited in laboratory settings designed to make the base rates of real-world environments artificially salient (the doctor's cab example; the Linda problem). Gigerenzer's heuristics are tested in naturalistic settings where the heuristic's ecological validity is high. The practical synthesis: simple heuristics work well in their native ecological domain; they fail (in predictable, documentable ways) when applied to contexts outside that domain. The challenge for the practitioner is identifying which context they are in — a skill that requires exactly the metacognitive capacity that the biases program aims to develop.
+
+**Prospect Theory's Durability**: The one element of the heuristics-and-biases program that Gigerenzer explicitly does not challenge is Prospect Theory's core findings. Loss aversion (losses hurt ~2–2.5× more than equal gains feel good), the probability weighting function (overweighting small probabilities, underweighting large ones), and reference-point dependence have been replicated across cultures, species (non-human primates show loss aversion), and in field settings with real stakes. These are as solid as psychological findings get.
 
 ## Related
 - [[cialdini-influence]]

@@ -18,6 +18,33 @@ Value investing is an investment strategy that seeks to buy securities trading b
 
 ## Details
 
+### Buffett's Greatest Investment Decisions: The Quantitative Record
+
+Understanding value investing requires examining the actual numbers behind legendary investments — not the narrative, but the returns, the prices paid, and the thesis.
+
+**Berkshire Hathaway vs. S&P 500 (1965–2023)**:
+- Berkshire Hathaway: 19.8% compound annual gain (compounded at ~3,787,464% total over 58 years)
+- S&P 500 (with dividends): 10.2% compound annual gain (24,708% total)
+- This 9.6% annualized alpha, compounded over 58 years, translates into 150× the wealth accumulation of the index — the most impressive long-term compounding track record in documented investment history
+
+**Selected Buffett/Munger major investments (specific entry data)**:
+
+| Investment | Entry Year | Entry Price (approx.) | Peak/Exit Multiple | Thesis |
+|-----------|------------|----------------------|--------------------|----|
+| American Express | 1964 | ~10× earnings (Salad Oil scandal) | Held; ~800% return to 2024 | Brand moat + temporarily distressed price |
+| Berkshire Hathaway (See's Candies) | 1972 | $25M | Estimated $2B+ in aggregate profits | Pricing power + no capital needs |
+| GEICO | 1976 | $47M (market cap ~$40M) | Fully acquired 1996 for ~$2.3B | Float + low-cost auto insurance |
+| Washington Post | 1973 | ~$10.6M (~5× earnings) | Sold 2014 for ~$1.1B; ~40× return | Media franchise at distressed price |
+| Coca-Cola | 1988–1989 | $1.0B (~15× earnings) | Current holding worth ~$25B | Global brand + reinvestment compounding |
+| Wells Fargo | 1990 | ~$290M (~5× earnings) | Full exit circa 2022; ~10× total | Real estate loan crisis panic |
+| Apple | 2016–2018 | ~$36B average cost | Sold ~$84B+ worth; held position worth ~$174B (2024) | Consumer brand + switching costs |
+
+**The GEICO investment** deserves particular analysis as the quintessential value investment. In 1976, GEICO faced near-bankruptcy due to mispriced insurance policies (inadequate reserves). Buffett analyzed the underlying business model — direct-to-consumer auto insurance with a cost advantage of ~15% over agent-sold competitors — and concluded the economic moat was intact even as the financial position was distressed. He committed $47M when the market cap was ~$40M (the stock had fallen from $61 to $2). The business was operationally sound; only the financial position was impaired. Buffett was later quoted: "I was buying dollar bills for 50 cents." The combination of quantitative analysis (asset value, normalized earnings power) with qualitative insight (the cost advantage moat was durable) is the pure expression of the Graham-Buffett framework.
+
+**The Apple investment** illustrates the evolution to quality at any price. Apple in 2016–2018 traded at 12–18× earnings — not classically "cheap" — but Buffett identified it as the world's greatest consumer franchise with an ecosystem of switching costs worth far more than the multiple implied. He described it later as "a consumer products company rather than a technology company" — framing that justified a higher multiple. The $36B investment grew to over $170B by 2024, producing a ~5× return in 8 years on a position that was already the world's largest company — demonstrating that quality at a reasonable price can compound extraordinary wealth even at scale.
+
+---
+
 ### Historical Origins
 Benjamin Graham, often called the "father of value investing," formalized the discipline in two seminal works: *Security Analysis* (1934, with David Dodd) and *The Intelligent Investor* (1949). Graham developed his approach after witnessing the 1929 crash wipe out investors who had no framework for distinguishing price from value.
 

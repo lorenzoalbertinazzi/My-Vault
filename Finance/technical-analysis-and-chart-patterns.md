@@ -19,6 +19,26 @@ Technical analysis is the study of historical price and volume data to forecast 
 
 ## Details
 
+### Historical Origins: From Dow Theory to Modern Technical Analysis
+
+Technical analysis has a surprisingly deep intellectual history dating back over a century, predating academic finance entirely.
+
+**Charles Dow and the Origins (1884–1902)**: Charles Dow, co-founder of Dow Jones & Company and the Wall Street Journal, published a series of editorials from 1884 to 1902 that formed the basis of what became known as **Dow Theory**. Dow never assembled his insights into a single systematic text; his successor William Hamilton (1922) and later Robert Rhea (1932) codified them posthumously. Dow's key observations:
+- Markets discount everything (all known information is reflected in prices)
+- The market has three simultaneous trends: **primary trend** (1–3 years), **secondary trend** (3 weeks to 3 months), and **minor trend** (hours to 3 weeks)
+- The Dow Jones Industrial Average and Dow Jones Transportation Average (then called the Rail Average) must **confirm** each other for a primary trend signal to be valid — if industrials make new highs but transports do not, the rally is suspect
+- A primary bull market has three phases: **accumulation** (informed buyers buy despite pessimism), **public participation** (the trend becomes broadly recognized), **excess/distribution** (public euphoria, smart money sells)
+
+The Dow-Hamilton-Rhea framework correctly called the end of the 1921–1929 bull market and the 1929–1932 bear market, establishing technical analysis as a credible discipline. William Hamilton's editorial "A Turn in the Tide" (October 25, 1929 — three days before the crash) identified the top based on non-confirmation between the Averages — a remarkable application of Dow Theory at the pivotal moment.
+
+**Japanese Candlestick Origins (17th Century)**: Japanese rice futures traders in Osaka's Dojima Rice Exchange (established 1697) were using candlestick price charts more than 100 years before European financial markets had any formal charting tradition. Munehisa Homma (1724–1803), a rice merchant from Sakata, is credited as the originator. Homma recognized that rice prices were determined not just by supply and demand but by traders' emotional states — what we now call behavioral finance. His *San-en Kinsen Hiroku* ("The Fountain of Gold — The Three Monkey Record of Money," 1755) described the psychological patterns behind price movements. Steve Nison introduced candlestick methodology to Western financial markets through his 1991 book *Japanese Candlestick Charting Techniques*, transforming technical analysis globally.
+
+**Richard Wyckoff and the Composite Man (1910s–1930s)**: Richard Wyckoff, a Wall Street trader and founder of *The Magazine of Wall Street*, developed his method between 1905 and 1930 based on direct observation of how large institutional operators ("pools" in the language of his era) manipulated price action. His analytical framework was published posthumously in the 1930s Wyckoff Method Correspondence Course. Unlike Dow, who focused on averages, Wyckoff focused on individual stock and sector analysis — the precursor to modern market structure analysis.
+
+**The CANSLIM System and Systematic Technical Analysis (1960s–present)**: William O'Neil, founder of Investor's Business Daily, backtested every major market winner from 1953 to 1985 and identified common technical and fundamental characteristics: Cup-and-Handle patterns, high relative strength, institutional accumulation, and earnings acceleration. O'Neil's CANSLIM system (1988, *How to Make Money in Stocks*) was the first attempt to synthesize technical chart patterns with fundamental triggers — an empirically grounded hybrid that has produced multiple real-money investment successes.
+
+---
+
 ### The Three Core Assumptions of Technical Analysis
 
 **1. Market Action Discounts Everything**

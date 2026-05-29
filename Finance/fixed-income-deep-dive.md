@@ -120,6 +120,26 @@ By 2026, with fiscal deficits running high globally, the long end of the yield c
 
 The classic 60/40 portfolio (60% equities, 40% bonds) was stress-tested in 2022 when both fell together. Critics argue duration risk needs to be actively managed rather than assumed as automatically defensive.
 
+### Historical Development of Fixed Income Markets
+
+Fixed income markets are among the oldest formal financial institutions — their evolution from medieval lending to modern structured products spans eight centuries of financial innovation.
+
+**Medieval and Early Modern Origins (12th–17th centuries)**: The earliest fixed income instruments were *census* contracts in medieval Europe — perpetual income streams sold by landowners or municipalities. Venice issued the first documented government bond (*prestiti*) in 1157, paying 5% interest, to finance wars with Constantinople. The Venetian government maintained a secondary market and a registry of holders — the first recognizable bond market. Amsterdam's exchange (established 1602 alongside the VOC) developed active secondary markets in Dutch East India Company bonds and Netherlands government debt from the 17th century.
+
+**British Consols and the War Finance Model (18th century)**: The United Kingdom pioneered long-term sovereign debt markets to finance the Seven Years' War (1756–1763) and Napoleonic Wars (1793–1815). British Consols (*Consolidated Annuities*) were perpetual bonds paying a fixed coupon — they were the benchmark risk-free rate for all of 19th-century finance. Napoleon's eventual defeat was partly attributed to Britain's superior debt market: Britain could borrow at 3–4% to finance naval power; France paid 6–8% and could not sustain comparable war expenditure. The bond market thus influenced the geopolitical outcome of the era.
+
+**US Treasury Market Development (19th–20th centuries)**: The US Treasury issued its first bonds in 1790, when Alexander Hamilton funded the Revolutionary War debt ($77M) through Hamilton's debt assumption program — creating a unified national government credit and establishing the US Treasury as an investable security for international investors. The Civil War (1861–1865) forced massive debt issuance ($2.2B, equivalent to ~50% of GDP) and created the first large retail bond market as Jay Cooke sold "5-20" bonds door-to-door to ordinary citizens.
+
+**The Birth of the Modern Credit Market (20th century)**:
+- 1909: **John Moody** publishes *Moody's Analyses of Railroad Investments* — the first systematic credit rating, rating 1,500 railroad securities. Standard Statistics (later S&P) began ratings in 1916.
+- 1938: **Securities Exchange Act** requires institutional investors to hold investment-grade bonds — creating the regulatory divide between IG and HY that governs trillions in portfolio allocation today.
+- 1977: **Drexel Burnham Lambert** (Michael Milken) develops the modern high-yield bond market, enabling below-investment-grade companies to access capital markets. From 1977–1987, the HY market grew from ~$10B to ~$200B in outstanding issuance, financing the 1980s leveraged buyout boom.
+- 1983: **First mortgage-backed security (MBS)** issued by Salomon Brothers for Freddie Mac — the securitization revolution begins. MBS outstanding grew from near-zero to over $9T by 2007.
+- 1994: **Orange County bankruptcy** — the first major institutional casualty of derivatives and duration risk. Orange County's investment pool lost $1.7B using leveraged inverse floaters, filing the largest municipal bankruptcy in US history to that point.
+- 2008: **Global Financial Crisis** reveals the systemic fragility embedded in structured credit (CDOs, CDO-squared), leading to the largest fixed income market stress in modern history.
+
+---
+
 ### Duration Matching and Portfolio Immunization
 
 **Immunization** is the strategy of constructing a bond portfolio so that its value is protected against interest rate changes by matching its duration to a known future liability date. A pension fund paying benefits in 10 years should hold a portfolio with duration ≈ 10 — then if rates rise (reducing portfolio value), the discount rate applied to liabilities also rises (reducing the PV of liabilities by a matching amount).

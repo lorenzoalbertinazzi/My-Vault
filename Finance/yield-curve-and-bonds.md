@@ -142,6 +142,41 @@ Buying a bond with slightly longer maturity than your holding period, then selli
 
 This cycle was a textbook illustration of every concept above — flattening, inversion, bear steepening, and eventual re-normalization.
 
+### Historical Yield Curve Episodes: Lessons from the Archives
+
+The yield curve's behavior across major economic episodes provides the empirical grounding for understanding its signals today.
+
+**The Volcker Disinflation (1979–1982) — Bear Flattener to Inversion**:
+Paul Volcker became Fed Chairman in August 1979 with US CPI at 11.3% and the 2s10s spread at approximately +200bps (normal). Volcker abandoned the Fed's traditional focus on interest rates and instead targeted money supply growth directly — the "monetarist experiment." The federal funds rate was raised from 11% to 20% by June 1981. The yield curve inverted dramatically: at the peak inversion in 1981, short rates exceeded long rates by approximately 400bps — the deepest inversion in modern US history. 
+
+**The recession response**: Two recessions followed — a mild one in 1980 (6-month duration) and a severe one in 1981–82 (16-month duration with unemployment reaching 10.8%, the highest since the Great Depression). The inversions precisely preceded both contractions. When the Fed reversed and began cutting in mid-1982, the yield curve normalized (bull steepener) and one of the greatest equity bull markets in history began (the 1982–2000 secular bull market) — directly connected to the yield curve's normalization and the secular decline in inflation expectations embedded in long yields.
+
+**The "Greenspan Conundrum" (2004–2006) — Bear Flattener Without Inversion**:
+From June 2004 to June 2006, the Fed raised the federal funds rate from 1% to 5.25% in 17 consecutive 25bp increments — one of the most telegraphed hiking cycles in history. But long-term Treasury yields barely rose: the 10-year moved from 4.6% to only 5.2% while the federal funds rate rose 425bps. By 2006, the curve was flat and briefly inverted. Greenspan called long-term rate's non-response a "conundrum." 
+
+**Why long yields didn't rise**: Ben Bernanke (2005) identified the "global savings glut" — Asia's post-1997 crisis reserve accumulation and oil exporters' petrodollar recycling were both being invested heavily in US Treasuries, suppressing long yields despite the Fed's tightening. This was the yield curve reflecting global capital flow dynamics beyond domestic monetary policy — the first major manifestation of financial globalization distorting the traditional yield curve signals.
+
+**The inversion's validity was not diminished**: Despite the "structural" explanation for the flat curve, the 2006 inversion was followed by the 2007–2009 Global Financial Crisis — confirming that whatever the mechanism, inversion's recession prediction record held.
+
+**Japan's Yield Curve (1990–2024) — Three Decades of Unconventional**:
+Japan's yield curve provides the world's most extreme laboratory for yield curve dynamics. After the real estate and equity bubble collapsed in 1989–1990, Japan's economy entered a 20-year period of deflation and stagnation. The yield curve response was extraordinary:
+
+| Period | Short Rate | 10Y JGB | Curve Shape | Economic Context |
+|--------|-----------|---------|-------------|-----------------|
+| 1995 | 1.0% | 3.5% | Normal | Early post-bubble; mild recovery |
+| 1999 | 0.03% | 1.7% | Normal but flat | First zero rate experiment |
+| 2003 | 0.05% | 0.5% | Ultra-flat | Deflation fears; quantitative easing |
+| 2016 | −0.10% | 0.0% | Flat/inverted | YCC introduction; negative policy rate |
+| 2022 | −0.10% | 0.5% | Slight positive slope | YCC defending 0.5% cap |
+| 2024 | 0.25% | 1.5% | Normalizing | First rate hike in 17 years; YCC abandoned |
+
+The Japan case illustrates several critical lessons for yield curve analysis:
+1. Yield curves can remain suppressed for decades when secular stagnation + deflation expectations dominate
+2. Central bank yield curve control (YCC) can maintain arbitrary curve shapes but creates currency and inflation risks over time
+3. When the BOJ finally normalized in 2024, the yen carry trade unwind (one of the largest in history) caused global market volatility — demonstrating that artificially suppressed yield curves create hidden global leverage that unwinds disruptively
+
+---
+
 ### Term Premium Decomposition — The ACM Model
 
 The **term premium** is the extra return investors demand for holding a longer-dated bond versus rolling over short-term bonds repeatedly. It is the component of long yields that is *not* explained by expected future short rates.

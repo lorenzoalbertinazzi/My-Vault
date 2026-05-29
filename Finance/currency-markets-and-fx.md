@@ -103,6 +103,33 @@ FX markets can be calm for extended periods, then experience explosive moves. Ke
 - **FX as an asset class**: Systematic strategies (momentum, carry, value, quality) can generate returns over time
 - **Emerging market investing** requires deep attention to currency dynamics, as EM currencies can be highly volatile
 
+### FX Market Size and Structure — Quantitative Context
+
+The foreign exchange market dwarfs all other financial markets in daily turnover:
+
+**BIS Triennial Central Bank Survey (2022 data)**:
+- Daily global FX turnover: **$7.5 trillion**
+- Breakdown by instrument: Spot $2.1T (28%), Outright forwards $1.1T (15%), FX swaps $3.8T (51%), Options/other $0.5T (6%)
+- By currency pair: EUR/USD 22.7%, USD/JPY 13.5%, GBP/USD 9.5%, AUD/USD 5.1%, USD/CAD 4.8%
+- Geographic concentration: UK (38.1%), US (19.4%), Singapore (9.5%), Hong Kong SAR (7.1%), Japan (4.4%)
+
+For context: global equity markets trade approximately $200–300B daily (less than 5% of FX volume); the US government bond market trades approximately $600–700B daily.
+
+**Market participants by share (estimated)**:
+- Reporting dealers (large banks): ~42%
+- Other financial institutions (hedge funds, pension funds, mutual funds): ~50%
+- Non-financial customers (corporations): ~8%
+
+The dominance of financial institutions over corporations reveals that most FX volume is speculative/investment-driven, not trade-settlement-driven — directly relevant to understanding why the market is dominated by sentiment and interest rate differentials rather than trade flow fundamentals in the short run.
+
+**Bid-ask spreads (2024 conditions)**:
+- EUR/USD: 0.5–1.0 pip ($5–10 per $1M notional) — nearly frictionless for institutions
+- USD/MXN: 3–8 pips — higher for emerging market pairs
+- USD/TRY: 10–30 pips during stress periods — liquidity dries up in crises
+- Exotic pairs (USD/NGN): 50–100 pips or more
+
+---
+
 ### Interest Rate Parity: Covered and Uncovered
 
 Two foundational frameworks describe how interest rate differentials relate to exchange rates:
@@ -112,6 +139,50 @@ Two foundational frameworks describe how interest rate differentials relate to e
 **Uncovered Interest Rate Parity (UIP)**: A theoretical prediction that expected exchange rate movements will perfectly offset interest rate differentials over time. A high-rate country's currency should depreciate to equalize returns. UIP holds poorly in practice — empirically, high-rate currencies tend to *appreciate* in the short-to-medium run (the basis for profitable carry trades). This "forward premium puzzle" remains one of the most studied anomalies in international finance.
 
 **Practical lesson**: CIP is an arbitrage condition enforced by professionals. UIP is a theoretical equilibrium that need not hold because it's not directly arbitrageable — sentiment and risk appetite drive persistent deviations.
+
+### Exchange Rate Determination: The Dornbusch Overshooting Model
+
+One of the most important theoretical frameworks in international economics is Rudiger Dornbusch's **exchange rate overshooting model** (1976), which explains why exchange rates are far more volatile than underlying economic fundamentals would predict.
+
+**The core puzzle Dornbusch addressed**: If a central bank raises interest rates by 2%, a 2% appreciation might be expected as capital flows in seeking higher returns. But real-world exchange rates routinely move 5–15% in response to a 1–2% rate surprise. Why?
+
+**The Dornbusch mechanism**:
+1. A monetary tightening surprise raises domestic interest rates
+2. Uncovered Interest Parity (UIP) requires that the expected *future* depreciation exactly offset the interest rate advantage
+3. For UIP to hold over the long run, the exchange rate must first **overshoot its long-run equilibrium** — it must appreciate MORE than fundamentals justify
+4. After the initial overshoot, the currency gradually depreciates back toward PPP, with the depreciation path providing the return equalization for foreign investors
+
+**Formally**: If the interest rate differential Δi = 2% persists for 1 year, and the long-run PPP implies 0% change, then the spot rate must initially appreciate by some amount E₀ such that: E₀ = −(1/λ) × Δi, where λ is the speed of price adjustment. If prices adjust slowly (low λ), the overshooting is larger.
+
+**Empirical evidence**: Dornbusch overshooting is well-supported empirically. The dollar's appreciation of ~25% following the Fed's aggressive hiking in 2022–2024 (when the policy rate rose from 0% to 5.25%) was broadly consistent with overshooting dynamics — the initial surge was larger than PPP alone would predict, followed by partial retracement as other central banks caught up.
+
+**Investment application**: The Dornbusch model explains why FX positions opened immediately after a rate shock often experience rapid mark-to-market gains (the overshoot) but then slowly give back gains (gradual PPP mean reversion). Traders who understand the dynamic can position for the initial overshoot and then exit before the mean reversion erases the gain.
+
+---
+
+### The Mundell-Fleming Model — Open Economy Macroeconomics
+
+The **Mundell-Fleming model** (Robert Mundell, 1963; Marcus Fleming, 1962) extends IS-LM to an open economy, showing how monetary and fiscal policy effectiveness depends on the exchange rate regime.
+
+**The model in a fixed exchange rate regime**:
+- **Monetary policy is ineffective**: If the central bank tries to expand money supply (shift LM right → lower interest rates), capital immediately flows out seeking higher returns abroad. The central bank must intervene to defend the peg by buying domestic currency, contracting the money supply back — the monetary expansion is self-defeating.
+- **Fiscal policy is fully effective**: Government spending shifts IS right → temporarily raises interest rates → attracts capital inflow → upward pressure on the exchange rate → central bank sells domestic currency to defend the peg → money supply expands → LM shifts right automatically → output rises by the full multiplier. Fiscal policy is *super-multiplied* under fixed rates.
+
+**The model in a floating exchange rate regime**:
+- **Monetary policy is fully effective**: Money supply expansion lowers interest rates → capital outflows → currency depreciates → exports rise, imports fall → net exports boost aggregate demand → full stimulus effect
+- **Fiscal policy is partially ineffective**: Government spending raises interest rates → capital inflows → currency appreciates → net exports decline → "crowding out" through the exchange rate channel. Fiscal multiplier is reduced by the exchange rate adjustment.
+
+**The Impossible Trinity (Trilemma)**: Mundell's most famous insight: a country cannot simultaneously have (1) a fixed exchange rate, (2) free capital flows, and (3) independent monetary policy. Only two can coexist.
+
+| Policy combination | Who uses it |
+|-------------------|-------------|
+| Fixed rate + free capital + no monetary autonomy | Eurozone members, currency boards (Hong Kong) |
+| Fixed rate + monetary autonomy + capital controls | China (partially), 1940s–1970s Bretton Woods |
+| Free capital + monetary autonomy + floating rate | US, UK, Japan, most developed economies |
+
+**China's evolution** illustrates the trilemma in practice: China historically chose fixed rate + capital controls + monetary autonomy. As it liberalizes capital flows (gradually), it must choose between abandoning monetary autonomy (dollarization) or allowing exchange rate flexibility. China has incrementally moved toward more exchange rate flexibility while maintaining partial capital controls — a gradual triangulation of the trilemma.
+
+---
 
 ### The Triffin Dilemma and Reserve Currency Tensions
 

@@ -258,6 +258,42 @@ Understanding how prompt injection and jailbreaking work is essential for anyone
 
 ---
 
+### Model-Specific Prompting: Architecture-Dependent Behavior
+
+Different LLM architectures respond differently to the same prompting strategies. Understanding these differences is essential for practitioners who work across multiple model families.
+
+**Context window utilization and the primacy/recency effect**: All transformer-based LLMs exhibit the "lost in the middle" phenomenon (Liu et al., 2023) — attention weights follow a U-shape with context length, with the first ~20% and last ~20% of context receiving disproportionate attention. Practical implications:
+- Place the most important context (ground truth documents, examples, constraints) at the **beginning and end** of the prompt
+- For long system prompts with both persona and constraints: put the persona first, then content, then constraints at the very end
+- When using RAG with multiple retrieved chunks: put the highest-relevance chunks first AND last; bury less-relevant chunks in the middle
+
+**Claude-specific prompting characteristics** (Anthropic's Constitutional AI training):
+- Responds well to explicit reasoning requests ("Think through this carefully before answering")
+- The `<thinking>` tag in XML-formatted prompts activates extended reasoning in Claude 3.7 Sonnet
+- More sensitive to conflicting instructions than GPT-4 — inconsistencies in system prompt vs. user prompt produce more explicit refusals rather than silent resolution
+- Performs well with operator-defined personas when the persona is specified in the system prompt and not contradicted in the user message
+- Explicit references to honesty and accuracy norms ("Be direct; don't speculate beyond what the evidence supports") consistently improve factual precision
+
+**GPT-4o-specific characteristics**:
+- Responds strongly to examples — few-shot prompting reliably outperforms zero-shot even for tasks the model handles well zero-shot
+- Format instruction compliance improves significantly when format requirements are stated both at the beginning of the system prompt AND repeated at the end of the user message (exploiting primacy + recency)
+- GPT-4o's "gist" instruction following is stronger than Claude's but can be less reliable on adversarial edge cases
+
+**Gemini-specific characteristics**:
+- Particularly responsive to structured thinking prompts ("First, analyze X. Then consider Y. Finally, synthesize a recommendation.")
+- Video and audio content as context requires explicit labeling of what the user wants the model to focus on
+- Gemini 1.5 Pro's 1M-token context enables whole-corpus retrieval, but quality degrades for queries requiring integrating widely distributed information; concentrated queries perform better
+
+**Open-source model prompting differences** (Llama 3, Mistral, Qwen):
+- Instruction-following compliance is significantly weaker than frontier proprietary models, particularly for negative instructions ("Do NOT include X")
+- Few-shot examples provide larger gains on open-source models than proprietary ones (the gap between zero-shot and few-shot is larger because base instruction tuning is weaker)
+- System prompt length matters more: Mistral 7B performance degrades significantly with system prompts > 200 tokens; Llama 3 handles up to ~500 tokens reliably
+- Formatting instability: small open models often drop formatting even when instructed; using grammar-constrained generation (Outlines, llama.cpp GBNF grammars) is the practical solution
+
+**The attention sink phenomenon**: A subtle but important discovery (Xiao et al., 2023, "Efficient Streaming Language Models with Attention Sinks"): transformers attend disproportionately to the first 1-4 tokens of any sequence, regardless of their content. These "sink" tokens absorb excess attention probability mass. This is why adding "empty" tokens (a simple padding token or "!") at the very beginning of a system prompt sometimes improves performance on subsequent content — it provides sink tokens that don't interfere with the actual instructions. Used in StreamingLLM (NVIDIA) to enable theoretically infinite context by maintaining sink tokens + a sliding window cache.
+
+---
+
 ### Historical Development
 
 Prompt engineering as a discipline emerged abruptly in 2020 with GPT-3's release — prior models lacked the capability to be usefully steered by natural language instructions, making the concept largely irrelevant.
@@ -395,6 +431,34 @@ In multiple case studies on multi-hop question answering and code generation, DS
 | SWE-bench Verified | 49.0% | 70.3% | 38.7% | 71.7% |
 
 Extended thinking provides the largest gains on tasks requiring multi-step planning and where incorrect intermediate steps are "unrecoverable" from standard generation.
+
+---
+
+### Production Prompt Versioning and A/B Testing
+
+At production scale, prompts are not written once and deployed forever — they are software artifacts that require the same engineering discipline as code: versioning, testing, monitoring, and gradual rollout.
+
+**Prompt as code**: Store prompts in version-controlled repositories (Git). Each prompt should have:
+- A semantic version tag (v1.2.0: refactored system prompt to improve JSON compliance)
+- A changelog entry documenting what changed and why
+- A suite of evaluation tests that the prompt must pass before deployment
+- Metadata: target model, token count, creation date, A/B test results
+
+**LangSmith and prompt tracing infrastructure**: At scale, every LLM call should emit a trace recording: prompt hash, model version, temperature, latency, output token count, user feedback signal (thumbs up/down, conversion, time-on-page). LangSmith, Helicone, and Braintrust provide this infrastructure. Without per-call traces, it's impossible to diagnose prompt degradation (e.g., when a model update changes behavior for a specific prompt pattern) or identify which prompt variants are underperforming.
+
+**Shadow mode testing**: Before deploying a new prompt, run it in parallel with the current prompt on the same queries without surfacing the new prompt's responses to users. Compare quality metrics offline. Only promote the new prompt when it demonstrably outperforms on the evaluation suite.
+
+**Gradual rollout with holdout groups**: Deploy the new prompt to 5% of traffic, compare real-world metrics (user satisfaction, task completion rate, escalation rate) against the 95% control group for 48–72 hours. If metrics are equal or better, expand to 50%, then 100%. This is standard practice at companies with >10,000 daily LLM calls.
+
+**The prompt evaluation dataset lifecycle**: A prompt evaluation dataset should include:
+- Golden examples (input + expected output) covering the most common use cases (~200-500 examples)
+- Edge cases that historically caused failures
+- Adversarial examples targeting known failure modes
+- Regression tests: examples that previously failed and were fixed
+
+As models are updated and prompts are revised, the evaluation dataset accumulates. A healthy production LLM system has 1,000+ prompt tests that run in CI/CD before any prompt or model update is deployed.
+
+**Estimating evaluation costs**: Running 500 evaluation examples against GPT-4o at ~$0.002/example = $1.00 per evaluation run. At 10 prompt iterations per week, this is $10/week — negligible. However, for complex multi-step agent evaluation requiring 20+ LLM calls per example, the cost scales to $40 per run, or $400/week for active development. Teams often address this with a "fast eval" (run on 50 examples, ~$2) for quick iteration and a "full eval" (500 examples) for pre-deployment validation.
 
 ---
 

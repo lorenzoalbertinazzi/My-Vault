@@ -78,6 +78,45 @@ Fama-French and others identified additional risk factors beyond market beta tha
 
 **Concentration vs. Diversification tradeoff**: Buffett/Munger favor concentration (know a few things well); institutional investors favor diversification (can't know everything). The right answer depends on your informational edge.
 
+### Kelly Criterion: Mathematical Foundation of Position Sizing
+
+The **Kelly Criterion** (John L. Kelly Jr., Bell System Technical Journal, 1956) provides the mathematically optimal fraction of capital to risk on each bet to maximize long-run geometric growth.
+
+**The Kelly Formula**:
+> **f* = (bp − q) / b = (edge) / (odds)**
+
+Where:
+- **f*** = optimal fraction of capital to bet
+- **b** = net odds (profit per $1 bet if you win)
+- **p** = probability of winning
+- **q** = probability of losing = 1 − p
+
+**Simple binary example**: You have a coin that comes up heads 60% of the time. For every $1 you bet, you win $1 (even odds, b = 1). 
+
+f* = (1 × 0.60 − 0.40) / 1 = 0.20/1 = **20% of capital**
+
+Betting 20% of capital each flip maximizes the geometric growth rate of wealth over many trials. Betting more (e.g., 40%) actually produces *lower* long-run wealth despite higher expected value per bet — because the losses are too devastating relative to capital.
+
+**The Kelly formula for investment portfolios** (continuous version):
+
+> **f* = μ / σ²**
+
+Where μ = expected excess return and σ² = variance of returns.
+
+For a stock with expected excess return of 8% and annualized volatility of 20%:
+f* = 0.08 / (0.20)² = 0.08 / 0.04 = **2.0 (or 200% of capital)**
+
+This implies leveraging 2× — aggressive but mathematically optimal for a long-run wealth maximizer with these parameters. The Sharpe ratio of this position = 0.08/0.20 = 0.40, a reasonable equity premium estimate.
+
+**Why practitioners use fractional Kelly (half-Kelly or quarter-Kelly)**:
+1. **Parameter uncertainty**: The expected return μ is estimated with significant error. If μ is actually 4% rather than 8%, full Kelly would have overbet and generated severe drawdowns.
+2. **Variance of wealth**: Full Kelly maximizes the median outcome (geometric mean) but produces extreme volatility. Half-Kelly reduces drawdowns dramatically — the expected time to double remains nearly as short, but the probability of a 50% drawdown falls from ~30% to ~10%.
+3. **Non-stationarity**: Investment opportunities change over time; the Kelly fraction should be dynamically updated, which is complex.
+
+**Historical application — Ed Thorp**: Ed Thorp (author of *Beat the Dealer*, 1962, and pioneer of quantitative finance) explicitly applied Kelly to blackjack (computing edge from card counting) and later to convertible bond arbitrage and warrants. His Princeton-Newport Partners fund (1969–1988) achieved ~15% annualized returns with minimal drawdowns using Kelly-based sizing. Thorp's fund was one of the first systematic demonstrations that Kelly position sizing, combined with genuine edge identification, produces compounding superior to any intuition-based sizing approach.
+
+---
+
 ### The Black-Litterman Model
 
 Markowitz optimization is mathematically elegant but practically problematic: it is extremely sensitive to small changes in expected return inputs, leading to concentrated, unstable portfolios when implemented naively. Small errors in estimated returns produce wildly different "optimal" allocations.

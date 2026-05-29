@@ -160,6 +160,37 @@ Dalio's framework identifies two recurring patterns that explain long-run econom
 
 By 2026, global sovereign debt levels are at peacetime highs. Dalio argues developed markets are in the late stages of a long-term debt cycle where fiscal space is constrained and monetary policy has diminishing returns — historically resolved through inflation, default, currency devaluation, or a combination of all three.
 
+### The Quantity Theory of Money and Monetarism
+
+The **Quantity Theory of Money (QTM)** is one of the oldest relationships in economics, providing the link between money supply and the price level:
+
+> **MV = PQ**
+
+Where:
+- **M** = Money supply (measured as M2 in modern practice)
+- **V** = Velocity of money (how many times each dollar turns over in a year)
+- **P** = Price level (GDP deflator)
+- **Q** = Real output (real GDP)
+
+Since MV must equal nominal GDP (PQ) by definition, rearranging gives the inflation equation:
+
+> **π ≈ ΔM + ΔV − ΔQ**
+
+Where π = inflation rate, ΔM = money growth rate, ΔV = change in velocity, ΔQ = real growth rate.
+
+**The monetarist interpretation (Milton Friedman)**: If velocity V is roughly stable, then inflation is determined entirely by money growth minus real growth. Friedman's famous dictum: "Inflation is always and everywhere a monetary phenomenon." The policy implication: control M2 growth to control inflation, targeting money supply growth at roughly the real GDP growth rate (~2-3%) to achieve price stability.
+
+**Historical evidence for the QTM**:
+- Germany's Weimar hyperinflation (1921–1923): The Reichsbank monetized war debts, growing M2 at monthly rates exceeding 300% at the peak; the mark depreciated from 4.2 per dollar in 1914 to 4.2 trillion per dollar by November 1923. QTM precisely explains the outcome.
+- Zimbabwe (2007–2009): M2 growth exceeded 100% monthly; the Zimbabwe dollar experienced 79.6 billion percent month-on-month inflation (November 2008) before the currency was abandoned.
+- US 2020–2022: M2 grew 26% in 2020 and 13% in 2021 (the fastest pace since World War II, driven by QE + fiscal transfers). Velocity was suppressed initially but began recovering in 2021. CPI peaked at 9.1% in June 2022 — broadly consistent with the QTM prediction once velocity normalization is accounted for.
+
+**The velocity problem**: Between 2009 and 2020, the Fed tripled the monetary base (through QE) without producing proportional inflation because velocity collapsed simultaneously. M2 velocity fell from ~1.9 in 2007 to ~1.1 by 2020. Banks held excess reserves rather than lending them out; consumers deleveraged rather than spending. This period was the primary empirical challenge to simple QTM-based monetarism and led to the eclipse of strict Friedmanite monetarism in central bank practice (replaced by inflation-targeting and DSGE models).
+
+**Post-2020 rehabilitation**: The 2021–2022 inflation surge, which followed the largest peacetime money supply expansion in US history, partially rehabilitated QTM as a useful heuristic for extreme monetary expansion scenarios, even if its application to moderate rate changes remains unreliable.
+
+---
+
 ### The IS-LM Model — The Short-Run Macro Framework
 
 The **IS-LM model** (John Hicks, 1937; Alvin Hansen, 1949) is the workhorse framework for understanding short-run interactions between goods markets and money markets. Despite being over 80 years old, it remains indispensable for understanding how fiscal and monetary policy interact.
@@ -255,6 +286,62 @@ Current Account Balance = National Saving − Domestic Investment = (Private Sav
 This identity has a precise implication: a country with a large government budget deficit (spending > taxes) MUST either have high private saving or a current account deficit (importing foreign saving). The US budget deficits of the 2020s are arithmetically connected to the current account deficit — addressing the external imbalance requires either raising private saving or reducing the fiscal deficit.
 
 **Investment implications**: Countries with current account surpluses (Germany, Japan, South Korea, China) are net savers — they have excess domestic production that they invest abroad, building claims on the rest of the world. Countries with deficits (US, UK, Australia) are net borrowers — they live beyond domestic production, building foreign liabilities. Over long cycles, current account positions predict capital flows, currency trends, and sovereign credit dynamics in ways that simple macro indicators miss.
+
+### Keynesian Multiplier and Fiscal Stimulus: The Historical Evidence
+
+The **fiscal multiplier** is the ratio of additional output generated per dollar of government spending: if the government spends $1B and GDP rises by $1.5B, the multiplier is 1.5. The size of the multiplier is one of the most contested empirical questions in macroeconomics.
+
+**The multiplier formula (simple Keynesian)**: Multiplier = 1 / (1 − MPC × (1 − t))
+
+Where MPC = marginal propensity to consume and t = marginal tax rate.
+
+If MPC = 0.75 and t = 0.25: Multiplier = 1 / (1 − 0.75 × 0.75) = 1 / (1 − 0.5625) = **2.28**
+
+This implies $1B in government spending produces $2.28B in total output — the initial $1B spent cascades through the economy as each recipient spends a fraction.
+
+**The conditions that reduce the multiplier to near 1 or below**:
+1. **Ricardian equivalence** (Barro, 1974): If households anticipate that deficit spending requires future taxes, they save more today to pay those future taxes — fully offsetting the stimulus in present consumption. Empirically, Ricardian equivalence is only partial, not full.
+2. **Crowding out**: Government borrowing raises interest rates (in a non-ZLB environment), reducing private investment. IS-LM shows partial crowding out in most regimes.
+3. **Import leakage**: In open economies, spending stimulates imports as much as domestic production. The UK multiplier is smaller than the US multiplier precisely because the UK imports a higher fraction of marginal consumption.
+4. **Zero lower bound exception**: At ZLB, crowding out is eliminated (interest rates can't rise further), and the multiplier rises toward its theoretical maximum. Christiano, Eichenbaum, and Evans (2011) estimated multipliers of 2.0–3.5 at ZLB.
+
+**Historical calibrations**:
+- **2009 American Recovery and Reinvestment Act ($831B)**: CBO estimated the multiplier at 1.0–1.9. The stimulus added approximately 2–3 million jobs, consistent with a multiplier of ~1.3–1.5 on peak-period spending. Critics argued the multiplier was lower than CBO predicted because the ARRA contained significant tax cuts (lower multiplier than direct spending) and infrastructure spending with implementation lags.
+- **UK 2010–2012 austerity**: George Osborne's fiscal consolidation (reducing the structural deficit by ~5% of GDP over 3 years) coincided with UK GDP growth falling sharply, consistent with a multiplier of 1.2–1.5 — larger than the government's assumed ~0.5, leading to prolonged underperformance vs. projections. The IMF (Blanchard and Leigh, 2013) published a controversial paper acknowledging they had underestimated multipliers in the austerity-era forecasts by ~0.7.
+- **COVID fiscal response (2020)**: US government injected approximately $5T in combined fiscal stimulus (CARES Act $2.2T, subsequent packages). GDP contracted only 3.5% in 2020 and recovered above pre-COVID levels by Q2 2021 — faster than any prior recession recovery. The short-run multiplier appeared high (consistent with ZLB conditions), but the subsequent inflation (CPI reaching 9.1% by mid-2022) suggested the fiscal impulse exceeded the output gap, with the "excess" translated into prices rather than additional real output.
+
+**The fiscal multiplier debate matters for investing** because it determines whether government deficit spending is stimulative (buy cyclicals, sell bonds) or merely inflationary (sell bonds, buy commodities, protect against real yield erosion), depending on whether the economy is below or above potential output.
+
+---
+
+### The DSGE Model — Modern Macroeconomic Framework
+
+The **Dynamic Stochastic General Equilibrium (DSGE)** model is the workhorse framework of modern central bank macroeconomics, replacing the simpler IS-LM model in policy analysis from the 1990s onward.
+
+**Core features**:
+- **Dynamic**: Models economic decisions over time (households maximize lifetime utility, not just today's utility)
+- **Stochastic**: Incorporates random shocks to technology, preferences, monetary policy, and fiscal policy
+- **General Equilibrium**: All markets (goods, labor, capital, bonds) clear simultaneously
+
+**Key DSGE equations**:
+
+1. **Euler equation** (consumption): C_t^(−σ) = β × E_t[C_{t+1}^(−σ) × (1 + r_t)]
+   - Households smooth consumption over time; a higher real interest rate r_t induces saving today and consuming more tomorrow
+   - σ = coefficient of relative risk aversion (empirically estimated ~1–2)
+   - β = discount factor (subjective patience, ~0.99 quarterly)
+
+2. **Phillips Curve** (New Keynesian form): π_t = β × E_t[π_{t+1}] + κ × x_t
+   - Inflation today equals expected future inflation plus a fraction of the output gap x_t
+   - κ = slope parameter; flat NK Phillips curve (small κ) = inflation is less responsive to slack
+
+3. **Taylor Rule** (monetary policy): i_t = r* + π* + φ_π(π_t − π*) + φ_y × x_t
+   - Central bank responds to deviations of inflation from target and output from potential
+
+**DSGE vs. IS-LM**: IS-LM is a static, reduced-form model useful for blackboard intuition; DSGE explicitly microfounds the behavioral equations from household and firm optimization, allows welfare analysis, and handles rational expectations formally. The cost: far greater complexity, opaque parameter calibration, and poor performance in forecasting actual recessions (DSGE models famously failed to predict the 2008 recession).
+
+**Why this matters for investors**: Central banks use DSGE models to communicate their policy frameworks and forecasts. Understanding the Fed's thinking requires understanding that they are essentially asking: "what path of interest rates clears the goods and labor markets and returns inflation to target over a 2-3 year horizon?" — the exact question DSGE addresses. The "data dependence" phrase in Fed communications is DSGE in plain English: updating the model parameters as new economic data arrives.
+
+---
 
 ## Cross-Disciplinary Connections
 

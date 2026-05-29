@@ -99,6 +99,55 @@ LBO model sets a **floor** for company value in M&A — a strategic acquirer mus
 
 A common phenomenon: holding company **discount to NAV** (e.g., Berkshire Hathaway, Exor) — the holding company trades below the sum of its parts due to complexity discount, governance concerns, or lack of liquidity of the underlying stakes. Activists often target holding companies trading at wide NAV discounts.
 
+### Historical P/E Multiple Evolution: A Century of Valuation Data
+
+Understanding the current multiple context requires anchoring to historical norms. The following data reveals how dramatically valuation regimes shift across economic epochs.
+
+**S&P 500 Trailing P/E Multiples (selected years)**:
+
+| Year | Trailing P/E | 10Y Treasury Yield | Context |
+|------|-------------|-------------------|---------|
+| 1929 | 21× | 3.4% | Pre-crash peak; "new era" narrative |
+| 1932 | 9× | 3.7% | Depression trough; earnings collapsed |
+| 1949 | 6× | 2.2% | Post-war caution; stocks deeply unloved |
+| 1966 | 24× | 4.9% | "Go-go" era peak; Nifty Fifty beginnings |
+| 1974 | 7× | 8.0% | Oil shock; rate surge; market bottom |
+| 1982 | 7× | 14.6% | Volcker tightening; equity abandonment |
+| 2000 | 44× | 6.8% | Dot-com peak; maximum valuation in history |
+| 2003 | 22× | 4.0% | Post-bubble trough; earnings had reset |
+| 2009 | 13× | 3.5% | Financial crisis trough (trough earnings distort) |
+| 2013 | 18× | 2.9% | Post-GFC recovery; QE begins suppressing yields |
+| 2021 | 38× | 1.5% | Post-COVID stimulus; near-zero rates; maximum duration |
+| 2022 | 19× | 4.2% | Rate normalization repricing; growth selloff |
+| 2025 | 22× | 4.5% | Normalized rates; AI growth premium embedded |
+
+**Key observations**:
+1. P/E multiples are inversely correlated with interest rates over long horizons — when rates rise, P/Es fall (higher discount rate reduces the present value of future earnings)
+2. The 1974 and 1982 troughs at 7× P/E with high inflation represent the "maximum pessimism" valuation floors — markets were pricing equities as bond alternatives (earnings yield > risk-free rate), representing extraordinary long-term buying opportunities
+3. The 2000 peak at 44× is the historical extreme; Robert Shiller's CAPE ratio (10-year average earnings) reached 44× in December 1999 and did not return to historical average until 2011
+
+**The Fed Model**: A controversial but widely used practitioner framework that compares the earnings yield (1/P/E) to the 10-year Treasury yield:
+- If earnings yield > Treasury yield: equities "cheap" relative to bonds
+- If earnings yield < Treasury yield: equities "expensive" relative to bonds
+
+**2025 Example**: S&P 500 earnings yield ≈ 4.5% (at 22× P/E); 10Y Treasury = 4.5% → ratio at parity. The market is not cheap relative to bonds, but not at the extreme overvaluation of 2021 (when earnings yield was ~2.6% vs. Treasury at 1.5% — the largest spread in favor of equities in modern history, which justified the bull market's continuation).
+
+**The CAPE Ratio (Robert Shiller)**:
+The **Cyclically Adjusted P/E Ratio** divides the S&P 500 price by the 10-year average of inflation-adjusted earnings — smoothing out business cycle distortions. CAPE = Price / 10-year average real earnings.
+
+Shiller introduced CAPE in "Valuation Ratios and the Long-Run Stock Market Outlook" (1998, with Campbell), arguing that extremely high CAPE levels predicted poor subsequent 10-year returns.
+
+**CAPE as a return predictor** (empirical evidence):
+- CAPE < 10 (1982, 1920): subsequent 10-year real returns averaged ~15%/year
+- CAPE 10–20 (historical norm): subsequent 10-year real returns averaged ~7%/year
+- CAPE 20–30: subsequent 10-year real returns averaged ~4%/year
+- CAPE > 30 (only 1929, 2000, 2020–2022): subsequent 10-year real returns averaged ~0–2%/year
+- CAPE at peak 44 (December 1999): 10-year subsequent real return was approximately −1.3%/year (2000–2009 "lost decade")
+
+**CAPE limitations**: Critics (Jeremy Siegel) argue CAPE is distorted by accounting changes post-2000 that reduced reported earnings (expensing stock options, goodwill write-offs) and by the rising share of technology companies with different capital structures. Shiller's adjusted CAPE removes these distortions but still shows elevated valuations.
+
+---
+
 ### WACC Decomposition — Cost of Capital in Practice
 
 The **Weighted Average Cost of Capital (WACC)** is the hurdle rate used to discount cash flows in a DCF, representing the blended required return of all capital providers:

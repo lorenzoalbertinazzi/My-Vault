@@ -181,6 +181,62 @@ RAG is powerful but not always the right tool:
 - **Security**: filter retrieval results by user access permissions before injecting into prompt (authorization must happen at retrieval layer)
 - **Observability**: log every retrieval call — what was retrieved, what was generated, user feedback — to continuously improve
 
+### Chunking Implementation: Engineering Details and Failure Modes
+
+Chunking is deceptively simple in concept but rich with engineering complexity in practice. The wrong chunking strategy is the most common cause of poor RAG quality in production systems.
+
+**Fixed-size chunking with overlap — the baseline**:
+```python
+def chunk_text(text: str, chunk_size: int = 512, overlap: int = 64) -> list[str]:
+    """Token-aware fixed-size chunking with overlap."""
+    tokens = tokenizer.encode(text)
+    chunks = []
+    for i in range(0, len(tokens), chunk_size - overlap):
+        chunk_tokens = tokens[i : i + chunk_size]
+        chunks.append(tokenizer.decode(chunk_tokens))
+    return chunks
+```
+Key parameter choices:
+- **chunk_size = 256–512 tokens**: Best for precise factual retrieval (short answers embedded in longer documents). Smaller chunks are more precisely relevant but miss context.
+- **chunk_size = 1024–2048 tokens**: Better for reasoning tasks requiring paragraph-level context. Larger chunks reduce retrieval precision.
+- **overlap = 10-15% of chunk_size**: Prevents answers straddling boundaries from being missed entirely.
+
+**Why splitting at fixed token boundaries fails**: Cutting at arbitrary token positions splits sentences, paragraphs, and even subword tokens mid-concept. A sentence ending "the inflation-adjusted GDP growth rate was" cut at that point produces a chunk ending mid-thought — when embedded, the vector points neither clearly at "inflation" nor "GDP growth" but to a confused hybrid.
+
+**Recursive character text splitter (LangChain default)**:
+Tries multiple separator types in order: `["\n\n", "\n", ". ", " ", ""]`. For each chunk, try to split at the highest-priority separator; fall back to character-level if necessary. This preserves paragraph and sentence boundaries far more reliably than fixed-token splitting.
+
+**Semantic chunking — the quality ceiling**:
+```python
+# Embed each sentence → compute cosine similarity between adjacent sentences
+# → split where similarity drops significantly (topic boundary)
+sentences = split_into_sentences(text)
+embeddings = embed_batch(sentences)
+similarities = [cosine_sim(embeddings[i], embeddings[i+1]) for i in range(len(sentences)-1)]
+# Split at local minima of similarity (topic changes)
+split_points = find_local_minima(similarities, threshold=0.35)
+```
+Semantic chunking produces chunks that align with actual topic transitions rather than arbitrary boundaries. Research (LlamaIndex benchmarks, 2023) shows 10-20% improvement in retrieval precision on heterogeneous documents. Cost: requires embedding every sentence during chunking, which adds ~10x compute vs. rule-based splitting.
+
+**Parent-child chunking — the production sweet spot**:
+The most important advanced chunking pattern, addressing the precision-context tradeoff:
+1. Create "child" chunks at ~256 tokens with small overlap (for precise retrieval)
+2. Create "parent" chunks at ~1024 tokens (for rich generation context)
+3. Each child chunk is linked to its parent
+4. At query time: retrieve child chunks (high precision), then load parent chunks for LLM context (full context)
+
+**Implementation**: LlamaIndex's `ParentDocumentRetriever` and LangChain's `ParentDocumentRetriever` both implement this pattern. Child chunks are stored in the vector index; parent chunks are stored in a separate document store (Redis, MongoDB) keyed by a parent_id field in child chunk metadata.
+
+**Document-specific chunking challenges**:
+
+*PDFs*: PDF extraction is notoriously lossy. Multi-column layouts, headers/footers, tables, and figures cause text extraction tools (pdfplumber, PyPDF2, unstructured.io) to produce garbled text if not handled carefully. Tables extracted as plain text lose their structure entirely — "Q1 Q2 Q3 Q4 / Revenue 100 110 120 130" looks like meaningless text to an embedding model. Best practice: use unstructured.io's high-fidelity PDF parsing or extract tables as structured data (pandas DataFrames) stored separately with their own metadata.
+
+*Code*: Code should be chunked at the function/class level, not at arbitrary line counts. Abstract syntax tree (AST) parsing to identify function boundaries produces dramatically better retrieval for code Q&A. LlamaIndex's CodeSplitter uses tree-sitter to parse 20+ languages and split at syntactic boundaries.
+
+*Tables and structured data*: Each table row should be serialized as a self-contained sentence ("In Q1 2024, revenue was $100M, representing 10% YoY growth") rather than embedding the raw CSV. The natural language representation embeds far more meaningfully because embedding models are trained on prose, not delimited text.
+
+---
+
 ### GraphRAG (Microsoft, 2024)
 
 Standard vector RAG retrieves semantically similar chunks but misses **cross-document relationships** — facts that require synthesizing information across many disparate sources.
@@ -324,6 +380,61 @@ The choice between RAG and fine-tuning is one of the most consequential architec
 - **Use both when**: Fine-tune for domain behavior and format; RAG for dynamic factual knowledge. This is the pattern used in enterprise deployments: a fine-tuned model with domain vocabulary and communication style, augmented with a RAG system for current company data.
 
 **The fine-tuning trap**: Many teams fine-tune to inject factual knowledge (e.g., "add our product catalog to the model"). This rarely works well — facts are hard to reliably inject via fine-tuning and easy to retrieve via RAG. Fine-tuning is most effective for *behavioral* changes, not *knowledge* injection.
+
+---
+
+### Agentic RAG and Multi-Step Retrieval Architectures
+
+As RAG systems mature, the single-shot "query → retrieve → generate" pipeline is giving way to more complex agentic architectures where the LLM actively directs the retrieval process.
+
+**The core limitation of single-shot RAG**: A user query is often ambiguous, multi-part, or requires information from multiple distinct sources that no single retrieval step can capture. "How did the regulatory changes in 2023 affect the top 5 banks' lending practices and profitability?" requires: (1) identifying the specific regulations, (2) finding bank-specific financial data, (3) retrieving analysis connecting the two — three distinct retrieval operations.
+
+**ReAct-based RAG agent**:
+```
+Thought: I need to find information about 2023 banking regulations first.
+Action: retrieval_tool("banking regulations 2023 changes")
+Observation: [CFPB issued new guidelines on March 15, 2023 regarding... CRA updates...]
+Thought: Now I need to find JPMorgan's 2023 lending data.
+Action: retrieval_tool("JPMorgan lending volume 2023 annual report")
+Observation: [JPMorgan 2023 Annual Report: consumer loans declined 3.2%...]
+Thought: I have enough information to synthesize the answer.
+Final Answer: [synthesized response citing both sources]
+```
+This pattern — implemented in LangChain's Agent framework, LlamaIndex's OpenAI Agent, and Anthropic's tool-use API — enables multi-hop retrieval where each step informs the next. The LLM acts as a retrieval planner, not just a generator.
+
+**Query decomposition and parallel retrieval**:
+For known multi-part queries, decompose the query upfront, retrieve in parallel (reducing latency vs. sequential), then synthesize:
+```
+Original: "Compare Tesla's Q1 2024 revenue with Ford's and explain the difference"
+↓ Query decomposer
+Sub-queries: 
+  ["Tesla Q1 2024 revenue", "Ford Q1 2024 revenue", "automotive market Q1 2024 analysis"]
+↓ Parallel retrieval (3 simultaneous searches)
+↓ Merge and generate
+```
+Parallel decomposition reduces latency from 3 sequential retrievals (~9 seconds total) to 1 parallel batch (~3 seconds) with the same information coverage.
+
+**Iterative refinement RAG**: After an initial retrieval and draft answer, evaluate whether the answer is complete. If not, generate follow-up queries targeting the gaps:
+```python
+# Pseudo-implementation
+answer = initial_rag(query, chunks_1)
+completeness = evaluate_completeness(query, answer)  # LLM judge: 0-1
+while completeness < 0.85 and attempts < 3:
+    gap_query = identify_gaps(query, answer)  # "What's missing?"
+    chunks_2 = retrieve(gap_query)
+    answer = refine_answer(query, answer, chunks_2)
+    completeness = evaluate_completeness(query, answer)
+```
+
+**FLARE (Forward-Looking Active REtrieval)**: Instead of retrieving once at the start, FLARE triggers retrieval dynamically during generation:
+1. Model starts generating token by token
+2. When the model assigns low probability to an upcoming claim (token probability < threshold), it pauses generation
+3. Retrieves documents relevant to the low-confidence sentence being generated
+4. Resumes generation with the retrieved context injected
+
+This is particularly effective for long-form generation where different claims require different sources, and where the model can "know what it doesn't know" based on token probability signals.
+
+**Production cost implications**: Agentic RAG can involve 5-10× more LLM calls than single-shot RAG. At GPT-4o pricing ($5/M input tokens, $15/M output tokens), a multi-step agent handling a complex query with 4 retrieval steps and 1,000 tokens output per step costs ~$0.05–0.15 per query — 10-30× the cost of simple RAG. This makes model routing essential: route simple factual queries to single-shot RAG with a small model; reserve agentic RAG for complex analytical queries where answer quality justifies the cost.
 
 ---
 

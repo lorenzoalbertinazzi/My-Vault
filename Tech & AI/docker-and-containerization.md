@@ -122,6 +122,63 @@ Containers provide process isolation but are not as secure as VMs. Key security 
 - **Secrets management**: Never bake secrets into images; use environment variables or secret management systems (Vault, K8s Secrets)
 - **Network policies**: Restrict inter-container communication to only what's necessary
 
+### Container Image Build Optimization: Deep Engineering
+
+Building efficient Docker images requires understanding the layering system at a level beyond the basic Dockerfile tutorial. Poor image architecture is one of the most common sources of slow CI/CD pipelines, large attack surfaces, and unnecessary registry costs.
+
+**Layer caching mechanics**: Docker's build cache compares the Dockerfile instruction text and, for COPY/ADD instructions, the SHA256 hash of the source files. If both match a prior build, the cached layer is reused. The implications:
+
+```dockerfile
+# SLOW: copies all code before installing dependencies
+# Any code change invalidates the pip install cache
+FROM python:3.11-slim
+COPY . /app                          # ← cache invalidates here on ANY code change
+RUN pip install -r requirements.txt  # ← always re-runs
+
+# FAST: install dependencies first (changes rarely), copy code last (changes often)
+FROM python:3.11-slim
+COPY requirements.txt /app/          # ← only invalidates if requirements.txt changes
+RUN pip install -r requirements.txt  # ← cached on most builds
+COPY . /app                          # ← code changes only affect this layer onward
+```
+
+This single optimization (dependency installation before code copy) reduces average build time from 2-4 minutes to 15-30 seconds for a typical Python service with 50+ dependencies.
+
+**BuildKit and parallel builds**: Docker BuildKit (enabled by default since Docker 23.0) enables:
+- **Parallel layer building**: Multiple independent RUN stages build simultaneously
+- **Multi-platform builds**: `--platform linux/amd64,linux/arm64` builds both architectures in one command using QEMU emulation
+- **Secret mounting**: `RUN --mount=type=secret,id=npmrc npm install` injects secrets without embedding them in layer history
+- **Cache mounts**: `RUN --mount=type=cache,target=/root/.cache/pip pip install` caches pip's download cache across builds without storing it in the final layer
+
+**BuildKit cache mounts in practice**:
+```dockerfile
+# Python: pip download cache persists across builds
+RUN --mount=type=cache,target=/root/.cache/pip \
+    pip install -r requirements.txt
+
+# Node.js: npm cache persists (can halve npm install time on cache hit)
+RUN --mount=type=cache,target=/root/.npm \
+    npm ci --cache /root/.npm
+```
+
+On a 1,000-commit/week CI system, these cache mounts save ~40-50% build time by eliminating repeated package downloads.
+
+**Layer squashing and when to use it**: `--squash` (experimental) or BuildKit's `--flatten` merges all layers into one. Useful when intermediate layers contain sensitive data (deleted files that still exist in layer history). Generally avoid it — squashing eliminates layer sharing between image variants, dramatically increasing registry storage and pull time.
+
+**Image provenance and SBOM generation**: Production-grade image builds should generate a Software Bill of Materials (SBOM) — a machine-readable list of every package, library, and its version in the image. Docker BuildKit 0.11+ supports `docker sbom` and `docker scout`. SBOMs enable:
+- Automated CVE scanning (when a new vulnerability is announced, check all images with that dependency)
+- License compliance audits
+- Reproducible builds verification
+
+**Registry bandwidth optimization**: In large Kubernetes clusters, every pod start requires pulling the container image if not cached. For a 100-node cluster deploying a new 500MB image, the naive pull is 100 × 500MB = 50GB from the registry simultaneously — creating a thundering-herd bandwidth spike that delays deployments.
+
+Solutions:
+- **Dragonfly / Kraken (Uber)**: P2P image distribution using BitTorrent-like protocols. Nodes that have already pulled an image layer serve it to other nodes. Uber's Kraken reduced peak registry bandwidth by 75% for large fleet deployments.
+- **Stargz Snapshotter**: Lazy loading — containers start before the full image is pulled, streaming layers on demand. Startup latency for a 2GB image improves from 60 seconds (full pull) to 8 seconds (start with lazy loading).
+- **Image pre-pulling DaemonSets**: A Kubernetes DaemonSet that pre-pulls designated images to every node before deployment. When the actual deployment rolls out, every node already has the image cached.
+
+---
+
 ### The Path to Kubernetes
 
 Docker is excellent for single-host deployments, but production workloads often need:
@@ -141,6 +198,64 @@ Key Kubernetes concepts:
 - **Namespace**: Virtual cluster within a cluster for environment isolation
 
 Managed Kubernetes offerings (AWS EKS, Google GKE, Azure AKS) handle the control plane, making K8s accessible without deep infrastructure expertise.
+
+### Kubernetes Scheduling and Resource Management Internals
+
+Understanding how the Kubernetes scheduler makes placement decisions is essential for diagnosing slow deployments, resource waste, and production incidents.
+
+**The scheduling pipeline**: When a new pod is created, the kube-scheduler selects which node to place it on through two phases:
+
+**Phase 1 — Filtering (Predicates)**: Eliminate nodes that cannot satisfy the pod's requirements:
+- `NodeResourcesFit`: Node must have sufficient CPU/memory for pod's requests
+- `NodeAffinity` / `NodeSelector`: Pod's required node labels
+- `TaintToleration`: Pod must tolerate all node taints
+- `VolumeBinding`: Persistent volumes must be attachable to the node
+- `PodTopologySpread`: Enforce distribution across zones/nodes (anti-affinity)
+
+A node is in the feasible set only if it passes ALL predicates. On a 1,000-node cluster with a memory-heavy pod request, typically 200-400 nodes pass.
+
+**Phase 2 — Scoring (Priorities)**: Rank the feasible nodes:
+- `LeastAllocated`: Prefer nodes with more available resources (spreads load)
+- `MostAllocated`: Prefer nodes already handling significant load (packs pods, enables node scale-down)
+- `ImageLocality`: Prefer nodes that already have the container image cached (reduces pull latency)
+- `InterPodAffinity`: Prefer nodes near other pods with defined affinity labels
+
+Default scoring uses LeastAllocated, which prioritises spreading workloads but creates "noisy neighbor" problems when multiple high-variance workloads land on the same node.
+
+**Resource requests vs. limits — the most misunderstood distinction**:
+```yaml
+resources:
+  requests:
+    memory: "256Mi"    # Scheduler uses this for placement decisions
+    cpu: "100m"        # 100 millicores = 10% of 1 CPU
+  limits:
+    memory: "512Mi"    # cgroup memory.limit_in_bytes (OOM kill if exceeded)
+    cpu: "500m"        # cpu.cfs_quota_us (throttled if exceeded)
+```
+
+- **Requests**: The scheduler guarantees this much resource is available. Pods are placed only on nodes with sufficient free requests. Kubelet uses requests for pod QoS class assignment.
+- **Limits**: Hard constraints enforced by cgroups. A pod exceeding its memory limit is OOM-killed; exceeding CPU limit is throttled (not killed).
+
+**QoS classes** (Kubernetes quality-of-service):
+- **Guaranteed**: requests == limits for all containers. Highest priority; last to be evicted under node memory pressure.
+- **Burstable**: requests < limits. Middle priority.
+- **BestEffort**: No requests or limits set. First to be evicted. Never use in production.
+
+**Vertical Pod Autoscaler (VPA)**: Analyzes historical resource usage and adjusts requests/limits automatically. Two modes:
+- `Off`: Recommendations only; human applies them
+- `Auto`: VPA evicts pods and reschedules with updated resource settings
+
+VPA's limitation: it cannot adjust resources in-place; pods must be restarted. In-place pod resource updates (KEP-1287, graduated to beta in Kubernetes 1.29) allows changing CPU requests without pod restarts.
+
+**Horizontal Pod Autoscaler (HPA) scaling mechanics**: HPA queries metrics (CPU utilization, custom metrics via KEDA, or Prometheus) every 15 seconds and adjusts replica count using:
+```
+desiredReplicas = ceil(currentReplicas × (currentMetricValue / desiredMetricValue))
+```
+For CPU target=50%, current=80%, 3 replicas: ceil(3 × 80/50) = ceil(4.8) = 5 replicas. Built-in stabilization window (default 5 minutes scale-down, 3 minutes scale-up) prevents rapid thrashing.
+
+**KEDA (Kubernetes Event-Driven Autoscaling)**: Extends HPA to external event sources — scale based on Kafka consumer group lag, SQS queue depth, Redis stream length, HTTP request queue depth. KEDA enables scale-to-zero for event-driven workloads, which HPA cannot do (HPA minimum is 1 replica).
+
+---
 
 ### The Container Ecosystem
 
@@ -358,6 +473,97 @@ Real-world cluster sizes (2024 data):
 **Stateful Applications Remain Challenging**: Databases, message queues, and other stateful services in containers require careful handling of persistent volumes, backup procedures, and failover — significantly more complex than stateless services. Many organisations run stateful workloads on dedicated VMs or managed cloud services and containerise only stateless application tiers.
 
 **Image Supply Chain Security**: The Docker Hub ecosystem of public images is a significant attack surface — malicious packages have been found in popular public images. The SolarWinds-style supply chain attack risk extends to container registries: a compromised dependency image can compromise any container built from it.
+
+### OCI Runtime Internals: What Happens When You Run `docker run`
+
+Understanding what Docker actually executes when starting a container reveals its security model, performance characteristics, and failure modes.
+
+**The OCI (Open Container Initiative) runtime stack**:
+1. **Docker CLI** → sends API request to **Docker daemon** (dockerd, runs as root)
+2. **dockerd** → calls **containerd** (the higher-level runtime: manages image pulling, snapshots, container lifecycle)
+3. **containerd** → calls **runc** (the OCI-compliant low-level runtime that actually creates the container)
+4. **runc** → calls Linux kernel syscalls to set up namespaces, cgroups, and pivot_root
+
+**What `runc` does step by step**:
+```
+1. Clone the process into new namespaces (CLONE_NEWPID | CLONE_NEWNET | CLONE_NEWNS | CLONE_NEWUTS | CLONE_NEWIPC)
+2. Create cgroup hierarchy in /sys/fs/cgroup/
+3. Set resource limits (memory.limit_in_bytes, cpu.cfs_quota_us)
+4. Mount the container root filesystem (overlayfs mount of image layers)
+5. pivot_root: change the root directory to the container's filesystem
+6. Drop Linux capabilities (container runs without CAP_SYS_ADMIN, CAP_NET_ADMIN, etc.)
+7. Apply seccomp filter (syscall whitelist — deny ~40 dangerous syscalls by default)
+8. exec() the container entrypoint process
+```
+
+This entire sequence takes ~100ms on a warm host. The dominant latency is the overlayfs mount and cgroup setup, not namespace creation (which is ~1ms).
+
+**The containerd snapshot model**: Images are stored as a chain of content-addressed snapshots (using the snapshotshotter — overlay2 on Linux). Each layer is a set of filesystem changes (added/modified/deleted files) stored in `/var/lib/docker/overlay2/<sha256>/`. When a container starts, overlay2 creates:
+- `lower`: read-only union of all image layers
+- `upper`: container's writable layer (empty at start)
+- `work`: temporary working directory (overlay2 requirement)
+- `merged`: the unified view of lower + upper presented to the container
+
+**Container escape vulnerabilities and their mechanisms**: The shared kernel creates a fundamental attack surface. High-profile container escapes:
+- **CVE-2019-5736 (runc vulnerability)**: An attacker with root inside a container could overwrite the `runc` binary on the host by exploiting a race condition during `docker exec`. CVSS 9.8. Fixed by making runc open its own executable path with O_PATH and then using memfd_create to get an independent file descriptor.
+- **CVE-2022-0492 (cgroups v1 escape)**: An unprivileged process could escape a container using a Linux cgroups v1 release_agent by mounting a cgroup inside the container and writing a malicious command to release_agent. Fixed in Linux kernel 5.17; mitigation: don't mount cgroupfs inside containers or use cgroups v2.
+- **Kata Containers** solution: Each container runs in its own hardware-isolated VM (using KVM/QEMU or Firecracker) with a minimal kernel. This prevents kernel-level escapes entirely — an escape from the container still lands in an isolated VM, not the host. CPU overhead: ~5% vs. standard containers. Startup: ~100ms vs. ~10ms for runc.
+
+**Rootless containers** (Podman, rootless Docker, userns mode): Run the container daemon and containers as a non-root user by using user namespaces to remap UIDs. UID 0 inside the container maps to the unprivileged user outside. If the container escapes, it has only the permissions of the normal user on the host — dramatically reducing blast radius. The tradeoff: rootless containers cannot bind ports < 1024 without additional capabilities and have slightly higher overhead.
+
+---
+
+### eBPF-Based Container Networking: Cilium Deep Dive
+
+**Why eBPF changes container networking fundamentally**: Traditional Kubernetes networking runs through iptables rules — a chain of rules that every packet traverses. At 100,000+ pods, iptables performance degrades severely: O(N) packet processing per rule, with rule counts growing with services × pods. A large Kubernetes cluster can have 50,000+ iptables rules; each packet evaluation is sequential.
+
+**eBPF (extended Berkeley Packet Filter)** is a Linux kernel subsystem that allows running sandboxed programs in the kernel at arbitrary hook points, without modifying kernel source code and with near-native performance.
+
+**Cilium's architecture**:
+1. **BPF programs attached to network interfaces**: When a packet arrives, a BPF program runs in the kernel before the packet reaches the normal network stack. This program can inspect the packet, look up connection tracking, apply security policy, and forward/drop — entirely bypassing iptables.
+2. **BPF hash maps**: Fast kernel-resident hash tables storing policy rules, connection tracking, and service endpoints. Lookups are O(1) vs. iptables's O(N).
+3. **Identity-based security**: Rather than using IP addresses for security policy (which change as pods restart), Cilium assigns a cryptographic identity to each pod based on its Kubernetes labels. Policy is enforced at the identity level — "pod with label app=frontend can talk to pod with label app=backend on port 5432."
+
+**Performance comparison (2024 benchmarks, 10,000 pod cluster)**:
+| Approach | Throughput | Latency (p99) | CPU overhead |
+|----------|-----------|--------------|-------------|
+| kube-proxy (iptables) | ~15 Gbps | ~2.1ms | ~15% |
+| kube-proxy (IPVS) | ~22 Gbps | ~1.4ms | ~10% |
+| Cilium (eBPF) | ~40 Gbps | ~0.6ms | ~3% |
+
+Cilium's 3% CPU overhead vs. 15% for iptables means a significant portion of cluster compute is freed for actual workloads. At Cloudflare, migration to Cilium freed ~15% of cluster CPU — equivalent to thousands of servers.
+
+**Hubble** (Cilium's observability layer): Because BPF programs can observe every packet, Cilium's Hubble component provides application-aware network observability without any instrumentation of application code — seeing HTTP status codes, DNS queries, and service-to-service traffic flows in real time across the entire cluster.
+
+---
+
+### Environmental Impact of Container Infrastructure
+
+Container orchestration at cloud scale has significant but often unquantified environmental costs.
+
+**Data center power consumption**: The hyperscale clusters running containerized workloads are major energy consumers. AWS, Google Cloud, and Azure together consumed an estimated 50–60 TWh of electricity in 2024 — roughly equivalent to Switzerland's annual electricity consumption.
+
+**Container density and efficiency**: Containers improve compute utilization vs. VMs, which reduces absolute energy consumption for equivalent workloads. AWS's internal analysis (published 2021) found that migrating to Fargate (containerized serverless) reduced idle capacity by ~30% compared to VM-based deployments, directly reducing energy waste.
+
+**Kubernetes idle overhead**: A freshly provisioned Kubernetes node runs ~100+ system pods (kube-proxy, CoreDNS, CSI drivers, CNI plugin, monitoring agents, etc.), consuming ~200–400MB RAM and ~0.5–1.0 CPU cores before any workload is scheduled. At a 1,000-node cluster, this represents 500–1,000 CPU cores of overhead — equivalent to 50–100 physical servers running permanently for infrastructure bookkeeping.
+
+**Carbon-aware scheduling**: The CNCF's Kepler project and Microsoft's Karbon scheduler (2024) enable scheduling batch workloads to run in regions with lower grid carbon intensity (more renewable energy) — using the Kubernetes scheduler's topology constraints to express carbon preferences. Spotify reported a 12% reduction in workload-related carbon emissions from carbon-aware scheduling in 2024.
+
+---
+
+### Common Failure Modes in Production Container Deployments
+
+**OOM (Out-of-Memory) kill storms**: When a container exceeds its memory limit, the kernel sends SIGKILL — no warning, no graceful shutdown. In Kubernetes, a pod in a multi-container deployment that exceeds its memory request may trigger an OOM kill that cascades: the killed pod restarts, comes up cold (no warm cache), has high startup latency, receives traffic, hits memory limit again. Fix: set resource `requests` (what Kubernetes uses for scheduling) at the 70th percentile of observed usage and `limits` at the 95th percentile — use Vertical Pod Autoscaler (VPA) to automatically right-size.
+
+**ImagePullBackOff at scale**: When deploying a new image to 1,000 pods simultaneously, all nodes pull the image concurrently from the registry, creating a thundering herd. Docker Hub rate limits (200 pulls/6 hours for unauthenticated, 5,000/day for authenticated) or internal registry bandwidth becomes the bottleneck. Fix: use a pull-through registry cache (Harbor, AWS ECR pull-through cache), pre-pull images to nodes before deployment using a DaemonSet, or use P2P image distribution (Dragonfly, Kraken at Uber).
+
+**DNS resolution failures (5-second delays)**: A well-known Kubernetes bug (present through 2024): applications making rapid concurrent DNS queries to CoreDNS can hit a race condition in the Linux kernel's netfilter conntrack table, causing 5-second DNS resolution delays. This manifests as intermittent high-latency spikes in distributed applications. Fix: set `ndots: 5` to `ndots: 2` in pod DNS config (reduces DNS query amplification), use `dnsPolicy: ClusterFirstWithHostNet` for high-throughput pods, or enable NodeLocal DNSCache (daemonset running bind9 on each node).
+
+**PodDisruptionBudget misconfiguration**: If a PodDisruptionBudget (PDB) specifies `minAvailable: 100%` for a deployment with `maxSurge: 0`, rolling updates will deadlock — the update cannot proceed because removing any pod would violate the PDB. A surprisingly common misconfiguration that brings rollouts to a halt until manually overridden.
+
+**Readiness probe misconfiguration**: A pod that starts but fails its readiness probe immediately (e.g., the probe hits an endpoint that requires downstream services to be ready) will cycle between Terminating and Running, creating spurious load on downstream services and confusing monitoring. Liveness and readiness probes should probe different things: readiness probes whether the pod should receive traffic; liveness probes whether the process is alive at all.
+
+---
 
 ## Cross-Disciplinary Connections
 

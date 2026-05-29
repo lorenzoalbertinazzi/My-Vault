@@ -126,6 +126,49 @@ Key decisions in this pipeline:
 - **Index build time**: HNSW indexes are fast to query but slow to build and memory-intensive (roughly 1–2 bytes/dimension/vector)
 - **Stale embeddings**: If the underlying model changes, all stored embeddings must be recomputed
 
+### GPU-Accelerated Vector Search and Billion-Scale Indexing
+
+At billion-vector scale, the computational demands of ANN search require specialized hardware strategies. Understanding these techniques is essential for practitioners building large-scale retrieval systems.
+
+**Why GPU search is fundamentally different**: Vector search involves a specific computation pattern: for each query vector q ∈ ℝ^d, compute similarity scores against N database vectors {d₁, ..., d_N} and return the top-k. This is inherently parallelisable — each similarity computation is independent. Modern GPUs with 10,000+ CUDA cores can compute millions of dot products simultaneously.
+
+**FAISS GPU (Facebook AI Similarity Search)**: FAISS provides GPU implementations of flat (brute-force), IVF, and PQ indexes. Key performance numbers on V100 (2019, now baseline):
+```
+Flat (exact) brute force:
+- 1M vectors, d=128, float32: ~1ms per query (vs. ~100ms on CPU)
+- 100M vectors, d=128: ~100ms per query (latency scales linearly)
+- Throughput: ~10,000 queries/second (batched)
+
+IVF4096 + PQ64 (approximate):
+- 1B vectors, d=128: ~5ms per query
+- Throughput: ~2,000 queries/second (batched)
+- Recall@10: ~85% (depends on nprobe parameter)
+```
+
+**The nprobe parameter**: IVF (Inverted File) indexes divide the vector space into M Voronoi cells using k-means clustering. At query time, rather than checking all N vectors, only check vectors in the C most similar cells (nprobe=C). The recall-latency tradeoff:
+```
+nprobe=1: fastest, lowest recall (~70%)
+nprobe=10: moderate, recall ~90%
+nprobe=100: slower, recall ~98%
+nprobe=M (full scan): exact, equivalent to brute force
+```
+Typical production setting: nprobe=20-50 for ~95% recall, 10-50ms latency.
+
+**RAPIDS cuVS (formerly FAISS-GPU / raft-cuvs)**: NVIDIA's RAPIDS library provides state-of-the-art GPU ANN implementations:
+- **cuVS IVF-Flat**: 100M vectors, d=128, H100: ~2ms, ~99.5% recall@10
+- **cuVS CAGRA** (Cuda ANograph-based Graph Retrieval Algorithm): Graph-based ANNS on GPU — similar to HNSW but fully GPU-native. ~0.5ms per query at 99% recall for 10M vectors. 10-20× faster than CPU HNSW for batch queries.
+- Memory bandwidth is the bottleneck at inference: H100 has 3.35 TB/s HBM bandwidth vs. A100's 2.0 TB/s — explains significant H100 advantage for vector search.
+
+**DiskANN (Microsoft Research, 2019)**: Most ANN algorithms (HNSW, IVF) require the entire index in RAM. For billion-scale indexes (100GB+ of vectors), this is expensive. DiskANN builds a graph index that stores the bulk of data on SSD and keeps only a small fraction in RAM:
+- RAM footprint: ~5% of index size (vs. 100% for HNSW)
+- Query latency: ~15ms (vs. ~5ms for in-memory HNSW)
+- 1B vectors, d=128: ~13GB RAM + ~200GB SSD, 97% recall@10, ~15ms latency
+- Used in Microsoft Azure Cognitive Search for billion-scale production deployments
+
+**Streaming indexing and online updates**: HNSW is notoriously difficult to update incrementally — inserting a new vector requires partial graph reconstruction. Qdrant's custom HNSW implementation and Weaviate's HNSW handle online insertions with ~5-10% throughput overhead vs. batch builds. Milvus uses a tiered approach: new vectors go to an in-memory "growing segment" with brute-force search, then are periodically merged into sealed HNSW segments. This enables real-time indexing without index rebuild costs.
+
+---
+
 ### Matryoshka Representation Learning (MRL)
 
 Traditional embedding models produce a fixed-dimension vector (e.g., 1536D). You cannot reduce dimensionality without retraining the model.
@@ -372,6 +415,29 @@ OpenAI's MRL implementation allows truncating to any dimension:
 | Financial filings (10-K) | 50.1 | 61.5 | +11.4 pp |
 
 Code shows the largest gain because code has unique structural semantics (function names, variable patterns) not well-captured by general-text training.
+
+---
+
+### Common Failure Modes in Production Vector Search
+
+Vector database deployments fail in ways that are distinct from traditional database failures. Practitioners should understand these patterns before deploying to production.
+
+**Silent quality degradation from embedding model mismatch**: The most common production failure is embedding the index documents with one model version and querying with another. Unlike a schema mismatch (which causes an immediate error), an embedding model mismatch produces results that are silently wrong — the cosine similarities are computed correctly but between incompatible vector spaces, so semantically similar documents do not appear near each other. This happens most often when: (1) upgrading the embedding model without re-indexing, (2) using a different model for a subset of documents, or (3) mixing models with different normalization conventions (L2-normalized vs. unnormalized).
+
+**Prevention**: Store the embedding model name and version as immutable metadata on every vector in the index. Before inserting new vectors, validate that the model identifier matches. Implement a re-indexing pipeline that triggers automatically when the embedding model is changed.
+
+**Recall degradation at high filter cardinality**: Metadata filtering dramatically affects HNSW recall. The standard HNSW search starts from the top layer and greedily navigates toward the query, but metadata filters are applied as post-processing on ANN candidates. When filters are highly selective (e.g., "only documents from user_id=12345 who has 50 documents in a 10M corpus"), the ANN search may return 100 candidates none of which pass the filter, producing 0 results. Solutions:
+- **Pre-filtered indexes**: Qdrant and Weaviate build per-filter subgraphs that support efficient filtered HNSW search
+- **ef_search scaling**: Increase HNSW ef_search parameter to 500+ for high-selectivity queries (trades latency for recall)
+- **Hybrid index + SQL**: Route highly filtered queries to a BM25/SQL pre-filter followed by a flat exact-search within the filtered set
+
+**Index size explosion from high-cardinality metadata**: Storing large metadata dictionaries (100+ fields) per vector multiplies storage requirements. Qdrant's payload storage and Weaviate's object properties are not stored in the ANN index itself but in a companion key-value store — queries that filter on metadata must first fetch from the KV store, then verify ANN candidates. At 100M+ vectors with rich metadata, this becomes a performance bottleneck. Recommendation: store only filterable metadata in the vector database; retrieve additional fields from a separate datastore (PostgreSQL, S3) after ANN results are returned.
+
+**Thundering herd on index load**: Vector indexes (especially HNSW) are loaded entirely into RAM when the server starts. A Qdrant or Weaviate server with a 100GB HNSW index takes 2-5 minutes to load the index into memory on startup — making rolling restarts impractical without careful orchestration. Solutions: graceful shutdown with readiness probe suppression (serve existing queries while new instance loads), Qdrant's memory-mapped mode (mmap), or pre-loading via a warmup script before accepting traffic.
+
+**Stale embeddings after document updates**: When a document is updated, only the changed content needs re-embedding — but determining exactly which chunks changed requires careful delta tracking. Naive implementations re-embed the entire document on any change, causing unnecessary API costs. Chunking with stable chunk IDs (deterministic hashing of chunk content + position) enables efficient delta embedding: only re-embed chunks whose hash changed.
+
+**Embedding API latency spikes**: Third-party embedding APIs (OpenAI, Cohere) have occasional latency spikes (>5s for p99) and rate limits. For real-time applications, always implement: (1) local embedding fallback using a small open-source model (all-MiniLM-L6-v2) for degraded-mode operation, (2) embedding request batching with a queue to handle rate limit backpressure, (3) circuit breaker pattern to detect API degradation and switch to fallback model.
 
 ---
 
