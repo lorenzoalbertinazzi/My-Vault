@@ -592,6 +592,7 @@ The emergence of containerized AI inference as a product — where a company's I
 - [[retrieval-augmented-generation]]
 - [[vector-databases-and-embeddings]]
 - [[transformer-architecture]]
+- [[diffusion-models-and-image-generation]]
 - [[2026-05-27-us-china-great-power-competition]]
 - [[valuation-fundamentals]]
 - [[macroeconomics-101]]

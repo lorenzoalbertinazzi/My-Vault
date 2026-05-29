@@ -386,4 +386,6 @@ One of the most uncomfortable findings in EI research is the demonstration that 
 - [[stoicism]]
 - [[mental-models]]
 - [[behavioral-finance-and-investor-psychology]]
+- [[cialdini-influence]]
+- [[48-laws-of-power]]
 - [[2026-05-27-india-pakistan-2025-war-and-aftermath]]

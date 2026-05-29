@@ -3,7 +3,7 @@ title: Russia's Fading Grip on Central Asia — The New Great Game, 2026
 date: 2026-05-27
 tags: [geopolitics, russia, central-asia, kazakhstan, uzbekistan, china, belt-and-road, SCO]
 source: https://www.realclearworld.com/articles/2026/05/12/how_central_asia_became_russias_quiet_economic_lifeline_1182149.html / https://thediplomat.com/2026/02/is-central-asia-still-russias-backyard/ / https://www.hudson.org/foreign-policy/new-great-game-emerges-central-asia-drifts-away-moscow-tsiporah-fried
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -170,10 +170,10 @@ The shift in Central Asian labor migration documented by UK seasonal worker visa
 - [[2026-05-27-us-china-great-power-competition]]
 - [[2026-05-27-us-china-strategic-competition]]
 - [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
+- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
 - [[macroeconomics-101]]
 - [[currency-markets-and-fx]]
 - [[fixed-income-deep-dive]]
 - [[mental-models]]
 - [[negotiation-tactics]]
 - [[cognitive-biases]]
-- [[mental-models]]

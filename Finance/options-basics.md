@@ -352,6 +352,12 @@ The VIX's behavior at technical inflection points is itself a behavioral indicat
 
 Options markets are the most immediate financial channel through which geopolitical risk is priced. When the [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] escalated, the first market reaction was not in equity prices but in the options market: implied volatility on oil futures options spiked dramatically before spot oil prices fully adjusted, as market participants rushed to buy call protection on oil and put protection on airline, shipping, and energy-intensive industrial equities. This front-running of fundamental repricing by the options market occurs because options allow investors to take asymmetric positions on uncertain outcomes — they are structurally designed for geopolitical uncertainty pricing. The "geopolitical risk premium" embedded in options during crises — the spread between implied volatility and any reasonable fundamental volatility estimate — is a real-time measure of how seriously the options market is treating tail scenarios. Analysts who track the spread between near-dated and far-dated options (volatility term structure) during geopolitical crises can extract probability-weighted market assessments of scenario resolution timelines.
 
+### Options and Fixed Income: The Convexity-Gamma Bridge
+
+The deepest cross-disciplinary connection between options and fixed income — analyzed in [[fixed-income-deep-dive]] and [[yield-curve-and-bonds]] — is the structural equivalence between options' gamma and bonds' convexity. Both measure the second-order, non-linear sensitivity of price to the underlying variable (stock price for options, interest rates for bonds), and both create the same fundamental asymmetry: positive convexity/positive gamma means the instrument benefits from large moves in either direction relative to the linear price prediction. A bond with positive convexity falls less than its duration predicts when rates rise, and rises more than duration predicts when rates fall — exactly analogous to a long option position that benefits from realized volatility exceeding implied volatility. A callable bond has negative convexity — when rates fall (bond prices rise), the issuer calls the bond, capping the upside — which is the fixed income equivalent of a covered call position on the underlying rate instrument.
+
+Mortgage-backed securities (MBS) represent the most economically significant manifestation of this connection: homeowners' prepayment optionality (the right to refinance) makes MBS functionally equivalent to a bond that the homeowner has sold a covered call on (selling the right to call the loan when rates fall). MBS investors are systematically short negative convexity, receiving the prepayment option premium embedded in the MBS spread but bearing the convexity risk that this creates. When rates fall dramatically, MBS investors experience exactly the options seller's problem: the "gamma" of their position works against them, as duration shortens precisely when they want it to lengthen. The Federal Reserve's massive MBS purchasing programs (2020–2022 QE) effectively socialized this negative convexity, removing it from private investor balance sheets — which had the options market implication of suppressing implied volatility in interest rate options (swaptions) and depressing the volatility risk premium in fixed income broadly. The unwinding of these Fed MBS holdings (QT, 2022–2025) returned that negative convexity to private markets, which is one mechanism through which quantitative tightening created market volatility independent of rate hikes themselves.
+
 ## Related
 - [[valuation-fundamentals]]
 - [[portfolio-theory]]
@@ -360,3 +366,7 @@ Options markets are the most immediate financial channel through which geopoliti
 - [[macroeconomics-101]]
 - [[cognitive-biases]]
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
+- [[fixed-income-deep-dive]]
+- [[yield-curve-and-bonds]]
+- [[machine-learning-fundamentals]]
+- [[currency-markets-and-fx]]

@@ -3,7 +3,7 @@ title: US-Iran Conflict and the Strait of Hormuz Crisis (2026)
 date: 2026-05-27
 tags: [world-events, us-iran, middle-east, strait-of-hormuz, oil, nuclear]
 source: https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -142,3 +142,5 @@ The Hormuz crisis arrives at a moment of particular vulnerability in the global 
 - [[fixed-income-deep-dive]]
 - [[yield-curve-and-bonds]]
 - [[behavioral-finance-and-investor-psychology]]
+- [[portfolio-theory]]
+- [[options-basics]]

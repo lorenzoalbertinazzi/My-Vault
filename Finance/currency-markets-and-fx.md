@@ -344,3 +344,5 @@ The FX market's structure — deep liquidity, 24/7 operation, high-frequency dat
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
 - [[2026-05-27-us-china-strategic-competition]]
 - [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
+- [[options-basics]]
+- [[cognitive-biases]]

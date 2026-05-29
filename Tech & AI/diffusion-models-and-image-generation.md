@@ -609,6 +609,7 @@ The ability of a trained diffusion model to generate photorealistic images of sc
 - [[machine-learning-fundamentals]]
 - [[vector-databases-and-embeddings]]
 - [[retrieval-augmented-generation]]
+- [[prompt-engineering]]
 - [[macroeconomics-101]]
 - [[valuation-fundamentals]]
 - [[cialdini-influence]]

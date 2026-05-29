@@ -3,7 +3,7 @@ title: 2026 Ebola Outbreak — DRC and Uganda (Bundibugyo Virus)
 date: 2026-05-27
 tags: [world-events, health, Ebola, DRC, Uganda, WHO, pandemic, Africa]
 source: https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -144,3 +144,5 @@ From a cognitive biases perspective, crisis fatigue operates through the availab
 - [[cognitive-biases]]
 - [[behavioral-finance-and-investor-psychology]]
 - [[mental-models]]
+- [[cialdini-influence]]
+- [[negotiation-tactics]]

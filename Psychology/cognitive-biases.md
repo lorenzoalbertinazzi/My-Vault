@@ -367,3 +367,4 @@ The most important intellectual challenge to the Kahneman-Tversky framework come
 - [[emotional-intelligence]]
 - [[habit-formation]]
 - [[stoicism-and-stoic-philosophy]]
+- [[prompt-engineering]]

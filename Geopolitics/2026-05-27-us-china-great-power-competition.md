@@ -3,7 +3,7 @@ title: US-China Great Power Competition and the Fragmenting World Order
 date: 2026-05-27
 tags: [geopolitics, us-china, great-power-competition, multipolar, trade-war]
 source: https://www.weforum.org/press/2026/01/global-risks-report-2026-geopolitical-and-economic-risks-rise-in-new-age-of-competition/
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -151,6 +151,7 @@ Graham Allison's "Thucydides Trap" — derived from Thucydides' account of why S
 - [[machine-learning-fundamentals]]
 - [[docker-and-containerization]]
 - [[portfolio-theory]]
+- [[valuation-fundamentals]]
 - [[behavioral-finance-and-investor-psychology]]
 - [[mental-models]]
 - [[cognitive-biases]]

@@ -335,4 +335,5 @@ The most sophisticated integration of the two frameworks is in the design of neg
 - [[behavioral-finance-and-investor-psychology]]
 - [[emotional-intelligence]]
 - [[habit-formation]]
+- [[prompt-engineering]]
 - [[2026-05-27-us-china-great-power-competition]]

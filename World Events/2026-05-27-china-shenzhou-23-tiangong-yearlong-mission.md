@@ -3,7 +3,7 @@ title: China's Shenzhou-23 Mission — Year-Long Stay and Hong Kong's First Astr
 date: 2026-05-27
 tags: [world-events, china, space, tiangong, shenzhou, astronaut, space-race, technology]
 source: https://www.npr.org/2026/05/25/g-s1-124179/china-launches-shenzhou-23-spacecraft / https://english.news.cn/20260525/e71e193dd1d14e1193edc9173f3f0477/c.html / https://www.euronews.com/next/2026/05/25/what-is-chinas-shenzhou-23-mission-inside-the-year-long-space-experiment
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 ---
 
 ## Summary
@@ -161,4 +161,4 @@ The one-year mission's direct replication of Scott Kelly's ISS year-in-space stu
 - [[prompt-engineering]]
 - [[valuation-fundamentals]]
 - [[portfolio-theory]]
-- [[technical-analysis-and-chart-patterns]]
+- [[macroeconomics-101]]

@@ -417,5 +417,6 @@ The debate has been enormously productive precisely because it has been unresolv
 - [[portfolio-theory]]
 - [[technical-analysis-and-chart-patterns]]
 - [[machine-learning-fundamentals]]
+- [[emotional-intelligence]]
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
 - [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
