@@ -1,0 +1,291 @@
+---
+title: LLM Training & Scaling Laws
+date: 2026-05-30
+tags: [ai, LLM, scaling-laws, pre-training, transformers, compute, chinchilla, GPT, neural-scaling, emergence, deep-learning, infrastructure]
+source: Kaplan et al. (2020) Scaling Laws for Neural Language Models; Hoffmann et al. (2022) Training Compute-Optimal Large Language Models (Chinchilla); Brown et al. (2020) Language Models are Few-Shot Learners (GPT-3); LeCun, Bengio, Hinton Nobel Lecture references
+last_updated: 2026-05-30
+---
+
+## Summary
+Large language models (LLMs) are trained by applying next-token prediction — predicting the next token in a sequence, given all preceding tokens — at unprecedented scale across internet-scale text corpora. The field was transformed by a series of empirical scaling law papers (Kaplan et al. 2020; Hoffmann et al. 2022) that demonstrated, with high precision, that model loss decreases as a power law of compute budget, model size, and dataset size — and that these relationships are predictable across many orders of magnitude. Crucially, Hoffmann et al.'s "Chinchilla" paper (2022) overturned the prevailing wisdom that "bigger models are always better," showing that most contemporaneous models (GPT-3, Gopher) were undertrained relative to their parameter count: for a fixed compute budget, optimal training requires scaling model size and data size roughly equally. The economics and infrastructure of LLM training — involving thousands of specialized GPUs, custom interconnects, weeks of continuous compute at costs of $10M–$100M per run — have reshaped the global semiconductor industry, cloud computing market, and geopolitical competition over AI compute.
+
+## Key Points
+- **Scaling laws:** Model loss L follows a power law in compute C, parameters N, and tokens D: `L(N,D) ≈ A/N^α + B/D^β + L_∞`
+- **Chinchilla optimal ratio:** For training compute-optimality, scale tokens approximately 20× model parameters (Hoffmann et al. 2022); GPT-3 (300B tokens on 175B params) was severely undertrained vs. optimal
+- **Emergent capabilities:** At sufficient scale, models exhibit qualitative capability jumps — in-context learning, chain-of-thought reasoning, multi-step arithmetic — that appear discontinuously with scale, not predicted by smooth loss curves
+- **Training infrastructure:** GPT-4 scale training requires ~25,000 A100 GPUs running for ~3–4 months. Cost per training run: $40M–$100M. Total global AI compute is doubling every ~6 months
+- **Data is increasingly the bottleneck:** High-quality internet text may be exhausted by 2025–2027; synthetic data, multimodal data, and data curation are now primary research frontiers
+- **The pre-training/post-training distinction:** Pre-training (next-token prediction on massive corpora) builds world knowledge and capabilities; post-training (SFT + RLHF) aligns behavior — these are separate, sequential processes with different data requirements
+
+## Details
+
+### Mathematical Foundation: The Scaling Laws
+
+#### Kaplan et al. (2020) — "Neural Scaling Laws"
+
+OpenAI researchers fit power-law relationships across 7 orders of magnitude of compute:
+
+```
+L(N) = (N_c / N)^α_N     [performance vs. model size]
+L(D) = (D_c / D)^α_D     [performance vs. dataset size]  
+L(C) = (C_c / C)^α_C     [performance vs. compute budget]
+```
+
+Where:
+- L = cross-entropy loss (nats per token)
+- N = number of non-embedding parameters
+- D = number of training tokens
+- C ≈ 6ND floating-point operations (FLOPs) per training step
+- α_N ≈ 0.076, α_D ≈ 0.095, α_C ≈ 0.050 (empirically fit exponents)
+
+**Key finding:** Each 10× increase in compute budget reduces loss by ~15%. The relationship is remarkably smooth across models ranging from 10M to 100B parameters.
+
+**Optimal allocation (Kaplan 2020 claim):** Given a compute budget C, loss is minimized by:
+```
+N_opt ∝ C^0.73     (model size)
+D_opt ∝ C^0.27     (dataset size)
+```
+
+This suggested scaling model size much faster than data — the prevailing wisdom from 2020–2021.
+
+#### Hoffmann et al. (2022) — Chinchilla Scaling Laws
+
+DeepMind's "Chinchilla" paper fundamentally revised Kaplan's conclusions by training a much wider range of models and dataset sizes. They found:
+
+```
+L(N, D) = E + A/N^α + B/D^β
+
+where:
+  E = 1.69    (irreducible entropy of natural language)
+  A = 406.4, B = 410.7
+  α = 0.34,  β = 0.28
+```
+
+**Chinchilla optimal allocation:**
+```
+N_opt ∝ C^0.50     (model size)
+D_opt ∝ C^0.50     (dataset size)
+→ D_opt ≈ 20 × N_opt
+```
+
+For every parameter in the model, you should train on approximately **20 tokens** for compute-optimal training.
+
+**Chinchilla verification:**
+- 70B parameter model (Chinchilla) trained on 1.4T tokens
+- Outperformed Gopher (280B params, 300B tokens) on nearly all benchmarks
+- Despite being 4× smaller, demonstrating that Gopher was severely undertrained
+
+**Post-Chinchilla recalibration:**
+
+| Model | Parameters | Tokens | Tokens/Param | Verdict |
+|---|---|---|---|---|
+| GPT-3 | 175B | 300B | 1.7× | ~11× undertrained |
+| Gopher | 280B | 300B | 1.1× | ~18× undertrained |
+| Chinchilla | 70B | 1.4T | 20× | Optimal (by definition) |
+| Llama 3 | 70B | 15T | 214× | "Over-trained" for inference efficiency |
+
+**The "inference optimal" insight (post-Chinchilla 2023):** For deployment (serving millions of users), it's often better to train a smaller model on more data than to train a larger model optimally. A smaller, more-trained model has lower inference cost (memory bandwidth, FLOP/token), while matching the capability of a larger undertrained model. Llama 2 (70B on 2T tokens) and Llama 3 (70B on 15T tokens) embody this philosophy.
+
+#### Unified Scaling Law Framework (Epoch AI, 2023)
+
+Revisiting scaling laws with data from 2020–2023:
+
+```
+L(N, D) = (5.4 × 10^13 / N)^0.34 + (1.7 × 10^13 / D)^0.28 + 1.62
+```
+
+Fitted on 22 models from 5 labs across 8 orders of magnitude of compute. Confirms Chinchilla's equal-scaling conclusion with updated constants.
+
+### Pre-Training: The Technical Pipeline
+
+#### Data Curation
+
+Pre-training data is the foundation of model capability. Quality and diversity of training data are primary determinants of capability, separate from scale.
+
+**Common Crawl:** The web crawl underlying most LLM training datasets. 80+ petabytes of raw HTML (~100TB of extracted text after processing). Used as the base for C4 (Raffel et al.), The Pile (EleutherAI), RedPajama, FineWeb, etc.
+
+**Data filtering pipeline (typical):**
+```
+1. Language filtering: English-only or multilingual (fastText classifier)
+2. Quality filtering: 
+   - Perplexity filtering (GPT-2 perplexity; keep low-perplexity text)
+   - Rule-based (min words, max repetition ratio, fraction alphabetic)
+   - ML-based quality classifier (trained on Wikipedia vs. random web text)
+3. Deduplication:
+   - Exact deduplication (SHA-256 hashes of 13-gram "chunks")
+   - Near-deduplication (MinHash LSH; remove docs with Jaccard > 0.8)
+4. Safety filtering: Remove CSAM, extreme violence (LAION safety classifier)
+5. Source mixing: Upweight high-quality sources (GitHub, Wikipedia, books, papers)
+```
+
+**Source composition (approximate, GPT-4 class model):**
+- Common Crawl filtered: ~45%
+- Books/literature: ~15%
+- Code (GitHub): ~15%
+- Wikipedia: ~5%
+- Scientific papers: ~10%
+- Other curated: ~10%
+
+**Data exhaustion:** Epoch AI estimated (2022) that quality English web text will be exhausted at current consumption rates by 2025–2027. Responses: (1) multilingual training, (2) synthetic data generation (using LLMs to generate training data), (3) multimodal data (video, audio), (4) scientific/specialized corpora
+
+#### Tokenization
+
+Text is converted to tokens — subword units — before training. The dominant method is **Byte-Pair Encoding (BPE, Sennrich et al. 2016)**:
+
+```
+Algorithm:
+1. Start with character-level vocabulary
+2. Count all adjacent pairs in corpus
+3. Merge most frequent pair into new token
+4. Repeat until vocabulary size V is reached
+
+Typical V = 32,000 (Llama 2) to 100,256 (GPT-4o)
+```
+
+**Example tokenization:**
+- "unbelievable" → ["un", "believ", "able"] (3 tokens)
+- "2+2=4" → ["2", "+", "2", "=", "4"] (5 tokens)
+- "anthropic" → ["ant", "hropic"] (2 tokens in GPT-3 tokenizer)
+
+Vocabulary size affects model efficiency significantly: larger vocab = longer training (embedding matrix size grows) but fewer tokens per document (faster inference for long text).
+
+#### The Transformer Training Objective
+
+Pre-training uses **causal language modeling** (autoregressive next-token prediction):
+
+```
+L = -1/T · Σ_{t=1}^{T} log P_θ(x_t | x_{<t})
+```
+
+For a sequence of T tokens x₁, x₂, ..., x_T, the model predicts each token given all preceding context. This seemingly simple objective — predicting the next word — requires modeling grammar, facts, reasoning, style, and world knowledge, making it a surprisingly powerful pretext task.
+
+**Why this works (the compression-intelligence equivalence):** A model that can predict text well must implicitly model the process that generated the text — including the reasoning, knowledge, and intent of human writers. Predicting the next word in a medical textbook requires understanding medicine; predicting legal filings requires understanding law. This Hutter Prize / Solomonoff induction insight (Shannon 1948, Hutter 2004) grounds the scaling law program: better compression of human-generated text → better model of human knowledge.
+
+#### Parallelism Strategies
+
+Training at GPT-4 scale (~170T FLOPs, distributed across thousands of GPUs) requires sophisticated parallelism:
+
+**Data Parallelism (DP):** Same model on multiple GPUs, each processing different data batches. Gradients averaged across GPUs. Simple but doesn't help when model doesn't fit on one GPU.
+
+**Tensor Parallelism (TP, Megatron-LM):** Split individual weight matrices across GPUs. Each GPU holds a slice of each layer. All-reduce communication at each layer. Best for very wide layers.
+
+**Pipeline Parallelism (PP):** Different layers on different GPUs. GPU 0 runs layers 0–8, GPU 1 runs layers 9–16, etc. Enables models larger than single GPU memory. Requires careful micro-batching to minimize "pipeline bubble."
+
+**Fully Sharded Data Parallelism (FSDP / ZeRO):** Model parameters, gradients, and optimizer states are sharded across GPUs. Microsoft's ZeRO (Zero Redundancy Optimizer, Rajbhandari et al. 2020) enables 3D-parallelism approach. Allows training 1T+ parameter models on commodity GPU clusters.
+
+**3D Parallelism (Megatron-DeepSpeed):** Combines DP + TP + PP simultaneously. Used in GPT-3 training (OpenAI + Microsoft), Bloom (Hugging Face), and others.
+
+**Communication bottleneck:** Training 1,000 GPUs requires all-reduce operations transferring terabytes of gradient data per step. NVLink (GPU-to-GPU interconnect, 600 GB/s bidirectional) and InfiniBand (rack-to-rack, 400 Gb/s) are critical hardware. NVIDIA's DGX SuperPOD: 32 DGX H100s (256 H100 GPUs) connected with NVLink; pods connected with InfiniBand.
+
+### Infrastructure and Economics
+
+#### Hardware Evolution
+
+| Generation | GPU | TFLOPS (bf16) | Memory | Year | LLM Significance |
+|---|---|---|---|---|---|
+| V100 | NVIDIA V100 | 125 | 32 GB | 2018 | GPT-2 training |
+| A100 | NVIDIA A100 | 312 | 80 GB | 2020 | GPT-3, PaLM |
+| H100 | NVIDIA H100 | 989 | 80 GB | 2022 | GPT-4, Llama 2 |
+| H200 | NVIDIA H200 | 989 (est.) | 141 GB | 2024 | Llama 3, Gemini Ultra |
+| Blackwell B100 | NVIDIA B100 | ~3,500 | 192 GB | 2025 | Next-gen frontier models |
+
+NVIDIA's H100 GPU (MSRP: ~$30,000–$40,000) became the most sought-after hardware in history during 2023. Spot market prices reached $50,000+. NVIDIA's revenue grew from $27B (FY2023) to $61B (FY2024) primarily from data center (GPU) sales.
+
+#### Training Cost Estimates (Real Data)
+
+| Model | Parameters | Tokens | GPU Hours | Approx. Cost |
+|---|---|---|---|---|
+| GPT-3 | 175B | 300B | ~355K A100-hrs | ~$4.6M |
+| PaLM | 540B | 780B | ~1.24M TPUv4-hrs | ~$8M |
+| Llama 2 70B | 70B | 2T | ~1.72M A100-hrs | ~$22M |
+| GPT-4 (estimated) | ~170B MoE | ~13T | ~25M A100-hrs | ~$40–100M |
+| Gemini Ultra (est.) | ~1.8T MoE | ~10T | N/A | ~$190M |
+
+*Estimates from Epoch AI, SemiAnalysis, and public disclosures. Actual costs vary with hardware efficiency, energy costs, and wastage.*
+
+**Total global AI training compute (2023):** ~5 × 10²⁴ FLOPs/year. Growing at ~4–5× per year (faster than hardware improvement alone, indicating more hardware deployment).
+
+### Emergent Capabilities
+
+One of the most discussed phenomena in LLM scaling: certain capabilities appear **abruptly** at scale thresholds, not gradually as loss curves smooth.
+
+**Key examples (Wei et al. 2022, "Emergent Abilities of Large Language Models"):**
+
+| Capability | Emergence Scale |
+|---|---|
+| 3-digit addition | ~13B params |
+| Multi-step reasoning | ~60B params |
+| In-context learning (few-shot) | ~175B params |
+| Chain-of-thought (zero-shot) | ~540B params |
+| Grounded reasoning | ~60B params |
+| Calibrated uncertainty | ~540B params+ |
+
+**The debate on emergence:** Schaeffer et al. (2023, "Are Emergent Abilities of LLMs a Mirage?") argue that emergence is an artifact of discontinuous evaluation metrics (accuracy on tasks with all-or-nothing scoring appears discontinuous even if the underlying continuous metric — logprob — improves smoothly). This reframing matters: if emergence is metric-dependent rather than model-property-dependent, it suggests no genuine phase transitions, only measurement artifacts.
+
+**Counterargument:** In-context learning (the ability to learn a new task from examples in the context window, without weight updates) has no clear continuous analogue and appears genuinely novel in few-shot regime. This remains unresolved.
+
+### The Pre-Training/Post-Training Distinction
+
+Modern LLM development is a two-phase process:
+
+**Phase 1: Pre-training (Foundation model)**
+- Objective: Next-token prediction on 1–15T tokens of diverse web text
+- Result: A model with broad world knowledge, linguistic competence, reasoning ability — but no alignment, instruction-following, or safety properties
+- Duration: Weeks to months
+- Cost: $10M–$100M+
+
+**Phase 2: Post-training (Aligned model)**
+- Sub-phase 2a: Supervised Fine-Tuning (SFT) on ~10K–1M demonstrations
+- Sub-phase 2b: Reward Model training on ~100K–1M human preference pairs
+- Sub-phase 2c: RLHF/DPO alignment training
+- Result: An instruction-following, helpful, harmless assistant
+- Duration: Days to weeks
+- Cost: $500K–$5M (much cheaper than pre-training)
+
+**Key implication:** The alignment/safety fine-tuning (Phase 2) is relatively cheap but extremely impactful on user experience. Conversely, improving base model capabilities requires expensive pre-training at scale.
+
+### Data Contamination and Benchmark Integrity
+
+A critical concern in LLM evaluation: if training data contains examples from benchmarks (MMLU, HumanEval, GSM8K), reported performance is inflated by memorization rather than generalization.
+
+**Contamination detection:**
+- N-gram overlap: Check 13-gram overlaps between training data and test sets
+- Likelihood ratio test: Does the model assign anomalously high probability to exact benchmark sequences?
+- Rephrased evaluation: Test on rephrased versions of questions; contaminated memorization fails
+
+**Evidence of contamination:** Golchin & Surdeanu (2023) found significant contamination of GPT-4's training data with common benchmarks. OpenAI does not release training data compositions, making systematic audits impossible.
+
+### Limitations and Open Problems
+
+1. **Data exhaustion:** High-quality human-generated text is finite. Synthetic data from LLMs risks "model collapse" (Shumailov et al. 2023) — iterative self-training degrades diversity and quality, compressing to mode-covering degenerate outputs
+
+2. **Context length vs. efficiency tradeoff:** Attention is O(n²) in sequence length. 1M-token context windows (Gemini 1.5) require custom architectures (ring attention, sparse attention) or alternative architectures (state space models: Mamba, RWKV)
+
+3. **Catastrophic forgetting in fine-tuning:** Fine-tuning on specific tasks degrades performance on others. RLHF alignment can reduce capabilities gained in pre-training. "Alignment tax" is real, varies by domain
+
+4. **Reasoning reliability:** Despite impressive aggregate benchmarks, LLMs fail on simple arithmetic variations, formal logical puzzles, and novel combinatorial tasks. Their "reasoning" appears to be sophisticated pattern completion rather than systematic deduction
+
+5. **Hallucination:** LLMs generate confident-sounding falsehoods. Scaling reduces but does not eliminate hallucination — the model's objective (predict plausible text) is not identical to outputting true facts. RAG (retrieval-augmented generation) partially addresses this
+
+6. **Compute plateau:** Hardware improvements are slowing (end of Dennard scaling, physical limits of silicon). Whether the scaling paradigm continues to produce capability gains as compute growth requires more hardware rather than better chips is an open question
+
+### Current Research Frontier
+
+1. **Test-time compute scaling (OpenAI o1/o3 paradigm):** Rather than pre-training more, spend more compute at inference — chain-of-thought reasoning, search, verification. o1 showed that test-time compute scales similarly to training compute for reasoning tasks
+
+2. **Mixture of Experts (MoE):** GPT-4 and Gemini Ultra reportedly use MoE — sparse activation of only 2 of 8 expert sub-networks per token, giving effective capacity of a large dense model at the inference cost of a smaller one. Mixtral 8×7B (Mistral AI) is the open-source flagship
+
+3. **State Space Models (Mamba, 2023):** Linear-time sequence modeling as alternative to quadratic attention. Achieves competitive language modeling performance at long contexts. Not yet at frontier quality
+
+4. **Multimodal scaling:** Vision-language models (GPT-4V, Gemini Ultra, Claude 3) scale the same transformer architecture across text, images, audio, video, and code simultaneously
+
+5. **World models:** Training on video (YouTube-scale) to develop physical world models that reason about space, time, and causality — Sora (OpenAI, 2024), Video PreTraining (OpenAI). May unlock reasoning about the physical world beyond text
+
+## Related
+- [[transformer-architecture]] — The architecture pre-training scales
+- [[reinforcement-learning-from-human-feedback]] — Post-training phase that follows pre-training
+- [[retrieval-augmented-generation]] — Addresses knowledge cutoff and hallucination limitations of pre-trained LLMs
+- [[machine-learning-fundamentals]] — Gradient descent, backpropagation, regularization — the training primitives
+- [[vector-databases-and-embeddings]] — Embeddings are extracted from pre-trained LLMs; RAG relies on them
+- [[prompt-engineering]] — Understanding pre-training clarifies why prompting works: models complete patterns, not follow instructions until RLHF
+- [[docker-and-containerization]] — LLM training pipelines are containerized; Kubernetes orchestrates training clusters
