@@ -380,6 +380,8 @@ The foreign exchange market functions as the real-time global judgment on every 
 - [[central-bank-digital-currencies-cbdc]] — Monetary policy mechanics through CBDC; seigniorage and money supply architecture
 - [[cognitive-biases]] — Rational expectations failure; availability heuristic in inflation expectation de-anchoring
 - [[Tech & AI/machine-learning-fundamentals]] — DSGE model augmentation; ML macroeconomic nowcasting
+- [[Tech & AI/diffusion-models-and-image-generation]] — Generative models for macroeconomic scenario simulation and stress-testing
+- [[Tech & AI/prompt-engineering]] — Prompt design for LLM-based macroeconomic analysis, central bank communication parsing, and policy interpretation
 - [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Cost-push inflation from energy shock; limits of monetary policy response
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Supply chain fragmentation reshaping GDP components; nearshoring as structural capex driver
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Current macro environment; 2026 slowdown dynamics

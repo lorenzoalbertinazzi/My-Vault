@@ -1,9 +1,9 @@
 ---
 title: LLM Training & Scaling Laws
 date: 2026-05-30
-tags: [ai, LLM, scaling-laws, pre-training, transformers, compute, chinchilla, GPT, neural-scaling, emergence, deep-learning, infrastructure]
-source: Kaplan et al. (2020) Scaling Laws for Neural Language Models; Hoffmann et al. (2022) Training Compute-Optimal Large Language Models (Chinchilla); Brown et al. (2020) Language Models are Few-Shot Learners (GPT-3); LeCun, Bengio, Hinton Nobel Lecture references
-last_updated: 2026-05-30
+tags: [ai, LLM, scaling-laws, pre-training, transformers, compute, chinchilla, GPT, neural-scaling, emergence, deep-learning, infrastructure, data-parallelism, tensor-parallelism, pipeline-parallelism, MFU, gradient-checkpointing, mixed-precision, FLOP-budget, synthetic-data, tokenization]
+source: "Kaplan et al. (2020) Scaling Laws for Neural Language Models (arXiv:2001.08361); Hoffmann et al. (2022) Chinchilla (arXiv:2203.15556); Brown et al. (2020) GPT-3 (arXiv:2005.14165); Wei et al. (2022) Emergent Abilities of LLMs (arXiv:2206.07682); Rajbhandari et al. (2020) ZeRO (arXiv:1910.02054); Shoeybi et al. (2019) Megatron-LM (arXiv:1909.08053)"
+last_updated: 2026-05-31
 ---
 
 ## Summary

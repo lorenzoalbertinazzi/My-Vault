@@ -336,5 +336,7 @@ The application of [[machine-learning-fundamentals]] to valuation has begun to r
 - [[hedge-funds-and-alternative-strategies]] — Merger arbitrage dependent on spread-to-intrinsic-value calculation
 - [[cognitive-biases]] — Anchoring bias in multiples; garbage-in DCF from overconfident assumptions
 - [[Tech & AI/machine-learning-fundamentals]] — Alternative data eroding information advantage; ML for real-time fundamental estimation
+- [[Tech & AI/retrieval-augmented-generation]] — RAG systems enabling real-time retrieval of comparable transactions, filings, and analyst reports for valuation
+- [[Tech & AI/docker-and-containerization]] — Containerized deployment of valuation models and alternative data pipelines in institutional research infrastructure
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — China revenue exposure uplift to discount rates; geopolitical lambda in Damodaran CRP
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — 2026 valuation environment; earnings growth assumptions under slowdown

@@ -1,9 +1,9 @@
 ---
 title: Docker and Containerization
 date: 2026-05-28
-tags: [tech, devops, docker, containers, infrastructure, deployment]
-source: research
-last_updated: 2026-05-29
+tags: [devops, docker, containers, infrastructure, deployment, OCI, containerd, namespaces, cgroups, eBPF, Cilium, service-mesh, MLOps, Dockerfile, container-registry, multi-stage-build, rootless-containers, BuildKit]
+source: "Docker Inc. documentation (2013–2026); OCI Runtime Specification v1.0; Merkel (2014) Docker: Lightweight Linux Containers for Consistent Development and Deployment (Linux Journal); Burns et al. (2016) Borg, Omega, and Kubernetes (ACM Queue); Docker Security Best Practices (NIST SP 800-190)"
+last_updated: 2026-05-31
 ---
 
 ## Summary

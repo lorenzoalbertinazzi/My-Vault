@@ -1,9 +1,9 @@
 ---
 title: Prompt Engineering — Techniques and Principles
 date: 2026-05-26
-tags: [tech, AI, LLM, prompt-engineering, Claude]
-source: research
-last_updated: 2026-05-29
+tags: [ai, LLM, prompt-engineering, chain-of-thought, few-shot, zero-shot, in-context-learning, tree-of-thoughts, ReAct, DSPy, extended-thinking, system-prompts, structured-output, jailbreaking, constitutional-prompting, meta-prompting, self-consistency]
+source: "Wei et al. (2022) Chain-of-Thought Prompting Elicits Reasoning in LLMs (arXiv:2201.11903); Yao et al. (2022) Tree of Thoughts (arXiv:2305.10601); Yao et al. (2022) ReAct (arXiv:2210.03629); Brown et al. (2020) Few-Shot Learners — GPT-3 (arXiv:2005.14165); Wang et al. (2022) Self-Consistency CoT (arXiv:2203.11171); Anthropic Prompt Engineering Guide (2024)"
+last_updated: 2026-05-31
 ---
 
 ## Summary

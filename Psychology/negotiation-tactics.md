@@ -365,3 +365,5 @@ Applying both frameworks to the specific context of salary negotiation, where th
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Great power negotiation dynamics; BATNA analysis in US-China trade and security talks
 - [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Nuclear diplomacy as high-stakes BATNA and commitment theory in practice
 - [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Coercive diplomacy and ceasefire negotiation frameworks
+- [[Tech & AI/prompt-engineering]] — Prompt engineering as a form of negotiation with LLMs; anchoring, framing, and calibrated questioning applied to model elicitation
+- [[Tech & AI/docker-and-containerization]] — Containerized negotiation simulation and AI-assisted deal analysis tools in enterprise deployment

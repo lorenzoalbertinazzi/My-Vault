@@ -353,3 +353,5 @@ Perhaps the most practically powerful Stoic-behavioral finance intersection is i
 - [[Finance/value-investing-methodology]] — Mr. Market as Stoic preferred indifferent; margin of safety as Stoic epistemic humility; Munger's latticework as Stoic practice
 - [[Finance/behavioral-finance-and-investor-psychology]] — Stoicism as a debiasing toolkit for behavioral finance errors; amor fati and bear market psychology
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Stoic long-term strategic thinking vs. electoral-cycle reactive policy; durable grand strategy
+- [[Tech & AI/machine-learning-fundamentals]] — ML training processes (iterative error correction, regularization) as a computational parallel to Stoic self-discipline and continuous refinement
+- [[Tech & AI/docker-and-containerization]] — Containerization's separation of concerns and immutable infrastructure reflect the Stoic principle of clearly delineating what is within one's control

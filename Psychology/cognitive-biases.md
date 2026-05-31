@@ -373,3 +373,7 @@ The most important intellectual challenge to the Kahneman-Tversky framework come
 - [[Finance/technical-analysis-and-chart-patterns]] — Pattern recognition bias and apophenia in chart analysis
 - [[Finance/value-investing-methodology]] — Value investing as a structured debiasing system
 - [[Tech & AI/prompt-engineering]] — Prompt design to mitigate LLM cognitive-bias-like failure modes
+- [[Tech & AI/transformer-architecture]] — Attention mechanisms in transformers as a computational analog to selective attention and cognitive bias in human cognition
+- [[Tech & AI/machine-learning-fundamentals]] — ML models exhibit bias-like failure modes (overfitting as recency bias; training data anchoring); understanding human biases informs model evaluation
+- [[Tech & AI/vector-databases-and-embeddings]] — Semantic similarity search in embedding space as a model of associative memory retrieval underlying availability heuristic
+- [[Tech & AI/retrieval-augmented-generation]] — RAG retrieval ranking affected by embedding-space biases; bias-aware retrieval design

@@ -1,9 +1,9 @@
 ---
 title: Transformer Architecture — How LLMs Work
 date: 2026-05-26
-tags: [tech, AI, LLM, transformer, deep-learning]
-source: research
-last_updated: 2026-05-29
+tags: [ai, machine-learning, deep-learning, transformer, self-attention, multi-head-attention, NLP, LLM, GPT, BERT, RoPE, flash-attention, MoE, KV-cache, speculative-decoding, positional-encoding, scaling-laws, causal-masking, pre-norm, SwiGLU]
+source: "Vaswani et al. (2017) Attention Is All You Need (arXiv:1706.03762); Kaplan et al. (2020) Scaling Laws for Neural Language Models (arXiv:2001.08361); Hoffmann et al. (2022) Training Compute-Optimal LLMs — Chinchilla (arXiv:2203.15556); Dao et al. (2022) FlashAttention (arXiv:2205.14135); Su et al. (2021) RoPE (arXiv:2104.09864); Kwon et al. (2023) Efficient Memory Management for LLM Serving with PagedAttention"
+last_updated: 2026-05-31
 ---
 
 ## Summary

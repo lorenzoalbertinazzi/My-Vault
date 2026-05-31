@@ -339,4 +339,6 @@ The most sophisticated integration of the two frameworks is in the design of neg
 - [[game-theory-and-strategic-thinking]] — Reciprocity and tit-for-tat as game-theoretic influence architecture
 - [[Finance/behavioral-finance-and-investor-psychology]] — Cialdini principles as drivers of market bubbles and herding
 - [[Tech & AI/prompt-engineering]] — Persuasion principles applied to LLM prompt design
+- [[Tech & AI/vector-databases-and-embeddings]] — Embedding-based semantic retrieval as a model for associative influence; similarity search in recommendation systems applying social proof at scale
+- [[Tech & AI/retrieval-augmented-generation]] — RAG systems surfacing authority and social proof signals through retrieved context; influence-aware retrieval design
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Belt and Road as large-scale reciprocity and commitment influence architecture

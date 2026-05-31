@@ -379,3 +379,5 @@ The response of sophisticated value investors to this challenge divides into two
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Value traps from geopolitical impairment vs. genuine behavioral mispricing
 - [[Geopolitics/2026-05-27-russia-central-asia-influence-and-decline]] — Geopolitical disruption zone creating cheap-but-risky assets
 - [[Tech & AI/machine-learning-fundamentals]] — Alternative data revolution challenging fundamental analyst information edge
+- [[Tech & AI/transformer-architecture]] — Transformer-based NLP for earnings call analysis, 10-K parsing, and management sentiment extraction
+- [[Tech & AI/retrieval-augmented-generation]] — RAG systems retrieving comparable historical valuations, prior business cycle analogs, and moat assessments

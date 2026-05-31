@@ -396,5 +396,6 @@ The factor investing framework — capturing return premiums from Value, Size, M
 - [[currency-markets-and-fx]] — FX as portfolio diversifier; currency hedging decisions for international allocations
 - [[quantitative-finance-and-algorithmic-trading]] — ML for covariance estimation; hierarchical risk parity; factor decay
 - [[Tech & AI/machine-learning-fundamentals]] — Hierarchical Risk Parity; deep learning for non-linear correlations; RL portfolio allocation
+- [[Tech & AI/vector-databases-and-embeddings]] — Embedding-based similarity search for portfolio construction; alternative data semantic retrieval
 - [[Geopolitics/2026-05-27-us-iran-conflict-global-energy-crisis]] — Oil shock breaks equity-bond negative correlation; geopolitical portfolio stress test
 - [[Geopolitics/2026-05-27-russia-central-asia-influence-and-decline]] — Illiquidity premium confiscation in crisis; geopolitical liquidity risk

@@ -1,9 +1,9 @@
 ---
 title: "AI Safety and Alignment: The Existential Technical Challenge of Our Era"
 date: 2026-05-30
-tags: [AI-safety, alignment, RLHF, constitutional-AI, interpretability, mesa-optimization, reward-hacking, AGI, Anthropic, DeepMind, OpenAI]
-source: Anthropic safety research; DeepMind safety team; Stuart Russell "Human Compatible" (2019); Nick Bostrom "Superintelligence" (2014); Paul Christiano; Eliezer Yudkowsky; ARC Evals; MIRI; Redwood Research
-last_updated: 2026-05-30
+tags: [ai-safety, alignment, RLHF, constitutional-AI, interpretability, mesa-optimization, reward-hacking, AGI, scalable-oversight, red-teaming, jailbreaking, process-reward-models, superalignment, deceptive-alignment, mechanistic-interpretability, corrigibility, goal-misgeneralization]
+source: "Bostrom (2014) Superintelligence; Russell (2019) Human Compatible; Amodei et al. (2016) Concrete Problems in AI Safety (arXiv:1606.06565); Ziegler et al. (2020) RLHF (arXiv:1909.08593); Bai et al. (2022) Constitutional AI (arXiv:2212.08073); Anthropic (2022) Core Views on AI Safety; Hubinger et al. (2019) Risks from Learned Optimization — Deceptive Alignment (arXiv:1906.01820)"
+last_updated: 2026-05-31
 ---
 
 ## Summary

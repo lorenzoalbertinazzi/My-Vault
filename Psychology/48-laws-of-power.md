@@ -311,3 +311,4 @@ Law 11 (Keep Others Dependent on You) has a direct financial analog in Warren Bu
 - [[Finance/behavioral-finance-and-investor-psychology]] — Market dynamics as collective power games
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Great power competition as Laws 1, 3, 15, 17 at state level
 - [[Geopolitics/2026-05-27-us-china-strategic-competition]] — Strategic competition doctrine through a power-laws lens
+- [[Tech & AI/prompt-engineering]] — Prompt design as applied power dynamics; framing, concealment of intent, and anchoring in LLM elicitation mirror several of the 48 Laws

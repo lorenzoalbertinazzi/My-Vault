@@ -1,9 +1,9 @@
 ---
 title: Kubernetes and Container Orchestration
 date: 2026-05-30
-tags: [tech, kubernetes, containers, devops, cloud, orchestration, microservices]
-source: Research synthesis
-last_updated: 2026-05-30
+tags: [kubernetes, containers, devops, cloud, orchestration, microservices, etcd, HPA, VPA, RBAC, GitOps, CNI, Borg, ArgoCD, eBPF, service-mesh, Helm, operators, declarative-config, control-plane]
+source: "Verma et al. (2015) Large-scale cluster management at Google with Borg (EuroSys); Burns et al. (2016) Borg, Omega, and Kubernetes (ACM Queue); Kubernetes official documentation (CNCF, 2026); Hightower et al. 'Kubernetes: Up and Running' (O'Reilly); Beyer et al. 'Site Reliability Engineering' (Google, 2016)"
+last_updated: 2026-05-31
 ---
 ## Summary
 Kubernetes (K8s) is the dominant open-source container orchestration platform, managing the deployment, scaling, networking, and lifecycle of containerized applications across clusters of machines. Born from Google's internal Borg/Omega systems and open-sourced in 2014, Kubernetes solved the fundamental challenge of running applications at scale without tying them to specific infrastructure. By 2026, Kubernetes is the de facto standard for cloud-native application deployment, running on all major cloud platforms and forming the foundation of the modern DevOps and platform engineering disciplines. Understanding Kubernetes requires understanding both its declarative control-plane architecture and the distributed systems principles underpinning it.

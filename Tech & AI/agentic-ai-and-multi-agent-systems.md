@@ -1,9 +1,9 @@
 ---
 title: Agentic AI and Multi-Agent Systems
 date: 2026-05-30
-tags: [tech, AI, agents, multi-agent, LLM, tool-use, orchestration, ReAct, planning, autonomy]
-source: Yao et al. "ReAct" (2023); AutoGPT; OpenAI Assistants API; Anthropic Claude documentation; LangGraph; Lilian Weng "LLM-powered Autonomous Agents"
-last_updated: 2026-05-30
+tags: [ai, agents, multi-agent, LLM, tool-use, orchestration, ReAct, planning, autonomy, MCP, computer-use, LangGraph, CrewAI, tool-calling, workflow, AutoGPT, agentic-ai, memory-architecture, sandboxed-execution]
+source: "Yao et al. (2023) ReAct: Synergizing Reasoning and Acting in Language Models (arXiv:2210.03629); Schick et al. (2023) Toolformer (arXiv:2302.04761); Zhou et al. (2023) WebArena (arXiv:2307.13854); Jimenez et al. (2024) SWE-bench (arXiv:2310.06770); Anthropic Model Context Protocol spec (2024); Lilian Weng 'LLM-powered Autonomous Agents' (2023)"
+last_updated: 2026-05-31
 ---
 
 ## Summary

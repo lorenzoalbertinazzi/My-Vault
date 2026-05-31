@@ -1,9 +1,9 @@
 ---
 title: Computer Vision and Convolutional Neural Networks
 date: 2026-05-30
-tags: [tech, AI, computer-vision, CNN, deep-learning, image-recognition, object-detection]
-source: Research synthesis
-last_updated: 2026-05-30
+tags: [ai, computer-vision, CNN, deep-learning, image-recognition, object-detection, AlexNet, ResNet, ViT, CLIP, SAM, YOLO, ImageNet, image-segmentation, transfer-learning, vision-transformer, multimodal]
+source: "Krizhevsky et al. (2012) ImageNet Classification with Deep CNNs — AlexNet (NeurIPS); He et al. (2015) Deep Residual Learning — ResNet (arXiv:1512.03385); Dosovitskiy et al. (2020) ViT — An Image is Worth 16x16 Words (arXiv:2010.11929); Radford et al. (2021) CLIP (arXiv:2103.00020); Kirillov et al. (2023) SAM — Segment Anything (arXiv:2304.02643); Redmon et al. (2016) YOLO (arXiv:1506.02640)"
+last_updated: 2026-05-31
 ---
 ## Summary
 Computer vision is the field enabling machines to interpret visual information from images and video. The 2012 AlexNet breakthrough — demonstrating that deep convolutional neural networks (CNNs) could dramatically outperform all prior methods on ImageNet — triggered a decade of exponential progress that has produced systems exceeding human performance on image classification (2015), surpassing radiologists at cancer detection (2017), enabling autonomous vehicles, and powering facial recognition at planetary scale. CNNs leverage the spatial structure of images through local connectivity, weight sharing, and hierarchical feature learning — a biologically-inspired architecture matching how the mammalian visual cortex processes information.

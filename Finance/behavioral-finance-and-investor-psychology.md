@@ -419,6 +419,8 @@ The debate has been enormously productive precisely because it has been unresolv
 - [[technical-analysis-and-chart-patterns]] — Chart patterns as crystallized behavioral dynamics; support/resistance as anchoring
 - [[quantitative-finance-and-algorithmic-trading]] — Machine exploitation of behavioral anomalies; alpha half-life of mispricing
 - [[machine-learning-fundamentals]] — ML systems that exploit behavioral patterns at scale in equity markets
+- [[transformer-architecture]] — LLM-based sentiment analysis and narrative detection applied to behavioral finance research
+- [[prompt-engineering]] — Prompt design for AI systems that analyze investor sentiment and behavioral market signals
 - [[emotional-intelligence]] — Emotional regulation as a foundation for disciplined investment behavior
 - [[fixed-income-deep-dive]] — Behavioral dynamics in credit markets; reach for yield and herding in bond markets
 - [[macroeconomics-101]] — Behavioral biases in aggregate consumption; de-anchored inflation expectations

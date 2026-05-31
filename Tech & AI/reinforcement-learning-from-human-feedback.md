@@ -1,9 +1,9 @@
 ---
 title: Reinforcement Learning from Human Feedback (RLHF)
 date: 2026-05-30
-tags: [ai, machine-learning, RLHF, alignment, reward-modeling, PPO, InstructGPT, ChatGPT, constitutional-AI, DPO, fine-tuning, LLM]
-source: Christiano et al. (2017) Deep Reinforcement Learning from Human Preferences; Ouyang et al. (2022) Training language models to follow instructions with human feedback (InstructGPT); Bai et al. (2022) Constitutional AI: Harmlessness from AI Feedback; Rafailov et al. (2023) Direct Preference Optimization
-last_updated: 2026-05-30
+tags: [ai, machine-learning, RLHF, alignment, reward-modeling, PPO, InstructGPT, ChatGPT, constitutional-AI, DPO, fine-tuning, LLM, RLAIF, GRPO, preference-optimization, online-RL, reward-hacking, KL-divergence, SFT]
+source: "Christiano et al. (2017) Deep RL from Human Preferences (arXiv:1706.03741); Ouyang et al. (2022) InstructGPT (arXiv:2203.02155); Bai et al. (2022) Constitutional AI (arXiv:2212.08073); Rafailov et al. (2023) Direct Preference Optimization (arXiv:2305.18290); Schulman et al. (2017) PPO (arXiv:1707.06347); Stiennon et al. (2020) Learning to Summarize from Human Feedback (arXiv:2009.01325)"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -258,6 +258,6 @@ L_DPO(π_θ; π_SFT) = -E_{(x,y_w,y_l)~D} [log σ(β·log[π_θ(y_w|x)/π_SFT(y_
 - [[transformer-architecture]] — The base LLM architecture that RLHF fine-tunes
 - [[prompt-engineering]] — RLHF fundamentally changed what prompting can achieve; understanding RLHF informs better prompting
 - [[machine-learning-fundamentals]] — Reinforcement learning theory; PPO; policy gradient methods
-- [[large-language-model-training-and-scaling-laws]] — RLHF sits atop pre-training; understanding pre-training is prerequisite
+- [[llm-training-and-scaling-laws]] — RLHF sits atop pre-training; understanding pre-training is prerequisite
 - [[retrieval-augmented-generation]] — RAG + RLHF are complementary: RLHF aligns behavior, RAG extends knowledge
 - [[diffusion-models-and-image-generation]] — RLHF applied to image generation (DALL-E 3, Stable Diffusion fine-tuning via human feedback)

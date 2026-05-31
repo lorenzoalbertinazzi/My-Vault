@@ -1,9 +1,9 @@
 ---
 title: "Quantum Computing: From Qubit Physics to Quantum Advantage in 2026"
 date: 2026-05-30
-tags: [quantum-computing, qubits, quantum-advantage, error-correction, IBM, Google, hardware, cryptography, drug-discovery, algorithms]
-source: Harvard researchers (thequantuminsider.com, May 2026); DOE Fermilab; ScienceDaily; SpinQ; Discover Magazine; Wissen Research; Google Willow chip
-last_updated: 2026-05-30
+tags: [quantum-computing, qubits, quantum-advantage, error-correction, IBM, Google, hardware, cryptography, drug-discovery, algorithms, superconducting-qubits, trapped-ions, surface-code, Shor-algorithm, Grover-algorithm, NISQ, fault-tolerant, quantum-error-correction, photonic-qubits, topological-qubits]
+source: "Shor (1994) Algorithms for Quantum Computation (FOCS); Grover (1996) A fast quantum mechanical algorithm for database search (STOC); Preskill (2018) Quantum Computing in the NISQ Era and Beyond (arXiv:1801.00862); Google Quantum AI — Willow chip (Nature, 2024); IBM Quantum roadmap (2025); Arute et al. (2019) Quantum Supremacy (Nature)"
+last_updated: 2026-05-31
 ---
 
 ## Summary

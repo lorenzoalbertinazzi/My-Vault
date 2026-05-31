@@ -1,9 +1,9 @@
 ---
 title: Vector Databases and Embeddings
 date: 2026-05-27
-tags: [tech, AI, machine-learning, embeddings, vector-databases, semantic-search]
-source: research
-last_updated: 2026-05-29
+tags: [ai, machine-learning, embeddings, vector-databases, semantic-search, HNSW, ANN, contrastive-learning, word2vec, CLIP, ColBERT, MRL, MTEB, FAISS, DiskANN, SPLADE, bi-encoders, cross-encoders, dense-retrieval]
+source: "Mikolov et al. (2013) Word2Vec (arXiv:1301.3781); Malkov & Yashunin (2018) HNSW (arXiv:1603.09320); Khattab & Zaharia (2020) ColBERT (arXiv:2004.12832); Radford et al. (2021) CLIP (arXiv:2103.00020); Johnson et al. (2021) FAISS (arXiv:1702.08734); Kusupati et al. (2022) Matryoshka Representation Learning — MRL (arXiv:2205.13147)"
+last_updated: 2026-05-31
 ---
 
 ## Summary

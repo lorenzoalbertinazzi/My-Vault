@@ -440,4 +440,5 @@ One of the most widely applicable but rarely articulated mental models is the di
 - [[Finance/behavioral-finance-and-investor-psychology]] — Mental models as the practitioner's toolkit against market psychology failure modes
 - [[Tech & AI/machine-learning-fundamentals]] — ML models as mathematical analogs to human mental models; overfitting mirrors domain-specific expertise failure
 - [[Tech & AI/retrieval-augmented-generation]] — RAG architectures as implementation of Munger's latticework (stored models + retrieved specifics)
+- [[Tech & AI/prompt-engineering]] — Prompt design as applied mental model selection; chain-of-thought prompting operationalizes first-principles and second-order thinking
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Second-order thinking and Cynefin framework applied to great power competition analysis

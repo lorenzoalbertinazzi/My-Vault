@@ -355,6 +355,7 @@ The more nuanced implication for practitioners is that chart patterns survive in
 - [[Psychology/mental-models]] — Probabilistic framework for pattern analysis; avoiding pareidolia in price charts
 - [[Tech & AI/machine-learning-fundamentals]] — CNN pattern recognition on charts; ML arbitrage eroding simple technical signals
 - [[Tech & AI/diffusion-models-and-image-generation]] — Computer vision applied to chart pattern identification; automation of visual pattern recognition
+- [[Tech & AI/retrieval-augmented-generation]] — RAG-based retrieval of historical analogous chart setups and market regime comparisons
 - [[geopolitical-risk-premium-and-markets]] — Geopolitical shocks create regime breaks invalidating pattern-based analysis
 - [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Discontinuous price discovery after geopolitical shock; technical analysis regime break
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Trade war uncertainty creating non-technical market drivers

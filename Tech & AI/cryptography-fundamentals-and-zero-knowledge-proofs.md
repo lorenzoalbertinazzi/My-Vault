@@ -1,9 +1,9 @@
 ---
 title: Cryptography Fundamentals and Zero-Knowledge Proofs
 date: 2026-05-30
-tags: [tech, cryptography, zero-knowledge-proofs, ZKP, encryption, public-key, blockchain, privacy, mathematics]
-source: Boneh & Shoup "A Graduate Course in Applied Cryptography"; Goldwasser, Micali & Rackoff (1985); Oded Goldreich "Foundations of Cryptography"
-last_updated: 2026-05-30
+tags: [cryptography, zero-knowledge-proofs, ZKP, encryption, public-key, blockchain, privacy, mathematics, AES, RSA, ECC, TLS, PKI, STARKs, Plonk, LWE, post-quantum, hash-functions, digital-signatures, elliptic-curves, symmetric-encryption]
+source: "Goldwasser, Micali & Rackoff (1985) The Knowledge Complexity of Interactive Proof Systems; Boneh & Shoup 'A Graduate Course in Applied Cryptography' (2023); Ben-Sasson et al. (2018) STARKs (arXiv:1501.04722); Gabizon et al. (2019) PlonK (arXiv:1912.01216); Bernstein & Lange (2017) Post-quantum cryptography survey (Nature)"
+last_updated: 2026-05-31
 ---
 
 ## Summary
