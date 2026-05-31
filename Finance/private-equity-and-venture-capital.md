@@ -3,7 +3,7 @@ title: Private Equity & Venture Capital
 date: 2026-05-30
 tags: [finance, private-equity, venture-capital, leveraged-buyout, fund-structure, carried-interest, J-curve, valuation, LP-GP]
 source: Kaplan & Strömberg (2009) Leveraged Buyouts and Private Equity; Metrick & Yasuda (2010) The Economics of Private Equity Funds; Gompers & Lerner (2001) The Venture Capital Cycle; Preqin Global Private Equity Report 2024
-last_updated: 2026-05-30
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -278,9 +278,21 @@ Apollo, Oaktree (Howard Marks), and Elliott Management specialize in **distresse
 - **Network science:** VC deal flow follows power-law networks — top founders were funded by top VCs (Sequoia → PayPal → PayPal Mafia → all subsequent Musk/Thiel ventures). Warm introductions drive 90%+ of deal flow at top firms
 
 ## Related
-- [[portfolio-theory]] — Asset allocation frameworks; PE as an alternative asset class
-- [[valuation-fundamentals]] — DCF and comparables used in PE/VC
-- [[behavioral-finance-and-investor-psychology]] — LP herd behavior, endowment effect in fund selection
-- [[options-basics]] — Convertible notes (SAFE, convertible debt) used in early-stage VC have option-like payoffs
-- [[macroeconomics-101]] — Interest rate cycles profoundly affect LBO viability and PE entry multiples
-- [[quantitative-finance-and-algorithmic-trading]] — Secondary PE market analytics; quantitative approaches to LP portfolio construction
+- [[portfolio-theory]] — Asset allocation frameworks; PE as an alternative asset class; endowment model portfolio construction
+- [[valuation-fundamentals]] — DCF and comparables used in PE/VC; LBO model as the binding valuation constraint
+- [[behavioral-finance-and-investor-psychology]] — LP herd behavior, endowment effect in fund selection; overconfidence in deal underwriting
+- [[options-basics]] — Convertible notes (SAFE, convertible debt) used in early-stage VC have option-like payoffs; waterfall structures as nested options
+- [[macroeconomics-101]] — Interest rate cycles profoundly affect LBO viability and PE entry multiples; credit conditions and leveraged finance markets
+- [[quantitative-finance-and-algorithmic-trading]] — Secondary PE market analytics; quantitative approaches to LP portfolio construction; systematic due diligence
+- [[credit-markets-and-credit-risk]] — Leveraged buyouts depend on leveraged loan and high-yield bond markets; distressed PE as credit investing
+- [[hedge-funds-and-alternative-strategies]] — Competing for institutional allocations; event-driven funds overlap with activist PE
+- [[fixed-income-deep-dive]] — Leveraged loan market mechanics; high-yield bonds as PE exit instruments; CLO buyers of LBO debt
+- [[value-investing-methodology]] — Value creation through operational improvement mirrors Buffett's compounding framework; ROIC and capital allocation in portfolio companies
+- [[real-assets-reits-and-commodities]] — Infrastructure PE as a real assets sub-strategy; private real estate as PE adjacency
+- [[Psychology/game-theory-and-strategic-thinking]] — Principal-agent dynamics in LP-GP relationships; auction dynamics in competitive deal sourcing
+- [[Psychology/mental-models]] — Circle of competence in sector-focused PE; second-order thinking in LBO downside scenarios
+- [[Tech & AI/agentic-ai-and-multi-agent-systems]] — AI-driven due diligence and deal sourcing transformation in PE; venture bets on AI companies
+- [[Tech & AI/machine-learning-fundamentals]] — VC investment in ML infrastructure; AI-enabled portfolio company value creation
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — US restrictions on PE investment in Chinese tech; VC decoupling between US and China ecosystems
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — PE exit environment in 2026 slowdown; IPO window and M&A deal volume contraction
+- [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — Regulatory risk for AI-focused VC portfolios; governance uncertainty affecting valuations

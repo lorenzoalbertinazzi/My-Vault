@@ -1,9 +1,9 @@
 ---
 title: Portfolio Theory and Risk Management
 date: 2026-05-26
-tags: [finance, portfolio, risk, MPT, investing]
-source: research
-last_updated: 2026-05-29
+tags: [finance, portfolio-theory, MPT, markowitz, efficient-frontier, CAPM, sharpe-ratio, alpha, beta, correlation, diversification, risk-management, asset-allocation, modern-portfolio-theory, Kelly-criterion, factor-investing, Fama-French, risk-parity, Black-Litterman, CVaR, sequence-of-returns]
+source: "Markowitz (1952) Portfolio Selection, Journal of Finance; Sharpe (1964) Capital Asset Prices, Journal of Finance; Fama & French (1992) The Cross-Section of Expected Stock Returns, Journal of Finance; Black & Litterman (1990) Asset Allocation, Journal of Fixed Income; Kelly (1956) A New Interpretation of Information Rate, Bell System Technical Journal"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -382,13 +382,19 @@ Geopolitical events also stress-test the liquidity assumptions embedded in portf
 The factor investing framework — capturing return premiums from Value, Size, Momentum, Quality, and Low Volatility — sits at the intersection of portfolio theory, behavioral finance, and the emerging field of Narrative Economics. Robert Shiller's insight (detailed in [[behavioral-finance-and-investor-psychology]]) that economic narratives can move markets independently of fundamentals has a direct implication for factor premiums: the factors work precisely because the narratives around growth vs. value, excitement vs. stability, momentum vs. mean-reversion are never resolved permanently. The value premium persists because the narrative of "exciting growth" periodically overvalues growth stocks relative to fundamentals; momentum works because narratives spread gradually through investor attention, creating the autocorrelation in returns that momentum strategies exploit. When a factor's underlying narrative becomes too widely understood — when everyone knows about momentum — the premium is at least partially arbitraged away and its alpha half-life shortens. This is the fundamental reason why systematic factor strategies require continuous monitoring, updating, and combination: no single behavioral narrative is permanently underappreciated in liquid markets.
 
 ## Related
-- [[valuation-fundamentals]]
-- [[macroeconomics-101]]
-- [[options-basics]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[cognitive-biases]]
-- [[machine-learning-fundamentals]]
-- [[fixed-income-deep-dive]]
-- [[2026-05-27-us-iran-conflict-global-energy-crisis]]
-- [[2026-05-27-russia-central-asia-influence-and-decline]]
-- [[technical-analysis-and-chart-patterns]]
+- [[valuation-fundamentals]] — WACC as the link between portfolio theory and DCF; discount rate sensitivity to macro regimes
+- [[macroeconomics-101]] — Business cycle drives asset class correlation regimes; r* determines equity premium
+- [[options-basics]] — Options for distributional engineering; tail hedging; convexity-gamma bridge
+- [[behavioral-finance-and-investor-psychology]] — Why optimal portfolios are never held; endowment effect, home bias, mental accounting
+- [[cognitive-biases]] — Cognitive errors in portfolio construction; confirmation bias in factor selection
+- [[fixed-income-deep-dive]] — Duration, credit spreads, and spread duration as portfolio risk components
+- [[yield-curve-and-bonds]] — Yield curve regime determines equity-bond correlation sign; 60/40 framework vulnerability
+- [[hedge-funds-and-alternative-strategies]] — Hedge funds as alternative return streams; uncorrelated alpha in portfolio context
+- [[real-assets-reits-and-commodities]] — Real assets for inflation hedging; correlation matrix with equities and bonds
+- [[private-equity-and-venture-capital]] — PE/VC as illiquid alternative asset classes; Yale endowment model
+- [[geopolitical-risk-premium-and-markets]] — Geopolitical shocks change correlation regimes; safe-haven hierarchy
+- [[currency-markets-and-fx]] — FX as portfolio diversifier; currency hedging decisions for international allocations
+- [[quantitative-finance-and-algorithmic-trading]] — ML for covariance estimation; hierarchical risk parity; factor decay
+- [[Tech & AI/machine-learning-fundamentals]] — Hierarchical Risk Parity; deep learning for non-linear correlations; RL portfolio allocation
+- [[Geopolitics/2026-05-27-us-iran-conflict-global-energy-crisis]] — Oil shock breaks equity-bond negative correlation; geopolitical portfolio stress test
+- [[Geopolitics/2026-05-27-russia-central-asia-influence-and-decline]] — Illiquidity premium confiscation in crisis; geopolitical liquidity risk

@@ -3,7 +3,7 @@ title: Quantitative Finance & Algorithmic Trading
 date: 2026-05-30
 tags: [finance, quantitative-finance, algorithmic-trading, statistical-arbitrage, HFT, stochastic-calculus, factor-models, risk-management]
 source: Quantitative Finance literature; Hull (2018) Options Futures and Other Derivatives; Jansen (2020) Machine Learning for Algorithmic Trading; de Prado (2018) Advances in Financial Machine Learning
-last_updated: 2026-05-30
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -255,10 +255,22 @@ The Medallion Fund's performance cannot be replicated at scale — capacity cons
 5. **Quantum computing:** Quantum annealing (D-Wave) for portfolio optimization (quadratic unconstrained binary optimization); limited to ~thousands of assets today but scales exponentially with qubit count
 
 ## Related
-- [[portfolio-theory]] — Mean-variance framework that underlies factor models
-- [[options-basics]] — Derivative pricing built on Black-Scholes
-- [[behavioral-finance-and-investor-psychology]] — Why markets have exploitable inefficiencies
-- [[value-investing-methodology]] — The systematic value factor
-- [[technical-analysis-and-chart-patterns]] — Precursor to quantitative momentum strategies
-- [[machine-learning-fundamentals]] — ML toolkit underlying modern quant research
-- [[transformer-architecture]] — LLMs increasingly applied to financial NLP
+- [[portfolio-theory]] — Mean-variance framework that underlies factor models; Kelly criterion and position sizing theory
+- [[options-basics]] — Derivative pricing built on Black-Scholes; Greeks management in quant option books; volatility surface modeling
+- [[behavioral-finance-and-investor-psychology]] — Why markets have exploitable inefficiencies; behavioral premia as durable alpha sources
+- [[value-investing-methodology]] — The systematic value factor; quant implementation of Graham-Buffett principles at scale
+- [[technical-analysis-and-chart-patterns]] — Precursor to quantitative momentum strategies; systematic rules encoding chart patterns
+- [[derivatives-futures-and-forwards]] — Futures as the primary execution instrument for systematic macro and CTA strategies
+- [[hedge-funds-and-alternative-strategies]] — Quant hedge funds as the institutional deployment of these methods; Renaissance as the benchmark
+- [[credit-markets-and-credit-risk]] — Quantitative credit models (Merton, KMV); CDS spread modeling; CLO tranche pricing
+- [[fixed-income-deep-dive]] — Interest rate derivatives pricing; yield curve models; bond futures basis trading
+- [[currency-markets-and-fx]] — FX systematic strategies; stat-arb across currency pairs; carry factor modeling
+- [[geopolitical-risk-premium-and-markets]] — Regime-based risk models incorporating geopolitical event risk; GPR index signals in quant macro
+- [[Tech & AI/machine-learning-fundamentals]] — ML toolkit underlying modern quant research; gradient boosting and deep learning for alpha generation
+- [[Tech & AI/transformer-architecture]] — LLMs and transformer models applied to financial NLP; earnings call sentiment analysis
+- [[Tech & AI/reinforcement-learning-from-human-feedback]] — Reinforcement learning for optimal execution; market-making RL agents
+- [[Tech & AI/vector-databases-and-embeddings]] — Alternative data embeddings; semantic search in financial document analysis
+- [[Tech & AI/quantum-computing-architecture-and-applications]] — Quantum annealing for portfolio optimization; quantum Monte Carlo for derivatives pricing
+- [[Psychology/cognitive-biases]] — Cognitive biases as the source of alpha; momentum as anchoring exploitation; value as loss aversion exploitation
+- [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — AI regulation impact on algorithmic trading oversight; model risk governance frameworks
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Regime change and model decay in 2026 macro environment; strategy performance divergence

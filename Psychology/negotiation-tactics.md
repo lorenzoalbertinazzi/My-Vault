@@ -1,9 +1,9 @@
 ---
 title: Negotiation Tactics — Chris Voss and Roger Fisher
 date: 2026-05-27
-tags: [psychology, negotiation, persuasion, communication, voss, fisher]
-source: research
-last_updated: 2026-05-29
+tags: [psychology, negotiation, BATNA, anchoring, Harvard-negotiation, Chris-Voss, FBI-negotiation, emotional-labeling, mirroring, framing, principled-negotiation, Fisher-Ury, conflict-resolution, persuasion, communication]
+source: "Fisher & Ury (1981) Getting to Yes; Voss (2016) Never Split the Difference; Malhotra & Bazerman (2007) Negotiation Genius; Schelling (1960) The Strategy of Conflict"
+last_updated: 2026-05-31
 enriched: 2026-05-29
 ---
 
@@ -351,12 +351,17 @@ Applying both frameworks to the specific context of salary negotiation, where th
 12. **Get any agreement in writing the same day**: commitment/consistency research shows written agreements are dramatically more durable than oral ones
 
 ## Related
-- [[cialdini-influence]]
-- [[48-laws-of-power]]
-- [[mental-models]]
-- [[cognitive-biases]]
-- [[emotional-intelligence]]
-- [[stoicism-and-stoic-philosophy]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[2026-05-27-us-china-great-power-competition]]
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
+- [[cialdini-influence]] — Cialdini techniques (reciprocity, anchoring, labeling) directly applied in negotiation; pre-suasion as negotiation setup
+- [[48-laws-of-power]] — Power dynamics underpin all high-stakes negotiation; Greene's laws as the shadow negotiation manual
+- [[mental-models]] — Negotiation frameworks (BATNA, ZOPA, 3D negotiation) as applied mental models; inversion for BATNA analysis
+- [[cognitive-biases]] — Anchoring, FAE, and reactive devaluation as the core cognitive biases shaping negotiation outcomes
+- [[emotional-intelligence]] — Tactical empathy is EI's empathy domain operationalized; self-regulation prevents amygdala hijack at the table
+- [[stoicism-and-stoic-philosophy]] — Stoic dichotomy of control as the philosophical foundation of the negotiator's inner game
+- [[game-theory-and-strategic-thinking]] — Nash equilibrium, prisoner's dilemma, and iterated cooperation as game-theoretic foundations of negotiation
+- [[prospect-theory-and-decision-making]] — Reference points, loss aversion, and framing effects determine how offers are perceived
+- [[attachment-theory-and-relationships]] — Attachment style predicts negotiation behavior (anxious = concession-prone; avoidant = overconfident)
+- [[social-psychology-and-group-dynamics]] — Social influence mechanisms (authority, conformity, social proof) operating in negotiation contexts
+- [[Finance/behavioral-finance-and-investor-psychology]] — M&A negotiation, activist investing, and corporate deal dynamics as applied negotiation contexts
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Great power negotiation dynamics; BATNA analysis in US-China trade and security talks
+- [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Nuclear diplomacy as high-stakes BATNA and commitment theory in practice
+- [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Coercive diplomacy and ceasefire negotiation frameworks

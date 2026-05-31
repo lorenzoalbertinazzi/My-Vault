@@ -1,10 +1,11 @@
 ---
 title: Attachment Theory and Adult Relationships
 date: 2026-05-30
-tags: [psychology, attachment-theory, relationships, bowlby, ainsworth, adult-attachment, neuroscience, therapy]
-source: Bowlby "Attachment and Loss" trilogy (1969–1980); Ainsworth et al. (1978) "Patterns of Attachment"; Hazan & Shaver (1987); Mikulincer & Shaver "Attachment in Adulthood"
-last_updated: 2026-05-30
+tags: [psychology, attachment-theory, relationships, bowlby, ainsworth, adult-attachment, neuroscience, therapy, developmental-psychology, interpersonal-psychology, secure-attachment, anxious-attachment, avoidant-attachment, oxytocin, emotionally-focused-therapy]
+source: "Bowlby Attachment and Loss trilogy (1969–1980); Ainsworth et al. (1978) Patterns of Attachment; Hazan & Shaver (1987) Romantic Love Conceptualized as an Attachment Process, JPSP; Mikulincer & Shaver (2007) Attachment in Adulthood; Fonagy et al. (2002) Affect Regulation, Mentalization, and the Development of the Self"
+last_updated: 2026-05-31
 ---
+
 
 ## Summary
 Attachment Theory, originally developed by psychiatrist John Bowlby (1907–1990) and expanded through pioneering research by Mary Ainsworth (1913–1999), is the dominant scientific framework for understanding how human beings form close emotional bonds — and how early bonding experiences shape personality, relationship patterns, mental health, and even neurological development across the entire lifespan. Born from the intersection of ethology, psychoanalysis, and cognitive science, the theory proposes that humans possess a biologically-based **attachment behavioral system** that evolved to maintain proximity to caregivers in times of threat, providing security and regulating arousal. When this system functions optimally, children develop **secure attachment**: a stable internal working model that the world is safe, others are trustworthy, and the self is worthy of love. When early caregiving is inconsistent, rejecting, or frightening, children develop **insecure attachment patterns** (anxious, avoidant, or disorganized) that persist into adulthood, shaping romantic relationships, workplace dynamics, parenting behavior, and susceptibility to psychopathology.
@@ -171,4 +172,13 @@ Smartphone use, social media, and constant connectivity fulfill pseudo-attachmen
 - [[habit-formation]] — How attachment patterns function as deeply ingrained habits of relating
 - [[cognitive-biases]] — Confirmation bias in relationship perception (anxious: confirms abandonment; avoidant: confirms engulfment)
 - [[stoicism]] — Stoic indifference as a cultural valorization of avoidant deactivation strategies
+- [[stoicism-and-stoic-philosophy]] — Stoic oikeiosis theory of expanding circles of affiliation
 - [[negotiation-tactics]] — Attachment style affects negotiation behavior (anxious = concession-prone, avoidant = overconfident)
+- [[trauma-resilience-and-post-traumatic-growth]] — Attachment trauma as the most damaging form; disorganized attachment and complex PTSD
+- [[social-psychology-and-group-dynamics]] — Social identity and group belonging as adult attachment analogs
+- [[prospect-theory-and-decision-making]] — Loss aversion amplified in anxious-preoccupied attachment style
+- [[flow-state-and-peak-performance]] — Secure attachment as psychological base that enables exploratory flow states
+- [[mental-models]] — Internal Working Models as cognitive schemas that function like mental models of self and other
+- [[game-theory-and-strategic-thinking]] — Repeated-game cooperation parallels secure attachment as a trust-building equilibrium
+- [[Finance/behavioral-finance-and-investor-psychology]] — Attachment style affects risk tolerance and investor loss aversion
+- [[Geopolitics/2026-05-27-india-pakistan-2025-war-and-aftermath]] — Post-conflict reconciliation requires collective healing of attachment-level trust wounds

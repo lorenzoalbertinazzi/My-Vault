@@ -1,9 +1,9 @@
 ---
 title: Habit Formation — Atomic Habits, the Habit Loop, and Behaviour Change
 date: 2026-05-27
-tags: [psychology, habits, behaviour-change, atomic-habits, neuroscience, self-improvement]
-source: research / James Clear "Atomic Habits" / Charles Duhigg "The Power of Habit"
-last_updated: 2026-05-29
+tags: [psychology, habits, habit-formation, habit-loop, cue-routine-reward, basal-ganglia, neuroplasticity, behavior-change, keystone-habits, identity-based-habits, James-Clear, Charles-Duhigg, atomic-habits, self-improvement, neuroscience]
+source: "Duhigg (2012) The Power of Habit; Clear (2018) Atomic Habits; Graybiel (2008) Habits, Rituals, and the Evaluative Brain, Annu. Rev. Neurosci.; Wood & Neal (2007) A New Look at Habits, Psych Rev."
+last_updated: 2026-05-31
 enriched: 2026-05-29
 ---
 
@@ -377,11 +377,17 @@ A genuine debate runs through the behavior change literature about which lever i
 **The Role of Social Connection**: Social habits — those embedded in relationships and communities — are dramatically more durable than solitary ones. Christakis and Fowler (2007) analyzed the Framingham Heart Study data (N > 12,000, 32-year longitudinal) and found that obesity, smoking cessation, and happiness spread through social networks in ways that persist up to 3 degrees of separation (friend of a friend of a friend). This implies that the most powerful single action for changing one's habits is changing one's social environment — the keystone habit research, the relapse-prevention literature, and 12-step programs all converge on this finding independently.
 
 ## Related
-- [[cognitive-biases]]
-- [[mental-models]]
-- [[stoicism-and-stoic-philosophy]]
-- [[stoicism]]
-- [[cialdini-influence]]
-- [[emotional-intelligence]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[value-investing-methodology]]
+- [[cognitive-biases]] — Habits automate System 1 responses; debiasing requires installing competing habitual routines
+- [[mental-models]] — Internalized mental models are cognitive habits; Munger's latticework requires practice to become automatic
+- [[stoicism-and-stoic-philosophy]] — Stoic spiritual exercises are a structured habit curriculum for emotional regulation
+- [[stoicism]] — Stoic daily practices map directly onto Clear's identity-based habit change model
+- [[cialdini-influence]] — Foot-in-the-door and commitment loops as engineered habit formation; variable reward as compliance mechanism
+- [[emotional-intelligence]] — Self-regulation domain of EI is a system of practiced emotional habits
+- [[dopamine-reward-systems-neuroscience]] — Dopaminergic reward prediction error is the neurochemical engine of habit reinforcement
+- [[memory-systems-and-learning-science]] — Procedural memory and habit storage share basal ganglia architecture; sleep consolidation applies to both
+- [[flow-state-and-peak-performance]] — Flow states accelerate the skill acquisition phase that eventually enables habit automaticity
+- [[attachment-theory-and-relationships]] — Attachment patterns are relational habits installed in early development
+- [[prospect-theory-and-decision-making]] — Loss aversion drives resistance to breaking bad habits (endowment effect on existing routines)
+- [[social-psychology-and-group-dynamics]] — Social context (peer groups, community) is the most powerful modifier of habit formation and maintenance
+- [[Finance/behavioral-finance-and-investor-psychology]] — Habitual investing behaviors (automatic contributions, rules-based rebalancing) outperform discretionary approaches
+- [[Finance/value-investing-methodology]] — Value investing discipline requires installing counter-cyclical behavioral habits against market sentiment

@@ -1,9 +1,9 @@
 ---
 title: Flow State & Peak Performance
 date: 2026-05-30
-tags: [psychology, flow, peak-performance, positive-psychology, motivation, neuroscience, sport-psychology, productivity, csikszentmihalyi]
-source: Csikszentmihalyi (1990) Flow: The Psychology of Optimal Experience; Kotler (2014) The Rise of Superman; Nakamura & Csikszentmihalyi (2009) The Concept of Flow; Arne Dietrich (2003) Functional neuroanatomy of altered states of consciousness
-last_updated: 2026-05-30
+tags: [psychology, flow, peak-performance, positive-psychology, motivation, neuroscience, sport-psychology, productivity, csikszentmihalyi, transient-hypofrontality, challenge-skill-balance, autotelic-experience, dopamine, anandamide, optimal-experience, intrinsic-motivation, deep-work]
+source: "Csikszentmihalyi (1990) Flow: The Psychology of Optimal Experience; Kotler (2014) The Rise of Superman; Nakamura & Csikszentmihalyi (2009) The Concept of Flow; Dietrich (2003) Functional neuroanatomy of altered states of consciousness, Medical Hypotheses; Ulrich et al. (2016) Neural correlates of experimentally induced flow experiences, NeuroImage"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -206,4 +206,9 @@ Csikszentmihalyi documented "microflow" — brief flow-like states in routine wo
 - [[stoicism-and-stoic-philosophy]] — Stoic practices of attention and discomfort tolerance prepare the psychological conditions for flow
 - [[emotional-intelligence]] — EI governs the capacity to regulate anxiety (flow-destroying) and maintain focused engagement (flow-enabling)
 - [[cognitive-biases]] — Self-consciousness and rumination (flow blockers) are linked to specific cognitive bias patterns (overconfidence in self-assessment, excessive social comparison)
-- [[machine-learning-fundamentals]] — Reinforcement learning parallels the challenge-skill balance framework
+- [[memory-systems-and-learning-science]] — Flow states enhance memory encoding; spaced retrieval practice and flow-conducive challenge-skill balance are structurally related
+- [[attachment-theory-and-relationships]] — Secure attachment provides the safe base from which exploration and flow-seeking emerge
+- [[prospect-theory-and-decision-making]] — Loss aversion (fear of failure) is among the primary psychological barriers to flow onset
+- [[game-theory-and-strategic-thinking]] — Challenge-skill balance in flow mirrors optimal difficulty in game theory learning models
+- [[Tech & AI/machine-learning-fundamentals]] — Reinforcement learning parallels the challenge-skill balance framework; curriculum learning mirrors flow-optimal task sequencing
+- [[Tech & AI/reinforcement-learning-from-human-feedback]] — RLHF reward shaping can mirror flow-based challenge-skill optimization

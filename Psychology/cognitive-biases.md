@@ -1,9 +1,9 @@
 ---
 title: Cognitive Biases — A Practical Map
 date: 2026-05-26
-tags: [psychology, cognitive-biases, decision-making, mental-models]
-source: research
-last_updated: 2026-05-29
+tags: [psychology, cognitive-biases, heuristics, decision-making, kahneman, tversky, anchoring, availability-heuristic, representativeness, confirmation-bias, hindsight-bias, dunning-kruger, System-1, System-2, behavioral-economics]
+source: "Kahneman (2011) Thinking, Fast and Slow; Tversky & Kahneman (1974) Judgment Under Uncertainty: Heuristics and Biases, Science; Thaler (1980) Toward a Positive Theory of Consumer Choice, JEconBehav; Ariely (2008) Predictably Irrational"
+last_updated: 2026-05-31
 enriched: 2026-05-29
 ---
 
@@ -357,14 +357,19 @@ The most important intellectual challenge to the Kahneman-Tversky framework come
 **Prospect Theory's Durability**: The one element of the heuristics-and-biases program that Gigerenzer explicitly does not challenge is Prospect Theory's core findings. Loss aversion (losses hurt ~2–2.5× more than equal gains feel good), the probability weighting function (overweighting small probabilities, underweighting large ones), and reference-point dependence have been replicated across cultures, species (non-human primates show loss aversion), and in field settings with real stakes. These are as solid as psychological findings get.
 
 ## Related
-- [[cialdini-influence]]
-- [[mental-models]]
-- [[48-laws-of-power]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[negotiation-tactics]]
-- [[technical-analysis-and-chart-patterns]]
-- [[value-investing-methodology]]
-- [[emotional-intelligence]]
-- [[habit-formation]]
-- [[stoicism-and-stoic-philosophy]]
-- [[prompt-engineering]]
+- [[cialdini-influence]] — Influence principles are engineered triggers for specific cognitive biases
+- [[mental-models]] — Mental models as System 2 tools to counteract System 1 biases
+- [[48-laws-of-power]] — Power laws exploit cognitive biases (availability, scarcity, authority) in social settings
+- [[negotiation-tactics]] — Anchoring, FAE, and reactive devaluation as core negotiation biases
+- [[emotional-intelligence]] — Emotional self-awareness as the prerequisite for debiasing protocols
+- [[habit-formation]] — Habits as automated System 1 responses; bias correction requires habit-level intervention
+- [[prospect-theory-and-decision-making]] — Prospect Theory as the formal model explaining loss aversion and framing biases
+- [[social-psychology-and-group-dynamics]] — Social biases (conformity, groupthink) as collective amplifiers of individual biases
+- [[memory-systems-and-learning-science]] — Availability heuristic and hindsight bias rooted in memory retrieval mechanisms
+- [[dopamine-reward-systems-neuroscience]] — Neural substrates of loss aversion and overconfidence
+- [[stoicism-and-stoic-philosophy]] — Stoic practices as ancient debiasing protocols
+- [[game-theory-and-strategic-thinking]] — Level-k thinking and bounded rationality in game theory
+- [[Finance/behavioral-finance-and-investor-psychology]] — Cognitive biases as drivers of market anomalies
+- [[Finance/technical-analysis-and-chart-patterns]] — Pattern recognition bias and apophenia in chart analysis
+- [[Finance/value-investing-methodology]] — Value investing as a structured debiasing system
+- [[Tech & AI/prompt-engineering]] — Prompt design to mitigate LLM cognitive-bias-like failure modes

@@ -1,9 +1,9 @@
 ---
 title: Fixed Income Deep Dive — Bonds, Yield Curves, and Credit Risk
 date: 2026-05-27
-tags: [finance, bonds, fixed-income, yield-curve, credit-risk, interest-rates]
-source: research
-last_updated: 2026-05-29
+tags: [finance, bonds, fixed-income, yield-curve, credit-risk, interest-rates, duration, convexity, TIPS, CLO, repo-market, sovereign-debt, green-bonds, credit-spread, macaulay-duration, immunization, structured-products, bear-steepener, bull-flattener]
+source: "Fabozzi (2012) Bond Markets: Analysis and Strategies; Tuckman & Serrat (2011) Fixed Income Securities; Mishkin (2018) The Economics of Money, Banking and Financial Markets; Merton (1974) On the Pricing of Corporate Debt, Journal of Finance; Moody's Annual Default Study (2023)"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -387,13 +387,20 @@ More broadly, the history of credit cycles reveals that spread compression in la
 The application of [[machine-learning-fundamentals]] to fixed income has advanced rapidly, driven by the unique characteristics of fixed income data. Unlike equity markets where the universe is relatively static (a company either has one stock or a few), the fixed income universe is vast and heterogeneous: a single issuer may have dozens of bonds with different maturities, covenants, call features, and seniority. Natural language processing models trained on bond prospectuses, covenant documentation, and credit rating rationale extract structured information from unstructured legal text at scale — identifying hidden covenant weaknesses, cross-default triggers, and change-of-control provisions that manual analysis might miss. Gradient boosting models trained on historical default data (incorporating macro variables, firm-level financials, and market-based signals like CDS spread levels and equity volatility) have demonstrated meaningful predictive power over traditional Altman Z-score models for corporate defaults. In the sovereign debt space, ML models incorporating political risk indicators, social unrest measures, and real-time economic data streams have shown improvements over traditional IMF-style sustainability models. The most sophisticated fixed income hedge funds now deploy neural networks to model yield curve dynamics — capturing non-linear relationships between term premiums, inflation expectations, and policy paths that linear factor models miss.
 
 ## Related
-- [[portfolio-theory]]
-- [[macroeconomics-101]]
-- [[valuation-fundamentals]]
-- [[yield-curve-and-bonds]]
-- [[currency-markets-and-fx]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
-- [[2026-05-27-us-iran-conflict-global-energy-crisis]]
-- [[machine-learning-fundamentals]]
-- [[cognitive-biases]]
+- [[portfolio-theory]] — Duration, convexity, and spread duration in portfolio risk management; 60/40 framework stress-tested by fixed income
+- [[macroeconomics-101]] — Taylor Rule and yield curve as macro transmission; Minsky Moment expressed in credit markets; sovereign debt dynamics
+- [[valuation-fundamentals]] — Discount rate foundations; WACC decomposition depends on risk-free rate from bond markets
+- [[yield-curve-and-bonds]] — Curve shape analysis, forward rates, term premium decomposition; inversion and bear steepener patterns
+- [[currency-markets-and-fx]] — CIP linking bond yields to FX forward rates; international bond investing and currency risk
+- [[behavioral-finance-and-investor-psychology]] — Reach for yield; herding in credit cycles; SVB behavioral failures; institutional loss aversion
+- [[credit-markets-and-credit-risk]] — Credit spreads, CLOs, CDS mechanics; high-yield bond analysis; distressed debt
+- [[derivatives-futures-and-forwards]] — Interest rate swaps; futures on Treasuries; repo market as fixed income plumbing
+- [[options-basics]] — Convexity-gamma bridge; MBS negative convexity; swaptions; fixed income options
+- [[hedge-funds-and-alternative-strategies]] — Fixed income relative value arbitrage; LTCM case study; convertible arb
+- [[quantitative-finance-and-algorithmic-trading]] — Quantitative credit models; ML on bond prospectuses; NLP for covenant analysis
+- [[central-bank-digital-currencies-cbdc]] — CBDC interest-bearing design competing with bank deposits and bonds
+- [[machine-learning-fundamentals]] — ML for default prediction; NLP on covenant documentation; neural yield curve models
+- [[cognitive-biases]] — Duration risk neglect; confirmation bias in SVB collapse; reach-for-yield behavioral dynamics
+- [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Geopolitical energy shock transmission through EM sovereign bond markets
+- [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Russia's sanctions-triggered payment-mechanism default; restructuring dynamics
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Credit cycle dynamics in 2026 global slowdown; sovereign spread widening

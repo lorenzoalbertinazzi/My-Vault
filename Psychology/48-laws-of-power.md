@@ -1,9 +1,9 @@
 ---
 title: Robert Greene — The 48 Laws of Power (Key Laws)
 date: 2026-05-26
-tags: [psychology, power, Robert-Greene, strategy, social-dynamics]
-source: research
-last_updated: 2026-05-29
+tags: [psychology, power, influence, social-dynamics, strategy, machiavellian, Robert-Greene, manipulation, political-strategy, courtly-behavior, power-dynamics, social-intelligence, status, hierarchy, evolutionary-psychology]
+source: "Greene (1998) The 48 Laws of Power; Machiavelli (1532) The Prince; Sun Tzu (~500 BC) The Art of War; Greene (2012) Mastery; Canetti (1960) Crowds and Power"
+last_updated: 2026-05-31
 enriched: 2026-05-29
 ---
 
@@ -298,11 +298,16 @@ Graham's "Mr. Market" metaphor is essentially a power-dynamics reframing of how 
 Law 11 (Keep Others Dependent on You) has a direct financial analog in Warren Buffett's identification of **economic moats** — structural competitive advantages that create switching costs, network effects, and brand loyalty that make customers effectively dependent on the business. A company with high switching costs has engineered customer dependency through a product architecture that makes exit more costly than remaining, regardless of whether the customer is rationally satisfied. Network effects (Visa, Meta, Google) are Law 11 at scale: the more people in the network, the higher the cost of exit for any individual member, creating structural dependency that grows stronger as the network expands. Identifying businesses that have successfully operationalized Law 11 is, in Munger's terms, one of the most powerful mental models in the value investor's toolkit.
 
 ## Related
-- [[cialdini-influence]]
-- [[mental-models]]
-- [[cognitive-biases]]
-- [[negotiation-tactics]]
-- [[value-investing-methodology]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[2026-05-27-us-china-great-power-competition]]
-- [[2026-05-27-us-china-strategic-competition]]
+- [[cialdini-influence]] — Cialdini's six principles map directly onto many of the 48 Laws as psychological mechanisms
+- [[mental-models]] — Power laws as strategic mental models; Munger's latticework applied to social dynamics
+- [[cognitive-biases]] — The 48 Laws exploit specific cognitive biases (availability, scarcity, authority)
+- [[negotiation-tactics]] — Power dynamics underpin all high-stakes negotiation
+- [[emotional-intelligence]] — High EQ is essential for reading and navigating the power dynamics the Laws describe
+- [[game-theory-and-strategic-thinking]] — Game-theoretic foundations for Laws 15, 17, 20; iterated vs. one-shot power games
+- [[social-psychology-and-group-dynamics]] — Group conformity, social proof, and authority mechanisms behind the Laws
+- [[stoicism-and-stoic-philosophy]] — Stoic inner game as counterweight and complement to the outer game of the Laws
+- [[prospect-theory-and-decision-making]] — Loss aversion and reference points exploited throughout the Laws
+- [[Finance/value-investing-methodology]] — Economic moats as operationalized Law 11; Mr. Market as power-dynamics reframe
+- [[Finance/behavioral-finance-and-investor-psychology]] — Market dynamics as collective power games
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Great power competition as Laws 1, 3, 15, 17 at state level
+- [[Geopolitics/2026-05-27-us-china-strategic-competition]] — Strategic competition doctrine through a power-laws lens

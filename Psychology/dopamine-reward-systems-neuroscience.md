@@ -1,9 +1,9 @@
 ---
 title: Dopamine & Reward Systems — The Neuroscience of Motivation
 date: 2026-05-30
-tags: [psychology, neuroscience, dopamine, motivation, reward-systems, addiction, behavioral-neuroscience, decision-making, neurochemistry]
-source: Schultz (1997) A Neural Substrate of Prediction and Reward, Science; Berridge & Robinson (1998) What is the role of dopamine in reward; Sapolsky (2017) Behave; Huberman Lab lectures on dopamine and motivation
-last_updated: 2026-05-30
+tags: [psychology, neuroscience, dopamine, motivation, reward-systems, addiction, behavioral-neuroscience, decision-making, neurochemistry, reward-prediction-error, mesolimbic-pathway, reinforcement-learning, VTA, nucleus-accumbens, wanting-vs-liking]
+source: "Schultz (1997) A Neural Substrate of Prediction and Reward, Science; Berridge & Robinson (1998) What is the role of dopamine in reward: hedonics, learning, or incentive salience?, Brain Res Rev; Sapolsky (2017) Behave; Volkow et al. (2004) Dopamine in drug abuse and addiction, Neuron; Sutton & Barto (1988) Reinforcement Learning: An Introduction"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -182,4 +182,9 @@ Schultz camp: DA primarily encodes unsigned RPE (magnitude of prediction error),
 - [[mental-models]] — First-principles thinking leverages prefrontal dopamine systems (delayed gratification circuits)
 - [[stoicism-and-stoic-philosophy]] — Stoic practice of voluntary hardship/discomfort maps onto deliberate DA baseline management
 - [[flow-state-and-peak-performance]] — Flow state involves specific dopamine + norepinephrine + anandamide neurochemistry
-- [[behavioral-finance-and-investor-psychology]] — Loss aversion and overconfidence have direct neurobiological (DA) correlates
+- [[attachment-theory-and-relationships]] — Oxytocin and dopamine as neurochemical substrates of bonding and attachment
+- [[memory-systems-and-learning-science]] — Dopamine gates hippocampal plasticity; DA-mediated memory consolidation
+- [[prospect-theory-and-decision-making]] — Amygdala and striatum dopamine circuits as neural basis of loss aversion
+- [[trauma-resilience-and-post-traumatic-growth]] — HPA axis and dopamine dysregulation in PTSD; reward system blunting
+- [[Finance/behavioral-finance-and-investor-psychology]] — Loss aversion and overconfidence have direct neurobiological (DA) correlates
+- [[Tech & AI/reinforcement-learning-from-human-feedback]] — TD learning algorithms mirror dopamine reward prediction error signal

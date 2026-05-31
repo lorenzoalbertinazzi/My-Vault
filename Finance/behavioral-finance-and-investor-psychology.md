@@ -1,9 +1,9 @@
 ---
 title: Behavioral Finance and Investor Psychology
 date: 2026-05-27
-tags: [finance, behavioral-finance, psychology, investing, biases]
-source: research
-last_updated: 2026-05-29
+tags: [finance, behavioral-finance, psychology, investing, biases, prospect-theory, loss-aversion, cognitive-biases, heuristics, overconfidence, anchoring, herding, mental-accounting, market-anomalies, EMH, adaptive-markets]
+source: "Kahneman & Tversky (1979) Prospect Theory, Econometrica; Kahneman (2011) Thinking, Fast and Slow; Shiller (2000) Irrational Exuberance; Thaler & Sunstein (2008) Nudge; Thaler (1999) Mental Accounting Matters, Journal of Behavioral Decision Making; Barber & Odean (2000) Trading Is Hazardous to Your Wealth, Journal of Finance; Lo (2004) The Adaptive Markets Hypothesis, Journal of Portfolio Management"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -408,15 +408,20 @@ Already detailed in the section above, AMH resolves the debate by recognizing th
 The debate has been enormously productive precisely because it has been unresolved: decades of research attempting to reconcile EMH and behavioral finance have produced a far richer and more complete understanding of market dynamics than either school alone would have generated.
 
 ## Related
-- [[cognitive-biases]]
-- [[mental-models]]
-- [[cialdini-influence]]
-- [[negotiation-tactics]]
-- [[stoicism-and-stoic-philosophy]]
-- [[value-investing-methodology]]
-- [[portfolio-theory]]
-- [[technical-analysis-and-chart-patterns]]
-- [[machine-learning-fundamentals]]
-- [[emotional-intelligence]]
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
-- [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
+- [[cognitive-biases]] — Core heuristics and biases that underpin every behavioral finance phenomenon
+- [[mental-models]] — Frameworks for structured thinking that counteract cognitive errors in investing
+- [[cialdini-influence]] — Influence principles (social proof, scarcity) that manifest as herding and momentum in markets
+- [[negotiation-tactics]] — Anchoring as a strategic tool; deanchoring techniques that translate to portfolio management
+- [[stoicism-and-stoic-philosophy]] — Premeditatio malorum and Stoic practice as behavioral finance antidotes
+- [[prospect-theory-and-decision-making]] — Deep dive into Kahneman-Tversky's value function and probability weighting
+- [[value-investing-methodology]] — Value investing as systematic debiasing; checklist approach to overcoming behavioral errors
+- [[portfolio-theory]] — How behavioral biases cause investors to deviate from the mathematically optimal portfolio
+- [[technical-analysis-and-chart-patterns]] — Chart patterns as crystallized behavioral dynamics; support/resistance as anchoring
+- [[quantitative-finance-and-algorithmic-trading]] — Machine exploitation of behavioral anomalies; alpha half-life of mispricing
+- [[machine-learning-fundamentals]] — ML systems that exploit behavioral patterns at scale in equity markets
+- [[emotional-intelligence]] — Emotional regulation as a foundation for disciplined investment behavior
+- [[fixed-income-deep-dive]] — Behavioral dynamics in credit markets; reach for yield and herding in bond markets
+- [[macroeconomics-101]] — Behavioral biases in aggregate consumption; de-anchored inflation expectations
+- [[hedge-funds-and-alternative-strategies]] — Hedge fund strategies built on documented behavioral anomalies
+- [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Real-time behavioral cycle: availability heuristic, panic, capitulation in energy markets
+- [[Geopolitics/2026-05-27-india-pakistan-2025-war-and-aftermath]] — Scar tissue effect: how vivid tail events persistently shift risk premiums

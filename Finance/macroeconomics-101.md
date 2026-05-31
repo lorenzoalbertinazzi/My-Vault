@@ -1,9 +1,9 @@
 ---
 title: Macroeconomics 101
 date: 2026-05-26
-tags: [finance, macro, economics, monetary-policy, fiscal-policy]
-source: research
-last_updated: 2026-05-29
+tags: [finance, macroeconomics, GDP, inflation, unemployment, business-cycle, monetary-policy, fiscal-policy, central-banking, interest-rates, keynesian, monetarism, aggregate-demand, multiplier-effect, Taylor-rule, Phillips-curve, IS-LM, DSGE, Minsky-moment, secular-stagnation, MMT, debt-supercycle]
+source: "Mankiw (2020) Principles of Macroeconomics; Blanchard (2017) Macroeconomics; Keynes (1936) General Theory of Employment, Interest and Money; Friedman (1968) The Role of Monetary Policy, AER; Dalio (2018) A Template for Understanding Big Debt Crises; Minsky (1986) Stabilizing an Unstable Economy"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -368,13 +368,19 @@ Dalio's Debt Supercycle framework adds a temporal dimension that standard macro 
 The foreign exchange market functions as the real-time global judgment on every central bank's monetary policy decisions — a connection explored in depth in [[currency-markets-and-fx]]. When the Federal Reserve raised rates in 2022–2024, the dollar strengthened substantially not because the US economy was fundamentally superior, but because the interest rate differential attracted capital inflows. This dollar strengthening imposed tightening financial conditions on every emerging market with dollar-denominated debt — a global transmission of US monetary policy that the Fed's dual mandate does not require it to consider. The Triffin Dilemma frames this as a structural feature, not a bug: US monetary policy is simultaneously domestic stabilization policy and global financial conditions. Nations running dollar-denominated deficits are, in effect, participants in the US monetary policy transmission mechanism without any vote in the FOMC. This makes macroeconomic analysis of global EM economies fundamentally incomplete without modeling the dollar cycle — which is itself driven by the Fed's response to US domestic conditions.
 
 ## Related
-- [[valuation-fundamentals]]
-- [[portfolio-theory]]
-- [[yield-curve-and-bonds]]
-- [[fixed-income-deep-dive]]
-- [[currency-markets-and-fx]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[cognitive-biases]]
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
-- [[2026-05-27-us-china-great-power-competition]]
-- [[2026-05-27-us-iran-conflict-global-energy-crisis]]
+- [[valuation-fundamentals]] — r* as the single most important input to all long-duration valuation; discount rate sensitivity to macro regimes
+- [[portfolio-theory]] — Business cycle regime-switching in asset allocation; 60/40 framework under inflationary vs. recessionary macro
+- [[yield-curve-and-bonds]] — Yield curve as macroeconomic nervous system; Taylor Rule translates directly to short-end pricing
+- [[fixed-income-deep-dive]] — Bond markets as the heartbeat of macroeconomic reality; sovereign debt crisis dynamics
+- [[currency-markets-and-fx]] — FX as macro policy external scorecard; Mundell-Fleming and Triffin Dilemma
+- [[behavioral-finance-and-investor-psychology]] — Behavioral biases in aggregate consumption; de-anchored inflation expectations
+- [[credit-markets-and-credit-risk]] — Credit as macroeconomic transmission mechanism; Minsky Moment in financial instability
+- [[real-assets-reits-and-commodities]] — Commodity supercycles and inflation; REIT interest rate sensitivity
+- [[geopolitical-risk-premium-and-markets]] — Geopolitical disruptions as exogenous macro shocks outside Taylor Rule framework
+- [[central-bank-digital-currencies-cbdc]] — Monetary policy mechanics through CBDC; seigniorage and money supply architecture
+- [[cognitive-biases]] — Rational expectations failure; availability heuristic in inflation expectation de-anchoring
+- [[Tech & AI/machine-learning-fundamentals]] — DSGE model augmentation; ML macroeconomic nowcasting
+- [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Cost-push inflation from energy shock; limits of monetary policy response
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Supply chain fragmentation reshaping GDP components; nearshoring as structural capex driver
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Current macro environment; 2026 slowdown dynamics
+- [[World Events/2026-05-27-us-iran-conflict-global-energy-crisis]] — Energy price shock as exogenous macro event; oil-importing EM crisis transmission

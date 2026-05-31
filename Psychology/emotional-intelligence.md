@@ -1,9 +1,9 @@
 ---
 title: Emotional Intelligence — Goleman's Framework
 date: 2026-05-28
-tags: [psychology, emotional-intelligence, self-awareness, leadership, goleman]
-source: research
-last_updated: 2026-05-29
+tags: [psychology, emotional-intelligence, EQ, self-awareness, self-regulation, motivation, empathy, social-skills, goleman, mayer-salovey, leadership, affect-regulation, interpersonal-skills, emotional-regulation, neuroscience]
+source: "Goleman (1995) Emotional Intelligence; Mayer & Salovey (1990) Perceiving Affective Content in Ambiguous Visual Stimuli; Bar-On (1997) The Emotional Quotient Inventory; Goleman, Boyatzis & McKee (2002) Primal Leadership"
+last_updated: 2026-05-31
 enriched: 2026-05-29
 ---
 
@@ -379,13 +379,19 @@ One of the most uncomfortable findings in EI research is the demonstration that 
 **The Practical Implication**: EI tests that measure cognitive performance (MSCEIT-style) cannot distinguish between someone using emotional skill prosocially and someone using it exploitatively. The ethical deployment of EI requires not just capability but motivation (caring about others' welfare). Assessing EI for hiring and promotion without also assessing values creates selection risk — screening for the capability without the disposition. The most defensible organizational applications use multi-source EI assessments (360-degree) combined with behavioral interview techniques designed to assess motivation, not just capability.
 
 ## Related
-- [[cognitive-biases]]
-- [[negotiation-tactics]]
-- [[habit-formation]]
-- [[stoicism-and-stoic-philosophy]]
-- [[stoicism]]
-- [[mental-models]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[cialdini-influence]]
-- [[48-laws-of-power]]
-- [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
+- [[cognitive-biases]] — Emotional self-awareness as prerequisite for debiasing protocols; affect labels interrupt System 1 errors
+- [[negotiation-tactics]] — Tactical empathy (Voss) is EI's empathy domain operationalized in high-stakes negotiation
+- [[habit-formation]] — Emotional self-regulation is a trainable habit; affect labeling as an installed automatic response
+- [[stoicism-and-stoic-philosophy]] — Stoic daily practices are an ancient EI development curriculum; dichotomy of control as self-regulation framework
+- [[stoicism]] — Stoic equanimity and EI self-regulation as convergent traditions
+- [[mental-models]] — EI as the metacognitive infrastructure enabling accurate mental model selection under emotional pressure
+- [[cialdini-influence]] — EI underpins ethical influence; distinguishing genuine empathy from manipulative compliance techniques
+- [[48-laws-of-power]] — High EI is necessary for reading and navigating the power dynamics described in the 48 Laws
+- [[dopamine-reward-systems-neuroscience]] — Amygdala-PFC circuitry is the neural substrate of EI's self-regulation domain
+- [[attachment-theory-and-relationships]] — Secure attachment develops the interpersonal EI competencies from earliest childhood
+- [[social-psychology-and-group-dynamics]] — Emotional contagion and group mood as collective EI phenomena
+- [[prospect-theory-and-decision-making]] — Loss aversion and framing effects operate via the emotional substrate that EI manages
+- [[flow-state-and-peak-performance]] — EI governs anxiety regulation that enables or blocks flow onset
+- [[trauma-resilience-and-post-traumatic-growth]] — Affect dysregulation in PTSD as EI deficit; therapy targets the same neural circuits
+- [[Finance/behavioral-finance-and-investor-psychology]] — Emotional regulation of loss aversion is the primary EI application in trading and investment
+- [[Geopolitics/2026-05-27-india-pakistan-2025-war-and-aftermath]] — Low collective EI at the state level contributed to crisis escalation; diplomatic empathy deficits

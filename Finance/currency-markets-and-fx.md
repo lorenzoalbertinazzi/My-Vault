@@ -1,9 +1,9 @@
 ---
 title: Currency Markets and Foreign Exchange (FX)
 date: 2026-05-28
-tags: [finance, forex, currency, macroeconomics, trading]
-source: research
-last_updated: 2026-05-29
+tags: [finance, forex, currency, macroeconomics, trading, carry-trade, purchasing-power-parity, interest-rate-parity, exchange-rate, reserve-currency, dollar-hegemony, de-dollarization, currency-crisis, Dornbusch-model, Mundell-Fleming, Triffin-dilemma]
+source: "Krugman & Obstfeld (2018) International Economics: Theory and Policy; BIS Triennial Central Bank Survey (2022); Burnside, Eichenbaum & Rebelo (2011) Carry Trade and Momentum in Currency Markets, AER; Dornbusch (1976) Expectations and Exchange Rate Dynamics, JPE; Mundell (1963) Capital Mobility and Stabilization Policy Under Fixed and Flexible Exchange Rates"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -333,16 +333,19 @@ For Pakistan's rupee, the conflict compounded existing structural vulnerabilitie
 The FX market's structure — deep liquidity, 24/7 operation, high-frequency data availability, well-defined economic relationships — makes it one of the richest environments for [[machine-learning-fundamentals]] applications in finance. The traditional FX factors (momentum, carry, value/PPP deviation, trend) are now systematically harvested by algorithmic strategies, and the competition among these systems has partially compressed the premiums available to simple single-factor approaches. The cutting edge has moved to ML models that dynamically weight these factors based on macroeconomic regime detection — upweighting carry in low-volatility, high-growth regimes and downweighting it (or inverting it through long-volatility positions) when regime indicators signal stress. Natural language processing models trained on central bank communications — Fed meeting minutes, ECB press conference transcripts, BOJ policy statements — extract forward guidance signals that move before the market has fully digested the textual content, providing a short-lived but commercially valuable alpha signal. The practical implication is that the simple interest rate differential arbitrage logic of carry trades remains the conceptual foundation, but modern algorithmic FX managers layer macro regime filtering, NLP-driven sentiment analysis, and microstructure signals atop this foundation to generate more risk-adjusted and crisis-resilient returns.
 
 ## Related
-- [[macroeconomics-101]]
-- [[fixed-income-deep-dive]]
-- [[yield-curve-and-bonds]]
-- [[portfolio-theory]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[machine-learning-fundamentals]]
-- [[2026-05-27-us-china-great-power-competition]]
-- [[2026-05-27-us-iran-conflict-global-energy-crisis]]
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
-- [[2026-05-27-us-china-strategic-competition]]
-- [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
-- [[options-basics]]
-- [[cognitive-biases]]
+- [[macroeconomics-101]] — Monetary policy divergence as the primary driver of FX; Mundell-Fleming model; Triffin dilemma
+- [[fixed-income-deep-dive]] — CIP linking bond yields to FX forward rates; international bond investing and currency risk
+- [[yield-curve-and-bonds]] — International yield curve divergence drives carry trades; BOJ normalization and yen carry unwind
+- [[portfolio-theory]] — FX as a portfolio diversifier; currency hedging decisions for international allocations
+- [[behavioral-finance-and-investor-psychology]] — Behavioral dynamics in currency crises; availability heuristic in safe-haven flows
+- [[central-bank-digital-currencies-cbdc]] — CBDC and mBridge as alternative settlement rails reducing dollar dependence
+- [[geopolitical-risk-premium-and-markets]] — Geopolitical shocks and safe-haven currency hierarchy; sanctions and reserve management
+- [[options-basics]] — FX options for hedging; implied volatility in currency markets
+- [[derivatives-futures-and-forwards]] — FX forwards, currency futures, and cross-currency swaps
+- [[cognitive-biases]] — Currency crisis behavioral failures; hot-cold empathy gap in exchange rate risk management
+- [[machine-learning-fundamentals]] — NLP central bank communication signals; ML-based carry strategy enhancement
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Dollar hegemony contestation; de-dollarization trends; reserve diversification
+- [[Geopolitics/2026-05-27-us-china-strategic-competition]] — Trade war FX channel; CNY management under tariff pressure
+- [[Geopolitics/2026-05-27-india-pakistan-2025-war-and-aftermath]] — Regional geopolitical shocks and guilt-by-geography FX contagion
+- [[World Events/2026-05-27-us-iran-conflict-global-energy-crisis]] — Oil price shock transmission through FX for oil-importing nations
+- [[World Events/2026-05-27-us-iran-conflict-strait-of-hormuz]] — Hormuz closure and its impact on Gulf currency pegs and EM currencies

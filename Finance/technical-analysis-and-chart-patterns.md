@@ -1,9 +1,9 @@
 ---
 title: Technical Analysis and Chart Patterns
 date: 2026-05-27
-tags: [finance, technical-analysis, trading, chart-patterns, markets]
-source: research / technical analysis literature
-last_updated: 2026-05-29
+tags: [finance, technical-analysis, chart-patterns, candlesticks, support-resistance, moving-averages, RSI, MACD, Bollinger-bands, Dow-theory, Wyckoff-method, Elliott-wave, Fibonacci, volume-profile, market-microstructure, momentum, market-breadth, order-flow, gamma-pinning, Ichimoku]
+source: "Edwards & Magee (1948) Technical Analysis of Stock Trends; Murphy (1999) Technical Analysis of the Financial Markets; Nison (1991) Japanese Candlestick Charting Techniques; Schabacker (1932) Stock Market Theory and Practice; Bulkowski (2005) Encyclopedia of Chart Patterns; O'Neil (1988) How to Make Money in Stocks"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -344,15 +344,17 @@ The emergence of computer vision and deep learning — culminating in the convol
 The more nuanced implication for practitioners is that chart patterns survive in market microstructures where systematic exploitation is difficult — thin markets, small caps, emerging market equities with limited algorithmic penetration — while disappearing or inverting in highly liquid, algorithmic markets where the pattern-recognition competition is most intense. The option market's dealer gamma positioning (detailed in [[options-basics]]) creates a particularly interesting case: the chart-pattern-like "magnetic attraction" of prices to major strike prices at options expiration is not a chartist artifact but a mechanical consequence of dealer delta hedging, and it persists precisely because it originates in options market mechanics rather than trader psychology, making it both real and potentially exploitable to those who understand its origin. The future of technical analysis is therefore not binary (real or fake) but domain-specific: patterns that survive in liquid markets are those with mechanical market microstructure explanations (gamma pinning, liquidity imbalances, index rebalancing flows), while patterns that depend purely on trader psychology are progressively arbitraged away by ML systems that can identify and exploit them faster than human traders can act.
 
 ## Related
-- [[behavioral-finance-and-investor-psychology]]
-- [[options-basics]]
-- [[portfolio-theory]]
-- [[value-investing-methodology]]
-- [[cognitive-biases]]
-- [[cialdini-influence]]
-- [[machine-learning-fundamentals]]
-- [[48-laws-of-power]]
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
-- [[2026-05-27-us-china-great-power-competition]]
-- [[diffusion-models-and-image-generation]]
-- [[mental-models]]
+- [[behavioral-finance-and-investor-psychology]] — Technical patterns as crystallized behavioral dynamics; support/resistance as anchoring at scale
+- [[options-basics]] — Dealer gamma positioning and price pinning; VIX behavior as contrarian signal
+- [[portfolio-theory]] — Technical analysis for tactical allocation timing; momentum factor as systematic technical signal
+- [[value-investing-methodology]] — Entry/exit timing for fundamental theses; chart-based deanchoring from purchase price
+- [[quantitative-finance-and-algorithmic-trading]] — Systematic momentum strategies; statistical arbitrage; backtesting technical signals
+- [[cognitive-biases]] — Representativeness heuristic in pattern recognition; clustering illusion in chart reading
+- [[Psychology/cialdini-influence]] — Social proof driving momentum; retail buying at Wyckoff markup peak
+- [[Psychology/48-laws-of-power]] — Wyckoff composite man and institutional power dynamics in price action
+- [[Psychology/mental-models]] — Probabilistic framework for pattern analysis; avoiding pareidolia in price charts
+- [[Tech & AI/machine-learning-fundamentals]] — CNN pattern recognition on charts; ML arbitrage eroding simple technical signals
+- [[Tech & AI/diffusion-models-and-image-generation]] — Computer vision applied to chart pattern identification; automation of visual pattern recognition
+- [[geopolitical-risk-premium-and-markets]] — Geopolitical shocks create regime breaks invalidating pattern-based analysis
+- [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Discontinuous price discovery after geopolitical shock; technical analysis regime break
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Trade war uncertainty creating non-technical market drivers

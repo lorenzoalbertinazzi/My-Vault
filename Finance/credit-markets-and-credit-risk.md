@@ -1,9 +1,9 @@
 ---
 title: Credit Markets and Credit Risk
 date: 2026-05-30
-tags: [finance, credit, bonds, CDS, spreads, fixed-income, risk]
-source: Research synthesis
-last_updated: 2026-05-30
+tags: [finance, credit, bonds, CDS, credit-default-swap, credit-spread, high-yield, investment-grade, leveraged-loans, CLO, default-risk, Merton-model, credit-cycle, distressed-debt, sovereign-credit, credit-rating]
+source: "Fabozzi (2012) Bond Markets: Analysis and Strategies; Merton (1974) On the Pricing of Corporate Debt, Journal of Finance; Altman (1968) Financial Ratios, Discriminant Analysis and the Prediction of Corporate Bankruptcy, Journal of Finance; Das & Tufano (1996) Pricing Credit-Sensitive Debt; Moody's Annual Default Study (2023)"
+last_updated: 2026-05-31
 ---
 ## Summary
 Credit markets encompass the ecosystem of debt instruments — corporate bonds, leveraged loans, asset-backed securities, and derivatives — through which borrowers access capital and investors earn yield premiums for bearing default risk. Credit risk is the probability-weighted expected loss from counterparty failure, decomposable into probability of default (PD), loss given default (LGD), and exposure at default (EAD). Understanding credit is foundational to banking, asset management, corporate finance, and macroeconomic stability, as credit market stress reliably predates economic recessions.
@@ -161,11 +161,23 @@ The 2008 financial crisis was fundamentally a credit risk mispricing crisis. Mor
 The lesson: credit risk models fail precisely when correlations rise — during stress, historically uncorrelated assets default together ("correlation goes to one").
 
 ## Related
-- [[fixed-income-deep-dive]] — duration, convexity, bond pricing mechanics
-- [[derivatives-futures-and-forwards]] — derivatives framework; CDS as credit derivatives
-- [[yield-curve-and-bonds]] — risk-free rate foundation for credit spread calculation
-- [[quantitative-finance-and-algorithmic-trading]] — quantitative credit models (KMV, Merton)
-- [[portfolio-theory]] — credit risk in portfolio context, diversification of default risk
-- [[behavioral-finance-and-investor-psychology]] — credit cycle driven by behavioral biases (overconfidence in expansion, panic in contraction)
-- [[private-equity-and-venture-capital]] — leveraged buyouts depend on leveraged loan/HY bond markets
-- [[macroeconomics-101]] — credit conditions as macroeconomic transmission mechanism
+- [[fixed-income-deep-dive]] — Duration, convexity, bond pricing mechanics; CLO tranche analysis; repo market as credit funding mechanism
+- [[derivatives-futures-and-forwards]] — Derivatives framework; CDS as credit derivatives; swap market infrastructure; total return swaps in credit
+- [[yield-curve-and-bonds]] — Risk-free rate foundation for credit spread calculation; curve inversion as recession and credit cycle predictor
+- [[quantitative-finance-and-algorithmic-trading]] — Quantitative credit models (KMV, Merton, structural models); machine learning for default prediction
+- [[portfolio-theory]] — Credit risk in portfolio context; diversification of default risk; spread duration in fixed income portfolios
+- [[behavioral-finance-and-investor-psychology]] — Credit cycle driven by behavioral biases; overconfidence in expansion, panic in contraction; reach for yield
+- [[private-equity-and-venture-capital]] — Leveraged buyouts depend on leveraged loan/HY bond markets; distressed PE as loan-to-own strategy
+- [[macroeconomics-101]] — Credit conditions as macroeconomic transmission mechanism; Minsky Moment; financial instability hypothesis
+- [[hedge-funds-and-alternative-strategies]] — Distressed debt hedge fund strategies; credit event-driven investing; CDS basis trades
+- [[valuation-fundamentals]] — Damodaran country risk premium; credit-adjusted discount rates; WACC and credit spread interaction
+- [[geopolitical-risk-premium-and-markets]] — Sovereign credit and geopolitical risk; sanctions-driven defaults; EM spread widening
+- [[options-basics]] — Merton model equates equity to a call option on firm assets; CDS as put option on credit quality
+- [[central-bank-digital-currencies-cbdc]] — Bank disintermediation risk from CBDCs threatens deposit funding base for credit extension
+- [[currency-markets-and-fx]] — Cross-currency basis swaps as credit instruments; EM sovereign credit and FX crisis linkage
+- [[real-assets-reits-and-commodities]] — REIT debt markets; commodity producer high-yield bonds; energy sector credit cycles
+- [[Psychology/prospect-theory-and-decision-making]] — Asymmetric loss aversion in credit risk assessment; disposition effect in distressed portfolios
+- [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Russia's sanctions-triggered sovereign default; unprecedented payment-mechanism default; war-related EM spread contagion
+- [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Sanctions escalation and sovereign credit implications for EM oil producers
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Credit cycle dynamics in 2026 economic slowdown; IG/HY spread widening and default rate forecasts
+- [[World Events/2026-05-30-cuba-fuel-crisis-blackouts-2026]] — Small sovereign distressed debt; currency inconvertibility and payment default mechanics

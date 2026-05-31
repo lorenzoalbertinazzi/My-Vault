@@ -1,9 +1,9 @@
 ---
 title: Derivatives — Futures, Forwards, and Swaps
 date: 2026-05-30
-tags: [finance, derivatives, futures, forwards, swaps, hedging, risk-management, commodities]
-source: Hull "Options, Futures and Other Derivatives"; CME Group data; BIS Triennial Survey
-last_updated: 2026-05-30
+tags: [finance, derivatives, futures, forwards, swaps, hedging, risk-management, commodities, interest-rate-swap, CDS, cost-of-carry, basis-risk, margin, central-clearing, OTC-derivatives, SOFR, contango, backwardation]
+source: "Hull (2018) Options, Futures and Other Derivatives; CME Group data; BIS Triennial Central Bank Survey (2022); McDonald (2013) Derivatives Markets; Duffie (2010) How Big Banks Fail and What to Do About It"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -185,9 +185,17 @@ CCPs themselves became systemically important. LCH's SwapClear clears over $400 
 **"Notional = risk."** The $715 trillion notional OTC derivatives figure is often cited sensationally. The actual replacement cost (net credit exposure) is far smaller — the BIS estimates gross market value at ~$20 trillion, and after netting agreements, net credit exposure ~$3–4 trillion. Notional is the denominator for calculating cash flows, not the amount at risk.
 
 ## Related
-- [[options-basics]] — Non-linear derivatives, puts/calls, Black-Scholes
-- [[fixed-income-deep-dive]] — Bond pricing, duration, convexity (all relevant to IRS)
-- [[yield-curve-and-bonds]] — The rate environment that drives swap pricing
-- [[portfolio-theory]] — Hedging theory, risk-return optimization
-- [[quantitative-finance-and-algorithmic-trading]] — Derivatives pricing models, quant techniques
-- [[behavioral-finance-and-investor-psychology]] — How speculative excess in derivatives markets plays out
+- [[options-basics]] — Non-linear derivatives, puts/calls, Black-Scholes; options as complement to futures hedging
+- [[fixed-income-deep-dive]] — Bond pricing, duration, convexity; interest rate swaps; repo market mechanics
+- [[yield-curve-and-bonds]] — Rate environment that drives swap pricing; forward rate agreements; curve trades
+- [[portfolio-theory]] — Hedging theory, risk-return optimization; futures for tactical allocation adjustment
+- [[quantitative-finance-and-algorithmic-trading]] — Derivatives pricing models; stochastic calculus foundations; HFT market making
+- [[behavioral-finance-and-investor-psychology]] — Speculative excess in derivatives markets; LTCM as behavioral finance case study
+- [[credit-markets-and-credit-risk]] — CDS as credit derivatives; synthetic CDOs; Archegos TRS collapse
+- [[currency-markets-and-fx]] — FX forwards, currency futures, cross-currency swaps; carry trade instruments
+- [[real-assets-reits-and-commodities]] — Commodity futures markets; contango/backwardation dynamics; hedging by producers
+- [[hedge-funds-and-alternative-strategies]] — Hedge fund strategies using swaps, futures, and forwards as primary instruments
+- [[macroeconomics-101]] — Interest rate futures as monetary policy pricing; SOFR transition post-LIBOR
+- [[geopolitical-risk-premium-and-markets]] — Oil futures as geopolitical risk transmission; safe-haven hedging with futures
+- [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Commodity futures disruption from Ukraine conflict; wheat and gas derivatives
+- [[World Events/2026-05-27-us-iran-conflict-strait-of-hormuz]] — Oil futures price discovery during Hormuz crisis; shipping freight derivatives

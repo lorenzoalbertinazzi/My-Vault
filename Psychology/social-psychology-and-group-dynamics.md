@@ -1,10 +1,11 @@
 ---
 title: Social Psychology and Group Dynamics
 date: 2026-05-30
-tags: [psychology, social, group-dynamics, conformity, groupthink, obedience, identity]
-source: Research synthesis
-last_updated: 2026-05-30
+tags: [psychology, social-psychology, group-dynamics, conformity, groupthink, obedience, Milgram, Asch, social-identity, in-group-out-group, deindividuation, bystander-effect, social-influence, collective-behavior, crowd-psychology]
+source: "Milgram (1963) Behavioral Study of Obedience, JASP; Asch (1951) Effects of Group Pressure; Festinger (1954) A Theory of Social Comparison Processes; Janis (1972) Victims of Groupthink; Tajfel & Turner (1979) Social Identity Theory"
+last_updated: 2026-05-31
 ---
+
 ## Summary
 Social psychology is the scientific study of how individuals' thoughts, feelings, and behaviors are influenced by the real, imagined, or implied presence of others. Its central finding — that situations powerfully shape behavior, often more than individual character — has overturned centuries of folk wisdom about virtue and vice. From Milgram's obedience experiments to Asch's conformity studies to Tajfel's social identity theory, social psychology illuminates the mechanisms behind authority compliance, group cohesion, prejudice, deindividuation, and collective decision-making failures that shape everything from organizational behavior to political movements.
 
@@ -131,11 +132,19 @@ Political advertising, marketing, and social media all preferentially target the
 **Aversive racism (Gaertner & Dovidio, 1986)**: Modern racial bias in liberal societies operates covertly — racial bias emerges in ambiguous situations (hiring decisions where qualifications are mixed) but not when discrimination would be obvious. Implication: bias exists despite conscious commitment to equality; structural solutions (blind auditions, standardized criteria) outperform awareness-raising alone.
 
 ## Related
-- [[cognitive-biases]] — Individual-level biases that interact with social influences
-- [[cialdini-influence]] — Six principles of influence grounded in social psychological mechanisms
-- [[prospect-theory-and-decision-making]] — Group decision-making and the role of framing effects
-- [[emotional-intelligence]] — Managing social interactions with awareness of group dynamics
-- [[negotiation-tactics]] — Social influence in negotiation contexts
-- [[behavioral-finance-and-investor-psychology]] — Herding, groupthink, and social proof in financial markets
-- [[mental-models]] — Mental models for understanding social and group phenomena
-- [[habit-formation]] — Social context as a powerful modifier of habit formation and change
+- [[cognitive-biases]] — Individual-level biases that interact with and amplify social influences; FAE as social psychology's foundational bias
+- [[cialdini-influence]] — Six principles of influence grounded in social psychological mechanisms; social proof and authority directly from Milgram and Asch
+- [[prospect-theory-and-decision-making]] — Group framing effects and collective loss aversion; groupthink and shared reference points
+- [[emotional-intelligence]] — Managing social interactions with awareness of group dynamics; emotional contagion in groups
+- [[negotiation-tactics]] — Social influence mechanisms operating in negotiation contexts; cultural dimensions of conformity
+- [[48-laws-of-power]] — Power dynamics as applied social psychology; Law 6 (Court Attention) exploiting social proof mechanisms
+- [[game-theory-and-strategic-thinking]] — Collective action problems, public goods games, and coordination failures as game-theoretic models of group behavior
+- [[habit-formation]] — Social context as the most powerful modifier of habit formation; social habits more durable than solitary ones
+- [[attachment-theory-and-relationships]] — Group belonging and social identity as adult attachment analogs; in-group attachment
+- [[stoicism-and-stoic-philosophy]] — Stoic cosmopolitanism and oikeiosis as philosophical counter to in-group/out-group bias
+- [[memory-systems-and-learning-science]] — Collective memory, eyewitness misinformation, and social influence on memory retrieval
+- [[dopamine-reward-systems-neuroscience]] — Social reward and punishment circuits; dopamine and social acceptance/rejection
+- [[Finance/behavioral-finance-and-investor-psychology]] — Herding, groupthink, and social proof as primary drivers of market bubbles and crashes
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Nationalism, in-group/out-group dynamics, and social identity in great power rivalry
+- [[Geopolitics/2026-05-30-nato-russia-gray-zone-war]] — Propaganda, deindividuation, and social influence operations in hybrid warfare
+- [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — Group dynamics and collective action in international AI governance coalitions

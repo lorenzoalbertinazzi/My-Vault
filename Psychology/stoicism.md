@@ -1,9 +1,9 @@
 ---
 title: Stoicism and Stoic Philosophy
 date: 2026-05-27
-tags: [psychology, philosophy, stoicism, resilience, mental-models]
-source: research
-last_updated: 2026-05-29
+tags: [psychology, stoicism, philosophy, Marcus-Aurelius, Seneca, Epictetus, dichotomy-of-control, amor-fati, negative-visualization, memento-mori, virtue, resilience, mental-models, emotional-regulation, ancient-philosophy]
+source: "Marcus Aurelius Meditations (~170–180 AD); Epictetus Enchiridion (~108 AD); Seneca Letters from a Stoic (~65 AD); Holiday (2014) The Obstacle Is the Way; Robertson (2019) How to Think Like a Roman Emperor"
+last_updated: 2026-05-31
 enriched: 2026-05-29
 ---
 
@@ -228,10 +228,15 @@ For the serious student, in recommended reading order:
 6. **Ryan Holiday — *The Obstacle is the Way*** (2014): The modern synthesis. Most useful as a reminder text after engaging with the originals, rather than as a first introduction.
 
 ## Related
-- [[stoicism-and-stoic-philosophy]] — primary enriched version of this note
-- [[mental-models]]
-- [[cognitive-biases]]
-- [[48-laws-of-power]]
-- [[habit-formation]]
-- [[emotional-intelligence]]
-- [[value-investing-methodology]]
+- [[stoicism-and-stoic-philosophy]] — primary fully enriched version of this note with complete coverage
+- [[mental-models]] — Stoic practices (negative visualization, inversion) as ancient mental model curriculum
+- [[cognitive-biases]] — Stoic practices are ancient debiasing protocols; dichotomy of control counters control illusion bias
+- [[48-laws-of-power]] — Stoic inner game as counterweight to the 48 Laws; Cato the Younger as historical synthesis
+- [[habit-formation]] — Stoic spiritual exercises are structured habit formation for emotional regulation
+- [[emotional-intelligence]] — Stoic daily practices form an ancient EI development curriculum
+- [[negotiation-tactics]] — Stoic dichotomy of control as the philosophical foundation of the negotiator's inner game
+- [[trauma-resilience-and-post-traumatic-growth]] — Stockdale and Frankl as canonical Stoic resilience case studies
+- [[prospect-theory-and-decision-making]] — Negative visualization as systematic antidote to loss aversion and endowment effect
+- [[dopamine-reward-systems-neuroscience]] — Voluntary discomfort and deliberate dopamine baseline management
+- [[Finance/value-investing-methodology]] — Graham's Mr. Market as Stoic preferred indifferent; Munger's latticework as Stoic practice
+- [[Finance/behavioral-finance-and-investor-psychology]] — Stoicism as behavioral finance debiasing toolkit; contrarian investing as Stoic autarchy

@@ -3,7 +3,7 @@ title: Real Assets — REITs, Commodities, and Inflation Hedges
 date: 2026-05-30
 tags: [finance, real-assets, REITs, commodities, inflation-hedge, portfolio, gold, oil, real-estate]
 source: NAREIT data; Bloomberg commodity indices; Dalio "Big Debt Crises"; S&P GSCI methodology
-last_updated: 2026-05-30
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -198,9 +198,19 @@ For an inflation-hedging portfolio, a practical framework ranks assets by inflat
 7. General equity REITs (more rate-sensitive)
 
 ## Related
-- [[portfolio-theory]] — Portfolio construction, correlation, diversification mathematics
-- [[derivatives-futures-and-forwards]] — The instruments used to gain commodity exposure
-- [[macroeconomics-101]] — Inflation dynamics, central bank policy, real vs. nominal rates
-- [[yield-curve-and-bonds]] — How interest rates affect REIT valuations
-- [[value-investing-methodology]] — Applying value principles to REIT NAV analysis
-- [[private-equity-and-venture-capital]] — Private real estate as an alternative
+- [[portfolio-theory]] — Portfolio construction, correlation, diversification mathematics; Yale Endowment model real assets allocation
+- [[derivatives-futures-and-forwards]] — Commodity futures as the primary access vehicle; contango/backwardation mechanics in roll returns
+- [[macroeconomics-101]] — Inflation dynamics, central bank policy, real vs. nominal rates; supercycle theory and demand-driven price formation
+- [[yield-curve-and-bonds]] — How interest rates affect REIT valuations; TIPS as inflation-linked fixed income complement to real assets
+- [[value-investing-methodology]] — Applying value principles to REIT NAV analysis; cap rate as earnings yield analog
+- [[private-equity-and-venture-capital]] — Infrastructure and private real estate as PE sub-strategy; GP-LP structures in private REITs
+- [[fixed-income-deep-dive]] — REIT debt financing and cap rate/interest rate interaction; mortgage REITs and MBS exposure
+- [[geopolitical-risk-premium-and-markets]] — Oil price geopolitics; commodity supply disruption from conflict; gold as safe-haven hedge
+- [[hedge-funds-and-alternative-strategies]] — Commodity trading advisors (CTAs) as commodity market participants; trend-following in energy and metals
+- [[credit-markets-and-credit-risk]] — REIT corporate credit; commodity producer high-yield bonds; energy sector credit cycles
+- [[technical-analysis-and-chart-patterns]] — Commodity chart patterns; gold price seasonality; technical support/resistance in oil markets
+- [[Psychology/cognitive-biases]] — Commodity boom-bust cycles and investor recency bias; gold hoarding as loss aversion behavior
+- [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Wheat, gas, and commodity supply disruptions from the Ukraine war; European energy infrastructure
+- [[World Events/2026-05-30-uae-exits-opec-oil-market-shift]] — OPEC+ fracture and structural shift in oil supply; implications for energy REIT valuations
+- [[World Events/2026-05-27-us-iran-conflict-strait-of-hormuz]] — Hormuz closure scenario and energy commodity price shock; oil futures extreme contango
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Commodity demand contraction in 2026 slowdown; REIT rent growth deceleration

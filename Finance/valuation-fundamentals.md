@@ -1,9 +1,9 @@
 ---
 title: Valuation Fundamentals
 date: 2026-05-26
-tags: [finance, valuation, investing, DCF]
-source: research
-last_updated: 2026-05-29
+tags: [finance, valuation, DCF, discounted-cash-flow, WACC, EV-EBITDA, comparable-company-analysis, precedent-transactions, LBO-model, terminal-value, CAPE-ratio, margin-of-safety, reverse-DCF, NAV, DDM, country-risk-premium, Damodaran, intrinsic-value, multiples, free-cash-flow]
+source: "Damodaran (2012) Investment Valuation; McKinsey Koller et al. (2020) Valuation: Measuring and Managing the Value of Companies; Graham & Dodd (1934) Security Analysis; Shiller (1998) Valuation Ratios and the Long-Run Stock Market Outlook; Rappaport & Mauboussin (2001) Expectations Investing"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -322,12 +322,19 @@ Conventional WACC analysis focuses on risk-free rates and equity risk premiums d
 The application of [[machine-learning-fundamentals]] to valuation has begun to reshape what counts as "knowable" before official financial statements are published. Alternative data — satellite imagery counting cars in retail parking lots, credit card transaction flows tracking spending by merchant category, web-scraped job postings signaling hiring intention, app store download data indicating product traction — can be processed by ML models to generate real-time estimates of company fundamentals weeks before earnings announcements. This alternative data revolution is systematically eroding the information advantage that traditional fundamental analysts previously enjoyed in the gap between quarterly earnings releases. The practical implication for valuation methodology is that models built purely on financial statement data are competitively disadvantaged against models that incorporate high-frequency alternative data signals. LLMs fine-tuned on earnings calls and management commentary can extract sentiment and guidance signals at a level of nuance that individual analysts cannot process at scale.
 
 ## Related
-- [[portfolio-theory]]
-- [[macroeconomics-101]]
-- [[options-basics]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[value-investing-methodology]]
-- [[fixed-income-deep-dive]]
-- [[machine-learning-fundamentals]]
-- [[2026-05-27-us-china-great-power-competition]]
-- [[cognitive-biases]]
+- [[portfolio-theory]] — Cost of capital connects DCF to portfolio theory; CAPM provides Ke for WACC
+- [[macroeconomics-101]] — r* determines the discount rate foundation; macro regimes drive terminal growth assumptions
+- [[options-basics]] — Equity as option on firm assets; convertible debt optionality; real options in capital budgeting
+- [[behavioral-finance-and-investor-psychology]] — Confirmation bias in DCF assumptions; reverse DCF as deanchoring tool
+- [[value-investing-methodology]] — Intrinsic value framework; margin of safety; ROIC compounding math
+- [[fixed-income-deep-dive]] — Risk-free rate foundation; bond-equity duration analogy for growth stocks
+- [[yield-curve-and-bonds]] — Term structure of discount rates; yield environment drives sector rotation
+- [[credit-markets-and-credit-risk]] — Credit-adjusted discount rates; Damodaran country risk premium for sovereign spreads
+- [[private-equity-and-venture-capital]] — LBO model as valuation floor; VC method for early-stage companies
+- [[real-assets-reits-and-commodities]] — Cap rate valuation of REITs; NAV framework for asset-heavy businesses
+- [[geopolitical-risk-premium-and-markets]] — Country risk premium framework; geopolitical uplift to discount rates
+- [[hedge-funds-and-alternative-strategies]] — Merger arbitrage dependent on spread-to-intrinsic-value calculation
+- [[cognitive-biases]] — Anchoring bias in multiples; garbage-in DCF from overconfident assumptions
+- [[Tech & AI/machine-learning-fundamentals]] — Alternative data eroding information advantage; ML for real-time fundamental estimation
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — China revenue exposure uplift to discount rates; geopolitical lambda in Damodaran CRP
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — 2026 valuation environment; earnings growth assumptions under slowdown

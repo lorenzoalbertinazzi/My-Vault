@@ -1,9 +1,9 @@
 ---
 title: Options — Fundamentals and Strategies
 date: 2026-05-26
-tags: [finance, options, derivatives, trading]
-source: research
-last_updated: 2026-05-29
+tags: [finance, options, derivatives, black-scholes, greeks, delta, gamma, theta, vega, implied-volatility, calls, puts, hedging, options-strategies, volatility, VIX, put-call-parity, volatility-skew, LEAPS, iron-condor, straddle, gamma-scalping]
+source: "Hull (2018) Options, Futures and Other Derivatives; Black & Scholes (1973) The Pricing of Options and Corporate Liabilities, JPE; Natenberg (2014) Option Volatility and Pricing; Taleb (1997) Dynamic Hedging; Nison (1991) Japanese Candlestick Charting Techniques"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -359,14 +359,18 @@ The deepest cross-disciplinary connection between options and fixed income — a
 Mortgage-backed securities (MBS) represent the most economically significant manifestation of this connection: homeowners' prepayment optionality (the right to refinance) makes MBS functionally equivalent to a bond that the homeowner has sold a covered call on (selling the right to call the loan when rates fall). MBS investors are systematically short negative convexity, receiving the prepayment option premium embedded in the MBS spread but bearing the convexity risk that this creates. When rates fall dramatically, MBS investors experience exactly the options seller's problem: the "gamma" of their position works against them, as duration shortens precisely when they want it to lengthen. The Federal Reserve's massive MBS purchasing programs (2020–2022 QE) effectively socialized this negative convexity, removing it from private investor balance sheets — which had the options market implication of suppressing implied volatility in interest rate options (swaptions) and depressing the volatility risk premium in fixed income broadly. The unwinding of these Fed MBS holdings (QT, 2022–2025) returned that negative convexity to private markets, which is one mechanism through which quantitative tightening created market volatility independent of rate hikes themselves.
 
 ## Related
-- [[valuation-fundamentals]]
-- [[portfolio-theory]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[technical-analysis-and-chart-patterns]]
-- [[macroeconomics-101]]
-- [[cognitive-biases]]
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
-- [[fixed-income-deep-dive]]
-- [[yield-curve-and-bonds]]
-- [[machine-learning-fundamentals]]
-- [[currency-markets-and-fx]]
+- [[valuation-fundamentals]] — Equity as an option on firm assets; convertible bond optionality in corporate valuation
+- [[portfolio-theory]] — Options for distributional engineering beyond mean-variance; Sharpe ratio limitations for vol-selling strategies
+- [[behavioral-finance-and-investor-psychology]] — Volatility skew as mathematical signature of loss aversion; VRP from prospect theory
+- [[technical-analysis-and-chart-patterns]] — Dealer gamma positioning creates price pinning patterns; VIX spikes as contrarian signals
+- [[macroeconomics-101]] — Macro regime effects on implied volatility; VIX as fear barometer of economic uncertainty
+- [[cognitive-biases]] — Over-weighting of small probability tail events; insurance premium puzzle from probability weighting
+- [[fixed-income-deep-dive]] — Convexity-gamma bridge; MBS negative convexity; swaption markets
+- [[yield-curve-and-bonds]] — Interest rate options (swaptions, caps, floors); bond optionality in callable bonds
+- [[derivatives-futures-and-forwards]] — Options vs. linear derivatives; options as complement to futures hedging
+- [[currency-markets-and-fx]] — FX options for hedging; implied volatility in currency crises; risk-reversal structures
+- [[hedge-funds-and-alternative-strategies]] — Volatility arbitrage; convertible arb; tail-hedging strategies
+- [[quantitative-finance-and-algorithmic-trading]] — Black-Scholes as quant foundation; stochastic vol models; options market making
+- [[geopolitical-risk-premium-and-markets]] — Geopolitical risk priced first in options market; implied vol spikes before spot price adjusts
+- [[Tech & AI/machine-learning-fundamentals]] — ML for vol surface calibration; deep learning for options pricing beyond Black-Scholes
+- [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Geopolitical tail risk priced through oil options vol spikes during Iran conflict

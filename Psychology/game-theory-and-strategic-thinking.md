@@ -1,9 +1,9 @@
 ---
 title: "Game Theory and Strategic Thinking: The Mathematics of Rational Decision-Making"
 date: 2026-05-30
-tags: [game-theory, strategy, decision-making, Nash-equilibrium, prisoner-dilemma, behavioral-economics, cooperation, rationality, Schelling]
-source: John von Neumann & Morgenstern "Theory of Games and Economic Behavior" (1944); John Nash "Non-Cooperative Games" (1950); Thomas Schelling "The Strategy of Conflict" (1960); Robert Axelrod "The Evolution of Cooperation" (1984); Ken Binmore "Playing for Real" (2007)
-last_updated: 2026-05-30
+tags: [psychology, game-theory, strategy, decision-making, Nash-equilibrium, prisoner-dilemma, behavioral-economics, cooperation, rationality, Schelling, von-Neumann, tit-for-tat, Axelrod, mechanism-design, evolutionary-game-theory, focal-points, backward-induction, repeated-games]
+source: "von Neumann & Morgenstern (1944) Theory of Games and Economic Behavior; Nash (1950) Non-Cooperative Games, Annals of Mathematics; Schelling (1960) The Strategy of Conflict; Axelrod (1984) The Evolution of Cooperation; Binmore (2007) Playing for Real; Kahneman & Thaler (1991) Economic Analysis and the Psychology of Utility"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -320,9 +320,19 @@ Explains: Why animals display rather than fight to the death (V < C in most spec
 ---
 
 ## Related
-
-- [[Psychology/prospect-theory-and-decision-making]] — Behavioral economics foundations
-- [[Psychology/negotiation-tactics]] — Game theory applied to negotiation
-- [[Psychology/mental-models]] — Strategic thinking frameworks
-- [[Finance/behavioral-finance-and-investor-psychology]] — Game theory in financial markets
-- [[Geopolitics/2026-05-30-north-korea-nuclear-russia-china-axis]] — Game theory in nuclear deterrence
+- [[prospect-theory-and-decision-making]] — Behavioral economics foundations; loss aversion distorts rational game-theoretic play
+- [[negotiation-tactics]] — Game theory applied to negotiation; Nash equilibrium, BATNA, and Prisoner's Dilemma structure in deal-making
+- [[mental-models]] — Strategic thinking frameworks; game theory as a cross-disciplinary mental model
+- [[cognitive-biases]] — Level-k thinking and bounded rationality show how biases affect strategic play
+- [[cialdini-influence]] — Reciprocity as tit-for-tat game theory; influence principles as strategic compliance triggers
+- [[48-laws-of-power]] — Power laws 15, 17, and 20 have direct game-theoretic foundations (credible commitment, mixed strategies, optionality)
+- [[social-psychology-and-group-dynamics]] — Collective action problems, public goods games, and herding as game-theoretic social phenomena
+- [[stoicism-and-stoic-philosophy]] — Stoic inner game provides the psychological stability needed for long-run optimal strategy
+- [[emotional-intelligence]] — EI governs the self-regulation needed to avoid reactive departures from optimal strategy
+- [[habit-formation]] — Iterated game cooperation parallels identity-based habit maintenance; tit-for-tat as behavioral default
+- [[Finance/behavioral-finance-and-investor-psychology]] — Game theory in financial markets; auction theory and market microstructure
+- [[Finance/quantitative-finance-and-algorithmic-trading]] — Algorithmic game theory and market-making strategies
+- [[Geopolitics/2026-05-30-north-korea-nuclear-russia-china-axis]] — Game theory in nuclear deterrence; credible commitment and extended deterrence
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — US-China competition as multi-round prisoner's dilemma with incomplete information
+- [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Coercive bargaining, credibility, and Schelling's commitment theory in the Russia-Ukraine conflict
+- [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Multi-agent AI systems as game-theoretic environments; mechanism design for AI cooperation

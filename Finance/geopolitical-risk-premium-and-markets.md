@@ -1,9 +1,9 @@
 ---
 title: "Geopolitical Risk Premium: How Wars, Sanctions, and Instability Price Into Financial Markets"
 date: 2026-05-30
-tags: [geopolitical-risk, risk-premium, commodities, oil, financial-markets, sanctions, war, emerging-markets, country-risk, volatility]
-source: IMF Working Papers; BIS Quarterly Review; Caldara & Iacoviello GPR Index; Goldman Sachs Research; JPMorgan Country Risk; MSCI; BlackRock Geopolitical Risk Dashboard
-last_updated: 2026-05-30
+tags: [finance, geopolitical-risk, risk-premium, commodities, oil, financial-markets, sanctions, war, emerging-markets, country-risk, volatility, GPR-index, safe-haven, de-dollarization, friend-shoring, supply-chain, OFAC, flight-to-quality, defense-stocks]
+source: "Caldara & Iacoviello (2022) Measuring Geopolitical Risk, American Economic Review; IMF World Economic Outlook (2022–2026); BIS Quarterly Review; BlackRock Geopolitical Risk Dashboard; Damodaran (2012) Country Risk: Determinants, Measures and Implications"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -313,9 +313,22 @@ The simultaneous occurrence of Russia-Ukraine war (ongoing), Israel-Gaza conflic
 ---
 
 ## Related
-
-- [[Finance/macroeconomics-101]] — Macro channels for geopolitical transmission
-- [[Finance/real-assets-reits-and-commodities]] — Commodity geopolitical pricing
-- [[Finance/currency-markets-and-fx]] — FX geopolitical safe-haven dynamics
-- [[Finance/options-basics]] — Using options for geopolitical hedging
-- [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Primary case study
+- [[macroeconomics-101]] — Macro channels for geopolitical transmission; cost-push inflation from supply shocks
+- [[real-assets-reits-and-commodities]] — Commodity geopolitical pricing; oil supercycle and green metals thesis
+- [[currency-markets-and-fx]] — FX safe-haven hierarchy during geopolitical shocks; de-dollarization trends
+- [[options-basics]] — Geopolitical risk priced first in options market; implied vol spikes before spot prices adjust
+- [[credit-markets-and-credit-risk]] — Sovereign credit risk under sanctions; payment-mechanism defaults
+- [[fixed-income-deep-dive]] — Sovereign yield spreads as geopolitical risk pricing; emerging market bond stress
+- [[yield-curve-and-bonds]] — China Treasury reduction as structural term premium driver
+- [[central-bank-digital-currencies-cbdc]] — mBridge as sanctions evasion infrastructure; dollar hegemony challenge
+- [[behavioral-finance-and-investor-psychology]] — Availability heuristic in geopolitical panic cycles; scar tissue effect on risk premiums
+- [[hedge-funds-and-alternative-strategies]] — Defense sector positioning; geopolitical long/short strategies
+- [[portfolio-theory]] — Geopolitical scenario analysis in institutional portfolio construction; correlation regime shifts
+- [[valuation-fundamentals]] — Country risk premium (Damodaran CRP); geopolitical lambda in discount rates
+- [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Primary case study for sanctions architecture and sovereign default
+- [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Energy shock and Hormuz risk premium case study
+- [[Geopolitics/2026-05-27-india-pakistan-2025-war-and-aftermath]] — Regional conflict and equity market discount; nuclear risk premium
+- [[Geopolitics/2026-05-30-china-taiwan-strait-military-tensions]] — Taiwan semiconductor risk premium; TSMC supply chain geopoliticization
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Great power competition as structural geopolitical risk regime
+- [[World Events/2026-05-30-uae-exits-opec-oil-market-shift]] — OPEC fracture and oil supply geopolitics; UAE production expansion
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Elevated GPR baseline and 2026 economic slowdown interaction

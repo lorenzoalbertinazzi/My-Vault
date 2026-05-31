@@ -1,9 +1,9 @@
 ---
 title: Yield Curve Analysis — Shapes, Inversions, and Market Signals
 date: 2026-05-28
-tags: [finance, bonds, yield-curve, interest-rates, macroeconomics, fixed-income]
-source: research
-last_updated: 2026-05-29
+tags: [finance, yield-curve, bonds, fixed-income, interest-rates, macroeconomics, recession-indicator, 2s10s-spread, term-premium, forward-rates, bear-steepener, bull-flattener, yield-curve-control, ACM-model, inversion, monetary-policy, Japan-YCC, quantitative-tightening, sovereign-spreads]
+source: "Campbell, Shiller & Viceira (2009) Understanding Inflation-Indexed Bond Markets; Harvey (1988) The Real Term Structure and Consumption Growth, JFE; Rudebusch & Williams (2009) Forecasting Recessions: The Puzzle of the Enduring Power of the Yield Curve; Adrian, Crump & Moench (2013) Pricing the Term Structure with Linear Regressions, Journal of Financial Economics; Reinhart & Rogoff (2009) This Time Is Different"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -326,13 +326,19 @@ The "this time is different" literature — Kenneth Rogoff and Carmen Reinhart d
 The [[machine-learning-fundamentals]] approach to yield curve analysis has moved beyond simply fitting statistical models to the 2s10s spread toward building composite recession probability models that incorporate the yield curve signal alongside dozens of other indicators. Research by the Federal Reserve Bank of New York, by Bai and Perron (structural break models), and by private quant firms has demonstrated that combining the yield curve signal with credit spread widening, equity market breadth deterioration, bank lending survey tightening, and labor market leading indicators (temporary worker employment, overtime hours) produces recession probability estimates that are more accurate and timely than the yield curve alone. The XGBoost gradient boosting models trained on this combined feature set can assign real-time recession probabilities that update daily — providing a continuous probabilistic reading rather than binary inversion/non-inversion signals. The practical implication for portfolio managers is that the yield curve remains the single most powerful individual recession predictor, but ML-based composite models provide a more granular and timely probability estimate that improves upon the curve's signal by incorporating the full complexity of the credit and labor market dynamics that the curve summarizes only incompletely.
 
 ## Related
-- [[fixed-income-deep-dive]]
-- [[macroeconomics-101]]
-- [[valuation-fundamentals]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[currency-markets-and-fx]]
-- [[portfolio-theory]]
-- [[mental-models]]
-- [[machine-learning-fundamentals]]
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
-- [[2026-05-27-us-china-great-power-competition]]
+- [[fixed-income-deep-dive]] — Bond pricing mechanics; duration and convexity; CLO tranching; repo market plumbing
+- [[macroeconomics-101]] — Yield curve as macroeconomic nervous system; Taylor Rule drives short-end pricing; r* and term premium
+- [[valuation-fundamentals]] — Long-term yield anchors the risk-free rate in WACC; duration analogy for equity valuation
+- [[behavioral-finance-and-investor-psychology]] — Persistent misreading of inversion signals; availability heuristic and "this time is different"
+- [[currency-markets-and-fx]] — CIP linking bond yields to FX forwards; BOJ normalization and yen carry trade unwind
+- [[portfolio-theory]] — Duration allocation in 60/40 framework; term premium decomposition for strategic bond positioning
+- [[credit-markets-and-credit-risk]] — Credit spreads built on top of risk-free curve; sovereign spreads and credit cycles
+- [[central-bank-digital-currencies-cbdc]] — CBDC design impacts monetary transmission through the yield curve
+- [[hedge-funds-and-alternative-strategies]] — Fixed income relative value strategies; basis trades; yield curve steepener/flattener trades
+- [[quantitative-finance-and-algorithmic-trading]] — Affine term structure models; ML composite recession probability models
+- [[geopolitical-risk-premium-and-markets]] — Sovereign yield spreads as real-time geopolitical risk pricing; de-dollarization and term premium
+- [[Psychology/mental-models]] — Bayesian updating on yield curve inversion signal; base rate fidelity
+- [[Tech & AI/machine-learning-fundamentals]] — ML composite recession models combining yield curve with credit and labor data
+- [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Oil shock transmission through EM sovereign bond markets; geopolitical bear steepener
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — China Treasury holdings decline as structural term premium driver; de-dollarization
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — 2026 yield curve normalization; Fed easing cycle context

@@ -1,9 +1,9 @@
 ---
 title: "Central Bank Digital Currencies (CBDCs): Architecture, Economics, and the Geopolitics of Digital Money"
 date: 2026-05-30
-tags: [CBDC, digital-currency, monetary-policy, central-banking, fintech, mBridge, e-CNY, financial-system, payments, dollar-hegemony]
-source: Atlantic Council CBDC Tracker; IMF Virtual Handbook; BIS; Federal Reserve; Quant Network; bydfi; Tandfonline; cbdctracker.org
-last_updated: 2026-05-30
+tags: [finance, CBDC, digital-currency, monetary-policy, central-banking, fintech, mBridge, e-CNY, financial-system, payments, dollar-hegemony, de-dollarization, blockchain, programmable-money, financial-inclusion, sanctions-evasion]
+source: "Atlantic Council CBDC Tracker (2026); IMF (2022) Virtual Handbook on Central Bank Digital Currency; BIS Innovation Hub mBridge Report (2022); Federal Reserve Discussion Paper (2022) Money and Payments: The U.S. Dollar in the Digital Age; Auer, Cornelli & Frost (2020) Rise of the Central Bank Digital Currencies, BIS Working Paper"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -236,7 +236,21 @@ Cross-border (mBridge):
 
 ## Related
 
-- [[Finance/currency-markets-and-fx]] — CBDC impacts on FX markets
-- [[Finance/macroeconomics-101]] — Monetary policy and base money concepts
-- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Dollar hegemony and financial warfare
-- [[Tech & AI/cryptography-fundamentals-and-zero-knowledge-proofs]] — Technical foundations of CBDC privacy
+- [[currency-markets-and-fx]] — CBDC impacts on FX markets; mBridge as a SWIFT alternative reducing dollar dependence; digital yuan internationalization
+- [[macroeconomics-101]] — Monetary policy and base money concepts; seigniorage economics; quantity theory of money; CBDC as helicopter money mechanism
+- [[fixed-income-deep-dive]] — How CBDC interest-bearing design competes with bank deposits and sovereign bonds; negative rate transmission
+- [[credit-markets-and-credit-risk]] — Bank disintermediation risk from CBDC adoption; sovereign credit implications; banking system stability
+- [[yield-curve-and-bonds]] — CBDC and its potential to change monetary transmission through the yield curve; zero lower bound circumvention
+- [[geopolitical-risk-premium-and-markets]] — Sanctions weaponization driving CBDC development; dollar hegemony stress; mBridge as financial weapon
+- [[derivatives-futures-and-forwards]] — Smart contract-enabled atomic settlement using CBDC; programmable payment in commodity trade finance
+- [[hedge-funds-and-alternative-strategies]] — Macro hedge fund positioning on dollar hegemony decline; CBDC adoption as investable geopolitical theme
+- [[real-assets-reits-and-commodities]] — Petrodollar system threat if oil settled in digital yuan; commodity market infrastructure and currency diversification
+- [[behavioral-finance-and-investor-psychology]] — Privacy concerns and adoption resistance as behavioral barriers to CBDC rollout
+- [[Tech & AI/cryptography-fundamentals-and-zero-knowledge-proofs]] — Technical foundations of CBDC privacy and zero-knowledge payments; tiered anonymity design
+- [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Programmable CBDC smart contracts interfacing with autonomous agents; DeFi-CBDC convergence
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Dollar hegemony and financial warfare; mBridge as strategic infrastructure; competing payment architectures
+- [[Geopolitics/2026-05-27-us-china-strategic-competition]] — US-China rivalry expressed through competing payment system architectures; financial decoupling
+- [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Russia sanctions driving SPFS/CIPS alternatives; ruble digital currency and sanctions evasion
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — CBDC adoption and digital payment infrastructure in the 2026 slowdown context; EM financial inclusion urgency
+- [[World Events/2026-05-27-us-iran-conflict-strait-of-hormuz]] — Sanctions evasion and energy trade settlement in non-dollar currencies; Hormuz crisis accelerating de-dollarization
+- [[World Events/2026-05-30-uae-exits-opec-oil-market-shift]] — UAE's OPEC exit and mBridge participation; Gulf state diversification from dollar oil settlement

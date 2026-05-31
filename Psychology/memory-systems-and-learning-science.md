@@ -1,10 +1,11 @@
 ---
 title: Memory Systems and Learning Science
 date: 2026-05-30
-tags: [psychology, memory, learning, cognition, spaced-repetition, working-memory, neuroplasticity]
-source: Research synthesis
-last_updated: 2026-05-30
+tags: [psychology, memory, learning-science, working-memory, long-term-memory, spaced-repetition, Ebbinghaus, forgetting-curve, encoding, retrieval, neuroplasticity, hippocampus, episodic-memory, semantic-memory, cognitive-psychology]
+source: "Ebbinghaus (1885) Über das Gedächtnis; Baddeley & Hitch (1974) Working Memory; Tulving (1983) Elements of Episodic Memory; Wozniak (1990) Optimization of Learning; Roediger & Karpicke (2006) Test-Enhanced Learning, Psych Sci"
+last_updated: 2026-05-31
 ---
+
 ## Summary
 Memory is not a single system but a set of distinct neurological processes for encoding, storing, and retrieving information — a discovery that overturned decades of unitary memory models. The multi-store model (Atkinson & Shiffrin, 1968), levels of processing (Craik & Lockhart, 1972), working memory (Baddeley & Hitch, 1974), and long-term potentiation at the cellular level form the theoretical scaffold of modern memory science. Applied learning science — spaced practice, retrieval practice, interleaving, and the testing effect — has produced empirically validated techniques with effect sizes that dwarf traditional study methods, with direct implications for education, professional training, and cognitive enhancement.
 
@@ -162,10 +163,15 @@ The most evidence-based study techniques (Dunlosky et al., 2013 comprehensive re
 
 ## Related
 - [[cognitive-biases]] — Memory biases (availability heuristic, hindsight bias) as applications of false/selective memory
-- [[habit-formation]] — Procedural memory and habit loops; skill acquisition through repetition
-- [[flow-state-and-peak-performance]] — Flow states and their relationship to working memory load
-- [[dopamine-reward-systems-neuroscience]] — Dopamine's role in memory encoding and the reward signal in learning
-- [[mental-models]] — Mental models as large, structured schemas for expert reasoning
-- [[social-psychology-and-group-dynamics]] — Social influence on memory (collective memory, misinformation in groups)
+- [[habit-formation]] — Procedural memory and habit loops; skill acquisition through repetition; sleep consolidation shared mechanism
+- [[flow-state-and-peak-performance]] — Flow states and their relationship to working memory load; flow-conducive challenge-skill balance mirrors desirable difficulty
+- [[dopamine-reward-systems-neuroscience]] — Dopamine gates hippocampal plasticity; surprise and reward prediction error enhance memory encoding
+- [[mental-models]] — Mental models as large, structured schemas for expert reasoning; schema richness explains expert memory advantage
+- [[social-psychology-and-group-dynamics]] — Social influence on memory (collective memory, misinformation in groups); eyewitness testimony unreliability
 - [[prospect-theory-and-decision-making]] — Availability heuristic relies on ease of memory retrieval to estimate probability
-- [[emotional-intelligence]] — Emotional memory (amygdala-hippocampal interaction) and its role in self-awareness
+- [[emotional-intelligence]] — Emotional memory (amygdala-hippocampal interaction) and its role in self-awareness and EI development
+- [[stoicism-and-stoic-philosophy]] — Stoic journaling and daily review as structured retrieval practice for habit and value consolidation
+- [[trauma-resilience-and-post-traumatic-growth]] — Traumatic memory encoding failures (hippocampal atrophy) and reconsolidation in EMDR treatment
+- [[attachment-theory-and-relationships]] — Internal Working Models as organized memory schemas shaping relationship expectations
+- [[Tech & AI/retrieval-augmented-generation]] — RAG architectures mirror the human memory system's encoding-then-retrieval architecture
+- [[Tech & AI/transformer-architecture]] — Attention mechanisms in transformers parallel selective memory retrieval in working memory research

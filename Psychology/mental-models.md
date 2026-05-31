@@ -1,9 +1,9 @@
 ---
 title: Mental Models — Thinking Frameworks
 date: 2026-05-26
-tags: [psychology, mental-models, decision-making, thinking, Munger]
-source: research
-last_updated: 2026-05-29
+tags: [psychology, mental-models, decision-making, first-principles, inversion, second-order-thinking, Charlie-Munger, farnam-street, latticework, checklists, systems-thinking, critical-thinking, cognitive-frameworks, rationality, Bayesian-thinking]
+source: "Munger (1994) USC Business School Speech on Worldly Wisdom; Parrish (2019) The Great Mental Models Vol. 1; Bevelin (2007) Seeking Wisdom: From Darwin to Munger; Poor Charlie's Almanack (2005)"
+last_updated: 2026-05-31
 enriched: 2026-05-29
 ---
 
@@ -426,12 +426,18 @@ One of the most widely applicable but rarely articulated mental models is the di
 **Caution**: Not all problems have a single root cause at the 5th Why. Complex systems often have multiple interacting contributing factors rather than a linear causal chain. The 5 Whys is best applied to mechanical or procedural failures (where a single chain is usually appropriate) rather than to complex social or organizational failures (where a fishbone/Ishikawa diagram that captures multiple parallel causal chains is more appropriate).
 
 ## Related
-- [[cognitive-biases]]
-- [[cialdini-influence]]
-- [[48-laws-of-power]]
-- [[habit-formation]]
-- [[value-investing-methodology]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[machine-learning-fundamentals]]
-- [[retrieval-augmented-generation]]
-- [[2026-05-27-us-china-great-power-competition]]
+- [[cognitive-biases]] — Mental models are System 2 tools to counteract System 1 biases; the latticework as a debiasing architecture
+- [[cialdini-influence]] — Influence principles are practical mental models for social navigation; pre-suasion as attention architecture
+- [[48-laws-of-power]] — Power laws as a taxonomy of social mental models; the 48 Laws as practitioner's latticework of social dynamics
+- [[habit-formation]] — Internalized mental models are cognitive habits; practice required to make models fire automatically
+- [[stoicism-and-stoic-philosophy]] — Stoic practices (inversion = negative visualization; second-order thinking in dichotomy of control) as ancient mental model curriculum
+- [[game-theory-and-strategic-thinking]] — Game theory as a formal mental model for strategic interaction; Nash equilibrium as a predictive framework
+- [[prospect-theory-and-decision-making]] — Prospect Theory as the mental model replacing naive expected utility in decision analysis
+- [[memory-systems-and-learning-science]] — Mental models are large-scale schemas; schema richness explains expert pattern recognition
+- [[negotiation-tactics]] — Negotiation frameworks (BATNA, ZOPA, 3D negotiation) as applied mental models for deal-making
+- [[emotional-intelligence]] — EI as metacognitive infrastructure for selecting and applying mental models under emotional pressure
+- [[Finance/value-investing-methodology]] — Munger's latticework directly applied to investment analysis; circle of competence and margin of safety as core models
+- [[Finance/behavioral-finance-and-investor-psychology]] — Mental models as the practitioner's toolkit against market psychology failure modes
+- [[Tech & AI/machine-learning-fundamentals]] — ML models as mathematical analogs to human mental models; overfitting mirrors domain-specific expertise failure
+- [[Tech & AI/retrieval-augmented-generation]] — RAG architectures as implementation of Munger's latticework (stored models + retrieved specifics)
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Second-order thinking and Cynefin framework applied to great power competition analysis

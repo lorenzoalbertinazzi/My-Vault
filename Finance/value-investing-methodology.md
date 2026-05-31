@@ -1,9 +1,9 @@
 ---
 title: Value Investing Methodology
 date: 2026-05-27
-tags: [finance, investing, value-investing, fundamentals]
-source: research
-last_updated: 2026-05-29
+tags: [finance, value-investing, Benjamin-Graham, Warren-Buffett, Charlie-Munger, intrinsic-value, margin-of-safety, economic-moat, ROIC, capital-allocation, net-net, GARP, compounding, activist-investing, Greenblatt, checklist, Mr-Market, competitive-advantage, quality-investing, earnings-power-value]
+source: "Graham (1949) The Intelligent Investor; Buffett Annual Letters to Berkshire Shareholders (1965–present); Greenblatt (2005) The Little Book That Beats the Market; Munger (1994) USC Business School Speech on Worldly Wisdom; Dorsey (2008) The Little Book That Builds Wealth; Greenwald et al. (2001) Value Investing: From Graham to Buffett and Beyond"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -361,18 +361,21 @@ The value investing tradition — built on the patient analysis of public financ
 The response of sophisticated value investors to this challenge divides into two schools. The first — represented by Buffett's continued reluctance to embrace quantitative methods — argues that the alternative data revolution has simply moved the information competition to a different domain, but that genuine business quality assessment (moat analysis, management integrity evaluation, long-term industry dynamics) remains resistant to algorithmic processing because it requires judgment about fundamentally uncertain qualitative futures that no training dataset can capture. The second school — represented by practitioners like GMO's quantitative value team and AQR — argues that combining traditional value signals (price-to-book, price-to-earnings, free cash flow yield) with machine learning regime detection and alternative data creates a more robust version of value investing that reduces the false value traps (value stocks that are cheap because they deserve to be) and captures value opportunities earlier. The resolution likely depends on the investment universe: for the largest, most liquid global equities, ML-augmented value is demonstrably superior to pure fundamental analysis; for the smallest, most obscure opportunities where Buffett-style competitive research still generates genuine informational advantage, traditional approaches retain their edge. See [[machine-learning-fundamentals]] for the technical architecture of these alternative data systems and [[technical-analysis-and-chart-patterns]] for the parallel debate about whether chart patterns survive in an algorithmically-traded market.
 
 ## Related
-- [[valuation-fundamentals]]
-- [[portfolio-theory]]
-- [[macroeconomics-101]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[cognitive-biases]]
-- [[cialdini-influence]]
-- [[negotiation-tactics]]
-- [[stoicism-and-stoic-philosophy]]
-- [[48-laws-of-power]]
-- [[2026-05-27-us-china-great-power-competition]]
-- [[2026-05-27-russia-central-asia-influence-and-decline]]
-- [[technical-analysis-and-chart-patterns]]
-- [[machine-learning-fundamentals]]
-- [[mental-models]]
-- [[fixed-income-deep-dive]]
+- [[valuation-fundamentals]] — DCF, WACC, reverse DCF; intrinsic value frameworks underpinning value investing
+- [[portfolio-theory]] — Position sizing via Kelly Criterion; concentration vs. diversification tradeoff in value context
+- [[macroeconomics-101]] — Business cycle timing for value opportunities; interest rates and their effect on value vs. growth
+- [[behavioral-finance-and-investor-psychology]] — Systematic debiasing as value investing foundation; Mr. Market and loss aversion
+- [[cognitive-biases]] — Checklist manifesto as cognitive debiasing; anchoring and confirmation bias in thesis management
+- [[credit-markets-and-credit-risk]] — Distressed debt as quantitative value investing; Oaktree/Apollo methodology
+- [[hedge-funds-and-alternative-strategies]] — Activist investing as value catalyst; event-driven strategies
+- [[fixed-income-deep-dive]] — Fixed income value opportunities; distressed bonds at discount to recovery value
+- [[technical-analysis-and-chart-patterns]] — Entry/exit timing for fundamental value theses; chart-based deanchoring tools
+- [[quantitative-finance-and-algorithmic-trading]] — Systematic value factor; Magic Formula as algorithmic value investing
+- [[Psychology/cialdini-influence]] — Influence principles explaining brand moat durability; social proof in network effect businesses
+- [[Psychology/negotiation-tactics]] — Switching cost moats as negotiating leverage; activists as negotiators with management
+- [[Psychology/stoicism-and-stoic-philosophy]] — Premeditatio malorum for drawdown resilience; Stoic process focus vs. outcome
+- [[Psychology/48-laws-of-power]] — Wyckoff composite man framework; power dynamics in activist campaigns
+- [[Psychology/mental-models]] — Circle of competence; base rates in checklist investing; inversion in thesis stress-testing
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Value traps from geopolitical impairment vs. genuine behavioral mispricing
+- [[Geopolitics/2026-05-27-russia-central-asia-influence-and-decline]] — Geopolitical disruption zone creating cheap-but-risky assets
+- [[Tech & AI/machine-learning-fundamentals]] — Alternative data revolution challenging fundamental analyst information edge

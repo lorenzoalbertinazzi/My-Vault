@@ -1,9 +1,9 @@
 ---
 title: Hedge Funds and Alternative Strategies
 date: 2026-05-30
-tags: [finance, hedge-funds, alternatives, long-short, macro, arbitrage, alpha]
-source: Research synthesis
-last_updated: 2026-05-30
+tags: [finance, hedge-funds, alternatives, long-short-equity, global-macro, relative-value, event-driven, quantitative, statistical-arbitrage, managed-futures, CTA, merger-arbitrage, activist-investing, distressed-debt, LTCM, performance-fees, carried-interest, leverage, VaR, family-offices]
+source: "Fung & Hsieh (1997) Empirical Characteristics of Dynamic Trading Strategies, Review of Financial Studies; Lhabitant (2006) Handbook on Hedge Funds; Ineichen (2002) Absolute Returns: The Risk and Opportunities of Hedge Fund Investing; Preqin Global Hedge Fund Report (2024)"
+last_updated: 2026-05-31
 ---
 ## Summary
 Hedge funds are pooled investment vehicles that use diverse, often complex strategies — long/short equity, global macro, relative value arbitrage, event-driven, and quantitative — to generate absolute returns uncorrelated with traditional markets. Born from Alfred Winslow Jones's 1949 partnership, the industry has grown to manage ~$4.5 trillion in assets globally (2026). Unlike mutual funds, hedge funds face lighter regulation, charge performance fees (historically "2 and 20"), employ leverage, and can short-sell — capabilities that enable unique return profiles but also create distinct risks.
@@ -140,11 +140,22 @@ For allocators conducting operational due diligence:
 **Crypto hedge funds**: ~1,200 funds managing ~$80B (2026) trade cryptocurrencies; extreme volatility (Bitcoin σ ~70%) creates both opportunity and risk; many funds launched in 2020–21 and closed during 2022 crypto winter.
 
 ## Related
-- [[portfolio-theory]] — Modern Portfolio Theory and the role of uncorrelated alternative return streams
-- [[behavioral-finance-and-investor-psychology]] — Behavioral foundations of momentum, value, and mean-reversion strategies
-- [[quantitative-finance-and-algorithmic-trading]] — Quantitative methods underpinning systematic hedge fund strategies
-- [[derivatives-futures-and-forwards]] — Options, futures, swaps as the core instruments of hedge fund strategies
-- [[credit-markets-and-credit-risk]] — Distressed debt and credit hedge fund strategies
-- [[private-equity-and-venture-capital]] — Alternative investment vehicles; hedge funds and PE compete for institutional allocations
-- [[options-basics]] — Options pricing and the role of volatility arbitrage strategies
-- [[value-investing-methodology]] — Fundamental analysis as the foundation for activist and event-driven strategies
+- [[portfolio-theory]] — Modern Portfolio Theory and the role of uncorrelated alternative return streams; Sharpe ratio benchmarking
+- [[behavioral-finance-and-investor-psychology]] — Behavioral foundations of momentum, value, and mean-reversion strategies; why hedge fund investors chase performance
+- [[quantitative-finance-and-algorithmic-trading]] — Quantitative methods underpinning systematic hedge fund strategies; Renaissance Medallion as the alpha benchmark
+- [[derivatives-futures-and-forwards]] — Options, futures, swaps as the core instruments of hedge fund strategies; macro fund hedging mechanics
+- [[credit-markets-and-credit-risk]] — Distressed debt and credit hedge fund strategies; CDS as hedge fund instruments
+- [[private-equity-and-venture-capital]] — Alternative investment vehicles; hedge funds and PE compete for institutional allocations; fund-of-funds overlap
+- [[options-basics]] — Options pricing and the role of volatility arbitrage strategies; convertible arb and implied volatility surface trading
+- [[value-investing-methodology]] — Fundamental analysis as the foundation for activist and event-driven strategies; activist overlap with Buffett-style ownership
+- [[macroeconomics-101]] — Global macro hedge funds bet on rate cycles, currency regimes, and economic inflection points
+- [[currency-markets-and-fx]] — FX forwards and options as the primary instruments of global macro; carry trade and currency crisis strategies
+- [[yield-curve-and-bonds]] — Rates trades, yield curve shape bets, and bond relative value arbitrage
+- [[geopolitical-risk-premium-and-markets]] — Geopolitical event-driven trading; macro funds positioned around war, sanctions, and regime change
+- [[real-assets-reits-and-commodities]] — Commodity trading advisors (CTAs) and managed futures strategies across energy, metals, agriculture
+- [[technical-analysis-and-chart-patterns]] — CTAs and trend-following systematic strategies use price signals as primary inputs
+- [[Psychology/behavioral-finance-and-investor-psychology]] — Soros's reflexivity theory as behavioral macro; crowd psychology in short squeezes
+- [[Psychology/game-theory-and-strategic-thinking]] — Nash equilibrium in prime broker relationships; coordination games in crowded trades
+- [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Global macro positioning around commodity disruption; Soros-style macro bets on geopolitical inflection
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Macro fund positioning for 2026 slowdown; CTA performance in risk-off regime
+- [[World Events/2026-05-27-us-iran-conflict-strait-of-hormuz]] — Energy commodity macro trades; volatility strategies around Hormuz crisis

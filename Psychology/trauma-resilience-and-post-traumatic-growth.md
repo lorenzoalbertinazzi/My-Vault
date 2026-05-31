@@ -1,9 +1,9 @@
 ---
 title: "Trauma, Resilience, and Post-Traumatic Growth: The Psychology of Extreme Adversity"
 date: 2026-05-30
-tags: [trauma, PTSD, post-traumatic-growth, resilience, psychology, neuroscience, therapy, adversity, coping, healing]
-source: American Psychological Association; Judith Herman "Trauma and Recovery" (1992); Bessel van der Kolk "The Body Keeps the Score" (2014); Tedeschi & Calhoun PTG research; van der Kolk et al.; DSM-5; EMDR Institute
-last_updated: 2026-05-30
+tags: [psychology, trauma, PTSD, post-traumatic-growth, resilience, neuroscience, therapy, adversity, coping, healing, HPA-axis, amygdala, hippocampus, complex-PTSD, EMDR, attachment-trauma, van-der-Kolk, Tedeschi-Calhoun, somatic-therapy, epigenetics]
+source: "Herman (1992) Trauma and Recovery; van der Kolk (2014) The Body Keeps the Score; Tedeschi & Calhoun (1996) The Posttraumatic Growth Inventory, Assessment; Foa & Rothbaum (1998) Treating the Trauma of Rape; Shapiro (2018) Eye Movement Desensitization and Reprocessing, 3rd ed."
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -298,8 +298,18 @@ Collective trauma shares features of individual trauma: intrusive memory (collec
 ---
 
 ## Related
-
-- [[Psychology/cognitive-biases]] — Cognitive distortions common in trauma survivors
-- [[Psychology/attachment-theory-and-relationships]] — Attachment trauma as foundational
-- [[Psychology/dopamine-reward-systems-neuroscience]] — HPA axis and reward system interactions
-- [[Psychology/emotional-intelligence]] — Affect regulation as trauma treatment target
+- [[cognitive-biases]] — Cognitive distortions common in trauma survivors; confirmation bias reinforcing negative self-schemas
+- [[attachment-theory-and-relationships]] — Attachment trauma as the most damaging form; disorganized attachment and complex PTSD overlap
+- [[dopamine-reward-systems-neuroscience]] — HPA axis and reward system dysregulation in PTSD; dopamine blunting in anhedonic presentations
+- [[emotional-intelligence]] — Affect dysregulation in PTSD as EI deficit; trauma therapy targets the same prefrontal-amygdala circuits
+- [[stoicism-and-stoic-philosophy]] — Stockdale and Frankl as canonical Stoic resilience case studies; dichotomy of control under extreme adversity
+- [[stoicism]] — Stoic equanimity as a resilience framework applicable to post-traumatic processing
+- [[habit-formation]] — Trauma creates hyperactivated habitual threat-response routines; therapy installs competing routines
+- [[memory-systems-and-learning-science]] — Traumatic memory encoding failures; hippocampal atrophy and reconsolidation in EMDR
+- [[social-psychology-and-group-dynamics]] — Collective trauma at community and national level; social support as primary resilience factor
+- [[mental-models]] — Post-traumatic worldview shattering (Janoff-Bulman) as catastrophic mental model collapse requiring reconstruction
+- [[prospect-theory-and-decision-making]] — Hypervigilance and threat overweighting as extreme loss aversion after trauma exposure
+- [[flow-state-and-peak-performance]] — PTG and post-traumatic resilience as conditions that can eventually support return to flow states
+- [[Geopolitics/2026-05-27-india-pakistan-2025-war-and-aftermath]] — Collective trauma and post-conflict reconciliation dynamics
+- [[Geopolitics/2026-05-30-horn-of-africa-sudan-ethiopia-regional-conflict]] — Refugee trauma, mass displacement, and collective resilience in prolonged conflict
+- [[World Events/2026-05-27-ebola-outbreak-drc-uganda-2026]] — Healthcare worker trauma and community resilience in epidemic response

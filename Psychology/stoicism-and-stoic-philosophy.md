@@ -1,9 +1,9 @@
 ---
 title: Stoicism and Stoic Philosophy — A Practical Framework for Resilience
 date: 2026-05-27
-tags: [psychology, stoicism, philosophy, resilience, mental-models, emotional-regulation]
-source: research
-last_updated: 2026-05-29
+tags: [psychology, stoicism, philosophy, Marcus-Aurelius, Seneca, Epictetus, dichotomy-of-control, amor-fati, negative-visualization, memento-mori, virtue, resilience, mental-models, emotional-regulation, ancient-philosophy]
+source: "Marcus Aurelius Meditations (~170–180 AD); Epictetus Enchiridion (~108 AD); Seneca Letters from a Stoic (~65 AD); Holiday (2014) The Obstacle Is the Way; Robertson (2019) How to Think Like a Roman Emperor"
+last_updated: 2026-05-31
 enriched: 2026-05-29
 ---
 
@@ -336,13 +336,20 @@ The dichotomy of control — distinguishing what is "up to us" (our judgments, i
 Perhaps the most practically powerful Stoic-behavioral finance intersection is in the domain of social influence. The behavioral finance literature documents that herding — following the crowd into and out of assets — is one of the most costly systematic investor errors, driven by the social proof and authority heuristics documented in [[cialdini-influence]]. The Stoic aspiration to act according to reason rather than social conformity — to be indifferent to the crowd's judgment and to align behavior with one's own reasoned assessment of value — is the philosophical stance that enables contrarian investing. Warren Buffett's famous dictum ("be fearful when others are greedy, and greedy when others are fearful") is not merely financial advice but an application of the Stoic autarchy principle: self-governance based on internal reason rather than external social signals. The practical implementation requires exactly the virtues Stoicism cultivates: the equanimity to remain calm during market panics (not to be swept up in the emotional contagion), the courage to act contrary to the consensus at precisely the moment when social pressure to conform is highest, and the justice to remain honest about one's own analytical limitations rather than rationalizing contrarian positions with false certainty.
 
 ## Related
-- [[mental-models]]
-- [[cognitive-biases]]
-- [[48-laws-of-power]]
-- [[habit-formation]]
-- [[emotional-intelligence]]
-- [[value-investing-methodology]]
-- [[negotiation-tactics]]
-- [[stoicism]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[2026-05-27-us-china-great-power-competition]]
+- [[stoicism]] — Shorter companion note; retained for backlink compatibility
+- [[mental-models]] — Stoic practices (inversion = negative visualization; second-order thinking) as ancient mental model curriculum
+- [[cognitive-biases]] — Stoic practices are ancient debiasing protocols; dichotomy of control counters control illusion and sunk cost bias
+- [[48-laws-of-power]] — Stoic inner game as counterweight and complement to the outer game of the 48 Laws; Cato as synthesis
+- [[habit-formation]] — Stoic spiritual exercises are structured habit formation for emotional regulation; Pierre Hadot's practice-first reading
+- [[emotional-intelligence]] — Stoic daily practices are an ancient EI development curriculum; affect labeling as Aurelius journaling
+- [[negotiation-tactics]] — Stoic dichotomy of control as the philosophical foundation of the negotiator's inner game and BATNA clarity
+- [[prospect-theory-and-decision-making]] — Negative visualization as systematic antidote to loss aversion and endowment effect
+- [[dopamine-reward-systems-neuroscience]] — Voluntary hardship and dopamine baseline management; Stoic discomfort practice as neurochemical regulation
+- [[flow-state-and-peak-performance]] — Stoic equanimity and present-moment focus as psychological prerequisites for flow onset
+- [[attachment-theory-and-relationships]] — Stoic oikeiosis as expanding circles of affiliation; Stoic indifference compared to avoidant attachment deactivation
+- [[trauma-resilience-and-post-traumatic-growth]] — Stoic resilience framework parallels PTG mechanisms; Stockdale and Frankl as case studies
+- [[social-psychology-and-group-dynamics]] — Stoic cosmopolitanism as philosophical counter to in-group bias and deindividuation
+- [[game-theory-and-strategic-thinking]] — Stoic long-term orientation enables optimal repeated-game strategy; commitment device parallels
+- [[Finance/value-investing-methodology]] — Mr. Market as Stoic preferred indifferent; margin of safety as Stoic epistemic humility; Munger's latticework as Stoic practice
+- [[Finance/behavioral-finance-and-investor-psychology]] — Stoicism as a debiasing toolkit for behavioral finance errors; amor fati and bear market psychology
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Stoic long-term strategic thinking vs. electoral-cycle reactive policy; durable grand strategy

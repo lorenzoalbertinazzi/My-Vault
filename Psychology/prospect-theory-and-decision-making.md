@@ -1,9 +1,9 @@
 ---
 title: Prospect Theory and Decision-Making Under Uncertainty
 date: 2026-05-30
-tags: [psychology, behavioral-economics, prospect-theory, kahneman, tversky, decision-making, loss-aversion, cognitive-biases]
-source: Kahneman & Tversky (1979) "Prospect Theory: An Analysis of Decision Under Risk"; Kahneman "Thinking, Fast and Slow"
-last_updated: 2026-05-30
+tags: [psychology, behavioral-economics, prospect-theory, kahneman, tversky, decision-making, loss-aversion, cognitive-biases, reference-dependence, value-function, probability-weighting, endowment-effect, status-quo-bias, disposition-effect, framing-effects]
+source: "Kahneman & Tversky (1979) Prospect Theory: An Analysis of Decision Under Risk, Econometrica; Tversky & Kahneman (1992) Advances in Prospect Theory: Cumulative Representation of Uncertainty, J Risk Uncertainty; Thaler (1980) Toward a Positive Theory of Consumer Choice, JEconBehav; Kahneman (2011) Thinking, Fast and Slow"
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -188,9 +188,18 @@ Loss aversion has profound implications for negotiation:
 - **Deadline effects:** As deadlines approach, the potential loss of a deal grows larger in psychological weight, inducing concessions — consistent with loss aversion over the reference point of "deal exists."
 
 ## Related
-- [[cognitive-biases]] — Many biases are mechanistically explained by Prospect Theory
-- [[behavioral-finance-and-investor-psychology]] — PT applications to markets: disposition effect, equity premium
-- [[negotiation-tactics]] — Reference points, anchoring, loss framing in negotiation
-- [[mental-models]] — Decision frameworks, first principles, System 1 vs. System 2
-- [[habit-formation]] — Loss aversion drives resistance to habit change
-- [[emotional-intelligence]] — Emotional regulation of loss aversion responses
+- [[cognitive-biases]] — Prospect Theory provides the formal model mechanistically explaining loss aversion, framing, and anchoring biases
+- [[negotiation-tactics]] — Reference points, anchoring, and loss framing are central to every negotiation outcome
+- [[mental-models]] — Prospect Theory as the core decision-science mental model replacing expected utility
+- [[habit-formation]] — Loss aversion (endowment effect) drives resistance to breaking bad habits and status quo behavior
+- [[emotional-intelligence]] — Emotional regulation of loss aversion responses; amygdala activation during loss decisions
+- [[48-laws-of-power]] — Scarcity and loss framing exploited throughout the 48 Laws as psychological leverage
+- [[cialdini-influence]] — Scarcity principle and loss aversion are the neurobiological basis of Cialdini's scarcity trigger
+- [[game-theory-and-strategic-thinking]] — Behavioral game theory; how loss aversion distorts Nash equilibrium predictions
+- [[social-psychology-and-group-dynamics]] — Group framing effects and collective loss aversion in crowd behavior and financial panics
+- [[attachment-theory-and-relationships]] — Loss aversion amplified in anxious-preoccupied attachment; relationship loss framed as catastrophic
+- [[stoicism-and-stoic-philosophy]] — Stoic negative visualization as a systematic antidote to loss aversion and endowment effect
+- [[dopamine-reward-systems-neuroscience]] — Amygdala and striatum dopamine circuits as the neural substrate of the asymmetric value function
+- [[Finance/behavioral-finance-and-investor-psychology]] — Disposition effect, equity premium puzzle, and myopic loss aversion as market-level Prospect Theory applications
+- [[Finance/value-investing-methodology]] — Margin of safety and contrarian investing as structured responses to the market's collective loss aversion
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Loss aversion in geopolitical competition: status quo powers vs. revisionist challengers

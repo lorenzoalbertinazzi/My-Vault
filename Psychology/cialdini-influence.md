@@ -1,9 +1,9 @@
 ---
 title: Cialdini — The 6 Principles of Influence
 date: 2026-05-26
-tags: [psychology, influence, persuasion, Cialdini, social-proof]
-source: research
-last_updated: 2026-05-29
+tags: [psychology, influence, persuasion, Robert-Cialdini, reciprocity, commitment-consistency, social-proof, authority, liking, scarcity, pre-suasion, marketing, sales, compliance, behavioral-economics]
+source: "Cialdini (1984) Influence: The Psychology of Persuasion; Cialdini (2016) Pre-Suasion; Festinger (1957) A Theory of Cognitive Dissonance; Milgram (1963) Behavioral Study of Obedience, JASP"
+last_updated: 2026-05-31
 enriched: 2026-05-29
 ---
 
@@ -328,12 +328,15 @@ The most sophisticated integration of the two frameworks is in the design of neg
 **Competing Critique — Thaler's "Sludge"**: Richard Thaler coined "sludge" (2018) to describe the malicious inversion of nudge theory — adding friction and complexity to prevent people from exercising choices they are entitled to make (unsubscribing from services, claiming refunds, opting out of data sharing). Sludge is dark-pattern design using status quo bias rather than Cialdini principles per se, but it represents the same underlying exploitation of psychological shortcuts for commercial gain at the cost of user welfare.
 
 ## Related
-- [[48-laws-of-power]]
-- [[cognitive-biases]]
-- [[mental-models]]
-- [[negotiation-tactics]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[emotional-intelligence]]
-- [[habit-formation]]
-- [[prompt-engineering]]
-- [[2026-05-27-us-china-great-power-competition]]
+- [[48-laws-of-power]] — Greene's power laws as deliberate deployment of Cialdini's influence principles
+- [[cognitive-biases]] — Influence principles are engineered triggers for specific cognitive biases
+- [[mental-models]] — Influence frameworks as practical mental models for social navigation
+- [[negotiation-tactics]] — Cialdini techniques (anchoring, mirroring, labeling) directly applied in negotiation
+- [[emotional-intelligence]] — EI as the foundation for ethical influence; affect labeling vs. manipulation
+- [[habit-formation]] — Variable reward schedules and commitment loops as engineered habit formation
+- [[social-psychology-and-group-dynamics]] — Social proof and authority grounded in social psychology mechanisms
+- [[prospect-theory-and-decision-making]] — Scarcity and loss aversion as the mechanism behind Cialdini's scarcity principle
+- [[game-theory-and-strategic-thinking]] — Reciprocity and tit-for-tat as game-theoretic influence architecture
+- [[Finance/behavioral-finance-and-investor-psychology]] — Cialdini principles as drivers of market bubbles and herding
+- [[Tech & AI/prompt-engineering]] — Persuasion principles applied to LLM prompt design
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Belt and Road as large-scale reciprocity and commitment influence architecture
