@@ -2,16 +2,16 @@
 title: Israel-Palestine Gaza War 2026 — Ceasefire Collapse, Disarmament Stalemate, and 70% Territory Seizure
 date: 2026-05-30
 tags: [geopolitics, israel, palestine, gaza, Hamas, ceasefire, humanitarian-crisis, Netanyahu, UN, disarmament, ethnic-cleansing, ICJ, genocide, IDF, occupation, west-bank, Netzarim-corridor, Philadelphi-corridor, two-state-solution, Mladenov]
-source: Al Jazeera (May 2026); UN statements (May 2026); CNN (May 2026); ICJ provisional measures; Doctors Without Borders (MSF) reports; Wikipedia Israeli-Palestinian conflict timeline 2026
+source: "OCHA/Gaza Health Ministry cumulative figures via UNRWA Situation Reports #212–221 (through May 2026); OHCHR monitoring data — 922 post-ceasefire Palestinian deaths (May 2026); ICJ provisional measures (South Africa v. Israel, January 2024); UNRWA Situation Report #220 (May 2026); Al Jazeera (May 2026); UN News (May 2026 — 26 killed over Eid holiday); CNN (May 2026); Doctors Without Borders (MSF) field reports"
 last_updated: 2026-05-31
 ---
 
 ## Summary
-The Gaza war — which began with Hamas's October 7, 2023 attack on Israel (1,200 Israelis killed, 251 taken hostage) and Israel's subsequent military campaign — entered a nominally "ceasefire" phase in October 2025, though the truce has been fundamentally violated by continued Israeli military operations. As of late May 2026, Israeli Prime Minister Benjamin Netanyahu has ordered the military to seize 70% of the Gaza Strip — with approximately 60% already under Israeli military control — in defiance of the ceasefire agreement. Despite the nominal ceasefire, 828 Palestinians have been killed since the "truce" began, and overnight Israeli strikes continue to devastate refugee camps. The United Nations has called on Israel to prevent "acts of genocide" and raised concerns over ethnic cleansing across Gaza and the occupied West Bank. The central stalemate remains Hamas disarmament: the US-brokered ceasefire hinges on Hamas surrendering its weapons, which Palestinian factions reject without a political horizon, while Israel insists disarmament is non-negotiable before any reconstruction or political process begins.
+The Gaza war — which began with Hamas's October 7, 2023 attack on Israel (1,200 Israelis killed, 251 taken hostage) and Israel's subsequent military campaign — entered a nominally "ceasefire" phase in October 2025, though the truce has been fundamentally violated by continued Israeli military operations. As of late May 2026, Israeli Prime Minister Benjamin Netanyahu has ordered the military to seize 70% of the Gaza Strip — with approximately 60% already under Israeli military control — in defiance of the ceasefire agreement. Despite the nominal ceasefire, 922 Palestinians have been killed since the "truce" began (OHCHR monitoring data, May 2026), and overnight Israeli strikes continue to devastate refugee camps. The United Nations has called on Israel to prevent "acts of genocide" and raised concerns over ethnic cleansing across Gaza and the occupied West Bank. The central stalemate remains Hamas disarmament: the US-brokered ceasefire hinges on Hamas surrendering its weapons, which Palestinian factions reject without a political horizon, while Israel insists disarmament is non-negotiable before any reconstruction or political process begins.
 
 ## Key Points
 - **Netanyahu's 70% order:** Israeli PM has ordered military seizure of 70% of Gaza; ~60% already under IDF control as of late May 2026 — a direct violation of the October 2025 ceasefire
-- **Post-ceasefire casualties:** 828 Palestinians killed since the "truce" began — demonstrating the ceasefire is nominal rather than functional
+- **Post-ceasefire casualties:** 922 Palestinians killed since the "truce" began (OHCHR monitoring data, May 2026) — demonstrating the ceasefire is nominal rather than functional
 - **Disarmament stalemate:** Nickolay Mladenov (US-brokered ceasefire overseer) says Hamas disarmament is "not negotiable"; Palestinian factions reject disarmament without political guarantees
 - **UN genocide warning:** UN has formally called on Israel to prevent "acts of genocide" and raised "ethnic cleansing" concerns across Gaza and West Bank
 - **Humanitarian catastrophe:** Gaza's civilian infrastructure — hospitals, water systems, homes — is largely destroyed after 19+ months of war (Oct 2023 – Oct 2025) plus continued strikes
@@ -53,8 +53,8 @@ Israel declared war and launched Operation Swords of Iron. By October 2023 Gaza 
 
 **War scope (October 2023 – October 2025, active military phase):**
 - Gaza's pre-war population: ~2.3 million
-- Palestinian deaths: Estimated 45,000–55,000+ (Gaza Health Ministry figures; disputed by Israel but broadly accepted by international observers)
-- Palestinian wounded: 100,000+
+- Palestinian deaths: 72,619 killed (Gaza Health Ministry figures as reported by OCHA/UNRWA, through May 6, 2026); 172,484 injured — figures disputed by Israel but tracked by international bodies
+- Palestinian wounded: 172,000+
 - Displaced: ~1.9 million (85% of population) displaced within Gaza at peak; mass displacement to Rafah in southern Gaza
 - Infrastructure destruction: ~60–70% of Gaza's buildings damaged or destroyed; hospitals, universities, water treatment plants systematically damaged
 - Hostage situation: 251 taken; negotiations over 2 years secured gradual releases; ~80–100 hostages remained in Gaza at ceasefire
@@ -120,7 +120,7 @@ After 19+ months of active war followed by 7+ months of nominal ceasefire with c
 - **Medical system:** 35 of 36 hospitals in Gaza are non-functional or partially functional; Doctors Without Borders (MSF) reports performing surgeries in field conditions
 - **Water/sanitation:** 50%+ of water infrastructure destroyed; desalination plants damaged; sewage systems collapsed → risk of epidemic disease
 - **Housing:** ~70% of housing stock damaged or destroyed; 2.3M people living in tents, partially destroyed buildings, or UN shelters
-- **828 killed since ceasefire:** This number (from medical sources) likely undercounts; confirms the ceasefire has not ended the killing
+- **922 killed since ceasefire:** Per OHCHR monitoring data (May 2026); confirms the ceasefire has not ended the killing. Cumulative death toll: 72,619 Palestinians killed since October 7, 2023 (OCHA/Gaza Health Ministry, through May 6, 2026)
 
 ### Regional and Global Dimensions
 

@@ -56,10 +56,12 @@ In September 2022, North Korea amended its constitution to enshrine nuclear weap
 ### Nuclear Weapons Inventory and Technical Assessment
 
 **Current Warhead Estimates**  
-- DIA (Defense Intelligence Agency, April 2026 congressional testimony): ~50 nuclear warheads
-- Stimson Center/38 North estimates: 45–65 warheads
-- Projected 2030: 80–100+ warheads (if enrichment expansion proceeds)
-- For reference: Pakistan ~170 warheads, India ~160, Israel estimated 90
+- DIA (Defense Intelligence Agency, April 2026 congressional testimony to House Armed Services Committee): approximately 50 assembled warheads; sufficient fissile material for up to 90 warheads
+- Federation of American Scientists (FAS) 2026 estimate: ~60 assembled warheads; sufficient fissile material for at least 90
+- Stimson Center/38 North estimates: 45–65 assembled warheads; total fissile material stockpile potentially supports 90+
+- Projected 2030: 80–100+ warheads (conservative); some analyses project up to 150+ by 2030 and 429 by 2040 (Congressional Research Service, 2026) if HEU production expands as assessed
+- DIA (2025): North Korea has restored its nuclear test site and is "postured to conduct a seventh nuclear test at a time of its choosing"
+- For reference: Pakistan ~170 warheads, India ~160, Israel estimated 90 (FAS, 2026)
 
 **Fissile Material Production**  
 North Korea operates two fissile material pathways:

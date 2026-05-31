@@ -2,7 +2,7 @@
 title: US-China Strategic Competition — The Defining Geopolitical Rivalry of the 21st Century
 date: 2026-05-27
 tags: [geopolitics, US, China, trade-war, taiwan, tech-war, decoupling, great-power-competition, indo-pacific, AUKUS, semiconductors, BRI, BRICS, renminbi-internationalization, power-of-siberia, Japan-Philippines]
-source: CFR (2026); NPR summit readout comparison; CSIS; Rand Corporation
+source: "Allison (2017) Destined for War: Can America and China Escape Thucydides's Trap? (Houghton Mifflin Harcourt); CFR Backgrounder 'US-China Relations' (2026); CSIS 'First Known Island War' China Seas War Game (2023); RAND War with China: Thinking Through the Unthinkable (2016); NPR Trump-Xi summit readouts comparison (May 2026); BIS Triennial Survey on renminbi internationalization (2022); US National Security Strategy (2022 — China as 'most consequential geopolitical challenge'); Biden October 2022 export controls (Federal Register, Vol. 87 No. 197)"
 last_updated: 2026-05-31
 ---
 

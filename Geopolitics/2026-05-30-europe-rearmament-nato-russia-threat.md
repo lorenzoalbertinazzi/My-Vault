@@ -6,12 +6,12 @@ source: Breaking Defense (Apr 2026); SIPRI Military Expenditure Report 2026; Eur
 last_updated: 2026-05-31
 ---
 ## Summary
-Europe is undergoing its largest military buildup since the Cold War, driven by Russia's invasion of Ukraine (2022), NATO's 2025 Hague Summit commitment to 5% GDP defense spending by 2035, and persistent intelligence warnings that Russia could test NATO's Article 5 collective defense commitment as early as 2027–2030. European NATO members spent $559 billion on defense in 2025 — up 14% year-on-year — but face a fundamental paradox: the rearmament is accelerating but will not close critical military capability gaps until 2035, while the threat window is assessed as 2027–2030. Europe is simultaneously redefining its relationship with the United States under continued American pressure to bear more of NATO's burden.
+Europe is undergoing its largest military buildup since the Cold War, driven by Russia's invasion of Ukraine (2022), NATO's 2025 Hague Summit commitment to 5% GDP defense spending by 2035, and persistent intelligence warnings that Russia could test NATO's Article 5 collective defense commitment as early as 2027–2030. European NATO members spent $864 billion on defense in 2025 — up 14% year-on-year (SIPRI Military Expenditure Report 2026) — but face a fundamental paradox: the rearmament is accelerating but will not close critical military capability gaps until 2035, while the threat window is assessed as 2027–2030. Europe is simultaneously redefining its relationship with the United States under continued American pressure to bear more of NATO's burden.
 
 ## Key Points
 - **NATO 5% GDP target**: agreed at the 2025 Hague Summit; at least 3.5% GDP for core defense requirements, total 5% including defense-adjacent spending; most European members currently at 2–3%
 - **The timeline mismatch**: Russia may be ready to test NATO by 2027–2030 (per military intelligence assessments); European capability gaps won't close until 2035 — an 8-10 year vulnerability window
-- **Germany's Zeitenwende**: Germany's €100B special defense fund (2022) and commitment to 2%+ GDP spending represent the most dramatic shift in Germany's postwar strategic culture
+- **Germany's Zeitenwende**: Germany's €100B special defense fund (2022) and 2026 defense budget of $114B (2.3% GDP — first time exceeding 2% since 1990) represent the most dramatic shift in Germany's postwar strategic culture; projected to reach €162B (3.2% GDP) by 2029
 - **Ukraine as laboratory**: the war has provided unprecedented real-world data on drone warfare, electronic warfare, artillery consumption rates, and air defense — reshaping European procurement priorities
 - **US pressure**: Trump administration demands for 5% GDP spending and explicit European contributions to global security (including Indo-Pacific) are forcing an EU strategic autonomy debate
 
@@ -32,7 +32,7 @@ Europe is undergoing its largest military buildup since the Cold War, driven by 
 | Oct 2024 | NATO threat assessment: Russia could test Article 5 by 2027–2030 |
 | Mar 2026 | EU ReArm Europe program: €800B in defense investment authorized |
 | Jun 2025 | NATO Hague Summit: 5% GDP target agreed; 3.5% core defense + 1.5% defense-adjacent |
-| May 2026 | Poland's defense spending reaches 4.7% GDP — highest in NATO; German budget: €85B |
+| May 2026 | Poland's defense spending reaches 4.7% GDP — highest in NATO; German defense budget: $114B (2.3% GDP, first time >2% since 1990); EU SAFE program first tranche of €6.6B disbursed to Poland |
 
 ---
 
@@ -76,7 +76,7 @@ The 2025 NATO Summit at The Hague produced the most ambitious defense commitment
 - Industrial base: European defense industry can sustain current peacetime demand but cannot rapidly expand to wartime rates
 
 **Major capacity announcements (2025–26):**
-- Germany: 200 additional Leopard 2 tanks; 100 F-35A aircraft; Patriot battery expansion; €85B defense budget (2026)
+- Germany: 200 additional Leopard 2 tanks; 100 F-35A aircraft; Patriot battery expansion; $114B defense budget (2026; 2.3% GDP — first time exceeding 2% since 1990; projected €162B/3.2% GDP by 2029)
 - Poland: World's largest army buildup program; 800 K2 Korean main battle tanks (from 2024); 250 Abrams; 24 F-35As; defense budget 4.7% GDP (2026)
 - UK: 2.5% GDP defense spending; investment in long-range missiles (Storm Shadow, future deep-strike)
 - France: 400 Rafale aircraft fleet; new nuclear-powered submarine program; European Long-Range Strike initiative
@@ -95,7 +95,7 @@ The rearmament is creating both NATO burden-sharing and EU strategic autonomy dy
 
 **EU Defense Union**: The European Defence Agency (EDA) and the European Defence Fund (€8B, 2021–27) have been superseded by ambition. The 2024–29 Commission proposed a European Defence Industrial Strategy (EDIS), with €100B European investment in joint procurement, common ammunition stocks, and European defense champions.
 
-**ReArm Europe program**: EU Commission proposed €150B in defense loans under the "Safe" instrument (2026), to be invested jointly in air and missile defense, artillery, long-range strike, and cyber. Requires member state co-financing.
+**ReArm Europe / SAFE program**: EU Commission proposed €150B in defense loans under the "Safe" instrument (2026), to be invested jointly in air and missile defense, artillery, long-range strike, and cyber. Requires member state co-financing. First tranche of €6.6B disbursed to Poland (May 2026) as lead Eastern flank recipient.
 
 **Tension with NATO**: Some US officials view EU defense spending as potentially diverting from NATO interoperability. The "NATO or EU" debate: France (strategic autonomy advocate) vs. Baltic states/Poland (transatlanticist, fear EU defense undermines US commitment). Resolution: "NATO-first" standard maintained but EU provides complementary industrial and financing capacity.
 
@@ -122,7 +122,7 @@ The ultimate deterrence question is whether Vladimir Putin believes NATO's Artic
 
 ### Current Status (May 2026)
 
-- **Spending**: 23 of 32 NATO members spending 2%+ of GDP; 5 spending 3%+. Poland leads at 4.7%.
+- **Spending**: All 32 NATO members now spending 2%+ of GDP (SIPRI 2026); 5 spending 3%+. Poland leads at 4.7%. European NATO total: $864B in 2025 (+14% YoY, per SIPRI Military Expenditure Report 2026).
 - **Hague commitments**: All allies formally signed 3.5%/5% GDP pledge; implementation timelines vary
 - **Eastern flank**: All four Baltic battle groups upgraded from battalion to brigade-level; US armored brigade permanently stationed in Poland
 - **Ukraine aid**: Ongoing. European support has partially compensated for US aid pauses under Trump.

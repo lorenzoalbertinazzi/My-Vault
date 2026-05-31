@@ -2,7 +2,7 @@
 title: Quantitative Finance & Algorithmic Trading
 date: 2026-05-30
 tags: [finance, quantitative-finance, algorithmic-trading, statistical-arbitrage, HFT, stochastic-calculus, factor-models, risk-management]
-source: Quantitative Finance literature; Hull (2018) Options Futures and Other Derivatives; Jansen (2020) Machine Learning for Algorithmic Trading; de Prado (2018) Advances in Financial Machine Learning
+source: "Black & Scholes (1973) The Pricing of Options and Corporate Liabilities, JPE; Fama (1970) Efficient Capital Markets: A Review of Theory and Empirical Work, Journal of Finance; Samuelson (1965) Proof that Properly Anticipated Prices Fluctuate Randomly, Industrial Management Review; Lo & MacKinlay (1988) Stock Market Prices Do Not Follow Random Walks, Review of Financial Studies; Jegadeesh & Titman (1993) Returns to Buying Winners and Selling Losers, Journal of Finance; Fama & French (1992) The Cross-Section of Expected Stock Returns, Journal of Finance; Hull (2018) Options, Futures and Other Derivatives; de Prado (2018) Advances in Financial Machine Learning; Jansen (2020) Machine Learning for Algorithmic Trading; Kelly (1956) A New Interpretation of Information Rate, Bell System Technical Journal"
 last_updated: 2026-05-31
 ---
 

@@ -60,7 +60,7 @@ The front line in May 2026 is largely static compared to the dramatic Ukrainian 
 
 The claimed casualty figures (1,000,000 Russian; 250,000–300,000 Ukrainian) are among the most contested data in the conflict, and both sides have incentives to distort:
 
-**Russian casualties:** The figure of ~1,000,000 comes from a late February 2026 assessment combining intelligence reports from US, UK, and Ukrainian military. Of the 1M, approximately 200,000–250,000 are estimated killed in action (KIA); the remainder are wounded (many permanently disabled). Russia's ability to sustain these losses reflects: (1) large pre-war population base (~145M), (2) coercive mobilization, (3) recruitment of prisoners via Wagner Group legacy contracts and "Storm-Z" units, (4) Central Asian and North Korean troop supplements. North Korean troops were confirmed fighting in Kursk oblast from October 2024 onward, with estimates of 10,000–50,000 KPA soldiers deployed.
+**Russian casualties:** The figure of ~1,000,000 comes from a late February 2026 assessment combining intelligence reports from US, UK, and Ukrainian military (reported by Russia Matters War Report Card). Of the 1M, approximately 200,000–250,000 are estimated killed in action (KIA) — though a May 2026 report citing UK intelligence agency GCHQ (per BBC, May 27, 2026) placed the Russian KIA figure alone at nearly 500,000. These divergent estimates reflect different methodologies: the 1M figure counts KIA + wounded; the GCHQ figure is a killed-only estimate using different counting standards. ISW data shows Russia advanced a net 104 km² in January–May 2026 (vs. 1,619 km² in the same period of 2025), at a cost of 179 Russian casualties per km² advanced (Ukraine Defence Minister, May 2026) — a dramatic attrition rate reflecting increasingly costly Russian advances. Russia's ability to sustain these losses reflects: (1) large pre-war population base (~145M), (2) coercive mobilization, (3) recruitment of prisoners via Wagner Group legacy contracts and "Storm-Z" units, (4) Central Asian and North Korean troop supplements. North Korean troops were confirmed fighting in Kursk oblast from October 2024 onward, with estimates of 10,000–50,000 KPA soldiers deployed.
 
 **Ukrainian casualties:** Significantly harder to assess given information blackout. NATO officials in 2024 cited 70,000–100,000 KIA; the 2026 assessment of 250,000–300,000 total casualties implies continuing high attrition. Ukraine's smaller population (~40M pre-war, now significantly reduced by 6–8M refugees abroad) makes these losses proportionally more severe.
 
@@ -109,6 +109,10 @@ The war in May 2026 fits the pattern of "frozen conflict" rather than decisive r
 | May 23–24, 2026 | Largest single Kyiv attack of war: 600 drones, 90 missiles, Oreshnik deployed |
 
 ---
+
+### Civilian Casualties
+
+The UN High Commissioner for Human Rights (OHCHR) has verified 60,659 civilian casualties since Russia's February 2022 invasion through end-April 2026: 15,850 killed and 44,809 injured. These are *confirmed* figures; actual totals are substantially higher due to the difficulty of verification in active conflict zones. The verified count has grown at an accelerating rate in 2026 as Russia's drone campaign targets Ukrainian urban centres.
 
 ### Implications
 

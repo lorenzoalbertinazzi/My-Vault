@@ -2,7 +2,7 @@
 title: "The Sahel Crisis: Russia's Africa Corps Gambit and the Collapse of Sahel Security"
 date: 2026-05-30
 tags: [sahel, africa, mali, niger, burkina-faso, russia, wagner, africa-corps, jihadism, geopolitics, state-collapse, JNIM, AES, ECOWAS, Bamako, Kidal, Tuareg, FLA, Fulani, counterinsurgency, proxy-war, GRU]
-source: Carnegie Endowment for International Peace; Al Jazeera (Apr–May 2026); Critical Threats; CNN; Foreign Policy; African Arguments; ISPI (May 2026); Small Wars Journal; International Crisis Group
+source: "The Soufan Center IntelBrief (May 12, 2026) 'The Limits of Russia's Africa Corps: Mali and the JNIM-FLA Offensive'; CNN (May 10, 2026) 'Russia's Africa Corps driven from Mali stronghold'; Foreign Policy (May 13, 2026) 'Mali Attacks Reveal Flaws in Russian Security Partnership'; Al Jazeera (Apr 29, 2026) 'What role has Russia played in Mali's security?'; Hudson Institute (Zineb Riboua analysis); Carnegie Endowment for International Peace; ISPI (May 2026); International Crisis Group; Small Wars Journal"
 last_updated: 2026-05-31
 ---
 
@@ -188,6 +188,9 @@ Russia dramatically expands Africa Corps to 8,000–10,000 (similar to Syria sur
 
 **Scenario 4: AES Rapprochement with West (Very Low Risk — 5–10%)**  
 Junta governments, facing existential threats, quietly signal willingness to re-engage France/EU/US for security assistance. Political costs domestically are prohibitive; timing may eventually force this.
+
+**Scenario 5: AES Diversification Beyond Russia (Emerging — notable signal)**  
+Bamako is already hedging beyond the Russia partnership. Mali's Prime Minister met with Iran and China ambassadors in February 2026 to discuss security and defence cooperation; Turkey has supplied drone systems to Malian forces. This diversification — seeking alternatives to both Russia and the West — reflects the junta's pragmatic survival instinct and signals that Russia's prestige loss in Kidal has real consequences for its exclusive security partnership claim in the region (per Al Jazeera and Foreign Policy reporting, May 2026).
 
 **Coastal Contagion Risk**  
 JNIM has already begun penetrating northern Côte d'Ivoire, Togo, Benin, and Ghana. The "Sahel-ification" of coastal West Africa — previously stable, democratic, and economically dynamic — represents a 5–10 year strategic threat to the entire sub-region.
