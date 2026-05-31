@@ -1,9 +1,9 @@
 ---
 title: Europe Heatwave 2026 — Record-Breaking May Temperatures and Deaths
 date: 2026-05-28
-tags: [world-events, climate, heatwave, europe, uk, france, spain, global-warming]
-source: https://en.wikipedia.org/wiki/2026_European_heatwaves
-last_updated: 2026-05-29
+tags: [world-events, climate, heatwave, europe, uk, france, spain, ireland, global-warming, heat-dome, attribution-science, energy-grid, Kew-Gardens, jet-stream-disruption, compounding-risk, physical-climate-risk]
+source: Wikipedia 2026 European Heatwaves; Inside Climate News; Irish Times; Severe Weather Europe; ClimaMeter analysis; Washington Post; UK Met Office
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -20,6 +20,37 @@ In late May 2026, a severe and exceptionally early heat dome settled over Wester
 - Inside Climate News and Washington Post described decades-old temperature records falling
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| May 24, 2026 | Heat dome settles over Western Europe; temperatures begin rising sharply |
+| May 25, 2026 | UK: Kew Gardens sets new springtime temperature record |
+| May 26, 2026 | UK: 35.1°C at Kew Gardens — record broken again; London Underground: 34.3°C; tropical night (>20°C overnight) |
+| May 26, 2026 | Ireland: Shannon Airport 30.6°C; Clonmel and Killarney 28.8°C — new Irish May records |
+| May 26, 2026 | Seville, Spain: ~38°C (100°F) — peak Iberian temperatures |
+| May 26–27, 2026 | Peak of heat dome; France's hottest May on record; Germany, Netherlands also anomalous |
+| May 27, 2026 | France: 7 deaths confirmed (5 drownings, 2 at sports events); UK: 5 deaths |
+| May 28, 2026 | Heat dome weakens; Atlantic airflow begins displacing continental plume |
+| Late May 2026 | ClimaMeter attribution: event was ~3× more likely under current vs pre-industrial climate |
+| Early Jun 2026 | Temperatures return toward seasonal norms; event total duration: ~5 days of extreme anomaly |
+
+---
+
+### Key Actors
+
+**UK Met Office:** Issued red heat warnings for England; confirmed Kew Gardens records; advised London Transport on safety protocols.
+
+**Météo-France:** Declared France's hottest May on record; "unprecedented" official characterization.
+
+**Climate Attribution Scientists (ClimaMeter, World Weather Attribution):** Rapid attribution studies confirmed human-caused warming made the event ~3× more probable. Pre-industrial: ~1-in-100 year; current climate: ~1-in-33 year.
+
+**European Grid Operators (National Grid ESO, RTE, ENTSOE):** Managed peak electricity demand surge coinciding with Hormuz-related gas supply constraints — the compounding crisis scenario.
+
+**EU Commission (Climate Adaptation):** The heatwave intensifies pressure for the EU's heat-proofing building directive, urban greening mandates, and heat action plan requirements across member states.
+
+---
 
 ### The Event: What Happened
 

@@ -1,9 +1,9 @@
 ---
 title: US-Iran Conflict and the Strait of Hormuz Crisis (2026)
 date: 2026-05-27
-tags: [world-events, us-iran, middle-east, strait-of-hormuz, oil, nuclear]
-source: https://www.crisisgroup.org/cmt/global/10-conflicts-watch-2026
-last_updated: 2026-05-29
+tags: [world-events, us-iran, middle-east, strait-of-hormuz, oil, nuclear, IRGC, ceasefire, energy-crisis, pakistan-mediation, HEU, mine-clearance, Brent-crude, WTI, LNG, fixed-income, dollar-hegemony]
+source: Crisis Group (2026 Conflicts Watch); UANI ship-tracking data; CNN shipping visualization (Apr 29, 2026); Bloomberg (May 27, 2026); CNBC Piper Sandler (May 26, 2026)
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -18,6 +18,49 @@ Three months into a military confrontation between the United States and Iran in
 - Regional spillover risk: Houthi attacks on shipping, Hezbollah posture, and Saudi/UAE calculations are all in play
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| Jul 2015 | JCPOA signed; Iran limits enrichment to 3.67%; sanctions partially lifted |
+| May 2018 | Trump (first term) withdraws from JCPOA; "maximum pressure" sanctions reimposed |
+| 2019–2020 | Iran gradually exceeds JCPOA limits; enrichment climbs to 20%, then 60% |
+| Oct 7, 2023 | Hamas attacks Israel; Gaza war begins; Iran implicated as patron |
+| Apr–Oct 2024 | Israel strikes Iranian territory directly; Iran launches drone/missile attacks on Israel |
+| Jan 2025 | Trump (second term) reinstates and escalates maximum pressure on Iran |
+| Feb 2026 | US-Iran military hostilities begin; Strait of Hormuz disruptions escalate |
+| Feb 28, 2026 | US-Israel strikes kill Supreme Leader Ali Khamenei; Mojtaba Khamenei succeeds him |
+| Q1 2026 | EIA: Hormuz oil flow at 30% of normal (~6–7M bpd vs 21M bpd pre-war) |
+| May 6, 2026 | Open commercial transits through Strait fall to ~zero vessels/day |
+| May 2026 | IRGC redefines Strait boundaries as "vast operational area" from Jask to Siri Island |
+| May 25, 2026 | US strikes Iranian missile launch sites even as MOU negotiations proceed |
+| May 26, 2026 | Piper Sandler warns Strait could remain closed months beyond any deal |
+| May 27, 2026 | Brent crude at $95.77 (-11% from peak) on deal hopes; Bloomberg: 1-month normalization timeline |
+| May 27–28, 2026 | Two US-Iran tactical military skirmishes in the Strait |
+| May 29, 2026 | Trump convenes Situation Room for "final determination" on Iran MOU |
+
+---
+
+### Key Actors
+
+**Trump Administration (US):** Orchestrates maximum pressure strategy — simultaneous strike threats and diplomatic overtures. Seeks "better deal" than JCPOA; wants verifiable nuclear limits and Hormuz reopening. Fifth Fleet in Bahrain provides strike capability.
+
+**IRGC (Islamic Revolutionary Guard Corps):** Controls Iran's Strait operations — mining, swarm boat attacks, shore-to-ship missiles. Deployed mines under proposed MOU terms that must be cleared within 30 days. Has redefined Strait boundaries to create ambiguity in any deal.
+
+**Mojtaba Khamenei (Iranian Supreme Leader):** Succeeded Ali Khamenei after Feb 28 strikes. Must ratify any MOU. Less established than his father; political position makes compromise potentially riskier.
+
+**Israel (Netanyahu government):** Struck Iranian nuclear facilities — likely proximate trigger for broader escalation. Existential stake in preventing Iran nuclear breakout; opposes any deal that leaves Hezbollah in aggressive posture.
+
+**Saudi Arabia / UAE:** Depend on Strait for virtually all oil exports. Support Iran containment but fear regional war on their doorstep. UAE aligned with US; Saudi Arabia pursuing more cautious diplomacy after 2023 China-brokered Iran-Saudi normalization.
+
+**Oman:** Back-channel diplomatic mediator between US and Iran; historically provides neutral channel for sensitive negotiations.
+
+**China:** Economic interests in Iranian oil; positioned as potential mediator. Demonstrated capacity with 2023 Iran-Saudi deal. Watches outcome for implications on US-China great power competition.
+
+**IEA / US Strategic Petroleum Reserve:** Releasing emergency oil stocks to cushion market impact; cannot substitute for full Hormuz reopening at scale.
+
+---
 
 ### Background: The Road to Conflict
 

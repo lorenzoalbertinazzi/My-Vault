@@ -1,9 +1,9 @@
 ---
 title: NATO–Russia Gray Zone War — 2026
 date: 2026-05-30
-tags: [geopolitics, NATO, russia, gray-zone, hybrid-warfare, eastern-europe, drone, sabotage, escalation, deterrence]
-source: FDD Analysis (April 2026); Al Jazeera (May 2026); Belfer Center; RealClearDefense; Romania drone incident
-last_updated: 2026-05-30
+tags: [geopolitics, NATO, russia, gray-zone, hybrid-warfare, eastern-europe, drone, sabotage, escalation, deterrence, GRU-Unit-29155, Romania, Baltic, GPS-jamming, Kaliningrad, undersea-cables, article-4, article-5, cyberattack]
+source: FDD Analysis (Apr 2026); Al Jazeera (May 29–30, 2026); Belfer Center; RealClearDefense; Romanian Foreign Ministry statements; Finnish FNCA GPS interference data; BfV/BIS intelligence sharing
+last_updated: 2026-05-31
 ---
 
 ## Summary

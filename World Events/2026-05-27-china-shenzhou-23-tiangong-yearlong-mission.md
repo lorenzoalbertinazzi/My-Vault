@@ -1,9 +1,9 @@
 ---
 title: China's Shenzhou-23 Mission — Year-Long Stay and Hong Kong's First Astronaut
 date: 2026-05-27
-tags: [world-events, china, space, tiangong, shenzhou, astronaut, space-race, technology]
-source: https://www.npr.org/2026/05/25/g-s1-124179/china-launches-shenzhou-23-spacecraft / https://english.news.cn/20260525/e71e193dd1d14e1193edc9173f3f0477/c.html / https://www.euronews.com/next/2026/05/25/what-is-chinas-shenzhou-23-mission-inside-the-year-long-space-experiment
-last_updated: 2026-05-29
+tags: [world-events, china, space, tiangong, shenzhou, astronaut, space-race, technology, hong-kong, CNSA, long-march, lunar-program, microgravity, Chang'e, Wolf-Amendment, US-China-tech-competition]
+source: NPR (May 25, 2026); Xinhua (May 25, 2026); Euronews (May 25, 2026); TechTimes
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -18,6 +18,45 @@ On May 24–25, 2026, China launched the Shenzhou-23 crewed spacecraft carrying 
 - Mission is a milestone in China's preparations for a crewed Moon landing before 2030
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| 2011 | Wolf Amendment enacted — prohibits NASA bilateral cooperation with China's space program |
+| Jan 2019 | Chang'e 4: first landing on Moon's far side |
+| Dec 2020 | Chang'e 5: first lunar sample return since Apollo era |
+| Apr 2021 | Tianhe core module launched — Tiangong space station construction begins |
+| Jul 2022 | Wentian experimental module launched; docks with Tianhe |
+| Oct 2022 | Mengtian experimental module launched; Tiangong three-module configuration complete |
+| Jun 2024 | Chang'e 6: first far-side sample return mission |
+| 2025 | NASA Artemis crewed lunar missions face funding and schedule delays |
+| May 24, 2026 23:08 BJT | Shenzhou-23 launches from Jiuquan Satellite Launch Center on Long March-2F |
+| May 25, 2026 02:45 BJT | Shenzhou-23 docks with Tiangong after 3.5-hour automated rendezvous |
+| May 25–28, 2026 | Crew handover with Shenzhou-21 crew (200+ days aboard); previous crew returns to Earth |
+| ~Nov 2026 | Zhu Yangzhu and Zhang Zhiyuan complete 6-month rotation; return to Earth |
+| ~May 2027 | Li Jiaying completes one-year mission; returns for comprehensive medical evaluation |
+| Pre-2030 | Chang'e crewed lunar landing target (Long March-10 + new crewed spacecraft) |
+
+---
+
+### Key Actors
+
+**Zhu Yangzhu (Mission Commander):** Veteran Shenzhou mission commander. Leads crew operations aboard Tiangong; returns to Earth with Zhang Zhiyuan after standard 6-month rotation (~November 2026).
+
+**Zhang Zhiyuan (Flight Engineer / Pilot):** Responsible for Shenzhou spacecraft systems and piloting. Returns to Earth with Zhu after 6-month rotation.
+
+**Li Jiaying / Lai Ka-ying (Payload Specialist):** First Hong Kong-born astronaut. PhD in computer forensics; research-scientist astronaut selected for mission-specific expertise rather than career military background. Remaining aboard Tiangong for one year (~May 2027 return) — a Chinese space record.
+
+**CNSA (China National Space Administration):** Mission authority; manages China's civil space programme including Tiangong station operations and the Chang'e lunar programme.
+
+**CASC (China Aerospace Science and Technology Corporation):** State enterprise responsible for Long March-2F rocket and Shenzhou spacecraft; operates as state-owned entity vs. SpaceX's commercial model.
+
+**NASA / Artemis Programme:** US parallel effort targeting the lunar south pole. Excluded from cooperation with CNSA by Wolf Amendment (2011); faces funding pressures that have delayed crewed lunar mission timelines. China's methodical progress intensifies political pressure on Artemis funding.
+
+**Beijing / CPC:** Frames mission for domestic political purposes — Li Jiaying's Hong Kong origin deliberately chosen to symbolize national integration under "one country, two systems" framework.
+
+---
 
 ### Background: China's Tiangong Space Station
 

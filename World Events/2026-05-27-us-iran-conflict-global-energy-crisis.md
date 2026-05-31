@@ -1,9 +1,9 @@
 ---
 title: US-Iran Military Conflict and the Global Energy Crisis (2026)
 date: 2026-05-27
-tags: [world-events, Iran, US, war, energy-crisis, Strait-of-Hormuz, oil, Middle-East]
-source: https://en.wikipedia.org/wiki/Portal:Current_events/May_2026
-last_updated: 2026-05-29
+tags: [world-events, iran, USA, war, energy-crisis, strait-of-hormuz, oil, middle-east, stagflation, sanctions, IRGC, ceasefire, MOU, oil-prices, strategic-petroleum-reserve, May-Day-protests, Brent-crude]
+source: Wikipedia Current Events (May 2026); US EIA Q1 2026 data; CNN (May 25–29, 2026); Bloomberg (May 27, 2026); CNBC Piper Sandler (May 26, 2026); CBS News (May 28, 2026)
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -18,6 +18,27 @@ In early 2026, escalating tensions between the United States and Iran broke into
 - Russian strikes on Kyiv (using Oreshnik hypersonic missiles) continue simultaneously, compounding geopolitical instability
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| 1979 | Iranian Revolution; 52 US diplomats held 444 days; enmity institutionalized |
+| 2015 | JCPOA signed; Iran limits enrichment for sanctions relief |
+| May 2018 | Trump withdraws from JCPOA; maximum pressure reimposed |
+| Apr–Oct 2024 | Iran and Israel exchange direct missile/drone attacks for first time |
+| Feb 28, 2026 | US-Israel coordinated strikes kill Supreme Leader Khamenei; war begins |
+| Mar 2026 | Iran closes/mines Strait of Hormuz; oil flow falls to ~30% of normal by Q1 end |
+| May 1, 2026 | Global May Day protests: anti-war + energy cost-of-living demands |
+| Apr 8, 2026 | Pakistan brokers conditional ceasefire |
+| Apr 21, 2026 | Trump extends ceasefire indefinitely |
+| May 6, 2026 | Strait open transits fall to near-zero vessels/day |
+| May 23, 2026 | Trump announces deal "largely negotiated, subject to finalization" |
+| May 25, 2026 | US strikes Iranian missile launch sites even as talks proceed |
+| May 27, 2026 | Brent crude falls to $95.77/barrel (down ~11% from peak on deal optimism) |
+| May 29, 2026 | Trump enters Situation Room for final determination; two US-Iran skirmishes in 48 hours |
+
+---
 
 ### Background: US-Iran Tensions
 

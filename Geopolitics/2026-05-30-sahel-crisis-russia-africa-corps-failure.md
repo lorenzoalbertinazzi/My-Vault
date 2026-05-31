@@ -1,9 +1,9 @@
 ---
 title: "The Sahel Crisis: Russia's Africa Corps Gambit and the Collapse of Sahel Security"
 date: 2026-05-30
-tags: [sahel, africa, mali, niger, burkina-faso, russia, wagner, africa-corps, jihadism, geopolitics, state-collapse]
-source: Carnegie Endowment for International Peace; Al Jazeera; Critical Threats; CNN; Foreign Policy; African Arguments; ISPI
-last_updated: 2026-05-30
+tags: [sahel, africa, mali, niger, burkina-faso, russia, wagner, africa-corps, jihadism, geopolitics, state-collapse, JNIM, AES, ECOWAS, Bamako, Kidal, Tuareg, FLA, Fulani, counterinsurgency, proxy-war, GRU]
+source: Carnegie Endowment for International Peace; Al Jazeera (Apr–May 2026); Critical Threats; CNN; Foreign Policy; African Arguments; ISPI (May 2026); Small Wars Journal; International Crisis Group
+last_updated: 2026-05-31
 ---
 
 ## Summary

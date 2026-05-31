@@ -1,9 +1,9 @@
 ---
 title: 2026 Ebola Outbreak — DRC and Uganda (Bundibugyo Virus)
 date: 2026-05-27
-tags: [world-events, health, Ebola, DRC, Uganda, WHO, pandemic, Africa]
-source: https://www.who.int/news/item/17-05-2026-epidemic-of-ebola-disease-in-the-democratic-republic-of-the-congo-and-uganda-determined-a-public-health-emergency-of-international-concern
-last_updated: 2026-05-29
+tags: [world-events, health, ebola, DRC, uganda, WHO, pandemic, africa, bundibugyo, PHEIC, outbreak, vaccine-gap, humanitarian, Kampala, Ituri, Nord-Kivu, Sud-Kivu, ChAd3-BDBV, ring-vaccination, UNICEF]
+source: WHO Disease Outbreak News DON602 (May 27, 2026); WHO PHEIC declaration (May 17, 2026); NPR (May 26, 2026); CDC mobilization announcement (May 18, 2026); UNICEF Flash Update #1 (May 26, 2026)
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -19,6 +19,43 @@ In 2026, the Democratic Republic of the Congo (DRC) and Uganda are battling a si
 - Up to 10 neighboring countries considered at high risk of further spread
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| 2007 | Bundibugyo ebolavirus first identified in Bundibugyo District, Uganda |
+| 2012 | Second Bundibugyo outbreak in DRC — relatively contained |
+| 2014–2016 | West Africa Zaire strain: 11,000+ deaths; rVSV-ZEBOV vaccine developed |
+| 2018–2020 | DRC Zaire strain outbreak in Nord-Kivu (22 months); Ervebo vaccine deployed |
+| Early 2026 | Bundibugyo outbreak detected in Ituri Province, DRC |
+| Mar 2026 | Spread to Nord-Kivu and Sud-Kivu provinces; conflict hampers response |
+| May 15, 2026 | DRC Ministry formally declares 17th Ebola outbreak in national history |
+| May 17, 2026 | WHO Emergency Committee declares PHEIC — only 2nd Ebola PHEIC ever |
+| May 17, 2026 | American healthcare worker tests positive in Germany — first Western country case |
+| May 18, 2026 | US CDC and DHS activate enhanced airport screening; DRC/Uganda passengers rerouted |
+| May 24, 2026 | Uganda: 5 confirmed cases in Kampala (pop. 3.6M) — major urban spillover |
+| May 26, 2026 | UNICEF Flash Update #1; DRC total: 121 confirmed / 17 deaths; 1,077 suspected / 238 deaths |
+| May 27, 2026 | WHO DON602 confirms case counts; ChAd3-BDBV emergency authorization in progress |
+| May 28, 2026 | Uganda: 9 confirmed, 1 death; ring vaccination strategy finalized |
+
+---
+
+### Key Actors
+
+**WHO (Dr. Tedros Adhanom Ghebreyesus):** Declared PHEIC; coordinating ChAd3-BDBV emergency use authorization with Gavi; technical recommendations to member states on travel screening.
+
+**DRC Ministry of Health:** Declared the outbreak; managing response in three conflict-affected eastern provinces under severe logistical constraints.
+
+**US CDC:** Deployed field epidemiologists and laboratory support to DRC; DHS-coordinated airport screening and entry rerouting active since May 18.
+
+**UNICEF:** Community engagement specialists critical to rebuilding trust (mirrors decisive role in 2018–2020 outbreak control); Flash Update #1 issued May 26.
+
+**Oxford/NIAID (ChAd3-BDBV):** Lead developers of the Phase 2 experimental Bundibugyo vaccine; emergency use authorization being expedited. This is the only candidate available; no licensed vaccine exists for Bundibugyo strain.
+
+**Armed Groups (M23, FDLR, and others in Nord-Kivu/Sud-Kivu):** Active conflict that prevented access to Ebola treatment centers was a key factor in prolonging the 2018–2020 outbreak; the same constraint operates in 2026.
+
+---
 
 ### Background: Ebola and the Bundibugyo Strain
 

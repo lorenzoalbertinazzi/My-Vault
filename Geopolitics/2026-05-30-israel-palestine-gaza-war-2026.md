@@ -1,9 +1,9 @@
 ---
 title: Israel-Palestine Gaza War 2026 — Ceasefire Collapse, Disarmament Stalemate, and 70% Territory Seizure
 date: 2026-05-30
-tags: [geopolitics, israel, palestine, gaza, Hamas, ceasefire, humanitarian-crisis, Netanyahu, UN, disarmament, ethnic-cleansing]
-source: Al Jazeera May 2026; Wikipedia Timeline of Israeli-Palestinian conflict 2026; CNN May 2026; UN statements May 2026
-last_updated: 2026-05-30
+tags: [geopolitics, israel, palestine, gaza, Hamas, ceasefire, humanitarian-crisis, Netanyahu, UN, disarmament, ethnic-cleansing, ICJ, genocide, IDF, occupation, west-bank, Netzarim-corridor, Philadelphi-corridor, two-state-solution, Mladenov]
+source: Al Jazeera (May 2026); UN statements (May 2026); CNN (May 2026); ICJ provisional measures; Doctors Without Borders (MSF) reports; Wikipedia Israeli-Palestinian conflict timeline 2026
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -18,6 +18,29 @@ The Gaza war — which began with Hamas's October 7, 2023 attack on Israel (1,20
 - **Regional spillover:** Overnight strikes on Nuseirat and Bureij refugee camps injuring dozens demonstrate the war's continuation despite the ceasefire framework
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| Oct 7, 2023 | Hamas launches Operation Al-Aqsa Flood; 1,200 Israelis killed; 251 taken hostage |
+| Oct 2023 | Israel declares war; Operation Swords of Iron; ground invasion of northern Gaza |
+| Nov 2023 | Temporary pause; hostage releases via Qatar mediation |
+| Dec 2023 | Israel resumes full military operations; south Gaza focus |
+| Jan 2024 | ICJ: South Africa genocide case; provisional measures ordered |
+| Apr 2024 | Iran launches ~300 drones/missiles at Israel directly (first direct state attack) |
+| May 2024 | Ireland, Norway, Spain recognize Palestinian statehood |
+| Jun 2024 | Rafah military operation; Rafah crossing closed; aid collapses |
+| Sep 2024 | IDF kills Hezbollah SG Nasrallah; Israel-Hezbollah limited war begins |
+| Oct 2024 | IDF kills Hamas political leader Yahya Sinwar in Gaza |
+| Oct 2024 | Iran launches ballistic missile barrage on Israel (second direct attack) |
+| Oct 2025 | US-brokered ceasefire with Egypt-Qatar mediation enters effect |
+| Nov 2025 | Ceasefire immediately violated; Israeli raids continue |
+| Jan–Apr 2026 | 828 Palestinians killed in post-ceasefire strikes; Nuseirat, Bureij camps hit repeatedly |
+| May 2026 | Netanyahu orders IDF to seize 70% of Gaza; ~60% under IDF control |
+| May 2026 | UN formally calls on Israel to prevent "acts of genocide" |
+
+---
 
 ### Background: The October 7, 2023 Attack and War's First Phase
 

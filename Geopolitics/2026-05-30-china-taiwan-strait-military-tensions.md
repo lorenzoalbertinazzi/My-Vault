@@ -1,9 +1,9 @@
 ---
 title: China–Taiwan Strait Military Tensions — 2026
 date: 2026-05-30
-tags: [geopolitics, china, taiwan, taiwan-strait, PLA, military, ADIZ, us-china, indo-pacific, fourth-taiwan-strait-crisis]
-source: AEI China-Taiwan Update (May 2026); CSIS; Reuters; Al Jazeera; Global Taiwan Institute
-last_updated: 2026-05-30
+tags: [geopolitics, china, taiwan, taiwan-strait, PLA, military, ADIZ, us-china, indo-pacific, fourth-taiwan-strait-crisis, TSMC, strategic-ambiguity, porcupine-doctrine, cross-strait, gray-zone, coast-guard, blockade]
+source: AEI China-Taiwan Update (May 2026); CSIS; Reuters; Al Jazeera; Global Taiwan Institute; Bloomberg Economics
+last_updated: 2026-05-31
 ---
 
 ## Summary

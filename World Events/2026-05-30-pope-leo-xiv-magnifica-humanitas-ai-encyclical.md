@@ -1,9 +1,9 @@
 ---
 title: Pope Leo XIV's "Magnifica Humanitas" — The Catholic Church's Landmark AI Encyclical
 date: 2026-05-30
-tags: [world-events, pope, AI, catholic-church, ethics, labor, encyclical, magnifica-humanitas, leo-xiv, technology-ethics]
-source: Vatican.va (May 15, 2026); Vatican News; Time Magazine (May 25, 2026); National Catholic Register; Ascension Press
-last_updated: 2026-05-30
+tags: [world-events, pope, AI, catholic-church, ethics, labor, encyclical, magnifica-humanitas, leo-xiv, technology-ethics, social-teaching, rerum-novarum, laudato-si, Anthropic, Christopher-Olah, algorithmic-bias, human-dignity, international-AI-governance]
+source: Vatican.va (May 15, 2026); Vatican News; Time Magazine (May 25, 2026); National Catholic Register; Dicastery for Culture and Education; EU Commission response; AFL-CIO statement
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -20,6 +20,38 @@ On May 15, 2026, Pope Leo XIV (born Robert Prevost, elected May 2025) signed his
 - First papal document to directly address algorithmic bias, AI unemployment, and AI consciousness/moral status questions
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| 1891 | Leo XIII: *Rerum Novarum* — founding document of Catholic Social Teaching on labor |
+| 1963 | *Pacem in Terris* — nuclear weapons and human rights |
+| 2015 | Francis: *Laudato Si'* — climate change and technological hubris |
+| 2020 | Vatican AI Ethics "Rome Call" signed jointly with IBM and Microsoft |
+| May 2025 | Robert Prevost (Augustinian, from Chicago) elected Pope Leo XIV |
+| 2025 | Dicastery for Culture and Education publishes "Antiqua et Nova" (preliminary AI document) |
+| Nov 2025 | Pope Leo XIV begins drafting *Magnifica Humanitas*; consultations with Pontifical Academy of Sciences and AI researchers (including Anthropic) |
+| May 15, 2026 | Leo XIV signs *Magnifica Humanitas* (42,300 words, 5 chapters) |
+| May 25, 2026 | Holy See publicly releases the encyclical; co-presented with Christopher Olah (Anthropic) |
+| May 25, 2026 | EU Commission: "moral framework complements our AI Act enforcement approach" |
+| May 25, 2026 | AFL-CIO, TUC, ETUC all issue endorsements |
+
+---
+
+### Key Actors
+
+**Pope Leo XIV (Robert Prevost):** First American pope; former head of Augustinian order; elected May 2025. Chose name "Leo" to invoke Leo XIII (Rerum Novarum), signaling social teaching orientation. First encyclical in 12-month-old pontificate.
+
+**Christopher Olah (Anthropic co-founder):** Mechanistic interpretability pioneer — studies what neural networks actually compute internally. Presented alongside Leo XIV; stated "The Pope's document asks exactly the right questions about what we need to understand before deploying AI with high autonomy."
+
+**Pontifical Academy of Sciences:** Consulted during drafting; responsible for unusual technical accuracy for a papal document in describing LLMs, recommendation systems, and algorithmic bias.
+
+**Liberation Theologians (Global South):** Welcomed critique of AI power concentration; noted "data colonialism" framing as particularly relevant to developing nations providing training data without commensurate AI benefit.
+
+**EU Commission (Ursula von der Leyen):** Endorsed as moral complement to AI Act's legal framework — the encyclical provides values foundation that the Act's risk-based approach assumes but doesn't articulate.
+
+---
 
 ### Context: The Catholic Church's Social Teaching Tradition
 
@@ -88,5 +120,12 @@ AFL-CIO (US), TUC (UK), and European Trade Union Congress all issued endorsement
 Whether *Magnifica Humanitas* will have comparable policy impact depends on whether AI governance frameworks — currently stalled in the US and fragmented globally — gain political momentum. The encyclical provides an authoritative moral anchor for advocates of binding AI regulation in the tradition of Catholic Social Teaching's century-long engagement with economic justice.
 
 ## Related
-- [[2026-05-27-us-iran-conflict-global-energy-crisis]] — Other technology-security nexus
-- [[europe-heatwave-2026-record-temperatures]] — Technology and climate connection
+- [[2026-05-30-global-ai-governance-race-to-regulate]] — Regulatory frameworks the encyclical calls for; EU AI Act alignment
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — AI productivity paradox and labor economics
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — AI as geopolitical competition axis; compute governance
+- [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Technical context for the encyclical's "consequential AI decisions" concern
+- [[Tech & AI/llm-training-and-scaling-laws]] — Capability trajectory being governed
+- [[2026-05-27-us-iran-conflict-global-energy-crisis]] — Technology-security nexus
+- [[2026-05-28-europe-heatwave-2026-record-temperatures]] — Technology and climate connection
+- [[cognitive-biases]] — Algorithmic bias and human judgment
+- [[negotiation-tactics]] — Labor movement use of the encyclical in collective bargaining

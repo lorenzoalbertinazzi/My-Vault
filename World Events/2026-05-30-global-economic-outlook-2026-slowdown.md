@@ -1,9 +1,9 @@
 ---
 title: Global Economic Outlook 2026 — Slowdown, Geopolitical Fragmentation, and the AI Productivity Wildcard
 date: 2026-05-30
-tags: [world-events, economy, IMF, recession, inflation, trade, geopolitics, AI]
-source: https://www.imf.org/en/publications/weo/issues/2026/04/14/world-economic-outlook-april-2026, https://www.jpmorgan.com/insights/global-research/outlook/market-outlook, https://www.morganstanley.com/insights/articles/global-economic-outlook-2026
-last_updated: 2026-05-30
+tags: [world-events, economy, IMF, recession, inflation, trade, geopolitics, AI, GDP, geoeconomic-fragmentation, deglobalization, stagflation, productivity-paradox, Solow-paradox, China-property-crisis, de-dollarization, BRICS, tariffs]
+source: IMF World Economic Outlook (Apr 2026); J.P. Morgan Global Research; Morgan Stanley Global Economic Outlook; Goldman Sachs Economic Research; World Bank reconstruction estimates
+last_updated: 2026-05-31
 ---
 ## Summary
 The IMF's April 2026 World Economic Outlook projects global growth at 3.1% in 2026 — below the 3.8% pre-pandemic average and technically above the 2.5% recession threshold but in a fragile zone where multiple simultaneous shocks could trigger contraction. The global economy in 2026 navigates an unusual combination of pressures: persistent inflation (above 2% targets in most economies), geopolitical fragmentation accelerating de-globalization, an AI productivity promise that has yet to appear in GDP statistics, and the hangover of a decade of ultra-low interest rates giving way to structurally higher capital costs. The J.P. Morgan global recession probability stands at 35% — elevated but not imminent.
@@ -16,6 +16,26 @@ The IMF's April 2026 World Economic Outlook projects global growth at 3.1% in 20
 - **Recession probability**: 30–35% over next 12 months (J.P. Morgan); primary risks: US tariff escalation, Middle East energy shock, China property sector deterioration
 
 ## Details
+
+### Timeline of Key Economic Events (2022–2026)
+
+| Date | Event |
+|------|-------|
+| Feb 2022 | Russia-Ukraine war; energy shock drives European inflation to 10%+ |
+| Mar 2022 | Fed begins rate hike cycle from 0% |
+| Jun 2022 | Fed: 75 bps hike — largest since 1994; global tightening cycle accelerates |
+| 2022–23 | CHIPS Act ($52B); IRA ($369B clean energy); European energy diversification investment |
+| Jan 2023 | US debt ceiling crisis; dollar credibility stress |
+| Jul 2023 | Fed funds rate peaks at 5.25–5.5% (22-year high) |
+| 2023 | China property crisis: Evergrande liquidation; Country Garden default |
+| Sep 2023 | ChatGPT-driven AI investment boom; NVIDIA stock +230% in 2023 |
+| Dec 2024 | Fed begins rate cuts (3 cuts of 25 bps each in 2025) |
+| Jan 2025 | Trump tariffs: China at ~145%; EU at 10–25%; global trade disruption |
+| Feb 2026 | US-Iran war; Strait of Hormuz disruption; global energy shock |
+| May 12, 2026 | US-China trade truce: tariffs from ~145% to ~30% (US); ~60–80% to ~10% (China) |
+| Apr 2026 | IMF WEO: global growth 3.1% in 2026; J.P. Morgan recession probability 35% |
+
+---
 
 ### The Growth Landscape: Divergence, Not Recession
 The defining feature of 2026's economic landscape is **divergence**: robust in some regions, stagnant in others, with tail risks concentrated in specific sectors.
@@ -98,6 +118,10 @@ The **geoeconomic fragmentation** trend is arguably the most significant structu
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Strait of Hormuz risk as primary oil supply shock scenario
 - [[2026-05-30-china-taiwan-strait-military-tensions]] — Taiwan conflict as catastrophic downside scenario; semiconductor supply disruption
 - [[2026-05-30-fifa-world-cup-2026-north-america]] — World Cup as tourism and spending multiplier in host economies (US, Mexico, Canada)
+- [[2026-05-27-us-china-great-power-competition]] — Trade war and decoupling as core fragmentation driver
+- [[2026-05-27-russia-central-asia-influence-and-decline]] — Sanctions economics and ruble dynamics
 - [[macroeconomics-101]] — Underlying frameworks: IS-LM, AD-AS, monetary transmission mechanism
 - [[behavioral-finance-and-investor-psychology]] — Sentiment and expectation dynamics amplifying business cycles
 - [[quantitative-finance-and-algorithmic-trading]] — Market pricing of recession probabilities via credit spreads, yield curve inversion
+- [[fixed-income-deep-dive]] — Yield curve dynamics, stagflation premium, central bank policy
+- [[currency-markets-and-fx]] — Dollar hegemony, de-dollarization, currency fragmentation

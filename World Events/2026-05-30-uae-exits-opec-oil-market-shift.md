@@ -1,9 +1,9 @@
 ---
 title: UAE Exits OPEC — The Largest Defection in the Cartel's History
 date: 2026-05-30
-tags: [world-events, UAE, OPEC, oil, energy, gulf, saudi-arabia, geopolitics, energy-markets, oil-cartel]
-source: Al Jazeera (April–May 2026); Gulf News; Khaleej Times; Enerdata; Arab Center DC; HeyGoTrade analysis
-last_updated: 2026-05-30
+tags: [world-events, UAE, OPEC, oil, energy, gulf, saudi-arabia, geopolitics, energy-markets, oil-cartel, ADNOC, OPEC-plus, production-quota, Sultan-al-Jaber, Mohammed-bin-Zayed, net-zero-paradox, price-war, Iraq, Libya, stranded-assets, sovereign-wealth]
+source: Al Jazeera (Apr–May 2026); Gulf News; Khaleej Times; Enerdata; Arab Center DC; HeyGoTrade analysis; Brent crude Bloomberg data
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -20,6 +20,40 @@ On April 28, 2026, the United Arab Emirates announced its withdrawal from both O
 - "OPEC+ without UAE" controls ~35% of global production, down from ~40%
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| Sep 14, 1960 | OPEC founded in Baghdad by Iran, Iraq, Kuwait, Saudi Arabia, Venezuela |
+| 1967 | UAE (as Abu Dhabi) joins OPEC |
+| Oct 1973 | Arab OPEC members embargo US/Netherlands; oil prices quadruple |
+| 2016 | OPEC+ formed with Russia, Kazakhstan, Mexico and others; Saudi-Russia axis |
+| Jul 2021 | UAE blocks OPEC+ deal; demands baseline quota recalculated; partial concession won |
+| Mar 2020 | Saudi-Russia price war (triggered by Russia refusing cuts); oil goes negative briefly |
+| Feb 2026 | US-Iran war begins; Hormuz disruption; energy crisis escalates |
+| Feb 28, 2026 | US-Israel strikes kill Khamenei; UAE provides intelligence/logistics support to US |
+| Apr 2026 | US privately pressures Gulf states to increase production to cap wartime oil prices |
+| Apr 28, 2026 | UAE formally announces OPEC+ withdrawal effective May 1, 2026 |
+| May 1, 2026 | UAE's OPEC membership ends after 59 years |
+| May 1, 2026 | Brent crude falls 2.3% on announcement; then partially recovers |
+| 2027 (target) | ADNOC aims to reach 5 million bbl/day capacity (from 3.4M bbl/day) |
+
+---
+
+### Key Actors
+
+**Mohammed bin Zayed (UAE President):** Architect of UAE's assertive new foreign policy. Supports US alignment on Iran, Israel normalization (Abraham Accords 2020), and now OPEC independence.
+
+**Sultan Al-Jaber (ADNOC CEO / COP28 President):** Engineer of the exit decision; has pushed for years to end quota constraints on ADNOC's expansion. Paradoxically serves as both oil CEO and climate summit president — embodies the UAE's "maximize hydrocarbons before stranded asset scenario" logic.
+
+**Mohammed bin Salman (Saudi Crown Prince):** Faces strategic dilemma: price war risks destroying Saudi revenues; accepting UAE free-riding weakens OPEC discipline. No immediate retaliation announced.
+
+**Iraq / Libya:** Both chronically produce above quota; watching UAE exit closely for precedent. Iraq oil minister's silence widely interpreted as contemplation of similar moves.
+
+**Russia:** OPEC+ member; heavily dependent on oil revenues to fund Ukraine war. Lower oil prices from OPEC fragmentation would severely damage Russia's war financing capacity.
+
+---
 
 ### Background: OPEC's History and the UAE's Role
 
@@ -106,7 +140,12 @@ UAE's alignment with US energy and security interests is the strongest it has be
 More UAE supply entering the market could suppress oil prices modestly. Lower prices slow the economics of renewable energy investment but may also reduce political resistance to green transition by making it less of a sacrifice for consumers.
 
 ## Related
-- [[usa-iran-conflict-2026-war-and-nuclear-negotiations]] — US-Iran war context driving UAE strategic realignment
-- [[us-china-strategic-competition]] — Energy market control as a dimension of great power competition
+- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — US-Iran war context driving UAE strategic realignment
+- [[2026-05-27-us-china-strategic-competition]] — Energy market control as a dimension of great power competition
+- [[2026-05-27-us-iran-conflict-strait-of-hormuz]] — Hormuz disruption that exposed UAE's strategic alignment decision
+- [[2026-05-27-us-iran-conflict-global-energy-crisis]] — Global energy market dynamics from Hormuz closure
+- [[2026-05-30-global-economic-outlook-2026-slowdown]] — Oil prices as core global inflation driver
+- [[2026-05-30-israel-palestine-gaza-war-2026]] — Abraham Accords context; UAE-Israel normalization
 - [[macroeconomics-101]] — Oil price shocks and their macroeconomic transmission mechanisms
 - [[real-assets-reits-and-commodities]] — Commodity markets, oil futures, energy investing
+- [[currency-markets-and-fx]] — Petrodollar system and de-dollarization risk

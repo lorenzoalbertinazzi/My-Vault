@@ -1,9 +1,9 @@
 ---
 title: "North Korea's Nuclear Irreversibility and the Russia-China-DPRK Strategic Axis"
 date: 2026-05-30
-tags: [north-korea, dprk, nuclear-weapons, kim-jong-un, russia, china, nuclear-proliferation, korean-peninsula, ballistic-missiles, geopolitics]
-source: NPR; The Diplomat; 38 North; Bloomberg; Lowy Institute; Washington Times; Congress CRS
-last_updated: 2026-05-30
+tags: [north-korea, dprk, nuclear-weapons, kim-jong-un, russia, china, nuclear-proliferation, korean-peninsula, ballistic-missiles, geopolitics, ICBM, SLBM, tactical-nukes, sanctions-erosion, byungjin, Hwasong, Yongbyon, HEU, stability-instability-paradox]
+source: NPR; The Diplomat (May 2026); 38 North (May 2026); Bloomberg (2026 missile defense analysis); Lowy Institute; DIA congressional testimony (Apr 2026); Stimson Center; RAND
+last_updated: 2026-05-31
 ---
 
 ## Summary

@@ -1,9 +1,9 @@
 ---
 title: "The Global AI Governance Crisis: Competing Frameworks for Regulating Transformative Intelligence"
 date: 2026-05-30
-tags: [AI, artificial-intelligence, regulation, governance, EU-AI-Act, UN, digital-policy, technology-law, geopolitics, safety]
-source: UN Global Dialogue on AI Governance; IAPP; OneTrust; EU Commission; IMF; Atlantic Council CBDC Tracker; Council of Europe AI Treaty
-last_updated: 2026-05-30
+tags: [world-events, AI, artificial-intelligence, regulation, governance, EU-AI-Act, UN, digital-policy, technology-law, geopolitics, safety, Brussels-effect, GPAI, anthropic, openai, compute-governance, alignment, Council-of-Europe, OECD-AI-Principles, Hiroshima-AI-Process]
+source: UN Resolution A/RES/79/325 (2025); EU AI Act (Official Journal, Aug 2024); Council of Europe Framework Convention (Sep 2024); NIST AI Risk Management Framework; G7 Hiroshima AI Process; IAPP compliance tracker
+last_updated: 2026-05-31
 ---
 
 ## Summary

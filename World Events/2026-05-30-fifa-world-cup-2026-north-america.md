@@ -1,9 +1,9 @@
 ---
 title: FIFA World Cup 2026 — North America Hosts the Biggest Tournament in History
 date: 2026-05-30
-tags: [world-events, sports, FIFA, World-Cup, USA, soccer, football, geopolitics]
-source: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026, https://sports.yahoo.com/soccer/article/2026-world-cup-schedule-qualified-teams-groups-match-dates-fixtures-how-to-watch-050724214.html, https://www.nbcsports.com/soccer/news/2026-world-cup-schedule-confirmed-dates-times-stadiums-full-details
-last_updated: 2026-05-30
+tags: [world-events, sports, FIFA, world-cup-2026, USA, soccer, football, geopolitics, CONCACAF, USMNT, north-america, expansion-48-teams, MetLife, Azteca, soft-power, sports-diplomacy, Pulisic, Pochettino]
+source: FIFA.com; Yahoo Sports; NBC Sports; Fox Sports/Telemundo rights data; FIFA revenue projections
+last_updated: 2026-05-31
 ---
 ## Summary
 The 2026 FIFA World Cup — hosted jointly by the United States, Canada, and Mexico across 16 venues from June 11 to July 19 — is the most expansive men's football tournament in history. For the first time, the field has expanded from 32 to 48 teams across 104 matches. The tournament carries outsized geopolitical and commercial significance: the first World Cup in North America since USA 1994, a test of US-Mexico relations under ongoing immigration and trade tensions, and a commercial bonanza with estimated revenues exceeding $11 billion. The US national team (USMNT) enters for the first time in eight years since their 2018 qualifying failure, generating intense domestic interest in a sport that has transformed American fandom.
@@ -16,6 +16,23 @@ The 2026 FIFA World Cup — hosted jointly by the United States, Canada, and Mex
 - **Commercial scale**: FIFA projected $11B+ in revenues; US TV rights (Fox Sports, Telemundo) estimated $2B deal; expected 3.5 billion viewers globally
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| Jun 2018 | Joint North America bid selected to host 2026 World Cup (same week Trump's trade war vs. Mexico begins) |
+| Mar 2023 | Mauricio Pochettino appointed USMNT head coach |
+| Sep 2023 | FIFA confirms 48-team format: 16 groups of 3 |
+| 2023–24 | CONCACAF qualifying: US, Canada, Mexico, Honduras, Panama qualify |
+| May 2025 | FIFA draw: 16 groups announced; Iran qualified (complicates US-Iran conflict context) |
+| Jun 11, 2026 | Tournament opens at Estadio Azteca, Mexico City |
+| Jun 12, 2026 | USMNT opens vs. Paraguay at SoFi Stadium, Los Angeles |
+| Jul 5, 2026 | Quarterfinals begin |
+| Jul 14, 2026 | Third-place match |
+| Jul 19, 2026 | Final at MetLife Stadium, East Rutherford, New Jersey |
+
+---
 
 ### Tournament Structure and Format
 The 2026 World Cup introduces the expanded 48-team format:

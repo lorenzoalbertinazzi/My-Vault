@@ -1,9 +1,9 @@
 ---
 title: Russia's Fading Grip on Central Asia — The New Great Game, 2026
 date: 2026-05-27
-tags: [geopolitics, russia, central-asia, kazakhstan, uzbekistan, china, belt-and-road, SCO]
-source: https://www.realclearworld.com/articles/2026/05/12/how_central_asia_became_russias_quiet_economic_lifeline_1182149.html / https://thediplomat.com/2026/02/is-central-asia-still-russias-backyard/ / https://www.hudson.org/foreign-policy/new-great-game-emerges-central-asia-drifts-away-moscow-tsiporah-fried
-last_updated: 2026-05-29
+tags: [geopolitics, russia, central-asia, kazakhstan, uzbekistan, tajikistan, kyrgyzstan, china, belt-and-road, SCO, CSTO, sanctions-evasion, multi-vector-diplomacy, rare-earths, remittances, decolonization]
+source: https://www.realclearworld.com/articles/2026/05/12/how_central_asia_became_russias_quiet_economic_lifeline_1182149.html; The Diplomat (Feb 2026); Hudson Institute (FPRI May 2026); Times of Central Asia
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -18,6 +18,25 @@ Russia's once-dominant influence over the five former Soviet republics of Centra
 - Kazakhstan and Uzbekistan increasingly assert sovereignty and resist Russian pressure to align on political and military issues
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| 1991 | USSR collapses; 5 Central Asian republics gain independence with structural Russian dependencies |
+| 2001 | US establishes military bases in Kyrgyzstan and Uzbekistan (post-9/11) |
+| 2005–2014 | Gradual Chinese trade growth; BRI framework embryonic |
+| 2014 | Russia annexes Crimea; Central Asia grows cautious of Russian neo-imperialism |
+| 2017 | China-Central Asia trade accelerates; Xi'an summit pathway begins |
+| Feb 2022 | Russia invades Ukraine; Central Asia refuses to support; UN abstentions |
+| 2022–23 | Sanctions corridor emerges: Central Asian exports to Russia up 40–60% above pre-war |
+| May 2023 | China-Central Asia Summit in Xi'an — new institutional framework outside Russian structures |
+| 2023–24 | China-Kyrgyzstan-Tajikistan railway negotiations advance to detailed engineering phase |
+| Jan 2026 | Solovyov threatens "strategic operation" in Central Asia; Uzbekistan rebukes him publicly |
+| Apr 2026 | FPRI: China overtakes Russia as top economic partner in 4 of 5 Central Asian states |
+| May 27, 2026 | Putin state visit to Kazakhstan — framed as reassurance but widely seen as decline management |
+
+---
 
 ### Historical Background: Russia's Central Asian Empire
 

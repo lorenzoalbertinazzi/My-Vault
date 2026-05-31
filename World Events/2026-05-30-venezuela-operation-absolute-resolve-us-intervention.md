@@ -1,9 +1,9 @@
 ---
 title: "Operation Absolute Resolve: The US Military Intervention in Venezuela and Its Global Aftermath"
 date: 2026-05-30
-tags: [venezuela, usa, maduro, operation-absolute-resolve, latin-america, international-law, us-foreign-policy, drug-trafficking, democracy, regime-change]
-source: Wikipedia; Atlantic Council; Brookings Institution; CFR; Just Security; Stimson Center; RAND; The New Humanitarian
-last_updated: 2026-05-30
+tags: [world-events, venezuela, USA, maduro, operation-absolute-resolve, latin-america, international-law, us-foreign-policy, drug-trafficking, democracy, regime-change, delta-force, narco-terrorism, Delcy-Rodriguez, PDVSA, Cartel-of-the-Suns, head-of-state-immunity, SDNY, Cuba, chavismo]
+source: Wikipedia; Atlantic Council; Brookings Institution; CFR; Just Security; Stimson Center; RAND (Feb 2026 assessment); The New Humanitarian; CBS/YouGov polling (Jan 2026); UNHCR Venezuela data
+last_updated: 2026-05-31
 ---
 
 ## Summary

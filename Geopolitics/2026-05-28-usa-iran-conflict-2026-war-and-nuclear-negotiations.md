@@ -1,9 +1,9 @@
 ---
 title: USA–Iran Conflict 2026 — War, Nuclear Program, and Ceasefire Negotiations
 date: 2026-05-28
-tags: [geopolitics, iran, usa, nuclear, middle-east, war, ceasefire, strait-of-hormuz]
-source: https://en.wikipedia.org/wiki/2026_Iran_war
-last_updated: 2026-05-29
+tags: [geopolitics, iran, usa, israel, nuclear, middle-east, war, ceasefire, strait-of-hormuz, pakistan-mediation, IRGC, sanctions, JCPOA, HEU, maximum-pressure, MOU, Abraham-Accords]
+source: Wikipedia 2026 Iran War; CNN (May 24–29, 2026); Axios (May 24, 2026); Bloomberg (May 27, 2026); CNBC Piper Sandler (May 26, 2026)
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -20,6 +20,49 @@ In February 2026, the United States and Israel launched coordinated airstrikes a
 - As of 25 May 2026, a memorandum of understanding was reported to be near finalization
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| 1979 | Iranian Revolution; 52 American diplomats held hostage 444 days |
+| 2015 | JCPOA signed; Iran limits enrichment in exchange for sanctions relief |
+| May 2018 | Trump withdraws from JCPOA; maximum pressure sanctions reimposed |
+| 2018–2024 | Iran enriches to 60%, then 84% (weapons-grade threshold: 90%) |
+| Jan 2020 | US kills IRGC General Soleimani; Iran strikes US bases in Iraq |
+| Apr 2024 | Iran launches ~300 drones/missiles at Israel directly for first time |
+| Oct 2024 | Iran launches ballistic missiles at Israel (second direct attack) |
+| Apr 2025 | Trump sends letter to Khamenei; 60-day negotiation window set |
+| Jun 2025 | Talks progress but fail to reach comprehensive agreement |
+| Feb 28, 2026 | US-Israel coordinated airstrikes kill Supreme Leader Khamenei; war begins |
+| Mar 2026 | Iran closes Strait of Hormuz; oil flows to ~30% of normal by Q1 end |
+| Mar–Apr 2026 | Regional proxy escalation: Houthi attacks on Red Sea; Iraq militia strikes US bases |
+| Apr 8, 2026 | Pakistan brokers conditional 2-week ceasefire |
+| Apr 21, 2026 | Trump extends ceasefire indefinitely |
+| May 6, 2026 | Open vessel transits through Strait fall to near-zero per day |
+| May 12–15, 2026 | Trade truce talks with China in Beijing overlap with Iran MOU negotiations |
+| May 23, 2026 | Trump: deal "largely negotiated, subject to finalization" |
+| May 25, 2026 | US strikes Iranian missile sites even as negotiations proceed |
+| May 27, 2026 | Bloomberg: Hormuz normalization possible within 1 month of deal |
+| May 29, 2026 | Trump enters Situation Room for "final determination"; MOU terms largely disclosed |
+
+---
+
+### Key Actors
+
+**Donald Trump (US President):** Pursues "maximum pressure + talks simultaneously" — strikes Iranian military targets while negotiating. Goal: "better deal than JCPOA." Offered Iran sanctions relief conditional on nuclear concessions.
+
+**Mojtaba Khamenei (Iran Supreme Leader, from Feb 2026):** Successor to Ali Khamenei (killed Feb 28). Has not yet formally confirmed MOU acceptance. Iran's IRGC-affiliated Fars News describes Trump's deal characterization as "a mix of truth and lies."
+
+**Pakistan (PM/DPM Ishaq Dar as mediator):** Leveraged Iran relations and US relationships to broker ceasefire. Pakistan's Iran mediation success represents its most significant diplomatic achievement since 1990s.
+
+**Israel (PM Netanyahu):** Viewed Iranian nuclear program as existential. Israeli airstrikes on Iranian nuclear facilities may have triggered the broader escalation. Opposes any deal that leaves Iran's nuclear capability intact or Hezbollah aggressive.
+
+**Nickolay Mladenov (Ceasefire Overseer):** UN veteran diplomat appointed US-backed coordinator. Key statement: Hamas disarmament "not negotiable" (separate context) — his Iran mandate: oversee compliance.
+
+**IRGC (Iranian Revolutionary Guard Corps):** Controls Iran's military operations, nuclear program security, and proxy network (Hezbollah, Houthis, Iraqi militias). IRGC redefined Hormuz as "vast operational area" from Jask to Siri Island — complicating deal geography.
+
+---
 
 ### Historical Background
 

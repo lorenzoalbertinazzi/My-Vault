@@ -1,9 +1,9 @@
 ---
 title: Cuba Fuel Crisis 2026 — Diesel Exhaustion, 22-Hour Blackouts, and Humanitarian Collapse
 date: 2026-05-30
-tags: [world-events, cuba, energy-crisis, blackouts, humanitarian, US-sanctions, Venezuela, fuel-shortage, Caribbean]
-source: Al Jazeera May 14 2026; Axios May 28 2026; class24.study Cuba Fuel Crisis 2026; travelandtourworld.com; 2026 Cuban crisis Wikipedia
-last_updated: 2026-05-30
+tags: [world-events, cuba, energy-crisis, blackouts, humanitarian, US-sanctions, venezuela, fuel-shortage, Caribbean, Pemex, secondary-sanctions, embargo, grid-collapse, surgery-delays, water-crisis, Special-Period, PDVSA, UNDP]
+source: Al Jazeera (May 14, 2026); Axios (May 28, 2026); UN Special Rapporteur statement (Alena Douhan); WFP emergency appeal; UNDP Cuba; Wikipedia 2026 Cuban Crisis
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -18,6 +18,41 @@ Cuba is experiencing its most severe humanitarian crisis in decades, triggered b
 - **Diplomatic stall:** Axios reported (May 28, 2026) that US-Cuba talks to resolve the crisis have stalled, with no relief in sight
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| 1991 | Soviet collapse ends oil subsidies; Cuba's "Special Period" begins (35–40% GDP contraction) |
+| 2005 | Venezuela's PetroCaribe begins: 100,000+ bbl/day subsidized oil; crisis ends |
+| 2019 | Venezuelan oil capacity collapses under US maximum pressure sanctions |
+| 2022 | Biden partially eases some Cuba restrictions |
+| Jan 2025 | Trump administration reverses Biden Cuba easing; maximum pressure resumed |
+| Feb 2026 | US begins blocking oil tankers to Cuba; secondary sanctions target Pemex |
+| Feb–Mar 2026 | Pemex suspends Cuba oil deliveries under US financial market pressure |
+| Mar 16, 2026 | Cuba's national electricity grid collapses — all 6 major thermoelectric plants go offline |
+| Apr 2026 | Emergency Algerian oil shipment buys days of generation; then exhausted |
+| May 14, 2026 | Energy Minister De La O'levy confirms Cuba has completely run out of oil and diesel |
+| May 14, 2026 | Al Jazeera reports: 20–22 hour daily blackouts; ~1M without water; 96,000+ surgeries delayed |
+| May 28, 2026 | Axios: US-Cuba talks to resolve fuel crisis have stalled |
+
+---
+
+### Key Actors
+
+**Cuban Government (President Miguel Díaz-Canel):** Declares state of energy emergency; appeals internationally for aid; rejects US preconditions for relief.
+
+**Trump Administration / US Treasury (OFAC):** Designed and enforced secondary sanctions targeting Pemex and other tanker operators; Cuba treated as regime change priority alongside Venezuela/Iran.
+
+**Pemex (Mexican State Oil):** Primary Cuba supplier until Feb 2026; suspended deliveries under threat of exclusion from US financial markets (~$100B debt exposure makes compliance rational).
+
+**UN Special Rapporteur on Coercive Measures (Alena Douhan):** Called the US blockade "collective punishment" of Cuban civilians; statement rejected by US State Department.
+
+**WFP/UNDP Cuba:** Emergency appeals issued; estimate 7.5M Cubans facing acute food insecurity in 2026, up from 4.2M in 2023.
+
+**Mexico (President Claudia Sheinbaum):** Strongly condemned US pressure on Pemex as "attack on Mexican sovereignty"; appealed to OAS without effect; ultimately complied economically.
+
+---
 
 ### Background: Cuba's Energy Dependency
 

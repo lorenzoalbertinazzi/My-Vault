@@ -1,9 +1,9 @@
 ---
 title: US-China Great Power Competition and the Fragmenting World Order
 date: 2026-05-27
-tags: [geopolitics, us-china, great-power-competition, multipolar, trade-war]
-source: https://www.weforum.org/press/2026/01/global-risks-report-2026-geopolitical-and-economic-risks-rise-in-new-age-of-competition/
-last_updated: 2026-05-29
+tags: [geopolitics, us-china, great-power-competition, multipolar, trade-war, taiwan, semiconductors, decoupling, indo-pacific, BRI, BRICS, dollar-hegemony, AI-competition, Thucydides-trap]
+source: WEF Global Risks Report 2026; CFR; Trump-Xi Beijing Summit (May 14, 2026); NPR; Bloomberg
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -18,6 +18,42 @@ The rivalry between the United States and China is the defining geopolitical con
 - The Global South is increasingly a contested battleground, with both powers competing for influence via trade, infrastructure, and diplomatic alignment
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| 1972 | Nixon-Kissinger China opening; détente begins |
+| 2001 | China joins WTO; "engagement thesis" at peak |
+| 2012 | Xi Jinping comes to power; abandons "hide and bide" doctrine |
+| 2013 | Belt and Road Initiative launched (150+ countries) |
+| 2017 | US NSS names China "revisionist power and strategic competitor" |
+| 2018–19 | US-China trade war; tariffs on $360B+ Chinese goods |
+| Oct 2022 | Biden October semiconductor export controls — most sweeping tech restrictions since Cold War |
+| Aug 2022 | Pelosi visits Taipei; China's largest Taiwan exercises since 1996 |
+| Jun 2023 | China-Central Asia Summit (Xi'an) — new institutional framework |
+| Aug 2024 | BRICS expansion: Saudi Arabia, UAE, Egypt, Ethiopia, Iran added |
+| Jan 2025 | Trump returns; tariffs escalate to ~145% on Chinese goods |
+| May 12, 2026 | US-China trade truce: US tariffs to ~30%; China tariffs to ~10% |
+| May 14, 2026 | Trump-Xi Beijing Summit — first direct summit of Trump's second term |
+| May 20, 2026 | Xi-Putin Moscow meeting; Power of Siberia-2 pipeline deal fails again |
+| May 2026 | Taiwan excluded from WHO World Health Assembly for 10th consecutive year |
+
+---
+
+### Key Actors
+
+**Joe Biden (2021–2025):** Maintained tariffs; multilateral approach (AUKUS, CHIPS Act); October 2022 semiconductor export controls — the decisive technology containment move.
+
+**Donald Trump (2025–):** Raised tariffs to ~145%; then agreed May 2026 truce at ~30%. Combines confrontation with transactional deal-making. Accompanied by Musk, Cook, Fink, Ortberg to Beijing — signaling corporate re-engagement.
+
+**Xi Jinping:** Consolidated power (removed term limits 2018); "Made in China 2025"; Taiwan reunification as historical mission; "no limits" partnership with Russia (2022). Has stalled Power of Siberia-2 pipeline to extract leverage from Moscow.
+
+**TSMC / Taiwan Semiconductor:** The single most strategically important private company. Produces ~90% of world's most advanced chips. TSMC Arizona fab (2025: 4nm; 2026: 2nm) represents deliberate US-encouraged geographic diversification.
+
+**NVIDIA:** US AI chip maker whose A100/H100 chips are restricted from China. China-specific H800 created then also restricted. Central to the compute dimension of the AI competition.
+
+---
 
 ### Historical Background: From Engagement to Competition
 

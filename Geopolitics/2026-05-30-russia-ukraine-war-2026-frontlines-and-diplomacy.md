@@ -1,9 +1,9 @@
 ---
 title: Russia-Ukraine War 2026 — Frontlines, Attrition, and Stalled Diplomacy
 date: 2026-05-30
-tags: [geopolitics, russia, ukraine, war, NATO, frontlines, diplomacy, attrition, drones, casualties]
-source: Russia Matters War Report Card May 27 2026 (russiamatters.org); The Economist May 2026; Institute for the Study of War (ISW) daily updates
-last_updated: 2026-05-30
+tags: [geopolitics, russia, ukraine, war, NATO, frontlines, diplomacy, attrition, drones, casualties, Oreshnik, Zelensky, Putin, Avdiivka, frozen-conflict, energy-infrastructure, Shahed, FPV-drones, mobilization]
+source: Russia Matters War Report Card (May 27, 2026); The Economist (May 2026); ISW daily updates; UK/US intelligence assessments; Ukrainian government economic data; Oryx open-source equipment tracking
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -18,6 +18,30 @@ The Russia-Ukraine war, now in its fifth year following Russia's full-scale inva
 - **Russian public opinion:** 62% of Russians support peace negotiations; 61% of Ukrainians support territorial compromises to end the war — a significant softening of Ukrainian public resolve compared to 2022–2023
 
 ## Details
+
+### Background and Root Causes
+
+Russia's full-scale invasion of Ukraine on February 24, 2022 — the largest land war in Europe since World War II — was the culmination of a decade of escalating tension. The proximate trigger was Ukraine's post-2014 Euromaidan revolution, NATO membership aspirations, and the 2022 failure of the Minsk II ceasefire process. The structural causes: Putin's conviction that Ukraine is not a real nation ("one people" in his February 2022 speech), Russia's perceived right to a sphere of influence in the post-Soviet space, and NATO's eastward enlargement which Russia viewed as an existential security threat.
+
+The war followed Russia's 2014 annexation of Crimea and support for separatists in Donbas (Donetsk and Luhansk), which had already displaced ~1.5 million people. Ukraine's military reforms post-2014 — NATO training standards, new equipment procurement, and combat experience in the Donbas — meant it was far more capable than Russian planners assumed.
+
+---
+
+### Key Actors
+
+**Vladimir Putin (Russia):** Initiated the invasion; controls Russia's military, intelligence, and nuclear arsenal through a highly centralized command. Publicly committed to "denazification" and "demilitarization." Has annexed four Ukrainian oblasts (Donetsk, Luhansk, Zaporizhzhia, Kherson) under Russian law.
+
+**Volodymyr Zelensky (Ukraine):** Former comedian and president who became the symbol of Ukrainian resistance. Addressed the US Congress, EU Parliament, and G7. His "Victory Plan" (Oct 2024) insists on full territorial restoration including Crimea.
+
+**The United States:** Largest single arms supplier (~$60B+ in military aid 2022–2026). The Trump administration (2025–) paused some aid and pursued bilateral talks with Moscow, excluding Kyiv.
+
+**NATO/Europe:** ~$100B+ in combined European military assistance. Key suppliers: UK (Storm Shadow missiles), Germany (Leopard 2 tanks), France (AMX-10RC, Caesar artillery). NATO allies are divided between "escalation hawks" (Poland, Baltic states) and "ceasefire pragmatists" (Hungary, some Western European voices).
+
+**North Korea (DPRK):** Supplied ~3–5 million 152mm artillery shells and deployed 10,000–15,000 troops (primarily in Kursk oblast from Oct 2024). In return receives Russian space, missile, and nuclear propulsion technology.
+
+**Iran:** Supplied Shahed-136 kamikaze drones (produced domestically in Russia as "Geran-2"); Russia's primary drone weapons source until domestic production scaled. Now largely superseded by Russian domestic Shahed production.
+
+---
 
 ### Current Military Situation (Late May 2026)
 
@@ -62,7 +86,45 @@ The claimed casualty figures (1,000,000 Russian; 250,000–300,000 Ukrainian) ar
 
 The war in May 2026 fits the pattern of "frozen conflict" rather than decisive resolution. Neither side has the capacity to achieve decisive military victory: Russia cannot break Ukrainian resistance (demonstrated by failure in 3 years of trying), but Ukraine cannot militarily expel Russian forces from occupied territories without dramatically escalating Western support that has not materialized. This suggests the most likely near-term scenario is continued attritional warfare with periodic partial ceasefires, rather than either comprehensive peace or dramatic territorial change.
 
+---
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| Feb 24, 2022 | Russia launches full-scale invasion; advances on Kyiv, Kharkiv, Mariupol |
+| Mar–Apr 2022 | Russian withdrawal from Kyiv region; discovery of Bucha atrocities |
+| Sep 2022 | Ukraine counteroffensive retakes Kharkiv region (~6,000 km²); Russia annexes 4 oblasts |
+| Oct 2022 | Russia begins systematic missile campaign on energy infrastructure |
+| Nov 2022 | Ukraine retakes Kherson city |
+| Jun 2023 | Ukraine's Zaporizhzhia counteroffensive fails to breach Russian lines |
+| Jul 2023 | Wagner mutiny; Prigozhin marches on Moscow; killed Aug 2023 |
+| Oct 2023 | North Korean troop deployment to Kursk begins (confirmed) |
+| Feb 2024 | Russia captures Avdiivka after months-long siege |
+| Jun 2024 | Ukraine strikes Russian oil refineries in Samara, Saratov regions |
+| Late 2024 | Russia launches Oreshnik hypersonic missile for first time in combat |
+| Jan 2025 | Trump returns to presidency; US-Ukraine aid under review |
+| 2025 | Russia sustains ~8,000+ drones/month; front largely static in Donetsk |
+| May 19–26, 2026 | Russia's largest weekly territorial loss of 2026: 38 sq mi |
+| May 23–24, 2026 | Largest single Kyiv attack of war: 600 drones, 90 missiles, Oreshnik deployed |
+
+---
+
+### Implications
+
+1. **Nuclear precedent:** The first confirmed ballistic missile exchange between nuclear states (if counting Russia-Ukraine Oreshnik use) sets dangerous precedents for escalation thresholds.
+2. **NATO solidarity:** Continued Western support has held despite war fatigue and political changes in the US. But the durability of this coalition is the central strategic variable.
+3. **Defense industry:** The war has exposed peacetime production rates as inadequate for high-intensity warfare; European and US defense industrial capacity is being rebuilt as a direct consequence.
+4. **Global south alignment:** Most of the Global South has refused to endorse either side; Russia has leveraged "anti-Western" rhetoric effectively in Africa, Latin America, and parts of South Asia.
+5. **Energy transition:** Russia's weaponization of energy (gas cutoffs 2022; drone strikes on Ukrainian grid) has permanently accelerated European energy diversification and renewable investment.
+6. **Reconstruction costs:** World Bank/EU estimate: $400–500B in Ukrainian reconstruction costs over the next decade — one of the largest post-war reconstruction challenges in modern history.
+
 ## Related
 - [[2026-05-27-russia-central-asia-influence-and-decline]] — Russia's declining soft power and Central Asian realignment
 - [[2026-05-27-us-china-great-power-competition]] — Ukraine war reshapes US-China strategic competition context
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Iran-Russia arms cooperation (Shahed drones) connects conflicts
+- [[2026-05-30-europe-rearmament-nato-russia-threat]] — European rearmament directly driven by the war
+- [[2026-05-30-nato-russia-gray-zone-war]] — Gray zone operations alongside hot war in Ukraine
+- [[2026-05-30-north-korea-nuclear-russia-china-axis]] — DPRK troop deployment; Russia-DPRK technology exchange
+- [[macroeconomics-101]] — War economics, sanctions transmission, reconstruction finance
+- [[fixed-income-deep-dive]] — Ukrainian bond markets, frozen Russian reserves, reconstruction bonds

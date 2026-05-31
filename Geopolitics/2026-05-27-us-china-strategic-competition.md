@@ -1,9 +1,9 @@
 ---
 title: US-China Strategic Competition — The Defining Geopolitical Rivalry of the 21st Century
 date: 2026-05-27
-tags: [geopolitics, US, China, trade-war, Taiwan, tech-war, decoupling, great-power-competition]
-source: https://www.cfr.org/articles/visualizing-2026-five-foreign-policy-trends-watch
-last_updated: 2026-05-29
+tags: [geopolitics, US, China, trade-war, taiwan, tech-war, decoupling, great-power-competition, indo-pacific, AUKUS, semiconductors, BRI, BRICS, renminbi-internationalization, power-of-siberia, Japan-Philippines]
+source: CFR (2026); NPR summit readout comparison; CSIS; Rand Corporation
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -18,6 +18,28 @@ The rivalry between the United States and China has emerged as the dominant axis
 - The relationship follows the "Thucydides Trap" dynamic: a rising power (China) challenging a ruling power (US) has historically led to war in 12 of 16 historical cases (per Graham Allison's analysis)
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| 1978 | Deng Xiaoping's "Reform and Opening Up" — 30+ years of ~10% GDP growth begins |
+| 1989 | Tiananmen Square; Western sanctions (briefly); engagement policy continues |
+| 2001 | China joins WTO; US engagement thesis at peak |
+| 2013 | Xi takes power; BRI launched; South China Sea island-building begins |
+| 2017 | US NSS: China named "revisionist power." Trump-era trade war begins 2018 |
+| Jul 2017 | South China Sea arbitration ruling (China's nine-dash line rejected by UNCLOS tribunal) |
+| 2020 | US bans Huawei from 5G in allied countries |
+| Oct 2022 | Biden: sweeping chip export controls; ASML EUV machines restricted |
+| Sep 2022 | Taiwan: PLA Joint Sword exercises after Pelosi visit — largest since 1996 |
+| 2022–23 | CHIPS Act ($52B); AUKUS advanced capabilities track; Philippines base expansion |
+| Jan 2025 | Trump 2.0: tariffs to ~145% on China; China retaliates |
+| May 12, 2026 | US-China trade truce: tariffs to ~30%/~10% |
+| May 14, 2026 | Trump-Xi Beijing Summit — agriculture, tariffs, Taiwan, rare earths on agenda |
+| May 19, 2026 | Japan-South Korea trilateral security summit; Japan-Philippines Reciprocal Access Agreement |
+| May 20, 2026 | Xi-Putin Moscow: "comprehensive strategic partnership" reaffirmed; no pipeline deal |
+
+---
 
 ### Historical Background
 

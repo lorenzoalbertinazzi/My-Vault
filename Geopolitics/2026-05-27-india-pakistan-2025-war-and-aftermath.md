@@ -1,9 +1,9 @@
 ---
 title: India-Pakistan 2025 War and Its Aftermath
 date: 2026-05-27
-tags: [geopolitics, India, Pakistan, Kashmir, nuclear, South-Asia, conflict]
-source: https://www.unsw.edu.au/newsroom/news/2026/05/one-year-after-their-brief-war-how-close-are-india-and-pakistan-to-another-conflict
-last_updated: 2026-05-29
+tags: [geopolitics, india, pakistan, kashmir, nuclear, south-asia, conflict, war, ceasefire, operation-sindoor, lashkar-e-taiba, proxy-war, nuclear-deterrence, LOC, stability-instability-paradox]
+source: https://www.unsw.edu.au/newsroom/news/2026/05/one-year-after-their-brief-war-how-close-are-india-and-pakistan-to-another-conflict; Al Jazeera (May 2026); Washington Post (May 5, 2026)
+last_updated: 2026-05-31
 ---
 
 ## Summary
@@ -19,6 +19,39 @@ In May 2025, India and Pakistan — two nuclear-armed states — fought a brief 
 - Militant activity has shifted focus to Jammu division, with targeted attacks on Hindu and non-Kashmiri civilians
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| Aug 2019 | India revokes Article 370; J&K's autonomy ended; Pakistan breaks diplomatic ties |
+| Apr 22, 2025 | Pahalgam attack: 26 civilians killed in Kashmir; India blames Lashkar-e-Taiba |
+| May 6, 2025 | India launches Operation Sindoor: airstrikes on terrorist infrastructure in Pakistani Punjab |
+| May 6–10, 2025 | First India-Pakistan conflict to use cruise missiles, ballistic missiles, and armed drones |
+| May 10, 2025 | US-brokered ceasefire; both sides claim bilateral decision |
+| Jul–Dec 2025 | Ceasefire holds; no formal talks; militant activity shifts to Jammu division |
+| Jan 2026 | Military hotlines between DGMOs formally activated |
+| Feb–Apr 2026 | Pakistan brokers US-Iran ceasefire; Pakistan's diplomatic standing rises sharply |
+| May 5, 2026 | One-year ceasefire anniversary; Washington Post assesses fragile "furniture-throwing peace" |
+| May 23, 2026 | Al Jazeera confirms ~4 back-channel meetings (retired officials, generals, intelligence figures) |
+| May 27, 2026 | Trump visits China, offers to fly to Pakistan for Iran deal signing; no India visit |
+| May 29, 2026 | RSS's Dattatreya Hosabale publicly endorses dialogue with Pakistan |
+
+---
+
+### Key Actors
+
+**Narendra Modi (India PM):** Led the decision to launch Operation Sindoor; maintains formal hard line on Pakistan while allowing quiet back-channel signals. His RSS base historically opposed any Pakistan dialogue; RSS's recent dialogue endorsement gives him political cover.
+
+**Pakistan's Military Leadership (Chief of Army Staff):** Real power in Pakistan's security decisions; brokered with US mediators during ceasefire. Leveraged Iran ceasefire success to raise Pakistan's global profile.
+
+**United States (Trump Administration):** Brokered the ceasefire through diplomatic engagement, including Saudi Arabia and UAE as intermediaries. Strained relations with India over tariffs reduce Washington's deference to India's regional preferences.
+
+**China:** Pakistan's "all-weather ally." Called for restraint but didn't meaningfully constrain Pakistan. Did not play a comparable mediating role to the US, revealing limits of economic leverage through CPEC in crisis management.
+
+**Lashkar-e-Taiba (LeT):** Pakistan-based militant group (designated terrorist by US, UN, EU) blamed for the Pahalgam attack. LeT denial standard operating procedure; India sees it as Pakistan state proxy.
+
+---
 
 ### Historical Background: The Kashmir Dispute
 

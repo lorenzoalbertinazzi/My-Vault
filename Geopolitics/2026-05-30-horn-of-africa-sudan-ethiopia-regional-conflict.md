@@ -1,9 +1,9 @@
 ---
 title: Horn of Africa — Sudan's Civil War and the Risk of Regional Escalation (2026)
 date: 2026-05-30
-tags: [geopolitics, africa, sudan, ethiopia, horn-of-africa, civil-war, UAE, Egypt, Red-Sea]
-source: https://www.thenewhumanitarian.org/analysis/2026/03/23/regional-mega-war-renewed-conflict-ethiopia-sudan, https://hornreview.org/2026/05/08/how-sudans-war-is-drawing-ethiopia-into-a-dangerous-regional-spiral/, https://foreignpolicy.com/2026/01/27/sudan-united-arab-emirates-saudi-arabia-ethiopia-trump-red-sea/
-last_updated: 2026-05-30
+tags: [geopolitics, africa, sudan, ethiopia, horn-of-africa, civil-war, UAE, egypt, red-sea, RSF, SAF, proxy-war, humanitarian-crisis, GERD, Hemeti, Burhan, Bab-el-Mandab, Port-Sudan, famine, internal-displacement]
+source: The New Humanitarian (Mar 23, 2026); Horn Review (May 8, 2026); Foreign Policy (Jan 27, 2026); UN OCHA 2026; ACLED data
+last_updated: 2026-05-31
 ---
 ## Summary
 Sudan's civil war, now entering its fourth year (began April 2023), has become one of the world's worst humanitarian catastrophes — with 150,000+ dead, 10 million displaced, and a country effectively partitioned between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF). In 2026, the conflict is metastasizing into a regional crisis as foreign powers — the UAE, Egypt, Saudi Arabia, and Ethiopia — become increasingly entangled, raising the specter of a Horn of Africa "regional mega-war" that could redraw borders and destabilize the Red Sea trade corridor. The conflict is simultaneously a Sudanese civil war, a Gulf proxy war, a Nile water dispute, and a competition for Red Sea access.
@@ -16,6 +16,24 @@ Sudan's civil war, now entering its fourth year (began April 2023), has become o
 - **Humanitarian catastrophe**: 24 million Sudanese face acute food insecurity (UN OCHA, 2026); famine declared in multiple states; largest internal displacement crisis in the world
 
 ## Details
+
+### Timeline of Events
+
+| Date | Event |
+|------|-------|
+| Apr 2003–2008 | Darfur genocide; Janjaweed militias (RSF predecessor) kill 200,000–400,000 |
+| Oct 2021 | SAF-RSF joint coup against Sudan's civilian transitional government |
+| Apr 15, 2023 | Civil war erupts between SAF and RSF; RSF seizes most of Khartoum |
+| May 2023 | Jeddah peace talks (US-Saudi mediation) collapse after ceasefire violations |
+| Apr 2024 | UN declares famine in Zamzam camp (North Darfur); first famine declaration |
+| Mid-2024 | RSF consolidates control over Darfur; SAF retains east and Port Sudan |
+| Nov 2024 | SAF begins counteroffensive in Khartoum; recaptures some districts |
+| Jan 2026 | Ethiopia entanglement confirmed: Tigrayan fighters captured with RSF in Blue Nile state |
+| Mar 2026 | The New Humanitarian: "regional mega-war" risk assessment published |
+| Apr 2026 | RSF encircles Ouagadougou in Burkina Faso; Sahel crisis intensifies regional dynamics |
+| May 2026 | UN OCHA: 24M Sudanese in acute food insecurity; world's largest displacement crisis |
+
+---
 
 ### Origins of the Conflict
 Sudan's civil war erupted on April 15, 2023, when tensions between the SAF (under General Abdel Fattah al-Burhan) and the RSF (under General Mohamed Hamdan Dagalo, known as "Hemeti") exploded into open warfare in Khartoum. Both forces had jointly staged the October 2021 coup against Sudan's civilian transitional government — a joint action that collapsed once power had been seized.
