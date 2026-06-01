@@ -3,7 +3,7 @@ title: Prospect Theory and Decision-Making Under Uncertainty
 date: 2026-05-30
 tags: [psychology, behavioral-economics, prospect-theory, kahneman, tversky, decision-making, loss-aversion, cognitive-biases, reference-dependence, value-function, probability-weighting, endowment-effect, status-quo-bias, disposition-effect, framing-effects]
 source: "Kahneman & Tversky (1979) Prospect Theory: An Analysis of Decision Under Risk, Econometrica; Tversky & Kahneman (1992) Advances in Prospect Theory: Cumulative Representation of Uncertainty, J Risk Uncertainty; Thaler (1980) Toward a Positive Theory of Consumer Choice, JEconBehav; Kahneman (2011) Thinking, Fast and Slow"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

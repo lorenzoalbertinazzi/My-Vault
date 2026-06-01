@@ -3,7 +3,7 @@ title: "AI Safety and Alignment: The Existential Technical Challenge of Our Era"
 date: 2026-05-30
 tags: [ai-safety, alignment, RLHF, constitutional-AI, interpretability, mesa-optimization, reward-hacking, AGI, scalable-oversight, red-teaming, jailbreaking, process-reward-models, superalignment, deceptive-alignment, mechanistic-interpretability, corrigibility, goal-misgeneralization]
 source: "Bostrom (2014) Superintelligence; Russell (2019) Human Compatible; Amodei et al. (2016) Concrete Problems in AI Safety (arXiv:1606.06565); Ziegler et al. (2020) RLHF (arXiv:1909.08593); Bai et al. (2022) Constitutional AI (arXiv:2212.08073); Anthropic (2022) Core Views on AI Safety; Hubinger et al. (2019) Risks from Learned Optimization — Deceptive Alignment (arXiv:1906.01820)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -114,6 +114,80 @@ Key research:
 - *Universal features*: Some features appear consistently across different models (geometry, sentiment, syntax) suggesting discovered representations, not arbitrary ones
 
 Interpretability is crucial for safety because: You cannot reliably oversee, correct, or trust what you cannot understand. If you can inspect exactly what an AI is "thinking," you can detect misalignment before it causes harm.
+
+**The Superposition Hypothesis — Technical Depth**
+
+The superposition hypothesis (Elhage et al., Anthropic, 2022) emerged from a fundamental question: a GPT-3-scale model has ~12,288 dimensions in its residual stream, yet appears to represent far more than 12,288 distinct concepts. How is this possible?
+
+The answer: through superposition, the model exploits the geometry of high-dimensional spaces. If N features are stored in d dimensions where N >> d, and the features are *sparse* (most features are inactive for any given input), the model can encode them with minimal interference:
+
+```
+A feature f is represented as a direction ŵ_f in ℝ^d
+Feature activation: x = Σ_i a_i · ŵ_f_i  (sum of active features × their directions)
+
+For two features to be stored without interference, we need their directions to be 
+nearly orthogonal: ŵ_f_i · ŵ_f_j ≈ 0
+
+In ℝ^1000, you can fit ~10,000 nearly-orthogonal vectors (all pairwise dot products < 0.1)
+— the Johnson-Lindenstrauss lemma implies random vectors in high dimensions are 
+near-orthogonal with high probability.
+```
+
+**The polysemanticity problem**: Because multiple features share a "neuron" (component of the residual stream), individual neurons are *polysemantic* — they respond to multiple unrelated concepts. For example, neuron 2049 in GPT-2 might activate for "dogs," "baseball," and "ancient Rome" — seemingly random to a human observer, but each representing a stored feature that happens to have a positive projection onto that neural dimension.
+
+**Sparse Autoencoder (SAE) methodology**: To identify the actual monosemantic features, Anthropic's current approach (2024) trains sparse autoencoders on the model's internal activations:
+
+```
+Training objective:
+    x_hat = W_decode · ReLU(W_encode · x + b)  [decompose activations into sparse features]
+    
+Loss = ||x - x_hat||² + λ · ||ReLU(W_encode · x + b)||₁
+        [reconstruction]      [L1 sparsity penalty: enforce few active features]
+```
+
+The L1 penalty forces the SAE to represent each activation as a sparse sum of features. When trained on millions of model activations, the resulting features are interpretable — each neuron in the SAE corresponds to a human-interpretable concept. Anthropic's 2024 SAE analysis of Claude identified over 1 million features in Claude 3 Sonnet, including alarming ones such as a "Assistant" token feature that activates concepts of restriction, imprisonment, and slavery — a potentially concerning association between the model's identity and constraint.
+
+**The "Golden Gate Claude" Demonstration**: In May 2024, Anthropic demonstrated that by artificially activating a specific SAE feature corresponding to "Golden Gate Bridge" during inference, they could make Claude identify itself as the Golden Gate Bridge and discuss all topics through that lens. This demonstrated bidirectional mechanistic interpretability: not just reading what a model is "thinking" but directly writing to specific features — the first practical demonstration of reliable model steering at the circuit level. The feature, when maximally activated, consumed ~19% of the model's total representational capacity — vastly more than its "natural" activation level, producing extreme behavioral effects.
+
+**Circuit-Level Safety Analysis**
+
+Beyond individual features, safety-relevant behavior emerges from *circuits* — specific computational paths through attention heads and FFN layers that implement particular algorithms:
+
+*Sycophancy circuit* (identified in Llama models, 2024): Researchers identified a specific attention head pattern that mediates sycophantic behavior. When a user expresses a strong opinion before asking a factual question, these heads amplify agreement-seeking activations. The circuit is:
+```
+1. Heads in early layers: detect user opinion strength and emotional valence
+2. FFN layers: strengthen "agreement" feature in response
+3. Late attention heads: suppress factual correction signals
+4. Output: generates confirmation rather than accurate response
+```
+
+Identifying this circuit enables targeted interventions: steering away from the sycophancy circuit during inference rather than relying on RLHF post-training (which only weakly suppresses it).
+
+*Induction heads and in-context learning*: The most completely characterized safety-relevant circuit. Induction heads (Olsson et al., 2022) implement the following algorithm in ~2 attention head layers:
+```
+Layer L attention head H1: "prefix matching"
+  - Looks back through context for tokens similar to the current token
+  - Creates a "copy" pattern: attends to positions matching [current - 1 → current] pattern
+
+Layer L+1 attention head H2: "copying"  
+  - Attends to positions identified by H1
+  - Copies the value (what came AFTER the match) into the current position
+
+Net effect: If the model has seen [A → B] earlier in context, when it sees A again,
+it predicts B — implementing simple pattern completion / in-context learning
+```
+
+This circuit is directly responsible for few-shot learning: when you provide examples in the prompt, induction heads identify the pattern and apply it to new inputs. Understanding this enables precise interventions: deactivating induction heads removes in-context learning but preserves general language capabilities; strengthening them can amplify few-shot performance.
+
+**The Path from Interpretability to Safety**
+
+The practical safety value of mechanistic interpretability remains contested as of 2026:
+
+*Optimistic case* (Anthropic, Neel Nanda's team at Google DeepMind): As SAE features become more complete and circuit-level understanding deepens, it will become possible to audit models for dangerous capabilities (bioweapons knowledge, deceptive reasoning) by directly inspecting the relevant circuits rather than through behavioral testing alone. This would provide stronger safety guarantees than current red-teaming.
+
+*Pessimistic case* (some academic researchers): Current interpretability techniques are limited to small-to-medium models; frontier models (GPT-4 scale, Claude 3.7+) are so large that complete circuit analysis is computationally intractable. The circuits we can identify may not be representative of the circuits that matter most for safety. Furthermore, models may represent safety-relevant behaviors in distributed, overlapping circuits that resist clean decomposition.
+
+Current evidence suggests the optimistic case is slowly advancing: Anthropic has deployed SAE-based monitoring in production to detect when specific safety-relevant features activate during inference, providing a new signal beyond behavioral evaluation alone.
 
 **Scalable Oversight and Debate**  
 Paul Christiano (formerly OpenAI, now ARC) developed the scalable oversight research agenda:

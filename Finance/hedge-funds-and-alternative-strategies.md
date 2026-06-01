@@ -3,7 +3,7 @@ title: Hedge Funds and Alternative Strategies
 date: 2026-05-30
 tags: [finance, hedge-funds, alternatives, long-short-equity, global-macro, relative-value, event-driven, quantitative, statistical-arbitrage, managed-futures, CTA, merger-arbitrage, activist-investing, distressed-debt, LTCM, performance-fees, carried-interest, leverage, VaR, family-offices]
 source: "Fung & Hsieh (1997) Empirical Characteristics of Dynamic Trading Strategies, Review of Financial Studies; Lhabitant (2006) Handbook on Hedge Funds; Ineichen (2002) Absolute Returns: The Risk and Opportunities of Hedge Fund Investing; Preqin Global Hedge Fund Report (2024)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 ## Summary
 Hedge funds are pooled investment vehicles that use diverse, often complex strategies — long/short equity, global macro, relative value arbitrage, event-driven, and quantitative — to generate absolute returns uncorrelated with traditional markets. Born from Alfred Winslow Jones's 1949 partnership, the industry has grown to manage ~$4.5 trillion in assets globally (2026). Unlike mutual funds, hedge funds face lighter regulation, charge performance fees (historically "2 and 20"), employ leverage, and can short-sell — capabilities that enable unique return profiles but also create distinct risks.
@@ -209,8 +209,6 @@ Approximately 1,200 crypto-focused funds managed ~$80B (2026). Bitcoin's annuali
 - **Counterparty risk:** FTX collapse (November 2022) — co-founded by Sam Bankman-Fried, the third-largest exchange by volume — revealed $8B in misappropriated client funds. Sequoia wrote down its $214M FTX investment to zero in one day; hundreds of hedge funds lost unrecoverable assets.
 - **Smart contract risk:** The Ronin Network bridge hack (March 2022) destroyed $625M irreversibly; code bugs in blockchain protocols are permanent and uninsured.
 - **Regulatory uncertainty:** SEC's ongoing litigation (Coinbase, Binance 2023) and "security vs. commodity" framework ambiguity create existential legal risks for many token holdings.
-
-last_updated: 2026-06-01
 
 ## Related
 - [[portfolio-theory]] — Modern Portfolio Theory and the role of uncorrelated alternative return streams; Sharpe ratio benchmarking

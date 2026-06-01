@@ -3,7 +3,7 @@ title: Social Psychology and Group Dynamics
 date: 2026-05-30
 tags: [psychology, social-psychology, group-dynamics, conformity, groupthink, obedience, Milgram, Asch, social-identity, in-group-out-group, deindividuation, bystander-effect, social-influence, collective-behavior, crowd-psychology]
 source: "Milgram (1963) Behavioral Study of Obedience, JASP; Asch (1951) Effects of Group Pressure; Festinger (1954) A Theory of Social Comparison Processes; Janis (1972) Victims of Groupthink; Tajfel & Turner (1979) Social Identity Theory"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -214,8 +214,6 @@ The critical insight: platform architecture does not merely reflect human social
 
 **Inoculation Theory (McGuire 1964; updated Lewandowsky 2012–2022):**
 The most empirically supported counter-propaganda approach: expose people to weakened forms of misinformation (with refutation) *before* they encounter the real propaganda. Pre-emptive refutation ("prebunking") outperforms reactive "debunking" by 30–50% in resistance to subsequent misinformation. This mirrors biological immunization: a weakened pathogen builds resistance before the real exposure.
-
-last_updated: 2026-06-01
 
 ## Related
 - [[cognitive-biases]] — Individual-level biases that interact with and amplify social influences; FAE as social psychology's foundational bias

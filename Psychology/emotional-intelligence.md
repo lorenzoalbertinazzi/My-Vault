@@ -3,7 +3,7 @@ title: Emotional Intelligence — Goleman's Framework
 date: 2026-05-28
 tags: [psychology, emotional-intelligence, EQ, self-awareness, self-regulation, motivation, empathy, social-skills, goleman, mayer-salovey, leadership, affect-regulation, interpersonal-skills, emotional-regulation, neuroscience]
 source: "Goleman (1995) Emotional Intelligence; Mayer & Salovey (1990) Perceiving Affective Content in Ambiguous Visual Stimuli; Bar-On (1997) The Emotional Quotient Inventory; Goleman, Boyatzis & McKee (2002) Primal Leadership"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 enriched: 2026-05-29
 ---
 

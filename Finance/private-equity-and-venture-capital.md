@@ -3,7 +3,7 @@ title: Private Equity & Venture Capital
 date: 2026-05-30
 tags: [finance, private-equity, venture-capital, leveraged-buyout, fund-structure, carried-interest, J-curve, valuation, LP-GP]
 source: Kaplan & Strömberg (2009) Leveraged Buyouts and Private Equity; Metrick & Yasuda (2010) The Economics of Private Equity Funds; Gompers & Lerner (2001) The Venture Capital Cycle; Preqin Global Private Equity Report 2024
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -385,8 +385,6 @@ By 2023, the average SPAC trading at <$10 (below trust value) meant sponsors cou
 - **Game theory:** LP-GP relationship is a principal-agent problem; fee structure design (carry hurdles, clawbacks) are mechanism design solutions to minimize moral hazard
 - **Organizational behavior:** Portfolio company transformations require change management; PE's 100-day plan literature parallels McKinsey's organizational turnaround playbooks
 - **Network science:** VC deal flow follows power-law networks — top founders were funded by top VCs (Sequoia → PayPal → PayPal Mafia → all subsequent Musk/Thiel ventures). Warm introductions drive 90%+ of deal flow at top firms
-
-last_updated: 2026-06-01
 
 ## Related
 - [[portfolio-theory]] — Asset allocation frameworks; PE as an alternative asset class; endowment model portfolio construction

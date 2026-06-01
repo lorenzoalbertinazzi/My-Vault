@@ -3,7 +3,7 @@ title: Yield Curve Analysis — Shapes, Inversions, and Market Signals
 date: 2026-05-28
 tags: [finance, yield-curve, bonds, fixed-income, interest-rates, macroeconomics, recession-indicator, 2s10s-spread, term-premium, forward-rates, bear-steepener, bull-flattener, yield-curve-control, ACM-model, inversion, monetary-policy, Japan-YCC, quantitative-tightening, sovereign-spreads]
 source: "Campbell, Shiller & Viceira (2009) Understanding Inflation-Indexed Bond Markets; Harvey (1988) The Real Term Structure and Consumption Growth, JFE; Rudebusch & Williams (2009) Forecasting Recessions: The Puzzle of the Enduring Power of the Yield Curve; Adrian, Crump & Moench (2013) Pricing the Term Structure with Linear Regressions, Journal of Financial Economics; Reinhart & Rogoff (2009) This Time Is Different"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

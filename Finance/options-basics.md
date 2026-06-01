@@ -3,7 +3,7 @@ title: Options — Fundamentals and Strategies
 date: 2026-05-26
 tags: [finance, options, derivatives, black-scholes, greeks, delta, gamma, theta, vega, implied-volatility, calls, puts, hedging, options-strategies, volatility, VIX, put-call-parity, volatility-skew, LEAPS, iron-condor, straddle, gamma-scalping]
 source: "Hull (2018) Options, Futures and Other Derivatives; Black & Scholes (1973) The Pricing of Options and Corporate Liabilities, JPE; Natenberg (2014) Option Volatility and Pricing; Taleb (1997) Dynamic Hedging; Nison (1991) Japanese Candlestick Charting Techniques"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

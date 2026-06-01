@@ -3,7 +3,7 @@ title: Robert Greene — The 48 Laws of Power (Key Laws)
 date: 2026-05-26
 tags: [psychology, power, influence, social-dynamics, strategy, machiavellian, Robert-Greene, manipulation, political-strategy, courtly-behavior, power-dynamics, social-intelligence, status, hierarchy, evolutionary-psychology]
 source: "Greene (1998) The 48 Laws of Power; Machiavelli (1532) The Prince; Sun Tzu (~500 BC) The Art of War; Greene (2012) Mastery; Canetti (1960) Crowds and Power"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 enriched: 2026-05-29
 ---
 

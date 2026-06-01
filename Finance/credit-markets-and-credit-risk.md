@@ -3,7 +3,7 @@ title: Credit Markets and Credit Risk
 date: 2026-05-30
 tags: [finance, credit, bonds, CDS, credit-default-swap, credit-spread, high-yield, investment-grade, leveraged-loans, CLO, default-risk, Merton-model, credit-cycle, distressed-debt, sovereign-credit, credit-rating]
 source: "Fabozzi (2012) Bond Markets: Analysis and Strategies; Merton (1974) On the Pricing of Corporate Debt, Journal of Finance; Altman (1968) Financial Ratios, Discriminant Analysis and the Prediction of Corporate Bankruptcy, Journal of Finance; Das & Tufano (1996) Pricing Credit-Sensitive Debt; Moody's Annual Default Study (2023)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 ## Summary
 Credit markets encompass the ecosystem of debt instruments — corporate bonds, leveraged loans, asset-backed securities, and derivatives — through which borrowers access capital and investors earn yield premiums for bearing default risk. Credit risk is the probability-weighted expected loss from counterparty failure, decomposable into probability of default (PD), loss given default (LGD), and exposure at default (EAD). Understanding credit is foundational to banking, asset management, corporate finance, and macroeconomic stability, as credit market stress reliably predates economic recessions.
@@ -125,6 +125,111 @@ Sovereign credit risk differs from corporate credit: governments cannot "run out
 - Spreads above US Treasuries reflect country risk; BBB EM sovereigns typically 100–200 bps; frontier/distressed markets 1,000+ bps
 
 Historical sovereign defaults: Argentina (2001, $100B), Greece (2012, €206B, largest in history at the time), Lebanon (2020), Sri Lanka (2022). Notably, no developed market sovereign has defaulted since Germany's post-WWII restructuring (1953).
+
+### Altman Z-Score: Quantitative Bankruptcy Prediction
+
+Edward Altman (1968) pioneered quantitative default prediction using **discriminant analysis** on accounting ratios. The Z-Score model — calibrated on a sample of 66 US manufacturing firms (33 bankrupt, 33 solvent) — remains one of the most widely cited credit analysis tools 55+ years later.
+
+**Original Z-Score Formula (Public Manufacturing Companies):**
+```
+Z = 1.2·X₁ + 1.4·X₂ + 3.3·X₃ + 0.6·X₄ + 1.0·X₅
+```
+
+Where:
+- **X₁** = Working Capital / Total Assets (liquidity ratio)
+- **X₂** = Retained Earnings / Total Assets (cumulative profitability/reinvestment)
+- **X₃** = EBIT / Total Assets (operating efficiency / asset productivity)
+- **X₄** = Market Value of Equity / Book Value of Total Liabilities (leverage cushion)
+- **X₅** = Net Sales / Total Assets (asset turnover / efficiency)
+
+**Interpretation zones:**
+| Z-Score | Zone | Default probability |
+|---------|------|-------------------|
+| Z > 2.99 | Safe zone | Low default risk |
+| 1.81 < Z < 2.99 | Grey zone | Uncertain |
+| Z < 1.81 | Distress zone | High default risk |
+
+**Worked Numerical Example:**
+Consider a hypothetical mid-market manufacturer with:
+- Working Capital = $40M; Total Assets = $200M → X₁ = 0.20
+- Retained Earnings = $60M; Total Assets = $200M → X₂ = 0.30
+- EBIT = $20M; Total Assets = $200M → X₃ = 0.10
+- Market Cap = $50M; Total Liabilities = $130M → X₄ = 0.385
+- Net Sales = $180M; Total Assets = $200M → X₅ = 0.90
+
+```
+Z = 1.2(0.20) + 1.4(0.30) + 3.3(0.10) + 0.6(0.385) + 1.0(0.90)
+Z = 0.24 + 0.42 + 0.33 + 0.231 + 0.90
+Z = 2.12 → Grey Zone (elevated risk, requires qualitative scrutiny)
+```
+
+**Altman Z''-Score (Private Companies and Non-Manufacturers, 1995 revision):**
+```
+Z'' = 6.56·X₁ + 3.26·X₂ + 6.72·X₃ + 1.05·X₄
+```
+Where X₄ uses **book value** of equity (no market cap available). Safe zone: Z'' > 2.60; Distress: Z'' < 1.10.
+
+**Empirical accuracy:** In the original 1968 sample, accuracy was 95% one year before bankruptcy, falling to 72% two years prior. In subsequent out-of-sample tests (Altman & Hotchkiss 2006), one-year accuracy remained ~80–85% for the distress zone classification across multiple countries and time periods.
+
+**Limitations and extensions:**
+1. Calibrated on 1960s US manufacturers — biased for service, financial, or tech firms with intangible-heavy balance sheets
+2. Accounting data is backward-looking; a company can game ratios temporarily
+3. Does not capture off-balance-sheet liabilities (leases pre-ASC 842, SPV exposures)
+4. Superseded in practice by market-based models (KMV) for publicly traded firms
+
+### KMV Model: Distance-to-Default
+
+Moody's KMV (Kealhofer, McQuown, Vasicek), building on Merton (1974), translates the structural model into an operational **Expected Default Frequency (EDF™)**. The key innovation: using observable equity market data to back out unobservable asset value and volatility.
+
+**Step 1 — Infer Asset Value and Volatility:**
+From two equations (equity as call on assets, plus equity volatility equation):
+```
+E = V·N(d₁) − D·e^(−rT)·N(d₂)
+σ_E·E = V·N(d₁)·σ_V
+```
+Solving simultaneously (iterative numerical approach) yields V (asset value) and σ_V (asset volatility).
+
+**Step 2 — Compute Distance-to-Default:**
+```
+DD = [ln(V/DPT) + (μ_V − σ_V²/2)·T] / (σ_V·√T)
+```
+Where:
+- V = inferred asset value
+- DPT = Default Point ≈ Short-Term Debt + 0.5 × Long-Term Debt (KMV's empirical calibration)
+- μ_V = expected asset return (often set to risk-free rate for conservative estimates)
+- σ_V = asset volatility
+- T = time horizon (typically 1 year)
+
+**Step 3 — Map DD to EDF (Expected Default Frequency):**
+Unlike Merton's N(−d₂) mapping, KMV maps DD to EDF using a proprietary empirical database of ~250,000 firm-years of default observations, capturing real-world fat tails missed by Gaussian assumptions.
+
+**Worked Example:**
+Company with:
+- Equity market cap E = $500M, equity volatility σ_E = 30%, T = 1 year, r = 5%
+- Short-term debt = $200M, long-term debt = $600M → DPT = $200M + $300M = $500M
+
+Iterative solution yields approximately: V = $950M, σ_V = 16%
+
+```
+DD = [ln(950/500) + (0.05 − 0.5·0.16²)·1] / (0.16·1)
+DD = [0.642 + (0.05 − 0.0128)] / 0.16
+DD = [0.642 + 0.0372] / 0.16
+DD = 0.679 / 0.16
+DD = 4.24 standard deviations
+```
+
+A DD of 4.24 corresponds to an EDF of approximately **0.1–0.3%** (very low risk). A firm with DD = 1.5 might have EDF of 5–8% (high risk, approaching distress zone in Altman's framework).
+
+**KMV vs. Altman in practice:**
+| Feature | Altman Z-Score | KMV EDF |
+|---------|---------------|---------|
+| Data source | Accounting (lagged) | Market prices (real-time) |
+| Default definition | Formal bankruptcy | Breaches default point |
+| Update frequency | Quarterly (earnings) | Daily |
+| Small firms | Works well | Equity data required |
+| Implementation | Simple formula | Complex iterative |
+
+Major credit rating agencies and large banks (JPMorgan CreditMetrics, Deutsche Bank MRC) use variants of the KMV framework for loan portfolio management and Basel III regulatory capital calculation.
 
 ### Credit Analysis Framework: The Five Cs
 Traditional credit analysis uses the Five Cs framework:

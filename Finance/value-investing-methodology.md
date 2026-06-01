@@ -3,7 +3,7 @@ title: Value Investing Methodology
 date: 2026-05-27
 tags: [finance, value-investing, Benjamin-Graham, Warren-Buffett, Charlie-Munger, intrinsic-value, margin-of-safety, economic-moat, ROIC, capital-allocation, net-net, GARP, compounding, activist-investing, Greenblatt, checklist, Mr-Market, competitive-advantage, quality-investing, earnings-power-value]
 source: "Graham (1949) The Intelligent Investor; Buffett Annual Letters to Berkshire Shareholders (1965–present); Greenblatt (2005) The Little Book That Beats the Market; Munger (1994) USC Business School Speech on Worldly Wisdom; Dorsey (2008) The Little Book That Builds Wealth; Greenwald et al. (2001) Value Investing: From Graham to Buffett and Beyond"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

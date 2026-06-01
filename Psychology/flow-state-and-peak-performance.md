@@ -3,7 +3,7 @@ title: Flow State & Peak Performance
 date: 2026-05-30
 tags: [psychology, flow, peak-performance, positive-psychology, motivation, neuroscience, sport-psychology, productivity, csikszentmihalyi, transient-hypofrontality, challenge-skill-balance, autotelic-experience, dopamine, anandamide, optimal-experience, intrinsic-motivation, deep-work]
 source: "Csikszentmihalyi (1990) Flow: The Psychology of Optimal Experience; Kotler (2014) The Rise of Superman; Nakamura & Csikszentmihalyi (2009) The Concept of Flow; Dietrich (2003) Functional neuroanatomy of altered states of consciousness, Medical Hypotheses; Ulrich et al. (2016) Neural correlates of experimentally induced flow experiences, NeuroImage"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -274,8 +274,6 @@ Challenge: flow is subjective, transient, and disrupted by measurement itself. A
 2. **Post-hoc reporting** (Flow State Scale immediately after sessions)
 3. **Passive biometric inference** (combine HRV + EEG + eye tracking to detect flow without interruption)
 4. **Longitudinal performance tracking** (objective performance peaks as indirect flow proxies)
-
-last_updated: 2026-06-01
 
 ## Related
 - [[dopamine-reward-systems-neuroscience]] — Neurochemical substrate of flow (DA, NE, anandamide, serotonin, endorphins)

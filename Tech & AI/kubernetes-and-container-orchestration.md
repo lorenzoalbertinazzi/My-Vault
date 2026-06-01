@@ -3,7 +3,7 @@ title: Kubernetes and Container Orchestration
 date: 2026-05-30
 tags: [kubernetes, containers, devops, cloud, orchestration, microservices, etcd, HPA, VPA, RBAC, GitOps, CNI, Borg, ArgoCD, eBPF, service-mesh, Helm, operators, declarative-config, control-plane]
 source: "Verma et al. (2015) Large-scale cluster management at Google with Borg (EuroSys); Burns et al. (2016) Borg, Omega, and Kubernetes (ACM Queue); Kubernetes official documentation (CNCF, 2026); Hightower et al. 'Kubernetes: Up and Running' (O'Reilly); Beyer et al. 'Site Reliability Engineering' (Google, 2016)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 ## Summary
 Kubernetes (K8s) is the dominant open-source container orchestration platform, managing the deployment, scaling, networking, and lifecycle of containerized applications across clusters of machines. Born from Google's internal Borg/Omega systems and open-sourced in 2014, Kubernetes solved the fundamental challenge of running applications at scale without tying them to specific infrastructure. By 2026, Kubernetes is the de facto standard for cloud-native application deployment, running on all major cloud platforms and forming the foundation of the modern DevOps and platform engineering disciplines. Understanding Kubernetes requires understanding both its declarative control-plane architecture and the distributed systems principles underpinning it.
@@ -189,6 +189,211 @@ Single Kubernetes cluster limits: ~5,000 nodes, ~150,000 pods, ~300,000 containe
 - **Cluster federation**: Karmada and Liqo provide true cross-cluster scheduling
 
 Large-scale K8s users: Google (millions of pods), Spotify (~20,000 microservices across K8s clusters), Airbnb, Pinterest, Zalando (pioneered open-source K8s tooling).
+
+### etcd and the Raft Consensus Algorithm: The Truth Store
+
+etcd is the most critical component in Kubernetes — it stores all cluster state. A corrupted or lost etcd means losing the entire cluster. Understanding its internals reveals why Kubernetes behaves the way it does under failure conditions.
+
+**Raft consensus in etcd**: etcd uses the Raft algorithm (Ongaro & Ousterhout, 2014) to maintain a strongly consistent, fault-tolerant key-value store. Raft works by electing a single leader who handles all writes:
+
+```
+Raft operation (simplified):
+1. Client sends write to any node
+2. Non-leader redirects to the current leader
+3. Leader appends entry to its log, sends AppendEntries RPCs to all followers
+4. Followers append to their local log and ACK
+5. Once a majority (⌈n/2⌉ + 1) of nodes ACK, leader commits the entry
+6. Leader replies success to client; followers commit on next heartbeat
+
+Write latency breakdown (typical etcd cluster):
+  Leader receives request:         0ms
+  Leader log write (fsync):       ~1ms  (NVMe SSD)
+  Network round-trip to followers: ~2ms (same datacenter)
+  Follower fsync:                 ~1ms
+  Total: ~4-8ms per write in a healthy 3-node cluster
+```
+
+**Why 3 or 5 nodes**: With n nodes, Raft tolerates f = ⌊(n-1)/2⌋ failures while maintaining availability. With 3 nodes: tolerates 1 failure. With 5 nodes: tolerates 2 failures. 7 nodes adds only marginal fault tolerance (3 failures) while significantly increasing write latency (majority now requires 4 ACKs vs. 3).
+
+**etcd performance limits and Kubernetes cluster size**:
+```
+etcd write throughput: ~200-500 writes/second (hardware limited by fsync latency)
+etcd key-value size limit: 1.5 MB per value (default); configurable
+etcd total storage: 8 GB default quota — must be managed; compaction required
+
+This limits Kubernetes cluster size because every pod creation, service update,
+configmap change generates etcd writes. At 5,000 nodes / 150,000 pods, the event
+rate can approach etcd's write throughput ceiling during large deployments.
+```
+
+**etcd backup and disaster recovery**: A best practice that many teams neglect until it's too late:
+```bash
+# etcd snapshot (run on the etcd leader node)
+ETCDCTL_API=3 etcdctl snapshot save /backup/etcd-$(date +%Y%m%d_%H%M%S).db \
+  --endpoints=https://127.0.0.1:2379 \
+  --cacert=/etc/etcd/ca.pem \
+  --cert=/etc/etcd/etcd.pem \
+  --key=/etc/etcd/etcd-key.pem
+
+# Restore from snapshot (all members must be stopped first)
+etcdutl snapshot restore /backup/etcd-20260601.db \
+  --initial-cluster "etcd-0=https://10.0.0.1:2380,etcd-1=https://10.0.0.2:2380,etcd-2=https://10.0.0.3:2380" \
+  --initial-advertise-peer-urls https://10.0.0.1:2380
+```
+
+The industry standard is automated etcd backups every 5 minutes to S3 or GCS, with restore drills quarterly. Loss of etcd without a recent backup is a total cluster loss — all workloads continue running (the data plane persists), but the cluster cannot be modified or healed until etcd is restored.
+
+### GPU Scheduling in Kubernetes: Running LLM Workloads
+
+By 2026, a primary use case for Kubernetes is orchestrating GPU-based AI workloads. The standard approach uses the NVIDIA GPU Operator:
+
+**GPU resource allocation**:
+```yaml
+# Single GPU allocation for LLM inference
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: llm-inference
+    image: vllm/vllm-openai:v0.4.2
+    resources:
+      requests:
+        nvidia.com/gpu: 1       # 1 full GPU
+        memory: "80Gi"          # Enough for the model + KV cache
+      limits:
+        nvidia.com/gpu: 1
+    env:
+    - name: CUDA_VISIBLE_DEVICES  # Kubernetes sets this automatically
+      value: "0"
+---
+# Multi-GPU allocation for large model inference (Llama 3 70B requires 2× A100s)
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: llm-70b
+    resources:
+      requests:
+        nvidia.com/gpu: 2       # Tensor parallelism across 2 GPUs
+        memory: "160Gi"
+      limits:
+        nvidia.com/gpu: 2
+    command: ["python", "-m", "vllm.entrypoints.openai.api_server",
+              "--model", "meta-llama/Llama-3-70b-instruct",
+              "--tensor-parallel-size", "2"]
+```
+
+**GPU Time-Slicing** (for cost efficiency): The NVIDIA GPU Operator supports time-sliced GPU sharing — multiple containers share a single physical GPU by time-multiplexing:
+```yaml
+# ConfigMap for GPU time-slicing (allows 4 containers per GPU)
+data:
+  config: |
+    version: v1
+    sharing:
+      timeSlicing:
+        resources:
+        - name: nvidia.com/gpu
+          replicas: 4  # 4 virtual GPUs per physical GPU
+```
+Useful for small model inference, development, and batch training jobs. Each virtual GPU gets roughly equal time slices (~10ms per slice). Limitation: no memory isolation — a container that uses more GPU memory than expected can OOM-kill neighbor workloads.
+
+**MIG (Multi-Instance GPU)** for stronger isolation (A100, H100 only): Physically partitions one GPU into up to 7 isolated instances with hardware-enforced memory and compute boundaries:
+```
+A100 80GB MIG partitions:
+  1× MIG 7g.80gb    → 1 partition with all 80GB (equivalent to one A100)
+  2× MIG 3g.40gb    → 2 partitions with 40GB each
+  4× MIG 2g.20gb    → 4 partitions with 20GB each
+  7× MIG 1g.10gb    → 7 partitions with 10GB each
+
+Use case: serve 4 different 7B models (each fitting in 14GB) on a single 80GB A100
+with full memory isolation and hardware performance guarantees
+```
+
+**Production LLM serving architecture on Kubernetes**:
+
+```
+Internet → Istio Gateway → Load Balancer Service
+                              ↓
+                         vLLM Deployment (auto-scaled by KEDA)
+                         ├── Pod: vllm-worker-0 (2× H100 GPUs, Llama-70B)
+                         ├── Pod: vllm-worker-1 (2× H100 GPUs, Llama-70B)
+                         └── Pod: vllm-worker-2 (2× H100 GPUs, Llama-70B)
+                              ↑ KEDA ScaledObject scales on request queue depth
+                         
+KEDA trigger (scale up when queue > 5 pending requests):
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+spec:
+  scaleTargetRef:
+    name: vllm-deployment
+  triggers:
+  - type: prometheus
+    metadata:
+      serverAddress: http://prometheus:9090
+      query: vllm_num_requests_waiting{job="vllm"}
+      threshold: "5"  # scale up when 5+ requests queued
+  minReplicaCount: 1
+  maxReplicaCount: 10
+  cooldownPeriod: 300  # 5 min cooldown before scaling down
+```
+
+### Historical Development
+
+**1991–2003 — The Pre-Container Era**: Application deployment meant maintaining configuration management scripts (CFEngine, 2002; Puppet, 2005; Chef, 2009) that tried to describe the desired state of a server. The fundamental problem: servers had history — accumulated configuration drift meant that what was intended and what existed diverged over time. Teams spent 30–50% of operations time on "works on my machine" debugging.
+
+**2006 — Google's Borg**: Google's internal cluster management system begins managing the full complexity of deploying millions of containers per week across thousands of machines. Key innovations that would become Kubernetes's DNA:
+- *Declarative configuration*: Jobs described as desired state, not imperative commands
+- *Reconciliation loops*: Controllers continuously compare actual state to desired state
+- *Hermetic containers*: Applications isolated from each other and the host
+- *Resource scheduling*: Bin-packing algorithms to maximize cluster utilization
+- *Health checking*: Automatic restarts of failed applications
+
+Borg ran Google Search, YouTube, Gmail, and Maps. The engineering learnings accumulated over a decade were distilled into the 2015 SOSP paper by Verma et al.
+
+**2013 — Docker**: Solomon Hykes releases Docker at PyCon 2013, making Linux containers accessible to developers with a simple CLI and image format. Within months, every major tech company is experimenting with Docker. The "runs anywhere" promise resonates: finally, the development-to-production gap has a practical solution.
+
+**June 2014 — Kubernetes Open-Sourced**: Joe Beda, Brendan Burns, and Craig McLuckie at Google open-source Kubernetes (announced at DockerCon 2014), explicitly crediting Borg as its inspiration. The initial release is sparse — roughly the core scheduling and pod management — but the architecture is clearly designed for massive scale. Donated to the newly formed Cloud Native Computing Foundation in 2016.
+
+**2015 — The Orchestration Wars**: Docker Swarm (integrated into Docker 1.12, July 2016), Apache Mesos (with Marathon framework), and Kubernetes compete for the container orchestration market. Google's strategic decision to donate Kubernetes to CNCF and allow Red Hat, IBM, CoreOS, and others to contribute creates a coalition that Docker and Mesos cannot match. By 2017, Kubernetes is definitively winning.
+
+**2017 — CNCF Ecosystem Explodes**: The CNCF's landscape grows from ~15 projects to over 100. Key additions:
+- Prometheus (monitoring, graduated 2018)
+- Jaeger (distributed tracing, graduated 2019)
+- Helm (package management, graduated 2020)
+- ArgoCD (GitOps, incubating 2020, graduated 2022)
+- Knative (serverless on Kubernetes, contributed by Google)
+- Istio (service mesh, contributed by Google/IBM, graduated 2023)
+
+**2018 — Managed Kubernetes Becomes Standard**: AWS launches EKS (June 2018), joining GKE (2014) and AKS (2017). With all three major clouds offering managed Kubernetes, the platform becomes the path of least resistance for new cloud-native deployments. Managed Kubernetes removes the most complex operational burden — running the control plane — making Kubernetes accessible to teams without deep infrastructure expertise.
+
+**2020–2026 — Kubernetes Matures Beyond Containers**: GitOps workflows (ArgoCD, Flux) enable treating the entire cluster state as code in Git. Kubernetes Operators extend the platform to manage complex stateful applications (databases, Kafka, Elasticsearch) using the same declarative model as stateless services. The CNCF landscape reaches 1,000+ projects. By 2026, CNCF annual survey data shows 96% of organizations using Kubernetes in production, up from 58% in 2018.
+
+### Benchmarks and Real-World Performance
+
+**Kubernetes control plane scalability limits** (tested by Kubernetes SIG-Scalability, 2024):
+
+| Metric | Limit |
+|--------|-------|
+| Nodes per cluster | 5,000 |
+| Pods per cluster | 150,000 |
+| Pods per node | 110 (default configurable) |
+| Services per cluster | 10,000 |
+| Namespaces per cluster | 10,000 |
+| API server RPS (read) | ~5,000 requests/second |
+| API server RPS (write) | ~500 requests/second |
+| etcd writes/second | ~200–500 (hardware limited) |
+
+**Pod startup latency** (measured across 3 major cloud providers, p99):
+- New pod on pre-pulled image: 3–8 seconds (scheduling → running)
+- New pod on cold image (100MB): 15–30 seconds (including image pull)
+- New pod on cold image (2GB): 60–120 seconds (dominated by image pull)
+- Cluster autoscaler provision + pod start: 2–4 minutes (new node creation)
+
+**Real-world scale examples** (CNCF Annual Survey 2024):
+- Pinterest: 5,000+ nodes across 3 clusters; 4M+ container starts/day
+- Zalando (fashion e-commerce): 200+ Kubernetes clusters; 3,000+ services
+- Alibaba (Double 11 shopping festival, 2023): 1M+ containers within 1 hour of peak traffic
+- Tesla: Kubernetes manages neural network inference for FSD; 100,000+ inference pods during updates
 
 ## Related
 - [[docker-and-containerization]] — Containers are the foundation of Kubernetes; Docker image building and container runtime concepts

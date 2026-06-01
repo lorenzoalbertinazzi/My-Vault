@@ -3,7 +3,7 @@ title: Behavioral Finance and Investor Psychology
 date: 2026-05-27
 tags: [finance, behavioral-finance, psychology, investing, biases, prospect-theory, loss-aversion, cognitive-biases, heuristics, overconfidence, anchoring, herding, mental-accounting, market-anomalies, EMH, adaptive-markets]
 source: "Kahneman & Tversky (1979) Prospect Theory, Econometrica; Kahneman (2011) Thinking, Fast and Slow; Shiller (2000) Irrational Exuberance; Thaler & Sunstein (2008) Nudge; Thaler (1999) Mental Accounting Matters, Journal of Behavioral Decision Making; Barber & Odean (2000) Trading Is Hazardous to Your Wealth, Journal of Finance; Lo (2004) The Adaptive Markets Hypothesis, Journal of Portfolio Management"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

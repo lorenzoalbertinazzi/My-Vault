@@ -3,7 +3,7 @@ title: Valuation Fundamentals
 date: 2026-05-26
 tags: [finance, valuation, DCF, discounted-cash-flow, WACC, EV-EBITDA, comparable-company-analysis, precedent-transactions, LBO-model, terminal-value, CAPE-ratio, margin-of-safety, reverse-DCF, NAV, DDM, country-risk-premium, Damodaran, intrinsic-value, multiples, free-cash-flow]
 source: "Damodaran (2012) Investment Valuation; McKinsey Koller et al. (2020) Valuation: Measuring and Managing the Value of Companies; Graham & Dodd (1934) Security Analysis; Shiller (1998) Valuation Ratios and the Long-Run Stock Market Outlook; Rappaport & Mauboussin (2001) Expectations Investing"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

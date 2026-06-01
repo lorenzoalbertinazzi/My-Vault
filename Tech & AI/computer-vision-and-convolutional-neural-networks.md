@@ -3,7 +3,7 @@ title: Computer Vision and Convolutional Neural Networks
 date: 2026-05-30
 tags: [ai, computer-vision, CNN, deep-learning, image-recognition, object-detection, AlexNet, ResNet, ViT, CLIP, SAM, YOLO, ImageNet, image-segmentation, transfer-learning, vision-transformer, multimodal]
 source: "Krizhevsky et al. (2012) ImageNet Classification with Deep CNNs — AlexNet (NeurIPS); He et al. (2015) Deep Residual Learning — ResNet (arXiv:1512.03385); Dosovitskiy et al. (2020) ViT — An Image is Worth 16x16 Words (arXiv:2010.11929); Radford et al. (2021) CLIP (arXiv:2103.00020); Kirillov et al. (2023) SAM — Segment Anything (arXiv:2304.02643); Redmon et al. (2016) YOLO (arXiv:1506.02640)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 ## Summary
 Computer vision is the field enabling machines to interpret visual information from images and video. The 2012 AlexNet breakthrough — demonstrating that deep convolutional neural networks (CNNs) could dramatically outperform all prior methods on ImageNet — triggered a decade of exponential progress that has produced systems exceeding human performance on image classification (2015), surpassing radiologists at cancer detection (2017), enabling autonomous vehicles, and powering facial recognition at planetary scale. CNNs leverage the spatial structure of images through local connectivity, weight sharing, and hierarchical feature learning — a biologically-inspired architecture matching how the mammalian visual cortex processes information.
@@ -155,6 +155,211 @@ The most important practical application of CNNs: **transfer learning** — usin
 4. Optionally: freeze early layers ("feature extraction"), only train new head
 
 **CLIP** (Contrastive Language-Image Pre-training, OpenAI, 2021): trained by aligning 400M image-text pairs using contrastive loss. Image encoder + text encoder learn a shared embedding space. Enables: zero-shot classification (write class descriptions as text prompts), image search by text, few-shot adaptation. Foundation for GPT-4V and multimodal language models.
+
+### Computational Costs and Training Infrastructure
+
+Training modern vision models requires substantial computational resources that practitioners must understand to make rational engineering decisions.
+
+**Training compute for landmark models (FLOP estimates)**:
+
+The standard rule: a single forward pass through a network with N parameters and input of L tokens requires ~2NL FLOPs; training requires ~6NL FLOPs per example (2 forward + 4 backward).
+
+For CNNs, "L" is the spatial feature map size at each layer:
+
+| Model | Parameters | Training Data | GPU Hours | Approx Cost | FLOPs/image |
+|-------|-----------|--------------|-----------|-------------|-------------|
+| ResNet-50 | 25M | ImageNet (1.28M) | ~4 V100-hrs | ~$15 | ~4.1 GFLOPs |
+| ResNet-152 | 60M | ImageNet | ~12 V100-hrs | ~$45 | ~11.6 GFLOPs |
+| ViT-L/16 | 307M | JFT-300M (300M imgs) | ~2,500 TPUv3-hrs | ~$8,000 | ~190 GFLOPs |
+| CLIP ViT-L/14 | 307M + 124M text | 400M img-text pairs | ~256 V100 × 12 days | ~$250K | ~163 GFLOPs/img |
+| SAM (ViT-H) | 632M | SA-1B (1B masks) | ~48 A100 × 3 days | ~$50K | ~2.6 TFLOPs/img |
+
+**Memory requirements at inference (ViT-L/16, fp16)**:
+- Model weights: 307M × 2 bytes = ~614 MB
+- Activations for a single 224×224 image: ~200 MB (196 patches × 1024 dims × 24 layers × 2 bytes)
+- Practical minimum VRAM: ~1 GB for single-image inference; 4 GB for batch=8
+
+**FLOPs comparison: CNN vs. ViT at equal accuracy**
+
+ResNet-50 (25M params) vs. ViT-B/16 (86M params) at ImageNet-1K ~83% top-1 accuracy:
+- ResNet-50: 4.1 GFLOPs/image — achievable on CPU in ~15ms
+- ViT-B/16: 17.6 GFLOPs/image — requires GPU for real-time inference
+
+The ViT requires ~4.3× more compute for comparable accuracy on ImageNet alone, but the gap narrows at larger scale (ViT-L trained on JFT-300M substantially outperforms ResNet-152 at equivalent compute budget due to better scalability).
+
+**Real-time inference constraints for production deployment**:
+
+| Application | Latency Requirement | Model Choice | Hardware |
+|-------------|--------------------|--------------|----|
+| Autonomous driving (obstacle detect.) | <10ms per frame | YOLOv9-n, 2.4M params | Jetson AGX Orin (edge) |
+| Face recognition (access control) | <100ms | MobileNetV3-Small | Raspberry Pi 5 / CPU |
+| Medical CT scan analysis | <5 minutes/scan | DenseNet-201, ensemble | A100 GPU |
+| Satellite image change detection | <1 hr per 10km² | Swin-B | Multi-GPU cluster |
+| Photo app content classifier | <50ms | EfficientNet-B0 | Mobile NPU |
+
+**MobileNet and edge deployment**:
+The depthwise separable convolution at the heart of MobileNet reduces FLOPs by a factor of:
+```
+Standard convolution FLOPs:  D_k × D_k × M × N × D_f × D_f
+Depthwise + pointwise FLOPs: (D_k × D_k × M + M × N) × D_f × D_f
+
+Ratio = 1/(N) + 1/(D_k²)
+
+For N=256 filters, D_k=3: ratio = 1/256 + 1/9 ≈ 0.115 → ~8.7× fewer FLOPs
+```
+
+MobileNetV3-Large achieves 75.2% top-1 accuracy on ImageNet at 219 MFLOPs — deployable on a smartphone CPU at 50 FPS.
+
+### Training Pipeline Implementation
+
+**Standard training loop for fine-tuning a pre-trained model**:
+
+```python
+import torch
+import torchvision.models as models
+from torch.optim.lr_scheduler import CosineAnnealingLR
+
+def train_classifier(num_classes: int, train_loader, val_loader, num_epochs=30):
+    # Load pre-trained backbone (ImageNet weights)
+    model = models.resnet50(weights=models.ResNet50_Weights.IMAGENET1K_V2)
+    
+    # Replace final layer for new task
+    in_features = model.fc.in_features
+    model.fc = torch.nn.Linear(in_features, num_classes)
+    model = model.cuda()
+    
+    # Common fine-tuning strategy: lower LR for backbone, higher for new head
+    optimizer = torch.optim.AdamW([
+        {"params": [p for n, p in model.named_parameters() if "fc" not in n], 
+         "lr": 1e-4},    # backbone: small learning rate
+        {"params": model.fc.parameters(), 
+         "lr": 1e-3}     # new head: 10× higher learning rate
+    ], weight_decay=0.01)
+    
+    scheduler = CosineAnnealingLR(optimizer, T_max=num_epochs, eta_min=1e-6)
+    criterion = torch.nn.CrossEntropyLoss(label_smoothing=0.1)
+    
+    # Mixed precision training for 2× memory efficiency
+    scaler = torch.cuda.amp.GradScaler()
+    
+    for epoch in range(num_epochs):
+        model.train()
+        for images, labels in train_loader:
+            images, labels = images.cuda(), labels.cuda()
+            
+            optimizer.zero_grad()
+            with torch.cuda.amp.autocast():  # bfloat16 forward pass
+                logits = model(images)
+                loss = criterion(logits, labels)
+            
+            scaler.scale(loss).backward()
+            scaler.unscale_(optimizer)
+            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+            scaler.step(optimizer)
+            scaler.update()
+        
+        scheduler.step()
+        val_acc = evaluate(model, val_loader)
+        print(f"Epoch {epoch}: val_acc={val_acc:.3f}, lr={scheduler.get_last_lr()[0]:.2e}")
+```
+
+**Key engineering decisions explained**:
+- `label_smoothing=0.1`: Replaces hard 0/1 targets with 0.9/0.1, preventing overconfidence. Typically +0.3–0.5% top-1 accuracy on fine-tuned models.
+- `clip_grad_norm_(max_norm=1.0)`: Prevents catastrophic gradient explosions in fine-tuning, especially when the learning rate is too high for the pre-trained backbone.
+- `CosineAnnealingLR`: The cosine schedule typically outperforms step decay by 0.5–1.0% top-1 by smoothly annealing the learning rate, avoiding abrupt drops that can destabilize training.
+
+**Data augmentation pipeline for training CNNs (ImageNet-standard)**:
+```python
+# Training augmentation (all transforms stochastic)
+train_transform = transforms.Compose([
+    transforms.RandomResizedCrop(224, scale=(0.08, 1.0), ratio=(0.75, 1.33)),
+    transforms.RandomHorizontalFlip(p=0.5),
+    transforms.ColorJitter(brightness=0.4, contrast=0.4, saturation=0.4, hue=0.1),
+    transforms.RandomGrayscale(p=0.2),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406],  # ImageNet statistics
+                         std=[0.229, 0.224, 0.225])
+])
+# Validation: no randomness
+val_transform = transforms.Compose([
+    transforms.Resize(256),
+    transforms.CenterCrop(224),
+    transforms.ToTensor(),
+    transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+])
+```
+
+**Why these specific statistics?** The ImageNet mean/std values ([0.485, 0.456, 0.406] for RGB channels) are computed from the 1.28M ImageNet training images. Normalizing by these values ensures the pre-trained model's first-layer filters, which were optimized for inputs in this range, receive inputs with the expected statistics. Using incorrect normalization values degraded ImageNet top-1 by 2–5% in practice.
+
+**Benchmark Numbers (authoritative)**
+
+**ImageNet-1K Top-1 Accuracy (224×224 input)**:
+
+| Model | Year | Params | FLOPs | Top-1 |
+|-------|------|--------|-------|-------|
+| AlexNet | 2012 | 60M | 0.72G | 56.5% |
+| VGG-16 | 2014 | 138M | 15.5G | 71.6% |
+| ResNet-50 | 2015 | 25M | 4.1G | 76.1% |
+| Inception-v3 | 2015 | 27M | 5.7G | 77.3% |
+| ResNet-152 | 2015 | 60M | 11.6G | 78.3% |
+| DenseNet-201 | 2017 | 20M | 4.3G | 77.0% |
+| EfficientNet-B7 | 2019 | 66M | 37G | 84.3% |
+| ViT-B/16 (ImageNet-21k pre-train) | 2020 | 86M | 17.6G | 85.8% |
+| ViT-L/16 (ImageNet-21k) | 2020 | 307M | 190G | 87.1% |
+| Swin-B (ImageNet-22k) | 2021 | 88M | 15.4G | 87.3% |
+| ViT-G/14 (JFT-3B) | 2022 | 1.8B | 2.0T | 90.45% |
+| Human estimated | — | — | — | ~94–95% |
+
+**COCO Object Detection and Segmentation (2017 val set)**:
+
+| Model | Year | Box AP | Mask AP | FPS (V100) |
+|-------|------|--------|---------|-----------|
+| Faster R-CNN R50 | 2015 | 36.7 | — | 15 |
+| Mask R-CNN R50 | 2017 | 37.9 | 34.6 | 11 |
+| YOLOv5-L | 2020 | 48.2 | — | 135 |
+| DETR-R50 | 2020 | 42.0 | — | 28 |
+| DINO-SwinB | 2022 | 58.0 | — | 12 |
+| EVA-02-L | 2023 | 64.5 | 55.0 | 5 |
+
+**Roboflow 100 (diverse object detection benchmark)**:
+
+This 2022 benchmark tests generalization across 100 diverse image datasets, including satellite, medical, video game, and microscopy imagery. YOLOv8-m: 54.8 mAP; DINO-SwinL: 62.7 mAP. The gap widens on rare/specialized domains, demonstrating ViT-based models' superior transfer learning from large pre-training datasets.
+
+### Common Failure Modes and Adversarial Robustness
+
+**Shortcut learning** is the most important failure mode in production vision systems. CNNs trained on datasets with systematic biases learn the bias as a feature:
+
+- *Spurious texture correlations*: Geirhos et al. (2019) showed that ImageNet-trained CNNs classify images primarily by texture, not shape. A ResNet-50 classifies a cat texture applied to an elephant silhouette as "cat" with 95% confidence. Humans classify by shape.
+- *Background dependency*: Models trained on natural images with consistent backgrounds (cows always in fields) fail when the same subject appears in novel backgrounds.
+- *Clever Hans effect*: Models may learn to use artifacts in training data that happen to correlate with labels. Skin cancer classifiers learned to identify ruler marks in medical images (present in malignancy cases for measurement purposes) as a malignancy indicator.
+
+**Adversarial examples** (Szegedy et al., 2014; Goodfellow et al., 2015): Images modified by tiny, imperceptible perturbations that cause classifiers to fail catastrophically:
+
+```
+Original: correctly classified as "panda" (confidence 57.7%)
+Add ε × sign(∇_x J(θ, x, y)):  a 0.007 perturbation in pixel intensity (invisible to humans)
+Result: classified as "gibbon" with 99.3% confidence
+```
+
+The Fast Gradient Sign Method (FGSM) is the simplest attack:
+```
+x_adv = x + ε · sign(∇_x J(θ, x, y))
+
+where J = cross-entropy loss, ε = 0.007 (on [0,1] scale)
+```
+
+Projected Gradient Descent (PGD) is a stronger iterative attack:
+```
+x_{t+1} = Π_{x+S}(x_t + α · sign(∇_x J(θ, x_t, y)))
+```
+
+**Adversarial robustness is not solved**: The best adversarially trained models (PGD-AT, TRADES, RobustBench leaderboard) achieve 70% clean accuracy on ImageNet at the cost of ~15–20% clean accuracy degradation. No CNN or ViT achieves both high clean accuracy and high adversarial robustness simultaneously — a fundamental tension that remains an open research problem.
+
+**Defense in depth for production vision systems**:
+1. Input preprocessing (JPEG compression, random cropping): partially defeats adversarial perturbations
+2. Ensemble methods: diverse models with different architectures are harder to simultaneously fool
+3. Randomized smoothing: provably certifies classification within a radius ε using randomized inference
+4. Detection models: separate "is this adversarial?" classifier before the main classifier
 
 ## Related
 - [[transformer-architecture]] — Vision Transformers apply BERT/GPT architecture to image patches; critical for understanding ViT, CLIP, DALL-E

@@ -3,7 +3,7 @@ title: Agentic AI and Multi-Agent Systems
 date: 2026-05-30
 tags: [ai, agents, multi-agent, LLM, tool-use, orchestration, ReAct, planning, autonomy, MCP, computer-use, LangGraph, CrewAI, tool-calling, workflow, AutoGPT, agentic-ai, memory-architecture, sandboxed-execution]
 source: "Yao et al. (2023) ReAct: Synergizing Reasoning and Acting in Language Models (arXiv:2210.03629); Schick et al. (2023) Toolformer (arXiv:2302.04761); Zhou et al. (2023) WebArena (arXiv:2307.13854); Jimenez et al. (2024) SWE-bench (arXiv:2310.06770); Anthropic Model Context Protocol spec (2024); Lilian Weng 'LLM-powered Autonomous Agents' (2023)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -217,7 +217,234 @@ When a single decision is wrong, the impact is limited. When an agent autonomous
 
 The consistent pattern: agents perform well on well-structured, bounded tasks; performance degrades rapidly with task complexity, ambiguity, and the number of steps required.
 
-### 9. The Near Future: Toward General-Purpose Agents
+### 9. Implementation Deep Dive: Building a Production Agent
+
+**The Agent Loop in Full Detail**
+
+A production-grade agent loop requires more than the simple pseudocode sketch; it must handle retries, budget enforcement, context management, and error recovery:
+
+```python
+class ProductionAgent:
+    def __init__(self, model, tools, max_iterations=50, max_cost_usd=5.0):
+        self.model = model
+        self.tools = {t.name: t for t in tools}
+        self.max_iterations = max_iterations
+        self.max_cost_usd = max_cost_usd
+        self.memory = []  # conversation history
+        self.total_cost = 0.0
+
+    def run(self, goal: str) -> str:
+        self.memory.append({"role": "user", "content": goal})
+        
+        for iteration in range(self.max_iterations):
+            # Budget check
+            if self.total_cost >= self.max_cost_usd:
+                return "Budget exceeded; partial result: " + self.get_last_answer()
+            
+            # LLM call with tools available
+            response = self.model.complete(
+                messages=self.memory,
+                tools=list(self.tools.values()),
+                max_tokens=4096
+            )
+            self.total_cost += response.usage.cost_usd
+            
+            # No tool call → final answer
+            if not response.tool_calls:
+                self.memory.append({"role": "assistant", "content": response.content})
+                return response.content
+            
+            # Execute tool calls (possibly in parallel)
+            tool_results = self.execute_tools_parallel(response.tool_calls)
+            
+            # Update memory
+            self.memory.append({"role": "assistant", "content": response.content,
+                                  "tool_calls": response.tool_calls})
+            for result in tool_results:
+                self.memory.append({"role": "tool", "tool_call_id": result.id,
+                                     "content": result.output})
+            
+            # Context window management: if > 80% full, summarize middle
+            if self.count_tokens(self.memory) > 0.8 * self.model.context_limit:
+                self.memory = self.compress_memory(self.memory)
+        
+        return "Max iterations reached; partial result: " + self.get_last_answer()
+    
+    def execute_tools_parallel(self, tool_calls):
+        """Execute independent tool calls concurrently."""
+        import concurrent.futures
+        with concurrent.futures.ThreadPoolExecutor() as pool:
+            futures = {pool.submit(self.execute_single_tool, tc): tc 
+                      for tc in tool_calls}
+            return [f.result() for f in concurrent.futures.as_completed(futures)]
+    
+    def execute_single_tool(self, tool_call):
+        tool = self.tools.get(tool_call.name)
+        if not tool:
+            return ToolResult(id=tool_call.id, output=f"Error: Unknown tool {tool_call.name}")
+        try:
+            output = tool.run(**tool_call.arguments)
+            return ToolResult(id=tool_call.id, output=str(output)[:10000])  # truncate
+        except Exception as e:
+            return ToolResult(id=tool_call.id, output=f"Tool error: {str(e)}")
+```
+
+**Tool Call Validation and Sandboxing**
+
+In production, tool calls must be validated before execution to prevent injection attacks and runaway resource consumption:
+
+```python
+class SandboxedCodeTool:
+    """Execute Python code in an isolated subprocess with resource limits."""
+    
+    def run(self, code: str, timeout_seconds: int = 30) -> str:
+        import subprocess, resource
+        
+        # Write code to temp file
+        with tempfile.NamedTemporaryFile(suffix=".py", mode="w") as f:
+            f.write(code)
+            fname = f.name
+        
+        # Run in subprocess with strict limits
+        result = subprocess.run(
+            ["python", fname],
+            capture_output=True, text=True,
+            timeout=timeout_seconds,
+            # Linux resource limits: no network, limited memory
+            preexec_fn=lambda: (
+                resource.setrlimit(resource.RLIMIT_AS, (256*1024*1024, 256*1024*1024)),  # 256MB RAM
+                resource.setrlimit(resource.RLIMIT_NPROC, (10, 10)),   # max 10 subprocesses
+            )
+        )
+        return result.stdout[:5000] + (result.stderr[:2000] if result.returncode != 0 else "")
+```
+
+This is how Anthropic's computer-use feature and OpenAI's code interpreter sandbox code execution: isolated containers with CPU, memory, and network restrictions applied via cgroups and network namespaces (see [[docker-and-containerization]]).
+
+**Context Management and Memory Compression**
+
+A major engineering challenge for long-running agents is keeping the context window from filling up with irrelevant history. The standard approaches, with their tradeoffs:
+
+```
+Strategy 1: Sliding Window (simplest)
+  - Keep last N messages (e.g., N=20)
+  - Risk: drops critical early context (tool results, initial instructions)
+  - Best for: conversational agents with short-term memory needs
+
+Strategy 2: Hierarchical Summarization
+  - Periodically call LLM to summarize the "middle" of the context
+  - Keep: system prompt + summary + last K messages
+  - Risk: lossy compression; nuances lost; ~20-30% hallucination increase on long tasks
+  - Best for: research agents handling multi-hour tasks
+
+Strategy 3: External Memory + Retrieval
+  - Write important facts/decisions to a vector DB as they occur
+  - At each step, retrieve the top-k most relevant memories
+  - Risk: retrieval noise; retrieval misses
+  - Best for: very long-running agents (days/weeks) with well-structured tasks
+
+Strategy 4: In-Context Working Memory (structured scratchpad)
+  - Reserve a portion of context for structured state: 
+    {current_goal, completed_steps: [...], pending_steps: [...], key_facts: [...]}
+  - Agent updates this JSON state each iteration
+  - Best for: complex multi-step tasks where state is predictable
+```
+
+**MCP (Model Context Protocol) — Wire-Level Details**
+
+Anthropic's MCP, released November 2024, operates over a JSON-RPC 2.0 protocol (transport: stdio for local, HTTP+SSE for remote). An MCP server exposes three primitives:
+
+1. **Tools**: Callable functions the LLM can invoke (equivalent to OpenAI function calling)
+2. **Resources**: Readable data sources (files, database records, API results) that can be streamed into the LLM context
+3. **Prompts**: Pre-defined prompt templates the server can inject
+
+**MCP server registration** (the wire format):
+```json
+// Client sends initialize request
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {"tools": {}, "resources": {}},
+    "clientInfo": {"name": "claude-code", "version": "1.0.0"}
+  }
+}
+
+// Server responds with its capabilities
+{
+  "jsonrpc": "2.0",
+  "id": 1,
+  "result": {
+    "protocolVersion": "2024-11-05",
+    "capabilities": {
+      "tools": {"listChanged": true},
+      "resources": {"subscribe": true, "listChanged": true}
+    },
+    "serverInfo": {"name": "github-mcp-server", "version": "2.1.0"}
+  }
+}
+```
+
+**Tool discovery** at runtime:
+```json
+// Client: list available tools
+{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{}}
+
+// Server responds with tool schemas (OpenAPI-compatible)
+{"result": {"tools": [
+  {
+    "name": "create_pull_request",
+    "description": "Create a GitHub pull request",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "owner": {"type": "string"},
+        "repo": {"type": "string"},
+        "title": {"type": "string"},
+        "body": {"type": "string"},
+        "head": {"type": "string"},
+        "base": {"type": "string", "default": "main"}
+      },
+      "required": ["owner", "repo", "title", "head"]
+    }
+  }
+]}}
+```
+
+By May 2025, the MCP ecosystem included 2,000+ community-built servers. The most popular categories: code repositories (GitHub, GitLab), databases (PostgreSQL, MySQL, Supabase), productivity (Notion, Slack, Linear), and browser control (Playwright, Puppeteer).
+
+**Real Latency and Cost Numbers for Agent Tasks**
+
+Understanding the economics of agentic AI is critical for production deployment decisions:
+
+| Task | Iterations | Avg Tokens/Iteration | Total Tokens | Cost (GPT-4o) | Wall Time |
+|------|-----------|---------------------|-------------|---------------|-----------|
+| Simple web search + answer | 3 | 800 | 2,400 | ~$0.02 | 8–12s |
+| Code debugging (10 file repo) | 12 | 2,000 | 24,000 | ~$0.19 | 45–90s |
+| Research report (10 sources) | 25 | 3,000 | 75,000 | ~$0.59 | 3–6 min |
+| Full software feature (new endpoint) | 60 | 4,000 | 240,000 | ~$1.89 | 15–30 min |
+| Complex data analysis pipeline | 100 | 5,000 | 500,000 | ~$3.95 | 45–90 min |
+
+*Prices at GPT-4o May 2026 pricing: ~$5/M input, $15/M output tokens. Wall time depends on tool execution latency, not just LLM latency.*
+
+**Key insight**: Agent cost scales roughly linearly with task complexity (number of required steps × tokens per step). The primary levers for cost control are: (1) routing simpler sub-tasks to cheaper models (GPT-4o-mini at $0.15/M in/out), (2) parallelizing independent tool calls to reduce wall time, and (3) aggressive context compression to minimize prompt tokens.
+
+**Real Failure Rate Analysis**
+
+Industry data from 2025 deployments (Cognition AI / Devin, SWE-agent, GitHub Copilot Workspace):
+
+| Task Type | Single-Task Success Rate | 10-Task Pipeline Success Rate |
+|-----------|-------------------------|-------------------------------|
+| Test harness fix (identified bug) | 72% | 37% |
+| New feature from spec | 48% | 18% |
+| Multi-file refactoring | 35% | 9% |
+| Full PR from GitHub issue | 31% | 7% |
+
+The compounding failure problem: if each step has 90% success probability, a 25-step task succeeds only 0.9^25 ≈ 7% of the time. This is why **human checkpoints** (pausing for approval at high-stakes steps), **reversible actions** (preferring operations that can be undone), and **progressive commitment** (doing the minimum necessary before confirming intent) are core design principles for production agents.
+
+### 10. The Near Future: Toward General-Purpose Agents
 
 The trajectory is clear: agents will become more reliable, longer-horizon, and more economically impactful. Key open research challenges:
 1. **Long-horizon consistency:** Maintaining goal fidelity across thousands of steps

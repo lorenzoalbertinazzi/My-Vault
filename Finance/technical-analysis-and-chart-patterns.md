@@ -3,7 +3,7 @@ title: Technical Analysis and Chart Patterns
 date: 2026-05-27
 tags: [finance, technical-analysis, chart-patterns, candlesticks, support-resistance, moving-averages, RSI, MACD, Bollinger-bands, Dow-theory, Wyckoff-method, Elliott-wave, Fibonacci, volume-profile, market-microstructure, momentum, market-breadth, order-flow, gamma-pinning, Ichimoku]
 source: "Edwards & Magee (1948) Technical Analysis of Stock Trends; Murphy (1999) Technical Analysis of the Financial Markets; Nison (1991) Japanese Candlestick Charting Techniques; Schabacker (1932) Stock Market Theory and Practice; Bulkowski (2005) Encyclopedia of Chart Patterns; O'Neil (1988) How to Make Money in Stocks"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

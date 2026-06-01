@@ -3,7 +3,7 @@ title: Derivatives — Futures, Forwards, and Swaps
 date: 2026-05-30
 tags: [finance, derivatives, futures, forwards, swaps, hedging, risk-management, commodities, interest-rate-swap, CDS, cost-of-carry, basis-risk, margin, central-clearing, OTC-derivatives, SOFR, contango, backwardation]
 source: "Hull (2018) Options, Futures and Other Derivatives; CME Group data; BIS Triennial Central Bank Survey (2022); McDonald (2013) Derivatives Markets; Duffie (2010) How Big Banks Fail and What to Do About It"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -164,6 +164,78 @@ For equity: a $50M portfolio with beta = 1.2 against S&P 500, E-mini futures pri
 ```
 N* = ($50M × 1.2) / (5,000 × $50) = $60M / $250,000 = 240 contracts
 ```
+
+### 6a. DV01 and Interest Rate Sensitivity: Full Worked Framework
+
+**DV01 (Dollar Value of a Basis Point)**, also called PVBP (Price Value of a Basis Point), measures the change in the dollar value of an interest rate instrument for a 1 basis point (0.01%) parallel shift in yields. It is the fundamental risk measure for all fixed income and rate derivatives.
+
+**General DV01 formula:**
+```
+DV01 = (Modified Duration × Dirty Price × Notional) / 10,000
+```
+
+Or equivalently, using finite difference approximation:
+```
+DV01 ≈ [P(y − 0.0001) − P(y + 0.0001)] / 2
+```
+Where P(y) = bond price at yield y.
+
+**Worked Example — 10-Year Interest Rate Swap DV01:**
+
+A bank enters a 10-year IRS: pays fixed 4.50%, receives 3-month SOFR on $100M notional.
+
+Using modified duration of the fixed leg (analogous to a 10-year bond):
+- Modified Duration of fixed leg ≈ 8.2 years (for 4.5% coupon, 4.5% yield)
+- Dirty price ≈ 100 (at-market swap)
+
+```
+DV01 = (8.2 × 100 × $100,000,000) / 10,000 = $82,000 per basis point
+```
+
+This means: if rates rise 1 bp, the fixed-rate payer (the bank) gains $82,000 (their fixed payment becomes relatively cheaper); if rates fall 1 bp, they lose $82,000.
+
+**Aggregating DV01 across a portfolio:**
+
+A rates desk with multiple positions:
+| Position | DV01 | Sign (long = receive fixed) |
+|----------|------|--------------------------|
+| 5-yr IRS receive-fixed $200M | +$85,000 | + |
+| 10-yr IRS pay-fixed $100M | −$82,000 | − |
+| 10-yr T-note $50M long | +$45,000 | + |
+| 10-yr T-note futures short 100 contracts | −$90,000 | − |
+| **Net DV01** | **−$42,000** | Bearish (benefits from rising rates) |
+
+The desk is net short rates by $42,000/bp. To flatten the book, they would buy ~47 10-year Treasury futures (each ~$900 DV01).
+
+**Key Tenor Buckets for Rate Risk:**
+Sophisticated risk systems decompose DV01 into "bucket" sensitivities for each point on the yield curve (1Y, 2Y, 3Y, 5Y, 7Y, 10Y, 20Y, 30Y), since curve trades require understanding which tenor is driving P&L. A steepener trade (long 2Y, short 10Y) would show a positive bucket DV01 in the 2Y bucket and negative in the 10Y bucket, even if total DV01 is zero.
+
+**Convexity Adjustment — Futures vs. Forwards:**
+
+A critical subtlety in interest rate markets: **Eurodollar/SOFR futures rates are NOT equal to forward rates** — they require a convexity adjustment.
+
+Futures are marked-to-market daily; forward rate agreements (FRAs) are not. Because futures P&L is received immediately while FRA payoffs are paid at expiry, futures holders have an implicit reinvestment advantage. This advantage (a form of positive carry) depresses futures rates below equivalent forward rates.
+
+**Convexity adjustment formula (approximate):**
+```
+Forward Rate ≈ Futures Rate − ½ × σ² × T₁ × T₂
+```
+Where σ = short-rate volatility, T₁ = time to futures expiry, T₂ = time to end of reference period.
+
+**Example:** 5-year SOFR futures rate = 4.00%, σ = 1.0%, T₁ = 4.5 years, T₂ = 4.75 years:
+```
+Adjustment = ½ × (0.01)² × 4.5 × 4.75 = ½ × 0.0001 × 21.375 = 0.00107 = 10.7 bps
+Forward Rate ≈ 4.00% + 0.107% = 4.107%
+```
+
+This adjustment is small for short maturities but grows quadratically with time — for 10-year futures it can reach 30–50 bps, making it economically significant for long-dated positions. Fixed income relative value funds (the LTCM-type trades) must compute this precisely.
+
+**DV01 in Practice — Regulatory Context (Basel III FRTB):**
+
+Under the Fundamental Review of the Trading Book (FRTB, Basel III.1, implemented 2025):
+- Banks must calculate Sensitivity-Based Method (SBM) capital charges using DV01 and CS01 (credit spread DV01) across all risk buckets
+- The Standardised Approach (SA) applies prescribed risk weights to sensitivity measures, replacing the internal model flexibility banks previously exploited
+- Expected impact: 40–60% increase in market risk capital requirements for major rate trading banks (BIS QIS studies, 2022)
 
 ### 7. Regulation and Infrastructure
 

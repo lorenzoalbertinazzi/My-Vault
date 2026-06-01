@@ -3,7 +3,7 @@ title: Stoicism and Stoic Philosophy
 date: 2026-05-27
 tags: [psychology, stoicism, philosophy, Marcus-Aurelius, Seneca, Epictetus, dichotomy-of-control, amor-fati, negative-visualization, memento-mori, virtue, resilience, mental-models, emotional-regulation, ancient-philosophy]
 source: "Marcus Aurelius Meditations (~170–180 AD); Epictetus Enchiridion (~108 AD); Seneca Letters from a Stoic (~65 AD); Holiday (2014) The Obstacle Is the Way; Robertson (2019) How to Think Like a Roman Emperor"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 enriched: 2026-05-29
 ---
 

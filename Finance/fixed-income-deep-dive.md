@@ -3,7 +3,7 @@ title: Fixed Income Deep Dive — Bonds, Yield Curves, and Credit Risk
 date: 2026-05-27
 tags: [finance, bonds, fixed-income, yield-curve, credit-risk, interest-rates, duration, convexity, TIPS, CLO, repo-market, sovereign-debt, green-bonds, credit-spread, macaulay-duration, immunization, structured-products, bear-steepener, bull-flattener]
 source: "Fabozzi (2012) Bond Markets: Analysis and Strategies; Tuckman & Serrat (2011) Fixed Income Securities; Mishkin (2018) The Economics of Money, Banking and Financial Markets; Merton (1974) On the Pricing of Corporate Debt, Journal of Finance; Moody's Annual Default Study (2023)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

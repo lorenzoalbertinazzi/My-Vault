@@ -3,7 +3,7 @@ title: Negotiation Tactics — Chris Voss and Roger Fisher
 date: 2026-05-27
 tags: [psychology, negotiation, BATNA, anchoring, Harvard-negotiation, Chris-Voss, FBI-negotiation, emotional-labeling, mirroring, framing, principled-negotiation, Fisher-Ury, conflict-resolution, persuasion, communication]
 source: "Fisher & Ury (1981) Getting to Yes; Voss (2016) Never Split the Difference; Malhotra & Bazerman (2007) Negotiation Genius; Schelling (1960) The Strategy of Conflict"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 enriched: 2026-05-29
 ---
 

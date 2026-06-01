@@ -3,7 +3,7 @@ title: Portfolio Theory and Risk Management
 date: 2026-05-26
 tags: [finance, portfolio-theory, MPT, markowitz, efficient-frontier, CAPM, sharpe-ratio, alpha, beta, correlation, diversification, risk-management, asset-allocation, modern-portfolio-theory, Kelly-criterion, factor-investing, Fama-French, risk-parity, Black-Litterman, CVaR, sequence-of-returns]
 source: "Markowitz (1952) Portfolio Selection, Journal of Finance; Sharpe (1964) Capital Asset Prices, Journal of Finance; Fama & French (1992) The Cross-Section of Expected Stock Returns, Journal of Finance; Black & Litterman (1990) Asset Allocation, Journal of Fixed Income; Kelly (1956) A New Interpretation of Information Rate, Bell System Technical Journal"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

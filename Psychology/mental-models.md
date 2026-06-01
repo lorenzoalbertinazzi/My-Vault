@@ -3,7 +3,7 @@ title: Mental Models — Thinking Frameworks
 date: 2026-05-26
 tags: [psychology, mental-models, decision-making, first-principles, inversion, second-order-thinking, Charlie-Munger, farnam-street, latticework, checklists, systems-thinking, critical-thinking, cognitive-frameworks, rationality, Bayesian-thinking]
 source: "Munger (1994) USC Business School Speech on Worldly Wisdom; Parrish (2019) The Great Mental Models Vol. 1; Bevelin (2007) Seeking Wisdom: From Darwin to Munger; Poor Charlie's Almanack (2005)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 enriched: 2026-05-29
 ---
 

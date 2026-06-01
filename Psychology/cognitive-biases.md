@@ -3,7 +3,7 @@ title: Cognitive Biases — A Practical Map
 date: 2026-05-26
 tags: [psychology, cognitive-biases, heuristics, decision-making, kahneman, tversky, anchoring, availability-heuristic, representativeness, confirmation-bias, hindsight-bias, dunning-kruger, System-1, System-2, behavioral-economics]
 source: "Kahneman (2011) Thinking, Fast and Slow; Tversky & Kahneman (1974) Judgment Under Uncertainty: Heuristics and Biases, Science; Thaler (1980) Toward a Positive Theory of Consumer Choice, JEconBehav; Ariely (2008) Predictably Irrational"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 enriched: 2026-05-29
 ---
 

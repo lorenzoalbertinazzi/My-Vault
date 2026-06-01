@@ -3,7 +3,7 @@ title: Cialdini — The 6 Principles of Influence
 date: 2026-05-26
 tags: [psychology, influence, persuasion, Robert-Cialdini, reciprocity, commitment-consistency, social-proof, authority, liking, scarcity, pre-suasion, marketing, sales, compliance, behavioral-economics]
 source: "Cialdini (1984) Influence: The Psychology of Persuasion; Cialdini (2016) Pre-Suasion; Festinger (1957) A Theory of Cognitive Dissonance; Milgram (1963) Behavioral Study of Obedience, JASP"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 enriched: 2026-05-29
 ---
 

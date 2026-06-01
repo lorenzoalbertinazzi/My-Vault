@@ -3,7 +3,7 @@ title: Currency Markets and Foreign Exchange (FX)
 date: 2026-05-28
 tags: [finance, forex, currency, macroeconomics, trading, carry-trade, purchasing-power-parity, interest-rate-parity, exchange-rate, reserve-currency, dollar-hegemony, de-dollarization, currency-crisis, Dornbusch-model, Mundell-Fleming, Triffin-dilemma]
 source: "Krugman & Obstfeld (2018) International Economics: Theory and Policy; BIS Triennial Central Bank Survey (2022); Burnside, Eichenbaum & Rebelo (2011) Carry Trade and Momentum in Currency Markets, AER; Dornbusch (1976) Expectations and Exchange Rate Dynamics, JPE; Mundell (1963) Capital Mobility and Stabilization Policy Under Fixed and Flexible Exchange Rates"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

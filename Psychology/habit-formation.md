@@ -3,7 +3,7 @@ title: Habit Formation — Atomic Habits, the Habit Loop, and Behaviour Change
 date: 2026-05-27
 tags: [psychology, habits, habit-formation, habit-loop, cue-routine-reward, basal-ganglia, neuroplasticity, behavior-change, keystone-habits, identity-based-habits, James-Clear, Charles-Duhigg, atomic-habits, self-improvement, neuroscience]
 source: "Duhigg (2012) The Power of Habit; Clear (2018) Atomic Habits; Graybiel (2008) Habits, Rituals, and the Evaluative Brain, Annu. Rev. Neurosci.; Wood & Neal (2007) A New Look at Habits, Psych Rev."
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 enriched: 2026-05-29
 ---
 

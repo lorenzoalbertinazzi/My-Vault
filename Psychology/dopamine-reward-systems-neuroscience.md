@@ -3,7 +3,7 @@ title: Dopamine & Reward Systems — The Neuroscience of Motivation
 date: 2026-05-30
 tags: [psychology, neuroscience, dopamine, motivation, reward-systems, addiction, behavioral-neuroscience, decision-making, neurochemistry, reward-prediction-error, mesolimbic-pathway, reinforcement-learning, VTA, nucleus-accumbens, wanting-vs-liking]
 source: "Schultz (1997) A Neural Substrate of Prediction and Reward, Science; Berridge & Robinson (1998) What is the role of dopamine in reward: hedonics, learning, or incentive salience?, Brain Res Rev; Sapolsky (2017) Behave; Volkow et al. (2004) Dopamine in drug abuse and addiction, Neuron; Sutton & Barto (1988) Reinforcement Learning: An Introduction"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -249,8 +249,6 @@ A largely underappreciated discovery: **approximately 50% of the body's dopamine
 **Practical Implications:**
 - The "second brain" concept is not merely metaphorical; gut health appears to influence dopaminergic mood and motivation through real neurochemical mechanisms
 - Dietary fiber, fermented foods, and microbiome diversity associate with better mood and motivation scores in longitudinal studies — though causality is difficult to establish
-
-last_updated: 2026-06-01
 
 ## Related
 - [[habit-formation]] — Dopaminergic reward pathways are the biological substrate of habit loops
