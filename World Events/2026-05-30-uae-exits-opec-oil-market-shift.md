@@ -3,7 +3,7 @@ title: UAE Exits OPEC — The Largest Defection in the Cartel's History
 date: 2026-05-30
 tags: [world-events, UAE, OPEC, oil, energy, gulf, saudi-arabia, geopolitics, energy-markets, oil-cartel, ADNOC, OPEC-plus, production-quota, Sultan-al-Jaber, Mohammed-bin-Zayed, net-zero-paradox, price-war, Iraq, Libya, stranded-assets, sovereign-wealth]
 source: Al Jazeera (Apr–May 2026); Gulf News; Khaleej Times; Enerdata; Arab Center DC; HeyGoTrade analysis; Brent crude Bloomberg data
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -141,6 +141,18 @@ More UAE supply entering the market could suppress oil prices modestly. Lower pr
 
 ## Related
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — US-Iran war context driving UAE strategic realignment
+### Update — June 1, 2026
+
+**UAE exit effective May 1, 2026 — US government welcomes the move:** The UAE's OPEC withdrawal formally took effect on May 1, 2026. The US government issued a statement **welcoming** the exit for its "potential to curb the oil-producing cartel's pricing power" — an explicit endorsement of OPEC fragmentation as serving US energy policy interests. This reveals the Trump administration's strategic calculus: a weakened OPEC creates more downward pressure on oil prices globally, helping manage US domestic inflation while reducing revenue flows to OPEC members whose policy independence the US seeks to constrain.
+
+**Production capacity: 4.8M bpd vs. 3.2M allowed under OPEC (CNBC):** UAE's actual production capacity had grown to **4.8 million barrels per day** — but under its OPEC+ quota, it was only allowed to produce **3.2 million bpd**. The 1.6M bpd gap was the economic frustration driving the exit. As a free actor, UAE plans to expand to **5 million bpd by 2027**, potentially adding ~2M bpd of additional supply to global markets once Hormuz conditions normalize.
+
+**OPEC market share below 30% for first time in cartel history (CNBC, April 29, 2026):** With UAE's departure, OPEC's global market share has fallen **below 30% for the first time** in its history. The structural decline: US shale production growth since 2018, the rise of non-OPEC producers (Brazil, Guyana, Norway), and now the loss of a major Gulf producer. Saudi Arabia retains significant influence through production discipline, but OPEC's ability to unilaterally set global oil prices has materially weakened.
+
+**Brent peaked at $138/barrel on April 7, 2026 (BlackRock Investment Institute):** The Hormuz closure produced an oil price peak of **$138/barrel on April 7** — a historical high for the crisis. Subsequent ceasefire deal optimism has brought prices down to the $88–96 range (May 27: Brent at $95.77; WTI at $88.57). The EIA has stated it expects "oil prices will reflect a larger risk premium throughout the forecast period" regardless of Hormuz normalization, reflecting permanent repricing of geopolitical tail risk in oil futures curves.
+
+**"Who could be next?" — OPEC exit contagion risk (CNBC):** The UAE exit creates a precedent that other disgruntled members may follow. Most watched: **Iraq** (chronic over-producer, quota complaints about Kurdish production), **Libya** (quota disputes tied to production volatility from civil conflict), and potentially **Kazakhstan** via the OPEC+ mechanism. Angola already left OPEC in January 2024. Saudi Arabia's production discipline is the remaining anchor, but without UAE's alignment, the cartel's cohesion faces its most serious test since the 1986 oil price collapse.
+
 - [[2026-05-27-us-china-strategic-competition]] — Energy market control as a dimension of great power competition
 - [[2026-05-27-us-iran-conflict-strait-of-hormuz]] — Hormuz disruption that exposed UAE's strategic alignment decision
 - [[2026-05-27-us-iran-conflict-global-energy-crisis]] — Global energy market dynamics from Hormuz closure

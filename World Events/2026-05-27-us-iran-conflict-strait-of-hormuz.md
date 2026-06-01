@@ -3,7 +3,7 @@ title: US-Iran Conflict and the Strait of Hormuz Crisis (2026)
 date: 2026-05-27
 tags: [world-events, us-iran, middle-east, strait-of-hormuz, oil, nuclear, IRGC, ceasefire, energy-crisis, pakistan-mediation, HEU, mine-clearance, Brent-crude, WTI, LNG, fixed-income, dollar-hegemony]
 source: Crisis Group (2026 Conflicts Watch); UANI ship-tracking data; CNN shipping visualization (Apr 29, 2026); Bloomberg (May 27, 2026); CNBC Piper Sandler (May 26, 2026)
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -185,6 +185,16 @@ The Hormuz crisis arrives at a moment of particular vulnerability in the global 
 **Two US-Iran military skirmishes (May 27–28)**: CBS News reported two tactical military skirmishes between US and Iranian forces in the Strait in the 48 hours before May 29, even as negotiations were in their final stages. This illustrates the core operational risk: maintaining "maximum pressure" tactically while pursuing a deal diplomatically creates constant collision risk that could collapse the diplomatic track if either side suffers significant casualties or political pressure from a skirmish.
 
 **Oil price response — Brent at $95.77**: Brent crude fell to $95.77/barrel (down 3.83%) and WTI to $88.57/barrel (down 4.75%) on deal hopes in the days leading up to May 29 — approximately 11% below Hormuz crisis peak prices. If the deal is signed and mine clearance begins, energy analysts broadly expect a further decline toward $80–85/barrel (pre-crisis range) over the subsequent 4–6 weeks as shipping risk premiums unwind. If talks fail, oil could spike back toward $110/barrel or above.
+
+### Update — June 1, 2026
+
+**Brent crude peak: $138/barrel on April 7 (BlackRock Investment Institute, May 2026):** The Strait of Hormuz closure produced an oil price peak of **$138/barrel on April 7, 2026** — the highest oil price in modern history. This figure contextualizes the current ~$96 level (May 27 data) as already representing a substantial recovery from the crisis peak, driven by ceasefire deal optimism. The $138 peak represents approximately an 80%+ premium over pre-war oil levels (Brent was around $70–75/barrel in early 2026 before the February 28 strikes). StoneX analysis published in 2026 confirms: "Geopolitical risk is moving oil prices more than supply" — the current price premium is almost entirely geopolitical risk premium, not fundamentals-driven.
+
+**EIA affirms structural risk premium persists:** The US Energy Information Administration's May 2026 Short-Term Energy Outlook explicitly states that "oil prices will reflect a larger risk premium throughout the forecast" period — even if the Hormuz reopens. The reasoning: the February 2026 precedent (a US-allied state closed the world's most important oil chokepoint for months) has permanently repriced the geopolitical risk premium embedded in long-dated oil futures. Pre-2026, markets priced Hormuz closure risk at approximately $5–10/barrel implied premium; post-2026, that premium is being repriced upward substantially.
+
+**UAE production adds 2M bpd when Hormuz normalizes:** The UAE's May 1 OPEC exit (combined with the Hormuz eventual reopening) means that once maritime traffic normalizes, global supply could increase by approximately 2 million barrels per day from UAE alone — a significant bearish oil price signal. Combined with Saudi Arabia's stated willingness to increase production after the OPEC+ architecture is disrupted by UAE's exit, the oil price trajectory post-Hormuz normalization could move sharply downward.
+
+**Two US-Iran skirmishes in 48 hours (May 29)** as noted in main Iran note: the ceasefire remains militarily fragile even as diplomats negotiate. Piper Sandler's contrarian warning (oil could reach new highs if deal fails) versus the Bloomberg/EIA normalization scenario within 30 days of signing represent the two key tail scenarios.
 
 ## Related
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]

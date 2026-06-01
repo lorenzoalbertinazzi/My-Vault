@@ -3,7 +3,7 @@ title: Israel-Palestine Gaza War 2026 — Ceasefire Collapse, Disarmament Stalem
 date: 2026-05-30
 tags: [geopolitics, israel, palestine, gaza, Hamas, ceasefire, humanitarian-crisis, Netanyahu, UN, disarmament, ethnic-cleansing, ICJ, genocide, IDF, occupation, west-bank, Netzarim-corridor, Philadelphi-corridor, two-state-solution, Mladenov]
 source: "OCHA/Gaza Health Ministry cumulative figures via UNRWA Situation Reports #212–221 (through May 2026); OHCHR monitoring data — 922 post-ceasefire Palestinian deaths (May 2026); ICJ provisional measures (South Africa v. Israel, January 2024); UNRWA Situation Report #220 (May 2026); Al Jazeera (May 2026); UN News (May 2026 — 26 killed over Eid holiday); CNN (May 2026); Doctors Without Borders (MSF) field reports"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -131,6 +131,20 @@ After 19+ months of active war followed by 7+ months of nominal ceasefire with c
 **Lebanon/Hezbollah:** Hezbollah fought a limited war with Israel (August 2024 – November 2024), during which Israel killed Hezbollah Secretary-General Hassan Nasrallah (September 27, 2024) and devastated Hezbollah's missile arsenal and command structure. A US-brokered Lebanon ceasefire is in place but fragile.
 
 **International isolation:** Israel's actions have produced a diplomatic rupture: Ireland, Norway, Spain recognized Palestinian statehood (May 2024); the ICJ case continues; multiple countries recalled ambassadors at various points; the UN General Assembly votes on Palestinian issues have repeatedly shown Israel isolated with only the US, and a handful of allies, opposed.
+
+### Update — June 1, 2026
+
+**"Neither war nor peace" — six months of nominal ceasefire (Al Jazeera, April 10, 2026):** Al Jazeera's field assessment marking six months since the October 10, 2025 ceasefire agreement described Gaza as oscillating "between relative calm and recurring escalation, with no tangible improvement in humanitarian or security conditions." The phrase "neither war nor peace" has become the consensus characterization among international observers.
+
+**Ceasefire violations quantified (Al Jazeera / Gaza Government Media Office):** Gaza's Government Media Office documented **more than 2,073 ceasefire violations** between October 2025 and March 2026 alone — including Israeli airstrikes, gunfire, and military incursions. This figure aligns with the OHCHR monitoring data showing 922+ Palestinians killed since the ceasefire's inception, confirming that the ceasefire has been systematically violated by continued Israeli military operations.
+
+**Territory control revision:** As of May–June 2026, updated assessments (CNN, May 14, 2026) place Israeli effective control at **50–55% of the Gaza Strip** — somewhat lower than the 70% Netanyahu ordered in May 2026, reflecting the gap between political orders and operational reality on the ground. Israel has not fully withdrawn from any zone it entered, but has not yet physically occupied all territory claimed in the order. The distinction matters: the Netzarim Corridor (north-south divide) and the Philadelphi Corridor (Egypt border) remain under IDF control, but large areas of central Gaza have not been fully secured.
+
+**Risk of "permanent" Gaza divide — UN envoy warning (CNN/Al Jazeera, May 2026):** The high representative overseeing the Board of Peace for Gaza — Nickolay Mladenov — issued a stark warning in May 2026: the deteriorating status quo risks "becoming permanent." His assessment: without a political framework, the de facto partition of Gaza between Israeli-controlled zones and Hamas-controlled remnant areas becomes entrenched, precluding any reconstruction, governance transition, or hostage deal. This warning, from the US-backed ceasefire overseer himself, represents the strongest official acknowledgment that the ceasefire framework has failed in its core objective.
+
+**Stalled negotiations:** UN Security Council sessions (May 2026) have produced no actionable resolution. The disarmament deadlock has not moved. Hamas retains weapons; Israel retains military presence. The "Board of Peace" framework has held no full meetings at the political level since February 2026. The gap between the ceasefire text and ground reality has widened each month.
+
+**International legal proceedings ongoing:** The ICJ case (South Africa v. Israel) continues; additional provisional measures hearings are scheduled for late 2026. Multiple states have expanded recognition of Palestinian statehood; Israel has expanded settlement construction in the West Bank simultaneously.
 
 ## Related
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Iran-Hamas connection; regional escalation dynamics

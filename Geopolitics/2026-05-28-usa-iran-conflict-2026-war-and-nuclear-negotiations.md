@@ -3,7 +3,7 @@ title: USA–Iran Conflict 2026 — War, Nuclear Program, and Ceasefire Negotiat
 date: 2026-05-28
 tags: [geopolitics, iran, usa, israel, nuclear, middle-east, war, ceasefire, strait-of-hormuz, pakistan-mediation, IRGC, sanctions, JCPOA, HEU, maximum-pressure, MOU, Abraham-Accords]
 source: Wikipedia 2026 Iran War; CNN (May 24–29, 2026); Axios (May 24, 2026); Bloomberg (May 27, 2026); CNBC Piper Sandler (May 26, 2026)
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -163,6 +163,25 @@ Pakistan's emergence as the successful mediator between the US and Iran carries 
 **Oil markets pricing deal hope but divided**: Brent crude dropped 3.83% to $95.77/barrel and WTI fell 4.75% to $88.57/barrel on deal hopes in the days before May 29, with oil prices having fallen approximately 11% from their Hormuz-crisis peak on cumulative deal optimism. However, Piper Sandler issued a contrarian warning (CNBC, May 26) that the Strait of Hormuz could remain effectively closed for months even after a deal is signed — citing the practical complexity of mine clearance, Iranian military repositioning, and commercial shipper risk aversion — and predicted oil could reach new highs if deal momentum collapses.
 
 **Two skirmishes in Hormuz in 48 hours**: Even as final MOU negotiations were underway, CBS News reported that US and Iranian forces had two skirmishes in the Strait in the 48 hours preceding May 29 — confirming that the "maximum pressure alongside talks" approach carries real collision risk, and that the ceasefire remains extremely fragile at the tactical military level.
+
+### Update — June 1, 2026
+
+**Tentative MOU reached — awaiting Trump's final approval (PBS NewsHour / Axios, May 28–29, 2026):** US and Iranian negotiators have reached agreement on the text of a memorandum of understanding, but President Trump has not yet given his final approval as of the end of May 2026. This represents significant progress beyond the "largely negotiated" characterization of May 23 — the negotiators themselves are satisfied with the text; the decision now rests entirely with Trump.
+
+**Updated MOU contents (PBS NewsHour / Axios / Al Jazeera):** The latest reporting confirms the following terms are included in the agreed MOU text:
+- **60-day ceasefire extension**, renewable by mutual consent
+- **Strait of Hormuz reopened** to normal commercial traffic; US lifts the naval blockade on Iranian ports
+- **Iran's commitment** not to pursue a nuclear weapon — explicitly stated as a founding principle
+- **Nuclear disposition talks** begin within the 60-day window: first items to be negotiated are (1) how to dispose of Iran's 440+ kg of highly enriched uranium; (2) what happens to Iran's enrichment infrastructure
+- **US commits to discuss** sanctions relief and release of frozen Iranian funds as part of the 60-day negotiation process — not upfront, but as a subject of talks
+- **Lebanon-Hezbollah war ends**: the MOU includes an explicit provision that the conflict between Israel and Hezbollah in Lebanon formally concludes — a significant addition that links the Iran deal to the broader regional de-escalation
+- **Humanitarian aid mechanism**: Iran begins receiving goods and humanitarian aid through a designated mechanism
+
+**What changed from earlier reports:** The addition of the Lebanon-Hezbollah war termination clause is new — earlier reporting focused only on Iran's nuclear program and Hormuz. This suggests the MOU has evolved into a broader regional security framework, not merely a bilateral Iran-US war termination agreement.
+
+**Iran has not confirmed acceptance (Tasnim News Agency / Al Jazeera):** Iran's semi-official Tasnim News Agency stated the MOU text "had not yet been finalized or confirmed." Supreme Leader Mojtaba Khamenei has not publicly endorsed the deal. The IRGC-affiliated Fars News described Trump's characterizations as "a mix of truth and lies." This suggests Iranian domestic politics remain contested around the agreement terms — the new Supreme Leader faces pressure from hardline IRGC factions who view any nuclear concessions as capitulation to US military coercion.
+
+**Strategic assessment as of June 1, 2026:** The Iran nuclear deal is closer to resolution than at any point since negotiations began, with both sides' negotiators having agreed on text — but the critical missing pieces are: (1) Trump's final decision; (2) Iran's supreme leader formally accepting the terms. The 48-hour window following Trump's May 29 Situation Room meeting will be determinative. If Trump approves and Khamenei ratifies, the Hormuz reopening within 30 days would be the largest single energy market event of 2026. If either side walks back, the ceasefire remains in its current fragile state.
 
 ## Related
 - [[2026-05-27-us-china-strategic-competition]]

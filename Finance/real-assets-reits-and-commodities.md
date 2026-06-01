@@ -316,6 +316,27 @@ REITs typically carry 30–50% loan-to-value (LTV) ratios. Debt structure:
 
 A well-managed industrial REIT like Prologis maintains BBB+/A− credit ratings with ~30% LTV, ~7–8× interest coverage, and 95%+ fixed-rate debt — enabling it to weather rate cycles that destroy more leveraged peers.
 
+### Update — June 1, 2026: Oil Price Regime and Commodity Market Geopolitics
+
+**Hormuz closure — the most extreme real-world test of oil geopolitical risk pricing:**
+- Brent peak: **$138/barrel (April 7, 2026)** — approximately 90% premium over pre-war baseline of ~$75
+- Current (May 27, 2026): **$95.77/barrel** — still elevated; 11% below peak on deal optimism
+- WTI: $88.57/barrel (May 27)
+- EIA forecast: "structural risk premium throughout the forecast period" — permanent repricing of Hormuz closure tail risk
+- Context: 1973 embargo removed ~7% of global supply → oil prices quadrupled. 2026 Hormuz closure removed ~70% of Strait throughput (14% of global supply) → prices ~+90%. The price response is proportionally less severe than historical episodes, partly because (1) SPR releases buffered the shock; (2) alternative routes (Saudi East-West pipeline, UAE pipeline) partially substituted; (3) China maintained some Russia-linked supply
+
+**UAE OPEC exit (May 1, 2026) — supply structure shift:**
+- UAE production capacity: 4.8M bpd vs. OPEC quota of 3.2M bpd
+- Target: 5M bpd by 2027 — will add ~2M bpd to global supply when conditions normalize
+- OPEC market share: below 30% for the first time in history
+- Implication for commodity positioning: post-Hormuz normalization could produce sharp oil price correction as (1) Hormuz risk premium unwinds and (2) UAE supply ramp begins simultaneously. Net downside risk for oil longs post-deal
+
+**Gold as geopolitical hedge — 2026 performance:**
+Gold has performed as the classic geopolitical safe haven in 2026: rising during the February–April escalation period (US-Iran war, India-Pakistan conflict) and retreating partially on ceasefire optimism. Central bank gold accumulation — which drove gold prices throughout 2023–2024 as reserve managers diversified away from dollar assets — continues, providing structural demand support. The Russia reserve freeze ($300B, 2022) accelerated central bank gold buying from EM central banks as a hedge against sanctions-based asset confiscation risk.
+
+**Uranium and nuclear energy — geopolitical tailwind:**
+The collapse of Russia-West energy relationships (gas cutoffs, sanctions) has accelerated European and global nuclear energy investment. Uranium spot prices have risen as utility demand for long-term supply contracts increases. The North Korea DPRK-Russia technology exchange (including nuclear propulsion for submarines) and Iran's nuclear program both keep nuclear security/proliferation in the headlines — but from a commodity perspective, the civilian nuclear power investment cycle is on an upswing that supports uranium demand through the 2030s.
+
 ## Related
 - [[portfolio-theory]] — Portfolio construction, correlation, diversification mathematics; Yale Endowment model real assets allocation
 - [[derivatives-futures-and-forwards]] — Commodity futures as the primary access vehicle; contango/backwardation mechanics in roll returns

@@ -401,6 +401,36 @@ Investors have few direct hedges for cyber infrastructure risk, but several part
 
 ---
 
+### Update — June 1, 2026: The 2026 Geopolitical Risk Premium in Real Numbers
+
+The first half of 2026 represents the highest-stakes real-world test of geopolitical risk premium theory since the 1973 oil embargo. The following data points are now available for calibrating GPR pricing models:
+
+**Oil price — Hormuz shock quantified:**
+- Pre-war Brent crude baseline (early Feb 2026): ~$72–75/barrel
+- Crisis peak (April 7, 2026): **$138/barrel** (BlackRock Investment Institute confirmed)
+- Post-ceasefire-optimism level (May 27, 2026): **$95.77/barrel** (Brent); $88.57 (WTI)
+- Implied Hormuz risk premium at peak: approximately **$63–66/barrel** (~90% premium over baseline)
+- EIA assessment: "oil prices will reflect a larger risk premium throughout the forecast period" — i.e., even post-normalization, structural repricing of Hormuz closure risk
+
+**GPR Index implications:** The Caldara-Iacoviello GPR Index would register one of its highest readings since the 2003 Iraq invasion given: (1) a US-Iran war (highest-severity Middle East event type), (2) India-Pakistan nuclear-capable exchange, (3) Russia-Ukraine's fifth year, and (4) Venezuela US military intervention — all simultaneous. Historical GPR spikes of this magnitude are associated with 5–10% equity market declines in the 30-day window; the actual equity market response in 2026 has been cushioned by AI-driven growth optimism and defense sector strength (offsetting effects).
+
+**UAE OPEC exit (May 1, 2026) — structural oil supply shift:**
+- UAE capacity: 4.8M bpd; OPEC quota: 3.2M bpd; free actor target: 5M bpd by 2027
+- Net additional supply when normalized: ~2M bpd
+- OPEC market share below 30% for first time in history
+- Directional implication: post-Hormuz normalization oil price correction could overshoot downward
+
+**Defense sector as geopolitical hedge — 2026 data:**
+- SIPRI: Global military spending at $2.89 trillion in 2025 (+47% vs 2019)
+- European defense companies (Rheinmetall, BAE, MBDA, Leonardo, Thales) experienced 40–80% share price appreciation 2022–2026
+- Defense ETFs outperformed broad equity indices in 2024–2026 precisely during the highest GPR periods — confirming the theoretical prediction that defense sector is a long GPR trade
+- Rheinmetall's market capitalization grew from ~€8B (pre-Ukraine war, 2021) to over €50B by 2026 — a 6x appreciation directly attributable to geopolitical risk materialization
+
+**Sanctions-evasion architecture (2026 frontier):**
+- mBridge (BIS Innovation Hub CBDC platform, piloted by China, UAE, Saudi Arabia, HK) now processing real cross-border transactions — potentially enabling sanctions circumvention outside SWIFT
+- The Russia reserve freeze ($300B, 2022) permanently altered sovereign reserve composition: China, Saudi Arabia, UAE, India are diversifying reserves away from dollar assets faster than at any point since Bretton Woods
+- De-dollarization is not replacing the dollar's reserve status in the short term but is creating a structural second tier of non-dollar bilateral trade settlement that reduces dollar demand at the margin
+
 ## Related
 - [[macroeconomics-101]] — Macro channels for geopolitical transmission; cost-push inflation from supply shocks
 - [[real-assets-reits-and-commodities]] — Commodity geopolitical pricing; oil supercycle and green metals thesis

@@ -3,7 +3,7 @@ title: China Sentences Two Former Defense Ministers to Death — Xi's Anti-Corru
 date: 2026-05-30
 tags: [world-events, china, PLA, corruption, Xi-Jinping, Wei-Fenghe, Li-Shangfu, military, anti-corruption, death-sentence, rocket-force, PLARF, CMC, procurement-corruption, Taiwan-readiness, Stalin-parallel, suspended-death-sentence]
 source: Washington Post (May 7, 2026); CNN (May 7, 2026); Eurasia Review (May 28, 2026); Taiwan Ministry of National Defense assessment
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -112,6 +112,16 @@ The 2023–2026 PLA purge is not at Stalinist scale, but the pattern raises anal
 - US Defense Department: No public comment; private assessments through intelligence channels
 - UK, France, Germany: Official silence; assessments flagged through NATO intelligence sharing
 - Taiwan's Ministry of National Defense: Monitored the purge closely; assessed PLARF readiness as potentially temporarily reduced
+
+### Update — June 1, 2026
+
+**Zhang Youxia and Liu Zhenli placed under investigation (January 24, 2026):** In the most dramatic escalation of Xi's PLA purge to date, the PLA's **top general Zhang Youxia** (Vice Chairman of the Central Military Commission, effectively #2 in military hierarchy behind Xi himself) and **General Liu Zhenli** (Chief of the Joint Staff Department, the PLA's equivalent of Chairman of the Joint Chiefs) were placed under investigation for "serious disciplinary and legal violations" on January 24, 2026. This announcement — made by China's Ministry of National Defense — represents a qualitative escalation: earlier purges targeted the Rocket Force (nuclear/missile command); these investigations target the senior command structure that would direct any Taiwan or other major combat operation. The CMC is now left with **only one general (Zhang Shengmin)** serving alongside Xi — an unprecedented situation.
+
+**Scale reaches 101 total purges — 52% of top 176 positions affected (CSIS, 2026):** CSIS China Power Project data as of early 2026 documents **101 confirmed and potential purges** of senior PLA officers since 2022. When accounting for positions that have been affected more than once (i.e., a position's holder was purged and the replacement was also later purged), **52% of the PLA's 176 top leadership positions** have been touched by the campaign. This is no longer a targeted anti-corruption drive — at these numbers, it constitutes a structural reorganization of the PLA's entire senior leadership cohort.
+
+**Military morale "significantly deteriorated" (UPI / CSIS, April 2026):** UPI reporting (April 19, 2026) cites CSIS analysis finding that **China's military morale has significantly deteriorated** following the sustained purges. Officers are reluctant to take initiative, exercise independent judgment, or accept promotion to positions that expose them to corruption investigation risk. The climate of fear — which parallels what historians observe in Stalin's Red Army after the Great Purge of 1937–1938 — is creating a PLA that is structurally loyal to Xi personally but potentially less capable of the decentralized, initiative-taking command required for complex combat operations.
+
+**Root cause — Ukraine war assessment triggered the purge (Breaking Defense, February 2026):** Breaking Defense analysis identifies the proximate trigger: Xi's internal assessment of the PLA's readiness after studying Russia's Ukraine invasion revealed **rampant corruption within the Rocket Force** (specifically: procurement fraud, falsified readiness reports, and missiles with water instead of fuel) and **a broader system of graft tied to promotions**. Russia's early military failures in Ukraine, attributed partly to similar corruption problems, prompted Xi to demand a full accounting of what Chinese money had actually bought in military terms. The answer was apparently deeply unsatisfying — hence the scale and speed of the subsequent purge.
 
 ## Related
 - [[2026-05-27-us-china-great-power-competition]] — PLA modernization and readiness context; anti-corruption implications for China's military capacity

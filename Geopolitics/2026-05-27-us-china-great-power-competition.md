@@ -3,7 +3,7 @@ title: US-China Great Power Competition and the Fragmenting World Order
 date: 2026-05-27
 tags: [geopolitics, us-china, great-power-competition, multipolar, trade-war, taiwan, semiconductors, decoupling, indo-pacific, BRI, BRICS, dollar-hegemony, AI-competition, Thucydides-trap]
 source: WEF Global Risks Report 2026; CFR; Trump-Xi Beijing Summit (May 14, 2026); NPR; Bloomberg
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -186,6 +186,18 @@ Graham Allison's "Thucydides Trap" — derived from Thucydides' account of why S
 **Russia-Ukraine: Oreshnik hypersonic strikes on Kyiv (May 23–24)**: Russia's use of the Oreshnik hypersonic ballistic missile in its largest single attack on Kyiv of the war (600 drones, 90 missiles, 4 killed, ~100 injured, 30+ buildings destroyed) is relevant to US-China dynamics in a specific way: it demonstrates that Russia is conducting major military escalation simultaneously with the US-China trade truce and the Iran negotiations, reinforcing the convergent instability that characterizes the current multipolar moment. Europe's condemnation of the strike as "nuclear brinkmanship" — the Oreshnik is nuclear-capable — adds to the global alarm about threshold-crossing behavior by nuclear-armed states, a concern that applies with equal or greater force to the Taiwan scenario.
 
 ## Related
+### Update — June 1, 2026
+
+**"America's narrative on Taiwan needs an update" (Brookings, 2026):** Brookings Institution analysis argues that the US strategic communication framework around Taiwan — built on Cold War deterrence concepts — is failing to account for the full spectrum of Chinese coercive options. Specifically, the conventional deterrence discourse focuses on invasion scenarios while underplaying gray zone erosion of Taiwanese sovereignty (diplomatic isolation, economic coercion, cognitive warfare). The Brookings recommendation: reframe the US posture from "defend against invasion" to "prevent coercion across all domains."
+
+**War on the Rocks — "Deterrence Won't Fail, It Will Be Bypassed" (February 2026):** This widely-read analysis from War on the Rocks argues that the PRC's most rational path to Taiwan control is not a direct military assault (which risks catastrophic US intervention) but rather a multi-domain pressure campaign that achieves strategic objectives below the threshold of triggering Article 51 collective self-defense. Methods include: seizing Kinmen or Matsu (outlying islands with ambiguous US defense commitments), imposing a "quarantine" (not a blockade, to avoid the legal definition) on Taiwan's ports, or engineering domestic political conditions in Taiwan that bring a Beijing-friendly government to power. The analysis has triggered significant debate in US strategic planning circles.
+
+**Fourth Taiwan Strait Crisis dynamics (Wikipedia / CFR, 2026):** The cumulative ADIZ violations, median-line crossings, and carrier exercises of 2025–2026 are being characterized as the **Fourth Taiwan Strait Crisis** — an ongoing, low-intensity version of the 1954, 1958, and 1995–96 crises. Unlike previous crises, which had clear precipitating events and ended, the Fourth Crisis is defined by **continuous, normalized pressure** rather than discrete escalation. This definitional shift matters: if the crisis never "ends," deterrence never fully "holds" — the PRC establishes a new baseline of aggressive behavior.
+
+**WEF 68% fragmentation forecast still operative:** The WEF Global Risks Report 2026's finding — 68% of respondents expect a multipolar or fragmented world order — is reinforced by the events of the first half of 2026: the US-Iran war, the Venezuela intervention, the India-Pakistan conflict, and the parallel Ukraine war have together demonstrated that the liberal rules-based order is under simultaneous pressure on four fronts. No single power — not the US, not China — has the capacity or will to maintain order globally. The multipolar transition is not hypothetical; it is happening in real time.
+
+**China's Latin America pivot deepens post-Venezuela (2026):** China's diplomatic response to the US Venezuela intervention — strong condemnation, UNSC resolution veto by US, expanded Chinese presence as a counterweight narrative — has accelerated Chinese diplomatic outreach in Latin America. Brazil's Lula government has positioned China as a partner in the "anti-interventionist bloc." This represents a direct consequence of the US-China competition extending into the Western Hemisphere: actions taken under purely regional US domestic rationale (narco-terrorism) have global strategic consequences that advantage China's positioning.
+
 - [[2026-05-27-us-china-strategic-competition]]
 - [[2026-05-27-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
 - [[2026-05-27-india-pakistan-2025-war-and-aftermath]]

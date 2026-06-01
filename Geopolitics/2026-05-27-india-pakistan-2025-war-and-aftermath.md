@@ -3,7 +3,7 @@ title: India-Pakistan 2025 War and Its Aftermath
 date: 2026-05-27
 tags: [geopolitics, india, pakistan, kashmir, nuclear, south-asia, conflict, war, ceasefire, operation-sindoor, lashkar-e-taiba, proxy-war, nuclear-deterrence, LOC, stability-instability-paradox]
 source: https://www.unsw.edu.au/newsroom/news/2026/05/one-year-after-their-brief-war-how-close-are-india-and-pakistan-to-another-conflict; Al Jazeera (May 2026); Washington Post (May 5, 2026)
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -152,6 +152,16 @@ The post-ceasefire diplomacy illustrates several classic negotiation dynamics. T
 **RSS calling for dialogue — and Pakistan welcoming it**: Dattatreya Hosabale, the general secretary of the Rashtriya Swayamsevak Sangh (RSS) — the ideological parent organization of Modi's BJP and India's most influential Hindu majoritarian body — publicly stated that New Delhi should explore dialogue with Pakistan. Pakistan's Foreign Office spokesperson described this as a "positive development," though declining to confirm back-channel contacts. The significance is structural: when the RSS endorses dialogue, it provides domestic political cover for the Modi government that was previously absent. Senior Kashmiri political figures including Farooq Abdullah and Mehbooba Mufti — both former chief ministers of Jammu & Kashmir — have also publicly backed peace talks. The political ecosystem for dialogue is forming.
 
 **Strategic assessment as of May 29**: India enters the one-year anniversary month of the ceasefire in a diplomatically weakened position relative to Pakistan, despite having won the military exchange decisively. India struck Pakistani Punjab, destroyed militant infrastructure, and demonstrated the willingness to use ballistic missiles. But it also depended on US mediation to end the conflict, and has watched Pakistan leverage the ceasefire outcome into a diplomatic renaissance that directly challenges India's decade-long isolation strategy. The bitter irony: India's military success created the conditions under which Pakistan rebuilt its international standing.
+
+### Update — June 1, 2026
+
+**India-US reset underway — Rubio visit:** India has been actively trying to revive its critical relationship with the United States, which sputtered in the post-ceasefire period as the Trump administration elevated Pakistan. US Secretary of State Marco Rubio's visit to India represents a deliberate reset attempt — Washington signaling it does not wish to permanently alienate New Delhi despite the tilt toward Islamabad during the Iran mediation process. The visit reflects a broader US calculation: India remains indispensable to the Indo-Pacific strategy (as a counterweight to China), and the Pakistan-Iran mediation success should not be allowed to permanently displace that relationship.
+
+**Pakistan in "diplomatic sweet spot" (Al Jazeera analysis, May 2026):** Pakistan finds itself simultaneously wooed by both the Trump administration (for Iran mediation services and potential peace deal signing ceremony) and China (whose CPEC investment deepened during the conflict). Pakistan-Bangladesh ties have improved dramatically following Sheikh Hasina's ouster — Hasina was seen as an Indian ally, and her removal has created space for a Dhaka-Islamabad rapprochement that further deepens India's regional isolation. The "two wins, two losses" assessment (Al Jazeera, May 10, 2026) captures the paradox: India won the military contest in May 2025 but lost the diplomatic aftermath.
+
+**Pakistan military modernization — HQ-19 air defense system:** Pakistan is pursuing the **HQ-19**, a longer-range Chinese ballistic missile defense system, with induction anticipated in late 2026. The HQ-19 represents a significant upgrade in Pakistan's ability to intercept Indian ballistic missiles — directly responding to the technological lessons of the May 2025 conflict (in which Indian BrahMos and Fatah-II missiles demonstrated precision capabilities). The procurement confirms that both sides are drawing military-technical lessons from the conflict and upgrading their arsenals accordingly, setting conditions for a potentially more dangerous future confrontation.
+
+**"Two wins, two losses" — the strategic verdict after one year:** Al Jazeera's anniversary assessment (May 10, 2026) identifies India's wins as: (1) demonstrating military superiority and willingness to strike Pakistani Punjab; (2) disrupting militant infrastructure. Pakistan's wins: (1) nuclear deterrence constrained Indian follow-up operations; (2) diplomatic leverage gained through ceasefire negotiations → Iran mediation → global profile elevation. India's losses: (1) failed to achieve durable diplomatic isolation of Pakistan; (2) weakened US relationship. Pakistan's losses: (1) military infrastructure damage; (2) economic shock from the conflict. The scorecard at one year suggests a military victory has been offset by a diplomatic defeat for India.
 
 ## Related
 - [[2026-05-27-us-china-great-power-competition]]

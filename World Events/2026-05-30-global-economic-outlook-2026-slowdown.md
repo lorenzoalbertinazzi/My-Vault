@@ -3,10 +3,18 @@ title: Global Economic Outlook 2026 — Slowdown, Geopolitical Fragmentation, an
 date: 2026-05-30
 tags: [world-events, economy, IMF, recession, inflation, trade, geopolitics, AI, GDP, geoeconomic-fragmentation, deglobalization, stagflation, productivity-paradox, Solow-paradox, China-property-crisis, de-dollarization, BRICS, tariffs]
 source: IMF World Economic Outlook (Apr 2026); J.P. Morgan Global Research; Morgan Stanley Global Economic Outlook; Goldman Sachs Economic Research; World Bank reconstruction estimates
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 ## Summary
 The IMF's April 2026 World Economic Outlook projects global growth at 3.1% in 2026 — below the 3.8% pre-pandemic average and technically above the 2.5% recession threshold but in a fragile zone where multiple simultaneous shocks could trigger contraction. The global economy in 2026 navigates an unusual combination of pressures: persistent inflation (above 2% targets in most economies), geopolitical fragmentation accelerating de-globalization, an AI productivity promise that has yet to appear in GDP statistics, and the hangover of a decade of ultra-low interest rates giving way to structurally higher capital costs. The J.P. Morgan global recession probability stands at 35% — elevated but not imminent.
+
+### Update — June 1, 2026
+
+**IMF WEO April 2026 title: "Global Economy in the Shadow of War":** The IMF's April 2026 World Economic Outlook carries the explicit subtitle acknowledging the unprecedented multi-front geopolitical crisis: the US-Iran war, the continuing Ukraine conflict, and the India-Pakistan ceasefire have collectively created what the IMF describes as a "shadow of war" suppressing investment, disrupting supply chains, and elevating risk premiums globally. The IMF downgrades 2026 growth to **3.1%** (from an earlier 3.3% forecast), with headline inflation projected to **rise modestly in 2026** before resuming decline in 2027 — directly attributable to the Hormuz energy shock. **UN UNCTAD forecast more pessimistic at 2.7%** — below 2025 levels and well below the pre-pandemic average of ~3.5%.
+
+**US mild recession risk in H1 2026 now explicitly modeled:** Multiple forecasters (Morgan Stanley, Deloitte, Meer) have published scenarios in which US real GDP growth turns **negative in Q1–Q2 2026** due to the combined effect of: (1) Trump tariff impacts on consumer goods and input costs; (2) energy price spike from Hormuz closure transmitting into US household spending and transportation costs; (3) immigration restriction effects on labor markets in construction and agriculture. The consensus remains that a US recession is a risk rather than a baseline, but the probability has risen materially from late 2025 forecasts.
+
+**World Bank Global Economic Prospects — updated downward:** The World Bank's June 2026 Global Economic Prospects report is expected to show significant downward revisions from its January 2026 baseline, reflecting the mid-year geopolitical shocks. Developing economies are particularly exposed: higher energy import costs, reduced remittances (as advanced economies slow), and dollar strength (typical during geopolitical risk-off episodes) create a simultaneous triple squeeze.
 
 ## Key Points
 - **Global growth**: IMF projects 3.1% GDP growth in 2026 (2025: 3.3%) — US 2.2%, Euro area 1.3%, China 4.5%, India 6.3%, Sub-Saharan Africa 4.2%

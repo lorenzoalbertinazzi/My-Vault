@@ -3,7 +3,7 @@ title: "Operation Absolute Resolve: The US Military Intervention in Venezuela an
 date: 2026-05-30
 tags: [world-events, venezuela, USA, maduro, operation-absolute-resolve, latin-america, international-law, us-foreign-policy, drug-trafficking, democracy, regime-change, delta-force, narco-terrorism, Delcy-Rodriguez, PDVSA, Cartel-of-the-Suns, head-of-state-immunity, SDNY, Cuba, chavismo]
 source: Wikipedia; Atlantic Council; Brookings Institution; CFR; Just Security; Stimson Center; RAND (Feb 2026 assessment); The New Humanitarian; CBS/YouGov polling (Jan 2026); UNHCR Venezuela data
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -194,6 +194,23 @@ A younger, more competent chavista leader emerges who successfully rallies the m
 | 2026–27 | Maduro trial proceedings expected |
 
 ---
+
+### Update — June 1, 2026
+
+**Ruling chavista unity cracks — Rodríguez shifts away from Chávez-era policies (Washington Post / US News, June 1, 2026):** In a dramatic acceleration of Venezuela's political transition, acting President Delcy Rodríguez has moved decisively away from the Bolivarian Revolution's ideological framework. Specifically, she has:
+- **Overhauled the state oil company PDVSA** through new legislation passed in the National Assembly — the first major restructuring of Venezuela's oil sector in decades, opening pathways for private investment and operational reform that Maduro consistently blocked
+- **Released political prisoners** — a direct compliance with US demands and international human rights organizations' longstanding calls
+- **Authorized US military training exercises in Caracas** — an extraordinary concession that would have been unthinkable under Maduro; the presence of US military personnel training Venezuelan security forces in the capital is a structural break with 25 years of Bolivarian anti-Americanism
+- **Deported a former minister to the US** to face criminal investigations — signaling willingness to cooperate with US law enforcement and implicitly acknowledging the legitimacy of US legal processes against chavista officials
+- **Reshuffled the government** on her own authority, removing ministers loyal to Maduro's faction
+
+**Insider betrayal rumors destabilize the coalition:** Longtime chavista loyalists are publicly airing — for the first time — suspicions that an **insider's betrayal** enabled the US operation that captured Maduro. If true, this would mean a senior chavista official provided the CIA with Maduro's precise location. The public discussion of this possibility is itself politically explosive: it suggests the Maduro coalition's internal trust has collapsed, making coordinated resistance to Rodríguez's pivot structurally impossible.
+
+**Chavismo fracturing: the "warming relationship with Washington" controversy:** Multiple former Maduro allies are publicly criticizing Rodríguez's cooperation with the Trump administration — whose predecessor and current occupant Chavismo has historically cast as the "main adversary." The May deportation of a former minister and the US military training authorization have pushed the internal debate into the open. This is not a marginal faction: these are the core cadres who built the Bolivarian state and whose survival depends on the chavista system's continuation.
+
+**Strategic interpretation — "Scenario 2" materializing:** The note's original Scenario 2 (Negotiated Transition, probability 25%) is now materializing faster than predicted. Rodríguez has effectively accepted that chavista governance can only survive if it makes major concessions to the US, reforms the oil sector, and distances itself from Maduro's criminal network. The question is whether the PSUV's internal factions accept this pivot — or whether they force a split that opens space for González/Machado's opposition to consolidate power. The June 1, 2026 Washington Post reporting is the clearest signal yet that Venezuela is in a genuine political transition, not a frozen standoff.
+
+**Oil sector rehabilitation begins:** The legislation overhauling PDVSA — passed through the National Assembly with Rodríguez's support — represents the most consequential economic reform in Venezuela in decades. PDVSA's production has collapsed from ~3.2 million bbl/day (1998) to ~700,000 bbl/day (2025), with infrastructure degraded by 25 years of mismanagement, corruption, and sanctions. Rehabilitation requires foreign investment, technical expertise, and lifting of US oil sanctions. Rodríguez's cooperation with Washington appears aimed at unlocking precisely this — trading political compliance for economic recovery investment.
 
 ## Related
 

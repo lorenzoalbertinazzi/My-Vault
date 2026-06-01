@@ -3,7 +3,7 @@ title: US-Iran Military Conflict and the Global Energy Crisis (2026)
 date: 2026-05-27
 tags: [world-events, iran, USA, war, energy-crisis, strait-of-hormuz, oil, middle-east, stagflation, sanctions, IRGC, ceasefire, MOU, oil-prices, strategic-petroleum-reserve, May-Day-protests, Brent-crude]
 source: Wikipedia Current Events (May 2026); US EIA Q1 2026 data; CNN (May 25–29, 2026); Bloomberg (May 27, 2026); CNBC Piper Sandler (May 26, 2026); CBS News (May 28, 2026)
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -181,6 +181,16 @@ From a portfolio theory perspective, the 2026 energy crisis illustrates the fail
 **Russia's Oreshnik strikes compound global energy instability (May 23–24, 2026)**: Russia launched its largest single attack on Kyiv of the entire full-scale war on May 23–24, deploying an Oreshnik hypersonic ballistic missile alongside 600 drones and 90 other missiles. The attack killed at least 4 people, injured approximately 100, and damaged or destroyed around 30 residential buildings in Kyiv. It was the third use of the Oreshnik in the war. European leaders condemned it as "nuclear brinkmanship." The significance for energy markets is indirect but real: simultaneous major military escalation in Ukraine and the Persian Gulf reinforces the "geopolitical risk premium" across all energy assets, reduces institutional appetite for rolling back strategic reserve releases, and creates additional upward pressure on European natural gas prices already stressed by Hormuz LNG disruption.
 
 **Trump's final determination pending (May 29)**: Trump entered the Situation Room on May 29 to make his "final determination" on the Iran MOU. The proposed deal framework includes Hormuz reopening, 30-day mine clearance, phased sanctions relief, and Iranian commitment to never build a nuclear weapon — but Iran's new Supreme Leader Mojtaba Khamenei has not yet formally confirmed acceptance. The energy market implication: a Trump "yes" today could trigger another significant downward oil price move within hours; a "no" or delay could reverse the recent decline.
+
+### Update — June 1, 2026
+
+**Tentative MOU reached (PBS NewsHour, May 28–29, 2026):** US and Iranian negotiators have now reached agreement on the MOU text — going beyond "largely negotiated" to the text being agreed. Trump has not yet given final approval. The MOU now also includes a provision ending the **Israel-Hezbollah war in Lebanon** — a significant regional addition that was not in earlier reporting. If signed, this would simultaneously resolve the Iran-US conflict, the Hormuz closure, and the Lebanon ceasefire within a single diplomatic instrument.
+
+**Brent crude confirmed peaked at $138/barrel (April 7):** BlackRock's Investment Institute confirmed the April 7, 2026 Brent crude price of $138/barrel as the crisis peak. The subsequent decline to ~$96 (May 27) represents deal-anticipation pricing. The EIA's formal position: oil prices will carry a structural risk premium "throughout the forecast period" regardless of Hormuz normalization, permanently repricing the geopolitical option on Strait closure.
+
+**UAE's OPEC exit adds 2M bpd supply when conditions normalize:** The UAE's May 1, 2026 OPEC departure means that once Hormuz reopens and UAE increases production toward its 5 million bpd target (from current constrained 3.2M), the global oil market could see approximately 2 million additional barrels per day of supply. This, combined with Saudi production increases, creates a scenario where post-MOU oil prices could fall sharply — potentially back toward the $70–75/barrel pre-crisis range within weeks. The energy market's structural response to the crisis is therefore likely to overshoot on the downside once geopolitical premiums unwind.
+
+**May Day protests' political consequences emerging:** The May 1, 2026 global protests generated political pressure on incumbent governments across Europe and Asia. Several European governments have announced emergency energy subsidy packages. The German coalition government is under pressure to extend winter heating subsidies through summer given the heatwave-energy price double squeeze. France's government approved emergency energy relief payments to low-income households in May. The political transmission of energy price shocks to government instability is tracking closely to the 1973–1974 pattern.
 
 ## Related
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]

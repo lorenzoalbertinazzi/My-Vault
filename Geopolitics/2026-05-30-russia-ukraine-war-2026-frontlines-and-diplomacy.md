@@ -3,7 +3,7 @@ title: Russia-Ukraine War 2026 — Frontlines, Attrition, and Stalled Diplomacy
 date: 2026-05-30
 tags: [geopolitics, russia, ukraine, war, NATO, frontlines, diplomacy, attrition, drones, casualties, Oreshnik, Zelensky, Putin, Avdiivka, frozen-conflict, energy-infrastructure, Shahed, FPV-drones, mobilization]
 source: Russia Matters War Report Card (May 27, 2026); The Economist (May 2026); ISW daily updates; UK/US intelligence assessments; Ukrainian government economic data; Oryx open-source equipment tracking
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -122,6 +122,16 @@ The UN High Commissioner for Human Rights (OHCHR) has verified 60,659 civilian c
 4. **Global south alignment:** Most of the Global South has refused to endorse either side; Russia has leveraged "anti-Western" rhetoric effectively in Africa, Latin America, and parts of South Asia.
 5. **Energy transition:** Russia's weaponization of energy (gas cutoffs 2022; drone strikes on Ukrainian grid) has permanently accelerated European energy diversification and renewable investment.
 6. **Reconstruction costs:** World Bank/EU estimate: $400–500B in Ukrainian reconstruction costs over the next decade — one of the largest post-war reconstruction challenges in modern history.
+
+### Update — June 1, 2026
+
+**Russian casualty revision — 1,365,470 total (June 1, 2026):** The Ukrainian Armed Forces' General Staff reported total Russian combat losses from February 24, 2022, to June 1, 2026, as approximately **1,365,470 personnel** — a dramatic upward revision from the ~1,000,000 figure cited in earlier Western and Ukrainian intelligence assessments. The discrepancy reflects different methodologies: the Ukrainian figure includes personnel killed, wounded, taken prisoner, and missing, while many Western estimates have historically counted KIA only or used narrower definitions. At current rates (~1,410 per 24 hours as of June 1), Russia is sustaining attrition of over 40,000 personnel per month.
+
+**Daily combat tempo (June 1, 2026):** The UAF General Staff reported **229 combat clashes** on a single day at the front, with the **Pokrovsk sector** experiencing the highest pressure — Russia made **40 separate attempts to breach Ukrainian defenses** in that sector alone on June 1. This underscores that despite lack of major territorial change, the intensity of attritional engagements has not diminished. The Kharkiv and Zaporizhzhia directions also saw active shelling, with drone and missile strikes on residential buildings in **Kharkiv** (garages and vehicles on fire; casualties reported) and **Odesa** (two floors of a building partially destroyed; one injured).
+
+**Ukrainian drone campaign deepens in May 2026:** The Unmanned Systems Forces of the Armed Forces of Ukraine struck **18 Russian oil-refining and fuel facilities** in May 2026 — targeting infrastructure inside Russia proper and in temporarily occupied Ukrainian territory. Ukrainian maritime and long-range strike drones have now systematically degraded Russian petroleum logistics infrastructure, accelerating the war's economic attrition dimension beyond artillery and personnel losses. This mirrors Russia's own strategy of striking Ukrainian energy infrastructure, though Ukraine's drone capability has increasingly enabled deep strikes within Russian territory that were not feasible in 2022.
+
+**Pokrovsk as the critical pressure point:** The Pokrovsk sector in Donetsk Oblast has emerged as Russia's primary offensive focus as of late May–June 2026. Pokrovsk is a key logistical hub for the central Ukrainian front — its fall would allow Russia to threaten Dnipropetrovsk Oblast. The 40 daily breaching attempts reflect a grinding Russian effort to advance toward the city through village-by-village attrition.
 
 ## Related
 - [[2026-05-27-russia-central-asia-influence-and-decline]] — Russia's declining soft power and Central Asian realignment

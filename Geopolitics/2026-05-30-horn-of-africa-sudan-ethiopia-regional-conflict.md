@@ -3,7 +3,7 @@ title: Horn of Africa — Sudan's Civil War and the Risk of Regional Escalation 
 date: 2026-05-30
 tags: [geopolitics, africa, sudan, ethiopia, horn-of-africa, civil-war, UAE, egypt, red-sea, RSF, SAF, proxy-war, humanitarian-crisis, GERD, Hemeti, Burhan, Bab-el-Mandab, Port-Sudan, famine, internal-displacement]
 source: The New Humanitarian (Mar 23, 2026); Horn Review (May 8, 2026); Foreign Policy (Jan 27, 2026); UN OCHA 2026; ACLED data
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 ## Summary
 Sudan's civil war, now entering its fourth year (began April 2023), has become one of the world's worst humanitarian catastrophes — with 150,000+ dead, 10 million displaced, and a country effectively partitioned between the Sudanese Armed Forces (SAF) and the Rapid Support Forces (RSF). In 2026, the conflict is metastasizing into a regional crisis as foreign powers — the UAE, Egypt, Saudi Arabia, and Ethiopia — become increasingly entangled, raising the specter of a Horn of Africa "regional mega-war" that could redraw borders and destabilize the Red Sea trade corridor. The conflict is simultaneously a Sudanese civil war, a Gulf proxy war, a Nile water dispute, and a competition for Red Sea access.
@@ -78,6 +78,18 @@ International response has been inadequate: Sudan receives far less internationa
 **Regional escalation (growing risk)**: If Ethiopia-Tigray networks fighting in Blue Nile state are confirmed and escalate, Addis Ababa and Khartoum may openly confront each other. UAE-backed Ethiopia vs. Egypt-backed SAF would draw in Eritrea and potentially trigger full regional war — a scenario the Crisis Group's 2026 brief specifically identified as the highest-consequence risk.
 
 **Port Sudan fall (tail risk)**: RSF control of Sudan's Red Sea coast would threaten maritime security, potentially triggering direct Egyptian military intervention and activating US/Saudi concern over Bab al-Mandab security.
+
+### Update — June 1, 2026
+
+**SAF retakes Khartoum — government returns from Port Sudan (major development, mid-2026):** In one of the most significant developments of the entire war, the Sudanese Armed Forces completed their reconquest of Khartoum — the capital — approximately one year after the war began. The Central Bank of Sudan announced the resumption of operations in Khartoum for the first time since April 2023. The SAF-aligned government declared its "complete return" to Khartoum, having operated from Port Sudan (on the Red Sea coast) as a temporary capital throughout the conflict. This represents a major symbolic and operational victory for the SAF, reversing the humiliating early loss of the capital. However, fighting continues in other regions.
+
+**RSF counterattacks in Darfur and Kordofan:** Despite the SAF's Khartoum success, the RSF retook **Bara** and **Karnoi in North Darfur** (near the Chad border) in recent weeks — demonstrating that the war is far from over and that RSF remains capable of significant offensive operations in its western strongholds. The SAF repelled a large-scale RSF attack on **Wadi al-Hout in North Kordofan**, and RSF forces have encircled the city of **El Obeid in North Kordofan**, striking civilian targets including a kindergarten.
+
+**UN fact-finding: "hallmarks of genocide" in Darfur:** A UN fact-finding mission issued a formal assessment identifying **"hallmarks of genocide"** in RSF-controlled Darfur — escalating the legal language beyond "ethnic cleansing" concerns. This assessment, citing systematic targeting of non-Arab populations, will form the basis for potential ICC referrals. The Darfur genocide of 2003–2008 (involving the RSF's predecessor Janjaweed) is being explicitly invoked by UN investigators as a structural parallel.
+
+**Humanitarian funding collapse:** The UN Population Fund (UNFPA) reported that recent cuts to international aid funding have forced it to **withdraw from more than half of the 93 health facilities** it was supporting across Sudan. Total international humanitarian response funding stands at only **40% of requirements** for 2026 — leaving millions without adequate food, medical care, or shelter. This funding shortfall, driven partly by donor fatigue and the competition of other global crises (Ukraine, Gaza, Iran energy shock), is the single greatest accelerant of Sudan's humanitarian catastrophe.
+
+**South Sudanese fighters captured with RSF (January 2026):** Sudan sources confirmed to Al Jazeera that South Sudanese fighters were among captured RSF members in Blue Nile state — extending the earlier evidence of foreign fighters (Tigrayan fighters) fighting alongside the RSF. The pattern of multiple nationalities fighting for the RSF suggests its force structure is now sustained by foreign recruitment beyond Darfur's local population, raising the conflict's regional entanglement. South Sudan's own fragile state, dependent on Sudan for oil pipeline access, is now directly implicated in the conflict.
 
 ## Related
 - [[2026-05-30-europe-rearmament-nato-russia-threat]] — Great power competition for spheres of influence; parallels to African proxy conflicts

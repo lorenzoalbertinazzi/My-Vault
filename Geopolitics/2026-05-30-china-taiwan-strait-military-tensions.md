@@ -3,7 +3,7 @@ title: China–Taiwan Strait Military Tensions — 2026
 date: 2026-05-30
 tags: [geopolitics, china, taiwan, taiwan-strait, PLA, military, ADIZ, us-china, indo-pacific, fourth-taiwan-strait-crisis, TSMC, strategic-ambiguity, porcupine-doctrine, cross-strait, gray-zone, coast-guard, blockade]
 source: AEI China-Taiwan Update (May 2026); CSIS; Reuters; Al Jazeera; Global Taiwan Institute; Bloomberg Economics
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -114,6 +114,20 @@ Most analysts (CSIS, RAND, Stimson Center) assess the highest-risk window as the
 **For Technology Supply Chains:** TSMC's Fab 21 in Arizona (operational 2025 for 4nm, 2026 for 2nm) and plants in Japan and Germany represent deliberate geographic diversification of the "semiconductor shield" risk.
 
 **For US Foreign Policy:** Taiwan tests whether US security commitments remain credible in an era of great power competition — affecting not just East Asia but European, Middle Eastern, and Indo-Pacific alliance calculations.
+
+### Update — June 1, 2026
+
+**April–May 2026 — Aircraft and naval activity quantified:** By April 27, 2026, Taiwan's Ministry of National Defense had detected **202 Chinese military aircraft** around the island in that month, of which at least **145 crossed the unofficial "median line"** of the Taiwan Strait or entered Taiwan's de facto Air Defence Identification Zone (ADIZ) — representing systematic normalization of median-line violations that were treated as significant escalations before 2020. Taiwan also detected **190 PLA Navy vessels** in surrounding waters in the same period.
+
+**Aircraft carrier *Liaoning* transits Taiwan Strait (April 20, 2026):** China's oldest carrier battle group conducted the **first carrier transit of the Taiwan Strait in 2026** on April 20 — a politically significant show of force. Carrier transits of the Strait are particularly provocative as they demonstrate PRC naval capability in the direct approaches to Taiwan. The transit followed renewed criticism from Beijing after Taiwan's President Lai Ching-te publicly called for stronger defense spending and measures to protect the island's democracy.
+
+**Lai Ching-te's first year — relations "especially fraught" (CFR Global Conflict Tracker, 2026):** As Lai completes his first year in office, cross-strait relations have reached their most fraught state since the 2022 "Fourth Crisis" exercises. Lai's consistent framing of Taiwan's distinct democratic identity — combined with his calls for enhanced defense investment — has triggered each major PRC pressure spike of 2026. Beijing has labeled Lai a "diehard separatist" and refused any official cross-strait communications channel with his government.
+
+**US response (May 18, 2026 context):** The existing note records that on May 18, US Air Force aircraft issued 9 radio warnings reaffirming freedom of navigation. The State Department (January 2026) had already characterized Chinese military drills around Taiwan as creating "unnecessary tensions" — the department's language has been increasingly explicit in naming PRC activities as destabilizing rather than using neutral framing.
+
+**Deterrence debate — "Bypassed not Failed" (War on the Rocks, February 2026):** A significant analytical contribution from War on the Rocks argues that the conventional deterrence framework for Taiwan may be inadequate: PRC could achieve its objectives through means that bypass direct military confrontation — economic coercion, cognitive warfare, political subversion of Taiwan's democratic institutions, or fait accompli operations (e.g., seizing outlying islands Kinmen or Matsu) that present the US with a gray-zone scenario rather than a clear Article 51 collective defense trigger. This "deterrence bypass" thesis is gaining traction in US strategic planning circles as the PLA's capabilities mature.
+
+**TSMC geographic diversification progressing:** TSMC's Arizona Fab 21 reached 4nm chip production in 2025 and is on track for 2nm production in 2026, reducing (but not eliminating) Taiwan's semiconductor leverage as a deterrent. Japan and German fabs are also proceeding, though at higher cost per wafer than Taiwan. The strategic calculus of the "semiconductor shield" is slowly shifting.
 
 ## Related
 - [[us-china-strategic-competition]] — Broader US-China rivalry context

@@ -3,7 +3,7 @@ title: FIFA World Cup 2026 — North America Hosts the Biggest Tournament in His
 date: 2026-05-30
 tags: [world-events, sports, FIFA, world-cup-2026, USA, soccer, football, geopolitics, CONCACAF, USMNT, north-america, expansion-48-teams, MetLife, Azteca, soft-power, sports-diplomacy, Pulisic, Pochettino]
 source: FIFA.com; Yahoo Sports; NBC Sports; Fox Sports/Telemundo rights data; FIFA revenue projections
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 ## Summary
 The 2026 FIFA World Cup — hosted jointly by the United States, Canada, and Mexico across 16 venues from June 11 to July 19 — is the most expansive men's football tournament in history. For the first time, the field has expanded from 32 to 48 teams across 104 matches. The tournament carries outsized geopolitical and commercial significance: the first World Cup in North America since USA 1994, a test of US-Mexico relations under ongoing immigration and trade tensions, and a commercial bonanza with estimated revenues exceeding $11 billion. The US national team (USMNT) enters for the first time in eight years since their 2018 qualifying failure, generating intense domestic interest in a sport that has transformed American fandom.
@@ -92,6 +92,18 @@ In a nod to American Super Bowl entertainment culture, FIFA approved a halftime 
 - **Global audience estimate**: 1.5–2 billion for the final
 
 This represents a cultural fusion of global football and American entertainment spectacle unprecedented in World Cup history, reflecting the Americanization of the tournament format.
+
+### Update — June 1, 2026
+
+**Tournament 10 days away — squads submitted June 1–2 (FIFA deadline):** The FIFA World Cup 2026 begins in 10 days (June 11). All 48 national team squads are being submitted to FIFA on June 1–2, with official announcements following immediately. The squad announcement period is the final pre-tournament news cycle. Key stories:
+
+- **Neymar injury concern (Brazil):** Neymar missed Brazil's first national team training session to undergo medical tests on a right calf injury. Brazil, the tournament favorite by many measures, faces its greatest vulnerability if Neymar cannot start the group stage. His fitness will define Brazilian public expectations.
+- **Lionel Messi named in Argentina's squad:** The 38-year-old Inter Miami star is confirmed in Argentina's 26-man squad — making this potentially his final World Cup appearance. Argentina enters as defending champion (Qatar 2022 winners). Messi's final tournament on US soil (where he plays club football) generates extraordinary commercial and narrative interest.
+- **USMNT coach Pochettino controversy — players notified by email:** Mauricio Pochettino, the Argentine coach of the US Men's National Team, defended his decision to notify players who did not make the squad via email rather than personal phone calls. The controversy reflects the pressure Pochettino is under as the host nation's coach; the US's semi-expected advancement to the Round of 16 (at minimum) is a national sports story.
+
+**Opening match — Mexico vs South Africa at Estadio Azteca (June 11):** The tournament opens with Group A: Mexico facing South Africa at the iconic Estadio Azteca in Mexico City. This is a historically significant venue — it hosted the 1970 and 1986 World Cup finals. Mexico's opening match at home generates the tournament's first major atmosphere.
+
+**Euronews groups and fixtures guide published (May 30, 2026):** All 48 teams have been drawn into 12 groups of 4; group stage runs June 11–27. The expanded format means the group stage now occupies 16 days (vs. 12 in the 32-team format), extending the tournament's commercial footprint.
 
 ## Related
 - [[2026-05-27-us-china-great-power-competition]] — China's World Cup qualification has geopolitical soft-power dimensions for Beijing

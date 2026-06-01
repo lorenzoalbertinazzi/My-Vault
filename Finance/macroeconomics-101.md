@@ -446,6 +446,25 @@ Dalio's Debt Supercycle framework adds a temporal dimension that standard macro 
 
 The foreign exchange market functions as the real-time global judgment on every central bank's monetary policy decisions — a connection explored in depth in [[currency-markets-and-fx]]. When the Federal Reserve raised rates in 2022–2024, the dollar strengthened substantially not because the US economy was fundamentally superior, but because the interest rate differential attracted capital inflows. This dollar strengthening imposed tightening financial conditions on every emerging market with dollar-denominated debt — a global transmission of US monetary policy that the Fed's dual mandate does not require it to consider. The Triffin Dilemma frames this as a structural feature, not a bug: US monetary policy is simultaneously domestic stabilization policy and global financial conditions. Nations running dollar-denominated deficits are, in effect, participants in the US monetary policy transmission mechanism without any vote in the FOMC. This makes macroeconomic analysis of global EM economies fundamentally incomplete without modeling the dollar cycle — which is itself driven by the Fed's response to US domestic conditions.
 
+### Update — June 1, 2026: IMF "Global Economy in the Shadow of War"
+
+**IMF WEO April 2026 — quantified outlook:**
+- Global growth: **3.1% in 2026** (2025: 3.3%; pre-pandemic average: 3.8%)
+- US: 2.2%; Euro area: 1.3%; China: 4.5%; India: 6.3%
+- Global headline inflation: **rising modestly in 2026** before declining 2027 — direct consequence of Hormuz energy shock
+- IMF characterization: "Global Economy Tested Again" — specifically attributing downward revision to simultaneous multi-front geopolitical crises
+
+**Stagflation risk quantified — the Hormuz mechanism:**
+The 2026 Hormuz closure has produced the clearest modern test of the stagflation mechanism since 1973: Brent peaked at $138/barrel (April 7), representing an ~90% premium over pre-war baseline. The cost-push transmission: energy costs → transport costs → food production costs → broad CPI. The EIA projects oil prices will carry structural risk premium even post-normalization. Central banks across the G7 face the classic stagflationary trilemma: raise rates to fight inflation (worsens recession), cut rates to fight recession (ignores inflation), hold steady (neither).
+
+**US mild recession risk in H1 2026 now explicitly modeled:**
+Multiple forecasters (Morgan Stanley, Deloitte) have published scenarios with US real GDP turning negative in Q1–Q2 2026 from: (1) Trump tariff impacts; (2) Hormuz energy cost spike; (3) immigration restriction labor market effects. J.P. Morgan's recession probability remains ~35% — elevated, not imminent.
+
+**UN UNCTAD projects 2.7% — below 2025 and pre-pandemic average:**
+The UN's more pessimistic 2.7% global growth forecast reflects developing economy exposure: higher energy import costs + reduced remittances (from slowing advanced economies) + dollar strengthening (typical risk-off) = triple squeeze on emerging markets. Sub-Saharan Africa (4.2% by IMF) is one of the few brightspots, though the Sudan/Sahel/DRC crises create regional drag.
+
+**Cuba GDP: −7.2% (2026 projection)** — the most extreme single-country contraction, driven by the US oil blockade. This is the most acute small-country impact of US sanctions as macroeconomic weapon, comparable to Venezuela's −8% peak.
+
 ## Related
 - [[valuation-fundamentals]] — r* as the single most important input to all long-duration valuation; discount rate sensitivity to macro regimes
 - [[portfolio-theory]] — Business cycle regime-switching in asset allocation; 60/40 framework under inflationary vs. recessionary macro

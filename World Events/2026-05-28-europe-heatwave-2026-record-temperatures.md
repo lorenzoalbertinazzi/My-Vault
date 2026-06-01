@@ -3,7 +3,7 @@ title: Europe Heatwave 2026 — Record-Breaking May Temperatures and Deaths
 date: 2026-05-28
 tags: [world-events, climate, heatwave, europe, uk, france, spain, ireland, global-warming, heat-dome, attribution-science, energy-grid, Kew-Gardens, jet-stream-disruption, compounding-risk, physical-climate-risk]
 source: Wikipedia 2026 European Heatwaves; Inside Climate News; Irish Times; Severe Weather Europe; ClimaMeter analysis; Washington Post; UK Met Office
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -143,6 +143,14 @@ The practical implication for infrastructure planning — directly relevant to E
 ### Behavioral Finance and Heat-Driven Decision-Making
 
 The cognitive science of heat exposure adds an unexpected dimension to the heatwave's financial and political implications. A substantial body of experimental economics research documents that elevated ambient temperature impairs executive function, increases risk-taking in financial decisions, shortens time horizons in intertemporal choice tasks, and correlates with increased aggression and conflict behavior. The most cited work in this area (Cao and Wei, 2005; Hirschi, Ransom, and McPherson) documents statistically significant correlations between heat and financial market returns — specifically that trading volume and return patterns show detectable anomalies on hot trading days. While causality is contested, the biological mechanism is plausible: heat stress elevates cortisol, impairs prefrontal cortex function (the brain region responsible for deliberative, slow decision-making), and increases reliance on heuristic, "System 1" cognition in Kahneman's dual-process framework. In a geopolitical crisis period where negotiators (Iran nuclear talks), military commanders (monitoring Hormuz), and political leaders are making high-stakes decisions under physical stress, the cognitive dimension of heat exposure is not entirely trivial.
+
+### Update — June 1, 2026
+
+**June 2026 — heatwave conditions continuing into summer:** The late May 2026 heatwave documented in this note was an early-season precursor to what meteorologists are tracking as a potential record-breaking summer across Europe. As of June 1, temperatures in Spain, France, and Portugal remain significantly above seasonal norms. The heat dome pattern documented in May — high-pressure system blocking the Atlantic westerlies — shows signs of re-establishing in June, raising the prospect of an extended summer heatwave sequence rather than a discrete event. European health authorities are maintaining heat emergency protocols from May.
+
+**Physical climate risk for energy infrastructure — compound risk with Hormuz crisis:** The heatwave's coincidence with the Hormuz energy disruption creates a compound physical-geopolitical risk for European energy systems. Extreme heat drives peak electricity demand (air conditioning) precisely when liquefied natural gas (LNG) supplies — which Europe needs to replace Russian gas — are disrupted by the Hormuz closure. This supply-demand squeeze has pushed European natural gas TTF benchmark prices higher, contributing to the inflation pressure already documented in the Global Economic Outlook note.
+
+**Attribution science confirms climate change role:** Attribution studies (ClimaMeter, UK Met Office) have confirmed that the May 2026 event was made substantially more intense and approximately 50–100× more likely by anthropogenic climate change. Events that would have been extreme 1-in-100-year occurrences in a pre-industrial climate have become 1-in-2 to 1-in-5 year events. The late spring timing (late May, unusually early for heatwaves) is itself a climate signal — the seasonality of extreme heat is shifting earlier in the calendar year.
 
 ## Related
 - [[2026-05-27-ebola-outbreak-drc-uganda-2026]]

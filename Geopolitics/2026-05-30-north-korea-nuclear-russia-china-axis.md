@@ -3,7 +3,7 @@ title: "North Korea's Nuclear Irreversibility and the Russia-China-DPRK Strategi
 date: 2026-05-30
 tags: [north-korea, dprk, nuclear-weapons, kim-jong-un, russia, china, nuclear-proliferation, korean-peninsula, ballistic-missiles, geopolitics, ICBM, SLBM, tactical-nukes, sanctions-erosion, byungjin, Hwasong, Yongbyon, HEU, stability-instability-paradox]
 source: NPR; The Diplomat (May 2026); 38 North (May 2026); Bloomberg (2026 missile defense analysis); Lowy Institute; DIA congressional testimony (Apr 2026); Stimson Center; RAND
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -223,6 +223,18 @@ RAND's 2026 analysis emphasizes that the key policy challenge has shifted from d
 | May 2026 | 38 North confirms Russian nuclear technology linkages; Bloomberg documents arsenal outgrowing GMD |
 
 ---
+
+### Update — June 1, 2026
+
+**Kim Jong-un granted sole constitutional authority over nuclear weapons (Bloomberg, May 7, 2026):** North Korea's new constitution — enacted at the Ninth Party Congress in February 2026 — formally gives Kim Jong-un **sole, personal, and unchallengeable authority over the nuclear arsenal**. The constitution explicitly stipulates that full control over nuclear weapons rests with the State Affairs Commission chairman (Kim's title). This is a significant constitutional change from even the prior "nuclear irreversibility" amendments of 2022: it eliminates any ambiguity about whether collective party leadership or institutional processes have any role in nuclear decisions, placing launch authority entirely with Kim personally. This mirrors Pakistan's constitutional arrangements and Russia's presidential authority over nuclear weapons, but goes further in eliminating any theoretical institutional check.
+
+**"North Korea is relieved its nuclear weapons prevented a fate like Iran's" (NPR, May 18, 2026):** NPR published a major analysis confirming the DPRK strategic communications team has explicitly and publicly made the Iran-North Korea comparison: North Korea's state media has highlighted that Iran was subjected to US-Israeli military strikes that killed its Supreme Leader, while North Korea — with its nuclear arsenal — faces no such threat. This is the "Kim Jong-un was right" effect operating in real time: the 2026 US-Iran war provides the most powerful validation of DPRK's nuclear calculus that Kim could have scripted. The NPR reporting notes that DPRK state propaganda specifically references both the Iran war and the Venezuela intervention as proof that non-nuclear states are "subject to US regime change."
+
+**Bloomberg: DPRK arsenal "outgrowing US missile defenses" (2026 analysis):** Bloomberg's dedicated graphic analysis confirms the existing note's finding — the Ground-Based Midcourse Defense (GMD) system is being quantitatively and qualitatively outpaced by DPRK's expanding delivery systems. Specifically: North Korea's solid-fueled ICBMs (Hwasong-18, with faster launch cycles) combined with the expanding arsenal (50+ warheads, sufficient fissile material for 90+) and emerging countermeasures (MIRVed warheads, decoys) mean that even a fully functioning GMD system cannot reliably intercept a mass North Korean ICBM strike. The "homeland defense" mission that GMD was designed for — defending against a small rogue-state strike — is becoming obsolete as the "small" qualifier no longer applies.
+
+**Kim "opens door to US" while vowing more nukes (Bloomberg, February 26, 2026):** In a February 2026 parade speech, Kim simultaneously pledged to **strengthen the nuclear weapons program** and made an oblique reference to potential dialogue with the United States. This is consistent with DPRK's classic "arm and talk" strategy — maintaining weapons development while keeping diplomatic options nominally open. The reference is not a formal negotiating offer; it is a signal that Kim is aware of Trump's desire for personal diplomatic achievements and is leaving space for the kind of summit-based engagement that produced the Singapore and Hanoi meetings (2018–2019). Whether Trump pursues this in a second term remains unclear; North Korea has not indicated it would agree to any preconditions on nuclear talks.
+
+**38 North confirms Russian nuclear technology linkages (May 2026):** 38 North's May 2026 analysis confirms that Russia is providing North Korea with nuclear submarine propulsion technology, satellite guidance systems, and missile re-entry vehicle expertise — all of which directly advance DPRK second-strike and targeting capability. The Russia-DPRK technology transfer pipeline, established through the 2024 mutual defense treaty and the troop deployment arrangement, represents the most significant external boost to DPRK's nuclear capability since Soviet nuclear assistance ended in the 1960s.
 
 ## Related
 

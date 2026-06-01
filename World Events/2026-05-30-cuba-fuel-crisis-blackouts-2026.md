@@ -3,7 +3,7 @@ title: Cuba Fuel Crisis 2026 — Diesel Exhaustion, 22-Hour Blackouts, and Human
 date: 2026-05-30
 tags: [world-events, cuba, energy-crisis, blackouts, humanitarian, US-sanctions, venezuela, fuel-shortage, Caribbean, Pemex, secondary-sanctions, embargo, grid-collapse, surgery-delays, water-crisis, Special-Period, PDVSA, UNDP]
 source: Al Jazeera (May 14, 2026); Axios (May 28, 2026); UN Special Rapporteur statement (Alena Douhan); WFP emergency appeal; UNDP Cuba; Wikipedia 2026 Cuban Crisis
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -144,6 +144,18 @@ The US embargo on Cuba — in existence in various forms since 1962 — is voted
 - **Cuba's legal argument:** Customary international law prohibits economic coercion; secondary sanctions on third countries (Pemex) violate territorial sovereignty of Mexico
 
 **US legal argument:** The Cuba embargo is a lawful exercise of sovereign economic foreign policy; secondary sanctions on entities violating US law (Cuba sanctions regulations) are within US jurisdiction; Cuba's government bears responsibility for its population's suffering through decades of mismanagement.
+
+### Update — June 1, 2026
+
+**US Executive Order 14380 — formal legal architecture of the blockade (January 30, 2026):** The legal instrument underpinning Cuba's fuel crisis is Executive Order 14380, signed by Trump on January 29, 2026, and entering into force January 30. The order declared a **national emergency** related to Cuba's oil supply and authorized imposition of additional tariffs on imports from countries that "directly or indirectly supply oil to Cuba." This secondary sanctions mechanism — threatening trade penalties against entire countries that allow their energy companies to sell to Cuba — was the tool that convinced **Mexico** to issue a "sovereign decision" to halt Pemex's Cuba shipments. Mexico's halt removed Cuba's final major fuel supplier, completing the blockade. The EO mechanism is broader than a Cuba-specific sanction: it threatens any country (not just companies) that routes oil to Cuba, making circumvention through third parties essentially impossible.
+
+**Cuba's GDP projected to contract 7.2% in 2026 (Travel and Tour World / Wikipedia):** Economic forecasters project Cuba's GDP will decline by **7.2%** in 2026 — representing a total collapse of productive activity. For reference, Venezuela's worst year was approximately 8% contraction at the height of its 2018 hyperinflation crisis. Cuba's economy, already severely distressed by the COVID-19 collapse of tourism, has no buffer to absorb this shock. Schools and universities have closed (fuel for transport and generators unavailable). Agricultural production has collapsed (farm machinery cannot be fueled). Hospital operations are conducted under generator power with severe rationing.
+
+**Full grid collapse on March 16, 2026:** The Cuban power grid suffered a **complete collapse** on March 16, 2026 — leaving the entire island without electricity simultaneously. This is distinct from the rolling 20–22 hour daily blackouts that preceded it; the March 16 event was a total failure of the interconnected grid. Recovery has been partial; as of May–June 2026, blackouts of 20–22 hours per day continue in most of the country, with only critical infrastructure (hospitals, water treatment) receiving priority power allocation.
+
+**UN Secretary-General "extremely concerned" — warns of collapse:** UN Secretary-General António Guterres issued a statement saying he is "extremely concerned" about Cuba's humanitarian situation, warning it will "worsen, or even collapse" if the country's oil needs are not met. This language — using the word "collapse" for a sovereign state's humanitarian situation — is among the strongest possible UN formulations short of formal Security Council action. No Security Council action is possible given the US veto.
+
+**"A year of resistance" — Cuba's private sector response (Al Jazeera, May 9, 2026):** Despite the crisis, Cuba's newly expanded private sector (licenses granted 2021) has shown partial resilience: private restaurants and businesses using solar panels or small generators have maintained some operations. Al Jazeera's reporting characterizes this as a paradox of the blockade — the US-imposed pressure has accelerated Cuba's halting market liberalization, as state-provided services collapse and private alternatives fill limited gaps. The private sector's resilience is, ironically, a partial validation of the economic reforms the Cuban government had resisted for decades.
 
 ## Related
 - [[2026-05-27-us-iran-conflict-global-energy-crisis]] — Parallel energy/sanctions crisis; sanctions as geopolitical tool
