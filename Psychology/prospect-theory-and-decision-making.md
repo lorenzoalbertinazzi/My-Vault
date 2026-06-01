@@ -179,6 +179,78 @@ The 2008 book *Nudge* systematized how policymakers can redesign choice architec
 
 **Critique 5: Inability to explain long-run behavior.** Prospect Theory is most powerful in one-shot decisions. In repeated games with learning, subjects often converge toward EUT predictions. The theory's applicability to long-horizon decisions (retirement savings, career choices) is debated.
 
+### 5a. Neuroeconomics: Neural Correlates of the Value Function
+
+Behavioral experiments established the shape of the value function empirically; neuroeconomics has begun identifying the specific brain regions implementing it.
+
+**Prospect Theory in the Brain (Tali Sharot, Robb Rutledge, et al.):**
+
+**Gains and Losses — Asymmetric Processing:**
+- **Gains:** Activate the ventral striatum (nucleus accumbens), particularly the caudate nucleus; this activation scales with the magnitude of the gain and correlates with self-reported positive affect
+- **Losses:** Activate the **amygdala** and **anterior insula** more strongly and more rapidly than equivalent gains — the neural substrate of loss aversion; amygdala activation to losses peaks ~200ms post-stimulus vs. ~400ms for gains, consistent with an automatic alarm system
+- **The ratio:** Amygdala BOLD signal for a $20 loss is approximately 2–3× larger than for a $20 gain (Tom et al. 2007, *Science*, N=16 fMRI): directly observed neural loss aversion ratio of ~2–3, consistent with the behavioral estimate of λ ≈ 2.25
+
+**Reference Point Encoding:**
+- The striatum and orbitofrontal cortex (OFC) track reference points dynamically; neurons in the OFC encode value *relative to context* (a $10 reward after $1 expectations activates differently than after $100 expectations)
+- Monkey electrophysiology (Padoa-Schioppa & Assad 2006, *Nature*): OFC neurons encode the subjective value of options with a concave function for gains, consistent with diminishing sensitivity
+
+**Probability Weighting — Neural Evidence:**
+- The **anterior insula** overrepresents small probabilities: its activation to a 1% chance of loss exceeds what a linear probability model would predict — directly imaging the probability overweighting function
+- The **dorsal striatum** tracks expected value in a more EUT-consistent manner; the interplay between striatum and insula may determine whether behavior follows PT or EUT in a given situation
+
+**Lesion Studies:**
+- Patients with **ventromedial prefrontal cortex (vmPFC) damage** show reduced loss aversion — they accept 50/50 gambles at near-EV rates even when loss aversion should cause refusal. The vmPFC appears necessary for implementing the affective component of loss aversion. These patients appear to decide "more rationally" on standard PT problems while making worse real-life decisions (the Somatic Marker Hypothesis, Damasio 1994)
+- **Insula lesion patients** show reduced probability overweighting — suggesting the insula implements the probability distortion component of PT
+
+**Key Implication:** Loss aversion is not merely a cognitive bias but an emotional response implemented by ancient threat-detection systems (amygdala) that evolved to prioritize danger avoidance. Rational training can dampen but not eliminate it; structural interventions (removing loss frames, making gains salient, changing choice architecture) are more effective than willpower.
+
+### 5b. Cross-Cultural Evidence and Variations
+
+**How Universal Is Loss Aversion?**
+The loss aversion coefficient λ shows real but modest cross-cultural variation:
+
+| Culture/Sample | λ (approximate) | Source |
+|---|---|---|
+| US (original K&T samples) | ~2.25 | Kahneman & Tversky 1979 |
+| Western European samples | ~2.0–2.5 | Meta-analysis, Neumann & Böckler 2009 |
+| Chinese samples | ~1.8–2.1 | Wang & Johnston 1995 |
+| Japanese samples | ~2.3–2.7 | Wakker 2010 |
+| Nigerian samples | ~1.5–1.8 | Birnbaum & Wakcher 2009 |
+| Expert traders (professional) | ~1.3–1.6 | Haigh & List 2005 |
+
+**Key Findings:**
+1. Loss aversion appears in all studied cultures but with systematic variation — suggesting a universal bias with culturally modulated magnitude
+2. **Professional expertise reduces loss aversion:** Experienced options traders and professional fund managers show significantly lower λ than the general population (Haigh & List 2005 with Chicago Board of Trade floor traders)
+3. **Individualism-collectivism:** More collectivist cultures (Japan, China) show somewhat higher loss aversion in some studies, possibly because losses threaten group face; more individualist cultures show lower λ
+4. **WEIRD samples (Western, Educated, Industrialized, Rich, Democratic):** Most original PT research used US or Israeli university students; the cross-cultural generalizability is supported but parameters differ
+
+**The Expert Question:**
+Do markets "educate away" loss aversion? Evidence is mixed:
+- Floor traders: reduced loss aversion in standardized gambles (Haigh & List 2005)
+- Institutional investors: still exhibit the disposition effect (Shapira & Venezia 2001)
+- Interpretation: Expertise reduces loss aversion in the specific domain of expertise (risk trading) but doesn't generalize across domains — a domain-specific, not domain-general, correction
+
+### 5c. Dynamic Reference Point Updating
+
+The original PT treats reference points as fixed. Real decisions involve reference points that shift dynamically based on expectations, aspirations, and recent outcomes.
+
+**Kőszegi-Rabin Expectations Model (2006, *Quarterly Journal of Economics*):**
+The most influential theoretical extension: reference points are derived from **rational expectations** — what you expected to happen, not just the status quo. If you expected a $50,000 salary and received $45,000, the loss is $5,000 even if you earned more than last year.
+
+**Predictions unique to K-R model:**
+1. **Endowment effect without ownership:** If you pre-commit to a price, you won't accept less — even if you never physically possessed the item
+2. **Expectation-based loss aversion in labor markets:** Workers experiencing an expected income receive different utility than workers experiencing the same income unexpectedly (one is in the gain region, one in the loss region, depending on prior expectations)
+
+**Reference Point Adaptation:**
+Research on hedonic adaptation shows that reference points shift over time:
+- Lottery winners' well-being returns to pre-win baseline within 2–3 years (Brickman et al. 1978 — the hedonic treadmill)
+- Paraplegics' life satisfaction recovers substantially within 8 weeks (contradicting the strong intuition that permanent loss destroys well-being permanently)
+- Mechanism: The reference point adapts upward or downward toward the new reality, reducing the subjective loss/gain over time
+- **Practical implication for wealth:** The decision to increase your standard of living (buy a bigger house, nicer car) shifts your reference point upward, requiring ever-larger incomes to remain in the "gain" domain
+
+**The Aspiration Gap:**
+Organizational behavior research (Cyert & March 1963, *Behavioral Theory of the Firm*): organizations use **aspiration levels** as reference points; performance above aspiration is satisfactory (risk-averse behavior follows), performance below aspiration triggers risk-seeking behavior (companies in distress take larger gambles). This is prospect theory applied to organizational strategy — and accurately predicts real corporate behavior in financial distress.
+
 ### 6. Prospect Theory and Negotiation
 
 Loss aversion has profound implications for negotiation:

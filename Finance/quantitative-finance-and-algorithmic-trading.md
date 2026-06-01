@@ -3,7 +3,7 @@ title: Quantitative Finance & Algorithmic Trading
 date: 2026-05-30
 tags: [finance, quantitative-finance, algorithmic-trading, statistical-arbitrage, HFT, stochastic-calculus, factor-models, risk-management]
 source: "Black & Scholes (1973) The Pricing of Options and Corporate Liabilities, JPE; Fama (1970) Efficient Capital Markets: A Review of Theory and Empirical Work, Journal of Finance; Samuelson (1965) Proof that Properly Anticipated Prices Fluctuate Randomly, Industrial Management Review; Lo & MacKinlay (1988) Stock Market Prices Do Not Follow Random Walks, Review of Financial Studies; Jegadeesh & Titman (1993) Returns to Buying Winners and Selling Losers, Journal of Finance; Fama & French (1992) The Cross-Section of Expected Stock Returns, Journal of Finance; Hull (2018) Options, Futures and Other Derivatives; de Prado (2018) Advances in Financial Machine Learning; Jansen (2020) Machine Learning for Algorithmic Trading; Kelly (1956) A New Interpretation of Information Rate, Bell System Technical Journal"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -241,6 +241,115 @@ The Medallion Fund's performance cannot be replicated at scale — capacity cons
 **Jane Street:** Partnership, private. Estimated 2023 revenues of $21B, primarily from options market-making and ETF arbitrage. Recruits heavily from competitive mathematics (Putnam, Olympiad).
 
 **WorldQuant (2007, Igor Tulchinsky):** Uniquely open model — recruits individual "quant researchers" globally to submit alphas; best performers are hired. Claims 15,000+ alphas in production.
+
+### Alternative Data: The New Alpha Frontier
+
+Traditional financial analysis uses structured data: price, volume, fundamentals, economic indicators. **Alternative data** — non-traditional datasets that were not historically part of investment analysis — has become the primary source of genuine alpha as traditional signals decay.
+
+**Alternative Data Taxonomy:**
+
+| Category | Examples | Alpha Mechanism | Challenges |
+|---|---|---|---|
+| Satellite/geospatial | Parking lot occupancy, oil tank inventory, crop surveys | Leading indicator of revenue, supply | Coverage gaps, weather noise, building changes |
+| Credit card/payments | Consumer spending by merchant/geography (Envestnet Yodlee, Bloomberg Second Measure) | Real-time retail sales tracking | PII concerns, representativeness |
+| Web scraping | Job postings, product reviews, pricing, patent filings | Leading indicator of capex, R&D, pricing power | Terms of service, data consistency |
+| Mobile data | Foot traffic, location visits (SafeGraph, Placer.ai) | Store visit trends preceding earnings | Privacy concerns, consent issues |
+| News/social sentiment | Earnings call tone analysis (NLP), Twitter sentiment (GDELT, StockTwits) | Behavioral sentiment alpha | Information overload, sophisticated traders adapt quickly |
+| Expert networks | Primary research with industry experts (GLG Group, Tegus) | Deep proprietary insight | Legal compliance (Regulation FD), cost |
+| Shipping/logistics | AIS vessel tracking, freight rates, port congestion | Trade flows, supply chain visibility | Interpretation complexity |
+| Weather/environmental | Weather patterns, ESG satellite data, geospatial ESG | Ag yields, energy demand, regulatory risk | Complex causal chains |
+
+**Economic Logic Behind Alternative Data Alpha:**
+Alternative data provides earlier access to information that will eventually appear in official statistics or company disclosures. The alpha exists in the **information lag** — the gap between when the real-world phenomenon occurs and when it appears in widely available datasets. As more funds acquire the same alternative dataset, the alpha decays.
+
+**Half-Life of Alternative Data Alpha:**
+- Satellite parking lots: Alpha discovered ~2014; largely arbitraged away by 2020 for large-cap retail
+- Credit card data: Still generating alpha in 2026, particularly for small/mid-cap and emerging markets where coverage is lower
+- Job postings analysis: Active alpha source for tech/healthcare sector workforce planning signals
+- General principle: Alternative data edges have typical half-lives of 2–5 years before crowding eliminates the signal
+
+**Evaluation Framework for New Alternative Datasets:**
+A quant team evaluating a new dataset should answer:
+1. **Coverage:** What % of investable universe does it cover? (Satellite data misses online-only retailers)
+2. **History:** How many years of backtestable data? (<3 years = insufficient for regime testing)
+3. **Latency:** How quickly is data delivered after the real-world event? (Daily vs. monthly)
+4. **Accuracy:** What is the error rate? Can errors be corrected? (Self-reported surveys vs. behavioral data)
+5. **Legal/compliance:** Privacy law compliance, exclusive vs. widely sold, contractual restrictions
+6. **Survivorship bias:** Does historical coverage include now-defunct companies?
+7. **Signal uniqueness:** Correlation with existing signals (low correlation = more valuable)
+
+**Worked Signal Development Example:**
+Dataset: Mobile foot traffic data at 2,000 US retail locations, daily, dating to 2018.
+- **Hypothesis:** Rising foot traffic at Target stores predicts positive earnings surprise
+- **Signal construction:** Month-over-month change in store visits, normalized by county-level mobility trends
+- **Backtest:** Regress next-quarter revenue surprise (vs. consensus) on 30-day trailing foot traffic change; hold for 1 day after earnings announcement
+- **Information coefficient (IC):** 0.08 (IC = Pearson correlation between signal and forward return; IC > 0.05 is economically significant)
+- **Sharpe ratio (long-short):** 1.2 over 2018–2023 backtest
+- **Decay analysis:** IC drops from 0.08 to 0.04 over the 2020–2023 period as more funds adopt similar signals — documenting crowding
+
+### Backtest Construction and Common Pitfalls
+
+Building a systematic strategy requires creating a historical backtest that accurately estimates real-world performance. The gap between backtest performance and live performance is the largest recurring problem in quantitative finance.
+
+**Critical Backtest Biases:**
+
+**1. Look-Ahead Bias (the most dangerous)**
+Using information at time t that was not actually available until time t+n.
+
+Examples:
+- Using Compustat annual earnings data timestamped by fiscal year end, when companies don't actually report until 45–60 days later
+- Using end-of-day prices when the signal is generated during the day
+- Using analyst consensus estimates that were revised post-quarter to reflect actual results
+
+**Fix:** Build a **point-in-time database** — a historical dataset recording what was known at each moment in time, not what we know now about that moment. Standard data providers (Bloomberg, Refinitiv) provide this for fundamentals; alternative data vendors often don't.
+
+**2. Survivorship Bias**
+Backtesting only on currently listed stocks excludes companies that went bankrupt, were acquired, or were delisted for negative reasons.
+
+Quantified impact: A universe of S&P 500 companies since 2000, restricted to *currently listed* members, shows approximately 3–4% annual returns overestimation compared to the actual historical universe.
+
+**Fix:** Use a **complete universe** including all stocks that were tradable at each historical point, including those subsequently delisted.
+
+**3. Overfitting / Data Mining Bias**
+Testing many strategies on the same data and reporting the best performer overstates out-of-sample performance.
+
+Quantified: If you test 100 strategies with no predictive power, you expect ~5 to appear significant at p<0.05 purely by chance.
+
+McLean & Pontiff (2016, *Journal of Finance*): Published factors lose ~26% of their in-sample returns in the post-publication period — consistent with strategies that are partially data-mined and partially real.
+
+**Fix:** 
+- Pre-register hypotheses before testing
+- Use **Combinatorial Purged Cross-Validation** (de Prado 2018): accounts for serial correlation and information overlap in financial time series
+- Apply Bonferroni or BHY corrections for multiple testing
+- Reserve the last 20% of data as a truly held-out test set; do not use it until strategy is finalized
+
+**4. Transaction Cost Underestimation**
+Many backtests ignore or underestimate:
+- Market impact (moving the market when you trade)
+- Bid-ask spread (especially important in small-cap strategies)
+- Short sale borrow costs (high for illiquid or heavily shorted stocks)
+- Slippage (inability to execute at the modeled price)
+
+Impact: A small-cap mean-reversion strategy with 50% annual turnover might show 20% backtested returns but only 5% after realistic implementation costs at any meaningful scale.
+
+**Fix:** Use the square-root market impact model (`ΔP/P ≈ σ × √(Q/ADV)`) to estimate impact at realistic position sizes; model borrow costs from securities lending data.
+
+**5. Time Period Selection Bias (regime fitting)**
+A strategy designed during the 2010–2021 low-volatility, low-rate environment will look exceptional in backtest but fail catastrophically when the macro regime changes (2022: rates + inflation).
+
+**Fix:** Decompose backtest performance by macro regime: high-rate vs. low-rate, high-vol vs. low-vol, expansion vs. recession. A robust strategy should have a credible performance attribution in each regime.
+
+**Gold Standard Backtest Process:**
+```
+Step 1: Define universe and data sources with point-in-time history
+Step 2: State hypothesis and signal construction BEFORE looking at returns
+Step 3: Implement signal: clean data → calculate signal → compute forward return
+Step 4: Portfolio construction: cross-sectional rank, position sizing via Kelly/risk parity
+Step 5: Transaction cost model (VWAP slippage + borrow cost + market impact)
+Step 6: Evaluate: Sharpe ratio, Calmar ratio, max drawdown, turnover, capacity
+Step 7: Out-of-sample test on held-out data
+Step 8: Live paper trading (6–12 months) before committing capital
+```
 
 ### Current Research Frontier
 

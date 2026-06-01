@@ -131,6 +131,92 @@ Political advertising, marketing, and social media all preferentially target the
 
 **Aversive racism (Gaertner & Dovidio, 1986)**: Modern racial bias in liberal societies operates covertly — racial bias emerges in ambiguous situations (hiring decisions where qualifications are mixed) but not when discrimination would be obvious. Implication: bias exists despite conscious commitment to equality; structural solutions (blind auditions, standardized criteria) outperform awareness-raising alone.
 
+### The Replication Crisis: What Social Psychology Can and Cannot Claim
+
+Social psychology experienced its most significant crisis beginning in 2011: dozens of landmark studies failed to replicate in independent attempts.
+
+**Timeline of the Reckoning:**
+- **2011:** Diederik Stapel (Tilburg University) exposed for fabricating 55 studies; Daryl Bem published "Feeling the Future" claiming ESP evidence in JPSP, catalyzing systematic skepticism
+- **2015:** Open Science Collaboration publishes "Estimating the Reproducibility of Psychological Science" in *Science*: only 36–39% of psychology findings replicated with similar effect size and significance
+- **2018:** Social psychology replicated at ~25% vs. cognitive psychology ~50% in Nosek's large-scale effort
+
+**High-Profile Replication Failures:**
+- **Ego depletion (Baumeister 1998):** Idea that willpower is a depletable resource — a 23-study pre-registered replication (Hagger et al. 2016, *Perspectives on Psychological Science*) found no significant effect (d ≈ 0.04, n.s.)
+- **Facial feedback hypothesis (Strack 1988):** Holding a pencil in teeth (forcing smile) improves mood — a 17-lab multinational replication (Wagenmakers et al. 2016) found no effect
+- **Power posing (Cuddy 2010):** Expansive postures increase testosterone/decrease cortisol — the hormonal effects failed to replicate; behavioral effects remain debated
+- **Social priming effects (Bargh 1996):** Priming elderly-related words slows walking speed ("Florida effect") — failed to replicate across multiple attempts in larger samples
+
+**What Has Reliably Replicated:**
+- Asch conformity (effect size smaller, ~r = 0.25, but real and cross-cultural)
+- Milgram obedience (cross-national partial replications: Burger 2009 at 70% of max shock)
+- Bystander effect (meta-analysis: r = −0.25; larger in emergencies, smaller in dangerous situations)
+- Social identity and minimal group paradigm (very robust; d = 0.3–0.5)
+- Stereotype threat (real effects; smaller than original claims; stronger for at-risk groups)
+
+**Why It Happened — Structural Problems:**
+1. **Publication bias:** Significant results published; null results filed away ("file drawer problem")
+2. **Insufficient statistical power:** Studies with N = 20–40 have <50% power to detect typical social psychology effect sizes
+3. **HARKing (Hypothesizing After Results are Known):** Post-hoc theory construction presented as pre-specified
+4. **Researcher degrees of freedom (p-hacking):** Flexibility in stopping rules, outcome selection, and covariate inclusion inflates false positive rates to 60%+ under some parameter choices (Simmons et al. 2011)
+
+**Updated Standards:**
+Pre-registration, registered reports, and open data requirements are now standard at leading journals. Effect sizes that appeared enormous (d = 1.0+) have been revised to medium-small (d = 0.2–0.4). The field is more rigorous but the core findings — that situations powerfully shape behavior, and social influence is ubiquitous — remain valid.
+
+### Digital Mob Psychology and Platform Dynamics
+
+Social media has created novel forms of group behavior that instantiate classical social psychology mechanisms at unprecedented scale and speed.
+
+**The Anatomy of Online Pile-ons:**
+"Cancellation" — the rapid mobilization of public opprobrium against an individual — demonstrates multiple mechanisms simultaneously:
+1. **Group polarization:** Initial criticism triggers counter-criticism and defense; both sides polarize to extremes
+2. **Deindividuation via anonymity:** Anonymous accounts exhibit disinhibition effects; participants in harassment would not act similarly face-to-face
+3. **Social proof cascade:** Rising pile-on serves as social proof that transgression is serious, even when the original criticism was minor
+4. **In-group signaling:** Public condemnation signals loyalty to in-group values ("virtue signaling" as social identity maintenance)
+5. **Outgroup derogation:** Target is rapidly categorized as out-group, activating dehumanization processes
+
+**The Virality of Moral Outrage:**
+Brady et al. (2017, *PNAS*): Analyzed 563,312 political tweets. Each moral-emotional word in a message increased retweet rate by 20% within political networks. Moral outrage spreads faster than any other emotion — a feature that social media algorithms optimize for, since engagement is the reward signal.
+
+**Echo Chambers vs. Filter Bubbles — The Evidence:**
+These are related but distinct:
+- *Filter bubble (Pariser 2011):* Algorithmic curation showing users content similar to prior engagement
+- *Echo chamber:* Social homophily — voluntary selection of like-minded sources and social contacts
+
+Research complicates both narratives:
+- Guess et al. (2019, *PNAS*): Political Facebook users see more cross-cutting content than they perceive — algorithms optimize for engagement, and outrage at the other side generates engagement
+- Bail et al. (2018, *PNAS*): Exposing conservatives to liberal Twitter bots actually made them more conservative — exposure to opposing views can increase polarization when perceived as threat
+- Conclusion: The problem is not primarily algorithmic curation; it's that humans process opposing views defensively rather than updating on them
+
+**State-Sponsored Influence Operations — Scale and Mechanism:**
+The Mueller Report and Senate Intelligence Committee findings on Russia's Internet Research Agency (IRA):
+- 1,000+ employees in St. Petersburg creating fake accounts across 8 major platforms
+- Reached 126 million Americans on Facebook, 20 million on Instagram, 1.4 million on Twitter (2015–2017)
+- Strategy: Not persuasion (changing minds) but **amplification** (making extreme views seem mainstream) and **demoralization** (suppressing opponent turnout)
+- Social psychological mechanism: **Pluralistic ignorance** — creating the false impression that extreme views are common, causing moderates to update their perception of social norms
+
+**Platform Architecture as Applied Social Psychology:**
+The design of social media platforms is, at its core, applied social psychology:
+- **Variable ratio reinforcement** (like buttons, notification systems) exploit dopamine reward circuits (see [[dopamine-reward-systems-neuroscience]])
+- **Social proof** (like counts, follower counts, trending topics) is made maximally visible at all times
+- **Conformity pressure** is amplified by making apparent unanimity visible — when 10,000 people liked something and only you disagree, normative conformity pressure is severe
+- **Infinite scroll** removes natural stopping points, exploiting the human habit of completing sequences
+
+The critical insight: platform architecture does not merely reflect human social psychology — it **amplifies and selects for its most extreme manifestations** (outrage, tribalism, status signaling), creating qualitatively new social phenomena unavailable in pre-digital group settings.
+
+### Advanced Applications: Propaganda Mechanics
+
+**Harold Lasswell's Communication Model (1948):** "Who says what in which channel to whom with what effect?" — the skeleton of modern information operations analysis.
+
+**Historical Propaganda Techniques (Bernays, Goebbels, Lippmann):**
+- **Edward Bernays** (1928, *Propaganda*): Applied Freudian psychology to public relations; showed women smoking cigarettes in the 1929 Easter Parade as "torches of freedom" (linking cigarettes to suffragette imagery), expanding the female tobacco market. Demonstrates that propaganda is most effective when it hijacks existing deeply-held values rather than creating new ones.
+- **Nazi propaganda (Goebbels' principles):** Simplification (one enemy, one message), constant repetition, emotional (not rational) appeals, false consensus ("everyone believes this"), appeal to self-interest, and enemy creation as out-group activator
+- **Lippmann (1922, *Public Opinion*):** The public acts on "pictures in our heads" (pseudo-environments) rather than reality. Whoever shapes those pictures governs behavior.
+
+**Inoculation Theory (McGuire 1964; updated Lewandowsky 2012–2022):**
+The most empirically supported counter-propaganda approach: expose people to weakened forms of misinformation (with refutation) *before* they encounter the real propaganda. Pre-emptive refutation ("prebunking") outperforms reactive "debunking" by 30–50% in resistance to subsequent misinformation. This mirrors biological immunization: a weakened pathogen builds resistance before the real exposure.
+
+last_updated: 2026-06-01
+
 ## Related
 - [[cognitive-biases]] — Individual-level biases that interact with and amplify social influences; FAE as social psychology's foundational bias
 - [[cialdini-influence]] — Six principles of influence grounded in social psychological mechanisms; social proof and authority directly from Milgram and Asch

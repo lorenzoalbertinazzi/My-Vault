@@ -271,11 +271,122 @@ A fund that returned 25% IRR but took 5 years on $1M investments generated far l
 **Edge case: Distressed PE (Special Situations):**
 Apollo, Oaktree (Howard Marks), and Elliott Management specialize in **distressed debt** — buying bonds of bankrupt or near-bankrupt companies at 30–50 cents on the dollar, then converting to equity through bankruptcy proceedings. Returns require deep legal expertise in US Bankruptcy Code (Chapter 11 process, absolute priority rule). Oaktree's Distressed Debt strategy has returned 19% net IRR since 1988.
 
+### Venture Capital Term Sheet Mechanics
+
+The **term sheet** is the 5–10 page non-binding agreement defining the economics and governance of a VC investment. While short, term sheet terms can transfer hundreds of millions of dollars of value between founders and investors. Every clause is negotiated.
+
+**Liquidation Preference — The Most Economically Significant Term:**
+In an acquisition or liquidation, investors recoup capital first (the "preference") before common shareholders receive anything.
+
+*1× Non-participating preferred (current standard):* Investor gets back invested capital OR converts to common and participates pro-rata — whichever is higher.
+
+*1× Participating preferred ("double-dip"):* Investor gets back invested capital AND participates pro-rata in remaining proceeds.
+```
+Example: Company sells for $30M; Investor invested $10M for 40% ownership
+Non-participating: max($10M, 40% × $30M = $12M) → investor takes $12M
+Participating:     $10M (preference) + 40% × ($30M − $10M) = $10M + $8M = $18M
+Founder difference: $18M vs. $18M (non-part.) in this case, but consider $20M exit:
+Non-participating: max($10M, 40% × $20M = $8M) → investor takes $10M
+Participating:     $10M + 40% × ($20M − $10M) = $10M + $4M = $14M
+```
+Participating preferences are a major red flag in standard VC; they align incentives poorly for founders at modest exits.
+
+**Anti-Dilution Provisions:**
+Protect investors if a company raises at a lower valuation ("down round"):
+- *Full ratchet:* Investor conversion price resets to the new lower price — extremely punishing for founders; rare except in distressed bridge rounds
+- *Broad-based weighted average (standard):* Adjusts conversion price modestly based on new shares issued vs. total fully-diluted capitalization
+- *Narrow-based weighted average:* Counts fewer existing shares in the denominator; more aggressive adjustment; favors investors
+
+**The Option Pool Shuffle:**
+VCs require a stock option pool (10–20% of post-money shares) for future employee equity. Crucially, the pool is typically created **pre-investment**, diluting founders before the new shares are issued:
+
+```
+Without shuffle: $20M pre-money, $5M invested → $25M post-money → VC owns 20%
+With shuffle (15% option pool):
+  Pre-money = $20M on 7M shares → $2.86/share
+  New option pool: 1.5M shares created (15% of post-money 10M shares)
+  Effective pre-money for founders: $20M × (7M / 8.5M) = $16.5M
+  VC's effective entry price: lower, as pool was created at founders' expense
+```
+
+Sophisticated founders negotiate to carve the pool from post-money capitalization or reduce its initial size.
+
+**Pro-Rata Rights:**
+The right to invest in future rounds to maintain ownership percentage. Critical for VCs who want to follow-on into successful companies. Competitive founders give pro-rata rights sparingly — lead investors get them; follow-on investors compete for allocation.
+
+**Protective Provisions (Investor Veto Rights):**
+These rights allow investors to block major corporate actions regardless of economic ownership:
+- Issuing new preferred stock above a certain amount
+- Changing corporate structure (merger, acquisition, liquidation)
+- Changes to charter documents affecting preferred stock rights
+- Material changes in business strategy or scope
+
+**Board Composition (Series A Standard):**
+5-person board: 2 founders + 2 investors (lead VC + one additional) + 1 independent director (agreed by both). Board control shifts as companies take more institutional rounds — by Series C, investors often have majority board seats.
+
+### GP-Led Secondaries and Continuation Vehicles
+
+One of the most significant PE innovations since 2015 is the **GP-led secondary transaction** — a mechanism allowing fund managers to move valued assets into a new "continuation vehicle" when the original fund's 10-year life expires but the exit environment is poor.
+
+**The Problem Solved:**
+Traditional PE funds must exit all investments within 10 years (with extensions). If a portfolio company is performing well but IPO markets are closed or comparable multiples have compressed, the GP faces a difficult choice: sell at a depressed price, or ask LPs for fund extensions (unpopular and often refused). GP-led secondaries provide a third path.
+
+**Mechanics:**
+1. GP creates a new continuation fund (CV) with a fresh 5–10 year life
+2. GP offers existing LPs a choice: (a) **sell** their interests to new investors at a negotiated price (liquidity); or (b) **roll** into the CV and continue holding
+3. New institutional capital (typically other PE secondaries buyers: Lexington Partners, Ardian, StepStone) provides liquidity to LPs who want to exit
+4. The portfolio company (or portfolio) transfers to the CV; GP continues as active investor
+
+**Market Size:** GP-led secondaries grew from ~$10B (2015) to ~$55–60B (2022) annually (Evercore/Lazard data), equal to LP-led secondaries in volume. Expected to exceed $100B by 2028.
+
+**Economics:**
+- Selling LPs receive liquidity at a slight discount to NAV (typically 5–15%)
+- New CV investors receive a discounted entry with 5+ years of value creation ahead
+- GP crystallizes partial carry from existing investors while continuing to earn carry on future appreciation
+- Independent fairness opinion required to manage the inherent conflict of interest (GP represents both selling LPs and new CV investors)
+
+**ILPA Requirements:** The Institutional Limited Partners Association now requires independent fairness opinions and LP Advisory Committee approval for GP-led transactions to protect existing investors from exploitation of the information asymmetry.
+
+**Example — Vista Equity Partners (2022):** Vista's continuation vehicle for Solera Holdings (enterprise software, auto insurance industry). ~60% of LPs rolled into the new CV, demonstrating high conviction in continued value creation. The deal valued Solera at ~$6.5B, providing liquidity to LPs from the original Fund VII who had been waiting 7+ years.
+
+### Special Purpose Acquisition Companies (SPACs) and Their Decline
+
+SPACs — "blank check companies" that go public before identifying an acquisition target — experienced a spectacular boom (2020–2021) and subsequent bust (2022–2023) that illustrates the full cycle of financial innovation.
+
+**SPAC Structure:**
+1. Sponsor raises capital via IPO (typically $100–500M at $10/share) into a trust
+2. Investors receive units (shares + warrants) at $10; trust earns interest; investors can redeem at $10 + interest if they don't like the eventual deal
+3. Sponsor has 18–24 months to identify and complete a "de-SPAC" merger with a private company
+4. Private company goes public through the merger, avoiding the traditional IPO process
+5. Sponsor retains "promote" — typically 20% of founder shares at a nominal price (~$0.003/share vs. public's $10/share)
+
+**The Economics — Why SPACs Were Attractive:**
+- For private companies: Faster, more certain path to public markets than IPO; agreed valuation upfront
+- For sponsors: The 20% founder shares represent enormous value if the stock rises — a free option
+- For investors: Protected by $10 redemption right; warrants provide upside optionality
+
+**The Boom (2019–2021):**
+- 2019: 59 SPACs raised $13.6B
+- 2020: 248 SPACs raised $83.4B
+- 2021: 613 SPACs raised $162.5B — nearly matching the entire traditional IPO market
+
+Drivers: Ultra-low interest rates (SPAC trusts earned almost nothing on $10), COVID deal hiatus, social media momentum stocks, retail investor enthusiasm.
+
+**The Bust (2022–2024):**
+Rising interest rates (trust interest income became meaningful — sponsors faced redemptions before closing deals), SEC regulatory scrutiny (new disclosure requirements equating SPAC projections with IPO prospectus liability), and a long list of high-profile SPAC failures:
+- **Nikola Corporation (SPAC 2020):** Founder convicted of fraud; stock fell from $79 to <$1
+- **WeWork (SPAC 2021):** Valuation fell from $47B (2019 attempt) to ~$9B at SPAC merger to bankruptcy filing (2023)
+- **Lordstown Motors, Clover Health, Lucid Group:** Various degrees of misrepresentation in SPAC projections
+
+By 2023, the average SPAC trading at <$10 (below trust value) meant sponsors couldn't complete deals; the market effectively froze. The SPAC mechanism survives as a niche tool but the 2021 excess has been substantially reversed.
+
 ### Cross-Disciplinary Connections
 
 - **Game theory:** LP-GP relationship is a principal-agent problem; fee structure design (carry hurdles, clawbacks) are mechanism design solutions to minimize moral hazard
 - **Organizational behavior:** Portfolio company transformations require change management; PE's 100-day plan literature parallels McKinsey's organizational turnaround playbooks
 - **Network science:** VC deal flow follows power-law networks — top founders were funded by top VCs (Sequoia → PayPal → PayPal Mafia → all subsequent Musk/Thiel ventures). Warm introductions drive 90%+ of deal flow at top firms
+
+last_updated: 2026-06-01
 
 ## Related
 - [[portfolio-theory]] — Asset allocation frameworks; PE as an alternative asset class; endowment model portfolio construction

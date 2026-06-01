@@ -3,7 +3,7 @@ title: Macroeconomics 101
 date: 2026-05-26
 tags: [finance, macroeconomics, GDP, inflation, unemployment, business-cycle, monetary-policy, fiscal-policy, central-banking, interest-rates, keynesian, monetarism, aggregate-demand, multiplier-effect, Taylor-rule, Phillips-curve, IS-LM, DSGE, Minsky-moment, secular-stagnation, MMT, debt-supercycle]
 source: "Mankiw (2020) Principles of Macroeconomics; Blanchard (2017) Macroeconomics; Keynes (1936) General Theory of Employment, Interest and Money; Friedman (1968) The Role of Monetary Policy, AER; Dalio (2018) A Template for Understanding Big Debt Crises; Minsky (1986) Stabilizing an Unstable Economy"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -340,6 +340,85 @@ The **Dynamic Stochastic General Equilibrium (DSGE)** model is the workhorse fra
 **DSGE vs. IS-LM**: IS-LM is a static, reduced-form model useful for blackboard intuition; DSGE explicitly microfounds the behavioral equations from household and firm optimization, allows welfare analysis, and handles rational expectations formally. The cost: far greater complexity, opaque parameter calibration, and poor performance in forecasting actual recessions (DSGE models famously failed to predict the 2008 recession).
 
 **Why this matters for investors**: Central banks use DSGE models to communicate their policy frameworks and forecasts. Understanding the Fed's thinking requires understanding that they are essentially asking: "what path of interest rates clears the goods and labor markets and returns inflation to target over a 2-3 year horizon?" — the exact question DSGE addresses. The "data dependence" phrase in Fed communications is DSGE in plain English: updating the model parameters as new economic data arrives.
+
+### Unconventional Monetary Policy: Beyond the Zero Lower Bound
+
+When the nominal policy rate reaches zero — the Zero Lower Bound (ZLB) — conventional monetary policy loses its primary lever. Cash pays 0%, so depositors can hold currency rather than accept negative-rate deposits; bank profitability compresses; and Keynes's "liquidity trap" activates: at sufficiently low rates, money demand becomes nearly infinitely elastic as investors prefer cash over tiny-yielding assets. Central banks facing the ZLB have deployed four major unconventional tools.
+
+**Quantitative Easing (QE): Balance Sheet Expansion**
+
+QE = central bank purchases long-duration assets (government bonds, mortgage-backed securities, corporate bonds) by creating new bank reserves. Unlike conventional open-market operations (short-term securities), QE targets long-term yields to lower the cost of long-duration borrowing.
+
+Transmission channels:
+1. *Portfolio balance channel*: As central banks absorb safe assets, investors shift to higher-yielding assets (equities, corporate bonds, real estate) → prices rise → wealth effect stimulates spending
+2. *Duration channel*: Removing long-duration bonds from private sector shortens average portfolio duration → reduces term premium
+3. *Signaling channel*: QE signals commitment to low rates for longer, anchoring forward rate expectations
+4. *Credit channel*: Increased bank reserves lower interbank funding costs → cheaper bank lending to households and businesses
+5. *Exchange rate channel*: Capital flows to higher-yield jurisdictions → domestic currency depreciates → export stimulus
+
+Scale of major QE programs:
+| Central Bank | Pre-Crisis Balance Sheet | Peak Balance Sheet | % of GDP |
+|---|---|---|---|
+| Fed | $900B (2007) | $8.9T (April 2022) | ~38% |
+| ECB | €1.2T (2007) | €8.8T (2022) | ~65% |
+| Bank of Japan | ¥100T (2007) | ¥740T (2023) | **>130%** |
+| Bank of England | £80B (2007) | £895B (2022) | ~40% |
+
+Research on effectiveness: Fed economists estimated each $600B QE purchase reduced 10-year Treasury yields by approximately 15–20 basis points (D'Amico & King, 2013). IMF analysis found GFC-era QE in the US and UK raised GDP by 1.5–2.5% cumulatively. Critically, effectiveness showed diminishing returns across successive rounds — QE1 (2008–2010) had substantially larger effects than QE2 (2010–2011) or QE3 (2012–2014) as financial market dysfunction was progressively resolved.
+
+**Negative Interest Rate Policy (NIRP)**
+
+Four major central banks pushed policy rates below zero to penalize excess reserves and force capital deployment:
+- ECB: −0.1% (June 2014) → −0.5% (September 2019) → reversed to 0% (July 2022)
+- Bank of Japan: −0.1% (January 2016) → officially ended March 2024 (+0.1%)
+- Swiss National Bank: −0.75% (January 2015) — deepest rate, primarily defending against safe-haven CHF inflows
+- Denmark Nationalbank: −0.65% — defending EUR/DKK peg
+
+Theoretical mechanism: Taxing idle reserves forces banks to lend or pay depositors rather than hoard liquidity.
+
+Empirical outcome: Mixed to disappointing. Bank net interest margins compressed (deposit rates couldn't go negative for retail customers, while asset yields fell). Limited pass-through to retail lending rates — banks absorbed the cost. Currency effects were real (CHF held below appreciation pressure), but macroeconomic transmission weak. Brunnermeier and Koby's "reversal rate" concept: beyond a threshold (estimated −1% to −2% for major banking systems), cutting rates further actually reduces bank lending by destroying bank equity — a non-linearity that limits NIRP's practical range.
+
+**Yield Curve Control (YCC): Bank of Japan's Unprecedented Experiment**
+
+YCC = committing to maintain a specific target for a long-term yield through unlimited asset purchases, rather than merely targeting the overnight rate.
+
+Japan's YCC program (September 2016 – July 2023):
+- Target: 10-year JGB yield at ≈0%, within ±0.25% band (later ±0.5%)
+- Mechanism: BoJ committed to buy unlimited JGBs at the target yield → arbitrages any deviation back to target
+- Result: By 2022, BoJ owned approximately 50% of the entire Japanese government bond market — the most extreme monetization by any G10 central bank
+
+The terminal crisis emerged when US Fed rate hikes in 2022 drove 10-year US yields from 1.5% to 4.5%, while BoJ maintained near-zero Japanese yields. The resulting interest rate differential triggered a 30% JPY depreciation against USD (JPY fell from 115 to 152 per dollar, 2022) — importing severe inflation to Japan. BoJ abandoned YCC via multiple steps in 2023–2024.
+
+Lessons from Japan's YCC:
+1. *Market dysfunction*: When a central bank becomes the price-insensitive marginal buyer, trading volumes collapse and price discovery ends — a serious systemic risk to bond market functioning
+2. *Capital flow vulnerability*: Artificially suppressed domestic yields create massive carry trades ($1T+ yen-funded positions) whose unwinding is disorderly (BoJ's July 2024 rate hike triggered global equity selloff as yen carry trades unwound)
+3. *Fiscal dominance risk*: YCC creates structural incentive for governments to borrow freely, blurring the boundary between monetary and fiscal policy
+
+**Forward Guidance: Managing Expectations as Monetary Policy**
+
+The Neo-Keynesian recognition that expectations of future rates matter as much as current rates led the Fed to develop explicit forward guidance:
+
+- "Extended period" language (2009): "Rates will remain low for an extended period"
+- Calendar-based (August 2011): "At least through mid-2013" (then extended to 2014, 2015)
+- State-contingent (December 2012): "At least as long as unemployment > 6.5% and inflation < 2.5%"
+- Average Inflation Targeting (August 2020): Fed committed to let inflation overshoot 2% to average 2% — "lower for longer" even as inflation rose
+
+Classification: Campbell et al. (2012) distinguish "Odyssean" guidance (binding commitment with credibility stakes) from "Delphic" guidance (merely forecasting expected future actions). The Fed's AIT in 2020 was designed as Odyssean, but its credibility evaporated rapidly when CPI hit 5% (2021) then 9.1% (June 2022) — demonstrating that state-contingent commitments only bind until conditions become sufficiently extreme.
+
+The forward guidance error of 2020–2021 contributed materially to the inflation overshoot: markets interpreted "lower for longer" as a commitment not to tighten even as supply chain inflation accelerated, leading to a 2022 hiking cycle (fastest since 1980: 0.25% to 5.5% in 18 months) that would have been less severe had guidance been more flexible.
+
+**Quantitative Tightening (QT): The Asymmetric Exit**
+
+Having expanded balance sheets by $5–8T, central banks face the reverse challenge: normalizing without triggering financial instability.
+
+Fed QT program (June 2022–2024):
+- Began at $47.5B/month runoff; increased to $95B/month (September 2022) — $1.14T annualized reduction
+- Fed balance sheet: $8.9T (April 2022) → ~$7.2T (January 2024)
+- "Passive" QT: Bonds mature and are not reinvested (rather than active selling, which would be more disruptive)
+
+The asymmetry problem: QE created reserves that banks held as liquidity buffers. QT removes those buffers. The 2023 regional bank stress (Silicon Valley Bank, First Republic, Signature) was partially a QT transmission mechanism — banks loaded with long-duration securities during ZIRP/QE saw massive unrealized losses as rates rose, triggering deposit flight. The Fed had to create the Bank Term Funding Program (BTFP) to provide emergency liquidity, partially offsetting QT's intended effect.
+
+Research consensus on QT: Less potent per dollar than QE's symmetrical equivalent due to announcement effects, composition differences (QE announcement itself moved markets before purchases started), and the asymmetric importance of reserve supply versus demand across banking system stress states.
 
 ---
 

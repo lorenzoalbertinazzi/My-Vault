@@ -3,7 +3,7 @@ title: "Game Theory and Strategic Thinking: The Mathematics of Rational Decision
 date: 2026-05-30
 tags: [psychology, game-theory, strategy, decision-making, Nash-equilibrium, prisoner-dilemma, behavioral-economics, cooperation, rationality, Schelling, von-Neumann, tit-for-tat, Axelrod, mechanism-design, evolutionary-game-theory, focal-points, backward-induction, repeated-games]
 source: "von Neumann & Morgenstern (1944) Theory of Games and Economic Behavior; Nash (1950) Non-Cooperative Games, Annals of Mathematics; Schelling (1960) The Strategy of Conflict; Axelrod (1984) The Evolution of Cooperation; Binmore (2007) Playing for Real; Kahneman & Thaler (1991) Economic Analysis and the Psychology of Utility"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -303,6 +303,102 @@ If V > C: ESS = pure Hawk (always fight — resource worth fighting for)
 If V < C: ESS = mixed strategy (frequency V/C Hawks, (C-V)/C Doves in population)
 
 Explains: Why animals display rather than fight to the death (V < C in most species); why fighting escalates only when stakes are high; ritualized combat as evolutionary game theory prediction.
+
+### Cooperative Game Theory: The Shapley Value and Coalition Formation
+
+Classical non-cooperative game theory analyzes players acting independently; cooperative game theory analyzes what coalitions form, how they cooperate, and how the gains from cooperation are divided. This framework is essential for understanding mergers and acquisitions, political alliances, labor-management negotiations, and multi-party deal structures.
+
+**The Characteristic Function**  
+A cooperative game in characteristic function form: (N, v) where:
+- N = set of players {1, 2, ..., n}
+- v: 2^N → ℝ = the characteristic function, assigning to each coalition S ⊆ N its worth v(S) — what coalition S can guarantee for itself regardless of what others do
+
+Superadditivity: v(S ∪ T) ≥ v(S) + v(T) whenever S ∩ T = ∅ — cooperation creates value beyond what coalitions could achieve separately. This is the premise for why coalitions form.
+
+**The Shapley Value: The Unique Fair Division**  
+Lloyd Shapley (Nobel 2012) proved that there exists a unique value function φ_i(v) satisfying four axioms (efficiency, symmetry, dummy, additivity) that assigns each player their "expected marginal contribution" averaged over all possible orderings in which players might join the grand coalition:
+
+$$\phi_i(v) = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|!(n-|S|-1)!}{n!} [v(S \cup \{i\}) - v(S)]$$
+
+Intuition: Consider all n! possible orderings in which the n players join a grand coalition. In each ordering, player i arrives at some point and adds [v(S∪{i}) − v(S)] to the coalition already formed. The Shapley value is player i's average marginal contribution across all orderings.
+
+**Worked Example: Three-Player Majority Game**  
+Three players must form a majority (any 2-player coalition wins). A single player wins nothing.
+```
+v({1}) = v({2}) = v({3}) = 0
+v({1,2}) = v({1,3}) = v({2,3}) = 1   (majority = $1)
+v({1,2,3}) = 1   (all three together still just $1)
+```
+
+Shapley value for player 1 (by symmetry, all players get the same):
+- Orderings where player 1 is pivotal (arrives and creates majority):
+  - 1,2,3: Player 1 arrives to empty coalition → adds 0 (needs partner)
+  - 1,3,2: Same → adds 0
+  - 2,1,3: Player 1 arrives after player 2 → {2}∪{1} = {1,2}, wins! Marginal contribution = 1−0 = 1
+  - 3,1,2: Player 1 arrives after player 3 → {3}∪{1} = {1,3}, wins! Marginal contribution = 1
+  - 2,3,1: Player 1 arrives after {2,3} which already wins → adds 0
+  - 3,2,1: Player 1 arrives after {3,2} which already wins → adds 0
+
+φ_1(v) = (1/6)(0 + 0 + 1 + 1 + 0 + 0) = 2/6 = **1/3**
+
+By symmetry, φ_2 = φ_3 = 1/3. Total = 1 ✓. Each player gets an equal third of the coalition value — consistent with equal bargaining power in symmetric games.
+
+**Shapley Value Applications**
+
+*Corporate finance — merger valuation*: When Firm A (v = $100M), Firm B (v = $150M), and their combination v(A,B) = $400M (synergies), the Shapley value divides the $150M surplus (= $400M − $100M − $150M) equally: $75M each — suggesting merger premiums should reflect average marginal contribution, not just outside options.
+
+*Venture capital deal attribution*: When founders, investors, and key employees all contribute to startup value, Shapley value provides the theoretically fairest equity allocation — though in practice dominated by bargaining power.
+
+*Political power*: The Shapley-Shubik power index (a variant of Shapley value for voting games) measures how often each party is the "swing voter" that converts a losing coalition into a winning one. Applied to: EU voting weights, US Electoral College, UN Security Council (the P5 have dramatically higher Shapley-Shubik indices than non-permanent members).
+
+*Machine learning interpretability*: SHAP (SHapley Additive exPlanations) by Lundberg & Lee (2017) applies Shapley values to explain ML model predictions — each feature's contribution to a prediction is its Shapley value across all feature orderings. Now the dominant framework for explainable AI.
+
+**The Core and Stability**  
+Beyond fair division, cooperative game theory asks: which coalition structures are *stable*? The core of a game is the set of payoff allocations where no coalition can profitably deviate (no subset can do better by breaking away).
+
+Core existence is not guaranteed — many games have an empty core (no stable allocation exists). Example: "Three-player majority game" has an empty core: for any allocation, some two-player coalition receives less than 1, which they can guarantee themselves by forming the 2-player coalition.
+
+Implication: In negotiations involving multiple parties and coalitional threats, stable agreements may simply not exist. The breakdown of multi-party negotiations (Israeli-Palestinian peace talks, OPEC production agreements, international climate negotiations) can be understood through core non-existence — there is no allocation satisfying all parties' outside options simultaneously.
+
+### Signaling Games and Information Economics
+
+Classical game theory assumes complete information (payoffs and types known). Most real-world strategic situations involve *incomplete information* — one party knows something the other doesn't. Signaling games, developed by Michael Spence (Nobel 2001) and elaborated by Spence, Akerlof, and Stiglitz (all 2001), analyze how informed players transmit (or conceal) private information through observable actions.
+
+**The Spence Education Signaling Model (1973)**  
+Context: Job market. Workers know their own productivity (high or low). Employers cannot observe productivity directly before hiring. How do high-productivity workers distinguish themselves?
+
+Spence's insight: If high-productivity workers find education *less costly* (not that education itself raises productivity — a controversial assumption), education can serve as a credible signal.
+
+Setup:
+- High-type workers: Cost of education = c_H per year
+- Low-type workers: Cost of education = c_L per year, where c_L > c_H (higher-type workers have lower signaling cost — the single-crossing condition)
+- Employers: Pay w_H if they believe worker is high-type, w_L otherwise
+- Equilibrium condition: Education level e* is a separating equilibrium if:
+  - High-types prefer to get e* education: w_H − c_H × e* ≥ w_L
+  - Low-types prefer not to signal: w_L ≥ w_H − c_L × e*
+
+This gives a range: e* ∈ [(w_H − w_L)/c_L, (w_H − w_L)/c_H]
+
+The signaling equilibrium is "wasteful" from a social perspective if education doesn't actually increase productivity — but rational from each individual agent's perspective. This insight (and its implication that education systems might partly serve signaling rather than human capital accumulation) remains controversial but empirically significant.
+
+**Real-World Signaling Applications**
+
+*Corporate finance — dividend policy*: Firms with genuinely strong future cash flows can credibly signal health by paying dividends (costly to maintain for weak firms who'd have to borrow to pay them). Bhattacharya's signaling model (1979): Dividends signal private information about future earnings — consistent with empirical observation that dividend initiation announcements average +3.4% abnormal returns and dividend cuts average −3.7%.
+
+*Product warranties*: A manufacturer offering a 10-year warranty signals product quality credibly — weak-quality manufacturers couldn't afford the warranty costs on frequent failures. Riley (1979) formalized warranties-as-signals.
+
+*Military capability demonstration*: States conduct missile tests, military exercises, and nuclear tests to signal strength (even at operational cost) — because the signal is only credible if it's costly for weak states to mimic.
+
+*Peacocking in biology*: The male peacock's tail is the canonical biological signal — honest because it's physically costly to grow and maintain, and only high-fitness males can afford the predation risk. Zahavian "handicap principle" (1975): Evolutionary signals are honest precisely because they impose costs that inferior types cannot bear.
+
+**Screening vs. Signaling**  
+The mirror problem to signaling (informed party acts first) is *screening* (uninformed party designs contracts to elicit information):
+
+- Insurance: Insurer can't observe driver risk type directly. Rothschild-Stiglitz (1976): Insurer offers a menu of (premium, deductible) contracts; high-risk types choose low-deductible (high-premium) contracts; low-risk types choose high-deductible (low-premium). Self-selection reveals type.
+- Employment contracts: Offering a choice between fixed salary and performance-based compensation screens for worker confidence/ability.
+- Versioning (second-degree price discrimination): Product lines (business class vs. economy, software editions) are screening mechanisms that extract consumer surplus by inducing self-selection based on willingness to pay.
+
+The fundamental insight of signaling/screening: Information asymmetry generates inefficiency (Akerlof's market for lemons), but equilibrium signaling/screening mechanisms can partially restore efficiency — at the cost of social waste (education as signal), distorted contracts, or exclusion of some types from markets.
 
 ---
 

@@ -139,6 +139,79 @@ For allocators conducting operational due diligence:
 
 **Crypto hedge funds**: ~1,200 funds managing ~$80B (2026) trade cryptocurrencies; extreme volatility (Bitcoin σ ~70%) creates both opportunity and risk; many funds launched in 2020–21 and closed during 2022 crypto winter.
 
+### Volatility Arbitrage and Variance Trading
+
+Volatility arbitrage strategies exploit the persistent gap between **implied volatility** (what options markets price) and **realized volatility** (what actually occurs). The theoretical underpinning: implied volatility in equity index options has historically traded at a premium of 2–4 percentage points above realized volatility — the **variance risk premium (VRP)** — compensating sellers for bearing tail risk.
+
+**The Variance Swap:**
+A variance swap pays the difference between realized variance and the fixed strike at expiry:
+```
+Payoff = Notional × (σ²_realized − K_var)
+```
+Where K_var = variance strike (implied variance), σ²_realized = annualized realized variance.
+
+**Example:** S&P 500 1-month variance swap, K_var = 400 (implied vol = 20%), Notional = $100,000/variance point.
+- If realized vol = 15% (variance = 225): Short variance wins $100,000 × (400 − 225) = **$17.5M**
+- If realized vol = 25% (variance = 625): Short variance loses $100,000 × (625 − 400) = **$22.5M**
+
+**Historical VRP data:** S&P 500 30-day VIX (implied vol) has averaged approximately 19–20% while realized 30-day vol has averaged 15–16% since 1990, implying a VRP of ~3–5 vol points. A systematic short-variance strategy on the S&P 500 has generated Sharpe ratios of 0.8–1.2 over the long run — but with severe left-tail: the strategy lost 50–80% in October–November 2008 and March 2020.
+
+**Key volatility strategies:**
+- **Short gamma/theta harvesting:** Selling options (straddles, strangles) and delta-hedging, collecting time decay (theta). Requires frequent rebalancing as the underlying moves.
+- **Volatility surface arbitrage:** Exploiting inconsistencies across strikes (the vol smile) or maturities (term structure). Calendar spreads that are mispriced relative to forward variance.
+- **Dispersion trading:** Short index variance, long single-stock variance. Exploits the correlation premium: index implied vol consistently exceeds the correlation-weighted average of single-stock implied vols. If actual stock correlations fall below implied, the trade profits.
+- **VIX futures strategies:** VIX futures are in persistent contango under normal conditions (~3–5% monthly roll cost). Short-VIX strategies (XIV, SVXY) generated extraordinary returns 2012–2017 before "Volmageddon" (February 5, 2018): VIX spiked from 17 to 37 in one day, destroying $3.6B in short-volatility products; XIV lost 96% in a single session.
+
+**Risk management imperative:** The VRP exists precisely because crashes happen. A short-vol strategy selling $100M notional in 1-month S&P 500 puts at 25% implied vol will lose $300–500M in a single month like March 2020. Risk management requires strict notional caps and pre-committed hedges (long VIX calls, tail-risk funds).
+
+### Prime Brokerage: The Institutional Infrastructure
+
+Prime brokerage (PB) is the investment bank division providing hedge funds with the operational infrastructure to run their strategies. Understanding PB mechanics is essential to understanding how hedge funds function and fail.
+
+**Core Prime Brokerage Services:**
+1. **Securities lending for short selling:** PB borrows securities from stock loan pools (pension funds, insurance companies) and lends them to funds for short selling. The fund pays a borrow fee (typically 0.25–2.0%/year for liquid stocks; up to 50%+ for "hard-to-borrow" small caps). The PB earns the spread.
+
+2. **Leverage financing:** PB provides margin loans against long positions. **Rehypothecation** — the PB's right to re-use the fund's pledged collateral for its own funding — amplifies system leverage but creates risk: if the PB fails (Lehman Brothers, 2008), collateral pledged by hedge funds can be frozen in bankruptcy proceedings.
+
+3. **Synthetic exposure (TRS, CFDs):** Delta-one desks offer total return swaps and contracts for difference, giving funds synthetic exposure without direct ownership — used for leverage, tax efficiency, and regulatory arbitrage. This mechanism allowed Archegos to build >$20B in concentrated positions invisible to other prime brokers.
+
+4. **Capital introduction:** PB investor relations teams introduce fund managers to institutional LP investors — the most valuable non-financial service for emerging managers.
+
+5. **Custodianship and clearing:** PB holds assets in custody and clears all equity transactions, eliminating settlement risk.
+
+**The Lehman Collapse — Systemic Prime Brokerage Risk (2008):**
+When Lehman Brothers filed for bankruptcy on September 15, 2008, approximately $40 billion in hedge fund assets held in Lehman's London prime brokerage were locked up as bankruptcy assets. Under UK law, Lehman was permitted to rehypothecate client assets without limit, meaning client securities had been re-pledged, re-lent, and were entangled throughout the financial system. Funds including Ramius Capital, GLG Partners, and dozens of others couldn't access their own securities for weeks to months.
+
+This catastrophe triggered two permanent industry changes:
+- **Multi-prime arrangements:** Professional standards now require 2–4 prime brokers to diversify custodial risk
+- **Segregated vs. rehypothecated account preferences:** Funds increasingly demand legally segregated custody structures, even at the cost of higher financing rates
+
+**Economics:** Goldman Sachs, Morgan Stanley, and JPMorgan together generate $15–20B/year from prime brokerage. Hedge fund clients generate revenues from multiple streams simultaneously: stock loan fees, margin interest, commissions, and prime brokerage service fees.
+
+### Cryptocurrency Hedge Funds
+
+Approximately 1,200 crypto-focused funds managed ~$80B (2026). Bitcoin's annualized volatility (~70% vs. S&P 500 ~15%), near-zero correlation to equities in most environments (switches to +0.6 in risk-off selloffs), and a microstructure still rich with arbitrage opportunities differentiate this strategy.
+
+**Key Crypto Hedge Fund Strategies:**
+
+*Market Neutral / Arbitrage:*
+- **Cash-and-carry (basis trade):** Long spot Bitcoin + Short Bitcoin perpetual futures. Perpetual futures charge a "funding rate" to long holders when futures trade at premium to spot. During the 2021 bull market, annualized funding rates reached 100%+, making cash-and-carry strategies extremely profitable with near-zero directional risk.
+- **Exchange arbitrage:** Bitcoin price discrepancies across exchanges (Bitfinex vs. Binance vs. Coinbase). The "kimchi premium" — Korean exchanges trading 10–30% above global prices in 2017–2018 — is the canonical example, now largely arbitraged away.
+- **GBTC premium arbitrage:** Grayscale Bitcoin Trust (GBTC) historically traded at 20–50% premium to NAV; hedge funds issued new shares, hedged with spot/futures, and waited for premium collapse. The premium inverted to −40% discount post-spot Bitcoin ETF approval (January 2024).
+
+*Directional / Token Investing:*
+- Early-stage venture into crypto protocols (DeFi, Layer 1/Layer 2). Pantera Capital, Multicoin Capital, a16z Crypto are leaders. Return profile: 100x+ outcomes exist (early Ethereum, Solana, Polygon) but 90%+ of tokens eventually approach zero.
+
+*DeFi Yield Strategies:*
+- Providing liquidity to DeFi protocols in exchange for governance tokens. Annualized yields reached 100–1,000% during DeFi summer 2020–2021; have since compressed dramatically as capital flooded in.
+
+**Key Risks:**
+- **Counterparty risk:** FTX collapse (November 2022) — co-founded by Sam Bankman-Fried, the third-largest exchange by volume — revealed $8B in misappropriated client funds. Sequoia wrote down its $214M FTX investment to zero in one day; hundreds of hedge funds lost unrecoverable assets.
+- **Smart contract risk:** The Ronin Network bridge hack (March 2022) destroyed $625M irreversibly; code bugs in blockchain protocols are permanent and uninsured.
+- **Regulatory uncertainty:** SEC's ongoing litigation (Coinbase, Binance 2023) and "security vs. commodity" framework ambiguity create existential legal risks for many token holdings.
+
+last_updated: 2026-06-01
+
 ## Related
 - [[portfolio-theory]] — Modern Portfolio Theory and the role of uncorrelated alternative return streams; Sharpe ratio benchmarking
 - [[behavioral-finance-and-investor-psychology]] — Behavioral foundations of momentum, value, and mean-reversion strategies; why hedge fund investors chase performance
