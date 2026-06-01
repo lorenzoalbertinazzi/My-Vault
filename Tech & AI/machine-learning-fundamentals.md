@@ -3,7 +3,7 @@ title: Machine Learning Fundamentals
 date: 2026-05-26
 tags: [ai, machine-learning, deep-learning, neural-networks, backpropagation, gradient-descent, Adam, supervised-learning, reinforcement-learning, self-supervised-learning, MoE, distillation, quantization, ZeRO, DPO, regularization, bias-variance-tradeoff, transfer-learning, fine-tuning]
 source: "Rumelhart, Hinton & Williams (1986) Learning Representations by Back-Propagating Errors (Nature); Krizhevsky et al. (2012) AlexNet (NeurIPS); He et al. (2015) Deep Residual Learning — ResNet (arXiv:1512.03385); Kingma & Ba (2015) Adam optimizer (arXiv:1412.6980); Goodfellow et al. 'Deep Learning' textbook (2016); Rajbhandari et al. (2020) ZeRO (arXiv:1910.02054)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

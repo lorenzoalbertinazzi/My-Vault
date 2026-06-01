@@ -3,7 +3,7 @@ title: LLM Training & Scaling Laws
 date: 2026-05-30
 tags: [ai, LLM, scaling-laws, pre-training, transformers, compute, chinchilla, GPT, neural-scaling, emergence, deep-learning, infrastructure, data-parallelism, tensor-parallelism, pipeline-parallelism, MFU, gradient-checkpointing, mixed-precision, FLOP-budget, synthetic-data, tokenization]
 source: "Kaplan et al. (2020) Scaling Laws for Neural Language Models (arXiv:2001.08361); Hoffmann et al. (2022) Chinchilla (arXiv:2203.15556); Brown et al. (2020) GPT-3 (arXiv:2005.14165); Wei et al. (2022) Emergent Abilities of LLMs (arXiv:2206.07682); Rajbhandari et al. (2020) ZeRO (arXiv:1910.02054); Shoeybi et al. (2019) Megatron-LM (arXiv:1909.08053)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -176,6 +176,113 @@ Training at GPT-4 scale (~170T FLOPs, distributed across thousands of GPUs) requ
 **3D Parallelism (Megatron-DeepSpeed):** Combines DP + TP + PP simultaneously. Used in GPT-3 training (OpenAI + Microsoft), Bloom (Hugging Face), and others.
 
 **Communication bottleneck:** Training 1,000 GPUs requires all-reduce operations transferring terabytes of gradient data per step. NVLink (GPU-to-GPU interconnect, 600 GB/s bidirectional) and InfiniBand (rack-to-rack, 400 Gb/s) are critical hardware. NVIDIA's DGX SuperPOD: 32 DGX H100s (256 H100 GPUs) connected with NVLink; pods connected with InfiniBand.
+
+#### 3D Parallelism: Communication Volume Analysis
+
+In practice, 3D parallelism configurations must be chosen to minimize communication time relative to compute time. A poorly chosen configuration spends most of the training step waiting for gradient synchronization.
+
+**Communication formulas for each parallelism dimension:**
+```
+Data Parallelism (DP) — gradient all-reduce:
+  Volume per step = 2 × P / DP_size (bytes, ring all-reduce in bf16)
+  Example: 70B model, DP=128 GPUs:
+    Volume = 2 × 70×10⁹ × 2 bytes / 128 = 2.2 GB per step per GPU
+  
+  With ring all-reduce: Each GPU sends/receives (DP_size-1)/DP_size × Volume
+  At 400 Gb/s InfiniBand: 2.2 GB / (400/8 GB/s) ≈ 44ms of communication
+
+Tensor Parallelism (TP) — all-reduce per layer forward + backward:
+  Operations per transformer layer: 2 all-reduces in forward, 2 in backward
+  Volume per all-reduce = 2 × B × S × d_model / TP_size (activations)
+    where B=batch size, S=sequence length, d_model=hidden dimension
+  Example: B=1, S=2048, d_model=4096, TP=8:
+    = 2 × 1 × 2048 × 4096 × 2 bytes / 8 = 4 MB per all-reduce
+    × 4 operations × 80 layers = 1.3 GB per step within NVLink domain
+    At 600 GB/s NVLink: 1.3 GB / 600 GB/s ≈ 2.2ms — negligible
+    
+  TP must be within a single node (requires NVLink bandwidth)
+  → TP_size ≤ GPUs per node (typically 8)
+
+Pipeline Parallelism (PP) — point-to-point activation passing:
+  Volume per micro-batch boundary = B × S × d_model (activations)
+  Example: B=1, S=2048, d_model=4096: = 16 MB per PP boundary
+  
+  Pipeline bubble fraction = (PP_size - 1) / (PP_size - 1 + m)
+    where m = number of micro-batches
+  Example: PP=4, m=16: bubble = 3/19 ≈ 16% efficiency loss
+  → More micro-batches reduces bubble but increases activation memory
+```
+
+**Optimal 3D Configuration Selection Rule of Thumb (Megatron-LM team):**
+```
+1. Maximize TP within a node (TP = GPUs_per_node, typically 8)
+   — benefits from fast NVLink, avoids InfiniBand
+2. Minimize PP (PP adds pipeline bubble overhead)
+   — use just enough PP to fit model in GPU memory
+3. Maximize DP with remaining GPUs
+   — DP has best compute-to-communication ratio
+
+Example: 70B model on 1024 H100s (8 per node, 128 nodes)
+  TP = 8 (full node)
+  PP = 4 (needed for memory: 70B model × 16 bytes bf16+gradients ÷ 8 GPUs ≈ needs 4 stages)
+  DP = 1024 / (8 × 4) = 32
+  → 32 data-parallel replicas; gradient all-reduce cost = 70B×2÷32 ≈ 4.4GB per step
+```
+
+#### Model FLOP Utilization (MFU) — Worked Example
+
+Model FLOP Utilization measures training efficiency: what fraction of peak theoretical GPU FLOP/s are actually being used for useful computation.
+
+```
+MFU = (Actual FLOP/s used) / (Peak theoretical FLOP/s)
+
+For an H100:
+  Peak bf16 FLOP/s = 989 × 10¹² (989 TFLOP/s)
+  
+For a transformer forward + backward pass:
+  FLOPs per token ≈ 6 × N  (where N = non-embedding parameters)
+  (2 for forward, 4 for backward including recomputation)
+  
+  With gradient checkpointing (activation recomputation):
+  FLOPs per token ≈ 8 × N  (extra forward pass for recomputation)
+
+Worked example: Llama 2 70B training
+  N = 70 × 10⁹ parameters
+  FLOPs per token = 6 × 70 × 10⁹ = 420 × 10⁹ = 4.2 × 10¹¹ FLOPs
+  
+  Tokens per second per GPU (measured): ~350 tokens/sec on H100
+  Actual FLOP/s = 350 × 4.2 × 10¹¹ = 1.47 × 10¹⁴ FLOPs/s
+  
+  MFU = 1.47 × 10¹⁴ / 9.89 × 10¹⁴ ≈ 14.9%
+  
+Typical MFU ranges:
+  Single GPU, no optimization:       5–10%
+  Optimized (FlashAttention, etc.):  30–45%
+  Megatron-LM at scale:              35–45%
+  Google TPU v4 pod:                 50–60%  (custom hardware advantage)
+  
+What consumes the remaining 55–65%?
+  - Memory bandwidth saturation (moving weights from HBM to compute cores)
+  - Communication overhead (gradient sync, activation passing)
+  - Pipeline bubbles
+  - Kernel launch overhead
+  - I/O (loading training data)
+```
+
+**Why MFU Matters for Economics:**
+```
+Training Llama 2 70B: ~1.72M A100-hours at MFU=35%
+If MFU improved from 35% → 50%:
+  GPU-hours needed: 1.72M × (35/50) = 1.2M A100-hours
+  Cost savings at $3/GPU-hour: (1.72M - 1.2M) × $3 = $1.56M saved per training run
+
+This is why Megatron-LM optimizations (FlashAttention, fused kernels, selective
+activation recomputation) have multi-million-dollar economic value.
+
+PaLM's reported MFU of 46.2% on TPU v4 (Chowdhery et al. 2022) was considered
+remarkable — justifying Google's TPU investment by delivering ~30% better
+utilization than comparable H100 clusters at that time.
+```
 
 ### Infrastructure and Economics
 

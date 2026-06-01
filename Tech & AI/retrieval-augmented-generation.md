@@ -3,7 +3,7 @@ title: Retrieval-Augmented Generation (RAG) — Architecture, Mechanics, and Bes
 date: 2026-05-27
 tags: [ai, llm, rag, retrieval, vector-databases, embeddings, nlp, chunking, re-ranking, hybrid-search, GraphRAG, self-RAG, ColPali, RAGAS, BM25, FLARE, HyDE, dense-retrieval, sparse-retrieval, knowledge-grounding]
 source: "Lewis et al. (2020) Retrieval-Augmented Generation for Knowledge-Intensive NLP (arXiv:2005.11401); Karpukhin et al. (2020) DPR (arXiv:2004.04906); Gao et al. (2022) Precise Zero-Shot Dense Retrieval — HyDE (arXiv:2212.10496); Edge et al. (2024) GraphRAG (arXiv:2404.16130); Asai et al. (2023) Self-RAG (arXiv:2310.11511)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary

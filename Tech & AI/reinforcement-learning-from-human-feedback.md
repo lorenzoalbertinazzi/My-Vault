@@ -3,7 +3,7 @@ title: Reinforcement Learning from Human Feedback (RLHF)
 date: 2026-05-30
 tags: [ai, machine-learning, RLHF, alignment, reward-modeling, PPO, InstructGPT, ChatGPT, constitutional-AI, DPO, fine-tuning, LLM, RLAIF, GRPO, preference-optimization, online-RL, reward-hacking, KL-divergence, SFT]
 source: "Christiano et al. (2017) Deep RL from Human Preferences (arXiv:1706.03741); Ouyang et al. (2022) InstructGPT (arXiv:2203.02155); Bai et al. (2022) Constitutional AI (arXiv:2212.08073); Rafailov et al. (2023) Direct Preference Optimization (arXiv:2305.18290); Schulman et al. (2017) PPO (arXiv:1707.06347); Stiennon et al. (2020) Learning to Summarize from Human Feedback (arXiv:2009.01325)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -241,6 +241,444 @@ L_DPO(π_θ; π_SFT) = -E_{(x,y_w,y_l)~D} [log σ(β·log[π_θ(y_w|x)/π_SFT(y_
 | RLAIF | Yes (AI-gen) | Yes | No | Low | High |
 | SPIN (Self-Play) | No | No | No | High | Low |
 | SFT only | No | No | Yes (demos) | Very high | Very low |
+
+### GRPO: Group Relative Policy Optimization (DeepSeek, 2024)
+
+DeepSeek's contribution to post-training methodology, introduced in DeepSeek-Math (2024) and used at scale in DeepSeek-R1 (January 2025), Group Relative Policy Optimization (GRPO) eliminates the value/critic model from PPO — halving memory requirements and simplifying training dramatically.
+
+**Core Innovation — Baseline from Group Sampling:**
+```
+PPO requires a value model V_φ(s_t) to estimate baseline expected reward.
+GRPO replaces this with: sample G responses for each prompt, 
+use their mean reward as the baseline.
+
+For prompt x, sample G completions {y₁, y₂, ..., y_G} ~ π_old(·|x):
+    Advantage for response y_i:
+    
+    Â_i = (r_i - mean({r₁,...,r_G})) / std({r₁,...,r_G})
+    
+    where r_i = reward for response y_i
+```
+
+**GRPO Objective:**
+```
+L_GRPO(θ) = E_{x~D, {y_i}~π_old} [
+    (1/G) Σ_{i=1}^{G} min(
+        π_θ(y_i|x)/π_old(y_i|x) · Â_i,
+        clip(π_θ(y_i|x)/π_old(y_i|x), 1-ε, 1+ε) · Â_i
+    )
+] - β · KL[π_θ || π_ref]
+
+Where:
+  G = group size (typically 8–32)
+  ε = clip ratio (0.2, same as PPO)
+  β = KL penalty coefficient
+  π_ref = reference policy (SFT model, frozen)
+```
+
+**Memory Comparison (70B model):**
+| Method | Policy | Value Model | Reward Model | Reference | Total |
+|---|---|---|---|---|---|
+| PPO (full) | 70B (fp16) | 70B (fp16) | 7–70B | 70B | ~4–6× model size |
+| GRPO | 70B (fp16) | None | 7–70B | 70B | ~3× model size |
+| DPO | 70B (fp16) | None | None (implicit) | 70B | ~2× model size |
+
+**Why GRPO Works — The Intuition:**
+Instead of a learned value function (which is an approximation), GRPO uses empirical Monte Carlo estimation of the baseline. For mathematical reasoning tasks, this is actually better because:
+- The value function for reasoning chains is notoriously hard to learn (sparse rewards at final answer)
+- Group sampling directly observes which completions score higher — no approximation
+- The "group" naturally captures prompt-conditional variance, not just global
+
+**GRPO Implementation — Key Details:**
+```python
+def grpo_update(model, ref_model, reward_model, batch, G=8, epsilon=0.2, beta=0.001):
+    """
+    batch: list of prompts
+    G: group size (responses sampled per prompt)
+    """
+    all_advantages = []
+    all_log_probs = []
+    all_ref_log_probs = []
+    
+    for prompt in batch:
+        # Sample G responses from current policy
+        responses = model.sample(prompt, n=G, temperature=0.8, max_tokens=2048)
+        
+        # Compute rewards (verifier, reward model, or composite)
+        rewards = [reward_model.score(prompt, r) for r in responses]
+        
+        # Group normalization (the key GRPO step)
+        mean_r = np.mean(rewards)
+        std_r = np.std(rewards) + 1e-8  # Avoid division by zero
+        advantages = [(r - mean_r) / std_r for r in rewards]
+        
+        # Log probabilities under current and reference policy
+        for resp, adv in zip(responses, advantages):
+            log_prob = model.log_prob(prompt, resp)
+            ref_log_prob = ref_model.log_prob(prompt, resp)  # Frozen
+            
+            all_advantages.append(adv)
+            all_log_probs.append(log_prob)
+            all_ref_log_probs.append(ref_log_prob)
+    
+    # Clipped policy gradient (same as PPO)
+    ratios = torch.exp(torch.stack(all_log_probs) - 
+                       torch.stack(all_log_probs).detach())
+    
+    policy_loss = -torch.mean(
+        torch.min(
+            ratios * torch.tensor(all_advantages),
+            torch.clamp(ratios, 1-epsilon, 1+epsilon) * torch.tensor(all_advantages)
+        )
+    )
+    
+    # KL penalty against reference policy
+    kl_loss = torch.mean(
+        torch.stack(all_log_probs) - torch.stack(all_ref_log_probs)
+    )
+    
+    total_loss = policy_loss + beta * kl_loss
+    total_loss.backward()
+    return total_loss
+```
+
+**DeepSeek-R1 Results with GRPO:**
+```
+DeepSeek-R1 (January 2025) — Key Results:
+  - Training compute: ~2,000 H800 GPU-hours for RL phase (vs. OpenAI o1: unknown but estimated 10×+)
+  - AIME 2024: 79.8% (vs. OpenAI o1: 79.2%) — matching at dramatically lower cost
+  - MATH-500: 97.3% (vs. o1: 96.4%) — slight edge
+  - LiveCodeBench (code): 65.9% (vs. o1: 63.4%)
+  - Cost per output token: ~$0.55/million (vs. o1: $15/million at launch) — 27× cheaper
+  
+  GRPO enabled this by:
+  1. Removing value model (saves 50% RL training memory → enables larger batch sizes)
+  2. Group sampling surfaces reasoning diversity within a prompt (better signal than single-sample PPO)
+  3. Stable training — fewer hyperparameters to tune than PPO
+```
+
+### Process Reward Models (PRMs) — Supervising Reasoning Steps
+
+Outcome-based reward models score only the final answer: correct or incorrect. This creates sparse reward problems for long reasoning chains and enables "reward hacking" through lucky guesses.
+
+**Process Reward Models** (Lightman et al., OpenAI, 2023) supervise every intermediate step:
+
+**Motivation:**
+```
+Math problem with 10 reasoning steps:
+  Outcome-Based RM (ORM): 
+    Score = 1 if final answer correct, 0 otherwise
+    Problem: Model gets reward for wrong reasoning that reaches right answer
+             OR gets no reward for correct reasoning that makes an arithmetic error at step 9
+  
+  Process-Based RM (PRM):
+    Score = Σ_t s_t where s_t ∈ {correct, incorrect, neutral} for each step
+    Problem: Requires step-level human annotations (expensive)
+```
+
+**OpenAI PRM800K Dataset:**
+```
+Scale: 800,000 step-level human labels on math reasoning chains
+Collection: Human labelers evaluated each step of GPT-4 solutions to MATH dataset
+Label types:
+  + (positive): Step is correct and useful
+  - (negative): Step contains an error
+  ~ (neutral): Step is redundant but not wrong
+
+Cost: Estimated $2–5M in labeler time
+Result: PRM trained on PRM800K dramatically outperforms ORM on math competition problems
+```
+
+**PRM Architecture:**
+```python
+class ProcessRewardModel(nn.Module):
+    """
+    Takes (prompt, partial_solution) at each step
+    and outputs probability that step is correct.
+    """
+    def __init__(self, base_model, d_model=4096):
+        super().__init__()
+        self.transformer = base_model  # Same architecture as policy
+        self.step_head = nn.Linear(d_model, 1)  # Scalar per step
+        
+    def forward(self, prompt, solution_so_far):
+        # Append special <step_end> token after each reasoning step
+        # Hidden state at <step_end> positions → step scores
+        tokens = tokenize(prompt + solution_so_far)
+        hidden_states = self.transformer(tokens)  # [seq_len, d_model]
+        
+        # Extract hidden states at step-end token positions
+        step_positions = find_step_end_positions(tokens)
+        step_hidden = hidden_states[step_positions]  # [n_steps, d_model]
+        
+        step_scores = self.step_head(step_hidden).squeeze(-1)  # [n_steps]
+        step_probs = torch.sigmoid(step_scores)  # P(step correct)
+        
+        # Process reward: geometric mean of step probabilities
+        # (any bad step → low overall score)
+        process_reward = torch.prod(step_probs)
+        return process_reward, step_probs
+
+# Training loss: binary cross-entropy at each step position
+def prm_loss(predicted_step_probs, human_labels):
+    # labels: 1 for positive, 0 for negative, ignored for neutral
+    valid_mask = (human_labels != NEUTRAL)
+    loss = F.binary_cross_entropy(
+        predicted_step_probs[valid_mask],
+        human_labels[valid_mask].float()
+    )
+    return loss
+```
+
+**PRM vs. ORM — Performance (OpenAI, 2023):**
+```
+MATH dataset competition problems, Best-of-N sampling:
+  ORM Best-of-8:    78.2% accuracy
+  PRM Best-of-8:    84.3% accuracy  (+6.1 points)
+  PRM Best-of-1860: ~96% accuracy   (near-ceiling with sufficient samples)
+  
+  This demonstrates: PRMs are better at selecting correct solutions
+  from a set of candidates than outcome-based models.
+
+PRM enables "process-graded" RL training:
+  - Denser reward signal → faster convergence
+  - Better credit assignment for long reasoning chains
+  - Reduced reward hacking (can't fake correct intermediate steps)
+```
+
+**Practical PRM Deployment — Monte Carlo Step Estimation:**
+```
+Full human labeling ($2-5M per dataset) is not scalable.
+Alternative: Math-Shepherd (Wang et al. 2024) uses Monte Carlo estimation:
+
+For each partial solution prefix p_t:
+  1. Sample K completions from this prefix: {c_{t,1}, ..., c_{t,K}}
+  2. Check whether each completion reaches a correct final answer
+  3. Estimate p(step_t is correct) ≈ fraction of completions reaching correct answer
+  
+  mc_prm_score(p_t) = K_correct / K_total
+
+Advantage: No human labelers needed
+Disadvantage: Computationally expensive (K×T model calls per example)
+Cost: For K=8, T=10 steps, 100K training examples:
+     8 × 10 × 100,000 = 8 million additional inference calls
+```
+
+### RLVR: RL with Verifiable Rewards
+
+RLVR (Reinforcement Learning with Verifiable Rewards) is the training methodology behind the 2025 generation of "reasoning models": OpenAI o1/o3, DeepSeek-R1, Gemini Thinking, Claude Extended Thinking (3.7/3.5). It sidesteps both the reward hacking problem and the scalable oversight problem by replacing learned reward models with deterministic verifiers.
+
+**Core Insight:**
+```
+For verifiable domains (math, code, formal logic, factual QA with clear answers):
+  A learned reward model r_θ(x, y) can be imperfect and hackable.
+  A deterministic verifier V(x, y) → {0, 1} is perfect and unhackable.
+  
+  RL objective becomes:
+    max_π E_{x~D} [V(x, π(x))]
+    
+  Where V checks:
+    Math: Does the final answer equal the ground truth? (symbolic comparison)
+    Code: Do all test cases pass? (code execution)
+    Logic: Is the proof formally valid? (automated theorem prover)
+    Trivia: Does the answer match the reference? (string/entity matching)
+```
+
+**The RLVR Training Loop:**
+```python
+def rlvr_training_step(policy, ref_policy, verifier, prompts, 
+                        G=8, epsilon=0.2, beta=0.001):
+    """
+    RLVR with GRPO-style group advantage estimation.
+    Reward is verifier binary {0, 1} rather than learned reward model.
+    """
+    policy_losses = []
+    
+    for prompt, ground_truth in prompts:
+        # Sample G thinking + answer completions
+        completions = policy.sample(
+            prompt, 
+            n=G, 
+            max_tokens=4096,  # Allow long chain-of-thought
+            format="<think>...</think>\n<answer>...</answer>"
+        )
+        
+        # Verifier rewards: binary, unambiguous
+        rewards = []
+        for completion in completions:
+            answer = extract_answer(completion)
+            reward = verifier(prompt, answer, ground_truth)
+            # Optional: bonus for concise thinking (length penalty)
+            reward -= 0.001 * len(completion)  # Length regularization
+            rewards.append(reward)
+        
+        # GRPO advantage normalization
+        mean_r = np.mean(rewards)
+        std_r = np.std(rewards) + 1e-8
+        advantages = [(r - mean_r) / std_r for r in rewards]
+        
+        # Policy gradient update (PPO-clip)
+        for completion, adv in zip(completions, advantages):
+            log_prob = policy.log_prob(prompt, completion)
+            ref_log_prob = ref_policy.log_prob(prompt, completion)
+            ratio = torch.exp(log_prob - log_prob.detach())
+            
+            policy_loss = -torch.min(
+                ratio * adv,
+                torch.clamp(ratio, 1-epsilon, 1+epsilon) * adv
+            )
+            kl = log_prob - ref_log_prob  # KL penalty
+            policy_losses.append(policy_loss + beta * kl)
+    
+    total_loss = torch.mean(torch.stack(policy_losses))
+    total_loss.backward()
+    return total_loss
+
+class MathVerifier:
+    """Verifies math answers using symbolic comparison"""
+    def __call__(self, prompt, answer, ground_truth):
+        try:
+            # Normalize: remove $, spaces, convert LaTeX fractions
+            a = sympy.sympify(normalize_math(answer))
+            gt = sympy.sympify(normalize_math(ground_truth))
+            return 1.0 if sympy.simplify(a - gt) == 0 else 0.0
+        except:
+            return 0.0  # Parse error = wrong answer
+
+class CodeVerifier:
+    """Runs test cases against generated code"""
+    def __call__(self, prompt, code, test_cases):
+        try:
+            passed = 0
+            for test_input, expected_output in test_cases:
+                actual = sandbox_execute(code, test_input, timeout=5)
+                if actual == expected_output:
+                    passed += 1
+            return passed / len(test_cases)  # Partial credit for partial pass
+        except TimeoutError:
+            return 0.0
+        except Exception:
+            return 0.0
+```
+
+**The "Aha Moment" — Emergent Thinking Behavior:**
+```
+DeepSeek-R1 training observations (DeepSeek-AI, 2025):
+  
+  During RLVR training, the model spontaneously developed:
+  1. "Wait, let me reconsider..." patterns — backtracking when stuck
+  2. Multi-strategy exploration within a single response
+  3. Verification steps: "Let me check: 3 × 7 = 21 ✓"
+  4. Self-correction: "Actually, I made an error above..."
+  
+  None of these behaviors were explicitly trained via demonstrations.
+  They emerged purely from RL signal (get the right answer).
+  
+  DeepSeek team called this the "Aha moment" — a phase transition
+  in training where the model discovered that longer, more careful
+  reasoning chains achieve higher reward.
+
+The model learned to think not because it was told to,
+but because thinking more carefully led to correct answers.
+```
+
+**RLVR vs. RLHF: Fundamental Distinction:**
+| Dimension | RLHF | RLVR |
+|---|---|---|
+| Reward source | Human preferences (subjective) | Deterministic verifier (objective) |
+| Domains | Open-ended: helpfulness, safety, style | Verifiable: math, code, logic |
+| Reward hacking | Yes — optimizes for appearance | No — can't fake correct answer |
+| Scalable oversight | Required (human in the loop) | Not needed (verifier is superhuman rater) |
+| Label cost | $0.50–$2.00 per preference pair | ~$0 (automated verification) |
+| Applicable to | Any LLM task | Only tasks with ground truth |
+| Key limitation | Goodhart's Law applies | Distributional shift in problem types |
+
+**RLVR Compute Costs (Approximate, 2025):**
+```
+DeepSeek-R1-Zero (RL from scratch on DeepSeek-V3 base):
+  - Model size: 671B MoE parameters (37B active)
+  - RL training: ~10,000 H800 GPU-hours (~$300,000 compute cost)
+  - Prompts: ~100K MATH/AIME/competition math problems
+  - Samples per prompt: G = 8–16
+  - Training duration: ~3 weeks
+  
+OpenAI o1 (estimated):
+  - Model size: Unknown (estimated 200B+ parameters)
+  - RL training: Unknown (estimated 5–20× DeepSeek cost)
+  - Competitive AIME score: 83.3% (vs. DeepSeek-R1: 79.8%)
+  
+DeepSeek-R1-Distill (knowledge distillation from R1 to smaller models):
+  - 7B/14B/32B models trained on R1's reasoning traces (SFT, no RL)
+  - DeepSeek-R1-Distill-7B: 55.5% on AIME 2024 
+    (surpasses o1-mini: 63.6% — within striking range)
+  - Training cost: ~$50,000 (pure SFT on distilled data)
+```
+
+**Limitations of RLVR:**
+```
+1. Coverage problem: Only ~30% of LLM applications have verifiable answers
+   (math, code, formal logic, trivia) vs. 70% that are subjective
+   (writing, summarization, advice, explanation quality)
+
+2. Distribution shift: RLVR training on MATH/AMC improves competition math
+   but may degrade on informal/applied math (optimization on training distribution)
+
+3. Overthinking: Models trained purely on RL develop verbose reasoning chains
+   that are longer than necessary — increases inference cost 10–30×
+   DeepSeek-R1 fix: length penalty in reward and rejection sampling with
+   response length constraint
+
+4. Reasoning verifiers are hard for some domains:
+   - Multi-step code with I/O ambiguity
+   - Proofs requiring semantic understanding (not just formal verification)
+   - Scientific questions where "correct" depends on context
+
+5. Cold start problem: Base models must already be somewhat capable at the task
+   for RLVR to work — models that can't generate any correct answers in group
+   sampling get no gradient signal (all rewards = 0, all advantages = 0)
+   Fix: Start with SFT on demonstrations, then apply RLVR
+```
+
+### Post-Training Pipeline Architecture (2025)
+
+Modern LLM post-training uses a multi-stage pipeline combining all methods:
+
+```
+Stage 0: Pre-training
+  - Next-token prediction on 10T–100T tokens
+  - Result: Capable but unhelpful base model
+  
+Stage 1: Supervised Fine-Tuning (SFT)
+  - 10K–100K high-quality (prompt, response) pairs
+  - Teaches instruction following format
+  - Result: Helpful but not optimally aligned
+  
+Stage 2: Preference Learning (DPO or RLHF)
+  - 100K–1M preference pairs
+  - Trains helpfulness, safety, style
+  - Methods: DPO (fast, cheap), PPO (expensive, powerful), GRPO (middle ground)
+  - Result: Aligned assistant model
+  
+Stage 3: Domain-Specific RL (RLVR, for reasoning models)
+  - Verifiable problem datasets (MATH, code challenges, etc.)
+  - Uses GRPO or PPO with verifier rewards
+  - Teaches extended chain-of-thought reasoning
+  - Result: Reasoning model (o1, R1, Extended Thinking variants)
+  
+Stage 4: Distillation (optional, for efficiency)
+  - Reasoning model generates traces on large dataset
+  - Smaller model trained on these traces (SFT)
+  - Result: Efficient small model with reasoning capabilities
+```
+
+**Approximate per-stage costs (70B model, 2025):**
+| Stage | Data | Compute | Cost | Duration |
+|---|---|---|---|---|
+| SFT | 50K examples | 100 H100 GPU-hours | $300 | 4 hours |
+| DPO | 200K pairs | 500 GPU-hours | $1,500 | 20 hours |
+| PPO/GRPO | 100K prompts | 5,000 GPU-hours | $15,000 | 5 days |
+| RLVR (math) | 100K problems × G=8 | 10,000 GPU-hours | $30,000 | 10 days |
+| Distillation | 1M R1 traces | 2,000 GPU-hours | $6,000 | 3 days |
 
 ### Current Research Frontier
 

@@ -3,7 +3,7 @@ title: "Quantum Computing: From Qubit Physics to Quantum Advantage in 2026"
 date: 2026-05-30
 tags: [quantum-computing, qubits, quantum-advantage, error-correction, IBM, Google, hardware, cryptography, drug-discovery, algorithms, superconducting-qubits, trapped-ions, surface-code, Shor-algorithm, Grover-algorithm, NISQ, fault-tolerant, quantum-error-correction, photonic-qubits, topological-qubits]
 source: "Shor (1994) Algorithms for Quantum Computation (FOCS); Grover (1996) A fast quantum mechanical algorithm for database search (STOC); Preskill (2018) Quantum Computing in the NISQ Era and Beyond (arXiv:1801.00862); Google Quantum AI — Willow chip (Nature, 2024); IBM Quantum roadmap (2025); Arute et al. (2019) Quantum Supremacy (Nature)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
@@ -141,6 +141,496 @@ The critical threshold crossed by Google's Willow chip (105 qubits):
 For quantum error correction to work, physical qubit error rates must be below a threshold (~1% for surface code). Current best superconducting single-qubit error rates: ~0.1%; two-qubit gate error rates: ~0.5–1%. We are near or at the threshold, explaining why the field is accelerating.
 
 The overhead cost remains enormous: 1 error-corrected logical qubit requires ~1,000 physical qubits with current codes, meaning a useful fault-tolerant computer might need millions of physical qubits. IBM's 100,000-qubit 2033 target would provide ~100 logical qubits — useful for important applications but not a universal large-scale system yet.
+
+### Quantum Circuit Notation and Gate Set
+
+Before analyzing algorithms, it is essential to understand how quantum computations are expressed. A quantum circuit diagram reads left to right (time flows right), with each horizontal wire representing one qubit's evolution.
+
+**Standard Gate Notation:**
+```
+Single-qubit gates (rotation matrices on the Bloch sphere):
+  I = [[1, 0],   X = [[0, 1],   Y = [[0,-i],   Z = [[1, 0],
+       [0, 1]]       [1, 0]]        [i, 0]]        [0,-1]]
+
+  H (Hadamard) = (1/√2)[[1,  1],   [creates superposition from |0⟩]
+                         [1, -1]]
+
+  T = [[1,        0    ],   [π/8 phase gate, non-Clifford]
+       [0, e^(iπ/4)    ]]
+
+  Rx(θ) = [[cos(θ/2), -i·sin(θ/2)],   [arbitrary x-rotation]
+            [-i·sin(θ/2), cos(θ/2)]]
+```
+
+**Two-Qubit Gates:**
+```
+CNOT (Controlled-NOT):
+  Control=|0⟩: target unchanged
+  Control=|1⟩: target flipped (X applied)
+
+  Matrix: [[1,0,0,0],
+           [0,1,0,0],
+           [0,0,0,1],
+           [0,0,1,0]]
+
+CZ (Controlled-Z): flips phase of |11⟩ only
+SWAP: exchanges two qubit states
+iSWAP: SWAP with phase; native gate on some superconducting hardware
+```
+
+**Circuit Diagram Reading Example — Bell State Preparation:**
+```
+q0: ─H─●─     [H creates |+⟩ = (|0⟩+|1⟩)/√2; CNOT entangles]
+       │
+q1: ───⊕─     [⊕ denotes CNOT target]
+
+Result: |Φ+⟩ = (|00⟩ + |11⟩)/√2
+```
+
+**Measurement:**
+```
+q0: ─H─●─M─     [M = projective measurement; collapses to 0 or 1]
+       │  ║
+q1: ───⊕─ ║   [double line = classical bit result]
+```
+
+**Gate Fidelity Numbers (2025):**
+| Platform | Single-Qubit Fidelity | Two-Qubit Fidelity | Native 2-Qubit Gate |
+|---|---|---|---|
+| IBM (Eagle) | 99.9% | 99.0–99.5% | CNOT/ECR |
+| Google (Willow) | 99.97% | 99.5% | CZ |
+| IonQ (Forte) | 99.98% | 99.6% | XX (Mølmer-Sørensen) |
+| Quantinuum (H2) | 99.99% | 99.8% | ZZ |
+| QuEra (neutral atom) | 99.5% | 99.0% | CZ (Rydberg) |
+
+The error floor is critical: a circuit with depth d using two-qubit gates incurs approximately `(1 - f)^d` success probability where f is the gate fidelity. For 100-gate circuit with f=0.995: success rate ≈ 60%. This is why error correction is essential for deep circuits.
+
+**Circuit Depth vs. Qubit Count:**
+```
+"Width": number of qubits (spatial resource)
+"Depth": number of sequential gate layers (time resource)
+"Volume": Quantum Volume = 2^n where n is largest n such that
+          a random n-qubit, depth-n circuit can be executed with >2/3 fidelity
+
+IBM Quantum Volume progress:
+  2017: QV 4    (2-qubit)
+  2019: QV 32   (5-qubit)
+  2021: QV 1024 (10-qubit equivalent depth)
+  2023: QV 2^19 = 524,288 on Falcon processors
+```
+
+### Algorithm Deep Dives: Step-by-Step Implementation
+
+#### Grover's Search Algorithm — Full Implementation
+
+**Problem:** Unsorted database of N items; find the one item satisfying a Boolean function f(x) = 1.
+**Classical:** O(N) queries on average.
+**Quantum:** O(√N) queries — provably optimal for unstructured search.
+
+**Step 1: Setup (superposition over all N = 2^n items)**
+```python
+# Pseudocode for n-qubit Grover's search
+def grover_search(oracle, n_qubits, n_iterations=None):
+    N = 2**n_qubits
+    
+    # Optimal number of iterations: π/4 · √N
+    if n_iterations is None:
+        n_iterations = int(np.pi/4 * np.sqrt(N))
+    
+    # Step 1: Initialize all qubits to |0⟩
+    # Step 2: Apply H to all qubits → uniform superposition
+    #   |ψ₀⟩ = H^⊗n |0⟩^n = (1/√N) Σ_x |x⟩
+    circuit = QuantumCircuit(n_qubits)
+    circuit.h(range(n_qubits))  # All qubits into superposition
+    
+    for iteration in range(n_iterations):
+        # Step 3: Apply Oracle (marks target state with phase flip)
+        #   Oracle: |x⟩ → -|x⟩ if f(x)=1, else |x⟩ unchanged
+        circuit.append(oracle, range(n_qubits))
+        
+        # Step 4: Apply Grover Diffusion Operator (inversion about mean)
+        #   D = 2|ψ₀⟩⟨ψ₀| - I
+        #   Geometrically: reflects amplitudes about the average amplitude
+        circuit.h(range(n_qubits))         # H^⊗n
+        circuit.x(range(n_qubits))         # X^⊗n (flip all qubits)
+        circuit.h(n_qubits - 1)            # H on last qubit
+        circuit.mcx(list(range(n_qubits-1)), n_qubits-1)  # Multi-control X
+        circuit.h(n_qubits - 1)
+        circuit.x(range(n_qubits))         # X^⊗n
+        circuit.h(range(n_qubits))         # H^⊗n
+    
+    # Step 5: Measure — target state now has amplitude ≈ 1
+    circuit.measure_all()
+    return circuit
+```
+
+**Geometric Intuition:**
+```
+Amplitude plot after each iteration (3 items, 1 target at index 2):
+  Initial:  [1/√8, 1/√8, 1/√8, 1/√8, 1/√8, 1/√8, 1/√8, 1/√8]
+  After oracle: [1/√8, 1/√8, -1/√8, ...]   ← target flipped negative
+  After diffusion: target amplitude grows, others shrink
+  After √N iterations: target amplitude ≈ 1
+
+For N = 1,000,000: Classical needs 500,000 queries on average
+                   Grover needs ≈ π/4 · 1000 ≈ 785 queries
+```
+
+**Oracle Construction for Practical Problems:**
+```
+For password cracking (find x such that SHA256(x) = target_hash):
+  Oracle checks: SHA256(x) == target_hash
+  Must be implemented as reversible quantum circuit
+  SHA256 in quantum: ~150,000 Toffoli gates (each T gate requires ~7 logical qubits)
+  Total qubits needed for useful SHA256 attack: ~2,000+ logical qubits
+  → Not feasible with NISQ hardware; requires fault-tolerant system
+```
+
+**Grover's Limitations:**
+- The oracle must be *known* (it's a function, not truly "searching" unknown data)
+- Classical algorithms can match Grover on structured problems (sorted databases use O(log N))
+- Main value: any NP-style verification function becomes √N-searchable
+- AES-128 key space 2^128 → ~2^64 Grover queries: safe if AES-256 used
+
+#### Variational Quantum Eigensolver (VQE) — The NISQ Workhorse
+
+VQE finds the ground state energy of a molecule's Hamiltonian H using a hybrid classical-quantum loop.
+
+**Mathematical Setup:**
+```
+Variational principle: For any trial state |ψ(θ)⟩,
+    E₀ ≤ ⟨ψ(θ)|H|ψ(θ)⟩ = ⟨H⟩_θ
+
+Goal: Find parameters θ* = argmin_θ ⟨ψ(θ)|H|ψ(θ)⟩
+      → this minimum ≈ E₀ (true ground state energy)
+
+Molecule Hamiltonian (after Jordan-Wigner or Bravyi-Kitaev transformation
+to map fermionic operators to Pauli operators):
+    H = Σ_i h_i P_i
+    where P_i are tensor products of Pauli matrices (X, Y, Z, I)
+
+For H₂ molecule (4 qubits):
+    H = g₀I + g₁Z₀ + g₂Z₁ + g₃Z₀Z₁ + g₄X₀X₁ + g₅Y₀Y₁
+    Where g_i are real coefficients depending on inter-atomic distance
+```
+
+**VQE Algorithm:**
+```python
+def vqe(hamiltonian, n_qubits, n_layers, optimizer='COBYLA'):
+    """
+    hamiltonian: list of (coefficient, Pauli_string) pairs
+    ansatz: parameterized quantum circuit |ψ(θ)⟩
+    """
+    
+    def energy(theta):
+        """Quantum part: executed on quantum hardware"""
+        # Build ansatz circuit with current parameters theta
+        circuit = build_ansatz(theta, n_qubits, n_layers)
+        
+        # Measure expectation value of each Pauli term separately
+        total_energy = 0
+        for coeff, pauli_string in hamiltonian:
+            # Rotate to measurement basis if needed (Y terms need Ry rotation)
+            meas_circuit = circuit + change_of_basis(pauli_string)
+            # Run circuit, get bitstring counts
+            counts = quantum_hardware.run(meas_circuit, shots=10000)
+            # Compute expectation value from measurement statistics
+            expectation = pauli_expectation(counts, pauli_string)
+            total_energy += coeff * expectation
+        return total_energy
+    
+    # Classical optimization (COBYLA, BFGS, gradient-free methods)
+    result = minimize(energy, initial_theta, method=optimizer)
+    return result.fun  # Ground state energy estimate
+
+def build_ansatz(theta, n_qubits, n_layers):
+    """Hardware-efficient ansatz: alternating Ry rotations and CNOT ladders"""
+    circuit = QuantumCircuit(n_qubits)
+    param_idx = 0
+    
+    # Initial layer
+    for q in range(n_qubits):
+        circuit.ry(theta[param_idx], q)
+        param_idx += 1
+    
+    for layer in range(n_layers):
+        # CNOT entanglement layer (linear connectivity)
+        for q in range(n_qubits - 1):
+            circuit.cx(q, q + 1)  # CNOT: q controls q+1
+        
+        # Rotation layer
+        for q in range(n_qubits):
+            circuit.ry(theta[param_idx], q)
+            param_idx += 1
+    
+    return circuit
+```
+
+**VQE Convergence and Barren Plateaus:**
+```
+Barren plateau problem: For n-qubit random circuits with depth O(poly(n)),
+the gradient of the cost function vanishes exponentially:
+    Var[∂⟨H⟩/∂θ_i] ~ O(2^{-n})
+
+For n=50 qubits: variance ~10^{-15} → gradient signal lost in noise
+Solutions:
+  - Layer-by-layer training (start shallow, add layers)
+  - Local cost functions (measure local Hamiltonians)
+  - Problem-specific ansatz (chemistry-inspired rather than hardware-efficient)
+  - Natural gradient methods (quantum Fisher information metric)
+```
+
+**VQE Performance on Real Hardware (IBM Quantum, 2023–2024):**
+| Molecule | Qubits | Energy Error vs. Exact | Circuit Depth | Platform |
+|---|---|---|---|---|
+| H₂ | 4 | 0.1 mHartree (chemical accuracy: 1 mH) | 6 | IBM Eagle |
+| LiH | 12 | 5 mHartree | 24 | IBM Eagle (with error mitigation) |
+| N₂ | 20 | 50 mHartree (not chem accurate) | 50+ | IBM Falcon |
+| BeH₂ | 14 | 10 mHartree | 30 | IonQ Forte |
+
+Chemical accuracy threshold: 1 mHartree = 0.627 kcal/mol (minimum for useful drug discovery)
+
+#### Quantum Approximate Optimization Algorithm (QAOA)
+
+**Problem class:** Combinatorial optimization (Max-Cut, traveling salesman, portfolio optimization).
+
+**Setup — Max-Cut problem:**
+```
+Given graph G = (V, E), partition vertices into two sets (0 and 1)
+to maximize edges between sets.
+
+Cost Hamiltonian:
+    C = Σ_{(i,j)∈E} (1 - Z_i Z_j) / 2
+    where Z_i = Pauli-Z on qubit i
+
+Ground state of C = maximum cut configuration
+```
+
+**QAOA Circuit:**
+```python
+def qaoa_circuit(graph, p_layers, gamma, beta):
+    """
+    p_layers: circuit depth parameter (more layers = better approximation)
+    gamma: phase separation angles (length p)
+    beta: mixing angles (length p)
+    """
+    n = graph.n_vertices
+    circuit = QuantumCircuit(n)
+    
+    # Initialize: H^⊗n → uniform superposition
+    circuit.h(range(n))
+    
+    for layer in range(p_layers):
+        # Phase separation unitary: U_C(γ) = exp(-i·γ·C)
+        # Implements one step of "following the cost landscape"
+        for (i, j) in graph.edges:
+            circuit.cx(i, j)                  # CNOT
+            circuit.rz(2 * gamma[layer], j)   # RZ rotation
+            circuit.cx(i, j)                  # CNOT (implement ZZ interaction)
+        
+        # Mixing unitary: U_B(β) = exp(-i·β·B) where B = Σ_i X_i
+        # Allows quantum tunneling between configurations
+        for q in range(n):
+            circuit.rx(2 * beta[layer], q)    # RX rotation on each qubit
+    
+    circuit.measure_all()
+    return circuit
+
+def qaoa_optimize(graph, p_layers=5):
+    """Classically optimize gamma, beta parameters"""
+    def objective(params):
+        gamma = params[:p_layers]
+        beta = params[p_layers:]
+        circuit = qaoa_circuit(graph, p_layers, gamma, beta)
+        counts = quantum_hardware.run(circuit, shots=10000)
+        return -expected_cut_value(counts, graph)  # Negative: minimize → maximize cut
+    
+    result = minimize(objective, np.random.rand(2 * p_layers), method='COBYLA')
+    return result
+```
+
+**QAOA Approximation Ratio:**
+```
+p=1: Approximation ratio ≥ 0.6924 for Max-Cut on 3-regular graphs (proven)
+p→∞: Converges to exact solution (proven)
+p~10-20: Empirically comparable to best classical heuristics on small graphs
+
+Classical benchmark (Goemans-Williamson): 0.878 approximation ratio in polynomial time
+QAOA at large p: ~0.9–0.95 approximation ratio but with quantum overhead
+
+Current status: QAOA has not demonstrated practical quantum advantage
+               on any commercially relevant optimization instance as of 2025.
+               Best classical algorithms (simulated annealing, branch-and-bound)
+               still match or exceed QAOA for graph sizes feasible on current hardware.
+```
+
+#### Shor's Algorithm — Factoring Step by Step
+
+Shor's algorithm factors N = p × q in polynomial time using quantum period-finding.
+
+**Algorithm Structure:**
+```
+1. Choose random a where 1 < a < N and gcd(a,N) = 1
+2. Find the period r of f(x) = a^x mod N using quantum phase estimation
+3. If r is even and a^(r/2) ≢ -1 (mod N):
+   → p = gcd(a^(r/2) - 1, N), q = gcd(a^(r/2) + 1, N)
+4. Otherwise: repeat with different a
+
+The quantum speedup comes entirely from Step 2 (period finding).
+```
+
+**Quantum Phase Estimation for Period Finding:**
+```python
+# Pseudocode: Quantum Period Finding for f(x) = a^x mod N
+def quantum_period_finding(a, N, n_bits):
+    """
+    Uses 2n_bits counting qubits + n_bits work qubits
+    where n = ceil(log2(N))
+    
+    For N = 15, n = 4: needs 8 counting + 4 work = 12 qubits total
+    For RSA-2048: N ~ 2^2048, needs ~12,000 logical qubits
+    """
+    n = ceil(log2(N))
+    
+    # Register 1: 2n counting qubits, all |0⟩
+    # Register 2: n work qubits, initialized to |1⟩
+    
+    # Step 1: Create superposition in Register 1
+    # Apply H^⊗2n → |ψ⟩ = (1/√2^2n) Σ_{x=0}^{2^2n - 1} |x⟩|1⟩
+    
+    # Step 2: Controlled modular exponentiation
+    # Apply: |x⟩|1⟩ → |x⟩|a^x mod N⟩
+    # This is the expensive step: requires O(n^2 log n log log n) gates
+    
+    # Step 3: Quantum Fourier Transform on Register 1
+    # QFT: |x⟩ → (1/√2^2n) Σ_k e^{2πixk/2^2n} |k⟩
+    # This converts the period into a measurable frequency
+    
+    # Step 4: Measure Register 1
+    # Get k/r where r is the period (with some probability)
+    # → r is extractable via continued fractions algorithm
+    
+    return r  # period
+
+# Quantum Fourier Transform circuit (the magic step)
+def QFT(circuit, qubits):
+    """QFT on n qubits: depth O(n^2), n(n-1)/2 controlled-rotations"""
+    n = len(qubits)
+    for j in range(n):
+        circuit.h(qubits[j])
+        for k in range(j+1, n):
+            # Controlled rotation: CR_{2^{-(k-j)}}
+            circuit.cp(2*np.pi/2**(k-j+1), qubits[k], qubits[j])
+    # Bit reversal at end
+    for i in range(n//2):
+        circuit.swap(qubits[i], qubits[n-1-i])
+    return circuit
+```
+
+**Resource Requirements for RSA-2048:**
+```
+Physical qubits needed (surface code, code distance d=27):
+  - ~4,000 logical qubits × 1,000 physical/logical ≈ 4 million physical qubits
+  - Circuit depth: ~10^11 surface code cycles
+  - At 1μs per cycle: ~3.2 years runtime
+  - At 1ns per cycle (theoretical): ~100 seconds
+
+Gidney & Ekerå (2021) optimized estimate:
+  - 20 million noisy physical qubits with 50% error rate
+  - 8 hours to factor RSA-2048
+  - Or: 4 million qubits with 0.1% error rate → 10 days
+
+IBM 2033 (100,000 qubits = ~100 logical qubits): Cannot factor RSA-2048
+Practical threat to RSA-2048: Requires ~2035–2040 at current progress rate
+```
+
+### Quantum Error Correction — Deep Mechanics
+
+#### Surface Code Implementation
+
+The surface code is currently the most promising path to fault-tolerant quantum computing. Understanding it reveals why quantum computers are so resource-intensive.
+
+**Surface Code Structure:**
+```
+d×d grid of physical qubits for code distance d:
+  
+  D─S─D─S─D
+  │   │   │
+  S─D─S─D─S
+  │   │   │
+  D─S─D─S─D
+
+D = Data qubits (store logical information)
+S = Syndrome qubits (ancilla; detect errors without revealing state)
+
+For d=3 (distance-3 code): 9 data + 8 syndrome = 17 physical qubits
+                           Corrects any 1-qubit error
+For d=5: 25 data + 24 syndrome = 49 physical qubits
+         Corrects any 2-qubit errors
+For d=7: 49 + 48 = 97 physical qubits
+         Corrects any 3-qubit errors
+```
+
+**Syndrome Measurement Cycle:**
+```python
+def surface_code_cycle(data_qubits, syndrome_qubits):
+    """
+    One QEC cycle: ~1 microsecond on superconducting hardware
+    
+    1. Prepare syndrome qubits in |0⟩ or |+⟩
+    2. Apply CNOT gates between syndrome and adjacent data qubits
+    3. Measure syndrome qubits
+    4. Pass measurement results to classical decoder
+    5. Decoder determines most likely error chain (minimum weight matching)
+    6. Apply correction (or track corrections in software - Pauli frame)
+    """
+    # Z-stabilizer (detects X errors / bit flips):
+    for z_syndr in z_syndrome_qubits:
+        circuit.h(z_syndr)
+        for neighbor in z_syndr.neighbors:
+            circuit.cx(z_syndr, neighbor)
+        circuit.h(z_syndr)
+        circuit.measure(z_syndr)
+    
+    # X-stabilizer (detects Z errors / phase flips):
+    for x_syndr in x_syndrome_qubits:
+        for neighbor in x_syndr.neighbors:
+            circuit.cx(neighbor, x_syndr)
+        circuit.measure(x_syndr)
+    
+    # Syndrome comparison with previous cycle identifies error location
+    # Classical decoder (MWPM - Minimum Weight Perfect Matching) runs on FPGA
+    # MWPM runtime: O(n^3) but fast in practice; latency < 1 microsecond target
+```
+
+**Logical Error Rate Suppression:**
+```
+Physical qubit error rate p:
+  Below threshold (p < p_th ≈ 1%):
+    Logical error rate p_L ≈ A · (p/p_th)^{⌊(d+1)/2⌋}
+    
+    Example (p=0.1%, d=7):
+      p_L ≈ A · (0.001/0.01)^4 ≈ A · 10^{-8}
+      
+  For p=0.1% physical, d=27 (IBM/Google target):
+    p_L ≈ 10^{-15} per logical gate — sufficient for Shor's algorithm
+
+This exponential suppression with code distance is WHY error correction works.
+The trade-off: each factor-10 reduction in logical error rate costs ~4× more physical qubits.
+```
+
+**Threshold vs. Current Hardware:**
+```
+Surface code threshold: ~1% per gate
+Current best two-qubit gate error rates:
+  IBM Eagle (superconducting):    0.5% (at threshold boundary)
+  Google Willow (superconducting): 0.5% (at threshold boundary)
+  IonQ Forte (trapped ion):       0.4% (below threshold — promising)
+  Quantinuum H2 (trapped ion):    0.2% (comfortably below threshold)
+
+This explains why trapped ion systems, despite being slower, may reach
+fault-tolerant operation sooner than superconducting systems.
+```
 
 ### Key Quantum Algorithms and Speedups
 

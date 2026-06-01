@@ -3,7 +3,7 @@ title: Diffusion Models and AI Image Generation
 date: 2026-05-27
 tags: [ai, machine-learning, diffusion-models, generative-ai, computer-vision, stable-diffusion, dall-e, VAE, U-Net, DiT, flow-matching, DDPM, ControlNet, LoRA, score-matching, classifier-free-guidance, latent-diffusion, text-to-image, FLUX]
 source: "Ho et al. (2020) DDPM — Denoising Diffusion Probabilistic Models (arXiv:2006.11239); Rombach et al. (2022) High-Resolution Image Synthesis with Latent Diffusion Models — Stable Diffusion (arXiv:2112.10752); Peebles & Xie (2023) DiT (arXiv:2212.09748); Lipman et al. (2022) Flow Matching (arXiv:2210.02747); Zhang et al. (2023) ControlNet (arXiv:2302.05543)"
-last_updated: 2026-05-31
+last_updated: 2026-06-01
 ---
 
 ## Summary
