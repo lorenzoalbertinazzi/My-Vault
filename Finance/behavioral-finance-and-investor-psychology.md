@@ -485,6 +485,23 @@ Result: Behavioral mispricings persist exactly as long as arbitrage costs exceed
 
 ---
 
+## Cross-Disciplinary Connections
+
+### Neuroscience: Neuroeconomics and the Biological Basis of Financial Decisions
+Neuroeconomics uses brain imaging (fMRI) to observe neural activity during financial decisions, directly grounding behavioral finance in biology. The nucleus accumbens (dopamine reward system) activates identically for monetary gains and social approval — explaining why investment performance is inherently social and status-linked. The amygdala drives fear responses to market crashes with the same neural intensity as physical threats, explaining why loss aversion is neurologically hard to override through willpower alone. Baba Shiv (Stanford) demonstrated that patients with damage to emotional processing regions (vmPFC) make statistically better investment decisions than healthy controls — direct evidence that emotion is not merely additive noise but systematically biases decisions toward suboptimal outcomes.
+
+### Evolutionary Biology: Why Biases Are Adaptive, Not Bugs
+The cognitive biases catalogued in behavioral finance are not evolutionary failures but adaptations for ancestral environments that misfire in modern financial markets. Loss aversion is rational in environments where losses are existential (starvation) while gains are marginal — losing your food cache is fatal; gaining extra food is merely pleasant, producing the asymmetric sensitivity to losses vs. gains formalized in prospect theory. The representativeness heuristic (judging probability by similarity to known prototypes) is fast and accurate for predicting animal behavior or weather patterns but produces narrative fallacy in financial markets. The Adaptive Markets Hypothesis (Andrew Lo, 2004) formalizes this: cognitive heuristics are context-dependent strategies, and financial markets are a novel environment for which evolution hasn't had time to calibrate optimal responses.
+
+### Psychology: Dual-Process Theory and the Architecture of Financial Error
+Kahneman's System 1 (fast, automatic, emotional) vs. System 2 (slow, deliberate, analytical) framework explains the *architecture* of financial decision-making. System 1 processes are dominant under time pressure, emotional arousal (market crashes), and high cognitive load — conditions that characterize actual trading environments. Market volatility activates System 1 → fear responses → forced selling → more price volatility → more fear: a classic positive feedback loop. The design of trading interfaces (one-click execution, real-time P&L in red/green, gamified order routing) is effectively a choice about which processing system to engage, with significant consequences for both individual outcomes and market stability.
+
+### Physics: Complex Systems, Herding, and Market Crashes
+Markets exhibit complex-systems behavior studied in statistical physics. Sornette (2003) modeled speculative bubbles using log-periodic oscillations borrowed from critical phenomena in physics — finding that market crashes follow power-law distributions analogous to Gutenberg-Richter for earthquakes. Self-organized criticality (Bak, 1987) explains why markets naturally evolve to critical states where small perturbations can trigger large cascades — the avalanche model of market crashes. Herding behavior is mathematically equivalent to phase transitions in ferromagnetic systems (Ising model): above a critical threshold of agent correlation, all agents align (panic) just as magnetic domains align below the Curie temperature, explaining the sudden, discontinuous nature of market crashes.
+
+### Philosophy: Rationality, Utility Theory, and Fundamental Limits
+Expected utility theory (von Neumann & Morgenstern, 1944) provided the axiomatic foundation for rational choice — and behavioral finance is fundamentally a collection of reproducible empirical violations of these axioms. The Ellsberg paradox demonstrates that people systematically violate the sure-thing principle (Savage's axiom) when facing uncertainty vs. risk, distinguishing *risk* (known probability distributions) from *Knightian uncertainty* (genuinely unknown unknowns). This connects to Keynes's "animal spirits" — the irreducible role of convention and confidence in investment decisions where future payoffs are genuinely unknowable, not merely probabilistic: the philosophical foundations of macroeconomic behavior.
+
 ## Related
 - [[cognitive-biases]] — Core heuristics and biases that underpin every behavioral finance phenomenon
 - [[mental-models]] — Frameworks for structured thinking that counteract cognitive errors in investing

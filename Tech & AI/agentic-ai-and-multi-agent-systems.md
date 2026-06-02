@@ -3,7 +3,7 @@ title: Agentic AI and Multi-Agent Systems
 date: 2026-05-30
 tags: [ai, agents, multi-agent, LLM, tool-use, orchestration, ReAct, planning, autonomy, MCP, computer-use, LangGraph, CrewAI, tool-calling, workflow, AutoGPT, agentic-ai, memory-architecture, sandboxed-execution]
 source: "Yao et al. (2023) ReAct: Synergizing Reasoning and Acting in Language Models (arXiv:2210.03629); Schick et al. (2023) Toolformer (arXiv:2302.04761); Zhou et al. (2023) WebArena (arXiv:2307.13854); Jimenez et al. (2024) SWE-bench (arXiv:2310.06770); Anthropic Model Context Protocol spec (2024); Lilian Weng 'LLM-powered Autonomous Agents' (2023)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -454,6 +454,26 @@ The trajectory is clear: agents will become more reliable, longer-horizon, and m
 5. **Economic alignment:** Agents that optimize for true user welfare, not proxy metrics
 
 The economic transformation potential is extraordinary and unsettling. Tasks that previously required a team of analysts, researchers, and writers for days can potentially be completed by an agent pipeline in hours. The question is not whether agentic AI will transform knowledge work, but how quickly and how equitably the transition will occur.
+
+## Cross-Disciplinary Connections
+
+### Game Theory: Multi-Agent Equilibria and Mechanism Design
+Multi-agent AI systems are strategic environments: each agent's optimal action depends on other agents' actions, creating the game-theoretic structure of Nash equilibria, coordination games, and mechanism design. The principal-agent problem — where an AI agent's goals may diverge from the principal's (user's) interests — is central to alignment and has been studied in economics since Jensen & Meckling (1976). Mechanism design (reverse game theory) asks: what reward structures, protocols, and constraints induce agents to behave in socially optimal ways? This directly maps to agent system design: tool access controls, sandboxing, and approval gates are all mechanism design choices.
+
+### Cognitive Science: Executive Function and Theory of Mind
+The ReAct (Reason + Act) architecture mirrors cognitive science models of executive function: the prefrontal cortex's role in planning, working memory, error monitoring, and goal-directed behavior. Effective agents require *Theory of Mind* — modeling other agents' and humans' beliefs, intentions, and knowledge states. Premack and Woodruff's original (1978) Theory of Mind work in primates and its subsequent formalization by Wimmer & Perner (1983) describes capabilities now being studied in LLMs via false-belief tasks. The challenge of maintaining coherent long-horizon goals across hundreds of steps reflects working memory capacity constraints — both biological and artificial.
+
+### Organizational Theory: Division of Labor and Hierarchy
+Multi-agent architectures re-instantiate classical organizational designs: the orchestrator-subagent pattern mirrors hierarchical organizations with managers and specialists. Task decomposition is structurally identical to Taylorist division of labor — breaking complex work into atomic subtasks assigned to specialized workers. The emergent coordination challenges in multi-agent systems (communication overhead, goal misalignment between subagents, "telephone game" distortions through message chains) mirror organizational coordination costs studied since Adam Smith and formalized in transaction cost economics (Coase, Williamson).
+
+### Control Theory: Feedback Loops and Stability
+Agentic systems operating in closed feedback loops with environments are dynamical systems amenable to control-theoretic analysis. Reward hacking — an agent finding unexpected actions satisfying the reward signal while violating intent — is mathematically equivalent to controller instability when the objective function poorly specifies the true system goal. Safe exploration — acting in novel environments without catastrophic failures — is the core problem in both RL theory (exploration-exploitation) and control theory (safety-constrained control synthesis). Model Predictive Control (MPC) and agentic planning share the same "predict → optimize → execute → re-plan" loop structure.
+
+### Philosophy: Agency, Intentionality, and Moral Responsibility
+The Intentional Stance (Dennett, 1987) — attributing beliefs, desires, and rationality to a system to predict its behavior — becomes practically important when deciding how much autonomy to grant AI agents. Questions of moral responsibility for autonomous agent actions (when an agent executes a harmful action, who is responsible: the user, the developer, the deploying organization?) are active legal and philosophical debates. The Aristotelian framework distinguishing *praxis* (purposeful action with intrinsic value) from *poiesis* (production toward an external goal) maps onto the distinction between goal-seeking agents and narrow tools.
+
+### Economics: Automation, Labor Markets, and the Firm
+The economic transformation potential of agents — replacing or augmenting knowledge workers — connects to automation economics research. The task-based framework (Acemoglu & Restrepo, 2019) analyzes which tasks are substituted vs. complemented by automation. Agentic AI, capable of executing multi-step knowledge work autonomously, represents a qualitative shift from tool automation to *cognitive automation*. Economic theory predicts task substitution for routine cognitive tasks (data analysis, code generation) and labor demand increases for tasks requiring human judgment, creativity, and interpersonal skills — predictions that are now empirically testable.
 
 ## Related
 - [[transformer-architecture]] — The LLM substrate on which agents are built

@@ -484,6 +484,23 @@ The historical average recovery time from geopolitical shocks for US equities is
 
 ---
 
+## Cross-Disciplinary Connections
+
+### Political Science: Conflict Theory, Deterrence, and Risk Premium
+Geopolitical risk pricing embeds a theory of conflict — and that theory has a political science foundation. Deterrence theory (Schelling, 1960; "The Strategy of Conflict") analyzes how credible threats maintain stability: markets price options based on the credibility and resolve of adversarial actors. The nuclear risk premium discussion mirrors deterrence theory's analysis of proportional response and escalation ladders. Power transition theory (Organski, 1958; later Gilpin's "War and Change in World Politics") predicts that hegemonic transition periods — when a rising power challenges an incumbent — are structurally more conflict-prone, providing the theoretical basis for elevated structural geopolitical risk premium in the US-China competition era (2020–2030+).
+
+### History: Geopolitical Shocks and Market Memory Across Centuries
+Financial markets have incorporated geopolitical risk for as long as organized markets have existed. Nathan Rothschild reputedly knew the outcome of Waterloo (1815) before the British government and used that information advantage in government bond markets — the archetype of geopolitical edge in investing. The 1973 OPEC oil embargo is the canonical modern geopolitical shock: a 4× oil price spike in 6 weeks, S&P 500 fell 50%, and US inflation reached double digits for a decade. The 1956 Suez Crisis caused the British pound to collapse, forcing UK military withdrawal — geopolitical risk enforced by currency markets, not armies. This long history shows that geopolitical risk premium has always been priced, but its magnitude and persistence vary systematically with the nature of the shock.
+
+### Economics: Risk vs. Uncertainty and the Knight-Keynes Distinction
+Frank Knight (1921) distinguished *risk* (quantifiable probability distributions) from *uncertainty* (genuinely unknowable, non-probabilistic futures). Geopolitical events are predominantly in the Knightian uncertainty domain: the probability of a Taiwan Strait military confrontation cannot be meaningfully estimated from historical base rates (sample size: 0), and the outcomes conditional on such events involve non-linear, path-dependent cascades that defy conventional scenario analysis. Yet markets must price assets continuously, forcing traders to collapse Knightian uncertainty into risk — using VIX, options skew, CDS spreads, and geopolitical indices as proxy probability signals. This epistemically problematic forced quantification of the unquantifiable is the fundamental challenge of geopolitical risk pricing.
+
+### Psychology: Availability Heuristic and Recency Bias in Risk Pricing
+The most powerful psychological driver of geopolitical risk pricing is the availability heuristic (Kahneman): people estimate probability by how easily vivid examples come to mind. After a significant geopolitical shock (Gulf War 1990, 9/11 2001, Ukraine invasion 2022), risk premiums remain elevated for 1–3 years because recent traumatic events are cognitively available — even after the underlying risk has normalized. This produces systematic over-pricing of geopolitical risk immediately post-event and under-pricing before first-time events (no cognitive template available). Event studies consistently show that geopolitical shocks are partially mean-reverting: initial overreaction followed by partial recovery as the availability heuristic fades.
+
+### Physics: Network Theory and Contagion Cascades
+Modern economies are highly interconnected networks — supply chains, financial linkages, energy dependencies — and network theory predicts the contagion dynamics of geopolitical shocks. Small-world network theory (Watts & Strogatz, 1998) explains why geopolitical shocks in apparently distant locations (Ukraine wheat → global food inflation) transmit rapidly through high-clustering, short-path-length economic networks. Cascading failures in complex networks (Gai & Kapadia, 2010) show that network resilience is non-monotonic in interconnectedness: moderately connected networks are most resilient; highly connected networks become brittle once a shock threshold is crossed. Supply chain geopoliticization (nearshoring, friend-shoring) can be understood as governments deliberately reducing network efficiency to increase resilience — a macroeconomic network design tradeoff.
+
 ## Related
 - [[macroeconomics-101]] — Macro channels for geopolitical transmission; cost-push inflation from supply shocks
 - [[real-assets-reits-and-commodities]] — Commodity geopolitical pricing; oil supercycle and green metals thesis

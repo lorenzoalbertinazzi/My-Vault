@@ -439,6 +439,23 @@ The argument has surface logic: a programmable dollar available globally via sma
 
 ---
 
+## Cross-Disciplinary Connections
+
+### Computer Science: Distributed Systems, Cryptography, and Privacy Engineering at National Scale
+CBDCs are a distributed systems engineering problem at national scale. The choice between a centralized ledger (single central bank database), permissioned distributed ledger (multiple validator banks), and public blockchain represents fundamental tradeoffs among throughput, trust distribution, and censorship resistance. Privacy-preserving CBDC designs use zero-knowledge proofs (zk-SNARKs) for transaction privacy with selective regulatory auditability, and cryptographic threshold signatures for tiered anonymity (small transactions: anonymous; large transactions: identified). The engineering challenge — handling peak retail payment volumes (Alipay processes ~30M transactions/second during peak shopping events) while maintaining regulatory auditability and recovery from node failures — is a genuine distributed systems frontier problem not solved by any current CBDC implementation.
+
+### Political Science: Monetary Sovereignty, Surveillance Capacity, and Programmable Social Control
+CBDCs are political technologies as much as financial infrastructure. The ability to implement programmable money — geographic spending restrictions, expiration dates on stimulus payments, category-specific subsidies (food only, not alcohol) — transforms monetary policy from a blunt aggregate demand instrument into a granular social-behavioral mechanism. This creates a fundamental political-institutional tension: central bank independence (focused on price stability) vs. political incentive to use programmable money for social policy goals. The BIS's empirical research (Auer, Cornelli, Frost, 2020) consistently shows CBDC design choices — especially anonymity architecture — are fundamentally political choices about state-citizen power balance, not technical choices.
+
+### Law: Privacy Rights, Property Claims, and the Enforceability of Smart Contracts
+CBDC implementation requires resolving legal questions that existing payment law doesn't answer. Is CBDC a direct claim on the central bank (like banknotes, not subject to bail-in) or an intermediated claim (like deposits, subject to FSCS limits and potentially bail-in)? The legal answer determines risk treatment and regulatory capital. GDPR's "right to be forgotten" conflicts directly with any ledger's immutability — CBDC transaction records are permanent by design. Smart contract enforceability in court remains unsettled in most jurisdictions: can a programmable money expiration clause be overridden by court order? The answers require new international monetary law that doesn't yet exist.
+
+### International Relations: Dollar Hegemony, SWIFT, and Financial Warfare Architecture
+The dollar's status as global reserve currency provides the US with "exorbitant privilege" (Giscard d'Estaing, 1960s) and decisive economic coercive power via SWIFT exclusion. mBridge — a joint BIS Innovation Hub project (China PBoC, UAE Central Bank, Hong Kong HKMA, Thailand BoT, plus Saudi Arabian SAMA as observer, 2024) — is explicitly designed for cross-border CBDC settlement that bypasses SWIFT. If a critical mass of global commodity trade (especially oil) settles through mBridge or equivalent non-SWIFT channels, the US loses its primary financial warfare tool and a significant source of dollar seigniorage. This makes CBDC architecture a great power competition frontier: the financial infrastructure layer of the US-China strategic competition.
+
+### Economics: Monetary Theory, Bank Disintermediation, and Credit Channel Disruption
+If retail CBDC offers zero credit risk (direct central bank liability) at competitive interest rates, rational depositors will migrate savings from commercial banks (bank deposit = bank liability, carrying credit risk and deposit insurance limits) to CBDC — reducing commercial banks' deposit funding base. This "disintermediation" risk could contract bank credit supply by 10–40% of GDP in developed markets, requiring either binding CBDC interest rate ceilings (operational complexity, politically difficult) or fundamental redesign of how monetary transmission works. The Bank of England's 2021 CBDC consultation explicitly modeled scenarios where CBDC adoption triggered a bank run equivalent — a self-fulfilling financial stability concern that must be resolved before full-scale retail CBDC deployment.
+
 ## Related
 
 - [[currency-markets-and-fx]] — CBDC impacts on FX markets; mBridge as a SWIFT alternative reducing dollar dependence; digital yuan internationalization

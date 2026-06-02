@@ -465,6 +465,23 @@ Breakeven Inflation = Nominal Yield − TIPS Real Yield
 
 ---
 
+## Cross-Disciplinary Connections
+
+### Mathematics: Duration Algebra, Convexity, and the Term Structure
+Bond mathematics is applied calculus: duration is the first derivative of bond price with respect to yield (dP/dy), and convexity is the second derivative (d²P/dy²), forming a Taylor expansion that approximates price changes: ΔP/P ≈ -D·Δy + ½C·(Δy)². The term structure of interest rates (yield curve) is a continuous function estimated from discrete market observations — requiring interpolation (cubic spline, Nelson-Siegel, Svensson) and econometric decomposition into expectations, term premium, and liquidity premium components. The Heath-Jarrow-Morton (HJM) framework models the entire yield curve as a stochastic process, providing the theoretical foundation for interest rate derivatives pricing and risk management through a self-consistent arbitrage-free model of forward rate dynamics.
+
+### History: Government Bonds as State Finance Instruments
+Fixed income markets originated as mechanisms for sovereign war finance. The Bank of England (1694) was founded to fund William III's war against France through perpetual bonds ("consols"). Dutch Republic 5% perpetuities (17th century) funded the Eighty Years' War at historically low rates, reflecting the republic's creditor-friendly institutions — the first modern government bond market. US Treasury bills originated in 1929; US Treasury bonds in WWI (Liberty Bonds, 1917); TIPS (Treasury Inflation-Protected Securities) launched in 1997. The history of fixed income is inseparable from the history of state formation: the ability to borrow long-term at reasonable rates has been a decisive military and economic advantage across four centuries.
+
+### Economics: Monetary Policy Transmission and the Central Banking Nexus
+Fixed income markets are the primary transmission mechanism of monetary policy: the Federal Reserve sets the overnight rate; markets transmit this policy through the yield curve to all long-term rates; long-term rates determine mortgage costs, corporate investment hurdle rates, and consumer credit. The "portfolio balance channel" (Bernanke) explains QE: when the Fed buys long-duration Treasuries and MBS, it removes duration risk from private sector portfolios, reducing term premium and pushing investors into riskier assets (equities, credit). The yield curve itself is thus a real-time policy expectation indicator — inversion signals that markets expect the Fed to cut rates (because recession), not that the yield curve independently causes recession.
+
+### Law: Covenant Architecture and Sovereign Immunity
+Corporate bond covenants — negative pledge, cross-default, change-of-control put, maintenance vs. incurrence financial covenants — are legal architecture that directly translates into creditor protection and economic outcomes at distress. The 2010s covenant deterioration ("covenant-lite" institutional loans) shifted protections from creditors to equity sponsors, producing higher recoveries for financial sponsors and lower recoveries for bondholders in 2020–2022 restructurings. Sovereign bonds face no contractual bankruptcy framework: Argentina's 2001–2002 and 2020 defaults, Greece's 2012 PSI (Private Sector Involvement), and Russia's 2022 sanctions-triggered payment default each involved different legal theories, ad hoc negotiation, and no consistent enforceability mechanism — sovereign debt restructuring remains more diplomacy than law.
+
+### Environmental Science: Climate Risk and Fixed Income Repricing
+Climate risk is increasingly priced in sovereign and corporate fixed income. Stranded asset risk — the possibility that fossil fuel reserves become uneconomic before exhaustion — is a credit risk for energy sector bond issuers (coal companies, oil majors with long-dated development assets). Physical climate risk (sea-level rise, hurricane frequency) is a property value and thus municipal bond risk in coastal jurisdictions. Green bonds ($2.5 trillion outstanding, 2026) are labeled debt instruments whose proceeds fund climate projects; their pricing premium ("greenium") vs. conventional bonds has empirically narrowed from 5–10bp to 0–3bp as supply increased, raising questions about whether green bond labels add genuine value or are primarily reputational tools.
+
 ## Related
 - [[portfolio-theory]] — Duration, convexity, and spread duration in portfolio risk management; 60/40 framework stress-tested by fixed income
 - [[macroeconomics-101]] — Taylor Rule and yield curve as macro transmission; Minsky Moment expressed in credit markets; sovereign debt dynamics

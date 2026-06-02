@@ -3,7 +3,7 @@ title: Computer Vision and Convolutional Neural Networks
 date: 2026-05-30
 tags: [ai, computer-vision, CNN, deep-learning, image-recognition, object-detection, AlexNet, ResNet, ViT, CLIP, SAM, YOLO, ImageNet, image-segmentation, transfer-learning, vision-transformer, multimodal]
 source: "Krizhevsky et al. (2012) ImageNet Classification with Deep CNNs — AlexNet (NeurIPS); He et al. (2015) Deep Residual Learning — ResNet (arXiv:1512.03385); Dosovitskiy et al. (2020) ViT — An Image is Worth 16x16 Words (arXiv:2010.11929); Radford et al. (2021) CLIP (arXiv:2103.00020); Kirillov et al. (2023) SAM — Segment Anything (arXiv:2304.02643); Redmon et al. (2016) YOLO (arXiv:1506.02640)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 ## Summary
 Computer vision is the field enabling machines to interpret visual information from images and video. The 2012 AlexNet breakthrough — demonstrating that deep convolutional neural networks (CNNs) could dramatically outperform all prior methods on ImageNet — triggered a decade of exponential progress that has produced systems exceeding human performance on image classification (2015), surpassing radiologists at cancer detection (2017), enabling autonomous vehicles, and powering facial recognition at planetary scale. CNNs leverage the spatial structure of images through local connectivity, weight sharing, and hierarchical feature learning — a biologically-inspired architecture matching how the mammalian visual cortex processes information.
@@ -360,6 +360,26 @@ x_{t+1} = Π_{x+S}(x_t + α · sign(∇_x J(θ, x_t, y)))
 2. Ensemble methods: diverse models with different architectures are harder to simultaneously fool
 3. Randomized smoothing: provably certifies classification within a radius ε using randomized inference
 4. Detection models: separate "is this adversarial?" classifier before the main classifier
+
+## Cross-Disciplinary Connections
+
+### Neuroscience: The Visual Cortex and Biological Vision
+CNNs were explicitly motivated by Hubel and Wiesel's Nobel Prize-winning (1981) discoveries of simple and complex cells in the cat visual cortex (V1). Simple cells act as oriented edge detectors (matching convolutional filter behavior); complex cells exhibit spatial invariance to position shifts (matching max-pooling). The hierarchical organization — V1 → V2 → V4 → IT cortex (Felleman & Van Essen, 1991) — maps directly onto successive CNN layers detecting increasingly abstract features. Deep learning researchers have validated this not just as metaphor but as quantitative fact: representations in CNN intermediate layers predict neural activations in corresponding primate visual areas with >60% variance explained (Yamins et al., 2014), making CNNs the best computational models of ventral stream visual processing.
+
+### Psychology: Gestalt Perception, Texture Bias, and Human-CNN Disagreements
+Gestalt principles (closure, proximity, similarity, figure-ground) describe how human vision organizes local elements into global percepts. CNNs trained on natural images implicitly learn some Gestalt-like features but fail systematically on others — particularly figure-ground segmentation, closure, and part-whole relationships. The *texture bias* phenomenon (Geirhos et al., 2019) — CNNs rely primarily on texture statistics rather than shape to classify objects, unlike humans who rely primarily on shape — explains many adversarial failures and distribution shift vulnerabilities. When CNNs and humans disagree on classification of ambiguous stimuli, the nature of the disagreement reveals fundamentally different representational strategies.
+
+### Physics and Signal Processing: Convolution, Fourier Analysis, and Scale Space
+The convolution operation has deep roots in physics (linear response functions, Green's functions) and signal processing (filtering, convolution theorem). The equivalence between convolution in the spatial domain and pointwise multiplication in the Fourier domain enables understanding CNN feature detectors as oriented bandpass filters at specific spatial frequencies. Scale space theory (Lindeberg, 1994) provides a mathematically principled framework for multi-scale image representation grounded in the heat equation — the theory underlying max-pooling's approximate scale invariance. Gabor filters (quantum harmonic oscillator solutions) were the dominant hand-crafted feature before CNNs, directly connecting quantum mechanics to image representation.
+
+### Cognitive Science: Object Recognition, Binding, and Invariance
+A central question in cognitive science: how do humans achieve viewpoint-, lighting-, and occlusion-invariant object recognition with apparent effortlessness? The *ventral* (what, object identity) and *dorsal* (where, spatial location) visual processing streams in the brain provide a dual-stream model informing multi-task vision architectures. The *binding problem* — how disparate features (color, shape, location) are bound into a single object percept — remains unsolved in both neuroscience and computer vision. CNNs lack a principled binding mechanism, relying on spatial co-occurrence instead; Capsule Networks (Sabour, Frosst & Hinton, 2017) were explicitly designed to address this cognitive science-motivated limitation.
+
+### Statistics and Probability: Bayesian Perception and Probabilistic Models
+Bayesian brain theories (Helmholtz's "unconscious inference"; Knill & Pouget, 2004) model perception as probabilistic inference: the brain maintains a generative model of the world and inverts it to infer hidden causes from observed pixels. This connects to modern generative vision: diffusion models, VAEs, and normalizing flows are explicit generative models of image distributions. Variational Bayesian inference (ELBO maximization) underlies VAE training; understanding discriminative CNNs as approximations to Bayesian classifiers grounds uncertainty quantification methods (Monte Carlo dropout, conformal prediction) in statistical theory.
+
+### Medicine: Computational Pathology and Clinical Impact
+The deployment of CV to medical imaging creates a direct interface with clinical medicine and health policy. Training distribution problems are severe in medical CV: models trained on slides from one hospital fail on slides from another due to staining protocol differences, scanner calibrations, and patient demographic variations — a scientifically understood but clinically dangerous distribution shift. The FDA 510(k) clearance pathway for AI medical devices requires understanding sensitivity/specificity tradeoffs in diverse populations (including underrepresented racial and age groups), connecting statistical learning theory directly to health equity concerns and regulatory science.
 
 ## Related
 - [[transformer-architecture]] — Vision Transformers apply BERT/GPT architecture to image patches; critical for understanding ViT, CLIP, DALL-E

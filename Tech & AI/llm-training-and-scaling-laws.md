@@ -3,7 +3,7 @@ title: LLM Training & Scaling Laws
 date: 2026-05-30
 tags: [ai, LLM, scaling-laws, pre-training, transformers, compute, chinchilla, GPT, neural-scaling, emergence, deep-learning, infrastructure, data-parallelism, tensor-parallelism, pipeline-parallelism, MFU, gradient-checkpointing, mixed-precision, FLOP-budget, synthetic-data, tokenization]
 source: "Kaplan et al. (2020) Scaling Laws for Neural Language Models (arXiv:2001.08361); Hoffmann et al. (2022) Chinchilla (arXiv:2203.15556); Brown et al. (2020) GPT-3 (arXiv:2005.14165); Wei et al. (2022) Emergent Abilities of LLMs (arXiv:2206.07682); Rajbhandari et al. (2020) ZeRO (arXiv:1910.02054); Shoeybi et al. (2019) Megatron-LM (arXiv:1909.08053)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -387,6 +387,26 @@ A critical concern in LLM evaluation: if training data contains examples from be
 4. **Multimodal scaling:** Vision-language models (GPT-4V, Gemini Ultra, Claude 3) scale the same transformer architecture across text, images, audio, video, and code simultaneously
 
 5. **World models:** Training on video (YouTube-scale) to develop physical world models that reason about space, time, and causality — Sora (OpenAI, 2024), Video PreTraining (OpenAI). May unlock reasoning about the physical world beyond text
+
+## Cross-Disciplinary Connections
+
+### Thermodynamics and Statistical Physics
+Scaling laws mirror thermodynamic phase transitions: capabilities emerge discontinuously at critical scales, analogous to phase transitions (liquid → gas) where microscopic changes produce macroscopic qualitative shifts. The entropy of training data is a fundamental constraint — a model cannot achieve lower validation loss than the entropy of the data distribution, connecting information theory (Shannon entropy) directly to training dynamics. The "compute-optimal" trade-off between parameters and tokens echoes *production function* analysis in economics: given a fixed budget, how to allocate between capital (parameters) and labor (tokens) to maximize output (capability).
+
+### Economics: Production Functions and Returns to Scale
+The scaling law framework is structurally identical to the Cobb-Douglas production function: C = a · N^α · D^β (compute as a function of parameters and data). Chinchilla's optimal analysis finds the elasticity of substitution between parameters and data, identical to measuring factor substitution in microeconomics. The existence of power laws with consistent exponents across 6+ orders of magnitude mirrors macroeconomic laws of returns to scale — suggesting a deep structural regularity in how information-processing systems grow.
+
+### Neuroscience: Biological Neural Scaling
+The primate neocortex follows analogous scaling laws: cognitive capability correlates with neuron count across species, with human brains comprising roughly 86 billion neurons and ~100–500 trillion synapses. The hypothesis that artificial scaling laws reflect biological scaling laws — because transformers are trained to mimic human-generated text, and human cognition is implemented by biological architecture — provides theoretical grounding for *why* scaling works at all. Comparative neuroanatomy data (Herculano-Houzel et al.) and LLM benchmark data trace nearly identical power-law relationships between substrate size and behavioral capability.
+
+### Cognitive Science: Learning Theory and Sample Complexity
+PAC-learning theory predicts sample complexity requirements as a function of hypothesis class complexity — mirrored in the empirical observation that more parameters require proportionally more tokens to reach optimal training loss. The relationship between pre-training data distribution and zero-shot transfer connects to domain adaptation theory in cognitive science: how humans transfer learned schemas to structurally novel situations. The *grokking* phenomenon (delayed generalization after apparent memorization) recapitulates the cognitive science distinction between rote memorization and conceptual understanding, with generalization emerging only after sufficient exposure.
+
+### Information Theory
+The training objective (cross-entropy / next-token prediction) is exactly KL-divergence minimization between model distribution and data distribution. Shannon's source coding theorem sets the theoretical floor: no model can compress text below the true entropy of the language. The remaining perplexity gap represents unsolved modeling challenges — long-range dependencies, world knowledge, multi-step reasoning — making perplexity a theoretically principled metric grounded in information theory rather than an arbitrary benchmark.
+
+### Organizational Theory: Knowledge Management at Scale
+The "alignment tax" phenomenon — RLHF fine-tuning can degrade capabilities gained in pre-training — has direct parallels in organizational behavior research on bureaucratization costs in knowledge firms: imposing compliance processes on expert workers can degrade the expertise that made them valuable. The phase transition to emergent capabilities at scale mirrors organizational theory's concept of *combinatorial innovation*: above a critical mass of interconnected knowledge units, qualitatively new organizational capabilities emerge that were not predictable from individual unit properties.
 
 ## Related
 - [[transformer-architecture]] — The architecture pre-training scales

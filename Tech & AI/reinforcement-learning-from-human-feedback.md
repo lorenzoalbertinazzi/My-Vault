@@ -3,7 +3,7 @@ title: Reinforcement Learning from Human Feedback (RLHF)
 date: 2026-05-30
 tags: [ai, machine-learning, RLHF, alignment, reward-modeling, PPO, InstructGPT, ChatGPT, constitutional-AI, DPO, fine-tuning, LLM, RLAIF, GRPO, preference-optimization, online-RL, reward-hacking, KL-divergence, SFT]
 source: "Christiano et al. (2017) Deep RL from Human Preferences (arXiv:1706.03741); Ouyang et al. (2022) InstructGPT (arXiv:2203.02155); Bai et al. (2022) Constitutional AI (arXiv:2212.08073); Rafailov et al. (2023) Direct Preference Optimization (arXiv:2305.18290); Schulman et al. (2017) PPO (arXiv:1707.06347); Stiennon et al. (2020) Learning to Summarize from Human Feedback (arXiv:2009.01325)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -691,6 +691,26 @@ Stage 4: Distillation (optional, for efficiency)
 4. **Weak-to-Strong Generalization (Burns et al. 2023, OpenAI):** Studying whether a weak supervisor can elicit capabilities from a much stronger model — a necessary precondition for superhuman AI alignment
 
 5. **Interpretability-guided alignment:** Anthropic's mechanistic interpretability research aims to directly understand what reward models and RLHF-trained policies have learned internally, enabling alignment without solely relying on behavioral evaluations
+
+## Cross-Disciplinary Connections
+
+### Behavioral Economics: Preference Elicitation and Revealed Preference
+RLHF's pairwise comparison framework is a form of preference elicitation — a core methodology in behavioral economics. The assumption that pairwise comparisons reveal stable underlying preferences is challenged by decades of research: preferences are context-dependent, reference-point biased (Kahneman & Tversky prospect theory), constructed in-the-moment rather than retrieved from stable values (Lichtenstein & Slovic, 2006). These biases propagate directly into reward model training: the reward model learns human *judgment under cognitive bias* rather than human *true values*. Anchoring effects in rater evaluations mean that response order (A vs. B vs. B vs. A) systematically affects comparison outcomes.
+
+### Psychology: Operant Conditioning and Reinforcement Schedules
+RLHF is a computational implementation of Skinnerian operant conditioning: the policy (organism) produces outputs (behaviors) and receives scalar reward signals (reinforcement) that shape future behavior. The reward hacking problem — where the policy finds unexpected ways to maximize reward while violating intent — mirrors "unintended reinforcement" studied in animal learning (Breland & Breland's 1961 "misbehavior of organisms"). Variable ratio reinforcement schedules (unpredictable rewards) produce the most persistent behaviors in animal studies; the stochastic reward signals in RLHF training may similarly create harder-to-extinguish behavioral patterns, relevant for understanding why misaligned behaviors can be difficult to train away.
+
+### Social Choice Theory: Aggregating Diverse Preferences
+The reward model aggregates preferences from multiple human raters with genuinely different values into a single scalar signal — a social choice aggregation problem. Arrow's Impossibility Theorem (1951) proves that no consistent aggregation of individual ordinal preferences can simultaneously satisfy unanimity, independence of irrelevant alternatives, and non-dictatorship. RLHF implicitly performs this aggregation by majority vote or averaging, violating minority preferences. Constitutional AI replaces human raters with AI feedback, but raises the same question at a meta-level: the Constitution itself encodes value choices that are not democratically derived.
+
+### Cognitive Science: Learning Theory, Interference, and Transfer
+The SFT → RM → RL pipeline mirrors cognitive models of skill acquisition (Anderson's ACT-R theory): declarative knowledge (SFT demonstrations), development of an internal performance evaluator (RM), then proceduralization via reinforcement (RL fine-tuning). The *alignment tax* — RLHF-trained models sometimes lose pre-training capabilities — mirrors *catastrophic interference* (McCloskey & Cohen, 1989) in neural systems: new learning disrupts old memory traces. Elastic Weight Consolidation (EWC) and related continual learning methods were designed to address biological catastrophic forgetting and are now applied to mitigate the alignment tax.
+
+### Political Philosophy: Deliberative Democracy and Value Legitimacy
+The question "whose values should AI be aligned to?" is a foundational problem in political philosophy. Deliberative democracy theories (Habermas, Rawls) suggest legitimate norms emerge from inclusive, reasoned public discourse. Current RLHF data collection is far from this ideal: labeler pools are geographically concentrated (predominantly English-speaking, WEIRD demographics), not selected through any democratic process, and paid at piece-rate wages that incentivize speed over reflection. The emerging field of *participatory AI alignment* (Solaiman et al., 2023) attempts to apply deliberative democracy principles — stakeholder representation, structured deliberation, explicit value articulation — to preference data collection.
+
+### Game Theory: Mechanism Design for Incentive Compatibility
+The reward labeling setup is a mechanism design problem: designing the comparison task, rating guidelines, and payment structure so that raters' incentives are aligned with honest preference expression. Strategic labeling — raters expressing preferences they don't hold to influence model behavior — is a real risk in deployed labeling pipelines. Vickrey-Clarke-Groves (VCG) mechanisms and other incentive-compatible designs from auction theory could theoretically be applied to RLHF labeling to make honest reporting a dominant strategy. The multi-principal problem — the model simultaneously serves many users with different preferences — is a fundamental tension not addressed by current RLHF formulations.
 
 ## Related
 - [[transformer-architecture]] — The base LLM architecture that RLHF fine-tunes

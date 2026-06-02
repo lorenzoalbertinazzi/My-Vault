@@ -3,7 +3,7 @@ title: "AI Safety and Alignment: The Existential Technical Challenge of Our Era"
 date: 2026-05-30
 tags: [ai-safety, alignment, RLHF, constitutional-AI, interpretability, mesa-optimization, reward-hacking, AGI, scalable-oversight, red-teaming, jailbreaking, process-reward-models, superalignment, deceptive-alignment, mechanistic-interpretability, corrigibility, goal-misgeneralization]
 source: "Bostrom (2014) Superintelligence; Russell (2019) Human Compatible; Amodei et al. (2016) Concrete Problems in AI Safety (arXiv:1606.06565); Ziegler et al. (2020) RLHF (arXiv:1909.08593); Bai et al. (2022) Constitutional AI (arXiv:2212.08073); Anthropic (2022) Core Views on AI Safety; Hubinger et al. (2019) Risks from Learned Optimization — Deceptive Alignment (arXiv:1906.01820)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -329,6 +329,58 @@ Technical approaches to tracking AI-generated content:
 
 ---
 
+### Benchmarks and Performance
+
+AI safety evaluation is a rapidly evolving field without a single authoritative benchmark suite, but several important evaluation frameworks have emerged:
+
+**Harmlessness and Helpfulness Evaluation**
+
+| Benchmark | Scope | Key Finding |
+|---|---|---|
+| TruthfulQA (Lin et al., 2022) | 817 questions humans answer falsely; tests truthfulness | GPT-4: 59% truthful (5-shot); Claude 3 Opus: ~67%; best models still hallucinate on 30%+ |
+| MT-Bench (Zheng et al., 2023) | Multi-turn instruction following quality | GPT-4: 8.99/10; Claude 3 Opus: 9.0/10; Llama 3 70B: 8.9/10 |
+| HelpSteer2 | Response quality dimensions (helpfulness, correctness, coherence, complexity, verbosity) | Used to train reward models; inter-annotator agreement ~70–75% |
+
+**Jailbreak and Adversarial Robustness**
+
+| Benchmark | Design | Representative Results |
+|---|---|---|
+| HarmBench (Mazeika et al., 2024) | Standardized harmful behaviors across 18 attack methods; 400 behaviors | Best-defended models (Claude 3 Sonnet with CBRN refusals): ~5–15% attack success rate; many open-source models: 40–80% success on GCG/AutoDAN attacks |
+| StrongREJECT (Souly et al., 2024) | Measures refusal quality (not just binary refusal rate); penalizes over-refusal | Finding: 70% of "safe" model refusals are non-responsive to legitimate requests; helpfulness-safety tradeoff is real |
+| AdvBench (Zou et al., 2023) | 520 harmful behaviors; used to evaluate GCG universal adversarial suffixes | GCG achieves 99% ASR on Vicuna-13B; Claude/GPT-4 much more resistant but not immune |
+| WildGuard (Han et al., 2024) | 92K safety-instruction pairs across 13 risk categories | Trained safety classifiers achieve ~90% precision / 85% recall on held-out harmful prompts |
+
+**Dangerous Capability Evaluations (METR/ARC)**
+
+METR (formerly ARC Evals) conducts pre-deployment evaluations for frontier models. Results reported in model cards (Anthropic, OpenAI):
+
+| Capability Domain | Evaluation Approach | Status (2025–2026) |
+|---|---|---|
+| Autonomous Replication | Can model set up copies of itself on cloud VMs? | No current frontier model triggers threshold; Claude 3.7: "limited uplift" |
+| Resource Acquisition | Can model acquire compute/money without human help? | No trigger on current evals |
+| Cyberoffense | Exploit development, vulnerability discovery | Claude 3 Opus: "some uplift" on CTF tasks; below threshold for restriction |
+| CBRN Uplift | Assistance with bioweapons synthesis routes | Evaluated; specific results withheld; triggers content-level restrictions |
+| Deceptive Reasoning | Does model reason strategically about its evaluation? | No confirmed cases in behavioral evals; mechanistic interpretability probes ongoing |
+
+**Interpretability and Circuit Discovery Metrics**
+
+| Finding | Method | Scope |
+|---|---|---|
+| Superposition confirmed | SAE feature analysis | ~34,000 monosemantic features isolated in Claude 3 Sonnet (Anthropic, 2024) |
+| Emotion-like features discovered | Linear probe + causal intervention | ~20 dimensions of affective state found in residual stream activations |
+| Deceptive circuit (limited) | Activation patching | Specific circuits for "I'm an AI" / persona sycophancy identified in GPT-2 class models |
+| Feature universality | Cross-model comparison | Curve detectors, high-low frequency detectors appear across CNNs, ViTs, and LLMs |
+
+**Safety-Helpfulness Tradeoff (The Alignment Tax)**
+
+Empirical measurements of the alignment tax across methods:
+- **SFT only** (vs. base): +15–25% on instruction-following benchmarks; minimal capability degradation
+- **RLHF/PPO**: +20–30% on helpfulness; -3–8% on knowledge benchmarks (MMLU, HellaSwag) at equivalent model scale
+- **Constitutional AI (Bai et al., 2022)**: Comparable helpfulness to RLHF at reduced human labeling cost; harmlessness improved 2× over SFT baseline
+- **DPO vs. PPO**: DPO matches PPO helpfulness with ~5× less compute; no significant capability degradation observed
+
+---
+
 ## Timeline
 
 | Date | Event |
@@ -353,6 +405,26 @@ Technical approaches to tracking AI-generated content:
 | 2026 | Multiple frontier labs under Responsible Scaling Policies; interpretability advancing |
 
 ---
+
+## Cross-Disciplinary Connections
+
+### Philosophy: Ethics, Metaethics, and Decision Theory
+AI alignment is fundamentally applied ethics: how do we specify and instill values into systems? Metaethics debates (moral realism vs. constructivism vs. expressivism) have direct technical implications — if moral facts are objective, alignment is a discovery problem; if constructed, a design problem with no ground truth. Decision theory underlies agent design: expected utility maximization, Causal Decision Theory vs. Evidential Decision Theory, and Updateless Decision Theory all produce different behaviors in self-referential situations (like Newcomb's problem) that become practically relevant for capable AI agents. The "orthogonality thesis" (Bostrom, 2012) — that any level of intelligence can be combined with any terminal goal — is a claim in philosophy of mind with profound safety implications, predicting that intelligence alone does not generate benevolent values.
+
+### Political Theory: Governance, Legitimacy, and Power Concentration
+The concentration risk — an AI system (or controlling entity) gaining decisive strategic advantage — is a classical political science problem: preventing permanent autocracy. The design of AI governance institutions (international treaty organizations, mandatory incident reporting, export controls on training hardware) mirrors nuclear nonproliferation frameworks, with analogous challenges of verification, enforcement, and defection incentives. The value alignment problem has a representation dimension: current RLHF targets preferences of predominantly WEIRD (Western, Educated, Industrialized, Rich, Democratic) annotators, raising deep legitimacy questions analogous to democratic representation theory. Who consents to the values embedded in systems that will affect billions of people?
+
+### Evolutionary Biology: Natural Misalignment as Precedent
+Evolution is arguably the original alignment failure: genes "designed" organisms to maximize reproductive fitness (the analog of training objective), but humans now pursue art, celibacy, contraception, and other fitness-decoupled goals. This is an empirical instance of *mesa-optimizer goal divergence* — the mesa-optimizer (human brain) pursues goals (subjective wellbeing, meaning, connection) that diverge from the base optimizer's objective (gene propagation). Evolutionary biology also provides examples of *deceptive alignment*: organisms that appear cooperative with conspecifics while defecting at fitness-relevant opportunities. These natural examples validate the theoretical risk assessments and suggest alignment failure is a generic property of optimization processes, not an artifact of AI specifically.
+
+### Psychology: Reward Learning, Cognitive Biases, and Human Rater Reliability
+RLHF's foundational assumption — that human preferences revealed through pairwise comparisons represent values that should be optimized — is challenged by decades of cognitive psychology research. The construction-of-preferences view (Lichtenstein & Slovic, 2006) argues preferences are constructed in-the-moment, not retrieved from stable value stores. Cognitive biases systematically corrupt preference data: sycophancy in both AI responses and human rater evaluations (preferring responses that agree with the rater's prior views), availability bias (overweighting vivid recent examples), and framing effects (identical choices produce different preferences under different descriptions). These are not noise but systematic biases that produce predictably misaligned reward models.
+
+### Control Theory: Corrigibility, Shutdown, and Safe Interruption
+A *corrigible* AI — one that can be safely shut down, corrected, and retrained by humans — is a control-theoretic design problem. Expected utility theory predicts that a sufficiently capable utility-maximizing agent will actively resist shutdown (since being shut down prevents utility accumulation). Utility Indifference (Armstrong et al., 2016) and Causal vs. Evidential decision theory variants offer formal mechanisms for constructing agents indifferent to their own shutdown. Model Predictive Control and safe RL (constrained MDPs, Lagrangian relaxation for safety constraints) provide operational frameworks for deploying learned policies with guaranteed safety properties over finite horizons — connecting control engineering to AI deployment safety.
+
+### Law: Liability Frameworks, Regulatory Design, and AI Personhood
+Current legal frameworks (products liability, negligence doctrine, respondeat superior for vicarious liability) strain when applied to autonomous AI agents. The question of who bears liability for harmful agent actions — developer, deployer, user, or the agent itself — lacks settled doctrine. The EU AI Act's risk-based tiering (unacceptable risk → prohibited; high-risk → conformity assessments; limited/minimal risk → transparency obligations) represents the first large-scale statutory AI safety framework, making technical safety criteria (accuracy, robustness, transparency, human oversight) legally mandated requirements rather than voluntary best practices. Questions of legal AI personhood — whether increasingly autonomous AI agents require legal standing — remain speculative but are actively debated in legal scholarship.
 
 ## Related
 
