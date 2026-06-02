@@ -146,6 +146,25 @@ After 19+ months of active war followed by 7+ months of nominal ceasefire with c
 
 **International legal proceedings ongoing:** The ICJ case (South Africa v. Israel) continues; additional provisional measures hearings are scheduled for late 2026. Multiple states have expanded recognition of Palestinian statehood; Israel has expanded settlement construction in the West Bank simultaneously.
 
+### Update — June 2, 2026
+
+**Two Hamas military wing commanders killed in rapid succession (Al Jazeera / PBS News / The Hill, May–June 2026):** In the most significant military development in Gaza since the nominal ceasefire began, Israel killed the top two successive leaders of Hamas's military wing (the Qassam Brigades) within days of each other:
+
+1. **Izz-al-Din al-Haddad** — commander of Hamas's military wing — was killed on approximately **May 30, 2026** in a strike on western Gaza City. Hamas described the loss as "profound."
+2. **Mohammed Odeh** — al-Haddad's immediate successor as head of the Qassam Brigades, and a former Hamas intelligence chief — was killed in a subsequent Israeli airstrike on **northern Gaza City**. Odeh was killed along with his wife and two sons when the strike targeted the residential building where they were sheltering.
+
+The killing of two successive military wing commanders within days represents Israel's most operationally successful period of leadership targeting since the killing of Yahya Sinwar in October 2024. The Qassam Brigades is now without confirmed senior leadership for the second time in weeks — an unprecedented disruption to Hamas's command structure. However, Hamas has historically demonstrated resilience in replacing commanders, and the organization's decentralized cell structure means operational continuity in the short term.
+
+**Total death toll: 75,811 (as of May 3, 2026):** The cumulative death toll in the Gaza war reached **75,811** — comprising 73,770+ Palestinians and 2,039+ Israelis — per the Gaza Health Ministry and Israeli official figures as reported through May 2026. The Palestinian toll continues to rise from ongoing strikes despite the nominal ceasefire.
+
+**Israel controls 59% of Gaza Strip (updated assessment, June 2026):** The most current territorial assessment (revised from earlier 50–55% figures) places Israeli effective military control at **59% of the Gaza Strip** as of June 2026, confirming the direction of Netanyahu's 70% seizure order. The IDF has progressively pushed what negotiators call the "Yellow Line" — the ceasefire demarcation line — westward, incrementally expanding the Israeli military zone into central Gaza.
+
+**Washington Post diagnosis (June 2, 2026): "Ceasefires are stretching the term's meaning":** The Washington Post published a major analysis noting that Israel's "ceasefire" in Gaza, like the US-Iran ceasefire and the Lebanon ceasefire, has fundamentally redefined what the word means: a nominal halt to large-scale military operations while targeted killings, airstrikes on refugee areas, territorial expansion, and siege conditions continue unabated. The piece argues this creates a dangerous new norm — call any ongoing military operation a "ceasefire" to deflect international legal pressure while continuing military objectives.
+
+**Cumulative ceasefire violations: 2,073+ (updated):** Al Jazeera's Gaza Government Media Office count of 2,073 ceasefire violations (October 2025–March 2026) is now substantially higher given the additional Israeli operations in April–June 2026. The rate of violations has not slowed.
+
+**Humanitarian update — 1.2M displaced since March 18:** By October 2025, more than 1.2 million people had been newly displaced since March 18, 2025 alone (not counting the 1.9M peak displacement of the active war phase). As of late May 2026, 82% of Gaza was within an Israeli-militarized zone or under a displacement order — meaning the vast majority of Gaza's pre-war population of 2.3 million is living in areas where the IDF claims operational authority.
+
 ## Cross-Disciplinary Connections
 
 ### The Economics of a Frozen Conflict: Gaza Reconstruction and the Missing Market for Peace

@@ -337,6 +337,20 @@ Gold has performed as the classic geopolitical safe haven in 2026: rising during
 **Uranium and nuclear energy — geopolitical tailwind:**
 The collapse of Russia-West energy relationships (gas cutoffs, sanctions) has accelerated European and global nuclear energy investment. Uranium spot prices have risen as utility demand for long-term supply contracts increases. The North Korea DPRK-Russia technology exchange (including nuclear propulsion for submarines) and Iran's nuclear program both keep nuclear security/proliferation in the headlines — but from a commodity perspective, the civilian nuclear power investment cycle is on an upswing that supports uranium demand through the 2030s.
 
+### Update — June 2, 2026: Iran Breakdown Reverses Oil's Deal-Optimism Decline
+
+**Brent crude back above $99 on June 2 — the MOU collapse effect:**
+Iran's June 1 announcement stopping negotiations and threatening complete Hormuz closure + Bab al-Mandeb activation drove Brent from $95.77 (May 27 deal-optimism low) back to **$99.44** on June 2 — a 4.1% single-session move that reversed nearly all of the preceding week's price decline. This trade illustrates the asymmetric volatility of GPR-driven commodity moves: multi-week deal optimism → gradual price decline; single-session breakdown news → sharp re-spike.
+
+**The Bab al-Mandeb threat — compounding the Hormuz closure:**
+Iran's threat to also "activate" the Bab al-Mandeb Strait (already stressed by Houthi attacks since 2023) would compound the Hormuz closure with a second chokepoint restriction. The Bab al-Mandeb carries approximately 10% of global trade (including European-Asian shipping lanes); simultaneous restriction of both straits would affect ~25–30% of globally traded oil and LNG simultaneously. Goldman Sachs' scenario analysis for this case (unpublished but referenced in trading desk notes) implied Brent could reach $120–140+ if both chokepoints are effectively closed — back to the April 7 crisis peak.
+
+**Russian mass attack (June 2) — wheat futures effect:**
+Russia's June 2 mass drone strike (656 drones, 73 missiles) on Kyiv, Dnipro, Poltava, Kharkiv, and Zaporizhzhia adds energy infrastructure and agricultural pressure simultaneously. Each additional winter drone campaign that disrupts Ukrainian power generation affects: (1) grain elevator operations (requiring power for drying and storage); (2) port operations at Odesa (power-intensive grain loading cranes); (3) irrigation pump operations ahead of summer harvest. Chicago wheat futures remain structurally elevated above pre-war levels ($5.50–6.50/bushel range vs. ~$4.50 pre-2022 baseline), embedding a persistent Ukraine conflict risk premium.
+
+**Defense sector real assets — NATO spending multiplier (June 2):**
+NATO's formal 5% GDP commitment and the SIPRI $2.89T global military spending record directly imply a sustained demand surge for defense-related real assets: titanium (aircraft), rare earth elements (electronics/missiles), steel (naval vessels, armored vehicles), and explosives-grade ammonium nitrate. Rheinmetall's 700%+ share appreciation since 2022 is the equity expression of this commodity demand; the underlying real asset prices (specialty metals) have risen 20–40% over the same period. Investors seeking commodity exposure to the rearmament cycle can access it through titanium producers (VSMPO-AVISMA historically, now Western alternatives), rare earth mining (MP Materials, Lynas), and specialty steel manufacturers (SSAB, Salzgitter).
+
 ---
 
 ### Advanced Mechanics: Carbon Credits, Voluntary Markets, and the Emerging Green Asset Class

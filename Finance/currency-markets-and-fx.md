@@ -413,6 +413,20 @@ The US benefits from "exorbitant privilege" — the ability to borrow cheaply an
 
 ---
 
+### Update — June 2, 2026: Dollar Dynamics as Iran Deal Collapses and Russia Attacks Escalate
+
+**Dollar paradox — June 2, 2026:** The June 2 session illustrates the "stagflation premium" problem for the dollar. Iran's MOU breakdown announcement drove: (1) Brent crude +4.1% → inflationary impulse; (2) flight-to-safety demand → dollar strengthening. These forces partially offset: the dollar strengthened against EM currencies (standard risk-off) but faced upward pressure on US inflation expectations that complicates the Fed's policy stance. The EUR/USD cross is under pressure from the simultaneous Hormuz energy shock (hurting Europe more than the US as a larger oil importer per capita) and the Russia-Ukraine escalation (656 drones/73 missiles on June 2), both of which are Europe-proximate risks that weigh on the euro.
+
+**PKR dynamics — Pakistan's Iran mediation premium vs. structural fragility:** Pakistan's successful US-Iran mediation (April 2026) provided a partial but measurable PKR stabilization premium — the "geopolitical standing" effect on sovereign credit perception described in the India-Pakistan note. However, the June 1–2 collapse of the MOU negotiations undermines this premium: if the Iran deal fails, Pakistan's major diplomatic achievement evaporates, removing a key positive narrative for its IMF program discussions. The PKR/USD rate is therefore a real-time sentiment proxy for the Iran MOU's viability — a geopolitically unusual cross-currency relationship with no historical precedent.
+
+**De-dollarization acceleration: mBridge CBDC platform operational:**
+The BIS Innovation Hub's mBridge platform — co-developed by China, UAE, Saudi Arabia, and Hong Kong — is now processing real cross-border transactions in its pilot phase (2025–26). mBridge represents the first operational infrastructure that could allow major oil exporters and importers to settle energy transactions outside SWIFT and outside the US dollar clearing system. The strategic significance: Saudi Arabia, UAE, and China account for roughly 40% of global oil trade. If mBridge scales to handle even 10–20% of their bilateral settlements, the structural demand for dollars in oil trade — the core of the petrodollar system — begins to erode. This is not an immediate threat to dollar hegemony (transition costs are enormous, trust in yuan remains limited, and CIPS network effects lag SWIFT) but it is the first concrete infrastructure for an alternative that geopolitical actors with grievances against US sanctions policy are actively building.
+
+**US-China 30% tariff equilibrium — CNY implications:**
+The May 2026 US-China trade truce stabilizing tariffs at ~30% has provided near-term CNY stability. However, the USTR's Section 301 Phase One deal compliance investigation (launched October 2025) could trigger a new tariff escalation round if China is found to have violated its $200B purchase commitment. The forward FX market (3–6 month CNY NDFs) is pricing approximately 2–3% depreciation pressure — implying the market assigns meaningful probability to a renewed tariff spike before the 60-day trade truce expires. This is the "option value" component of the trade-truce framework: the current tariff level is not a permanent resolution but a negotiating stage, and FX markets price the probability distribution over all possible future tariff paths.
+
+---
+
 ## Related
 - [[macroeconomics-101]] — Monetary policy divergence as the primary driver of FX; Mundell-Fleming model; Triffin dilemma
 - [[fixed-income-deep-dive]] — CIP linking bond yields to FX forward rates; international bond investing and currency risk

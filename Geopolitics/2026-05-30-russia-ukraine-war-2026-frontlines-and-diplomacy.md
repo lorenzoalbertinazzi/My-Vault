@@ -133,6 +133,25 @@ The UN High Commissioner for Human Rights (OHCHR) has verified 60,659 civilian c
 
 **Pokrovsk as the critical pressure point:** The Pokrovsk sector in Donetsk Oblast has emerged as Russia's primary offensive focus as of late May–June 2026. Pokrovsk is a key logistical hub for the central Ukrainian front — its fall would allow Russia to threaten Dnipropetrovsk Oblast. The 40 daily breaching attempts reflect a grinding Russian effort to advance toward the city through village-by-village attrition.
 
+### Update — June 2, 2026
+
+**Russia's largest single-night attack of 2026: 656 drones + 73 missiles (Al Jazeera / Ukrinform, June 2, 2026):** Russia launched a mass combined strike overnight on June 1–2 involving **656 Shahed-type kamikaze drones and 73 cruise and ballistic missiles** — the largest combined aerial assault of the entire year, and possibly the largest single-night attack of the entire war. Ukrainian air defenses destroyed or electronically suppressed **602 drones and 40 missiles**, leaving roughly 54 drones and 33 missiles to impact targets. Primary target clusters: Kyiv, Dnipro, Poltava, Kharkiv, and Zaporizhzhia. The scale suggests a deliberate Russian decision to expend maximum drone inventory in a single night — possibly responding to Zelensky's recent warnings that Moscow was preparing a major offensive, attempting to demonstrate offensive reach ahead of any US-imposed ceasefire deadline.
+
+**June 2 casualties — 22 killed, dozens injured:** The overnight strikes killed at least **22 people**:
+- **Kyiv**: 6 killed, dozens injured (including 2 children) in the capital; residential buildings hit, emergency services responding across multiple districts
+- **Dnipropetrovsk region**: 16 killed, 36 injured (including children) — the deadliest single region hit in the night's attack; struck population centers in the central-east industrial belt
+- The total casualty figure for a single night rivals some of the worst-casualty attacks earlier in the war
+
+**US-set June deadline for peace deal:** Zelensky revealed in February 2026 that the Trump administration set a **June 2026 deadline** for a Russia-Ukraine peace deal, with the rationale that US congressional midterm elections would shift Washington's political attention from late summer onward. The June 2 attacks — occurring during the final days of this self-imposed window — demonstrate that Russia has not reduced offensive pressure in response to diplomatic expectations; if anything, the massive strike may be intended to present the US with a fait accompli of resumed escalation.
+
+**3-day ceasefire agreement (May 2026):** Trump announced in May 2026 that both Russia and Ukraine had agreed to his request for a **3-day ceasefire** and prisoner exchange, describing it as potentially "the beginning of the end" of the war. However, the ceasefire either expired or broke down — the June 2 mass strike came immediately after any such pause. The Trump administration's ceasefire diplomacy (led by Jared Kushner, Steve Witkoff, and Secretary of State Marco Rubio) has not yet produced a durable halt to hostilities.
+
+**Budanov: "ending hostilities before winter is realistic":** Kyrylo Budanov, head of Ukraine's military intelligence (HUR), stated that ending hostilities before the 2026 winter is "a realistic possibility" — the most optimistic public assessment from a senior Ukrainian official in years. This statement, made amid the ongoing June 2 attacks, may reflect back-channel information about Russian willingness to negotiate rather than battlefield conditions alone. If accurate, a ceasefire by October–November 2026 would constitute a major diplomatic event.
+
+**Total Russian losses reach 1,366,910 (Ukrainian General Staff, June 2, 2026):** The cumulative Russian personnel casualty figure rose to **1,366,910** as of June 2 — an increase of approximately 1,440 in 24 hours (consistent with the ~1,410/day rate reported June 1). Ukraine also confirmed striking **15 Russian oil-refining and fuel facilities** in the January–May 2026 period (down from 18 facilities reported by the Unmanned Systems Forces for May alone — these figures reflect different counting periods). Russia's petroleum logistics infrastructure inside Russian territory is now a systematic target of Ukrainian long-range strikes.
+
+**Strategic paradox of June 2, 2026:** The June 2 mass strike and the simultaneous diplomatic messaging create a characteristic pattern of this conflict phase: Russia launches its largest attacks of the year while US-brokered ceasefire talks are at their most advanced. The pattern — escalate during negotiation — reflects both sides' calculations that the terms of any eventual ceasefire will reflect the frontline situation at the moment of signing. Russia's massive drone expenditure is simultaneously a military operation and a diplomatic signal: it demonstrates that Russia's war economy can sustain mass drone production, and that Russia will not enter a ceasefire from a position of military weakness.
+
 ## Cross-Disciplinary Connections
 
 ### Commodity Markets and the Ruble's War-Financed Stability

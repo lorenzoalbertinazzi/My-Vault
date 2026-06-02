@@ -431,6 +431,32 @@ The first half of 2026 represents the highest-stakes real-world test of geopolit
 - The Russia reserve freeze ($300B, 2022) permanently altered sovereign reserve composition: China, Saudi Arabia, UAE, India are diversifying reserves away from dollar assets faster than at any point since Bretton Woods
 - De-dollarization is not replacing the dollar's reserve status in the short term but is creating a structural second tier of non-dollar bilateral trade settlement that reduces dollar demand at the margin
 
+### Update — June 2, 2026: Iran MOU Collapses — Adverse Scenario Risk Re-Prices
+
+**June 2 market data — Iran breakdown triggers oil re-pricing:**
+- Brent crude: **$99.44/barrel** (+4.1% on June 2) — reversing most of the deal-optimism decline from $138 peak
+- WTI: ~$93/barrel (estimated)
+- Trigger: Iran's June 1 announcement that it would stop negotiations and "completely block" the Strait of Hormuz + Bab al-Mandeb
+
+**The volatility structure of oil GPR:**
+The June 2 price action illustrates the asymmetric volatility structure of geopolitical risk in oil markets. The move from $95.77 to $99.44 (+3.67) on one negative diplomatic headline confirms what GPR theory predicts: **geopolitical risk premium embeds faster (hours) than it unwinds (weeks)**. The May 27–30 period saw Brent fall from its ceasefire-hope plateau over several days on accumulating MOU optimism; the June 1–2 collapse reversed that decline in under 48 hours. The practical implication for energy risk managers: hedging against GPR reversal (buying upside protection in oil when it falls on diplomatic optimism) has asymmetric positive expected value in active conflict zones because the political process is more fragile than markets price.
+
+**IMF adverse scenario now the base case for oil (June 2 assessment):**
+The IMF's April 2026 WEO identified an "adverse scenario" (global growth 2.5%, inflation 5.4%) explicitly contingent on sustained Hormuz disruption. With Iran threatening to "completely close" the Strait (June 1) and the CNN "94 days of paralysis" analysis (June 2), the adverse scenario is becoming the baseline rather than the downside case. The critical distinction for risk models: the IMF's reference forecast (3.1% growth) assumed a Hormuz normalization within Q2 2026; each additional week of closure shifts probability mass toward the adverse scenario and further into the severe (2.0% growth, >6% inflation) tail.
+
+**GPR cascade across asset classes (June 2 stress test):**
+| Asset | June 2 move | GPR interpretation |
+|---|---|---|
+| Brent crude | +4.1% | Direct Hormuz risk re-pricing |
+| US Treasuries 10Y | -8 bps (estimated) | Flight-to-safety offsetting inflation |
+| USD/EUR | USD strengthening | Dollar risk-off demand |
+| Defense ETFs | +1.5–2% (estimated) | Conflict duration extension bet |
+| European equity | -0.8% (estimated) | Growth-risk aversion |
+| Gold | +0.7% (estimated) | Macro uncertainty safe haven |
+
+**The "94 days" threshold — why it matters for market psychology:**
+CNN's "94 days of Hormuz paralysis" framing (June 2) is significant not just as a factual milestone but as a market psychology anchor. The 90-day threshold in financial risk modeling is the standard boundary between "acute disruption" (covered by business continuity plans) and "structural disruption" (requiring permanent supply-chain restructuring decisions). At 94 days, corporate procurement managers in Europe and Asia are now making permanent — not temporary — supply-chain decisions: sourcing alternative petro-chemical suppliers, signing long-term Cape of Good Hope shipping contracts, and writing off Gulf-sourced inventory planning. These decisions create supply-chain restructuring costs that persist even after Hormuz reopens, representing a permanent deadweight loss to global trade efficiency that the current oil price level only partially captures.
+
 ---
 
 ### Advanced Mechanics: Portfolio Construction Under Geopolitical Risk

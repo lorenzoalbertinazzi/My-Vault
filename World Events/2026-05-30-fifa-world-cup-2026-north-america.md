@@ -105,6 +105,21 @@ This represents a cultural fusion of global football and American entertainment 
 
 **Euronews groups and fixtures guide published (May 30, 2026):** All 48 teams have been drawn into 12 groups of 4; group stage runs June 11–27. The expanded format means the group stage now occupies 16 days (vs. 12 in the 32-team format), extending the tournament's commercial footprint.
 
+### Update — June 2, 2026
+
+**Final squad submission deadline — June 2, 2026 (FIFA):** Today is the FIFA deadline for all 48 national teams to submit their official 26-man squads. Squad lists are being published throughout the day, with official FIFA confirmation to follow. This represents the formal end of the pre-tournament preparation phase; all injuries, late withdrawals, and roster controversies will crystallize today.
+
+**Iran in the World Cup — geopolitical overlay:** Iran has qualified for the 2026 World Cup and plays in the group stage — creating an extraordinary geopolitical situation where the same country engaged in active military conflict with the US (ceasefire from April 2026) is competing at a tournament hosted partly in the United States. FIFA regulations prohibit political discrimination against participating nations; the US is obligated to issue visas to the Iranian team and official party. The Iran World Cup delegation's presence on US soil during an active ceasefire negotiation — with the MOU negotiations having collapsed on June 1 — adds a unique diplomatic dimension to this tournament that has no precedent in World Cup history.
+
+**Security planning — unprecedented scale:** With 48 nations, 104 matches, and approximately 1.5 million international visitors expected, the 2026 World Cup represents the largest security operation in US sporting history — larger than the 1994 World Cup (which occurred before the 9/11-era security transformation) and larger than any Super Bowl. The FBI, DHS, Secret Service, and local law enforcement are coordinating a multi-agency security framework across 16 US venues, three countries, and 35 host cities. The geopolitical context — ongoing US-Iran tensions, Israel-Palestine conflict, and Russia-Ukraine war all with participating nations — elevates the terrorism threat assessment beyond previous tournaments.
+
+**Group stage schedule highlights (opening June 11):**
+- **Group A (June 11 opener):** Mexico vs. South Africa at Estadio Azteca, Mexico City — the most historically significant stadium in World Cup history
+- **USA (Group E):** United States vs. Paraguay at venue TBC — host nation's opening match
+- **Argentina vs. Algeria:** Defending champions (Argentina) in a high-profile Group J opener
+- **Group B:** Canada vs. Bosnia and Herzegovina — Canada's home tournament debut as a competitive side
+- The full group-stage schedule runs through June 27, with knockout rounds beginning July 4 (symbolically significant US date for the Round of 32)
+
 ## Cross-Disciplinary Connections
 
 ### Sports Economics and the Mega-Event Commercial Model
