@@ -3,7 +3,7 @@ title: "The Global AI Governance Crisis: Competing Frameworks for Regulating Tra
 date: 2026-05-30
 tags: [world-events, AI, artificial-intelligence, regulation, governance, EU-AI-Act, UN, digital-policy, technology-law, geopolitics, safety, Brussels-effect, GPAI, anthropic, openai, compute-governance, alignment, Council-of-Europe, OECD-AI-Principles, Hiroshima-AI-Process]
 source: UN Resolution A/RES/79/325 (2025); EU AI Act (Official Journal, Aug 2024); Council of Europe Framework Convention (Sep 2024); NIST AI Risk Management Framework; G7 Hiroshima AI Process; IAPP compliance tracker
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -261,9 +261,25 @@ A major AI-caused catastrophe motivates binding multilateral governance analogou
 
 **Strategic shift: AI governance as industrial policy (Supertrends analysis):** The most significant framing shift in AI governance in 2026 is the recognition that AI regulation is simultaneously **industrial policy** — export controls on advanced chips (implemented by the US since 2022), restrictions on model training data, and sovereignty-driven cloud strategies are fragmenting the global AI landscape. We are witnessing a shift from "AI governance as ethics" to "AI governance as strategic competition." The EU AI Act, US chip controls, and China's domestic AI regulation framework are three nodes of an emerging bifurcated global AI governance system.
 
-## Related
+## Cross-Disciplinary Connections
 
-- [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Technical context for governance challenges
-- [[Tech & AI/llm-training-and-scaling-laws]] — Capability trajectory being governed
-- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — AI as geopolitical competition axis
-- [[World Events/2026-05-30-pope-leo-xiv-magnifica-humanitas-ai-encyclical]] — Normative/ethical dimensions
+### AI Regulation as Industrial Policy: The Brussels Effect and its Economic Limits
+
+The EU AI Act represents the most significant exercise of the "Brussels Effect" since GDPR — and its economic consequences are similarly double-edged. GDPR (effective May 2018) imposed compliance costs of approximately €2 billion annually on EU companies in its first year, while generating a new multi-billion compliance services industry. The EU AI Act is likely to produce a comparable pattern at larger scale: the Gartner projection of $492 million in AI governance platform spending in 2026, growing to $1 billion+ by 2030, is essentially a measure of mandatory compliance expenditure created by regulatory fiat. For US AI companies — OpenAI, Anthropic, Google DeepMind, Meta — GPAI obligations (training data disclosure, systemic risk assessments, adversarial testing) represent non-trivial compliance costs and, more significantly, potential intellectual property disclosure requirements that their competitive strategies depend on avoiding. The €35 million (or 7% of global turnover) penalty for prohibited practices creates a real-time deterrence constraint: a company with $100 billion in global revenue faces a maximum $7 billion penalty for a single prohibited-practice violation in the EU market. Whether these penalties are ever enforced against US majors remains to be seen — the EU's track record on GDPR enforcement against major US tech companies has been inconsistent — but the liability ceiling shapes risk management calculations.
+
+The deeper economic question is whether the Brussels Effect actually transfers EU-designed safety norms globally or merely bifurcates the AI ecosystem along regulatory lines. GDPR's global diffusion was facilitated by the fact that privacy protections — even costly ones — created competitive differentiation (Apple's privacy-as-brand-value strategy). AI safety compliance may not have the same consumer-facing brand value, making global diffusion less automatic. If the US AI Act vacuum persists and China continues its governance-free AI exports to the Global South, the Brussels Effect may produce a three-tier global AI market rather than convergence: EU-compliant (expensive, safe-labeled), US-based (less regulated, more capable at the frontier), and Chinese-origin (cheapest, no governance requirements). This market structure would be commercially rational for each party but globally suboptimal for safety, precisely replicating the dynamic that produced pharmaceutical quality tier divergence before international standards harmonization.
+
+### Compute Governance as a Strategic Chokepoint: The ASML-NVIDIA Parallel
+
+The technical dimension of AI governance most consequential for geopolitics is compute governance — the control of the computational hardware on which AI systems are trained and deployed. NVIDIA's approximately 80% share of the AI training chip market (H100/H200/B200 series) and ASML's monopoly on extreme ultraviolet (EUV) lithography machines (required to manufacture leading-edge semiconductors) create two chokepoints that function as the physical substrate of AI governance. US export controls restricting NVIDIA's advanced chips to China are, in effect, the most consequential AI governance action any government has taken — more impactful than any regulatory framework — because they directly limit which actors can train frontier AI systems. The EU AI Act's 10²⁵ FLOP compute threshold for "systemic risk GPAI" is not arbitrary: it is calibrated to GPT-4-class training runs, acknowledging that compute is the binding constraint that makes the threshold meaningful. When compute can be controlled at the hardware level (ASML machines are manufactured only in the Netherlands; NVIDIA chips only in Taiwan via TSMC), regulatory frameworks that operate at the software or deployment level are secondary instruments. The primary AI governance lever is semiconductor export control — and it is wielded not by the EU AI Office but by the US Department of Commerce and the Dutch government.
+
+## Related
+- [[agentic-ai-and-multi-agent-systems]] — Technical context for governance challenges; Singapore's agentic AI framework
+- [[ai-safety-and-alignment]] — Alignment research as the technical foundation for safety governance; constitutional AI
+- [[2026-05-27-us-china-great-power-competition]] — AI as geopolitical competition axis; chip export controls
+- [[2026-05-27-us-china-strategic-competition]] — Semiconductor chokepoint strategy; ASML and TSMC as governance instruments
+- [[2026-05-30-pope-leo-xiv-magnifica-humanitas-ai-encyclical]] — Normative/ethical dimensions; Catholic social teaching on AI
+- [[2026-05-30-china-taiwan-strait-military-tensions]] — TSMC as the physical substrate of AI governance; Taiwan risk as AI governance risk
+- [[2026-05-30-china-defense-ministers-death-sentences]] — PLA AI procurement corruption; military AI governance failures
+- [[geopolitical-risk-premium-and-markets]] — AI governance compliance market ($492M/year); regulatory risk premium in AI sector
+- [[real-assets-reits-and-commodities]] — Data center energy consumption; AI governance as energy infrastructure policy

@@ -3,7 +3,7 @@ title: Prompt Engineering — Techniques and Principles
 date: 2026-05-26
 tags: [ai, LLM, prompt-engineering, chain-of-thought, few-shot, zero-shot, in-context-learning, tree-of-thoughts, ReAct, DSPy, extended-thinking, system-prompts, structured-output, jailbreaking, constitutional-prompting, meta-prompting, self-consistency]
 source: "Wei et al. (2022) Chain-of-Thought Prompting Elicits Reasoning in LLMs (arXiv:2201.11903); Yao et al. (2022) Tree of Thoughts (arXiv:2305.10601); Yao et al. (2022) ReAct (arXiv:2210.03629); Brown et al. (2020) Few-Shot Learners — GPT-3 (arXiv:2005.14165); Wang et al. (2022) Self-Consistency CoT (arXiv:2203.11171); Anthropic Prompt Engineering Guide (2024)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -496,11 +496,22 @@ Prompt injection attacks — where malicious content embedded in processed docum
 
 The extended thinking paradigm — where models like o1/o3 and Claude with extended thinking allocate more tokens to internal reasoning before producing a final answer — connects to a deep insight in the economics of decision-making. The distinction between fast, automatic thinking (System 1) and slow, deliberate reasoning (System 2) in [[cognitive-biases]] maps directly onto the distinction between standard LLM inference (fast, one-pass generation) and extended thinking (slow, iterative, self-correcting). The empirical finding that extended thinking dramatically improves performance on complex tasks is consistent with the dual-process theory prediction: System 2 reasoning is more reliable on tasks requiring logical consistency and multi-step inference, at the cost of being slower and more resource-intensive. The "thinking budget" control — letting users explicitly allocate how much System-2 computation to spend on a query — is an instance of the economic principle of optimal resource allocation under constraints, analyzed in [[macroeconomics-101]]: simple queries should use minimal thinking budget (marginal benefit of more thinking is low), while complex mathematical proofs benefit from generous budgets (marginal benefit remains high over many thinking tokens).
 
+### Prompting, Dopamine, and the Neuroscience of Effective Communication
+
+The neuroscience of reward and engagement described in [[dopamine-reward-systems-neuroscience]] illuminates both why effective prompting works and how to design prompts that elicit high-quality responses. The dopamine system's response to **prediction error** — firing more strongly when outcomes exceed expectations, and suppressing below baseline when expectations are violated — explains the surprising power of specificity in prompting. When a prompt precisely specifies the desired output format, tone, and scope, the model generates toward a narrow target; the "prediction error" between a vague expectation and the specific delivery is minimized. But when a prompt deliberately creates a contrast between the established context ("Most analysts believe X") and the requested analysis ("Now, argue for the contrary view"), it creates the cognitive equivalent of a positive prediction error — the model must generate content that is specifically discontinuous with the established prior, which exercises higher-level reasoning circuits.
+
+The parallel to memory formation is equally instructive. The [[memory-systems-and-learning-science]] literature establishes that **elaborative interrogation** — asking "why is this true?" rather than simply stating facts — dramatically improves retention. Applied to prompting: asking the model "Why does this argument hold? What are the mechanisms?" before asking for a conclusion produces richer, more accurately grounded answers than asking for the conclusion directly. This is because the intermediate reasoning steps force the model to activate the associative knowledge structure underlying the claim, rather than retrieving a surface-level pattern from its training distribution. Chain-of-thought prompting is, in effect, a form of elaborative interrogation applied to the model's own reasoning process. Understanding this mechanism — that quality prompting elicits mechanistic reasoning rather than surface pattern completion — is what separates expert prompt engineers from those who discover effective prompts through trial and error without understanding why they work. See [[llm-training-and-scaling-laws]] for how the RLHF and SFT training that shapes model behavior determines what prompt patterns are reinforced, and [[agentic-ai-and-multi-agent-systems]] for how prompt engineering scales into the system prompt design that governs autonomous agent behavior. See [[reinforcement-learning-from-human-feedback]] for how the reward signals during training are shaped by human preference judgments — which means the "effective" prompting patterns the model has learned to respond well to are precisely those that generated the highest preference ratings from human raters during training.
+
 ## Related
 - [[transformer-architecture]]
 - [[retrieval-augmented-generation]]
 - [[machine-learning-fundamentals]]
+- [[llm-training-and-scaling-laws]] — RLHF and SFT training determine what prompt patterns produce high-quality completions
+- [[reinforcement-learning-from-human-feedback]] — Human rater preferences shape which prompt-response patterns are reinforced
+- [[agentic-ai-and-multi-agent-systems]] — System prompt design at scale; agentic task decomposition via prompting
 - [[vector-databases-and-embeddings]]
+- [[dopamine-reward-systems-neuroscience]] — Prediction error, reward expectation, and the neuroscience of effective communication
+- [[memory-systems-and-learning-science]] — Elaborative interrogation; encoding specificity; why CoT improves recall quality
 - [[cognitive-biases]]
 - [[cialdini-influence]]
 - [[behavioral-finance-and-investor-psychology]]
