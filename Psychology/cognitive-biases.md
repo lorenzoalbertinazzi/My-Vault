@@ -3,7 +3,7 @@ title: Cognitive Biases — A Practical Map
 date: 2026-05-26
 tags: [psychology, cognitive-biases, heuristics, decision-making, kahneman, tversky, anchoring, availability-heuristic, representativeness, confirmation-bias, hindsight-bias, dunning-kruger, System-1, System-2, behavioral-economics]
 source: "Kahneman (2011) Thinking, Fast and Slow; Tversky & Kahneman (1974) Judgment Under Uncertainty: Heuristics and Biases, Science; Thaler (1980) Toward a Positive Theory of Consumer Choice, JEconBehav; Ariely (2008) Predictably Irrational"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 enriched: 2026-05-29
 ---
 
@@ -355,6 +355,58 @@ The most important intellectual challenge to the Kahneman-Tversky framework come
 **The Resolution**: The Kahneman and Gigerenzer positions are more complementary than contradictory. Kahneman's System 1 heuristics are systematically exploited in laboratory settings designed to make the base rates of real-world environments artificially salient (the doctor's cab example; the Linda problem). Gigerenzer's heuristics are tested in naturalistic settings where the heuristic's ecological validity is high. The practical synthesis: simple heuristics work well in their native ecological domain; they fail (in predictable, documentable ways) when applied to contexts outside that domain. The challenge for the practitioner is identifying which context they are in — a skill that requires exactly the metacognitive capacity that the biases program aims to develop.
 
 **Prospect Theory's Durability**: The one element of the heuristics-and-biases program that Gigerenzer explicitly does not challenge is Prospect Theory's core findings. Loss aversion (losses hurt ~2–2.5× more than equal gains feel good), the probability weighting function (overweighting small probabilities, underweighting large ones), and reference-point dependence have been replicated across cultures, species (non-human primates show loss aversion), and in field settings with real stakes. These are as solid as psychological findings get.
+
+---
+
+### Common Misconceptions
+
+**Misconception 1: "Knowing about a bias means you're protected from it."**
+This is the bias blind spot (Pronin, Lin, and Ross, 2002, JPSP): people consistently rate themselves as less susceptible to cognitive biases than other people, even after being given specific feedback demonstrating the bias in their own judgments. The researchers found this pattern in 6 of 8 biases tested, including anchoring, representativeness, and the planning fallacy. The mechanism: we introspect on our own reasoning processes and find no obvious bias (because biases often operate below the level of conscious access), which we take as evidence of absence. For others, we observe only their behavior, which appears biased. The corrective: measure outcomes (calibration scores, prediction track records, decision audit trails) rather than relying on introspective assessments of rationality.
+
+**Misconception 2: "System 2 thinking reliably corrects System 1 errors."**
+Kahneman himself has emphasized that System 2 is "lazy" — it is effortful and often fails to engage or engage sufficiently. Multiple studies demonstrate that System 2 processing, when engaged, frequently *rationalizes* System 1 outputs rather than *correcting* them. Jonathan Haidt's "moral dumbfounding" research (2001) showed that people asked to explain why they found a harmless but taboo act morally wrong generated post-hoc rationalizations that collapsed under scrutiny — but they remained as confident in their moral judgment as before. The implication for debiasing: activating System 2 by telling people to "think more carefully" does not reliably reduce bias; the deliberate process must be targeted to the specific bias-generating mechanism. Pre-mortems work because they force consideration of failure before investment in an outcome; a simple instruction to "think about whether you're right" does not overcome anchoring.
+
+**Misconception 3: "Cognitive biases are failures of intelligence — smarter people are less biased."**
+The relationship between intelligence and bias susceptibility is more nuanced and often the reverse of this intuition. West, Meserve, and Stanovich (2012, J Pers Soc Psychol, N=482) found that higher cognitive ability (measured by SAT scores and cognitive reflection test) *did not* reduce susceptibility to myside bias (evaluating arguments more favorably when they support prior beliefs) and actually *increased* susceptibility to some framing effects, because more intelligent people are better at finding arguments for any position they are already inclined to hold. The pattern: intelligence improves performance on tasks where there are objectively correct answers and the person is motivated to find them; it does not reliably improve performance on tasks where motivated reasoning is operating. High intelligence coupled with strong prior beliefs produces more sophisticated rationalization, not less bias.
+
+**Misconception 4: "The replication crisis has invalidated the cognitive biases research program."**
+This overstates the replication failures significantly. The Open Science Collaboration's 2015 replication project found that ~61% of psychology studies failed to replicate at the same effect size, but the failures were not uniformly distributed. The core heuristics-and-biases findings — loss aversion, anchoring, availability heuristic, representativeness, hindsight bias, overconfidence — have replicated consistently across many independent labs and cultural settings. What has not replicated (ego depletion, stereotype threat in multiple domains, some priming effects) are second- and third-generation findings that extended the original program. The practical reader should distinguish between Kahneman and Tversky's original empirical demonstrations (high replication status) and derived claims from smaller studies (variable replication status).
+
+**Misconception 5: "Cognitive biases are primarily about information processing — emotions don't matter."**
+The neuroscientific evidence shows that the separation of "cognitive" and "emotional" in bias research is largely artificial. Damasio's somatic marker hypothesis (1994) demonstrated through vmPFC lesion patients that *removing* emotional responses to outcomes produces *worse* decision-making, not better — decisions become paralyzed or arbitrary without the affective signals that flag important considerations. Loss aversion is implemented neurologically in the amygdala (emotional alarm system) and insula (interoceptive monitoring), not in cortical reasoning areas. The bias research program initially framed biases as cognitive errors (failures of rational calculation); neuroscientific research reveals they are better understood as errors in *affective-cognitive integration* — the emotional system's adaptive responses being deployed in contexts for which they did not evolve.
+
+---
+
+### Worked Example: Applying the Debiasing Checklist to a Real Investment Decision
+
+**Scenario**: You are an individual investor in September 2021. You are considering whether to buy shares in a publicly traded company (let's call it "GreenTech") whose stock price has risen from $20 to $180 over the past two years, driven by a compelling narrative about clean energy transition. You feel excited about the opportunity. A friend just told you she made 40% returns on a similar company.
+
+**Step 1 — Anchoring Check**
+Question: What is anchoring my reference price?
+- Observation: The current $180 price is anchored to the recent high ($190), making it feel "cheap" at a 5% discount. But the actual reference anchor should be the company's fundamental value, not recent price history.
+- Corrective: Pull up the 5-year historical price. In 2018, GreenTech traded at $15. The $180 is not "below its peak" — it is at 12× its 3-year-ago price. Ask: what has changed in the business to justify a 12× price increase? Revenue? Cash flow? Competitive position?
+
+**Step 2 — Availability Heuristic Check**
+Question: Am I overweighting recent, vivid examples?
+- Observation: Your friend's 40% return is highly available (recent, personal, positive). The mental "sample" of clean energy investments you are drawing on is dominated by winners (survivors). The companies that lost 90% of their value in the 2000 tech bubble, the 2007–2008 clean energy bubble, and the 2021 EV/SPAC collapse are not in your mental sample.
+- Corrective: Deliberately generate counter-examples: names of similar companies that have failed. Research the base rate: in the 5 years following a 10× gain, what percentage of growth stocks outperform vs. revert? (Academic answer: strongly revert — Lakonishok et al., 1994.)
+
+**Step 3 — Narrative Fallacy / Representativeness Check**
+Question: Am I paying for the story rather than the business?
+- Observation: The clean energy narrative is coherent, compelling, and feels inevitable. But compelling narratives about inevitable trends have historically been the worst investment outcomes: the internet was a real revolution in 2000 (Shiller); smartphones were a real revolution in 2007; clean energy *is* a real trend. The question is whether the price already reflects the trend — often it over-reflects it.
+- Corrective: What would the company need to achieve in revenue and profit over the next 10 years to justify the current price at a historically normal valuation multiple? Run the numbers: GreenTech has $200M revenue, trades at $5B market cap (25× revenue). To justify this at maturity (15× earnings), it needs to produce $333M net income, requiring perhaps $2B revenue at 15% margin. Can it grow 10× in 10 years? At what probability?
+
+**Step 4 — Confirmation Bias Check**
+Question: What would make me *not* buy this?
+- Observation: Without deliberately generating counter-arguments, research will naturally confirm the existing positive view. The brain seeks confirming evidence.
+- Corrective: Spend 30 minutes specifically seeking the bearish case. Read short-seller analyses. Read analyst downgrades. Read the most recent earnings call Q&A section (where the most probing questions arise). Rate the counter-arguments on their merits — not whether they change your ultimate conclusion, but whether you engaged with them seriously.
+
+**Step 5 — Overconfidence Check**
+Question: What is my actual confidence in this outcome, and is it calibrated?
+- Observation: If you feel "pretty sure" this is a good investment, that feeling should be tested. Tetlock's research shows that even expert forecasters' 80% confidence intervals contain the true answer only ~45% of the time.
+- Corrective: Express a specific prediction with explicit probability: "I think there is a 60% probability that this investment outperforms the S&P 500 by at least 10% over the next 3 years." Track this prediction. If you cannot assign a probability, your "confidence" is verbal rather than numerical and should not be trusted.
+
+**Decision outcome**: After the debiasing checklist, the investment may still be attractive — but you are now evaluating it more honestly. The checklist does not produce pessimism; it produces calibration.
 
 ## Related
 - [[cialdini-influence]] — Influence principles are engineered triggers for specific cognitive biases

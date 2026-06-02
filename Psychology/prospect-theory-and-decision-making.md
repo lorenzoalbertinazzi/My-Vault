@@ -3,7 +3,7 @@ title: Prospect Theory and Decision-Making Under Uncertainty
 date: 2026-05-30
 tags: [psychology, behavioral-economics, prospect-theory, kahneman, tversky, decision-making, loss-aversion, cognitive-biases, reference-dependence, value-function, probability-weighting, endowment-effect, status-quo-bias, disposition-effect, framing-effects]
 source: "Kahneman & Tversky (1979) Prospect Theory: An Analysis of Decision Under Risk, Econometrica; Tversky & Kahneman (1992) Advances in Prospect Theory: Cumulative Representation of Uncertainty, J Risk Uncertainty; Thaler (1980) Toward a Positive Theory of Consumer Choice, JEconBehav; Kahneman (2011) Thinking, Fast and Slow"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -258,6 +258,54 @@ Loss aversion has profound implications for negotiation:
 - **Framing concessions:** "I'm giving you X" (gain frame for the counterparty) is less effective than "I'm giving up X" (loss frame for yourself, implying sacrifice) — the latter triggers reciprocity norms.
 - **The BATNA (Best Alternative to a Negotiated Agreement):** Your BATNA defines your reference point. A party with a poor BATNA experiences the prospect of losing the deal as a "loss from agreement" — making them more risk-seeking and willing to accept worse terms rather than walk away.
 - **Deadline effects:** As deadlines approach, the potential loss of a deal grows larger in psychological weight, inducing concessions — consistent with loss aversion over the reference point of "deal exists."
+
+---
+
+### Common Misconceptions
+
+**Misconception 1: "Loss aversion means people always avoid risk."**
+Loss aversion does not produce uniform risk-aversion — it produces *asymmetric* risk preferences that depend on whether the decision is framed in the gain or loss domain. The Fourfold Pattern (Tversky and Kahneman, 1992) demonstrates this clearly: in the loss domain with small probabilities (e.g., 5% chance of losing $200), people are *risk-seeking* — they prefer the gamble to the certain small loss, because the small certain loss feels worse than the gamble's expected value would suggest. This is why people buy lottery tickets despite negative expected value (small probability gain domain, risk-seeking) AND why people fail to cut investment losses quickly (moderate probability loss domain, risk-seeking to avoid crystallizing the loss). Understanding the fourfold pattern rather than the simplified "loss aversion = risk aversion" is essential for applying prospect theory correctly.
+
+**Misconception 2: "Loss aversion is always irrational and should be overcome."**
+Loss aversion evolved for good reasons: in environments with survival stakes, losses (of food, shelter, territory, allies) were often irreversible while equivalent gains were not. The asymmetry in the value function reflects a genuine asymmetry in the consequences of errors: a false positive (treating a gain as smaller than it is) is much more recoverable than a false negative (treating a loss as smaller than it is). In domains where losses are genuinely catastrophic and irreversible — personal security, health, concentrated financial risk — loss aversion is *calibratively appropriate*: it prevents taking risks whose downside is disproportionately severe. The problem arises when the evolved mechanism is applied in domains where the stakes are not survival-relevant (a small financial loss, a social embarrassment, a minor status setback) and the costs of loss aversion (missed opportunities, poor risk calibration) exceed the benefits of protection.
+
+**Misconception 3: "Reference points are stable and obvious."**
+Reference points are psychologically constructed, often ambiguous, and manipulable — which is precisely why they are so consequential for negotiation, marketing, and policy. A salary offer feels like a $5,000 gain if the reference point is your current salary and like a $5,000 loss if the reference point is what you expected to be offered. Multiple simultaneous reference points can apply (current salary, industry median, peer salaries, job offer prior) and may conflict. Skilled negotiators exploit reference point manipulation: the anchor sets a reference point that makes subsequent numbers feel like gains or losses relative to the anchor rather than to the true alternatives. The Kőszegi-Rabin model's most important insight is that expectations-based reference points are forward-looking (what did you expect?), not just backward-looking (what do you have?), making reference point determination a dynamic process rather than a fixed starting state.
+
+**Misconception 4: "Prospect Theory is universally valid — it describes all human decision-making."**
+The theory's empirical scope, while broad, is bounded by important conditions. Kahneman and Tversky developed the theory from choice problems involving explicitly stated probabilities — a format rare in everyday decision-making, where probabilities are estimated rather than given. Prospect Theory's predictions are most robust for: decisions with described (stated) probabilities, moderate-stakes decisions (not survival-level or trivially small stakes), and individual choice contexts. The predictions weaken for: experienced (repeated) decisions with learned probabilities (where people may converge toward more rational behavior through feedback), very high stakes (where deliberate analysis overrides heuristic processing), and group decisions (where social dynamics introduce considerations absent from the individual choice model). The WEIRD (Western, Educated, Industrialized, Rich, Democratic) population problem is also relevant: loss aversion magnitude varies across cultures (λ estimates range from ~1.5 in some East Asian samples to ~2.5 in US samples), suggesting the specific parameter values are not universal even if the qualitative pattern is.
+
+---
+
+### Worked Example: Investment Decision Under Prospect Theory
+
+**Scenario**: You hold a stock (let's call it "MedTech") purchased at $100/share. Current price is $75/share. You're evaluating whether to hold or sell. Simultaneously, you're considering purchasing a second stock ("BioFund") with expected return of 15% and standard deviation of 25%.
+
+**Step 1: Identify the reference point**
+For the existing holding: your reference point is the purchase price, $100. Current position is in the loss domain: you are at $75, which is $25 below reference ($100). Reference point alternatives to consider:
+- Your purchase price ($100) — most common psychological reference
+- The stock's 52-week high ($110) — produces even larger perceived loss
+- What you'd earn in an index fund over the same period (e.g., +8% → $108) — produces an opportunity cost loss frame
+- Break-even ($75) — if you have psychologically "reset" to current price as reference
+
+**Step 2: Apply the value function**
+Under prospect theory's value function with α ≈ 0.88 and λ ≈ 2.25:
+- Value of the $25 loss from reference: v(-25) = -λ × (25)^α = -2.25 × (25)^0.88 = -2.25 × 19.1 ≈ -43.0 utility units
+- This is larger in absolute value than the utility of an equivalent $25 gain: v(+25) = (25)^0.88 ≈ 19.1 utility units
+
+**Step 3: The disposition effect prediction**
+Prospect Theory predicts you will hold the losing position too long (the "disposition effect"): selling at $75 crystallizes a $25 loss and produces v(-25) = -43.0 utility. Holding maintains the *hope* of returning to the reference point ($100) with a gamble that could eliminate the loss. The mathematical expression: if you believe there's a 40% chance MedTech returns to $100 and 60% chance it falls to $50, the expected value of holding is:
+
+EV(hold) = 0.4 × v($0, gain relative to current) + 0.6 × v(-$25, further loss) 
+≈ 0.4 × 0 + 0.6 × -43.0 = -25.8 utility units vs. selling for -43.0 utility units
+
+This makes holding *feel* better despite the negative expected outcome — because the value function in the loss domain is concave (risk-seeking), the gamble's prospect theory value exceeds the certain loss's value even at a below-expected-value probability. This is the Prospect Theory mechanism behind portfolio managers holding losers for too long.
+
+**Step 4: The rational response**
+The rational response is to evaluate the decision based on current price ($75) as the *true* reference point, asking: "If I received $75 today and were deciding freshly whether to invest in MedTech, would I buy it at this price?" If yes, hold. If no, sell. The purchase price ($100) is a sunk cost that should not affect the forward-looking decision — but loss aversion makes it the psychological reference point regardless.
+
+**Step 5: Applying this to BioFund**
+For the new investment at current wealth, you are in the gain domain (considering a potential gain from current wealth). Prospect Theory predicts risk aversion in this domain: for an expected 15% gain with 25% standard deviation, you will subjectively discount the probability of positive returns. The corrective: explicitly calculate the expected value (EV = 15% × $invested) and compare it to your true risk tolerance at current wealth level — not to a reference point-inflated estimate.
 
 ## Related
 - [[cognitive-biases]] — Prospect Theory provides the formal model mechanistically explaining loss aversion, framing, and anchoring biases
