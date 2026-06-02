@@ -377,3 +377,4 @@ Laurie Rudman (Rutgers) and Peter Glick's (2001, J Pers Soc Psychol) research on
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Great power competition as Laws 1, 3, 15, 17 at state level
 - [[Geopolitics/2026-05-27-us-china-strategic-competition]] — Strategic competition doctrine through a power-laws lens
 - [[Tech & AI/prompt-engineering]] — Prompt design as applied power dynamics; framing, concealment of intent, and anchoring in LLM elicitation mirror several of the 48 Laws
+- [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Multi-agent AI systems must navigate resource competition, coalition formation, and strategic deception in ways that structurally mirror the Laws; the alignment problem in AI partially concerns preventing AI agents from developing instrumental power-seeking behaviors (Law 1: Never Outshine the Master; Law 7: Get Others to Do the Work) as convergent instrumental goals

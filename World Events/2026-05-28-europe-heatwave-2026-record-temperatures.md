@@ -3,7 +3,7 @@ title: Europe Heatwave 2026 — Record-Breaking May Temperatures and Deaths
 date: 2026-05-28
 tags: [world-events, climate, heatwave, europe, uk, france, spain, ireland, global-warming, heat-dome, attribution-science, energy-grid, Kew-Gardens, jet-stream-disruption, compounding-risk, physical-climate-risk]
 source: Wikipedia 2026 European Heatwaves; Inside Climate News; Irish Times; Severe Weather Europe; ClimaMeter analysis; Washington Post; UK Met Office
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -153,14 +153,14 @@ The cognitive science of heat exposure adds an unexpected dimension to the heatw
 **Attribution science confirms climate change role:** Attribution studies (ClimaMeter, UK Met Office) have confirmed that the May 2026 event was made substantially more intense and approximately 50–100× more likely by anthropogenic climate change. Events that would have been extreme 1-in-100-year occurrences in a pre-industrial climate have become 1-in-2 to 1-in-5 year events. The late spring timing (late May, unusually early for heatwaves) is itself a climate signal — the seasonality of extreme heat is shifting earlier in the calendar year.
 
 ## Related
-- [[2026-05-27-ebola-outbreak-drc-uganda-2026]]
-- [[2026-05-27-us-iran-conflict-global-energy-crisis]]
-- [[2026-05-27-us-iran-conflict-strait-of-hormuz]]
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
-- [[macroeconomics-101]]
-- [[currency-markets-and-fx]]
-- [[fixed-income-deep-dive]]
-- [[yield-curve-and-bonds]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[cognitive-biases]]
-- [[portfolio-theory]]
+- [[2026-05-27-ebola-outbreak-drc-uganda-2026]] — Simultaneous global crises; compounding institutional bandwidth problem
+- [[2026-05-27-us-iran-conflict-global-energy-crisis]] — Hormuz energy supply shock compounding heatwave electricity demand surge
+- [[2026-05-27-us-iran-conflict-strait-of-hormuz]] — LNG supply constraints creating joint energy grid stress
+- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Geopolitical context for simultaneous energy and climate crisis
+- [[2026-05-30-europe-rearmament-nato-russia-threat]] — European fiscal space competition between rearmament and climate adaptation
+- [[2026-05-30-global-economic-outlook-2026-slowdown]] — Heatwave's agricultural, healthcare, and energy cost contributions to 2026 slowdown
+- [[macroeconomics-101]] — Physical climate risk as macroeconomic transmission; European industrial competitiveness
+- [[currency-markets-and-fx]] — EUR weakness from energy+climate double shock; European current account deterioration
+- [[real-assets-reits-and-commodities]] — European agricultural yield losses; real estate heat-risk repricing
+- [[cognitive-biases]] — Heat-impaired decision-making; behavioral finance under heat stress; availability bias in climate risk assessment
+- [[geopolitical-risk-premium-and-markets]] — Physical climate risk as emerging component of sovereign credit analysis

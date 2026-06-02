@@ -3,7 +3,7 @@ title: 2026 Ebola Outbreak — DRC and Uganda (Bundibugyo Virus)
 date: 2026-05-27
 tags: [world-events, health, ebola, DRC, uganda, WHO, pandemic, africa, bundibugyo, PHEIC, outbreak, vaccine-gap, humanitarian, Kampala, Ituri, Nord-Kivu, Sud-Kivu, ChAd3-BDBV, ring-vaccination, UNICEF]
 source: WHO Disease Outbreak News DON602 (May 27, 2026); WHO PHEIC declaration (May 17, 2026); NPR (May 26, 2026); CDC mobilization announcement (May 18, 2026); UNICEF Flash Update #1 (May 26, 2026)
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -198,12 +198,12 @@ From a cognitive biases perspective, crisis fatigue operates through the availab
 **No approved vaccine for Bundibugyo strain — critical constraint:** The most dangerous epidemiological fact about this outbreak remains unchanged: the Bundibugyo strain of Ebola has **no approved vaccine and no approved treatment**. The rVSV-ZEBOV vaccine (used successfully in the 2018–2020 DRC outbreak, which was the Zaire strain) does not protect against Bundibugyo. The ChAd3-BDBV experimental vaccine is being deployed under ring vaccination protocols, but supply is limited and its efficacy in field conditions is unproven at scale.
 
 ## Related
-- [[2026-05-28-europe-heatwave-2026-record-temperatures]]
-- [[2026-05-27-us-iran-conflict-global-energy-crisis]]
-- [[2026-05-27-us-iran-conflict-strait-of-hormuz]]
-- [[macroeconomics-101]]
-- [[cognitive-biases]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[mental-models]]
-- [[cialdini-influence]]
-- [[negotiation-tactics]]
+- [[2026-05-28-europe-heatwave-2026-record-temperatures]] — Simultaneous global crises competing for institutional bandwidth
+- [[2026-05-27-us-iran-conflict-global-energy-crisis]] — Aviation fuel surcharges affecting medevac economics; concurrent crisis strain
+- [[2026-05-27-us-iran-conflict-strait-of-hormuz]] — Hormuz fuel costs raising humanitarian logistics prices in East Africa
+- [[2026-05-30-horn-of-africa-sudan-ethiopia-regional-conflict]] — Adjacent African crisis competing for same donor humanitarian funding pool
+- [[2026-05-30-sahel-crisis-russia-africa-corps-failure]] — African conflict zones creating outbreak conditions; donor fatigue convergence
+- [[2026-05-30-global-economic-outlook-2026-slowdown]] — Pandemic economics; Uganda/DRC regional growth impact; health crisis as macro shock
+- [[macroeconomics-101]] — Pandemic economics and health-crisis transmission mechanisms
+- [[cognitive-biases]] — Psychic numbing; availability heuristic in humanitarian response allocation
+- [[social-psychology-and-group-dynamics]] — Community trust dynamics in outbreak response; anti-health-worker violence

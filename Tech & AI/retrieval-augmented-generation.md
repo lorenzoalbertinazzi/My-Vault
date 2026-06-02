@@ -3,7 +3,7 @@ title: Retrieval-Augmented Generation (RAG) — Architecture, Mechanics, and Bes
 date: 2026-05-27
 tags: [ai, llm, rag, retrieval, vector-databases, embeddings, nlp, chunking, re-ranking, hybrid-search, GraphRAG, self-RAG, ColPali, RAGAS, BM25, FLARE, HyDE, dense-retrieval, sparse-retrieval, knowledge-grounding]
 source: "Lewis et al. (2020) Retrieval-Augmented Generation for Knowledge-Intensive NLP (arXiv:2005.11401); Karpukhin et al. (2020) DPR (arXiv:2004.04906); Gao et al. (2022) Precise Zero-Shot Dense Retrieval — HyDE (arXiv:2212.10496); Edge et al. (2024) GraphRAG (arXiv:2404.16130); Asai et al. (2023) Self-RAG (arXiv:2310.11511)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -616,12 +616,19 @@ Robert Cialdini's analysis of social proof in [[cialdini-influence]] identifies 
 
 The debate between pure dense vector search, pure sparse BM25 search, and hybrid approaches in RAG mirrors the debate between fundamental analysis and technical analysis in financial markets — analyzed in [[technical-analysis-and-chart-patterns]] and [[value-investing-methodology]]. Dense semantic search finds documents that are conceptually related to the query even when no keywords overlap — analogous to fundamental analysis identifying undervalued companies through qualitative assessment of business quality. Sparse BM25 retrieval finds documents that contain the exact terms of the query — analogous to technical analysis identifying momentum through price pattern matching. The well-documented empirical finding that hybrid dense+sparse retrieval consistently outperforms either alone is precisely analogous to the investment research finding that blending fundamental and quantitative signals outperforms either approach in isolation. Both findings suggest that different information-processing mechanisms capture different real signal, and that the combination is more than additive. The Reciprocal Rank Fusion algorithm that blends dense and sparse retrieval scores is, in this framing, the financial equivalent of a multi-factor model that combines value, momentum, and quality signals.
 
+### RAG and the Cognitive Science of Human Memory Augmentation
+
+RAG is not just an engineering technique — it is an architecture for augmenting intelligence by externalizing part of memory storage. This maps precisely onto the **extended mind thesis** (Clark & Chalmers, 1998) in cognitive science: if an external resource (a notebook, a database) is reliably accessible and functions identically to internal memory in driving cognition, it should count as part of the cognitive system. Humans have been building RAG-like systems since the invention of writing — external memory stores that the mind can retrieve and reason about. The [[memory-systems-and-learning-science]] literature on the distinction between remembering (retrieving stored information) and knowing (having information available without conscious retrieval effort) maps onto the RAG vs. fine-tuning distinction: fine-tuning embeds knowledge directly into weights as "knowing" (instant, unconscious access), while RAG implements "remembering" (conscious retrieval with latency and potential failure). Both are necessary; neither is sufficient alone. The architectural implication is that RAG excels at high-precision, verifiable, frequently-updated knowledge (specific facts, recent events, proprietary documents) while fine-tuning excels at procedural knowledge and reasoning styles (how to write Python, how to structure an argument) that benefit from deep integration with the model's generative process. Designing the boundary between these two memory systems — deciding what to fine-tune versus what to retrieve — is the central architectural challenge of knowledge-intensive AI system design. See [[agentic-ai-and-multi-agent-systems]] for how RAG serves as the external memory system in agent architectures, and [[llm-training-and-scaling-laws]] for how pre-training creates the foundational "knowing" that RAG augments with domain-specific "remembering."
+
 ## Related
 - [[transformer-architecture]]
 - [[machine-learning-fundamentals]]
 - [[prompt-engineering]]
 - [[vector-databases-and-embeddings]]
 - [[docker-and-containerization]]
+- [[agentic-ai-and-multi-agent-systems]] — RAG as agent long-term memory architecture
+- [[llm-training-and-scaling-laws]] — Pre-training vs. retrieval as complementary memory systems
+- [[memory-systems-and-learning-science]] — Extended mind thesis; remembering vs. knowing; biological memory augmentation
 - [[diffusion-models-and-image-generation]]
 - [[cognitive-biases]]
 - [[cialdini-influence]]

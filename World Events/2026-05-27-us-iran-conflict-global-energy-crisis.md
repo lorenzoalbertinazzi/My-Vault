@@ -3,7 +3,7 @@ title: US-Iran Military Conflict and the Global Energy Crisis (2026)
 date: 2026-05-27
 tags: [world-events, iran, USA, war, energy-crisis, strait-of-hormuz, oil, middle-east, stagflation, sanctions, IRGC, ceasefire, MOU, oil-prices, strategic-petroleum-reserve, May-Day-protests, Brent-crude]
 source: Wikipedia Current Events (May 2026); US EIA Q1 2026 data; CNN (May 25–29, 2026); Bloomberg (May 27, 2026); CNBC Piper Sandler (May 26, 2026); CBS News (May 28, 2026)
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -193,14 +193,17 @@ From a portfolio theory perspective, the 2026 energy crisis illustrates the fail
 **May Day protests' political consequences emerging:** The May 1, 2026 global protests generated political pressure on incumbent governments across Europe and Asia. Several European governments have announced emergency energy subsidy packages. The German coalition government is under pressure to extend winter heating subsidies through summer given the heatwave-energy price double squeeze. France's government approved emergency energy relief payments to low-income households in May. The political transmission of energy price shocks to government instability is tracking closely to the 1973–1974 pattern.
 
 ## Related
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
-- [[2026-05-27-us-iran-conflict-strait-of-hormuz]]
-- [[2026-05-27-us-china-great-power-competition]]
-- [[2026-05-27-us-china-strategic-competition]]
-- [[2026-05-28-europe-heatwave-2026-record-temperatures]]
-- [[macroeconomics-101]]
-- [[currency-markets-and-fx]]
-- [[fixed-income-deep-dive]]
-- [[yield-curve-and-bonds]]
-- [[portfolio-theory]]
-- [[behavioral-finance-and-investor-psychology]]
+- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Geopolitical and nuclear dimensions of the same conflict
+- [[2026-05-27-us-iran-conflict-strait-of-hormuz]] — Strait mechanics; mine clearance timeline; IRGC operational details
+- [[2026-05-27-us-china-great-power-competition]] — China as Iran's primary oil buyer; MOU implications for China's energy security
+- [[2026-05-27-us-china-strategic-competition]] — China benefits from US Middle East distraction; Taiwan risk window
+- [[2026-05-28-europe-heatwave-2026-record-temperatures]] — Energy price double-shock: Hormuz supply reduction + European heatwave demand surge
+- [[2026-05-30-uae-exits-opec-oil-market-shift]] — UAE's post-OPEC 2M bpd supply increase as the price correction engine post-deal
+- [[2026-05-30-global-economic-outlook-2026-slowdown]] — Stagflation transmission; global growth impact of sustained energy shock
+- [[2026-05-30-israel-palestine-gaza-war-2026]] — Hezbollah ceasefire included in MOU; regional interconnection
+- [[macroeconomics-101]] — Supply shock stagflation mechanics; SPR as macroeconomic buffer
+- [[currency-markets-and-fx]] — Petrodollar system; oil-exporter currency dynamics during supply shocks
+- [[fixed-income-deep-dive]] — Yield curve response to supply-shock stagflation
+- [[yield-curve-and-bonds]] — Central bank trilemma under energy supply shock
+- [[geopolitical-risk-premium-and-markets]] — Oil risk premium pricing; market sensitivity to diplomatic signals
+- [[real-assets-reits-and-commodities]] — Oil and LNG price mechanics; Brent/WTI spread; commodity tail-hedge strategies

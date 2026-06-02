@@ -3,7 +3,7 @@ title: China's Shenzhou-23 Mission — Year-Long Stay and Hong Kong's First Astr
 date: 2026-05-27
 tags: [world-events, china, space, tiangong, shenzhou, astronaut, space-race, technology, hong-kong, CNSA, long-march, lunar-program, microgravity, Chang'e, Wolf-Amendment, US-China-tech-competition]
 source: NPR (May 25, 2026); Xinhua (May 25, 2026); Euronews (May 25, 2026); TechTimes
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -201,11 +201,11 @@ The one-year mission's direct replication of Scott Kelly's ISS year-in-space stu
 **US-China space cooperation absent:** No scientific cooperation between NASA and CNSA on Tiangong research is occurring — blocked by the **Wolf Amendment** (2011 US law prohibiting NASA from bilateral cooperation with China). The Shenzhou-23 data — particularly the year-long duration study — will not be shared with NASA or the ISS research community. This bifurcation of space life science research is a concrete example of scientific decoupling that reduces the global scientific benefit from each party's investments.
 
 ## Related
-- [[2026-05-27-us-china-great-power-competition]]
-- [[2026-05-27-us-china-strategic-competition]]
-- [[machine-learning-fundamentals]]
-- [[transformer-architecture]]
-- [[prompt-engineering]]
-- [[valuation-fundamentals]]
-- [[portfolio-theory]]
-- [[macroeconomics-101]]
+- [[2026-05-27-us-china-great-power-competition]] — US-China technology competition; Wolf Amendment as bilateral decoupling instrument
+- [[2026-05-27-us-china-strategic-competition]] — Semiconductor and AI race; space as a parallel competition domain
+- [[2026-05-30-china-taiwan-strait-military-tensions]] — PLA satellite guidance systems advanced by Tiangong research
+- [[2026-05-30-china-defense-ministers-death-sentences]] — PLA space program integrity and procurement corruption
+- [[2026-05-30-global-ai-governance-race-to-regulate]] — AI autonomy in space systems; governance of AI in high-stakes environments
+- [[geopolitical-risk-premium-and-markets]] — Defense/aerospace sector valuation; rare earth supply chains for space electronics
+- [[ai-safety-and-alignment]] — AI in autonomous space systems; anomaly detection in deep-space missions
+- [[agentic-ai-and-multi-agent-systems]] — Autonomous spacecraft agents; AI decision-making under communication latency

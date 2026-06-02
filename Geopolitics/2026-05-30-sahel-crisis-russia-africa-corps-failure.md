@@ -250,9 +250,29 @@ Western and Russian framing of the Sahel crisis as "counterterrorism" obscures t
 
 **Stimson Center: "Mali Attacks Aggravate the Sahel Security Crisis" (2026):** The Stimson Center's analysis characterizes the April 2026 attacks not as an isolated event but as the Sahel security crisis entering a **new, more dangerous phase** — the shift from rural insurgency to urban siege warfare. JNIM's demonstrated ability to blockade a national capital (Bamako's fuel supply) and coordinate simultaneous attacks on 4+ major military installations represents an escalation in strategic capability. The Stimson assessment: without fundamental change in governance, not just security, the trajectory leads toward regional state collapse.
 
+## Cross-Disciplinary Connections
+
+### Commodity Markets and the Sahel's Hidden Resource Stakes
+
+The Sahel crisis is simultaneously a security catastrophe and a commodity market story that Western financial analysis consistently underweights. Mali's ~60 tonnes of annual gold production (Africa's third largest) flows through a supply chain that Africa Corps physically controls at the artisanal mining level — a direct Russia-linked distortion of a commodity that functions as a global monetary reserve asset. At $2,300+ per troy ounce (2026 price levels), 60 tonnes represents roughly $4.4 billion annually. Africa Corps' access to Kéniéba district mining operations, secured at an estimated $10.8 million per month retainer from the Malian junta, is thus highly profitable on its own terms — the security contract pays for itself many times over through gold access. The gold doesn't enter traceable international markets directly; it moves through the same UAE-connected intermediary networks that handle Russian gold under sanctions, creating a West Africa-Russia-UAE commodity triangle that bypasses Western financial infrastructure entirely.
+
+Niger's uranium reserves (7.5% of global supply) represent a second strategic commodity dimension. The Orano (formerly Areva, French state-owned) mining operations at Arlit and Akouta continued under junta oversight through 2025, but with renegotiated terms that increased Niger's revenue share and reduced French operational control. China's CNPC operates the Agadem oil pipeline to the Benin coast, providing the CNSP junta with hard currency revenues that reduce dependence on any single external partner. The result is a resource-rich security vacuum: the Sahel's governments have commodity revenues sufficient to sustain patronage networks but insufficient to build the service-delivering state that would reduce insurgent recruitment.
+
+### Counterinsurgency Economics and the Development Finance Gap
+
+The Sahel's trajectory illustrates the limits of security-first development models with quantifiable precision. France's Operation Barkhane cost approximately €900 million annually at its peak (5,500 troops, five countries, air assets), yet the security situation deteriorated continuously during its decade-long deployment. The EU's Sahel development funding over the same period (2014–2023) averaged roughly €500 million annually across all channels — meaning the West spent nearly double on military operations what it spent on the governance and development investments that counterinsurgency doctrine identifies as the actual determinants of success. The Paul Collier "conflict trap" finding — that low-income states with primary commodity dependence face over 50% recurrence rates for conflict — predicts exactly what happened: military victories without economic transformation produce temporary stabilization followed by insurgency regeneration.
+
+Africa Corps' $10.8 million monthly retainer (approximately $130 million annually) buys security outcomes markedly worse than Barkhane delivered for €900 million. The price differential reflects not just capability gaps but the fundamental difference between a counterinsurgency doctrine (population-centric, intelligence-intensive, culturally fluent) and a regime protection doctrine (perimeter defense, firepower, area denial). For institutional investors with ESG frameworks and frontier market exposure in West Africa — specifically in the mining, agricultural, and infrastructure sectors of Ghana, Côte d'Ivoire, and Senegal — the "coastal contagion risk" documented by the Stimson Center represents a material financial risk that is not captured in current sovereign credit ratings or country risk frameworks. A JNIM advance into northern Ghana or Côte d'Ivoire would directly affect the Cocoa Coast supply chains that determine global cocoa price benchmarks — a commodity market risk connecting directly from Bamako's siege to London futures pricing.
+
 ## Related
 
-- [[2026-05-27-russia-central-asia-influence-and-decline]] — Russia's broader Africa/periphery strategy
-- [[2026-05-27-us-china-great-power-competition]] — Great power competition in Africa
-- [[2026-05-30-horn-of-africa-sudan-ethiopia-regional-conflict]] — Adjacent African crisis
-- [[World Events/2026-05-27-ebola-outbreak-drc-uganda-2026]] — African humanitarian dimensions
+- [[2026-05-27-russia-central-asia-influence-and-decline]] — Russia's broader Africa/periphery strategy and parallel decline
+- [[2026-05-27-us-china-great-power-competition]] — Great power competition in Africa; China's commodity-security model
+- [[2026-05-30-horn-of-africa-sudan-ethiopia-regional-conflict]] — Adjacent African crisis; humanitarian funding competition
+- [[2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Ukraine war consuming Africa Corps resources; Russia's over-extended strategy
+- [[2026-05-30-uae-exits-opec-oil-market-shift]] — UAE's Africa resource networks; gold/uranium intermediary role
+- [[2026-05-27-ebola-outbreak-drc-uganda-2026]] — African humanitarian crises competing for same donor funding
+- [[real-assets-reits-and-commodities]] — Mali gold, Niger uranium, Sahel commodity stakes; coastal contagion affecting cocoa
+- [[geopolitical-risk-premium-and-markets]] — Frontier market sovereign risk in West Africa; contagion to coastal states
+- [[social-psychology-and-group-dynamics]] — Institutional attention scarcity; "forgotten crisis" syndrome in donor response
+- [[game-theory-and-strategic-thinking]] — Africa Corps as failed security guarantee; Russia's miscalculation in Sahel

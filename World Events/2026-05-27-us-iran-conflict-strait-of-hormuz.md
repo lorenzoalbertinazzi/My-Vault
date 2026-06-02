@@ -3,7 +3,7 @@ title: US-Iran Conflict and the Strait of Hormuz Crisis (2026)
 date: 2026-05-27
 tags: [world-events, us-iran, middle-east, strait-of-hormuz, oil, nuclear, IRGC, ceasefire, energy-crisis, pakistan-mediation, HEU, mine-clearance, Brent-crude, WTI, LNG, fixed-income, dollar-hegemony]
 source: Crisis Group (2026 Conflicts Watch); UANI ship-tracking data; CNN shipping visualization (Apr 29, 2026); Bloomberg (May 27, 2026); CNBC Piper Sandler (May 26, 2026)
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -197,15 +197,17 @@ The Hormuz crisis arrives at a moment of particular vulnerability in the global 
 **Two US-Iran skirmishes in 48 hours (May 29)** as noted in main Iran note: the ceasefire remains militarily fragile even as diplomats negotiate. Piper Sandler's contrarian warning (oil could reach new highs if deal fails) versus the Bloomberg/EIA normalization scenario within 30 days of signing represent the two key tail scenarios.
 
 ## Related
-- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
-- [[2026-05-27-us-iran-conflict-global-energy-crisis]]
-- [[2026-05-27-us-china-great-power-competition]]
-- [[2026-05-27-us-china-strategic-competition]]
-- [[2026-05-28-europe-heatwave-2026-record-temperatures]]
-- [[macroeconomics-101]]
-- [[currency-markets-and-fx]]
-- [[fixed-income-deep-dive]]
-- [[yield-curve-and-bonds]]
-- [[behavioral-finance-and-investor-psychology]]
-- [[portfolio-theory]]
-- [[options-basics]]
+- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Nuclear and geopolitical dimensions; MOU structure
+- [[2026-05-27-us-iran-conflict-global-energy-crisis]] — Global energy market and stagflation transmission
+- [[2026-05-27-us-china-great-power-competition]] — China as Iran's primary oil buyer; strategic competition during US distraction
+- [[2026-05-27-us-china-strategic-competition]] — China's Hormuz positioning and yuan oil trade ambitions
+- [[2026-05-28-europe-heatwave-2026-record-temperatures]] — European energy grid stress compounded by Hormuz LNG disruption
+- [[2026-05-30-uae-exits-opec-oil-market-shift]] — UAE post-OPEC supply increase as post-Hormuz price correction mechanism
+- [[2026-05-30-israel-palestine-gaza-war-2026]] — Hezbollah ceasefire included in MOU; regional war complex
+- [[2026-05-30-global-economic-outlook-2026-slowdown]] — Stagflation risk; structural shift in energy prices
+- [[macroeconomics-101]] — Energy supply shock transmission; stagflation mechanics
+- [[currency-markets-and-fx]] — Dollar hegemony paradox; petrodollar system under Hormuz stress
+- [[fixed-income-deep-dive]] — Flight-to-safety vs. inflation premium paradox in Treasuries
+- [[yield-curve-and-bonds]] — Central bank trilemma under energy supply shock; yield curve shape
+- [[geopolitical-risk-premium-and-markets]] — Oil risk premium repricing; $138/barrel peak as historical reference
+- [[real-assets-reits-and-commodities]] — Brent/WTI mechanics; LNG disruption; shipping insurance repricing

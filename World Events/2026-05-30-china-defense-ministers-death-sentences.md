@@ -3,7 +3,7 @@ title: China Sentences Two Former Defense Ministers to Death — Xi's Anti-Corru
 date: 2026-05-30
 tags: [world-events, china, PLA, corruption, Xi-Jinping, Wei-Fenghe, Li-Shangfu, military, anti-corruption, death-sentence, rocket-force, PLARF, CMC, procurement-corruption, Taiwan-readiness, Stalin-parallel, suspended-death-sentence]
 source: Washington Post (May 7, 2026); CNN (May 7, 2026); Eurasia Review (May 28, 2026); Taiwan Ministry of National Defense assessment
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
