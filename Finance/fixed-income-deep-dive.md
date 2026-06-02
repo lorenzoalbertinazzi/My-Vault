@@ -3,7 +3,7 @@ title: Fixed Income Deep Dive — Bonds, Yield Curves, and Credit Risk
 date: 2026-05-27
 tags: [finance, bonds, fixed-income, yield-curve, credit-risk, interest-rates, duration, convexity, TIPS, CLO, repo-market, sovereign-debt, green-bonds, credit-spread, macaulay-duration, immunization, structured-products, bear-steepener, bull-flattener]
 source: "Fabozzi (2012) Bond Markets: Analysis and Strategies; Tuckman & Serrat (2011) Fixed Income Securities; Mishkin (2018) The Economics of Money, Banking and Financial Markets; Merton (1974) On the Pricing of Corporate Debt, Journal of Finance; Moody's Annual Default Study (2023)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -385,6 +385,85 @@ More broadly, the history of credit cycles reveals that spread compression in la
 ### Machine Learning Transforms Fixed Income Analysis
 
 The application of [[machine-learning-fundamentals]] to fixed income has advanced rapidly, driven by the unique characteristics of fixed income data. Unlike equity markets where the universe is relatively static (a company either has one stock or a few), the fixed income universe is vast and heterogeneous: a single issuer may have dozens of bonds with different maturities, covenants, call features, and seniority. Natural language processing models trained on bond prospectuses, covenant documentation, and credit rating rationale extract structured information from unstructured legal text at scale — identifying hidden covenant weaknesses, cross-default triggers, and change-of-control provisions that manual analysis might miss. Gradient boosting models trained on historical default data (incorporating macro variables, firm-level financials, and market-based signals like CDS spread levels and equity volatility) have demonstrated meaningful predictive power over traditional Altman Z-score models for corporate defaults. In the sovereign debt space, ML models incorporating political risk indicators, social unrest measures, and real-time economic data streams have shown improvements over traditional IMF-style sustainability models. The most sophisticated fixed income hedge funds now deploy neural networks to model yield curve dynamics — capturing non-linear relationships between term premiums, inflation expectations, and policy paths that linear factor models miss.
+
+---
+
+### Advanced Mechanics: Liability-Driven Investing (LDI) and Pension Fund Asset-Liability Management
+
+Liability-Driven Investing is the dominant fixed income framework for institutional investors (pension funds, insurance companies, endowments) with explicit future liabilities. The core principle: the appropriate portfolio is not the one that maximizes risk-adjusted return on *assets* alone, but the one that most effectively hedges the economic risk of *liabilities* while achieving funding objectives.
+
+**The Pension Fund Problem**
+A defined-benefit pension fund owes its beneficiaries a stream of future cash flows (pension payments) that are:
+- Long-dated (extending 20–50 years for young current employees)
+- Linked to final salary or inflation in some cases
+- Uncertain in timing (longevity risk)
+
+These liabilities have a *present value* that must be estimated using a discount rate. Historically, US pension regulations allowed discounting at expected plan asset return (~7–8%), which inflated funded status. Post-PPA 2006 (Pension Protection Act), corporate plans must use corporate bond yields to discount liabilities — meaning that when interest rates fall, liability PV rises even if assets are unchanged. This interest rate sensitivity of liabilities is the core problem LDI addresses.
+
+**Duration Matching Mechanics**
+A pension fund with:
+- Asset market value: $1.0 billion
+- Liability PV: $950 million (109% funded ratio)
+- Asset duration: 8 years (60/40 portfolio)
+- Liability duration: 16 years (typical long-dated pension)
+
+Interest rate sensitivity:
+- 100 bps rate fall → Asset loss: $1.0B × 8 × 1% = $80 million
+- 100 bps rate fall → Liability gain: $0.95B × 16 × 1% = $152 million
+- Net impact on funded status: $80M − $152M = −$72 million (funded ratio falls to 102%)
+
+The fund has an *interest rate mismatch* because liability duration exceeds asset duration. The LDI solution: buy long-duration bonds (30-year Treasuries, long corporate bonds) and/or receive-fixed long-duration swaps to bring asset duration up toward liability duration.
+
+**Worked Example — LDI Overlay**:
+- Target: close the duration gap from 8 to 16 years
+- Assets: $1.0B; additional duration needed: 8 years × $0.95B liability ≈ $76M of DV01
+- Solution: Enter into a $760M notional 30-year receive-fixed swap (duration ≈ 10 years → DV01 ≈ $760M × 10/10,000 = $760,000 per bp)
+- More precisely: $76M DV01 ÷ $760,000/bp ≈ 100 bp interest rate hedge
+- This is an *overlay* — the underlying return-seeking portfolio is unchanged; the duration hedge sits separately
+
+**UK Pension Crisis (September 2022): LDI Failure**
+The UK's gilt market experienced a near-catastrophic episode in September 2022 that illuminated the systemic risks of LDI strategies at scale:
+- Trigger: UK Chancellor Kwasi Kwarteng's "Mini-Budget" (September 23, 2022) announced unfunded £45 billion tax cuts, causing UK gilt yields to spike 100+ bps in days
+- Problem: UK pension funds had implemented LDI through leveraged liability-matching swaps (2× to 7× leverage on the hedging overlay). Collateral calls on these swaps exceeded available cash
+- Death spiral: Funds were forced to sell gilts to meet collateral calls → gilt prices fell further → more collateral calls → more forced selling
+- Bank of England emergency intervention: Purchased £65 billion in long-dated gilts (September 28 – October 14) to stabilize the market. Without intervention, multiple pension funds would have been technically insolvent within days
+- Lesson: LDI is conceptually correct but operationally requires maintaining sufficient liquid assets (>40% of portfolio) as a liquidity buffer. Pre-crisis, some UK schemes had only 5–10% liquid asset buffers — grossly insufficient for a 100 bps shock
+
+**Post-crisis adjustment**: UK pension funds have reduced leverage ratios from 3–4× to 1.5–2× on LDI overlays and substantially increased liquidity buffers. The episode demonstrated that "liability hedging" strategies can themselves create systemic risk when widely adopted and inadequately buffered.
+
+---
+
+### Worked Example: TIPS Breakeven Inflation Analysis
+
+Treasury Inflation-Protected Securities (TIPS) are bonds whose principal adjusts with the Consumer Price Index (CPI). The "breakeven inflation rate" — the market's implied forecast for average CPI over the TIPS term — is derived by comparing nominal and real yields.
+
+**Formula**:
+```
+Breakeven Inflation = Nominal Yield − TIPS Real Yield
+```
+
+**As of March 2026 data** (hypothetical current example):
+- 10-year nominal Treasury yield: 4.55%
+- 10-year TIPS real yield: 2.10%
+- 10-year breakeven inflation: 2.45%
+
+**Interpretation**: The market prices roughly 2.45% average CPI over the next 10 years. If actual CPI runs:
+- Above 2.45%: TIPS outperforms nominal Treasuries (principal accretes faster than you lose from lower real yield)
+- Below 2.45%: Nominal Treasuries outperform TIPS
+
+**Investment positioning based on breakeven**:
+| Breakeven Level | Historical Context | Suggested Position |
+|---|---|---|
+| <1.5% | Deflationary fears (COVID 2020 trough: 0.55%) | Long TIPS (cheap vs. nominal) |
+| 1.5–2.0% | Below-target inflation regime | Neutral |
+| 2.0–2.5% | At-target inflation equilibrium | Neutral to slightly favor nominals |
+| 2.5–3.0% | Mild inflation overshoot fears | Long TIPS |
+| >3.0% | High inflation fears (2022 peak: 3.59%) | Long TIPS |
+| >4.0% | Extreme inflation/fiscal panic | Long TIPS, but duration risk very high |
+
+**Caveat — liquidity risk premium**: TIPS are less liquid than nominal Treasuries, meaning part of the yield gap reflects a *liquidity premium* (TIPS yield is slightly elevated relative to its pure inflation-adjusted value). Stripping out the liquidity premium (estimated 10–30 bps) reduces the effective breakeven by that amount. This is why when measuring market inflation expectations, economists prefer the "5Y5Y breakeven" (the 5-year breakeven rate starting 5 years from now) which is further from liquidity distortions but captures medium-term inflation expectations.
+
+---
 
 ## Related
 - [[portfolio-theory]] — Duration, convexity, and spread duration in portfolio risk management; 60/40 framework stress-tested by fixed income

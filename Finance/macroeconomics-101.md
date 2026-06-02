@@ -3,7 +3,7 @@ title: Macroeconomics 101
 date: 2026-05-26
 tags: [finance, macroeconomics, GDP, inflation, unemployment, business-cycle, monetary-policy, fiscal-policy, central-banking, interest-rates, keynesian, monetarism, aggregate-demand, multiplier-effect, Taylor-rule, Phillips-curve, IS-LM, DSGE, Minsky-moment, secular-stagnation, MMT, debt-supercycle]
 source: "Mankiw (2020) Principles of Macroeconomics; Blanchard (2017) Macroeconomics; Keynes (1936) General Theory of Employment, Interest and Money; Friedman (1968) The Role of Monetary Policy, AER; Dalio (2018) A Template for Understanding Big Debt Crises; Minsky (1986) Stabilizing an Unstable Economy"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -464,6 +464,107 @@ Multiple forecasters (Morgan Stanley, Deloitte) have published scenarios with US
 The UN's more pessimistic 2.7% global growth forecast reflects developing economy exposure: higher energy import costs + reduced remittances (from slowing advanced economies) + dollar strengthening (typical risk-off) = triple squeeze on emerging markets. Sub-Saharan Africa (4.2% by IMF) is one of the few brightspots, though the Sudan/Sahel/DRC crises create regional drag.
 
 **Cuba GDP: −7.2% (2026 projection)** — the most extreme single-country contraction, driven by the US oil blockade. This is the most acute small-country impact of US sanctions as macroeconomic weapon, comparable to Venezuela's −8% peak.
+
+---
+
+### Advanced Mechanics: The Fiscal Theory of the Price Level (FTPL)
+
+The Fiscal Theory of the Price Level, developed by John Cochrane (1998) and Eric Leeper (1991), offers a fundamentally different explanation of inflation than the quantity theory (MV=PQ) or the New Keynesian DSGE framework. FTPL is increasingly relevant in the 2026 environment of elevated debt-to-GDP ratios and large fiscal deficits.
+
+**Core Equation — Government Intertemporal Budget Constraint**:
+```
+B_t / P_t = Σ_{j=0}^∞ β^j E_t(s_{t+j})
+```
+
+Where:
+- `B_t` = nominal government debt outstanding
+- `P_t` = price level
+- `β` = discount factor (1/(1+r))
+- `s_{t+j}` = real primary surplus in period t+j (taxes minus non-interest expenditures)
+- The left side is the real value of government debt; the right side is the present value of expected future surpluses
+
+**The Key Insight**:
+Government debt is like a *claim on the government's future surpluses*, similar to equity being a claim on corporate earnings. The price level adjusts to make the real value of outstanding debt equal to the present value of expected fiscal surpluses. If the government issues more debt (B rises) but does not credibly commit to higher future surpluses (right-hand side unchanged), the price level P must *rise* to restore the equality — this is fiscal inflation.
+
+**Contrast with Monetary Theory of Inflation**:
+| Mechanism | Monetary Theory | Fiscal Theory |
+|---|---|---|
+| Cause | Money supply exceeds money demand | Fiscal deficit exceeds expected surplus path |
+| Policy fix | Central bank raises rates, reduces money supply | Fiscal consolidation (spending cuts or tax increases) |
+| Debt/GDP role | Not central; debt is a central bank decision | Central; high debt + deficit = inflation |
+| Rate hikes effect | Reduces inflation (standard Volcker) | *Can* raise inflation (higher interest payments → higher deficits) |
+
+The FTPL implication that rate hikes might not reduce inflation — or could even worsen it — is deeply controversial. The logic: if the government has a fixed debt burden and central bank rate hikes increase interest costs without triggering fiscal consolidation, the intertemporal budget constraint worsens (future surpluses must rise even more), and if markets doubt this will happen, the price level rises further. Proponents point to the 1980s Sargent-Wallace "Unpleasant Monetarist Arithmetic" argument.
+
+**2026 Relevance**:
+With US federal debt approaching 130% of GDP and structural annual deficits of $1.8–2.2 trillion, the FTPL predicts that monetary policy alone cannot durably anchor inflation unless accompanied by credible fiscal consolidation. The debate between Team Fed (Goolsbee, Logan: monetary policy is working) and Team FTPL (Cochrane, Sims: without fiscal discipline, inflation will re-emerge) is the dominant intellectual fault line in macroeconomics as of mid-2026.
+
+---
+
+### Advanced Mechanics: Helicopter Money vs. QE
+
+Helicopter money — the term coined by Milton Friedman (1969) and popularized by Ben Bernanke — refers to direct monetary financing of government spending or direct transfers to households, as distinct from QE (which purchases existing assets).
+
+**Structural Difference: QE vs. Helicopter Money**
+
+*QE*:
+- Central bank buys bonds from banks → bank reserves increase
+- Banks decide whether/how to lend the reserves
+- No permanent money creation: QE can be reversed (QT)
+- Bond yields decline → wealth effect → investment effect → gradual demand stimulus
+- 2009–2019: Fed bought $3.5T; broad money (M2) grew modestly; inflation stayed below target → "pushing on a string"
+
+*Helicopter Money*:
+- Central bank permanently creates money and transfers it directly to government (debt monetization) or households
+- Government spends it directly → GDP = C + I + G increases immediately
+- Cannot be reversed without politically painful tax increases
+- Every recipient *spends* the transfer → high multiplier (no leakage into excess reserves)
+- Historical precedent: German WWI reparation financing, Weimar hyperinflation; Zimbabwe 2008
+
+**The COVID-19 Quasi-Helicopter Experience**:
+The US 2020–2021 stimulus was the closest peacetime approximation to helicopter money:
+- Treasury issued $2T+ in bonds
+- Fed purchased most of this issuance (de facto monetization)
+- Treasury distributed $3,200 per adult via direct transfers ($1,200 + $600 + $1,400 over three payments)
+- Result: M2 grew 27% in 2020–2021, highest since WWII
+- CPI inflation peaked at 9.1% in June 2022 — the first episode of sustained above-target US inflation since 1979
+
+The Milton Friedman equation comes to life: ΔM × V ≈ ΔP × Q. With M2 growing 27% and velocity roughly stable, prices had to eventually rise commensurately. The transmission lag was 12–18 months — long enough that policymakers initially claimed inflation was "transitory" before the causal mechanism became undeniable.
+
+---
+
+### Worked Example: Taylor Rule Applied to 2025–2026
+
+The Taylor Rule (1993) provides a normative benchmark for the appropriate federal funds rate:
+
+```
+r* = r̄ + π + 0.5(π − π*) + 0.5(y − y*)
+```
+
+Where:
+- `r*` = recommended federal funds rate
+- `r̄` = neutral real rate (estimated 0.5–1.0% in 2025)
+- `π` = current CPI inflation = 3.1% (early 2026 estimate)
+- `π*` = inflation target = 2.0%
+- `y − y*` = output gap = 0.3% (slight positive gap, below-normal unemployment)
+
+Plugging in (using r̄ = 0.75%):
+```
+r* = 0.75 + 3.1 + 0.5(3.1 − 2.0) + 0.5(0.3)
+r* = 0.75 + 3.1 + 0.55 + 0.15
+r* = 4.55%
+```
+
+Actual federal funds rate (June 2026): 4.25–4.50%
+
+**Interpretation**: The Taylor Rule suggests the current rate is approximately correct. However, this mechanical result masks critical uncertainties:
+- The neutral rate r̄ is unobservable; estimates range from 0.5% to 2.0%; using r̄ = 1.5% yields r* = 5.3%, suggesting policy is still accommodative
+- The output gap estimate (+0.3%) is contested; if the economy is at potential (0 gap), r* drops to 4.4%
+- If the Hormuz energy shock raises headline CPI to 4.2% temporarily: Taylor Rule would prescribe 6.15% — clearly inappropriate given supply-shock context vs. demand-driven inflation
+
+The Fed's judgment in 2022–2024 was that the Taylor Rule overstated the needed hike path because supply chain normalization would lower inflation without sustained demand destruction. The actual hiking cycle stopped at 5.25–5.50% (below Taylor's prescription of 5.5–6.0% at peak inflation) — and inflation did retreat without a recession, partially validating the Fed's judgment call.
+
+---
 
 ## Related
 - [[valuation-fundamentals]] — r* as the single most important input to all long-duration valuation; discount rate sensitivity to macro regimes

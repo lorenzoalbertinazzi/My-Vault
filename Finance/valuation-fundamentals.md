@@ -3,7 +3,7 @@ title: Valuation Fundamentals
 date: 2026-05-26
 tags: [finance, valuation, DCF, discounted-cash-flow, WACC, EV-EBITDA, comparable-company-analysis, precedent-transactions, LBO-model, terminal-value, CAPE-ratio, margin-of-safety, reverse-DCF, NAV, DDM, country-risk-premium, Damodaran, intrinsic-value, multiples, free-cash-flow]
 source: "Damodaran (2012) Investment Valuation; McKinsey Koller et al. (2020) Valuation: Measuring and Managing the Value of Companies; Graham & Dodd (1934) Security Analysis; Shiller (1998) Valuation Ratios and the Long-Run Stock Market Outlook; Rappaport & Mauboussin (2001) Expectations Investing"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -320,6 +320,116 @@ Conventional WACC analysis focuses on risk-free rates and equity risk premiums d
 ### Machine Learning, Alternative Data, and Valuation's Informational Revolution
 
 The application of [[machine-learning-fundamentals]] to valuation has begun to reshape what counts as "knowable" before official financial statements are published. Alternative data — satellite imagery counting cars in retail parking lots, credit card transaction flows tracking spending by merchant category, web-scraped job postings signaling hiring intention, app store download data indicating product traction — can be processed by ML models to generate real-time estimates of company fundamentals weeks before earnings announcements. This alternative data revolution is systematically eroding the information advantage that traditional fundamental analysts previously enjoyed in the gap between quarterly earnings releases. The practical implication for valuation methodology is that models built purely on financial statement data are competitively disadvantaged against models that incorporate high-frequency alternative data signals. LLMs fine-tuned on earnings calls and management commentary can extract sentiment and guidance signals at a level of nuance that individual analysts cannot process at scale.
+
+---
+
+### Advanced Mechanics: Sum-of-the-Parts (SOTP) Valuation
+
+Sum-of-the-Parts valuation is the appropriate framework for conglomerates, holding companies, and multi-segment businesses where applying a single multiple to blended metrics would produce a materially distorted view of intrinsic value. Each business segment is valued using the most appropriate method for its characteristics, then segments are aggregated and corporate overhead/debt is subtracted.
+
+**When to Use SOTP**
+- Multiple segments with different risk profiles, growth rates, and capital intensity (e.g., Alphabet: advertising, cloud, autonomous vehicles, pharmaceuticals)
+- Holding company discount situation (Berkshire Hathaway, IAC)
+- Conglomerate with partially owned subsidiaries whose public market value is observable
+- Post-spin-off "stub" value analysis
+
+**Step-by-Step SOTP Framework**
+
+*Step 1 — Segment identification and financial carve-out*:
+Separate company financials into distinct economic segments using segment disclosures (Note: SEC regulations require disclosure of any segment >10% of revenue, assets, or profit). Allocate corporate overhead proportionally or leave it as a separate line.
+
+*Step 2 — Segment-specific valuation methodology*:
+| Segment Type | Primary Method | Secondary Check |
+|---|---|---|
+| Mature consumer business | EV/EBITDA comps (industry specific) | DCF |
+| High-growth tech | EV/Revenue (then DCF on 5-year horizon) | Price/FCF |
+| Financial services subsidiary | Price/Book or Price/Earnings | Embedded value |
+| Real estate/infrastructure | Cap rate / NAV | EV/EBITDA |
+| Early-stage/venture | Venture method (target value × success probability) | Comparable funding rounds |
+| Publicly traded subsidiary | Market value (observable) × ownership % | — |
+
+*Step 3 — Aggregate and subtract holding company costs*:
+```
+SOTP Enterprise Value = Σ (Segment EV_i) − PV(Corporate Overhead) 
+SOTP Equity Value = SOTP EV − Net Debt (holding company level) − Minority Interests
+```
+
+**Worked Example — Alphabet (Google) SOTP, 2025**
+
+| Segment | 2025E Revenue | 2025E EBITDA | Multiple | Segment EV |
+|---|---|---|---|---|
+| Google Search & YouTube | $245B | $108B | 18× EBITDA | $1,944B |
+| Google Cloud | $50B | $10B | 12× Revenue | $600B |
+| Google Services Other (Maps, Play) | $35B | $9B | 14× EBITDA | $126B |
+| Waymo (autonomous vehicles) | Pre-revenue | N/A | DCF / Comparables | $40B |
+| Other Bets (DeepMind, biotech) | $2B | Loss-making | 2× Revenue (speculative) | $4B |
+| Subtotal Segment EV | | | | **$2,714B** |
+| Less: Corporate overhead PV | | | | ($30B) |
+| Less: Net debt | | | | ($30B) |
+| **SOTP Equity Value** | | | | **$2,654B** |
+
+Alphabet market cap at time of writing: ~$2,200B → implied ~17% upside if segments are valued at peer multiples.
+
+**The Conglomerate Discount**
+A persistent empirical finding: conglomerates typically trade at a 10–30% discount to the sum of their parts. Reasons:
+- *Complexity premium*: Investors apply a discount for analytical difficulty and reduced transparency
+- *Cross-subsidization concern*: Profitable divisions may subsidize unprofitable ones; capital allocation may not be optimal
+- *Management distraction*: Diversified management may be less effective than focused competitors in each segment
+- *Forced seller concern*: Investors who want exposure to one segment must accept unwanted exposure to others
+
+The conglomerate discount creates the "sum-of-the-parts trade" opportunity: if the discount exceeds the cost of capital over the expected separation timeline, activists often push for spin-offs, divestitures, or "tracking stock" mechanisms to surface embedded value.
+
+---
+
+### Advanced Mechanics: Residual Income Model (RIM)
+
+The Residual Income Model, also known as the Edwards-Bell-Ohlson (EBO) model after its academic developers, offers an alternative to DCF that connects to accounting book value and is particularly useful when cash flows are lumpy or negative but returns on equity are visible.
+
+**Core Insight**
+In a DCF, firm value depends on forecasting free cash flows indefinitely into the future. The RIM alternative:
+- Start with current book value of equity
+- Add the present value of future *economic profits* (return on equity above the required return)
+
+```
+V₀ = B₀ + Σ (ROEₜ − Ke) × Bₜ₋₁ / (1 + Ke)ᵗ
+```
+
+Where:
+- `V₀` = intrinsic value today
+- `B₀` = current book value per share
+- `ROEₜ` = return on equity in year t
+- `Ke` = cost of equity
+- The term (ROEₜ − Ke) × Bₜ₋₁ = "residual income" = economic profit in year t
+
+**Key Properties**:
+1. If ROE perpetually equals Ke (no excess returns), V₀ = B₀ → stock should trade at book value (P/B = 1)
+2. If ROE > Ke, V₀ > B₀ → stock deserves a P/B premium (high-quality businesses)
+3. If ROE < Ke, V₀ < B₀ → stock should trade at discount to book (value destroyers)
+
+This directly explains the P/B ratio: P/B > 1 implies the market believes the company will generate returns above its cost of equity; the magnitude of the premium is determined by the *duration* and *magnitude* of this excess return.
+
+**Worked Example**:
+- Book value: $25/share
+- ROE forecast: 20% for 5 years, then 12% perpetuity
+- Cost of equity: 10%
+
+Year 1–5 residual income: (20% − 10%) × growing book value
+- Year 1: 10% × $25 = $2.50; PV = $2.27
+- Year 2: Book = $25 × 1.20 = $30; RI = 10% × $30 = $3.00; PV = $2.48
+- ... (continue for 5 years; total PV ≈ $12.50)
+
+Year 5+ perpetuity RI: (12% − 10%) × Book_5 = 2% × $62.2 = $1.24/year; PV at year 5 = $12.40; PV today = $7.70
+
+Total intrinsic value: $25.00 + $12.50 + $7.70 = **$45.20**
+
+*Check*: Implied P/B = $45.20/$25 = 1.81× — reasonable for a business earning 20% ROE for 5 years transitioning to 12%
+
+**RIM vs. DCF**: Both give identical results when applied consistently. RIM is preferred when:
+- Cash flows are reinvested rather than distributed (book value grows accurately)
+- Financial services companies (banks, insurers) where assets/liabilities drive value more than FCF
+- Early-stage companies with predictable ROE but unpredictable capex patterns
+
+---
 
 ## Related
 - [[portfolio-theory]] — Cost of capital connects DCF to portfolio theory; CAPM provides Ke for WACC

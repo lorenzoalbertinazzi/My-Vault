@@ -3,7 +3,7 @@ title: Quantitative Finance & Algorithmic Trading
 date: 2026-05-30
 tags: [finance, quantitative-finance, algorithmic-trading, statistical-arbitrage, HFT, stochastic-calculus, factor-models, risk-management]
 source: "Black & Scholes (1973) The Pricing of Options and Corporate Liabilities, JPE; Fama (1970) Efficient Capital Markets: A Review of Theory and Empirical Work, Journal of Finance; Samuelson (1965) Proof that Properly Anticipated Prices Fluctuate Randomly, Industrial Management Review; Lo & MacKinlay (1988) Stock Market Prices Do Not Follow Random Walks, Review of Financial Studies; Jegadeesh & Titman (1993) Returns to Buying Winners and Selling Losers, Journal of Finance; Fama & French (1992) The Cross-Section of Expected Stock Returns, Journal of Finance; Hull (2018) Options, Futures and Other Derivatives; de Prado (2018) Advances in Financial Machine Learning; Jansen (2020) Machine Learning for Algorithmic Trading; Kelly (1956) A New Interpretation of Information Rate, Bell System Technical Journal"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -362,6 +362,101 @@ Step 8: Live paper trading (6–12 months) before committing capital
 4. **Reinforcement learning for execution:** Market making and optimal execution as RL problems; Sutton & Barto MDP formulation; actor-critic methods show promise in simulated market environments
 
 5. **Quantum computing:** Quantum annealing (D-Wave) for portfolio optimization (quadratic unconstrained binary optimization); limited to ~thousands of assets today but scales exponentially with qubit count
+
+---
+
+### Advanced Mechanics: Statistical Arbitrage — Pairs Trading and the Cointegration Framework
+
+Statistical arbitrage (stat-arb) exploits temporary mispricings between related assets, using statistical relationships rather than fundamental valuations to define "fair value." Pairs trading — the simplest form — has been systematically documented since Nunzio Tartaglia's group at Morgan Stanley first deployed it electronically in the mid-1980s.
+
+**Cointegration: The Mathematical Foundation**
+Two price series (P₁, P₂) are cointegrated if their linear combination forms a stationary (mean-reverting) process:
+```
+Z_t = P₁_t − β × P₂_t ~ I(0) [stationary]
+```
+
+While P₁ and P₂ individually may be non-stationary (random walks), their *spread* Z_t reverts to a stable long-run mean. This is economically meaningful: Coca-Cola and PepsiCo compete in the same market; their stock prices may drift, but their ratio should be bound by the economics of their shared industry.
+
+**Testing for Cointegration**
+1. *Engle-Granger two-step*: Regress P₁ on P₂, test residuals for stationarity (ADF test)
+2. *Johansen test*: Identifies the number of cointegrating relationships in a system of more than 2 series (applicable to ETF constituent analysis)
+
+**Worked Example — KO/PEP Pairs Trade**:
+
+*Setup (historical illustration)*:
+- Estimated β from 252-day rolling regression: KO_t = 1.15 × PEP_t + constant
+- Spread Z_t = KO_t − 1.15 × PEP_t has mean µ = 0, σ = 3.2 (daily)
+
+*Signal generation*:
+- Entry: Z_t > µ + 2σ (spread is 2 standard deviations above mean) → short KO / long PEP
+- Exit: Z_t < µ + 0.5σ
+- Stop: Z_t > µ + 4σ (spread diverging further, potential regime change)
+
+*Trade construction (October 15, hypothetical)*:
+- KO = $58.30, PEP = $48.20
+- Expected spread: 1.15 × 48.20 = $55.43; actual = $58.30; deviation = $2.87 = 2.27σ → ENTER
+- Position: Short 1000 KO ($58,300 short); Long 1150 PEP ($55,430 long)
+  (Dollar-neutral: 1000 × $58.30 = $58,300 vs. 1150 × $48.20 = $55,430; approximately market-neutral)
+
+*Resolution (November 8, 23 trading days later)*:
+- KO = $56.80, PEP = $48.70
+- New spread: 1.15 × 48.70 = $56.00; actual = $56.80; deviation = $0.80 = 0.25σ → EXIT
+- KO P&L: Short 1000 × ($58.30 − $56.80) = +$1,500
+- PEP P&L: Long 1150 × ($48.70 − $48.20) = +$575
+- Total gross P&L: $2,075 on $55–58K deployed ≈ 3.6% return in 23 days
+
+**Why Pairs Trading Works**:
+The excess return comes from providing *liquidity and price discovery* in relative pricing space. When KO and PEP diverge, either KO has been temporarily over-bought or PEP has been temporarily sold. The pairs trader provides capital to exploit this relative mispricing while hedging away the market/sector exposure. The risk is that the spread doesn't revert — the "regime change" risk where the cointegrating relationship breaks down (e.g., KO announces a major acquisition that permanently changes its relative value to PEP).
+
+**Sector ETF Arbitrage**
+More robust modern implementation: arbitrage between ETFs and their underlying baskets. S&P 500 constituents vs. SPY ETF; sector ETFs vs. individual stocks within the sector. The basket can be reconstructed exactly (unlike KO vs. PEP), giving cleaner cointegration. Authorized participants (APs) exploit large deviations through in-kind ETF creation/redemption — a mechanism that keeps ETF prices within ~0.05% of NAV in liquid ETFs.
+
+---
+
+### Advanced Mechanics: Execution Optimization and Implementation Shortfall
+
+The gap between a strategy's theoretical returns and actual realized returns — the "implementation shortfall" — is one of the least discussed but most important topics in quantitative finance. A strategy that works perfectly in backtests can be unprofitable in real trading due to execution costs.
+
+**Almgren-Chriss Framework (2001)**
+Robert Almgren and Neil Chriss developed the canonical model for optimal execution: the trade-off between *market impact cost* (selling too fast) and *timing risk* (selling too slowly while price drifts against you).
+
+For liquidating a position of N shares over time T:
+```
+Minimize: [Impact Cost] + λ × [Timing Risk Variance]
+```
+
+Where λ = risk aversion coefficient:
+- Low λ (patient, risk-tolerant): Spread the trade over long horizon; minimize expected cost; accept price drift risk
+- High λ (impatient, risk-averse): Execute quickly; accept high impact cost; avoid price drift risk
+
+**Optimal execution trajectory**:
+```
+n*(t) = N × sinh[κ(T−t)] / sinh(κT)
+```
+
+Where κ² = λσ² / η (σ = volatility, η = linear market impact parameter)
+
+This hyperbolic sinusoid shape means: front-load execution if price impact is low relative to timing risk; back-load if the stock is highly liquid and timing risk dominates.
+
+**Empirical transaction costs (institutional estimates, 2025)**:
+| Asset Type | Bid-Ask Spread | Market Impact (1% AUM) | Total Round-trip Cost |
+|---|---|---|---|
+| S&P 500 megacap | 1–2 bps | 3–8 bps | 5–20 bps |
+| S&P 500 midcap | 5–15 bps | 15–30 bps | 40–90 bps |
+| Russell 2000 smallcap | 20–50 bps | 30–100 bps | 100–300 bps |
+| EM equities | 30–80 bps | 50–150 bps | 150–460 bps |
+| HY bonds | 100–200 bps | 100–300 bps | 400–1000 bps |
+
+For a mean-reversion strategy with 50 bps expected gross alpha per trade and 100 bps round-trip cost in small-cap equities, every trade destroys value. This is why the same strategy can be profitable at a $50M AUM quant fund (small enough to trade small-caps with low impact) and completely unviable at a $5B fund.
+
+**Capacity scaling — the AUM constraint**:
+All quantitative strategies have a *capacity* above which returns decline toward zero:
+- HFT market making: capacity ~$100M–$1B (scalability limited by exchange latency and quote competition)
+- Statistical arbitrage: capacity ~$1B–$10B (limited by small-cap and mid-cap liquidity)
+- Systematic macro (trend following): capacity ~$20–100B (large liquid futures markets support massive scale)
+- Passive index: essentially unlimited capacity (by design tracks the market)
+
+---
 
 ## Related
 - [[portfolio-theory]] — Mean-variance framework that underlies factor models; Kelly criterion and position sizing theory

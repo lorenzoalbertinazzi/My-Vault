@@ -3,7 +3,7 @@ title: Credit Markets and Credit Risk
 date: 2026-05-30
 tags: [finance, credit, bonds, CDS, credit-default-swap, credit-spread, high-yield, investment-grade, leveraged-loans, CLO, default-risk, Merton-model, credit-cycle, distressed-debt, sovereign-credit, credit-rating]
 source: "Fabozzi (2012) Bond Markets: Analysis and Strategies; Merton (1974) On the Pricing of Corporate Debt, Journal of Finance; Altman (1968) Financial Ratios, Discriminant Analysis and the Prediction of Corporate Bankruptcy, Journal of Finance; Das & Tufano (1996) Pricing Credit-Sensitive Debt; Moody's Annual Default Study (2023)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 ## Summary
 Credit markets encompass the ecosystem of debt instruments — corporate bonds, leveraged loans, asset-backed securities, and derivatives — through which borrowers access capital and investors earn yield premiums for bearing default risk. Credit risk is the probability-weighted expected loss from counterparty failure, decomposable into probability of default (PD), loss given default (LGD), and exposure at default (EAD). Understanding credit is foundational to banking, asset management, corporate finance, and macroeconomic stability, as credit market stress reliably predates economic recessions.
@@ -264,6 +264,133 @@ The 2008 financial crisis was fundamentally a credit risk mispricing crisis. Mor
 - Leverage ratios at investment banks reached 30–40× pre-crisis
 
 The lesson: credit risk models fail precisely when correlations rise — during stress, historically uncorrelated assets default together ("correlation goes to one").
+
+---
+
+### Advanced Mechanics: The Gaussian Copula Catastrophe and CDO Pricing
+
+The 2008 financial crisis was triggered not merely by subprime mortgage defaults but by a profound failure in the mathematical modeling of *correlated* default risk. Understanding this failure is essential to understanding both the crisis and modern credit risk management.
+
+**Collateralized Debt Obligations (CDOs)**
+A CDO pools hundreds of individual credit instruments (mortgages, loans, bonds) and issues tranched securities against the pool:
+- **Senior tranche** (AAA): Last to absorb losses; only impaired if losses exhaust all subordinate tranches
+- **Mezzanine tranche** (A–BBB): Middle layer; absorbs losses after equity is exhausted
+- **Equity tranche** (unrated): First-loss piece; highly leveraged to the underlying pool
+
+The critical modeling question: how does the default of one mortgage in the pool affect the probability that others also default (correlation)?
+
+**David Li's Gaussian Copula (2000)**
+David Li's paper "On Default Correlation: A Copula Function Approach" (*Journal of Fixed Income*, 2000) provided a tractable formula for correlating default times across a portfolio:
+
+```
+C(u₁, u₂, ..., uₙ) = Φₙ(Φ⁻¹(u₁), Φ⁻¹(u₂), ..., Φ⁻¹(uₙ); R)
+```
+
+Where:
+- `uᵢ` = marginal default probability for obligor i (estimated from historical data)
+- `Φₙ` = n-dimensional standard normal CDF
+- `R` = correlation matrix (estimated from CDS spread correlations)
+
+**Why It Failed**
+The formula was elegant, fast to compute, and — fatally — allowed Wall Street to price CDOs from historical data covering only the benign 2001–2006 period:
+
+1. *Correlation underestimation*: Historical mortgage default correlations during 2001–2006 were ~0.3. During 2007–2009 stress, actual correlations exceeded 0.9. The model was calibrated on the wrong regime.
+2. *Normal distribution tails*: The Gaussian copula has thin tails — it dramatically underestimates the probability of simultaneous extreme events (fat-tail risk). Real default distributions have heavy tails.
+3. *Ratings anchoring*: AAA ratings on CDO tranches were contingent on the correlation assumption. Change ρ from 0.3 to 0.6, and the "AAA" tranche might carry a true default probability 40× higher.
+4. *Systemic feedback*: The model ignored that widespread mortgage defaults would affect *all* property values simultaneously — a common factor that broke the independence assumptions entirely.
+
+**Numerical illustration of correlation sensitivity**:
+For a synthetic CDO with 100 BB-rated bonds (individual PD = 5%, LGD = 60%):
+
+| Assumed Correlation (ρ) | Expected Loss on 5% Senior Tranche | Rating |
+|---|---|---|
+| 0.10 | 0.001% | AAA |
+| 0.30 | 0.12% | AAA |
+| 0.50 | 1.8% | A |
+| 0.70 | 8.4% | BB |
+| 0.90 | 22.1% | CCC |
+
+The difference between ρ=0.30 (model assumption) and ρ=0.70 (actual stress scenario) is the difference between a AAA bond and a high-yield bond — a fact hidden from the investors who bought $700 billion of CDO securities.
+
+**Post-Crisis Modeling Improvements**:
+- *t-copula* and *Clayton copula*: Heavier tails, better capture tail dependence
+- *Dynamic conditional correlation* (Engle 2002): Time-varying correlation matrix updated in real-time
+- *Stressed scenario overlays*: Basel III mandates banks to run correlations at 0.999 VaR levels in stressed conditions
+- *Macro-conditional PD models*: PD estimates conditioned on macroeconomic scenarios (GDP growth, unemployment) rather than historical averages
+
+---
+
+### Basel III Credit Capital Requirements: The Regulatory Framework
+
+The Basel III Accord (phased in 2013–2028) transformed credit risk management from a modeling exercise into a regulatory constraint. Key pillars for credit risk:
+
+**Standardized Approach (SA)**
+Banks with less sophisticated models assign risk weights from a regulator-prescribed lookup table:
+- AAA–AA corporate: 20% risk weight
+- A corporate: 50%
+- BBB corporate: 100%
+- BB corporate: 150%
+- Unrated: 100%
+- Residential mortgage: 35–150% (depending on LTV)
+
+Capital requirement = RWA × 8% (minimum CET1 ratio)
+
+**Internal Ratings-Based (IRB) Approach**
+Banks with approved internal models estimate PD, LGD, EAD, and maturity (M) directly. The Basel formula for unexpected loss (UL) capital:
+
+```
+K = LGD × N[(1-R)^(-0.5) × G(PD) + (R/(1-R))^(0.5) × G(0.999)] - PD × LGD) × MA
+```
+
+Where:
+- `R` = asset correlation = 0.12 × (1-e^{-50×PD}) / (1-e^{-50}) + 0.24 × [1 - (1-e^{-50×PD}) / (1-e^{-50})]
+- `G(·)` = inverse standard normal CDF
+- `MA` = maturity adjustment
+- `N(·)` = standard normal CDF
+
+**Worked Example — IRB Capital for a BBB Corporate Loan**:
+- PD = 0.50%, LGD = 45%, EAD = $100 million, M = 2.5 years
+- R = 0.12 × (1-e^{-25}) / (1-e^{-50}) + 0.24 × [1-(1-e^{-25})/(1-e^{-50})] ≈ 0.20
+- G(0.005) = -2.576; G(0.999) = 3.090
+- K = 0.45 × N[(-2.576)/(0.894) + (0.20/0.80)^{0.5} × 3.090] - 0.005 × 0.45
+- K ≈ 0.45 × N[-2.882 + 1.545] - 0.00225
+- K ≈ 0.45 × N[-1.337] - 0.00225 ≈ 0.45 × 0.0906 - 0.00225 ≈ 3.85%
+- Capital required = $100M × 3.85% = $3.85 million
+
+The same loan under standardized approach: $100M × 100% × 8% = $8M capital. IRB yields significant capital savings for well-rated borrowers — creating strong incentives for banks to develop internal models.
+
+**Fundamental Review of the Trading Book (FRTB, 2022)**:
+Extended the capital framework to market risk, requiring banks to compute Expected Shortfall (ES) at 97.5% confidence level over stressed periods, replacing Value-at-Risk. For credit instruments in the trading book, this dramatically increased capital requirements for securities with jump-to-default risk (e.g., sub-investment-grade bonds, CDS positions).
+
+---
+
+### Practical Application: Credit Portfolio Management and CLO Construction
+
+**The CLO Machine: How Leveraged Loans Become AAA Securities**
+
+Collateralized Loan Obligations (CLOs) are the dominant securitization vehicle for leveraged loans. In 2023, CLO issuance reached $180 billion in the US and €30 billion in Europe, funding approximately 60% of all leveraged loan origination.
+
+**CLO structural mechanics**:
+A CLO manager assembles ~$500 million of leveraged loans (typically 150–250 issuers, average spread SOFR+350 bps, average rating B2/B). The vehicle issues securities against this pool:
+
+| Tranche | Size | Rating | Spread | Yield |
+|---|---|---|---|---|
+| AAA | $325M (65%) | AAA | SOFR+140 | ~6.9% (2025) |
+| AA | $40M (8%) | AA | SOFR+195 | ~7.4% |
+| A | $30M (6%) | A | SOFR+265 | ~8.1% |
+| BBB | $25M (5%) | BBB | SOFR+400 | ~9.3% |
+| BB | $20M (4%) | BB | SOFR+650 | ~11.8% |
+| Equity | $60M (12%) | NR | Residual | ~15–20% targeted |
+
+The CLO manager earns 0.15% senior fees plus 20% of equity tranche profits above a hurdle. The magic: by diversifying across 200 loans, the correlation benefit is sufficient to create ~65% AAA paper from a pool of B-rated loans — a rating arbitrage made possible by diversification (low pairwise default correlations in a benign environment) that collapses during systemic stress (see Gaussian copula section above).
+
+**O/C Test Mechanics (Overcollateralization)**
+If defaults erode the portfolio below certain coverage ratios, CLO cash flows automatically divert from junior to senior tranches:
+- If AAA O/C ratio < 123%: equity tranche receives no distributions; all available cash pays down AAA notes
+- If AA O/C ratio < 118%: BB and equity tranches suspended; cash redirected upward
+- This self-reinforcing mechanism protects senior holders but creates "equity cliff" risk — small increases in defaults cause equity to lose value discontinuously
+
+---
 
 ## Related
 - [[fixed-income-deep-dive]] — Duration, convexity, bond pricing mechanics; CLO tranche analysis; repo market as credit funding mechanism

@@ -3,7 +3,7 @@ title: Derivatives — Futures, Forwards, and Swaps
 date: 2026-05-30
 tags: [finance, derivatives, futures, forwards, swaps, hedging, risk-management, commodities, interest-rate-swap, CDS, cost-of-carry, basis-risk, margin, central-clearing, OTC-derivatives, SOFR, contango, backwardation]
 source: "Hull (2018) Options, Futures and Other Derivatives; CME Group data; BIS Triennial Central Bank Survey (2022); McDonald (2013) Derivatives Markets; Duffie (2010) How Big Banks Fail and What to Do About It"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -255,6 +255,77 @@ CCPs themselves became systemically important. LCH's SwapClear clears over $400 
 **"Futures always converge to spot."** In extraordinary circumstances they may not — basis can widen dramatically in illiquid markets or during delivery squeezes. The Hunt Brothers' attempt to corner the silver market in 1980 caused violent basis dislocations.
 
 **"Notional = risk."** The $715 trillion notional OTC derivatives figure is often cited sensationally. The actual replacement cost (net credit exposure) is far smaller — the BIS estimates gross market value at ~$20 trillion, and after netting agreements, net credit exposure ~$3–4 trillion. Notional is the denominator for calculating cash flows, not the amount at risk.
+
+---
+
+### Advanced Mechanics: The SOFR Transition and Its Market Consequences
+
+The replacement of LIBOR (London Interbank Offered Rate) with SOFR (Secured Overnight Financing Rate) — completed in June 2023 for USD LIBOR — was the largest structural change to the global derivatives market in a generation. Understanding this transition illuminates fundamental differences in how benchmark rates work and price.
+
+**Why LIBOR Failed**
+LIBOR was a *survey-based* rate: each morning, panel banks submitted their estimated unsecured borrowing cost for various tenors (overnight to 12 months). The mechanism's flaw became apparent in 2012 when British regulators and the US Department of Justice documented systematic manipulation:
+- Barclays traders instructed LIBOR submitters to move rates to benefit swap book positions
+- 16 banks eventually settled LIBOR manipulation cases, paying $9 billion in combined fines (2012–2018)
+- The broader structural problem: during the 2008 crisis, banks understated their actual borrowing costs (to avoid appearing distressed), causing LIBOR to *understate* actual stress — precisely when accurate stress measurement was most critical
+
+**SOFR vs. LIBOR: Structural Differences**
+
+| Feature | USD LIBOR | SOFR |
+|---|---|---|
+| Basis | Unsecured bank borrowing (estimated) | Secured (Treasury repo) (actual) |
+| Type | Forward-looking term rate | Overnight (retrospective) |
+| Credit component | Includes bank credit risk premium | Near risk-free (collateralized) |
+| Transaction volume | ~$500M/day (sparse) | >$1 trillion/day (deep) |
+| Manipulation risk | High (survey-based) | Low (transaction-based) |
+
+**Market Impact on Derivatives**
+
+*Swap market repricing*: Interest rate swaps that previously paid/received LIBOR required conversion to SOFR-based terms. The ISDA fallback protocol — adoption of "SOFR + ISDA spread adjustment" — created a one-time basis adjustment: for 3-month LIBOR, the ISDA spread = 26.161 bps (reflecting the historical average LIBOR-OIS spread). Any residual deviation from this fixed spread is now a basis risk that traders must manage.
+
+*Term SOFR limitations*: Unlike LIBOR which was naturally forward-looking (3M LIBOR was the rate for a 3-month loan), SOFR is purely backward-looking. "Term SOFR" — a forward-looking compounded average published by the CME — exists but is only approved for use in loans, not in derivative contracts with end-users. This creates a gap: a corporate borrower might have a Term SOFR loan but can only hedge with SOFR swaps tied to the daily overnight rate compounded in arrears, creating a timing mismatch (day count, compounding convention differences) that generates a small but real hedge basis.
+
+**Worked Example — SOFR Compounding in Arrears**
+For a 3-month floating rate payment period (assume 91 days, starting Jan 15):
+```
+SOFR Compound = [(∏ (1 + SOFR_i × d_i/360)) − 1] × 360/91
+```
+
+If daily SOFR rates average 5.31% over the 91-day period with typical compounding:
+- Daily rate factor ≈ (1 + 0.0531/360) applied 91 times
+- Approximate compound result ≈ 5.31% × (1 + convexity adjustment)
+- The convexity adjustment for 3-month SOFR vs. 3-month forward SOFR ≈ −1 to −3 bps (non-trivial for large notional)
+
+This compounding arithmetic — which must be computed precisely from daily fixing data — is the operational complexity the financial industry absorbed during the transition, requiring reprogramming of risk systems that previously simply multiplied a single LIBOR fixing.
+
+---
+
+### Practical Application: Commodity Futures Hedging in Practice
+
+**Case Study: Southwest Airlines' Fuel Hedging Program (2000–2008)**
+
+Southwest Airlines executed one of the most successful commodity futures hedging programs in corporate history, providing a textbook illustration of futures mechanics in real-world risk management.
+
+**Context**: Jet fuel represents ~30–40% of airline operating costs. Price volatility destroys profitability: a $1/barrel move translates to ~$40M in annual operating cost for Southwest (pre-COVID fleet).
+
+**Southwest's program (2007 peak)**:
+- Hedged ~70% of fuel consumption through 2009 using crude oil futures and options (WTI crude is the closest available liquid hedge for jet fuel; the *crack spread* between crude and jet fuel is a separate, smaller basis risk)
+- Entry position: WTI crude at ~$51/barrel (2005–2006 average purchase price for 2007+ contracts)
+- 2007 average oil price: $72/barrel
+- 2008 peak: $147/barrel (July 2008)
+
+**P&L from hedging**:
+- Fuel cost saving: $1.5 billion in 2008 versus unhedged carriers (Southwest's hedge paid out when oil hit $147)
+- Southwest reported $294M net income in 2008 — most other major US airlines posted losses
+- By 2009, oil collapsed to ~$38/barrel; Southwest had locked in $51 strikes and paid above-market prices. Loss on hedges: ~$120M. Net result over 2005–2009: cumulative fuel hedging benefit of ~$3.5 billion
+
+**Basis Risk Reality**: The hedge was in crude oil (WTI), not jet fuel directly. The jet fuel/crude spread (the *jet crack spread*) can and does move:
+- Normal spread: ~$10–20/barrel
+- 2008 peak spread: ~$40/barrel (jet fuel supply constraints)
+- Southwest benefited less than the crude hedge alone would suggest during the 2008 peak due to widening crack spread — but still vastly outperformed unhedged peers
+
+**Lesson**: Hedging converts price *uncertainty* into basis *risk*. The hedge was not perfect — no real-world hedge is — but a small, predictable basis risk vastly outperforms the catastrophic upside risk of an unhedged position.
+
+---
 
 ## Related
 - [[options-basics]] — Non-linear derivatives, puts/calls, Black-Scholes; options as complement to futures hedging

@@ -3,7 +3,7 @@ title: Value Investing Methodology
 date: 2026-05-27
 tags: [finance, value-investing, Benjamin-Graham, Warren-Buffett, Charlie-Munger, intrinsic-value, margin-of-safety, economic-moat, ROIC, capital-allocation, net-net, GARP, compounding, activist-investing, Greenblatt, checklist, Mr-Market, competitive-advantage, quality-investing, earnings-power-value]
 source: "Graham (1949) The Intelligent Investor; Buffett Annual Letters to Berkshire Shareholders (1965–present); Greenblatt (2005) The Little Book That Beats the Market; Munger (1994) USC Business School Speech on Worldly Wisdom; Dorsey (2008) The Little Book That Builds Wealth; Greenwald et al. (2001) Value Investing: From Graham to Buffett and Beyond"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -359,6 +359,64 @@ Premeditatio malorum — the Stoic practice of imagining adversity in advance �
 The value investing tradition — built on the patient analysis of public financial statements, business quality, and competitive dynamics — faces a structural challenge from the machine learning-powered alternative data revolution that has fundamentally altered the information environment. Traditional value analysts who build their edge from careful reading of 10-K filings, earnings call transcripts, and industry research are now competing against quantitative firms that deploy satellite imagery (Orbital Insight, Descartes Labs) to count cars in Walmart parking lots before quarterly sales are reported, credit card transaction data (Second Measure, YipitData) to track real-time revenue by merchant category, and NLP models processing thousands of documents per day to detect sentiment shifts in management language. The practical consequence is that the "information advantage" that characterized great value investors like Buffett in the 1970s — when deep fundamental research genuinely produced private insights — has been partially competed away in large-cap markets where alternative data is fully priced in, while remaining available in small-cap, international, and private markets where data infrastructure is weaker.
 
 The response of sophisticated value investors to this challenge divides into two schools. The first — represented by Buffett's continued reluctance to embrace quantitative methods — argues that the alternative data revolution has simply moved the information competition to a different domain, but that genuine business quality assessment (moat analysis, management integrity evaluation, long-term industry dynamics) remains resistant to algorithmic processing because it requires judgment about fundamentally uncertain qualitative futures that no training dataset can capture. The second school — represented by practitioners like GMO's quantitative value team and AQR — argues that combining traditional value signals (price-to-book, price-to-earnings, free cash flow yield) with machine learning regime detection and alternative data creates a more robust version of value investing that reduces the false value traps (value stocks that are cheap because they deserve to be) and captures value opportunities earlier. The resolution likely depends on the investment universe: for the largest, most liquid global equities, ML-augmented value is demonstrably superior to pure fundamental analysis; for the smallest, most obscure opportunities where Buffett-style competitive research still generates genuine informational advantage, traditional approaches retain their edge. See [[machine-learning-fundamentals]] for the technical architecture of these alternative data systems and [[technical-analysis-and-chart-patterns]] for the parallel debate about whether chart patterns survive in an algorithmically-traded market.
+
+---
+
+### International Value Investing: Japan and the Net-Net Renaissance
+
+While Benjamin Graham's net-net strategy is often considered obsolete in efficient US markets, the framework has found remarkable continued relevance in Japan — producing extraordinary documented returns into the 2020s.
+
+**Japan's Structural Value Opportunity**
+By 2023, the Tokyo Stock Exchange (TSE) disclosed that over 50% of listed companies traded below book value (P/B < 1.0), a figure that would be extraordinary anywhere else in the developed world. The causes:
+- *Cross-shareholdings*: Japanese companies hold shares in their business partners (keiretsu system), creating balance sheets bloated with investable assets that are never deployed productively
+- *Cash hoarding*: Average Japanese company holds cash equal to 30–40% of market capitalization — far above US or European peers
+- *Management entrenchment*: Hostile takeovers are culturally stigmatized; management serves stakeholders broadly (employees, suppliers, community) rather than maximizing shareholder returns
+- *Deflationary mindset*: 30 years of deflation trained management to preserve, not deploy, capital
+
+**Quantitative evidence of the opportunity**:
+Nippon Steel (2023): Price ¥2,100/share; Book value ¥4,500/share; Net cash ¥800/share. Investor buying at market price effectively paid ¥2,100 for assets worth ¥4,500 — a 53% discount to book value. The hidden asset: Nippon Steel's equity stakes in affiliated companies were marked at historical cost, with fair market values substantially higher.
+
+**TSE Pressure for Reform (2023)**
+In March 2023, the Tokyo Stock Exchange issued an unprecedented directive to listed companies: those trading below P/B = 1.0 should formulate and publish plans to close the gap or risk delisting review. This regulatory catalyst is exactly the kind of external force that value investors need — the combination of deep discount (low P/B) and a clear catalyst (TSE pressure) creates the conditions for rapid revaluation.
+
+**Results 2023–2026**:
+- Nikkei 225: +55% from TSE announcement date to mid-2025 (in yen terms; +40% for US dollar investors)
+- Low P/B universe (stocks below 0.8× book) outperformed: +85% over same period
+- Warren Buffett's Japanese trading house investments (Mitsubishi, Mitsui, Sumitomo, Itochu, Marubeni — all acquired at P/B 0.6–0.9x in 2020–2021) appreciated dramatically: Berkshire's Japanese stock portfolio gained ~90% by mid-2025
+
+**Graham Net-Net in Japan (Current Data)**:
+As of early 2026, despite the rally, there remain approximately 60–80 Japanese companies meeting strict Graham NCAV criteria (market cap < 2/3 × NCAV where NCAV = current assets − total liabilities). Most are micro-caps with limited English disclosure and thin liquidity. Horizon Kinetics Japan Value Fund documented a basket return of ~210% over 2019–2025 from this universe, demonstrating the strategy remains viable for small-scale practitioners.
+
+**Why Japan Works for Value Investing**
+The psychological dimension (from Stoic tradition and behavioral finance) is crucial: Japanese value investments require extraordinary patience because the catalyst timeline is cultural, not financial — changing deeply embedded management behavior takes years or decades. Buffett's choice of 5-year time horizon on Japanese trading houses (he explicitly stated "we may hold these investments indefinitely") reflects the insight that alignment with a culture's gradual change requires a very long-duration investment horizon. The value investor who panics after 2 years of flat performance (as Japan-focused value funds did repeatedly through 2015–2022) misses the eventual revaluation.
+
+---
+
+### Expert Debate: Is the Value Premium Dead?
+
+The value premium — the excess return of cheap stocks (low P/B, P/E, EV/EBIT) over expensive stocks — has been the empirical bedrock of value investing since Fama and French (1992). Its apparent death and subsequent partial resurrection has generated one of the most consequential debates in modern finance.
+
+**The Death Narrative (2007–2020)**
+From 2007 to 2020, the value factor (HML: High Minus Low book-to-market) produced cumulative negative returns of approximately −10% in the US — the worst 13-year stretch in the factor's 90-year history. Proposed explanations:
+1. *Risk-based death*: The premium existed because value stocks are fundamentally riskier (higher distress risk, higher cyclicality); this risk is now better understood and priced, reducing the premium
+2. *Arbitrage death*: Factor investing proliferation (factor ETFs, smart beta products) attracted hundreds of billions in capital; the increased demand for cheap stocks raised their prices, eliminating the premium
+3. *Structural death*: The rise of intangible economy (platforms, software, network effects) makes traditional book value measures meaningless. A software company's "book value" excludes its most valuable assets (code, brand, customer relationships)
+
+**The Resurrection Narrative (2021–2026)**
+Value dramatically outperformed from September 2020 through December 2022: Russell 1000 Value beat Russell 1000 Growth by 28 percentage points in 2022 alone. International value (Europe, Japan) delivered similar dramatic outperformance.
+
+The interpretation:
+- The "decade of growth" (2010–2020) was *unusual* — driven by unprecedented multiple expansion in technology and near-zero discount rates that disproportionately benefit long-duration growth assets
+- When rates normalized (2022), the discount rate normalization simultaneously compressed growth multiples and expanded value relative attractiveness
+- Value premium appears to be *countercyclical* (highest when risk aversion is high) rather than monotonically positive
+
+**Current academic consensus (2026)**:
+- *US value*: Weak but positive premium; factor crowding has reduced the return but not eliminated it; alpha half-life of simple P/B is ~5 years post-publication
+- *International value*: Substantially stronger premium (Europe, Japan, EM); factors documented in Fama-French's global data remain highly significant
+- *Quality-adjusted value*: Combining low price with high quality (high ROIC, strong balance sheet, stable earnings) produces a more robust premium than raw cheapness alone (Piotroski, Novy-Marx research)
+- The future: Value investing is evolving from "buy cheap" to "buy cheap + quality + catalyst," incorporating elements of GARP and event-driven investing
+
+---
 
 ## Related
 - [[valuation-fundamentals]] — DCF, WACC, reverse DCF; intrinsic value frameworks underpinning value investing

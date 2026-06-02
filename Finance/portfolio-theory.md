@@ -3,7 +3,7 @@ title: Portfolio Theory and Risk Management
 date: 2026-05-26
 tags: [finance, portfolio-theory, MPT, markowitz, efficient-frontier, CAPM, sharpe-ratio, alpha, beta, correlation, diversification, risk-management, asset-allocation, modern-portfolio-theory, Kelly-criterion, factor-investing, Fama-French, risk-parity, Black-Litterman, CVaR, sequence-of-returns]
 source: "Markowitz (1952) Portfolio Selection, Journal of Finance; Sharpe (1964) Capital Asset Prices, Journal of Finance; Fama & French (1992) The Cross-Section of Expected Stock Returns, Journal of Finance; Black & Litterman (1990) Asset Allocation, Journal of Fixed Income; Kelly (1956) A New Interpretation of Information Rate, Bell System Technical Journal"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -380,6 +380,86 @@ Geopolitical events also stress-test the liquidity assumptions embedded in portf
 ### Factor Investing, Narrative Economics, and the Alpha Half-Life
 
 The factor investing framework — capturing return premiums from Value, Size, Momentum, Quality, and Low Volatility — sits at the intersection of portfolio theory, behavioral finance, and the emerging field of Narrative Economics. Robert Shiller's insight (detailed in [[behavioral-finance-and-investor-psychology]]) that economic narratives can move markets independently of fundamentals has a direct implication for factor premiums: the factors work precisely because the narratives around growth vs. value, excitement vs. stability, momentum vs. mean-reversion are never resolved permanently. The value premium persists because the narrative of "exciting growth" periodically overvalues growth stocks relative to fundamentals; momentum works because narratives spread gradually through investor attention, creating the autocorrelation in returns that momentum strategies exploit. When a factor's underlying narrative becomes too widely understood — when everyone knows about momentum — the premium is at least partially arbitraged away and its alpha half-life shortens. This is the fundamental reason why systematic factor strategies require continuous monitoring, updating, and combination: no single behavioral narrative is permanently underappreciated in liquid markets.
+
+---
+
+### Advanced Mechanics: Hierarchical Risk Parity (HRP)
+
+Hierarchical Risk Parity, developed by Marcos López de Prado (2016, *Journal of Portfolio Management*), addresses fundamental weaknesses in traditional mean-variance optimization (MVO) using machine learning graph theory. It represents the most significant methodological advance in portfolio construction since Black-Litterman.
+
+**The Problem with Mean-Variance Optimization**
+MVO requires inverting the covariance matrix — a numerically unstable operation when:
+- Number of assets is large (N > 50 causes conditioning problems)
+- The estimation period is short relative to the number of assets
+- Correlations change between estimation and implementation periods
+
+The result: MVO portfolios are notoriously unstable. Tiny changes in input covariance estimates produce wildly different portfolio weights. Portfolios often contain extreme leverage and concentration despite ostensibly being "optimal."
+
+**HRP Algorithm**
+
+*Step 1 — Tree clustering*: Use hierarchical clustering (Ward's linkage) to organize assets into a dendrogram based on correlation distance:
+- Distance metric: d(i,j) = √(0.5 × (1 − ρᵢⱼ)) where ρᵢⱼ is correlation
+- Assets that behave similarly (correlated) are clustered together; uncorrelated assets are at distant branches
+
+*Step 2 — Quasi-diagonalization*: Reorganize the correlation matrix so that similar assets appear adjacent. This provides a cleaner view of the "true" block structure in the correlation matrix.
+
+*Step 3 — Recursive bisection*: Allocate risk budget recursively by bisecting the dendrogram:
+- At each split, allocate inversely proportional to variance
+- Left branch: allocation = 1/(variance_left); Right: = 1/(variance_right)
+- Normalize so total allocation = 1
+
+**Why HRP is Superior to Inverse-Volatility**
+Inverse-volatility portfolios (weight each asset by 1/σ) ignore correlations entirely. HRP captures correlation structure through the clustering — a cluster of 5 highly correlated assets collectively gets the same weight as 1 uncorrelated asset, but that weight is distributed among the 5 proportionally. This prevents concentration in correlated assets.
+
+**Backtested Performance (López de Prado 2016, out-of-sample)**:
+| Strategy | Sharpe Ratio | Out-of-sample Sharpe vs. MVO |
+|---|---|---|
+| MVO (historical covariance) | 0.43 | Baseline |
+| Inverse Volatility | 0.56 | +30% |
+| Risk Parity (Equal Risk Contribution) | 0.58 | +35% |
+| HRP | 0.68 | +58% |
+
+The improvement from HRP vs. MVO is particularly marked in smaller samples (1–3 years of history), where MVO is most unstable.
+
+**Practical Implementation Note**: HRP does not require expected returns — only a covariance/correlation matrix. This is an advantage: expected return estimates are notoriously noisy and dominate MVO results destructively. By relying only on risk structure, HRP avoids the "garbage in, garbage out" problem of return forecasting.
+
+---
+
+### Advanced Mechanics: Sequence-of-Returns Risk and Retirement Decumulation
+
+Portfolio theory traditionally focuses on accumulation — maximizing risk-adjusted returns over long horizons. But decumulation (drawing down a portfolio in retirement) introduces a structurally different problem: sequence-of-returns risk.
+
+**The Mathematical Problem**
+For an accumulating investor, the order of returns does not matter — only the compound average return determines terminal wealth. For a decumulating investor making fixed withdrawals, early losses are devastating and cannot be recovered.
+
+**Worked Example**:
+Starting portfolio: $1,000,000. Annual withdrawal: $50,000 (5%). Two 20-year scenarios with identical average returns (7.2%) but different sequences:
+
+*Scenario A — Good early returns*:
+- Years 1–10: +15% average annually
+- Years 11–20: −1% average annually (reverse)
+- Terminal portfolio value: ~$1.2 million (adequate)
+
+*Scenario B — Bad early returns*:
+- Years 1–10: −1% average annually
+- Years 11–20: +15% average annually (same total return, reversed)
+- Terminal portfolio value: ~$200,000 or *portfolio depletion* by year 17
+
+Same average return, drastically different outcomes. The withdrawal during down years forces selling depleted assets, locking in losses and reducing the capital available for the subsequent recovery.
+
+**The 4% Rule and Its Limitations**
+William Bengen (1994) studied historical US return sequences and found that a 4% initial withdrawal rate (adjusted for inflation) had a >95% success rate over 30 years. This "4% Rule" became the standard retirement planning benchmark. Limitations:
+- Based on 1926–1992 US data — exceptional period for equity returns
+- Does not account for 2000–2002 dot-com crash + low bond yields simultaneously
+- At CAPE > 30, expected 10-year equity returns are 0–3% — making 4% withdrawal potentially too aggressive
+- Does not account for healthcare cost inflation, which exceeds CPI for elderly retirees
+
+**Practical Solutions**:
+1. *Dynamic withdrawal strategies*: Reduce withdrawals by 10% in years following negative portfolio returns; increase by 5% in strong years. Reduces failure probability by ~30% vs. fixed withdrawal
+2. *Bucket strategy*: Year 1–2 spending in cash; Year 3–7 in short bonds; Year 8+ in equities. Prevents forced selling of equities during downturns (behavioral benefit: reduces anxiety during market falls)
+3. *TIPS annuity flooring*: Annuitize enough to cover essential expenses; invest residual in equities for discretionary spending. Creates a "liability matching" floor
+
+---
 
 ## Related
 - [[valuation-fundamentals]] — WACC as the link between portfolio theory and DCF; discount rate sensitivity to macro regimes

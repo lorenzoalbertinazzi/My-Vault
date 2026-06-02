@@ -3,7 +3,7 @@ title: Hedge Funds and Alternative Strategies
 date: 2026-05-30
 tags: [finance, hedge-funds, alternatives, long-short-equity, global-macro, relative-value, event-driven, quantitative, statistical-arbitrage, managed-futures, CTA, merger-arbitrage, activist-investing, distressed-debt, LTCM, performance-fees, carried-interest, leverage, VaR, family-offices]
 source: "Fung & Hsieh (1997) Empirical Characteristics of Dynamic Trading Strategies, Review of Financial Studies; Lhabitant (2006) Handbook on Hedge Funds; Ineichen (2002) Absolute Returns: The Risk and Opportunities of Hedge Fund Investing; Preqin Global Hedge Fund Report (2024)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 ## Summary
 Hedge funds are pooled investment vehicles that use diverse, often complex strategies — long/short equity, global macro, relative value arbitrage, event-driven, and quantitative — to generate absolute returns uncorrelated with traditional markets. Born from Alfred Winslow Jones's 1949 partnership, the industry has grown to manage ~$4.5 trillion in assets globally (2026). Unlike mutual funds, hedge funds face lighter regulation, charge performance fees (historically "2 and 20"), employ leverage, and can short-sell — capabilities that enable unique return profiles but also create distinct risks.
@@ -209,6 +209,85 @@ Approximately 1,200 crypto-focused funds managed ~$80B (2026). Bitcoin's annuali
 - **Counterparty risk:** FTX collapse (November 2022) — co-founded by Sam Bankman-Fried, the third-largest exchange by volume — revealed $8B in misappropriated client funds. Sequoia wrote down its $214M FTX investment to zero in one day; hundreds of hedge funds lost unrecoverable assets.
 - **Smart contract risk:** The Ronin Network bridge hack (March 2022) destroyed $625M irreversibly; code bugs in blockchain protocols are permanent and uninsured.
 - **Regulatory uncertainty:** SEC's ongoing litigation (Coinbase, Binance 2023) and "security vs. commodity" framework ambiguity create existential legal risks for many token holdings.
+
+---
+
+### Advanced Mechanics: Multi-Strategy "Pod Shop" Architecture
+
+The most significant structural evolution in hedge funds over the past decade is the rise of *multi-strategy platforms* — sometimes called "pod shops" or "megafunds." These platforms (Millennium Management, Citadel, Point72, Balyasny, Schonfeld) now manage $50–100+ billion each and have fundamentally altered the competitive landscape.
+
+**How Pod Shops Work**
+Unlike traditional hedge funds where a single portfolio manager runs a unified strategy, multi-strategy platforms are organized as:
+- **Pods**: Independent trading teams (2–10 people) each managing a discrete book of positions in a specific strategy/sector
+- **Risk allocation**: Central risk management allocates capital and risk limits (maximum drawdown, sector concentration, correlation limits) to each pod
+- **P&L independence**: Each pod is evaluated on standalone Sharpe ratio and absolute P&L; pods with consistent Sharpe ratios above ~1.0 receive capital allocation; underperforming pods are "cut" (capital withdrawn) or dissolved
+- **Platform infrastructure**: Shared prime brokerage relationships, technology systems, compliance, and operational infrastructure provides pods with investment bank-quality infrastructure at lower marginal cost
+
+**The "1-and-30" Fee Problem**
+Multi-strategy funds charge fees that compound harshly:
+- Management fee: 1.5–2.5% of assets
+- Performance fee: 20–30% of P&L
+- *Plus pass-through expenses*: Unlike traditional funds that absorb operating costs, platforms pass through all costs (data, technology, prime brokerage interest) to investors. Expenses can add another 7–10% of NAV annually
+- Gross return needed to net 10% for investors: often 20–25%+
+
+This "1-and-30 with 10% in expenses" structure means pod shops must generate extraordinary gross returns to deliver net returns competitive with passive alternatives. The implication: these firms are forced into aggressive trading (high turnover, leverage, factor timing) to generate the gross returns needed.
+
+**Worked Example — Citadel's Multi-Strategy Architecture**
+Citadel manages ~$63 billion (2026) across 5 major strategy groups:
+- *Equities*: Global equity long/short; systematic equity; convertible and volatility arbitrage
+- *Fixed Income and Macro*: Rates, credit, commodities, global macro
+- *Quantitative Strategies*: High-frequency, statistical arbitrage, market making
+- *Credit*: Corporate credit, structured products, distressed
+- *Commodities*: Energy, power, metals
+
+2023 flagship fund performance: +15.3% net; gross was estimated ~40%, with fees and expenses consuming the spread. The 2022 performance (+38%, best year in Citadel history) reflected extraordinary dispersion across pod performance — some pods earned 100%+, others lost 20%+. Net returns to investors: +26.2% after the approximately 11–12% gross-to-net haircut.
+
+**Systemic Risk Concern**
+Pod shops now represent a significant fraction of daily equity and futures trading volume. Their shared factor exposures create crowding risk: when multiple pods independently arrive at the same "crowded trade" (e.g., long momentum, short volatility), simultaneous deleveraging creates violent corrections unrelated to fundamentals. The August 2007 "Quant Quake" — when multiple systematic funds simultaneously deleveraged, causing momentum factors to reverse 7+ standard deviations in days — is the canonical example of pod-shop systemic risk crystallizing.
+
+**Quantitative Crowding Detection**:
+Managers monitor crowding through:
+- *Factor return correlation*: If L/S equity pods across platforms have correlated returns, they are crowded in the same factor tilts
+- *Short interest concentration*: High short interest in small-float stocks creates squeeze risk
+- *Options market: OI concentration*: Unusual put/call concentration reveals crowded positioning
+- *13F analysis*: Quarterly hedge fund filings reveal position overlap; platforms with >70% overlap in top 20 holdings are dangerously correlated
+
+---
+
+### Worked Example: Global Macro Trade Construction
+
+Global macro hedge funds take concentrated directional bets on macro variables (interest rates, currencies, commodities, equity indices). The following example illustrates a full trade construction process.
+
+**Trade: BOJ Normalization and Yen Carry Unwind (2023–2024)**
+
+*Thesis*: Bank of Japan will exit YCC (Yield Curve Control), causing:
+1. Japanese 10-year yield to rise from 0.25% cap toward 1–2%
+2. JPY to appreciate as carry trades (borrowing JPY to buy higher-yielding assets) unwind
+3. Global risk assets to reprice as the $4+ trillion yen carry trade partially unwinds
+
+*Position structure*:
+- Long JGB put (short JGBs through options): Pay premium for right to sell JGBs at 100 if yields rise
+- Long JPY/short basket (AUD, NZD, MXN): Buy JPY versus high-carry EM currencies that are typical carry trade targets
+- Short global equity index basket (as carry unwind historically coincides with risk-off): Position through index puts or futures
+
+*Risk management*:
+- Size: 3% of portfolio in JGB puts, 5% in FX carry-reversal positions, 2% in equity index puts
+- Stop loss: Exit JGB puts if YCC is not exited within 12 months; exit FX trades if JPY depreciates >3%
+- Profit target: JGB puts 3x; FX positions 15%; equity puts 1.5x
+
+*Outcome*:
+- March 2024: BOJ ends negative rates, raises policy rate to 0.1%
+- July 2024: BOJ raises rates again to 0.25%; YCC abandoned
+- August 5, 2024: Global equity markets drop ~5% in a single day ("Yen Carry Crash"); JPY strengthens 12% in 3 weeks; AUD/JPY falls 8%
+- JGB yields rose to ~1.05% (below the 2% scenario but significant)
+
+*P&L*:
+- JGB puts: +180% return on the position (3% allocation × 1.8 = 5.4% portfolio contribution)
+- FX carry reversal: AUD/JPY −8%; MXN/JPY −12%; blended −9% × 5% allocation = +4.5%
+- Equity puts: S&P -5%, Nikkei -12%; equity puts +80% × 2% = +1.6%
+- Total gross contribution: ~+11.5% to the portfolio on 10% risk capital = strong risk-adjusted outcome
+
+---
 
 ## Related
 - [[portfolio-theory]] — Modern Portfolio Theory and the role of uncorrelated alternative return streams; Sharpe ratio benchmarking

@@ -3,7 +3,7 @@ title: Options — Fundamentals and Strategies
 date: 2026-05-26
 tags: [finance, options, derivatives, black-scholes, greeks, delta, gamma, theta, vega, implied-volatility, calls, puts, hedging, options-strategies, volatility, VIX, put-call-parity, volatility-skew, LEAPS, iron-condor, straddle, gamma-scalping]
 source: "Hull (2018) Options, Futures and Other Derivatives; Black & Scholes (1973) The Pricing of Options and Corporate Liabilities, JPE; Natenberg (2014) Option Volatility and Pricing; Taleb (1997) Dynamic Hedging; Nison (1991) Japanese Candlestick Charting Techniques"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -357,6 +357,75 @@ Options markets are the most immediate financial channel through which geopoliti
 The deepest cross-disciplinary connection between options and fixed income — analyzed in [[fixed-income-deep-dive]] and [[yield-curve-and-bonds]] — is the structural equivalence between options' gamma and bonds' convexity. Both measure the second-order, non-linear sensitivity of price to the underlying variable (stock price for options, interest rates for bonds), and both create the same fundamental asymmetry: positive convexity/positive gamma means the instrument benefits from large moves in either direction relative to the linear price prediction. A bond with positive convexity falls less than its duration predicts when rates rise, and rises more than duration predicts when rates fall — exactly analogous to a long option position that benefits from realized volatility exceeding implied volatility. A callable bond has negative convexity — when rates fall (bond prices rise), the issuer calls the bond, capping the upside — which is the fixed income equivalent of a covered call position on the underlying rate instrument.
 
 Mortgage-backed securities (MBS) represent the most economically significant manifestation of this connection: homeowners' prepayment optionality (the right to refinance) makes MBS functionally equivalent to a bond that the homeowner has sold a covered call on (selling the right to call the loan when rates fall). MBS investors are systematically short negative convexity, receiving the prepayment option premium embedded in the MBS spread but bearing the convexity risk that this creates. When rates fall dramatically, MBS investors experience exactly the options seller's problem: the "gamma" of their position works against them, as duration shortens precisely when they want it to lengthen. The Federal Reserve's massive MBS purchasing programs (2020–2022 QE) effectively socialized this negative convexity, removing it from private investor balance sheets — which had the options market implication of suppressing implied volatility in interest rate options (swaptions) and depressing the volatility risk premium in fixed income broadly. The unwinding of these Fed MBS holdings (QT, 2022–2025) returned that negative convexity to private markets, which is one mechanism through which quantitative tightening created market volatility independent of rate hikes themselves.
+
+---
+
+### Advanced Mechanics: Exotic Options and Structured Products
+
+Beyond vanilla puts and calls, the derivatives market offers a vast taxonomy of exotic options — contracts with non-standard payoff profiles that allow highly precise risk engineering. Understanding exotics reveals the full generality of options theory.
+
+**Barrier Options**
+A barrier option activates (knock-in) or deactivates (knock-out) when the underlying crosses a specified barrier price.
+- *Down-and-out call*: Standard call that ceases to exist if the stock falls below a barrier B. Since it can be extinguished, it's cheaper than a vanilla call. European down-and-out call price with barrier B:
+  - If S > B throughout: payoff = max(S_T − K, 0)
+  - If S touches B at any time: payoff = 0 (option is knocked out)
+- *Up-and-in call*: Only activates if stock rises above barrier. Useful for "cheapening" long call position — you only pay for the option if the rally you're predicting actually occurs
+- *Pricing*: Reflection principle for barrier pricing; closed-form solutions exist for simple barriers in Black-Scholes
+
+**Application**: A CFO hedging FX exposure might buy a down-and-out put on EUR/USD (protection against EUR fall, knocked out if EUR rises sharply) instead of a vanilla put. Cheaper, sufficient for the hedging need.
+
+**Asian Options**
+Payoff is based on the *average* underlying price over a period, not the terminal price:
+- *Average price call*: max(Average(S) − K, 0)
+- *Average strike call*: max(S_T − Average(S), 0)
+
+Applications: Commodity hedging where the economic exposure is to average prices (a copper mine's revenue depends on average monthly prices, not spot on expiry). Asian options cannot be manipulated on a single expiry date — an important feature for commodity markets.
+
+Pricing: No closed-form Black-Scholes equivalent; typically priced by Monte Carlo simulation. The key property is that the average has lower volatility than the spot price: Var(Avg) < Var(S_T), so Asian options are always *cheaper* than vanilla equivalents with the same maturity.
+
+**Digital/Binary Options**
+Payoff is a fixed amount (or zero) depending on whether a condition is met:
+- *Cash-or-nothing call*: Pays $1 if S_T > K, $0 otherwise
+  - Price = e^{-rT} × N(d₂) [simply the discounted risk-neutral probability]
+- *Asset-or-nothing call*: Pays S_T if S_T > K, $0 otherwise
+  - Price = S × e^{-qT} × N(d₁)
+
+Notably: Vanilla call = Asset-or-nothing call − K × e^{-rT} × Cash-or-nothing call. This decomposition reveals that every vanilla option is a spread of digitals — a foundational insight in options theory.
+
+**Structured Products: Building Blocks**
+Bank-issued structured products combine vanilla bonds with options to create synthetic payoffs with specific risk profiles:
+
+*Principal-Protected Note (PPN)*:
+- Buy zero-coupon bond (matures at par = principal protection)
+- Use the discount to purchase call options on an equity index
+- Investor receives: guaranteed return of capital + participation in upside
+- Example: 5-year PPN with 80% equity participation
+  - Zero coupon bond at 4% yield: costs $82 per $100 face value
+  - Remaining $18 buys call options on S&P 500
+  - If S&P +50%: investor receives $100 principal + $40 (80% of 50%) = $140 = 6.9% annualized
+  - If S&P −30%: investor receives $100 (principal protected, zero gain)
+  - Banks earn: the implied volatility overcharge in the options (typically selling at 15–20% IV vs. realized 12–14%)
+
+*Reverse Convertible*:
+- Investor receives high coupon (e.g., 10%)
+- In exchange: if stock falls below a barrier (e.g., 80%), investor receives shares at the original price (significant loss)
+- Economically: investor sold a put option; the premium is embedded in the high coupon
+- These are the products mis-sold to retail investors who understood "10% yield" but not "you sold a put"
+
+---
+
+### Common Misconceptions
+
+**Misconception 1: "Out-of-the-money options are cheap"**
+By absolute dollar price, OTM options are cheap. But measuring cheapness requires comparing to theoretical value. An OTM call trading at $0.50 might have a fair value of $0.20 based on realized volatility — making it expensive relative to fair value even though it's inexpensive in absolute terms. The correct measure is whether *implied volatility* is high or low relative to *expected realized volatility*. The volatility risk premium — the systematic tendency for implied volatility to exceed realized volatility by ~2–4 points — means that OTM options are typically *expensive* in fair-value terms, not cheap. Selling OTM options (volatility selling) is thus a *systematic positive carry* strategy, not gambling. The catch: the positive carry comes with significant negative skewness and tail risk.
+
+**Misconception 2: "Delta is the probability of expiring in-the-money"**
+A call option's delta (N(d₁) in Black-Scholes) is frequently described as the probability of expiring ITM. The actual probability is N(d₂), not N(d₁). The difference: d₁ = d₂ + σ√T. For short-dated ATM options, this difference is small. For long-dated or high-volatility options, the difference is significant. A 2-year call with σ=30% might have d₁=0.5 (delta=0.69) but d₂=0.08 (probability of ITM=0.53). The delta overstates the ITM probability by 16 percentage points. This matters for risk management: position sizing based on delta rather than probability of exercise systematically underestimates the number of options positions that will be exercised.
+
+**Misconception 3: "Hedging with options is free insurance"**
+Options hedges cost money (premium) and that cost is real — it's not returned if the hedge is not needed. The correct mental model: options are insurance, and like all insurance, they carry an expected cost. The expected cost of a put option over time equals the volatility risk premium paid. A portfolio systematically hedging with puts will underperform an unhedged portfolio by approximately the VRP (~1–2% annually) compounded over time. The correct decision is not "should I hedge?" but "what is the expected cost of hedging relative to the expected cost of not hedging (potential losses) and what is my capacity to bear those losses?" For institutional investors with long time horizons and no external redemption risk, systematic put hedging typically destroys value. For levered investors with shorter horizons and redemption risk, it can be value-preserving.
+
+---
 
 ## Related
 - [[valuation-fundamentals]] — Equity as an option on firm assets; convertible bond optionality in corporate valuation
