@@ -391,6 +391,8 @@ A genuine debate runs through the behavior change literature about which lever i
 - [[social-psychology-and-group-dynamics]] — Social context (peer groups, community) is the most powerful modifier of habit formation and maintenance
 - [[Finance/behavioral-finance-and-investor-psychology]] — Habitual investing behaviors (automatic contributions, rules-based rebalancing) outperform discretionary approaches
 - [[Finance/value-investing-methodology]] — Value investing discipline requires installing counter-cyclical behavioral habits against market sentiment
+- [[Tech & AI/machine-learning-fundamentals]] — The basal ganglia habit loop (cue-routine-reward) is the biological substrate of what neural networks do through training: a stimulus pattern (cue) reliably elicits a response pattern (routine) that has been reinforced by reward signals; dropout and regularization in ML correspond to the biological mechanism of habit generalization (the habit fires across contexts, not just the original training context); the chunking phenomenon in habit formation — where a sequence of behaviors compresses into a single cognitive unit — parallels how deep networks develop higher-level feature representations that capture complex behavioral patterns in compressed form
+- [[Tech & AI/reinforcement-learning-from-human-feedback]] — RLHF training processes share structural features with habit formation: both use reward signals to reinforce behavioral patterns; both encode behaviors as policy functions (in RL) or procedural routines (in habit); and both face the challenge of generalizing from training contexts to novel situations without overfitting to the specific reward conditions of acquisition
 
 ---
 

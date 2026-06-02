@@ -464,6 +464,7 @@ The strongest practitioners (Munger, Buffett, Nassim Taleb, Richard Feynman) com
 - [[emotional-intelligence]] — EI as metacognitive infrastructure for selecting and applying mental models under emotional pressure
 - [[Finance/value-investing-methodology]] — Munger's latticework directly applied to investment analysis; circle of competence and margin of safety as core models
 - [[Finance/behavioral-finance-and-investor-psychology]] — Mental models as the practitioner's toolkit against market psychology failure modes
+- [[Finance/portfolio-theory]] — Markowitz's mean-variance framework and the efficient frontier are among the most important formal mental models in finance; the concept of diversification as a free lunch (reducing idiosyncratic risk without reducing expected return) is a non-obvious second-order insight that requires an abstract model of correlation to grasp intuitively, making it a paradigm case of why quantitative mental models outperform intuitive judgment in portfolio construction
 - [[Tech & AI/machine-learning-fundamentals]] — ML models as mathematical analogs to human mental models; overfitting mirrors domain-specific expertise failure
 - [[Tech & AI/retrieval-augmented-generation]] — RAG architectures as implementation of Munger's latticework (stored models + retrieved specifics)
 - [[Tech & AI/prompt-engineering]] — Prompt design as applied mental model selection; chain-of-thought prompting operationalizes first-principles and second-order thinking

@@ -3,7 +3,7 @@ title: Transformer Architecture — How LLMs Work
 date: 2026-05-26
 tags: [ai, machine-learning, deep-learning, transformer, self-attention, multi-head-attention, NLP, LLM, GPT, BERT, RoPE, flash-attention, MoE, KV-cache, speculative-decoding, positional-encoding, scaling-laws, causal-masking, pre-norm, SwiGLU]
 source: "Vaswani et al. (2017) Attention Is All You Need (arXiv:1706.03762); Kaplan et al. (2020) Scaling Laws for Neural Language Models (arXiv:2001.08361); Hoffmann et al. (2022) Training Compute-Optimal LLMs — Chinchilla (arXiv:2203.15556); Dao et al. (2022) FlashAttention (arXiv:2205.14135); Su et al. (2021) RoPE (arXiv:2104.09864); Kwon et al. (2023) Efficient Memory Management for LLM Serving with PagedAttention"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -518,12 +518,29 @@ The investor psychology literature in [[behavioral-finance-and-investor-psycholo
 
 The emergence of Mamba and state space models as transformer alternatives illustrates a broader pattern in technology cycles: apparent monocultures are always challenged by architectures that address the dominant architecture's structural weaknesses. The transformer's O(N²) attention complexity makes it fundamentally expensive for very long contexts; SSMs address this but sacrifice associative recall quality. This tradeoff structure — incumbents with superior performance on known benchmarks, challengers with superior efficiency on new task dimensions — resembles the dynamics of market competition analyzed in [[value-investing-methodology]], where moats erode precisely at the boundaries of existing strengths. The hybrid Jamba/Zamba architectures (interleaving transformer and Mamba layers) represent the technological equivalent of conglomerate strategies: capturing complementary strengths while accepting the management complexity of maintaining two distinct operating models.
 
+### Transformers and Human Memory Architecture
+
+The transformer's memory structure maps onto the dual-memory architecture described in [[memory-systems-and-learning-science]] in illuminating ways. The distinction between **working memory** (the small, fast buffer used for active reasoning) and **long-term memory** (the vast, slow store of consolidated knowledge) maps with surprising precision onto the transformer's KV cache versus its trained weights. The KV cache functions as working memory: it stores the representations of the current context window, is bounded in size (16K–1M tokens depending on the model), and is discarded when the conversation ends. The model's weights function as long-term memory: a fixed repository of compressed world knowledge, acquired during training, that shapes every forward pass without being retraced each time. Both systems share the characteristic that working memory capacity is the binding constraint for active reasoning — just as humans struggle with more than 7±2 chunks in working memory, transformers degrade in quality as context length grows beyond what the attention mechanism can handle effectively.
+
+The self-attention mechanism itself resembles **associative retrieval** in human memory: given a query (the current token's Q vector), the model searches its context (the K vectors of all prior tokens) and retrieves a weighted combination of associated content (the V vectors). This is structurally identical to the hippocampal indexing theory of memory (Teyler & DiScenna, 1986), which proposes that the hippocampus stores indices into neocortical representations, not the memories themselves — allowing rapid pattern completion from partial cues. When a transformer successfully completes "The capital of France is ___" using attention over prior context, it is performing the same functional computation as hippocampal pattern completion, albeit through entirely different physical mechanisms.
+
+The divergence is instructive: biological working memory is subject to **chunking** — the cognitive process of grouping related items into single units to expand effective capacity (Miller, 1956). An expert chess player "sees" piece configurations as chunks rather than individual pieces, allowing them to hold complex board positions in working memory. Transformers have no equivalent chunking mechanism; a 100-token code function occupies 100 times the KV cache space of a single token, regardless of its conceptual unity. This explains why hierarchical context compression techniques (like LLMlingua, RECOMP) are actively researched — they are attempting to implement something like chunking for transformer working memory.
+
+### Transformers as the Foundation for Downstream Intelligence Systems
+
+Understanding the transformer is prerequisite to understanding how modern AI safety and alignment work. The [[reinforcement-learning-from-human-feedback]] methodology that aligns language models takes a pretrained transformer and fine-tunes it via PPO or DPO — the transformer's weights provide the representational substrate that RLHF reshapes toward human preferences. Constitutional AI (Anthropic), debate (DeepMind), and process reward models all operate on transformer internals: they modify the probability distribution over next tokens, not some separate "reasoning module." This means that alignment interventions must work within the constraints of attention-based computation — they cannot add logical verification steps or formal reasoning layers; they can only shift the statistical tendencies of a sequence prediction machine. This architectural constraint is one of the key challenges analyzed in [[ai-safety-and-alignment]]. Separately, the agentic systems described in [[agentic-ai-and-multi-agent-systems]] are built entirely on transformer inference: each "reasoning step" in a ReAct loop is a forward pass through a transformer, and the quality of multi-step planning is bounded by the quality of the underlying language model's contextual reasoning within its attention window.
+
 ## Related
 - [[prompt-engineering]]
 - [[machine-learning-fundamentals]]
+- [[llm-training-and-scaling-laws]]
+- [[reinforcement-learning-from-human-feedback]]
+- [[agentic-ai-and-multi-agent-systems]]
+- [[ai-safety-and-alignment]]
 - [[vector-databases-and-embeddings]]
 - [[retrieval-augmented-generation]]
 - [[diffusion-models-and-image-generation]]
+- [[memory-systems-and-learning-science]]
 - [[2026-05-27-us-china-great-power-competition]]
 - [[cognitive-biases]]
 - [[behavioral-finance-and-investor-psychology]]

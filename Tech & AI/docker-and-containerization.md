@@ -3,7 +3,7 @@ title: Docker and Containerization
 date: 2026-05-28
 tags: [devops, docker, containers, infrastructure, deployment, OCI, containerd, namespaces, cgroups, eBPF, Cilium, service-mesh, MLOps, Dockerfile, container-registry, multi-stage-build, rootless-containers, BuildKit]
 source: "Docker Inc. documentation (2013–2026); OCI Runtime Specification v1.0; Merkel (2014) Docker: Lightweight Linux Containers for Consistent Development and Deployment (Linux Journal); Burns et al. (2016) Borg, Omega, and Kubernetes (ACM Queue); Docker Security Best Practices (NIST SP 800-190)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -587,12 +587,21 @@ The security model of containers — process isolation via Linux namespaces and 
 
 The emergence of containerized AI inference as a product — where a company's IP is encapsulated in a Docker image deployed to Kubernetes, accessible via API, billed per token or per request — has created an entirely new economic structure for monetizing intelligence. The container is, in this context, the atomic unit of a new kind of intellectual property: not a document or a process patent but a runnable computational artifact that embodies learned knowledge. This connects to the [[valuation-fundamentals]] question of how to value AI assets. A trained model packaged as a container image has characteristics of both a software asset (reproducible, deployable at near-zero marginal cost) and a knowledge asset (the knowledge encoded in the weights is non-fungible and expensive to replicate). The Kubernetes abstraction — treating the cluster as a pool of compute, memory, and GPU resources that containers are scheduled onto — creates the infrastructure for pricing intelligence as a commodity: milliseconds of compute, gigabytes of memory, and fractions of a GPU per inference call. The economic consequence is that the competitive dynamics of AI deployment increasingly resemble competitive dynamics in cloud computing broadly: commoditization of the inference infrastructure layer (NVIDIA, AMD, cloud providers), consolidation at the model layer (where training data and compute moats are strong), and margin opportunity in application and workflow layers that can differentiate on domain knowledge and user experience.
 
+### Docker and Kubernetes: The Infrastructure Stack
+
+Docker and [[kubernetes-and-container-orchestration]] form a tightly coupled technology stack — Docker solves the packaging problem (what runs), Kubernetes solves the orchestration problem (where, when, and how many run). Understanding this division is essential for any AI/ML deployment. A Docker image is an immutable artifact: it captures a specific version of an application with all its dependencies frozen at build time. This makes it ideal for ML model serving, where reproducing exact behavior requires exact software versions. Kubernetes then treats these immutable images as atomic deployment units, managing their lifecycle across a cluster: scheduling them onto nodes with available GPU capacity (essential for LLM inference), autoscaling the number of running instances based on request queue depth (KEDA for ML workloads), and routing traffic with zero-downtime rolling updates when new model versions are released.
+
+The deep cross-reference is in **distributed LLM training**: large model training (see [[llm-training-and-scaling-laws]]) runs as Kubernetes jobs where each pod handles a specific pipeline parallel or tensor parallel shard. Kubeflow (the Kubernetes-native ML platform) and Ray (distributed Python framework) both use Kubernetes as their compute substrate. A training run for a 70B parameter model might involve 512 GPU pods, each running the same Docker image pinned to exact PyTorch/CUDA versions, coordinated by Kubernetes to restart failed pods and rebalance the training topology. Without container isolation and Kubernetes orchestration, the fault-tolerance that makes such large-scale training economically viable would require bespoke distributed systems engineering at each organization. **Agentic AI systems** (see [[agentic-ai-and-multi-agent-systems]]) similarly depend on Docker + Kubernetes for safe execution: each agent tool call that executes code (e.g., a code interpreter agent) runs in an isolated container with limited network access and filesystem permissions — Kubernetes NetworkPolicy enforces which agents can communicate with which external services, providing the security boundary that makes agentic AI deployable in production environments.
+
 ## Related
 - [[machine-learning-fundamentals]]
 - [[retrieval-augmented-generation]]
 - [[vector-databases-and-embeddings]]
 - [[transformer-architecture]]
 - [[diffusion-models-and-image-generation]]
+- [[kubernetes-and-container-orchestration]] — Orchestration layer built on Docker; jointly form the AI deployment infrastructure stack
+- [[llm-training-and-scaling-laws]] — Large-scale distributed training on Kubernetes GPU clusters
+- [[agentic-ai-and-multi-agent-systems]] — Containerized agent tool execution; safe sandboxing for autonomous code execution
 - [[2026-05-27-us-china-great-power-competition]]
 - [[valuation-fundamentals]]
 - [[macroeconomics-101]]

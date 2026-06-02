@@ -424,6 +424,7 @@ Question: What is my actual confidence in this outcome, and is it calibrated?
 - [[Finance/behavioral-finance-and-investor-psychology]] — Cognitive biases as drivers of market anomalies
 - [[Finance/technical-analysis-and-chart-patterns]] — Pattern recognition bias and apophenia in chart analysis
 - [[Finance/value-investing-methodology]] — Value investing as a structured debiasing system
+- [[Finance/portfolio-theory]] — Mean-variance optimization assumes rational probability estimation; availability bias and representativeness distort investors' subjective probability inputs, producing portfolios that diverge systematically from the efficient frontier; home bias (overweighting familiar domestic assets) is a direct manifestation of availability heuristic in portfolio construction
 - [[Tech & AI/prompt-engineering]] — Prompt design to mitigate LLM cognitive-bias-like failure modes
 - [[Tech & AI/transformer-architecture]] — Attention mechanisms in transformers as a computational analog to selective attention and cognitive bias in human cognition
 - [[Tech & AI/machine-learning-fundamentals]] — ML models exhibit bias-like failure modes (overfitting as recency bias; training data anchoring); understanding human biases informs model evaluation

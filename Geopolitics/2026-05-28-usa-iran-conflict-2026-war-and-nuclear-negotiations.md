@@ -3,7 +3,7 @@ title: USA–Iran Conflict 2026 — War, Nuclear Program, and Ceasefire Negotiat
 date: 2026-05-28
 tags: [geopolitics, iran, usa, israel, nuclear, middle-east, war, ceasefire, strait-of-hormuz, pakistan-mediation, IRGC, sanctions, JCPOA, HEU, maximum-pressure, MOU, Abraham-Accords]
 source: Wikipedia 2026 Iran War; CNN (May 24–29, 2026); Axios (May 24, 2026); Bloomberg (May 27, 2026); CNBC Piper Sandler (May 26, 2026)
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -189,9 +189,16 @@ Pakistan's emergence as the successful mediator between the US and Iran carries 
 - [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
 - [[2026-05-27-us-iran-conflict-global-energy-crisis]]
 - [[2026-05-27-us-iran-conflict-strait-of-hormuz]]
+- [[2026-05-30-israel-palestine-gaza-war-2026]] — Lebanon-Hezbollah ceasefire provision in the MOU directly links the Gaza conflict to the Iran deal
+- [[2026-05-30-north-korea-nuclear-russia-china-axis]] — The Iran-DPRK contrast: Iran's nuclear latency eliminated by war; DPRK validates nuclear deterrence by surviving
+- [[2026-05-30-uae-exits-opec-oil-market-shift]] — UAE's OPEC exit is partly an energy security response to the US-Iran conflict; UAE aligned with US strikes
+- [[2026-05-30-global-economic-outlook-2026-slowdown]] — Hormuz closure as the primary oil supply shock driving IMF's 3.1% global growth projection
+- [[geopolitical-risk-premium-and-markets]] — $138/barrel Brent peak on April 7; oil as the clearest geopolitical risk premium signal of 2026
+- [[real-assets-reits-and-commodities]] — Oil price volatility, energy futures, LNG market disruption from Hormuz closure
+- [[currency-markets-and-fx]] — Dollar paradox during energy shocks; petrodollar system under stress
 - [[macroeconomics-101]]
-- [[currency-markets-and-fx]]
 - [[fixed-income-deep-dive]]
-- [[yield-curve-and-bonds]]
+- [[yield-curve-and-bonds]] — Stagflation premium in yield curve during energy supply shock
 - [[negotiation-tactics]]
+- [[game-theory-and-strategic-thinking]] — Maximum pressure as a negotiation strategy; sequencing disputes in the MOU
 - [[mental-models]]

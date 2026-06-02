@@ -3,7 +3,7 @@ title: Machine Learning Fundamentals
 date: 2026-05-26
 tags: [ai, machine-learning, deep-learning, neural-networks, backpropagation, gradient-descent, Adam, supervised-learning, reinforcement-learning, self-supervised-learning, MoE, distillation, quantization, ZeRO, DPO, regularization, bias-variance-tradeoff, transfer-learning, fine-tuning]
 source: "Rumelhart, Hinton & Williams (1986) Learning Representations by Back-Propagating Errors (Nature); Krizhevsky et al. (2012) AlexNet (NeurIPS); He et al. (2015) Deep Residual Learning — ResNet (arXiv:1512.03385); Kingma & Ba (2015) Adam optimizer (arXiv:1412.6980); Goodfellow et al. 'Deep Learning' textbook (2016); Rajbhandari et al. (2020) ZeRO (arXiv:1910.02054)"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -543,6 +543,18 @@ The risk of model collapse from training on synthetic data — where each genera
 
 The goal of mechanistic interpretability — understanding not just what a model does but why it does it, at the level of specific circuits and representations — is the machine learning analog of the rule of law versus rule by discretion in political philosophy. A system whose internal reasoning is opaque can produce correct outputs for wrong reasons, and can fail unexpectedly when the distribution shifts in ways that expose the gap between the mechanism it actually learned and the one we assumed it learned. The [[stoicism-and-stoic-philosophy]] tradition's emphasis on examining the internal reasons for one's actions (not just the outcomes) maps surprisingly well: an AI system that produces good answers for opaque reasons is as epistemically fragile as a person who behaves well from social pressure rather than internalized principles. ROME (Rank-One Model Editing) and related mechanistic interpretability tools represent the first steps toward being able to audit and selectively modify the specific factual associations stored in a model's weights — a capability with profound implications for both AI safety and the intellectual property questions surrounding what knowledge LLMs have "learned."
 
+### Biological vs. Artificial Learning: What the Brain Teaches ML
+
+The parallels and divergences between biological and artificial neural networks illuminate both fields in ways that neither could achieve alone. The [[memory-systems-and-learning-science]] literature draws a fundamental distinction between **declarative memory** (explicit, propositional facts encoded in the hippocampus and neocortex) and **procedural memory** (implicit skills and habits encoded in the basal ganglia and cerebellum). This maps surprisingly directly onto the distinction between the transformer's FFN layers — which store factual associations like key-value stores, functioning as a form of declarative memory — and its attention mechanisms, which implement something closer to procedural pattern-matching: not storing specific facts but learning the general skill of identifying relevant context.
+
+The critical difference is in the learning rule. Biological neurons update via **spike-timing-dependent plasticity (STDP)**: synaptic weights strengthen when a pre-synaptic neuron fires just before a post-synaptic neuron (Hebbian learning — "neurons that fire together wire together"), and weaken in the reverse case. This is a *local* update rule: each synapse changes based only on the activity of its immediate neighbors. Backpropagation, by contrast, is a *global* algorithm: gradient signals from the output loss flow backwards through every layer, requiring precise knowledge of the entire network's weights at every update step. The brain has no known mechanism for backpropagating exact gradients. This is the "biologically implausible backpropagation" problem that has motivated decades of research into alternatives (Feedback Alignment, Target Propagation, Predictive Coding), none of which have matched backpropagation's efficiency.
+
+The most consequential divergence is in **sample efficiency**. A human child develops object permanence from a handful of experiences and learns to recognize a new animal from a single image — one-shot or few-shot learning that emerges from rich prior structure in biological memory. Neural networks achieving comparable generalization required architectural changes (meta-learning, Prototypical Networks, MAML — Model-Agnostic Meta-Learning) plus massive pretraining to build equivalent priors. The 2024–2026 era of in-context learning in LLMs represents the closest artificial analog to human few-shot learning: a pretrained transformer can learn a new task from 5–20 examples in its context window without any weight update, exploiting its learned priors about statistical structure. This is not identical to biological learning — no weights change — but functionally it resembles the rapid hippocampal pattern completion that allows humans to retrieve specific memories from partial cues.
+
+**Catastrophic forgetting** is the starkest asymmetry: biological memory systems use interleaved replay (hippocampal replay during sleep consolidates new memories into neocortex without disrupting prior knowledge through complementary learning systems theory), while artificial neural networks, when fine-tuned on new data, destructively overwrite previously learned representations. Elastic Weight Consolidation (EWC, Kirkpatrick et al., 2017) attempts to mimic biological memory by identifying "important" weights and penalizing large changes to them — but the scale gap remains enormous. Humans accumulate 80 years of distinct memories; current continual learning benchmarks consider 10–100 tasks a meaningful test.
+
+**Overfitting as a cognitive analog**: The ML concept of overfitting — fitting the training noise rather than the underlying signal — has a precise parallel in human confirmation bias (see [[cognitive-biases]]). A model overfit to its training distribution cannot generalize to new inputs; a human overfit to their prior experiences cannot revise beliefs in the face of contradicting evidence. In both cases, the system has learned the specific rather than the general, trading future robustness for past accuracy. Regularization techniques (dropout, weight decay, early stopping) are the ML equivalent of actively seeking disconfirming evidence — artificial mechanisms to prevent the optimizer from memorizing rather than learning. The [[quantitative-finance-and-algorithmic-trading]] literature uses the same language: an overfit trading strategy with high in-sample Sharpe ratio and poor out-of-sample performance is said to have been "backfit" to noise — the same bias-variance problem in a financial context.
+
 ## Related
 - [[transformer-architecture]]
 - [[prompt-engineering]]
@@ -550,6 +562,12 @@ The goal of mechanistic interpretability — understanding not just what a model
 - [[retrieval-augmented-generation]]
 - [[diffusion-models-and-image-generation]]
 - [[docker-and-containerization]]
+- [[llm-training-and-scaling-laws]]
+- [[reinforcement-learning-from-human-feedback]]
+- [[agentic-ai-and-multi-agent-systems]]
+- [[ai-safety-and-alignment]]
+- [[memory-systems-and-learning-science]]
+- [[quantitative-finance-and-algorithmic-trading]]
 - [[portfolio-theory]]
 - [[behavioral-finance-and-investor-psychology]]
 - [[cognitive-biases]]

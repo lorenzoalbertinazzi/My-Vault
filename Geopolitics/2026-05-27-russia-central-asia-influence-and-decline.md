@@ -3,7 +3,7 @@ title: Russia's Fading Grip on Central Asia — The New Great Game, 2026
 date: 2026-05-27
 tags: [geopolitics, russia, central-asia, kazakhstan, uzbekistan, tajikistan, kyrgyzstan, china, belt-and-road, SCO, CSTO, sanctions-evasion, multi-vector-diplomacy, rare-earths, remittances, decolonization]
 source: https://www.realclearworld.com/articles/2026/05/12/how_central_asia_became_russias_quiet_economic_lifeline_1182149.html; The Diplomat (Feb 2026); Hudson Institute (FPRI May 2026); Times of Central Asia
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -210,8 +210,14 @@ The shift in Central Asian labor migration documented by UK seasonal worker visa
 - [[2026-05-27-us-china-strategic-competition]]
 - [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
+- [[2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Ukraine war consuming Russian resources that previously anchored Central Asia influence
+- [[2026-05-30-sahel-crisis-russia-africa-corps-failure]] — Russia's Africa Corps failure mirrors its Central Asia decline: both reflect limits of military-mercenary influence without economic depth
+- [[2026-05-30-north-korea-nuclear-russia-china-axis]] — Russia-China axis in the context of Central Asia as contested terrain between Moscow and Beijing
+- [[2026-05-30-global-economic-outlook-2026-slowdown]] — Central Asia as emerging market growth story; rare earth supply chains critical for global transitions
+- [[real-assets-reits-and-commodities]] — Kazakhstan oil (Tengiz, Kashagan), uranium (Kazakhstan, Niger link), rare earths: Central Asia as a commodity-rich investment frontier
+- [[geopolitical-risk-premium-and-markets]] — Sanctions corridor economics; secondary sanctions risk for Central Asian financial systems
 - [[macroeconomics-101]]
-- [[currency-markets-and-fx]]
+- [[currency-markets-and-fx]] — Ruble-tenge-som dynamics; sanctions corridor shadow banking implications
 - [[fixed-income-deep-dive]]
 - [[mental-models]]
 - [[negotiation-tactics]]

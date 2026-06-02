@@ -3,7 +3,7 @@ title: "The Sahel Crisis: Russia's Africa Corps Gambit and the Collapse of Sahel
 date: 2026-05-30
 tags: [sahel, africa, mali, niger, burkina-faso, russia, wagner, africa-corps, jihadism, geopolitics, state-collapse, JNIM, AES, ECOWAS, Bamako, Kidal, Tuareg, FLA, Fulani, counterinsurgency, proxy-war, GRU]
 source: "The Soufan Center IntelBrief (May 12, 2026) 'The Limits of Russia's Africa Corps: Mali and the JNIM-FLA Offensive'; CNN (May 10, 2026) 'Russia's Africa Corps driven from Mali stronghold'; Foreign Policy (May 13, 2026) 'Mali Attacks Reveal Flaws in Russian Security Partnership'; Al Jazeera (Apr 29, 2026) 'What role has Russia played in Mali's security?'; Hudson Institute (Zineb Riboua analysis); Carnegie Endowment for International Peace; ISPI (May 2026); International Crisis Group; Small Wars Journal"
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary

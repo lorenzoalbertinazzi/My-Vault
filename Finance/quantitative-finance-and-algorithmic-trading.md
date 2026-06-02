@@ -476,5 +476,6 @@ All quantitative strategies have a *capacity* above which returns decline toward
 - [[Tech & AI/vector-databases-and-embeddings]] — Alternative data embeddings; semantic search in financial document analysis
 - [[Tech & AI/quantum-computing-architecture-and-applications]] — Quantum annealing for portfolio optimization; quantum Monte Carlo for derivatives pricing
 - [[Psychology/cognitive-biases]] — Cognitive biases as the source of alpha; momentum as anchoring exploitation; value as loss aversion exploitation
+- [[Psychology/dopamine-reward-systems-neuroscience]] — Variable reward schedules explaining compulsive algorithm-tuning behavior in quant researchers ("overfitting addiction"); HFT strategy design exploiting dopamine-driven momentum herding in market microstructure
 - [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — AI regulation impact on algorithmic trading oversight; model risk governance frameworks
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Regime change and model decay in 2026 macro environment; strategy performance divergence

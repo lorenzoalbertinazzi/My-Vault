@@ -3,7 +3,7 @@ title: US-China Strategic Competition — The Defining Geopolitical Rivalry of t
 date: 2026-05-27
 tags: [geopolitics, US, China, trade-war, taiwan, tech-war, decoupling, great-power-competition, indo-pacific, AUKUS, semiconductors, BRI, BRICS, renminbi-internationalization, power-of-siberia, Japan-Philippines]
 source: "Allison (2017) Destined for War: Can America and China Escape Thucydides's Trap? (Houghton Mifflin Harcourt); CFR Backgrounder 'US-China Relations' (2026); CSIS 'First Known Island War' China Seas War Game (2023); RAND War with China: Thinking Through the Unthinkable (2016); NPR Trump-Xi summit readouts comparison (May 2026); BIS Triennial Survey on renminbi internationalization (2022); US National Security Strategy (2022 — China as 'most consequential geopolitical challenge'); Biden October 2022 export controls (Federal Register, Vol. 87 No. 197)"
-last_updated: 2026-05-31
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -169,6 +169,13 @@ The Trump-Xi summit dynamic and the trade truce process illustrates Robert Putna
 - [[2026-05-27-india-pakistan-2025-war-and-aftermath]]
 - [[2026-05-27-russia-central-asia-influence-and-decline]]
 - [[2026-05-27-china-shenzhou-23-tiangong-yearlong-mission]]
+- [[2026-05-30-china-taiwan-strait-military-tensions]] — Taiwan as the most dangerous flashpoint in the strategic competition
+- [[2026-05-30-north-korea-nuclear-russia-china-axis]] — China's doctrinal acceptance of DPRK nuclear status; China as DPRK enabler
+- [[2026-05-30-global-ai-governance-race-to-regulate]] — AI governance bifurcation as a dimension of strategic competition
+- [[2026-05-30-china-defense-ministers-death-sentences]] — PLA readiness implications for strategic competition timelines
+- [[2026-05-30-global-economic-outlook-2026-slowdown]] — Trade war and geoeconomic fragmentation costing 2–7% global GDP
+- [[ai-safety-and-alignment]] — AI alignment research as both safety and strategic competition domain
+- [[agentic-ai-and-multi-agent-systems]] — Autonomous AI military applications; the compute-military-AI triangle
 - [[currency-markets-and-fx]]
 - [[macroeconomics-101]]
 - [[machine-learning-fundamentals]]
@@ -176,6 +183,7 @@ The Trump-Xi summit dynamic and the trade truce process illustrates Robert Putna
 - [[docker-and-containerization]]
 - [[fixed-income-deep-dive]]
 - [[portfolio-theory]]
+- [[geopolitical-risk-premium-and-markets]] — VIX spikes on Taiwan exercises; tariff announcements as priced risk events
 - [[negotiation-tactics]]
 - [[mental-models]]
 - [[cognitive-biases]]

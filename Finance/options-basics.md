@@ -451,6 +451,8 @@ Real options theory (Dixit & Pindyck, 1994) applies financial option mathematics
 - [[technical-analysis-and-chart-patterns]] — Dealer gamma positioning creates price pinning patterns; VIX spikes as contrarian signals
 - [[macroeconomics-101]] — Macro regime effects on implied volatility; VIX as fear barometer of economic uncertainty
 - [[cognitive-biases]] — Over-weighting of small probability tail events; insurance premium puzzle from probability weighting
+- [[Psychology/prospect-theory-and-decision-making]] — Volatility skew as the mathematical encoding of Prospect Theory's loss aversion and probability weighting; why put options are systematically overpriced relative to calls
+- [[Psychology/dopamine-reward-systems-neuroscience]] — Variable reward schedules in options trading creating compulsive engagement; gamma scalping dopamine dynamics; lottery-like call buying driven by small-probability over-weighting
 - [[fixed-income-deep-dive]] — Convexity-gamma bridge; MBS negative convexity; swaption markets
 - [[yield-curve-and-bonds]] — Interest rate options (swaptions, caps, floors); bond optionality in callable bonds
 - [[derivatives-futures-and-forwards]] — Options vs. linear derivatives; options as complement to futures hedging

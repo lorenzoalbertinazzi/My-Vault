@@ -3,7 +3,7 @@ title: India-Pakistan 2025 War and Its Aftermath
 date: 2026-05-27
 tags: [geopolitics, india, pakistan, kashmir, nuclear, south-asia, conflict, war, ceasefire, operation-sindoor, lashkar-e-taiba, proxy-war, nuclear-deterrence, LOC, stability-instability-paradox]
 source: https://www.unsw.edu.au/newsroom/news/2026/05/one-year-after-their-brief-war-how-close-are-india-and-pakistan-to-another-conflict; Al Jazeera (May 2026); Washington Post (May 5, 2026)
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -167,10 +167,15 @@ The post-ceasefire diplomacy illustrates several classic negotiation dynamics. T
 - [[2026-05-27-us-china-great-power-competition]]
 - [[2026-05-27-us-china-strategic-competition]]
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
+- [[2026-05-30-north-korea-nuclear-russia-china-axis]] — Nuclear deterrence comparison: DPRK's irreversibility vs. India-Pakistan instability paradox
+- [[2026-05-30-global-economic-outlook-2026-slowdown]] — India as the world's fastest-growing major economy; conflict risks to 6.3% growth trajectory
+- [[game-theory-and-strategic-thinking]] — The stability-instability paradox; nuclear brinkmanship as a game-theoretic structure
+- [[social-psychology-and-group-dynamics]] — Pakistan's political coalition dynamics; RSS as a domestic political constraint on Modi's Pakistan policy
 - [[macroeconomics-101]]
-- [[currency-markets-and-fx]]
+- [[currency-markets-and-fx]] — PKR collapse during conflict; INR asymmetric recovery; Mundell-Fleming model in live test
 - [[fixed-income-deep-dive]]
 - [[yield-curve-and-bonds]]
+- [[geopolitical-risk-premium-and-markets]] — Indian and Pakistani equity market crash-and-recovery during the 4-day war
 - [[negotiation-tactics]]
 - [[behavioral-finance-and-investor-psychology]]
 - [[cognitive-biases]]

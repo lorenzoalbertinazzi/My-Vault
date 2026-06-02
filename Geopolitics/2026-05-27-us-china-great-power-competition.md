@@ -3,7 +3,7 @@ title: US-China Great Power Competition and the Fragmenting World Order
 date: 2026-05-27
 tags: [geopolitics, us-china, great-power-competition, multipolar, trade-war, taiwan, semiconductors, decoupling, indo-pacific, BRI, BRICS, dollar-hegemony, AI-competition, Thucydides-trap]
 source: WEF Global Risks Report 2026; CFR; Trump-Xi Beijing Summit (May 14, 2026); NPR; Bloomberg
-last_updated: 2026-06-01
+last_updated: 2026-06-02
 ---
 
 ## Summary
@@ -204,8 +204,15 @@ Graham Allison's "Thucydides Trap" — derived from Thucydides' account of why S
 - [[2026-05-27-russia-central-asia-influence-and-decline]]
 - [[2026-05-27-us-iran-conflict-strait-of-hormuz]]
 - [[2026-05-27-china-shenzhou-23-tiangong-yearlong-mission]]
-- [[currency-markets-and-fx]]
-- [[macroeconomics-101]]
+- [[2026-05-30-china-taiwan-strait-military-tensions]] — The most dangerous flashpoint in US-China rivalry
+- [[2026-05-30-north-korea-nuclear-russia-china-axis]] — China's doctrinal shift enabling North Korean nuclear buildup
+- [[2026-05-30-global-ai-governance-race-to-regulate]] — AI governance as the central technology-geopolitics battleground
+- [[2026-05-30-global-economic-outlook-2026-slowdown]] — Geoeconomic fragmentation reducing global output by 2–7%
+- [[2026-05-30-china-defense-ministers-death-sentences]] — PLA corruption purge: implications for China's military readiness
+- [[geopolitical-risk-premium-and-markets]] — Trade war volatility pricing in equity and currency markets
+- [[currency-markets-and-fx]] — Dollar hegemony, petroyuan, CIPS vs SWIFT competition
+- [[real-assets-reits-and-commodities]] — Rare earth control as Chinese leverage; semiconductor supply chains
+- [[macroeconomics-101]] — Tariff economics, current account dynamics, trade war transmission
 - [[machine-learning-fundamentals]]
 - [[docker-and-containerization]]
 - [[portfolio-theory]]
@@ -213,3 +220,5 @@ Graham Allison's "Thucydides Trap" — derived from Thucydides' account of why S
 - [[behavioral-finance-and-investor-psychology]]
 - [[mental-models]]
 - [[cognitive-biases]]
+- [[ai-safety-and-alignment]] — AI safety research as a dimension of US-China technology competition
+- [[agentic-ai-and-multi-agent-systems]] — Autonomous AI systems in military and commercial applications
