@@ -3,7 +3,7 @@ title: Options — Fundamentals and Strategies
 date: 2026-05-26
 tags: [finance, options, derivatives, black-scholes, greeks, delta, gamma, theta, vega, implied-volatility, calls, puts, hedging, options-strategies, volatility, VIX, put-call-parity, volatility-skew, LEAPS, iron-condor, straddle, gamma-scalping]
 source: "Hull (2018) Options, Futures and Other Derivatives; Black & Scholes (1973) The Pricing of Options and Corporate Liabilities, JPE; Natenberg (2014) Option Volatility and Pricing; Taleb (1997) Dynamic Hedging; Nison (1991) Japanese Candlestick Charting Techniques"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -462,3 +462,11 @@ Real options theory (Dixit & Pindyck, 1994) applies financial option mathematics
 - [[geopolitical-risk-premium-and-markets]] — Geopolitical risk priced first in options market; implied vol spikes before spot price adjusts
 - [[Tech & AI/machine-learning-fundamentals]] — ML for vol surface calibration; deep learning for options pricing beyond Black-Scholes
 - [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Geopolitical tail risk priced through oil options vol spikes during Iran conflict
+
+### Update — June 3, 2026: Binary Deal Resolution and Volatility Term Structure
+
+**Iran deal "next week" → crude oil volatility term structure inversion:** Trump's June 2 deal announcement created a real-time demonstration of how event risk shapes the options volatility term structure. Pre-announcement: front-month (June) crude oil implied vol was elevated relative to back-month vol (upward-sloping term structure) because the near-term binary deal/no-deal uncertainty was concentrated in the June contract. Post-announcement (with Iran's rebuttal): June vol briefly compressed (deal probability increased) then rebounded as denial registered. The term structure inversion — near-month vol above far-month — is the standard options market signal for concentrated event risk, and the magnitude of the June-vs.-September vol spread (approximately 5–7 volatility points) quantifies the market's assessment of event risk concentration in the immediate resolution window.
+
+**Binary payoff structure: Black-76 fair value for June crude straddle:** Using Black-76 for commodity options with current inputs (June Brent spot ~$96, June implied vol ~45%, days-to-expiry 18): a June at-the-money straddle fairly prices at approximately $12–14/barrel. The "deal probability" embedded in this straddle price — given a $22/barrel downside on deal signing vs. $8/barrel upside on deal failure — implies approximately 35% deal probability (solving backward from the straddle price). This is slightly above Polymarket's 28–32% range, suggesting slight overpricing of deal optimism in the straddle (dealer hedging flows distorting fair value) and a modest edge in short straddle positions for traders confident in deal failure.
+
+**Snopes viral AI-encyclical claim → information uncertainty and its impact on implied vol for AI stocks:** The June 3 viral claim (investigated by Snopes) that Pope Leo XIV used AI to write his AI encyclical creates a real-time example of how information uncertainty — not direction — drives implied volatility. AI sector stocks (NVDA, MSFT, GOOGL, AMZN) face a new narrative risk: papal moral authority entering the AI governance debate via *Magnifica Humanitas* increases the probability of regulatory acceleration. Options implied volatility for major AI stocks incorporates this governance risk as a diffuse tail probability rather than a specific event, explaining why AI sector options currently trade at a slight vol premium to the broader technology sector despite no acute near-term catalyst.

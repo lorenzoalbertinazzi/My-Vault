@@ -3,7 +3,7 @@ title: Yield Curve Analysis — Shapes, Inversions, and Market Signals
 date: 2026-05-28
 tags: [finance, yield-curve, bonds, fixed-income, interest-rates, macroeconomics, recession-indicator, 2s10s-spread, term-premium, forward-rates, bear-steepener, bull-flattener, yield-curve-control, ACM-model, inversion, monetary-policy, Japan-YCC, quantitative-tightening, sovereign-spreads]
 source: "Campbell, Shiller & Viceira (2009) Understanding Inflation-Indexed Bond Markets; Harvey (1988) The Real Term Structure and Consumption Growth, JFE; Rudebusch & Williams (2009) Forecasting Recessions: The Puzzle of the Enduring Power of the Yield Curve; Adrian, Crump & Moench (2013) Pricing the Term Structure with Linear Regressions, Journal of Financial Economics; Reinhart & Rogoff (2009) This Time Is Different"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -429,3 +429,11 @@ This is true for *future* bond purchases (buying at higher yields locks in bette
 - [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Oil shock transmission through EM sovereign bond markets; geopolitical bear steepener
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — China Treasury holdings decline as structural term premium driver; de-dollarization
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — 2026 yield curve normalization; Fed easing cycle context
+
+### Update — June 3, 2026: Bear Steepener Regime and Binary Curve Scenarios
+
+**IMF 4.4% inflation → yield curve bear steepener scenario confirmed:** The IMF April 2026 full projections (4.4% global inflation, +0.6pp from January) confirm the persistence of the bear steepener that has characterized the 2024–2026 yield curve environment. The mechanism: elevated inflation keeps the short end anchored at restrictive Fed policy rates (5.25–5.50% Fed Funds) while long-end yields price the combination of inflation expectations (rising), term premium normalization (as QE-era compression reverses), and fiscal dominance risk (defense and energy resilience spending widening primary deficits). The 10-2 spread has moved from deep inversion (−100bp in 2023) through zero (late 2024) into modest positive territory (30–40bp currently) — a bear steepening driven by long-end increases rather than short-end declines, which is the stagflationary scenario's fingerprint.
+
+**Iran deal binary → curve reaction function:** Trump's June 2 "next week" deal announcement provides a real-time test of the yield curve's reaction function to geopolitical risk resolution. Deal signing would reduce oil prices by ~$20–25/barrel (0.3–0.5pp inflation reduction), enabling earlier Fed easing — a bull steepener outcome (short end falls more than long end, driven by reduced rate expectations). Deal failure maintains the supply shock, keeping the curve in bear steepener territory (inflation premium maintained at long end). The yield curve is therefore a direct instrument for expressing views on the Iran deal probability: long 2-year Treasuries (which benefit most from faster Fed easing on deal signing) vs. short 10-year Treasuries (which benefit less, retaining term premium) is the curve trade that profits specifically from deal resolution.
+
+**China Treasury reduction — structural term premium driver update:** China's official Treasury holdings (tracked by TIC data) have declined from ~$1.1T (2015 peak) to ~$775B (early 2026), reducing the "structural bid" that suppressed long-end US Treasury yields for a decade. The US-China trade truce (May 2026, 30% tariff equilibrium) provides near-term stability to this dynamic — a complete trade decoupling would accelerate China's Treasury reduction, amplifying long-end yield pressure. For bond portfolio managers, the China Treasury holding trajectory is a structural term premium driver that operates independently of the Fed policy cycle — the "de-dollarization" premium is a secular headwind to long-end bonds that the Iran deal binary (a cyclical catalyst) does not resolve.

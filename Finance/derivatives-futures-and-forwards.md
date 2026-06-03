@@ -3,7 +3,7 @@ title: Derivatives — Futures, Forwards, and Swaps
 date: 2026-05-30
 tags: [finance, derivatives, futures, forwards, swaps, hedging, risk-management, commodities, interest-rate-swap, CDS, cost-of-carry, basis-risk, margin, central-clearing, OTC-derivatives, SOFR, contango, backwardation]
 source: "Hull (2018) Options, Futures and Other Derivatives; CME Group data; BIS Triennial Central Bank Survey (2022); McDonald (2013) Derivatives Markets; Duffie (2010) How Big Banks Fail and What to Do About It"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -359,3 +359,9 @@ Futures markets serve the social function of aggregating dispersed private infor
 - [[geopolitical-risk-premium-and-markets]] — Oil futures as geopolitical risk transmission; safe-haven hedging with futures
 - [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Commodity futures disruption from Ukraine conflict; wheat and gas derivatives
 - [[World Events/2026-05-27-us-iran-conflict-strait-of-hormuz]] — Oil futures price discovery during Hormuz crisis; shipping freight derivatives
+
+### Update — June 3, 2026: Binary Payoff Structures and Gamma in Iran Deal Positioning
+
+**Trump "next week" deal → Brent gap-and-fill futures dynamics:** Trump's June 2 announcement that a Hormuz deal was expected "over the next week" created a sharp ~$3/barrel decline in Brent crude futures before Iran's rebuttal reversed approximately $1.50 of the move. The intraday pattern is a textbook example of binary event risk resolving through futures price discovery: deal optimism rapidly discounts the expected post-deal equilibrium; Iranian denial immediately partially reverts that discount. For commodity futures traders, the current steep backwardation structure (front-month premium to deferred months) would reverse toward contango rapidly on deal signing as the supply shortage resolves — creating a powerful roll yield reversal that amplifies the spot price impact for long futures positions.
+
+**Oil options implied volatility: binary deal/no-deal event priced at ~$12–15/barrel in straddle premium:** The implied volatility in June and July Brent crude options — pricing approximately $12–15/barrel in straddle premium — directly reflects the binary probability-weighted magnitude of each scenario. Using Black-76 for commodity options: a $20–25/barrel downside on deal signing vs. $5–10/barrel upside on deal failure, with ~30–35% deal probability implied by the market, produces approximately $8–10/barrel fair straddle value — suggesting the market is paying slightly above theoretical fair value for convexity, consistent with elevated hedging demand during binary geopolitical uncertainty episodes. Long gamma/short delta overlays are the mechanism allowing commodity portfolios to maintain energy risk premium exposure while limiting the sharp drawdown on a deal-closure day.

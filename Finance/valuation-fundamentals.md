@@ -3,7 +3,7 @@ title: Valuation Fundamentals
 date: 2026-05-26
 tags: [finance, valuation, DCF, discounted-cash-flow, WACC, EV-EBITDA, comparable-company-analysis, precedent-transactions, LBO-model, terminal-value, CAPE-ratio, margin-of-safety, reverse-DCF, NAV, DDM, country-risk-premium, Damodaran, intrinsic-value, multiples, free-cash-flow]
 source: "Damodaran (2012) Investment Valuation; McKinsey Koller et al. (2020) Valuation: Measuring and Managing the Value of Companies; Graham & Dodd (1934) Security Analysis; Shiller (1998) Valuation Ratios and the Long-Run Stock Market Outlook; Rappaport & Mauboussin (2001) Expectations Investing"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -462,3 +462,11 @@ Total intrinsic value: $25.00 + $12.50 + $7.70 = **$45.20**
 - [[Tech & AI/docker-and-containerization]] — Containerized deployment of valuation models and alternative data pipelines in institutional research infrastructure
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — China revenue exposure uplift to discount rates; geopolitical lambda in Damodaran CRP
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — 2026 valuation environment; earnings growth assumptions under slowdown
+
+### Update — June 3, 2026: Discount Rate Inputs and Geopolitical Lambda Updates
+
+**IMF 4.4% global inflation → risk-free rate and equity risk premium recalibration:** The IMF April 2026 full projection of 4.4% global inflation (+0.6pp from January) requires an update to the discount rate inputs in DCF valuation models. The standard Damodaran framework for risk-free rate uses 10-year government bond yields; US 10-year Treasury yields in the 4.4–4.7% range (elevated by inflation expectations and term premium) are higher than any period since 2007, creating the highest discount rate environment for equity valuation since the pre-GFC era. At these rates, a company growing EPS at 10%/year trades at approximately 20× forward earnings using the Gordon Growth Model — compared to 30× in the near-zero rate 2020–2021 environment. The current rate environment systematically transfers wealth from long-duration growth assets (technology, biotech, venture-backed companies) to short-duration value assets (energy, financials, commodities).
+
+**PLA purge 101 generals → Taiwan risk premium in semiconductor sector valuations:** The CSIS documentation of 101 purged PLA officers enables a recalibration of the Taiwan conflict risk premium embedded in semiconductor sector valuations. Damodaran's country risk premium (CRP) framework for Taiwan currently applies a ~6–8% CRP based on historical equity market volatility and sovereign spread. If the Breaking Defense thesis is correct — that procurement corruption has temporarily reduced PLARF operational capability — the appropriate near-term CRP for Taiwan exposure should be approximately 1–2% lower than the long-run structural level, creating a modest valuation tailwind for TSMC (which trades at a significant "Taiwan discount" relative to comparable semiconductor peers). The adjustment is directional and uncertain, not a precise recalculation — but directional valuation corrections around geopolitical risk windows are a legitimate input to relative value analysis.
+
+**Venezuela PDVSA rehabilitation → energy sector emerging market valuation signal:** The first credible restructuring signal for Venezuela's $60B+ in defaulted sovereign and PDVSA debt creates an option value for energy companies with Venezuelan assets on their books. Companies that wrote down Venezuelan assets to zero in 2018–2020 (when PDVSA formally defaulted) may be carrying embedded option value if rehabilitation succeeds — a consideration for sum-of-the-parts valuations of integrated oil majors with legacy Venezuelan exposure.

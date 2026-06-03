@@ -3,7 +3,7 @@ title: "Geopolitical Risk Premium: How Wars, Sanctions, and Instability Price In
 date: 2026-05-30
 tags: [finance, geopolitical-risk, risk-premium, commodities, oil, financial-markets, sanctions, war, emerging-markets, country-risk, volatility, GPR-index, safe-haven, de-dollarization, friend-shoring, supply-chain, OFAC, flight-to-quality, defense-stocks]
 source: "Caldara & Iacoviello (2022) Measuring Geopolitical Risk, American Economic Review; IMF World Economic Outlook (2022–2026); BIS Quarterly Review; BlackRock Geopolitical Risk Dashboard; Damodaran (2012) Country Risk: Determinants, Measures and Implications"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -526,6 +526,14 @@ The most powerful psychological driver of geopolitical risk pricing is the avail
 
 ### Physics: Network Theory and Contagion Cascades
 Modern economies are highly interconnected networks — supply chains, financial linkages, energy dependencies — and network theory predicts the contagion dynamics of geopolitical shocks. Small-world network theory (Watts & Strogatz, 1998) explains why geopolitical shocks in apparently distant locations (Ukraine wheat → global food inflation) transmit rapidly through high-clustering, short-path-length economic networks. Cascading failures in complex networks (Gai & Kapadia, 2010) show that network resilience is non-monotonic in interconnectedness: moderately connected networks are most resilient; highly connected networks become brittle once a shock threshold is crossed. Supply chain geopoliticization (nearshoring, friend-shoring) can be understood as governments deliberately reducing network efficiency to increase resilience — a macroeconomic network design tradeoff.
+
+### Update — June 3, 2026: Binary Iran Deal Payoff and PLA Purge Recalibrations
+
+**Iran deal "next week" creates binary risk premium release scenario:** Trump's June 2 statement that a Hormuz deal was expected "over the next week" triggered a $2–3/barrel decline in Brent crude before Iran publicly disputed the terms and prices partially recovered. The market response illustrates the binary structure of the current geopolitical risk premium: approximately $20–25/barrel of Brent price reflects pure political risk premium — the contingency on continued Hormuz disruption. A signed deal releases this premium within days; deal failure maintains or amplifies it. The standard GPR-to-asset-price framework (Caldara-Iacoviello GPR Index → equity impact via discount rate and EPS channels) is poorly suited to binary resolution events; options-market implied volatility, rather than GPR index levels, is the more informative signal in the days preceding a potential signing.
+
+**CSIS: 101 total PLA officers purged — Taiwan risk premium recalibration:** The CSIS ChinaPower Project's May 2026 compilation of 101 confirmed or probable PLA purge victims (36 confirmed + 65 probable) requires a recalibration of the Taiwan conflict risk premium embedded in semiconductor sector valuations. The standard assumption in market pricing has been that PLA readiness is as reported in official Chinese defense communications; the Breaking Defense analysis (February 2026) establishes that procurement corruption has created a gap between official readiness and actual capability. If the PLARF — which would execute any cross-strait operation — is operating with substandard missiles (the specific corruption mechanism), the near-term probability of a successful military operation is lower than pre-purge assessments, and the risk window (previously priced as "2024–2027") may shift right as capability is rebuilt. This is a rare case where a *negative* governance development (corruption-driven incapacitation) reduces the near-term war risk premium.
+
+**IMF April 2026: Global inflation 4.4%, Middle East 1.9% growth — structural GPR baseline remains elevated:** The IMF's full April 2026 WEO quantitative framework (4.4% global inflation, +0.6pp from January; Middle East growth cut 2pp to 1.9%) confirms that the 2026 multi-conflict environment has produced the largest simultaneous GPR impact on the global economy since the Cold War's peak. The IMF's own GPR-adjusted growth models show a 0.3% global growth reduction attributable to geopolitical fragmentation alone (above energy price effects) — a permanent structural drag that does not resolve with any single diplomatic signing.
 
 ## Related
 - [[macroeconomics-101]] — Macro channels for geopolitical transmission; cost-push inflation from supply shocks

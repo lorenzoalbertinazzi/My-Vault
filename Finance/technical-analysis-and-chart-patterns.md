@@ -3,7 +3,7 @@ title: Technical Analysis and Chart Patterns
 date: 2026-05-27
 tags: [finance, technical-analysis, chart-patterns, candlesticks, support-resistance, moving-averages, RSI, MACD, Bollinger-bands, Dow-theory, Wyckoff-method, Elliott-wave, Fibonacci, volume-profile, market-microstructure, momentum, market-breadth, order-flow, gamma-pinning, Ichimoku]
 source: "Edwards & Magee (1948) Technical Analysis of Stock Trends; Murphy (1999) Technical Analysis of the Financial Markets; Nison (1991) Japanese Candlestick Charting Techniques; Schabacker (1932) Stock Market Theory and Practice; Bulkowski (2005) Encyclopedia of Chart Patterns; O'Neil (1988) How to Make Money in Stocks"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -454,3 +454,11 @@ Adding a filter: only implement sector momentum positions when the intermarket s
 - [[geopolitical-risk-premium-and-markets]] — Geopolitical shocks create regime breaks invalidating pattern-based analysis
 - [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Discontinuous price discovery after geopolitical shock; technical analysis regime break
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Trade war uncertainty creating non-technical market drivers
+
+### Update — June 3, 2026: Binary Event Gaps and Technical Regime Breaks
+
+**Iran deal announcement creates intraday gap-and-fill pattern in Brent crude:** Trump's June 2 announcement that a Hormuz deal was expected "over the next week" created a classic gap-down pattern in Brent crude futures ($3/barrel decline on the open after the announcement) followed by a partial fill (recovery of ~$1.50) after Iran's rebuttal. From a technical analysis perspective, this pattern is a "news gap" — a price discontinuity driven by information rather than supply/demand — which technical theory generally treats as subject to full retracement unless confirmed by follow-through volume. The partial fill after Iran's denial is consistent with the market's assessment that neither scenario (deal nor no-deal) is fully priced in, maintaining the indeterminate range-bound character of Brent crude that has prevailed since the May 2026 ceasefire.
+
+**European TTF natural gas: heatwave + Hormuz creates technical breakout:** The compound heatwave-Hormuz energy stress documented in June 2026 has produced a technical breakout in European TTF natural gas futures above the 55–60 €/MWh resistance level that had capped prices since the March 2026 ceasefire. The dual demand-supply catalyst (heatwave driving cooling demand + Hormuz reducing LNG supply to Europe) creates a technically valid breakout with fundamental support — the highest-quality chart setup according to technical methodology. For traders using technical analysis in European energy markets, the TTF breakout provides both an entry signal and a fundamental narrative that reduces the false-breakout risk that plagues purely technical setups.
+
+**PLA purge 101 generals → Taiwan semiconductor sector technical base formation:** The CSIS documentation of 101 purged PLA officers has contributed to a modest technical base formation in Taiwan-exposed semiconductor stocks (TSMC ADR, ASML): the typical "Taiwan risk discount" of 15–20% applied to these names has not deepened since the May 2026 PLA sentencing news, suggesting the market is interpreting the purge as near-term conflict-probability-reducing (as Breaking Defense argues). Technical analysts monitoring the TSMC ADR chart should note that the stock is building a potential cup-and-handle base — a bullish consolidation pattern — contingent on no adverse Taiwan Strait escalation news through Q3 2026.

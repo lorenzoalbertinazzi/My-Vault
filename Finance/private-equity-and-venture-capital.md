@@ -3,7 +3,7 @@ title: Private Equity & Venture Capital
 date: 2026-05-30
 tags: [finance, private-equity, venture-capital, leveraged-buyout, fund-structure, carried-interest, J-curve, valuation, LP-GP]
 source: Kaplan & Strömberg (2009) Leveraged Buyouts and Private Equity; Metrick & Yasuda (2010) The Economics of Private Equity Funds; Gompers & Lerner (2001) The Venture Capital Cycle; Preqin Global Private Equity Report 2024
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -472,3 +472,11 @@ The lack of standardized metrics creates significant greenwashing risk:
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — US restrictions on PE investment in Chinese tech; VC decoupling between US and China ecosystems
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — PE exit environment in 2026 slowdown; IPO window and M&A deal volume contraction
 - [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — Regulatory risk for AI-focused VC portfolios; governance uncertainty affecting valuations
+
+### Update — June 3, 2026: AI Regulatory Relief and PDVSA Rehabilitation
+
+**EU AI Omnibus + Colorado reversal → AI-focused VC regulatory risk compression:** The EU AI Omnibus Agreement (May 7) postponing high-risk AI compliance deadlines to December 2027/August 2028 — combined with Colorado's May 14 repeal of its EU-model AI law — represents a material reduction in near-term regulatory risk for AI-focused venture portfolios. VC funds with significant exposure to enterprise AI (hiring, credit decisioning, medical diagnosis systems classified as "high-risk" under the EU AI Act) faced potential 2026 forced product redesign if the original deadlines held. The 12–18 month postponement creates a compliance runway that preserves portfolio company R&D focus and defers the compliance capex burden. Net portfolio valuation effect: positive, as the regulatory discount applied to high-risk AI companies in the 12 months preceding the Omnibus agreement should partially unwind.
+
+**Venezuela PDVSA rehabilitation → infrastructure PE opportunity emerging:** The PDVSA rehabilitation legislation passed by Venezuela's National Assembly — designed to attract foreign investment and technical expertise to restore oil production from ~700,000 bbl/day (2025) toward the 3.2M bbl/day peak (1998) — represents the first infrastructure PE opportunity in Venezuela in over a decade. The investment thesis requires: (1) US sanctions relief (contingent on political transition progress); (2) credible government counterparty (Rodríguez's cooperation with US creates a working relationship); (3) sovereign risk underwriting (Venezuela's track record of resource nationalism is severe). The expected return for infrastructure PE willing to underwrite this risk profile is in the 20–30% IRR range — reflecting both genuine rehabilitation value creation and extremely high country risk premium. No major PE firm has yet publicly announced a Venezuela strategy, but the option is being priced.
+
+**Iran deal timing → PE exit window implications:** Trump's "next week" Iran deal timeline creates a potential macro tailwind for the PE exit environment. An Iran deal would reduce oil prices (consumer spending improvement), lower inflation (Fed pivot closer), and improve overall risk appetite (equity multiple expansion) — all positive for the IPO and M&A exit windows that private equity managers have been waiting to reopen since the 2022 rate rise. The deal's June timeline — if consummated — could improve exit conditions for Q3 2026 IPO launches, creating a tactical window that PE managers with portfolio companies at IPO readiness are closely monitoring.

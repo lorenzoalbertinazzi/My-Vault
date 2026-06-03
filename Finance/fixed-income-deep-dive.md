@@ -3,7 +3,7 @@ title: Fixed Income Deep Dive — Bonds, Yield Curves, and Credit Risk
 date: 2026-05-27
 tags: [finance, bonds, fixed-income, yield-curve, credit-risk, interest-rates, duration, convexity, TIPS, CLO, repo-market, sovereign-debt, green-bonds, credit-spread, macaulay-duration, immunization, structured-products, bear-steepener, bull-flattener]
 source: "Fabozzi (2012) Bond Markets: Analysis and Strategies; Tuckman & Serrat (2011) Fixed Income Securities; Mishkin (2018) The Economics of Money, Banking and Financial Markets; Merton (1974) On the Pricing of Corporate Debt, Journal of Finance; Moody's Annual Default Study (2023)"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -500,3 +500,11 @@ Climate risk is increasingly priced in sovereign and corporate fixed income. Str
 - [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Geopolitical energy shock transmission through EM sovereign bond markets
 - [[Geopolitics/2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Russia's sanctions-triggered payment-mechanism default; restructuring dynamics
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Credit cycle dynamics in 2026 global slowdown; sovereign spread widening
+
+### Update — June 3, 2026: Inflation Repricing and the Bear Steepener Regime
+
+**IMF 4.4% global inflation → sovereign bond bear steepener sustained:** The IMF April 2026 full projections (4.4% global inflation, +0.6pp from January baseline) confirm that the "higher for longer" rate regime that has driven the 2022–2026 bear steepener in developed market yield curves remains firmly in place. The Hormuz energy shock is the proximate cause of the inflation revision — adding approximately 0.3–0.4pp to global inflation through direct energy price pass-through and indirect supply-chain cost-push effects. For fixed income portfolio managers, this environment maintains the case for short duration positioning: long-end yields face the combined pressure of elevated inflation expectations, term premium normalization (as QE effects reverse), and the fiscal dominance risk from defense and energy resilience spending increases across all major economies.
+
+**EU AI Act transparency rules apply August 2, 2026 → tech sector bond refinancing calendar implication:** The EU AI Act's transparency rules taking effect August 2, 2026 create a compliance cost cliff for technology sector bond issuers. Companies with large EU operations must implement chatbot identification, AI-content labeling, and emotion-recognition disclosure systems — adding compliance cost to the technology sector's balance sheets at a time when refinancing windows are narrowing due to elevated rates. The practical implication for investment-grade technology sector bond analysis: EBITDA projections should incorporate EU AI Act compliance investment as a 2026–2027 capital expenditure line item, reducing free cash flow available for debt service and potentially affecting leverage ratios for highly indebted tech issuers.
+
+**Venezuela PDVSA — first restructuring signal in eight years:** The PDVSA rehabilitation legislation passed by Venezuela's National Assembly creates the first credible pathway since 2018 for eventual restructuring of the $60B+ Venezuelan sovereign and PDVSA debt overhang. Distressed fixed income investors holding Venezuelan bonds (trading at ~15–20 cents) are monitoring the June 30 SDNY Maduro hearing as a transition timeline indicator. A functioning government recognized by the US is the prerequisite for IMF engagement and bondholder committee formation — neither of which is imminent, but the directional signal is the most constructive in years.

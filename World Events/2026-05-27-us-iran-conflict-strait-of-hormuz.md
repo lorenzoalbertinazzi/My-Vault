@@ -3,7 +3,7 @@ title: US-Iran Conflict and the Strait of Hormuz Crisis (2026)
 date: 2026-05-27
 tags: [world-events, us-iran, middle-east, strait-of-hormuz, oil, nuclear, IRGC, ceasefire, energy-crisis, pakistan-mediation, HEU, mine-clearance, Brent-crude, WTI, LNG, fixed-income, dollar-hegemony]
 source: Crisis Group (2026 Conflicts Watch); UANI ship-tracking data; CNN shipping visualization (Apr 29, 2026); Bloomberg (May 27, 2026); CNBC Piper Sandler (May 26, 2026)
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -195,6 +195,14 @@ The Hormuz crisis arrives at a moment of particular vulnerability in the global 
 **UAE production adds 2M bpd when Hormuz normalizes:** The UAE's May 1 OPEC exit (combined with the Hormuz eventual reopening) means that once maritime traffic normalizes, global supply could increase by approximately 2 million barrels per day from UAE alone — a significant bearish oil price signal. Combined with Saudi Arabia's stated willingness to increase production after the OPEC+ architecture is disrupted by UAE's exit, the oil price trajectory post-Hormuz normalization could move sharply downward.
 
 **Two US-Iran skirmishes in 48 hours (May 29)** as noted in main Iran note: the ceasefire remains militarily fragile even as diplomats negotiate. Piper Sandler's contrarian warning (oil could reach new highs if deal fails) versus the Bloomberg/EIA normalization scenario within 30 days of signing represent the two key tail scenarios.
+
+### Update — June 3, 2026
+
+**Trump's "next week" deal timeline (June 2) — MOU structure confirmed by Axios:** Trump's June 2 statement to ABC News that an agreement was expected "over the next week" was confirmed across multiple sources (GlobalSecurity.org, CNN, CNBC). The deal's internal structure — per Axios's May 24 exclusive — includes a three-phase architecture: (1) **MOU Phase 1**: immediate ceasefire extension and Hormuz reopening on signing; (2) **Phase 2 negotiations** (30–60 days): comprehensive nuclear program limitations and sanctions architecture; (3) **Phase 3 normalization**: longer-term diplomatic framework. Iran's Foreign Ministry confirmed the MOU-first structure but disputed Trump's characterization of the Strait's status — insisting it "remains under Iranian control." This language dispute is not semantic: it reflects Iran's core negotiating position that any deal must include explicit Iranian sovereignty recognition over Hormuz closure authority — the precise point the US has refused since ceasefire talks began in April.
+
+**CNN June 1: "Trump insists talks continue after Iran suspended negotiations":** Iran's suspension of negotiations following the June 1 MOU breakdown added complexity to Trump's June 2 optimism. The suspension was linked to Iranian parliament speaker Ghalibaf's insistence that any deal must include formal recognition of Iran's right to close Hormuz — a position incompatible with the US demand for unconditional reopening. The pattern — Iran suspending, Trump declaring progress — mirrors the 2015 JCPOA negotiations' final weeks, when multiple announced "deal breakdowns" preceded the July 2015 signing. Both sides have strong incentives to conclude: Iran's economy is under severe strain; the Trump administration faces domestic political pressure to show a "win."
+
+**IEA "largest supply disruption in history" — structural implications documented:** The IEA's characterization of the 2026 Hormuz closure as exceeding the 1973 oil embargo in magnitude (20%+ global supply vs. 7% in 1973) establishes the baseline for historical comparison. Britannica's 2026 Iran war entry confirms the cascade: Iran's IRGC closure announcement on March 4, mine-laying operations, merchant ship boardings, and sustained 30% normal flow have created a disruption with no post-WWII precedent. The economic literature on supply shocks of this magnitude consistently finds non-linear effects: supply-chain restructuring, permanent trade route changes, and energy policy shifts that outlast the physical disruption by 5–10 years — precisely the Foreign Policy thesis applied to the Strait specifically.
 
 ## Related
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Nuclear and geopolitical dimensions; MOU structure

@@ -3,7 +3,7 @@ title: Portfolio Theory and Risk Management
 date: 2026-05-26
 tags: [finance, portfolio-theory, MPT, markowitz, efficient-frontier, CAPM, sharpe-ratio, alpha, beta, correlation, diversification, risk-management, asset-allocation, modern-portfolio-theory, Kelly-criterion, factor-investing, Fama-French, risk-parity, Black-Litterman, CVaR, sequence-of-returns]
 source: "Markowitz (1952) Portfolio Selection, Journal of Finance; Sharpe (1964) Capital Asset Prices, Journal of Finance; Fama & French (1992) The Cross-Section of Expected Stock Returns, Journal of Finance; Black & Litterman (1990) Asset Allocation, Journal of Fixed Income; Kelly (1956) A New Interpretation of Information Rate, Bell System Technical Journal"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -507,3 +507,11 @@ The portfolio theory principle — diversification reduces idiosyncratic risk wi
 - [[Tech & AI/vector-databases-and-embeddings]] — Embedding-based similarity search for portfolio construction; alternative data semantic retrieval
 - [[Geopolitics/2026-05-27-us-iran-conflict-global-energy-crisis]] — Oil shock breaks equity-bond negative correlation; geopolitical portfolio stress test
 - [[Geopolitics/2026-05-27-russia-central-asia-influence-and-decline]] — Illiquidity premium confiscation in crisis; geopolitical liquidity risk
+
+### Update — June 3, 2026: Correlation Regime and Scenario Weighting
+
+**IMF 4.4% inflation → equity-bond positive correlation regime persists:** The IMF April 2026 full projections (4.4% global inflation, above-target in all major economies) confirm that the positive equity-bond correlation regime — the most consequential structural change for 60/40 portfolio theory since the 1990s — is not resolved in 2026. Modern Portfolio Theory's standard assumption of negative equity-bond correlation (bonds hedge equity drawdowns) holds in disinflationary environments but breaks down when inflation is the primary risk driver: supply-shock inflation causes simultaneous equity multiple compression (higher discount rates) and bond price declines (rising yields). The 2026 multi-conflict inflation shock confirms that inflation-driven positive correlations are not merely a transient 2022–2023 phenomenon but a structural feature of the current geopolitical-macro regime.
+
+**EU AI Omnibus postponement → technology sector portfolio recalibration:** The May 7 EU AI Omnibus agreement postponing high-risk AI system compliance deadlines (to December 2027 and August 2028) reduces the near-term regulatory compliance cost for technology companies with EU operations. From a portfolio theory perspective, the regulatory risk compression in the EU AI governance calendar is a positive factor for technology sector weights in global equity portfolios — reducing the "regulatory discount rate uplift" that has been pricing into AI-exposed technology stocks. Colorado's simultaneous abandonment of its EU-model AI law removes another regulatory drag from US technology portfolio positions. Net portfolio construction implication: slight increase in technology sector allocation vs. April 2026 baseline due to regulatory risk reduction.
+
+**Iran deal binary → portfolio scenario weighting shifts:** Trump's June 2 "next week" deal statement requires institutional portfolio managers to update their Iran scenario probability weights. Standard scenario weighting for geopolitical macro: (1) deal signed within 2 weeks — 30% probability — Brent falls to $70–75, energy sector declines, consumer and industrial sectors rally, bonds rally on inflation reduction; (2) deal delays but eventual resolution (30–60 days) — 45% probability — current market conditions persist; (3) deal fails, conflict resumes — 25% probability — Brent tests $115–120, equity market decline 8–12%, flight to quality bonds. June 2's announcement shifts weight from scenario (3) toward scenario (1), justifying mild reduction in energy overweights and mild increase in consumer/industrial positions on tactical horizons.

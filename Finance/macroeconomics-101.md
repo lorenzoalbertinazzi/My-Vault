@@ -3,7 +3,7 @@ title: Macroeconomics 101
 date: 2026-05-26
 tags: [finance, macroeconomics, GDP, inflation, unemployment, business-cycle, monetary-policy, fiscal-policy, central-banking, interest-rates, keynesian, monetarism, aggregate-demand, multiplier-effect, Taylor-rule, Phillips-curve, IS-LM, DSGE, Minsky-moment, secular-stagnation, MMT, debt-supercycle]
 source: "Mankiw (2020) Principles of Macroeconomics; Blanchard (2017) Macroeconomics; Keynes (1936) General Theory of Employment, Interest and Money; Friedman (1968) The Role of Monetary Policy, AER; Dalio (2018) A Template for Understanding Big Debt Crises; Minsky (1986) Stabilizing an Unstable Economy"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -582,6 +582,14 @@ Macroeconomic conditions do not fluctuate randomly around a stationary mean — 
 
 ### Psychology: Inflation Expectations and Behavioral Macroeconomics
 Modern central banking is fundamentally a psychology management exercise: if people expect 2% inflation, they set wages and prices to produce 2% inflation — fulfilling the expectation. If expectations de-anchor (as in 1970s US or 2021–2022), the feedback becomes unstable: higher expected inflation → higher wage demands → higher prices → higher inflation. The Fed's response (aggressive 525bp rate hike cycle, 2022–2023) was designed primarily to re-anchor expectations rather than to mechanically suppress demand — demonstrating that macroeconomic policy is as much signaling and credibility management as economic mechanism. Robert Shiller's "narrative economics" (2019) extends this: viral economic narratives (economic boom, impending recession, housing prices always rise) function as economic forces, shaping the expectations that drive the actual phenomena.
+
+### Update — June 3, 2026: IMF Full Projections and 94-Day Cumulative Hormuz Impact
+
+**IMF April 2026 complete quantitative framework: 4.4% global inflation, Middle East 1.9% growth:** The IMF's April 2026 WEO ("Global Economy in the Shadow of War") full projections are now documented: global inflation revised to 4.4% (+0.6pp from January's 3.8% baseline); Middle East and Central Asia growth cut to 1.9% (−2.0pp); US mild recession scenario explicitly modeled for H1 2026 by Morgan Stanley and Deloitte. UNCTAD's more pessimistic 2.7% global growth forecast remains the lower bound. The IMF blog's "War Darkens Global Economic Outlook" language represents the Fund's clearest acknowledgment since 2022 that geopolitical causation is the primary driver of forecast deterioration — shifting institutional advice from fiscal austerity normalization to a "wartime fiscal framework" accepting higher defense and energy resilience deficits.
+
+**94-day Hormuz closure: secondary industrial effects now visible in data:** As the Hormuz closure entered its 94th day (June 2), economic models are beginning to capture the cumulative supply-chain effects beyond headline energy prices. The primary secondary channel: US and European industrial production relying on Gulf petrochemical inputs (plastics, fertilizers, chemicals) faces input shortages as LNG and oil-product flows from the Gulf have been severely reduced. These secondary effects are slower to materialize than energy prices but are more persistent — they are the mechanism by which an energy supply shock transmits into broader industrial recession risk. The academic literature on supply shocks (Hamilton 1983, Blanchard and Galí 2007) identifies this channel — input cost shocks compressing manufacturing margins — as the 6–12 month lag effect that converts price shocks into GDP contractions.
+
+**Trump "next week" deal creates binary macroeconomic scenario:** Trump's June 2 Hormuz deal statement creates a macro scenario split that is structurally binary rather than probabilistic: a signed deal within days would release approximately $20–25/barrel of oil risk premium, reducing global inflation by an estimated 0.3–0.5pp within 90 days as energy prices normalize, and potentially enabling Fed and ECB policy pivots sooner than currently priced. Deal failure maintains the supply shock indefinitely, raising the probability of the IMF's "adverse scenario" (below-2.5% global growth, stagflationary) from ~25% to ~40%. No macroeconomic model captures this binary structure adequately — it is a genuine Knightian uncertainty event that conventional scenario analysis maps onto risk distributions by assumption.
 
 ## Related
 - [[valuation-fundamentals]] — r* as the single most important input to all long-duration valuation; discount rate sensitivity to macro regimes

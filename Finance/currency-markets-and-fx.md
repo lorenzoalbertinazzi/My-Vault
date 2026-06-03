@@ -3,7 +3,7 @@ title: Currency Markets and Foreign Exchange (FX)
 date: 2026-05-28
 tags: [finance, forex, currency, macroeconomics, trading, carry-trade, purchasing-power-parity, interest-rate-parity, exchange-rate, reserve-currency, dollar-hegemony, de-dollarization, currency-crisis, Dornbusch-model, Mundell-Fleming, Triffin-dilemma]
 source: "Krugman & Obstfeld (2018) International Economics: Theory and Policy; BIS Triennial Central Bank Survey (2022); Burnside, Eichenbaum & Rebelo (2011) Carry Trade and Momentum in Currency Markets, AER; Dornbusch (1976) Expectations and Exchange Rate Dynamics, JPE; Mundell (1963) Capital Mobility and Stabilization Policy Under Fixed and Flexible Exchange Rates"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -424,6 +424,14 @@ The BIS Innovation Hub's mBridge platform — co-developed by China, UAE, Saudi 
 
 **US-China 30% tariff equilibrium — CNY implications:**
 The May 2026 US-China trade truce stabilizing tariffs at ~30% has provided near-term CNY stability. However, the USTR's Section 301 Phase One deal compliance investigation (launched October 2025) could trigger a new tariff escalation round if China is found to have violated its $200B purchase commitment. The forward FX market (3–6 month CNY NDFs) is pricing approximately 2–3% depreciation pressure — implying the market assigns meaningful probability to a renewed tariff spike before the 60-day trade truce expires. This is the "option value" component of the trade-truce framework: the current tariff level is not a permanent resolution but a negotiating stage, and FX markets price the probability distribution over all possible future tariff paths.
+
+### Update — June 3, 2026: Dollar Binary and IMF Inflation Repricing
+
+**Trump "next week" Iran deal → dollar binary structure:** Trump's June 2 statement that a Hormuz deal was expected "over the next week" triggered brief dollar weakness (DXY -0.3%) as oil-exporter currencies (SAR, AED, QAR pegs unchanged but offshore forwards tightened) and risk assets rallied — before Iran's public rebuttal reversed the move. The dollar's response to Iran deal signals is mechanically predictable: a Hormuz reopening reduces the "energy supply shock" component of dollar safe-haven premium while simultaneously reducing inflationary pressure on oil importers, producing a mixed net effect. The market's micro reaction — brief dollar weakness on deal optimism — suggests the inflation-reduction channel (bearish dollar via reduced Fed hiking expectations) is currently dominating the safe-haven-unwinding channel.
+
+**IMF 4.4% global inflation confirmed → EM FX under persistent pressure:** The IMF April 2026 WEO's global inflation revision to 4.4% (+0.6pp from January) validates the EM FX bear case that has driven EM currency weakness since March: higher global inflation → sustained restrictive Fed policy → dollar strength → EM capital outflow pressure. The specific transmission path for EM oil importers (India, Turkey, Egypt, Pakistan) is direct: higher energy import costs → larger current account deficits → weaker currency → higher imported inflation → central bank rate dilemma (defend currency or support growth). The "triple squeeze" documented by the World Bank (energy costs + dollar strength + reduced remittances) is visible in EM FX cross-rates, with the Indian rupee, Turkish lira, and Egyptian pound all under renewed selling pressure in the June 2026 risk-off environment.
+
+**CNY stability window narrowing ahead of 60-day trade truce expiry:** The US-China 30% tariff equilibrium established in the May 2026 trade truce has provided near-term CNY stability (USD/CNY holding ~7.20). However, the 60-day review window beginning to close increases the probability of renewed tariff escalation — which 3–6 month CNY non-deliverable forwards are pricing at ~2–3% depreciation. The USTR's Section 301 compliance investigation (launched October 2025) into Chinese purchase commitment violations provides the legal mechanism for rapid tariff re-escalation independent of bilateral diplomatic progress.
 
 ---
 

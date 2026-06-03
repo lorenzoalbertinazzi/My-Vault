@@ -3,7 +3,7 @@ title: Israel-Palestine Gaza War 2026 — Ceasefire Collapse, Disarmament Stalem
 date: 2026-05-30
 tags: [geopolitics, israel, palestine, gaza, Hamas, ceasefire, humanitarian-crisis, Netanyahu, UN, disarmament, ethnic-cleansing, ICJ, genocide, IDF, occupation, west-bank, Netzarim-corridor, Philadelphi-corridor, two-state-solution, Mladenov]
 source: "OCHA/Gaza Health Ministry cumulative figures via UNRWA Situation Reports #212–221 (through May 2026); OHCHR monitoring data — 922 post-ceasefire Palestinian deaths (May 2026); ICJ provisional measures (South Africa v. Israel, January 2024); UNRWA Situation Report #220 (May 2026); Al Jazeera (May 2026); UN News (May 2026 — 26 killed over Eid holiday); CNN (May 2026); Doctors Without Borders (MSF) field reports"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -164,6 +164,20 @@ The killing of two successive military wing commanders within days represents Is
 **Cumulative ceasefire violations: 2,073+ (updated):** Al Jazeera's Gaza Government Media Office count of 2,073 ceasefire violations (October 2025–March 2026) is now substantially higher given the additional Israeli operations in April–June 2026. The rate of violations has not slowed.
 
 **Humanitarian update — 1.2M displaced since March 18:** By October 2025, more than 1.2 million people had been newly displaced since March 18, 2025 alone (not counting the 1.9M peak displacement of the active war phase). As of late May 2026, 82% of Gaza was within an Israeli-militarized zone or under a displacement order — meaning the vast majority of Gaza's pre-war population of 2.3 million is living in areas where the IDF claims operational authority.
+
+### Update — June 3, 2026
+
+**Senior Israeli military official: additional round of fighting "almost inevitable" (Channel 15 / Al Jazeera, June 2026):** A senior official in the Israeli military's General Staff told Channel 15 that an additional round of full-scale fighting is **"almost inevitable"**, citing Hamas's continued refusal to surrender weapons and what the official described as the "failure" of the International Stabilization Force (ISF) — the multinational body deployed under the ceasefire framework to oversee security. This assessment, from inside the IDF, represents the clearest signal yet that Israel is planning for a resumption of large-scale military operations rather than consolidating the ceasefire. The "almost inevitable" framing is designed to pressure Hamas into concessions while preparing the Israeli public for renewed conflict.
+
+**International Stabilization Force (ISF) declared a failure by Israeli military:** The ceasefire framework established an International Stabilization Force to monitor compliance and manage the transition. Israel's characterization of the ISF as having "failed" — after approximately six months of operation — means Israel has determined that the only mechanism designed to prevent ceasefire collapse is no longer viable. This removes the last institutional buffer between the nominal ceasefire and open warfare.
+
+**Israeli troops transferred from Lebanon to Gaza and West Bank (Al Jazeera, June 2026):** Israel has moved additional IDF forces from the Lebanese front into Gaza and the occupied West Bank — operationally preparing for intensified operations. The redeployment from Lebanon (where a separate ceasefire is holding) to Gaza reflects the IDF's assessment of where the next major military operation will occur. Combined with the "almost inevitable" language and the 59% territorial control order, this troop movement represents a concrete military preparation for ceasefire collapse.
+
+**Palestinian casualties since "truce": approaching 900 (updated figures, June 2026):** While the OHCHR monitoring figure stood at 922 through May 2026, updated Al Jazeera data places the total closer to **900+ confirmed Palestinian deaths since the October 2025 ceasefire** — roughly **150 per month** on average during the nominal truce period. For context, the Geneva Conventions and international humanitarian law classify any arrangement that permits 150 civilian deaths per month as an ongoing armed conflict, not a ceasefire.
+
+**West Bank settler violence and IDF operations intensify simultaneously:** While Gaza dominates international attention, the West Bank has experienced its own escalation cycle: daily IDF raids in Jenin refugee camp (ongoing since 2023), settler violence at elevated levels compared to pre-October 7 baseline, and continued settlement expansion in Area C. The OHCHR April 2026 report on "regional conflict eclipsing human rights violations against Palestinians" specifically documented the simultaneous deterioration in both Gaza and the West Bank — suggesting a unified Israeli strategy of territorial consolidation rather than two separate operations.
+
+**Hamas military capacity assessment: decentralized and resilient despite commander losses:** Despite the consecutive killing of Izz-al-Din al-Haddad and Mohammed Odeh (the top two Qassam Brigades commanders in rapid succession), Israeli and Western intelligence assessments note that Hamas has maintained operational continuity. Hamas's cell structure — designed after the Palestinian Islamic Jihad model of compartmentalized cells that continue operating without central command — means that leadership decapitation, while operationally disruptive, does not prevent the organization from reconstituting command within weeks. The "almost inevitable" additional fighting reflects this Israeli assessment: leadership targeting has succeeded tactically but has not achieved the organizational collapse that would enable the disarmament deal.
 
 ## Cross-Disciplinary Connections
 

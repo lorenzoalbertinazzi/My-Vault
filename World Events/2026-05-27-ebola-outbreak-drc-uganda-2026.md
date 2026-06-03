@@ -3,7 +3,7 @@ title: 2026 Ebola Outbreak — DRC and Uganda (Bundibugyo Virus)
 date: 2026-05-27
 tags: [world-events, health, ebola, DRC, uganda, WHO, pandemic, africa, bundibugyo, PHEIC, outbreak, vaccine-gap, humanitarian, Kampala, Ituri, Nord-Kivu, Sud-Kivu, ChAd3-BDBV, ring-vaccination, UNICEF]
 source: WHO Disease Outbreak News DON602 (May 27, 2026); WHO PHEIC declaration (May 17, 2026); NPR (May 26, 2026); CDC mobilization announcement (May 18, 2026); UNICEF Flash Update #1 (May 26, 2026)
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -196,6 +196,16 @@ From a cognitive biases perspective, crisis fatigue operates through the availab
 **WHO: "cannot build trust while bombs are falling":** The WHO's field team issued the most direct statement yet about the conflict's impact on outbreak response: "We cannot build community trust or isolate the sick while bombs are falling." This articulates the fundamental challenge — Ebola response requires community cooperation (voluntary reporting of symptoms, consent to isolation, participating in contact tracing) that is structurally impossible in active conflict zones where community members distrust and fear all outside actors including health workers. The DRC eastern provinces have experienced over a decade of continuous conflict, creating a deeply entrenched context of institutional distrust.
 
 **No approved vaccine for Bundibugyo strain — critical constraint:** The most dangerous epidemiological fact about this outbreak remains unchanged: the Bundibugyo strain of Ebola has **no approved vaccine and no approved treatment**. The rVSV-ZEBOV vaccine (used successfully in the 2018–2020 DRC outbreak, which was the Zaire strain) does not protect against Bundibugyo. The ChAd3-BDBV experimental vaccine is being deployed under ring vaccination protocols, but supply is limited and its efficacy in field conditions is unproven at scale.
+
+### Update — June 3, 2026
+
+**344 confirmed cases, 60 deaths — WHO DON605 (June 1, 2026):** The WHO Disease Outbreak News entry DON605 confirms **344 confirmed cases with 60 confirmed deaths** and **116 suspected cases** under investigation as of June 1. Ituri Province accounts for **322 confirmed cases from 16 health zones**, with 19 cases from seven health zones in North Kivu and 3 from South Kivu. Uganda has 15 confirmed cases including one death — confirming the international spread dimension of this PHEIC.
+
+**CEPI fast-tracks three Bundibugyo vaccine candidates — $61.8M total (June 1, 2026):** The Coalition for Epidemic Preparedness Innovations announced emergency funding for three parallel vaccine development tracks: (1) **IAVI**: $3.2 million; (2) **Moderna**: **$50 million** for an mRNA-based Bundibugyo vaccine — leveraging COVID-19 mRNA manufacturing speed; (3) **University of Oxford**: $8.6 million via the Jenner Institute. Moderna's commitment is the most strategically significant: mRNA vaccine development cycles can be compressed to months rather than years, potentially producing a deployable vaccine within the outbreak's active phase. This is the COVID-19 lessons applied to Ebola for the first time.
+
+**Ring vaccination with ChAd3-BDBV under MEURI protocol:** WHO's field response uses ring vaccination (vaccinating all contacts of confirmed cases) with the experimental ChAd3-BDBV vaccine under WHO's MEURI emergency use framework. Unlike the Zaire strain outbreaks where rVSV-ZEBOV was available and effective, Bundibugyo has no approved countermeasure — the ChAd3-BDBV is experimental and its field efficacy at scale is unproven. Each conflict-zone mobility restriction that prevents contact tracing within 24–48 hours of case confirmation undermines the ring strategy that is the only available pathway to outbreak control short of a new vaccine.
+
+**Healthcare worker mortality — critical signal:** With 6+ healthcare worker deaths including 2 doctors, the HCW mortality rate indicates infection prevention and control failures are systemic rather than isolated. Each HCW death removes essential response capacity in settings already operating with acute medical personnel shortages. The seven confirmed patients who left treatment centers against medical advice represent uncontrolled transmission chains that contact tracers cannot address — a structural response gap that conflict-zone conditions make irresolvable without security stabilization.
 
 ## Related
 - [[2026-05-28-europe-heatwave-2026-record-temperatures]] — Simultaneous global crises competing for institutional bandwidth

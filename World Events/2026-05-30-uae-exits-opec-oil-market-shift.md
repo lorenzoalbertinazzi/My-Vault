@@ -3,7 +3,7 @@ title: UAE Exits OPEC — The Largest Defection in the Cartel's History
 date: 2026-05-30
 tags: [world-events, UAE, OPEC, oil, energy, gulf, saudi-arabia, geopolitics, energy-markets, oil-cartel, ADNOC, OPEC-plus, production-quota, Sultan-al-Jaber, Mohammed-bin-Zayed, net-zero-paradox, price-war, Iraq, Libya, stranded-assets, sovereign-wealth]
 source: Al Jazeera (Apr–May 2026); Gulf News; Khaleej Times; Enerdata; Arab Center DC; HeyGoTrade analysis; Brent crude Bloomberg data
-last_updated: 2026-06-01
+last_updated: 2026-06-03
 ---
 
 ## Summary
@@ -152,6 +152,14 @@ More UAE supply entering the market could suppress oil prices modestly. Lower pr
 **Brent peaked at $138/barrel on April 7, 2026 (BlackRock Investment Institute):** The Hormuz closure produced an oil price peak of **$138/barrel on April 7** — a historical high for the crisis. Subsequent ceasefire deal optimism has brought prices down to the $88–96 range (May 27: Brent at $95.77; WTI at $88.57). The EIA has stated it expects "oil prices will reflect a larger risk premium throughout the forecast period" regardless of Hormuz normalization, reflecting permanent repricing of geopolitical tail risk in oil futures curves.
 
 **"Who could be next?" — OPEC exit contagion risk (CNBC):** The UAE exit creates a precedent that other disgruntled members may follow. Most watched: **Iraq** (chronic over-producer, quota complaints about Kurdish production), **Libya** (quota disputes tied to production volatility from civil conflict), and potentially **Kazakhstan** via the OPEC+ mechanism. Angola already left OPEC in January 2024. Saudi Arabia's production discipline is the remaining anchor, but without UAE's alignment, the cartel's cohesion faces its most serious test since the 1986 oil price collapse.
+
+### Update — June 3, 2026
+
+**Confluence Investment Management: "The UAE's Exit from OPEC — Asset Allocation Implications" (June 1, 2026):** A detailed institutional investment analysis notes that the UAE's OPEC exit, combined with the Hormuz disruption, has fundamentally repriced the geopolitical risk premium in oil futures. Key findings: (1) Saudi Arabia, retaining its OPEC anchor role, now faces a "prisoner's dilemma" — maintaining production discipline unilaterally is costly, but abandoning discipline triggers a price war that harms Saudi revenues; (2) UAE's path to 5 million bpd output by 2027 will materially increase non-OPEC supply once the Hormuz situation normalizes, creating downward price pressure that Iran's hostage-taking of Hormuz traffic is paradoxically supporting in the short term; (3) the June 1 Iranian negotiation breakdown (threatening complete Hormuz closure) and the UAE's post-OPEC positioning create an asymmetric oil price scenario: near-term upside risk (if Hormuz stays blocked) and medium-term downside risk (if deal is signed and UAE's production reaches full capacity).
+
+**MEI analysis: "What Does the UAE's Departure Mean for OPEC+?" (June 2026):** The Middle East Institute published an assessment noting that Saudi Arabia's options for replacing UAE's quota compliance contribution are limited. Saudi Arabia's own sustainable production capacity is approximately 12.5M bpd; it cannot unilaterally compensate for UAE's market departure. The more important signal is political: UAE's decision to align with US interests (welcomed by the Trump administration) over OPEC cartel solidarity reflects MBZ's (Mohamed bin Zayed's) strategic calculation that US-Gulf alignment — including receiving US security guarantees over any Iran-related threats — is more valuable than OPEC membership. The UAE's exit represents the Gulf states' response to the US-Iran war: position as US security partners, not "OPEC" entities subject to Iranian pressure.
+
+**Al Jazeera: UAE exit signals "closer alignment with US interests" — Gulf geopolitics implications:** The UAE's simultaneous OPEC exit and endorsement of US energy interests reflects a deeper strategic realignment: UAE has positioned itself as a US-aligned security actor in the Gulf, hosting US military assets, participating in the Abraham Accords normalization framework, and now explicitly supporting US energy policy. This directly contrasts with Saudi Arabia's more independent posture (maintaining OPEC discipline, conducting Chinese military exercises, pursuing BRICS membership). The UAE-Saudi divergence within the Gulf Cooperation Council is a new axis of Gulf political competition with significant implications for energy market stability.
 
 - [[2026-05-27-us-china-strategic-competition]] — Energy market control as a dimension of great power competition
 - [[2026-05-27-us-iran-conflict-strait-of-hormuz]] — Hormuz disruption that exposed UAE's strategic alignment decision

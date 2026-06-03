@@ -3,7 +3,7 @@ title: Credit Markets and Credit Risk
 date: 2026-05-30
 tags: [finance, credit, bonds, CDS, credit-default-swap, credit-spread, high-yield, investment-grade, leveraged-loans, CLO, default-risk, Merton-model, credit-cycle, distressed-debt, sovereign-credit, credit-rating]
 source: "Fabozzi (2012) Bond Markets: Analysis and Strategies; Merton (1974) On the Pricing of Corporate Debt, Journal of Finance; Altman (1968) Financial Ratios, Discriminant Analysis and the Prediction of Corporate Bankruptcy, Journal of Finance; Das & Tufano (1996) Pricing Credit-Sensitive Debt; Moody's Annual Default Study (2023)"
-last_updated: 2026-06-02
+last_updated: 2026-06-03
 ---
 ## Summary
 Credit markets encompass the ecosystem of debt instruments — corporate bonds, leveraged loans, asset-backed securities, and derivatives — through which borrowers access capital and investors earn yield premiums for bearing default risk. Credit risk is the probability-weighted expected loss from counterparty failure, decomposable into probability of default (PD), loss given default (LGD), and exposure at default (EAD). Understanding credit is foundational to banking, asset management, corporate finance, and macroeconomic stability, as credit market stress reliably predates economic recessions.
@@ -430,3 +430,9 @@ Hyman Minsky's financial instability hypothesis is fundamentally a theory of col
 - [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Sanctions escalation and sovereign credit implications for EM oil producers
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Credit cycle dynamics in 2026 economic slowdown; IG/HY spread widening and default rate forecasts
 - [[World Events/2026-05-30-cuba-fuel-crisis-blackouts-2026]] — Small sovereign distressed debt; currency inconvertibility and payment default mechanics
+
+### Update — June 3, 2026: Inflation Shock and Sovereign Credit Stress
+
+**IMF 4.4% global inflation → IG/HY credit spread widening pressure:** The IMF's April 2026 revision of global inflation to 4.4% (+0.6pp from January's 3.8% baseline) maintains the "higher for longer" interest rate environment that is the primary structural headwind for investment-grade credit spreads. Higher inflation → sustained central bank restrictiveness → higher risk-free rates → wider credit spreads as duration risk increases and refinancing costs rise. The Middle East and Central Asia growth revision to 1.9% (−2pp) is particularly significant for sovereign credit: GCC sovereign spreads have been anomalously compressed by oil revenue (disruption paradoxically raises oil prices, benefiting oil-exporter fiscal positions even as it creates regional instability), creating unusual divergence between sovereign credit quality improvement and regional geopolitical risk elevation.
+
+**Venezuela SDNY proceedings — sovereign debt restructuring pathway emerging:** Maduro's next court hearing (June 30) is being monitored by Venezuelan sovereign bondholders as a transition timeline proxy. The PDVSA rehabilitation legislation passed by the Rodríguez government represents the first credible restructuring signal for Venezuela's $60B+ in defaulted sovereign and PDVSA bonds — the world's largest sovereign restructuring overhang since Argentina 2001. The legal pathway requires: (1) a functioning government recognized by the US; (2) IMF engagement as conditions provider; (3) bondholder committee formation. None of these prerequisites are currently met, but Rodríguez's cooperation creates the first credible path in eight years — which distressed debt funds are beginning to price at ~15–20 cents on the dollar.
