@@ -3,7 +3,7 @@ title: Europe Heatwave 2026 — Record-Breaking May Temperatures and Deaths
 date: 2026-05-28
 tags: [world-events, climate, heatwave, europe, uk, france, spain, ireland, global-warming, heat-dome, attribution-science, energy-grid, Kew-Gardens, jet-stream-disruption, compounding-risk, physical-climate-risk]
 source: Wikipedia 2026 European Heatwaves; Inside Climate News; Irish Times; Severe Weather Europe; ClimaMeter analysis; Washington Post; UK Met Office
-last_updated: 2026-06-03
+last_updated: 2026-06-05
 ---
 
 ## Summary

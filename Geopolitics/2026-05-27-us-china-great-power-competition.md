@@ -3,7 +3,7 @@ title: US-China Great Power Competition and the Fragmenting World Order
 date: 2026-05-27
 tags: [geopolitics, us-china, great-power-competition, multipolar, trade-war, taiwan, semiconductors, decoupling, indo-pacific, BRI, BRICS, dollar-hegemony, AI-competition, Thucydides-trap]
 source: WEF Global Risks Report 2026; CFR; Trump-Xi Beijing Summit (May 14, 2026); NPR; Bloomberg
-last_updated: 2026-06-03
+last_updated: 2026-06-05
 ---
 
 ## Summary
@@ -242,3 +242,14 @@ Graham Allison's "Thucydides Trap" — derived from Thucydides' account of why S
 - [[cognitive-biases]]
 - [[ai-safety-and-alignment]] — AI safety research as a dimension of US-China technology competition
 - [[agentic-ai-and-multi-agent-systems]] — Autonomous AI systems in military and commercial applications
+- [[quantum-computing-architecture-and-applications]] — Quantum supremacy race; post-quantum cryptography as a strategic military concern
+- [[transformer-architecture]] — Transformer-based AI as the shared scientific knowledge base both powers exploit; export controls on compute, not on the architecture itself
+- [[llm-training-and-scaling-laws]] — Compute scaling laws as the mechanism linking semiconductor access to AI military capability
+- [[cryptography-fundamentals-and-zero-knowledge-proofs]] — Chinese state-sponsored quantum research threatening current encryption standards; post-quantum cryptography race
+- [[hedge-funds-and-alternative-strategies]] — Decoupling risk in long-short China equity strategies; geopolitical event risk in quantitative models
+- [[private-equity-and-venture-capital]] — VC funding bifurcation: US and Chinese AI ecosystems diverging; CFIUS blocking Chinese investment in US tech
+- [[2026-05-30-uae-exits-opec-oil-market-shift]] — Petroyuan and dollar hegemony contests intersect with Gulf energy politics
+- [[2026-05-27-china-shenzhou-23-tiangong-yearlong-mission]] — Space as the 7th domain of US-China competition; dual-use space technology
+
+### Cross-Disciplinary Note: The Two US-China Notes
+This note ([[2026-05-27-us-china-great-power-competition]]) focuses on the **structural competition** — historical arc, trade war mechanics, the global institutional battle, and the semiconductor chokepoint as industrial policy. Its companion note ([[2026-05-27-us-china-strategic-competition]]) emphasizes the **strategic competition** — currency architecture, AI supremacy framing, BRI as applied macroeconomics, and the two-level game in diplomacy. Together they provide complementary analytical lenses; neither fully duplicates the other. Cross-reference both when analyzing any dimension of US-China rivalry.
