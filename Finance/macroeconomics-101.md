@@ -3,7 +3,7 @@ title: Macroeconomics 101
 date: 2026-05-26
 tags: [finance, macroeconomics, GDP, inflation, unemployment, business-cycle, monetary-policy, fiscal-policy, central-banking, interest-rates, keynesian, monetarism, aggregate-demand, multiplier-effect, Taylor-rule, Phillips-curve, IS-LM, DSGE, Minsky-moment, secular-stagnation, MMT, debt-supercycle]
 source: "Mankiw (2020) Principles of Macroeconomics; Blanchard (2017) Macroeconomics; Keynes (1936) General Theory of Employment, Interest and Money; Friedman (1968) The Role of Monetary Policy, AER; Dalio (2018) A Template for Understanding Big Debt Crises; Minsky (1986) Stabilizing an Unstable Economy"
-last_updated: 2026-06-03
+last_updated: 2026-06-06
 ---
 
 ## Summary
@@ -610,3 +610,21 @@ Modern central banking is fundamentally a psychology management exercise: if peo
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Supply chain fragmentation reshaping GDP components; nearshoring as structural capex driver
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Current macro environment; 2026 slowdown dynamics
 - [[World Events/2026-05-27-us-iran-conflict-global-energy-crisis]] — Energy price shock as exogenous macro event; oil-importing EM crisis transmission
+
+
+### Saturday Cross-Disciplinary Synthesis: Macroeconomics as Integrative Framework for All Vault Knowledge
+
+**Connection to Sociology — Inequality and Macroeconomic Stability:**  
+Macroeconomics has historically underemphasized inequality as a macroeconomic variable, treating distributional questions as normative rather than positive. The post-2008 research agenda has corrected this: Kumhof & Rancière (2010) at the IMF demonstrated that rising income inequality mechanically generates credit market instability, as lower-income households borrow to maintain consumption in the face of stagnant wages — increasing debt-to-income ratios and systemic fragility in a pattern that preceded both the 1929 and 2008 crashes. Acemoglu & Robinson's "Why Nations Fail" framework extends this: extractive economic institutions that concentrate income among elites simultaneously reduce the broad-based human capital investment that drives long-run productivity growth. The macroeconomic implication: inequality is not merely a social justice concern but a macroeconomic risk variable that belongs in sovereign credit analysis, productivity forecasting, and political risk assessment — explaining why the IMF Fiscal Monitor now includes income inequality measures in its sovereign sustainability assessments.
+
+**Connection to Epidemiology — Economic Contagion and Disease Spread Models:**  
+The SIR epidemiological model (Susceptible-Infected-Recovered) has been formally adapted for economic contagion since the 2008 crisis. Heterogeneous agent models with network topology are mathematically equivalent to epidemiological models: financial "infection" (default contagion, credit market freeze) spreads through counterparty networks with R₀ (basic reproduction number) determined by network density and individual agent leverage. The COVID-19 economic shock in 2020 provided an unprecedented natural experiment in simultaneous real-economy and financial contagion: the disease model directly generated the economic model as supply chains shut down, unemployment spiked, and demand collapsed simultaneously. The economic policy response (helicopter money, direct transfer payments, loan guarantee schemes) was explicitly designed using epidemic suppression logic: break the transmission chain between health shock and permanent economic damage before the "economic R₀" exceeded 1.
+
+**Connection to Philosophy of Science — DSGE Models and Scientific Status of Macroeconomics:**  
+Dynamic Stochastic General Equilibrium (DSGE) models — the dominant framework at central banks and academic macroeconomics — have faced sustained criticism on philosophical grounds since the 2008 crisis they failed to predict. Paul Romer (2016) critiqued DSGE models as "mathiness" — sophisticated-looking equations that are not disciplined by data in the way that physical science models are. The identification problem (establishing causal relationships from observational macro data) is fundamentally different from physics: no controlled experiments exist at the economy-wide level, observational equivalence between competing models is common, and the economy evolves structurally (invalidating parameters estimated in different regimes). This is the Lucas critique (1976) applied self-referentially to DSGE models themselves. The philosophical implication: macroeconomic models are best understood as structured narratives (Romer's "stories") rather than laws of nature — which changes their appropriate use from prediction to scenario analysis.
+
+**Updated Related Connections:**  
+- [[Psychology/social-psychology-and-group-dynamics]] — Sociology of inequality and collective action in macroeconomic instability  
+- [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Agent-based macroeconomic models as alternative to DSGE; heterogeneous agent modeling  
+- [[Geopolitics/2026-06-06-latin-america-geopolitics-us-china-influence-2026]] — EM macroeconomic vulnerability to commodity shocks and dollar dominance  
+- [[World Events/2026-06-06-colombia-presidential-election-2026-runoff]] — Political business cycle in Latin America; electoral macro policy distortions

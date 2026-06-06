@@ -208,3 +208,22 @@ Regularly decompose returns using the Fama-French framework to verify factor exp
 - [[hedge-funds-and-alternative-strategies]]
 - [[value-investing-methodology]]
 - [[machine-learning-fundamentals]]
+
+
+### Saturday Cross-Disciplinary Synthesis: Factor Investing Through the Lens of Science, Psychology, and Markets
+
+**Connection to Philosophy of Science — The Replication Crisis in Finance:**  
+Factor investing rests on an empirical foundation that is increasingly scrutinized through the lens of the broader replication crisis in social science. Harvey, Liu & Zhu (2016) documented that the bar for statistical significance in finance research had been systematically too low: with hundreds of researchers testing thousands of hypotheses on overlapping datasets, many "factors" in the literature are expected to appear significant by chance alone. Their analysis of 316 factors discovered between 1967 and 2016 found that approximately two-thirds were likely false positives under a properly calibrated false discovery rate. This "factor zoo" problem — where the literature contains far more apparent factors than genuine systematic risk premia — is an epistemological problem for factor investing: practitioners cannot distinguish ex-ante between true persistent premia and data-mined artifacts, particularly since out-of-sample factor decay (post-publication return reduction) is well-documented (McLean & Pontiff, 2016). The philosophical implication: factor investing requires Bayesian prior formation about factor plausibility (economic mechanism + out-of-sample evidence) rather than naive frequentist acceptance of published t-statistics.
+
+**Connection to Machine Learning — ML-Enhanced Factor Discovery:**  
+The traditional factor discovery process (hypothesis → backtest → publication → AUM inflow → decay) is being disrupted by ML-based factor mining. Gu, Kelly & Xiu (2020) demonstrated in the *Review of Financial Studies* that gradient-boosted trees and neural networks predict stock returns out-of-sample with Sharpe ratios approximately 2× those of traditional multifactor models — suggesting that the true pricing kernel contains non-linearities and interaction effects that linear factor models miss. The ML literature has identified hundreds of "ML factors" that are not simply combinations of classic factors but genuine non-linear interactions: e.g., "value in high-momentum environments" performs differently than either value or momentum alone. This challenges the factor investing framework's assumption that factors are independent, additive sources of return — they may instead be context-dependent, emergent properties of multi-dimensional market states.
+
+**Connection to Geopolitics — Factor Performance in Multi-Conflict Regimes:**  
+The 2022–2026 multi-conflict environment has provided an unprecedented natural experiment in factor performance under geopolitical stress. Value factor returns in 2022 were the strongest in 15 years — driven partly by the rotation from growth to value when rates rose, and partly by the relative outperformance of energy and defense stocks (inherently value-tilted) vs. technology stocks (inherently growth-tilted). The 2026 geopolitical environment (continued Hormuz disruption, Ukraine war, Taiwan tensions) is sustaining this pattern: the defense sector (Raytheon, L3Harris, Rheinmetall, BAE Systems) trades at value multiples while generating momentum — a rare co-factor environment where value and momentum, normally negatively correlated, are simultaneously rewarded in the same sector. This creates a "geopolitical factor" that academic factor models have not yet formally defined but that practitioners are actively exploiting.
+
+**Updated Related Connections:**  
+- [[Tech & AI/machine-learning-fundamentals]] — ML factor discovery; gradient boosting for non-linear pricing kernels; feature importance for factor decomposition  
+- [[Psychology/cognitive-biases]] — Replication crisis parallels; confirmation bias in factor backtesting; hindsight bias in historical factor narratives  
+- [[Geopolitics/2026-05-30-europe-rearmament-nato-russia-threat]] — Defense sector value-momentum co-factor; geopolitical factor emergence  
+- [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — AI governance as a factor risk; regulatory risk premium in AI-exposed equities  
+- [[Psychology/mental-models]] — Bayesian prior formation as meta-skill for factor investment decisions; avoiding the factor zoo
