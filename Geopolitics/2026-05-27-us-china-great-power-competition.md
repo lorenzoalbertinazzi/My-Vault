@@ -3,7 +3,7 @@ title: US-China Great Power Competition and the Fragmenting World Order
 date: 2026-05-27
 tags: [geopolitics, us-china, great-power-competition, multipolar, trade-war, taiwan, semiconductors, decoupling, indo-pacific, BRI, BRICS, dollar-hegemony, AI-competition, Thucydides-trap]
 source: WEF Global Risks Report 2026; CFR; Trump-Xi Beijing Summit (May 14, 2026); NPR; Bloomberg
-last_updated: 2026-06-05
+last_updated: 2026-06-06
 ---
 
 ## Summary
@@ -253,3 +253,20 @@ Graham Allison's "Thucydides Trap" — derived from Thucydides' account of why S
 
 ### Cross-Disciplinary Note: The Two US-China Notes
 This note ([[2026-05-27-us-china-great-power-competition]]) focuses on the **structural competition** — historical arc, trade war mechanics, the global institutional battle, and the semiconductor chokepoint as industrial policy. Its companion note ([[2026-05-27-us-china-strategic-competition]]) emphasizes the **strategic competition** — currency architecture, AI supremacy framing, BRI as applied macroeconomics, and the two-level game in diplomacy. Together they provide complementary analytical lenses; neither fully duplicates the other. Cross-reference both when analyzing any dimension of US-China rivalry.
+
+
+### Saturday Cross-Disciplinary Synthesis: The US-China Competition as Civilizational System Contest
+
+**Connection to Political Philosophy — Liberal International Order vs. Tianxia:**
+The deepest dimension of US-China competition is a philosophical contest between two different theories of international order. The liberal international order (Ikenberry, 2011) is built on sovereignty, multilateral rules-based institutions (UN, WTO, IMF), universal human rights norms, and democratic governance legitimacy. China's implicit alternative draws from the Confucian "tianxia" concept (all under heaven) — a hierarchical world order where relationships are defined by proximity to a benevolent central power (China), obligation rather than rights, and harmony through hierarchy rather than competition through equality. Xi Jinping's "Community of Shared Human Destiny" is the contemporary tianxia restatement — a vision of world order that explicitly rejects universal norms in favor of civilizational pluralism (i.e., Chinese governance is legitimate by Chinese norms, not universal ones). This philosophical competition matters because it determines whether a Chinese-influenced international order would maintain the institutional infrastructure (WHO, WTO dispute resolution, IMF conditionality, UNHCR) that the liberal order created.
+
+**Connection to Complexity Theory — Complex System Interdependence and Decoupling:**
+The US-China economic interdependence (bilateral trade ~$575B/year; mutual financial exposure through Treasury holdings, equity cross-listings, and technology supply chains) is a complex system where decoupling attempts produce second-order effects that planners cannot fully anticipate. The 2018–2022 tariff war demonstrated this: US tariffs intended to reduce China's trade surplus instead redirected trade through third countries (Vietnam, Mexico) while raising US consumer prices. The semiconductor export controls intended to slow Chinese AI development have stimulated a domestic Chinese chip industry that is accelerating faster than expected. Complexity theory (Holland, Axelrod, Epstein) predicts that interventions in complex adaptive systems produce unexpected emergent consequences — including the emergence of new stable configurations (Chinese semiconductor ecosystem) that were not desired by the intervening party. The strategic implication: confident decoupling plans systematically underestimate the second and third-order adaptation they trigger.
+
+**Connection to Energy Geopolitics — The Solar Panel Dependency:**
+The most acute US-China dependency that strategic planners consistently underweight is clean energy manufacturing. China produces ~85% of global solar panels, ~75% of lithium-ion batteries, and ~60% of wind turbines. The US energy transition depends on Chinese manufacturing to decarbonize American electricity generation — creating a structural tension between the climate imperative (buy cheap Chinese solar panels) and the strategic imperative (reduce dependency on Chinese manufacturing). The IRA's domestic content provisions (additional ITC credits for US-manufactured solar components) are attempting to bifurcate this dependency — but in 2026, US domestic solar panel manufacturing capacity meets less than 20% of annual installation requirements. The energy transition is, involuntarily, a deepening of the US-China economic relationship even as strategic decoupling is pursued in chips and advanced technology.
+
+**Updated Related Connections:**
+- [[Finance/energy-transition-finance-and-green-capital-markets]] — Solar manufacturing concentration; energy transition vs. strategic decoupling tension
+- [[Tech & AI/ai-governance-and-regulation-frameworks]] — AI governance as US-China strategic competition; standards war and Brussels Effect
+- [[Psychology/self-determination-theory-intrinsic-motivation]] — Intrinsic vs. extrinsic motivation in innovation competition between democratic and authoritarian systems

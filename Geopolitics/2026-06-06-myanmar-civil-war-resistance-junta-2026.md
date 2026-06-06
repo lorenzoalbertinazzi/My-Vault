@@ -158,3 +158,20 @@ The SAC announced a ceasefire coinciding with the Thingyan (water festival) peri
 - [[2026-06-06-southeast-asia-asean-strategic-balance-2026]]
 - [[2026-05-27-us-china-great-power-competition]]
 - [[2026-05-30-north-korea-nuclear-russia-china-axis]]
+
+
+### Saturday Cross-Disciplinary Synthesis: Myanmar and the Limits of Humanitarian Intervention
+
+**Connection to International Law — R2P and Non-Intervention:**
+Myanmar presents the Responsibility to Protect (R2P) doctrine's fundamental contradiction in its starkest form: the international community has both the stated commitment (UN World Summit 2005) to protect populations from genocide, ethnic cleansing, war crimes, and crimes against humanity when their government fails to do so — and the practical inability to act without Security Council authorization that China and Russia systematically block for Myanmar. The UN Special Adviser on the Prevention of Genocide has documented ethnic cleansing operations against Karen, Kachin, and Rohingya populations that meet multiple legal criteria for crimes against humanity. The legal-political gap: R2P exists as a norm but not as an operational framework — there is no mechanism for "coalition of the willing" R2P intervention without UNSC authorization, and China treats any Myanmar intervention as a precedent threat to its own sovereignty claims (Taiwan, Xinjiang, Hong Kong).
+
+**Connection to Political Economy — Sanctions Effectiveness and Gray Markets:**
+Western sanctions against Myanmar's military government (individual designations, sectoral sanctions on jade and gems, investment restrictions) have been ineffective in changing regime behavior for the same structural reasons that sanctions theory predicts: China and Thailand provide sufficient non-sanctioned economic access to prevent regime survival threat. The jade trade alone (~$31B/year, largely unmonitored) provides substantial off-budget revenue for military commanders. Myanmar's gray economy — informal cross-border trade with China, Thailand, and India — is large enough relative to the formal economy that sanctioning formal channels has limited impact. The political economy lesson: sanctions work when the target state has limited alternative economic relationships and when the sanctions coalition includes all major trading partners; Myanmar fails both conditions.
+
+**Connection to Sociology — Ethnic Federalism and State-Building:**
+Myanmar's civil war is the continuation of a 75-year state-building failure: the inability to construct a national identity that accommodates the country's extraordinary ethnic diversity (135 officially recognized groups) under a unitary state framework inherited from British colonial governance. The post-2021 coup resistance coalition (National Unity Government + People's Defence Forces + Ethnic Armed Organizations) is attempting to build an alternative federal democratic vision — but the ethnic armed organizations (EAO) have decades of history of competing with each other as well as against the Burmese military. The sociology of state-building (Tilly, 1990; Scott, 2009 "The Art of Not Being Governed") suggests that sustainable state construction requires either coercive unification (the Tatmadaw's failed approach) or genuine power-sharing federalism that accommodates ethnic autonomy — which the NUG's Federal Democracy Charter is attempting but faces enormous coordination challenges.
+
+**Updated Related Connections:**
+- [[Finance/geopolitical-risk-premium-and-markets]] — ASEAN regional risk; Myanmar instability and investment environment
+- [[Psychology/social-psychology-and-group-dynamics]] — Ethnic group dynamics in civil war; in-group/out-group violence mechanisms
+- [[Geopolitics/2026-06-06-southeast-asia-asean-strategic-balance-2026]] — ASEAN's Myanmar dilemma; non-interference principle vs. regional stability

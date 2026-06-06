@@ -3,7 +3,7 @@ title: US-China Strategic Competition — The Defining Geopolitical Rivalry of t
 date: 2026-05-27
 tags: [geopolitics, US, China, trade-war, taiwan, tech-war, decoupling, great-power-competition, indo-pacific, AUKUS, semiconductors, BRI, BRICS, renminbi-internationalization, power-of-siberia, Japan-Philippines]
 source: "Allison (2017) Destined for War: Can America and China Escape Thucydides's Trap? (Houghton Mifflin Harcourt); CFR Backgrounder 'US-China Relations' (2026); CSIS 'First Known Island War' China Seas War Game (2023); RAND War with China: Thinking Through the Unthinkable (2016); NPR Trump-Xi summit readouts comparison (May 2026); BIS Triennial Survey on renminbi internationalization (2022); US National Security Strategy (2022 — China as 'most consequential geopolitical challenge'); Biden October 2022 export controls (Federal Register, Vol. 87 No. 197)"
-last_updated: 2026-06-05
+last_updated: 2026-06-06
 ---
 
 ## Summary
@@ -197,3 +197,20 @@ The Trump-Xi summit dynamic and the trade truce process illustrates Robert Putna
 - [[negotiation-tactics]]
 - [[mental-models]]
 - [[cognitive-biases]]
+
+
+### Saturday Cross-Disciplinary Synthesis: Strategic Competition Mechanisms and Instruments
+
+**Connection to Game Theory — Two-Level Games and Domestic Constraints:**
+Robert Putnam's (1988) "two-level games" framework explains why US-China negotiations consistently fail to produce durable agreements: each party's negotiators operate simultaneously at the international level (bilateral deal) and the domestic level (domestic political ratification). For the US, any China deal must survive congressional scrutiny (bipartisan China hawkishness), business lobby review (competing between market-access-seekers and decoupling-advocates), and alliance management (ensuring Japan, South Korea, and Taiwan are not undermined). For China, any agreement must survive Politburo validation, nationalist public sentiment management, and PLA institutional interests. The "win-set" — the set of international agreements that can ratify domestically on both sides — has been shrinking since 2017 as domestic political constraints have tightened in both countries, explaining why the structural incentives for US-China economic cooperation (mutual gains from trade) have not translated into stable agreements.
+
+**Connection to International Law — Sanctions Architecture and Legal Extraterritoriality:**
+US sanctions extraterritoriality (applying US law to non-US companies doing business with sanctioned entities) is one of the most contested areas of international law. The EU, China, Russia, and most of the global south formally reject US extraterritorial jurisdiction — but comply in practice because the dollar's centrality in global finance makes exclusion from the US financial system commercially catastrophic for most global companies. The 2024 EU-China dispute over secondary sanctions (EU companies facing US OFAC enforcement for China transactions) is producing pressure on EU legal framework development: the EU has a "blocking statute" (Regulation 2271/96) theoretically protecting EU companies from US secondary sanctions compliance, but enforcement is inconsistently applied. The broader legal question: whether the dollar's role as global reserve currency constitutes a form of ongoing legal extraterritoriality that is incompatible with sovereign equality under international law — a question that drives de-dollarization efforts in BRICS states.
+
+**Connection to History — Imperial Transition Risks:**
+Every hegemonic transition in history (Athenian vs. Spartan, Dutch vs. British, British vs. American) has either involved direct conflict or near-conflict — the "Thucydides Trap" (Allison, 2017). Of 16 historical cases where a rising power challenged a ruling one, 12 resulted in war. The 4 that avoided war (most recently, the British-American transition, 1895–1945) share common factors: genuine cultural and institutional affinity, absence of an acute crisis triggering mobilization, and shared security threats that created incentive for cooperation over confrontation. The US-China case has none of these pacifying factors: deep cultural divergence, an acute Taiwan crisis catalyst, and no shared external threat. This historical pattern analysis suggests the current trajectory is more likely to involve some form of conflict than not — though the nuclear deterrence factor (absent in all pre-nuclear historical transitions) may be sufficient to prevent major war while not preventing proxy conflicts, sanctions wars, and gray zone operations.
+
+**Updated Related Connections:**
+- [[Finance/geopolitical-risk-premium-and-markets]] — Thucydides Trap risk pricing; US-China conflict probability and financial market implications
+- [[Psychology/game-theory-and-strategic-thinking]] — Two-level games in US-China negotiations; domestic constraint analysis
+- [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — US-China economic decoupling as structural drag on global growth
