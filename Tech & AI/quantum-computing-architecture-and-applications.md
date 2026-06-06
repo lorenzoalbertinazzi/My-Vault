@@ -3,7 +3,7 @@ title: "Quantum Computing: From Qubit Physics to Quantum Advantage in 2026"
 date: 2026-05-30
 tags: [quantum-computing, qubits, quantum-advantage, error-correction, IBM, Google, hardware, cryptography, drug-discovery, algorithms, superconducting-qubits, trapped-ions, surface-code, Shor-algorithm, Grover-algorithm, NISQ, fault-tolerant, quantum-error-correction, photonic-qubits, topological-qubits]
 source: "Shor (1994) Algorithms for Quantum Computation (FOCS); Grover (1996) A fast quantum mechanical algorithm for database search (STOC); Preskill (2018) Quantum Computing in the NISQ Era and Beyond (arXiv:1801.00862); Google Quantum AI — Willow chip (Nature, 2024); IBM Quantum roadmap (2025); Arute et al. (2019) Quantum Supremacy (Nature)"
-last_updated: 2026-06-02
+last_updated: 2026-06-06
 ---
 
 ## Summary
@@ -811,3 +811,20 @@ The development of quantum computing is a distinct dimension of the technology g
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Quantum as great power competition dimension; quantum supremacy race
 - [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — Quantum technology governance; export controls vs. AI governance
 - [[World Events/2026-05-30-north-korea-nuclear-russia-china-axis]] — Quantum proliferation risks; adversarial cryptanalytic capabilities
+
+
+### Saturday Cross-Disciplinary Synthesis: Quantum Computing at the Frontier of Physics and Computation
+
+**Connection to Information Theory — Quantum Information and Entanglement:**
+Shannon's classical information theory, built on bits (0 or 1), is a special case of the richer framework of quantum information theory (Schumacher, 1995). The qubit (quantum bit) can exist in superposition — probabilistic combinations of 0 and 1 simultaneously — and quantum systems of n qubits can represent 2ⁿ states simultaneously, enabling quantum parallelism. But the most powerful quantum computational resource is entanglement — correlations between qubits that have no classical analog. Entanglement enables quantum algorithms (Shor's factoring, Grover's search) to solve specific problems exponentially faster than any classical algorithm. The information-theoretic significance: quantum information cannot be copied (no-cloning theorem) and cannot be observed without disturbance — properties that make quantum computing both powerful (for specific problems) and fundamentally limited (cannot solve all NP problems efficiently, despite popular misconception).
+
+**Connection to Finance — Quantum Risk Algorithms and Portfolio Optimization:**
+Financial services is the first commercial sector actively investing in near-term quantum applications. Goldman Sachs, JPMorgan, and BBVA have published quantum finance algorithms (2022–2025) targeting the problems where quantum speedup is theoretically available: Monte Carlo simulation (quantum amplitude estimation provides quadratic speedup), portfolio optimization (quantum annealing for large-scale quadratic optimization), and option pricing (quantum speedup for multi-factor model integration). The 2026 status: fault-tolerant quantum computers capable of running these algorithms at financial scale require approximately 1,000–10,000 logical qubits; current state-of-art is ~1,000 physical qubits with error rates requiring ~1,000 physical qubits per logical qubit (implying 1M physical qubits needed). This hardware gap means financial quantum advantage is likely 7–15 years away — but "quantum-ready" algorithm development is commercially justified now as preparation for when hardware arrives.
+
+**Connection to Geopolitics — Quantum Supremacy as Strategic Asset:**
+Quantum computing's most consequential near-term application is cryptanalysis: Shor's algorithm (1994) can factor large numbers in polynomial time, breaking RSA-2048 encryption (the most widely used public-key cryptosystem protecting financial transactions, military communications, and classified government data) in hours rather than the astronomical time required classically. This "cryptographically relevant quantum computer" (CRQC) is the target that has driven both the NIST Post-Quantum Cryptography standardization process (completed 2024, CRYSTALS-Kyber, CRYSTALS-Dilithium, SPHINCS+ standardized) and unprecedented intelligence community investment in quantum computing development. The "harvest now, decrypt later" attack (storing encrypted communications today to decrypt when quantum computers become available) means quantum computing geopolitics have present-day stakes: communications and data encrypted today with RSA-2048 may be decrypted by adversary quantum computers in the 2030s.
+
+**Updated Related Connections:**
+- [[Finance/quantitative-finance-and-algorithmic-trading]] — Quantum Monte Carlo for derivatives pricing; quantum optimization for portfolio construction
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Quantum computing as strategic competition; China's quantum satellite network; CRQC race
+- [[Tech & AI/cryptography-fundamentals-and-zero-knowledge-proofs]] — Post-quantum cryptography standards; Kyber and Dilithium quantum-resistant algorithms

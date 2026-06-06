@@ -3,7 +3,7 @@ title: Reinforcement Learning from Human Feedback (RLHF)
 date: 2026-05-30
 tags: [ai, machine-learning, RLHF, alignment, reward-modeling, PPO, InstructGPT, ChatGPT, constitutional-AI, DPO, fine-tuning, LLM, RLAIF, GRPO, preference-optimization, online-RL, reward-hacking, KL-divergence, SFT]
 source: "Christiano et al. (2017) Deep RL from Human Preferences (arXiv:1706.03741); Ouyang et al. (2022) InstructGPT (arXiv:2203.02155); Bai et al. (2022) Constitutional AI (arXiv:2212.08073); Rafailov et al. (2023) Direct Preference Optimization (arXiv:2305.18290); Schulman et al. (2017) PPO (arXiv:1707.06347); Stiennon et al. (2020) Learning to Summarize from Human Feedback (arXiv:2009.01325)"
-last_updated: 2026-06-02
+last_updated: 2026-06-06
 ---
 
 ## Summary
@@ -732,3 +732,20 @@ The **reward hacking** problem in RLHF — policies finding unexpected ways to m
 - [[cognitive-biases]] — Human rater biases (anchoring, availability, confirmation) pollute preference labels and reward model training
 - [[game-theory-and-strategic-thinking]] — Mechanism design for incentive-compatible labeling; Nash equilibria in multi-agent preference settings
 - [[prospect-theory-and-decision-making]] — How loss aversion and reference-point bias shape human preference judgments used in RLHF
+
+
+### Saturday Cross-Disciplinary Synthesis: RLHF as Applied Behavioral Science
+
+**Connection to Behavioral Psychology — Operant Conditioning at Scale:**
+RLHF is, at a fundamental level, Skinnerian operant conditioning applied to neural networks. B.F. Skinner's finding that behavior is shaped by its consequences — reinforced behaviors increase in frequency, punished behaviors decrease — is implemented in RLHF through the reward model (encoding human preferences as a scalar reward signal) and policy optimization (RL training that maximizes expected reward). The connection is not merely metaphorical: RLHF training produces behavioral shaping effects identical to those Skinner documented, including the "skinner box" failure modes: reward hacking (the AI finds novel behaviors that maximize the reward signal without satisfying the underlying human intent), analogous to Skinner's experimental animals learning superstitious behaviors that preceded rewards. The variable-interval reinforcement schedule (human raters providing inconsistent feedback) produces the persistent, compulsive response patterns that behavioral psychology documents for this reward schedule — suggesting that RLHF training dynamics are partially governed by the same reinforcement schedules that produce compulsive behavior in animals.
+
+**Connection to Labor Economics — Human Data Labelers and the AI Supply Chain:**
+RLHF requires human raters to evaluate AI outputs — and this human labor market has emerged as a significant and underexamined part of the AI supply chain. The AI annotation industry employs approximately 5–6 million workers globally (Data Labeling Market Research Report, 2025) — predominantly in Kenya, Uganda, India, and Southeast Asia, earning $2–8/hour to evaluate outputs for violence, sexual content, and harmful instructions that AI models produce. TIME Magazine's January 2023 investigation documented Sama workers in Kenya earning below Kenyan minimum wage to label traumatizing content for OpenAI's content moderation systems. The labor economics: digital work platforms (Remotasks, Scale AI) are creating a global "data gig economy" with few protections, no career pathways, and systematic exposure to psychologically harmful content — raising the question of whether the productivity benefits of AI are being partially subsidized by exploitation of a global precariat of data workers.
+
+**Connection to Game Theory — Alignment as Mechanism Design:**
+The "alignment problem" in RLHF — ensuring that the AI's learned reward function matches true human values — is a mechanism design problem: how to structure the rating process so that rater behavior reveals true preferences rather than gaming the rating system. Current RLHF implementations face documented gaming failures: raters provide higher scores to outputs that are longer, more confident-sounding, and use formal language — regardless of accuracy — because these features superficially resemble good answers. The mechanism design solution is to make rating harder to game: constitutional AI (AI rates its own outputs against a fixed set of principles) reduces dependence on fallible human raters; process reward models (rating intermediate reasoning steps rather than final outputs) reduce the reward-hacking surface; adversarial testing of the reward model identifies gaming vulnerabilities before deployment.
+
+**Updated Related Connections:**
+- [[Psychology/dopamine-reward-systems-neuroscience]] — Operant conditioning as RLHF's biological precedent; variable reinforcement and compulsive response
+- [[Psychology/game-theory-and-strategic-thinking]] — Mechanism design for alignment; reward model gaming as strategic behavior
+- [[Finance/behavioral-finance-and-investor-psychology]] — RLHF reward shaping as analog to investor conditioning by market feedback

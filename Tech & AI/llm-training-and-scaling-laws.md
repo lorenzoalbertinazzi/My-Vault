@@ -3,7 +3,7 @@ title: LLM Training & Scaling Laws
 date: 2026-05-30
 tags: [ai, LLM, scaling-laws, pre-training, transformers, compute, chinchilla, GPT, neural-scaling, emergence, deep-learning, infrastructure, data-parallelism, tensor-parallelism, pipeline-parallelism, MFU, gradient-checkpointing, mixed-precision, FLOP-budget, synthetic-data, tokenization]
 source: "Kaplan et al. (2020) Scaling Laws for Neural Language Models (arXiv:2001.08361); Hoffmann et al. (2022) Chinchilla (arXiv:2203.15556); Brown et al. (2020) GPT-3 (arXiv:2005.14165); Wei et al. (2022) Emergent Abilities of LLMs (arXiv:2206.07682); Rajbhandari et al. (2020) ZeRO (arXiv:1910.02054); Shoeybi et al. (2019) Megatron-LM (arXiv:1909.08053)"
-last_updated: 2026-06-02
+last_updated: 2026-06-06
 ---
 
 ## Summary
@@ -434,3 +434,20 @@ The cognitive biases analyzed in [[cognitive-biases]] also operate powerfully in
 - [[memory-systems-and-learning-science]] — Biological memory consolidation as the conceptual analog of pre-training compression
 - [[quantitative-finance-and-algorithmic-trading]] — Alpha decay parallels data saturation; production function economics of scaling
 - [[cognitive-biases]] — Availability bias and extrapolation errors in interpreting scaling law trends
+
+
+### Saturday Cross-Disciplinary Synthesis: Scaling Laws as Empirical Science of Intelligence
+
+**Connection to Statistical Physics — Power Laws and Phase Transitions:**
+The empirical scaling laws (Kaplan et al., 2020) showing that LLM performance improves as a power law function of parameters, data, and compute resemble the universal scaling laws in statistical physics — the same mathematical form governs critical phenomena in diverse physical systems (ferromagnets, fluid dynamics, phase transitions). The physical analog: in the vicinity of phase transitions (e.g., water → ice), order parameters scale as power laws with universal exponents that don't depend on the microscopic details of the system. Similarly, LLM capability scaling laws hold across vastly different architectures and training data types — suggesting that universal, substrate-independent principles govern learning system capacity, analogous to universality classes in statistical physics. The "emergence" of capabilities at scale (chain-of-thought reasoning, in-context learning, arithmetic) resembles physical phase transitions: quantitative improvements accumulate until a qualitative discontinuity (capability emergence) occurs.
+
+**Connection to Biology — Allometric Scaling and Brain Size:**
+Allometric scaling (the systematic relationship between organism size and physiological rates) provides a biological precedent for LLM scaling laws. Metabolic rate scales as body mass^0.75 across mammals (Kleiber's Law, 1932); brain size scales as body mass^0.75 across vertebrates. These biological power laws have been interpreted through network theory: metabolic networks and neural networks have fractal, hierarchical architectures that produce power-law scaling as a consequence of network topology. LLM scaling laws — loss scaling as tokens^-0.095 and parameters^-0.076 (Chinchilla, 2022) — may reflect analogous network-level optimization principles. The biological insight: scale brings capability improvements not through brute force but through the emergence of increasingly efficient representational structures — analogous to how larger brains develop more complex cortical folding (increased surface area) rather than simply more neurons per volume.
+
+**Connection to Investment — AI Scaling Economics and the Compute Buildout:**
+The scaling laws have direct implications for the largest capital allocation decision in the technology sector: GPU infrastructure investment. If performance reliably improves with compute investment according to known scaling laws, the optimal strategy is to invest as much compute as possible as fast as possible — which explains why Microsoft, Google, Meta, and Amazon collectively invested $250B+ in AI infrastructure in 2025 alone. The "scaling bet" is explicitly a bet on the empirical validity of the scaling laws — that buying 10× more compute produces predictably better models, not just marginally better ones. The 2026 debate: Anthropic's Constitutional AI and Google's Gemini results suggest that architectural and training efficiency improvements are producing capability gains independent of raw scale — complicating the pure scaling bet and suggesting that algorithmic innovation has become competitive with compute scale as a capability driver.
+
+**Updated Related Connections:**
+- [[Finance/macroeconomics-101]] — AI infrastructure investment as structural capex cycle; semiconductor and energy demand macroeconomic impacts
+- [[Finance/private-equity-and-venture-capital]] — AI infrastructure VC and hyperscaler investment; scaling bet as venture capital thesis
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Compute access as strategic capability lever; chip export controls targeting training compute

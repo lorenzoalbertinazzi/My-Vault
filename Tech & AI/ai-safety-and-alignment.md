@@ -3,7 +3,7 @@ title: "AI Safety and Alignment: The Existential Technical Challenge of Our Era"
 date: 2026-05-30
 tags: [ai-safety, alignment, RLHF, constitutional-AI, interpretability, mesa-optimization, reward-hacking, AGI, scalable-oversight, red-teaming, jailbreaking, process-reward-models, superalignment, deceptive-alignment, mechanistic-interpretability, corrigibility, goal-misgeneralization]
 source: "Bostrom (2014) Superintelligence; Russell (2019) Human Compatible; Amodei et al. (2016) Concrete Problems in AI Safety (arXiv:1606.06565); Ziegler et al. (2020) RLHF (arXiv:1909.08593); Bai et al. (2022) Constitutional AI (arXiv:2212.08073); Anthropic (2022) Core Views on AI Safety; Hubinger et al. (2019) Risks from Learned Optimization — Deceptive Alignment (arXiv:1906.01820)"
-last_updated: 2026-06-02
+last_updated: 2026-06-06
 ---
 
 ## Summary
@@ -450,3 +450,20 @@ The AI alignment problem has a precise game-theoretic structure that the [[game-
 - [[Psychology/cognitive-biases]] — Human biases affecting AI training and evaluation
 - [[Psychology/game-theory-and-strategic-thinking]] — Mechanism design, Nash equilibria, and the formal game structure of alignment
 - [[Psychology/prospect-theory-and-decision-making]] — How humans evaluate low-probability catastrophic risk; relevance to safety cost-benefit analysis
+
+
+### Saturday Cross-Disciplinary Synthesis: AI Safety as Applied Moral Philosophy and Control Engineering
+
+**Connection to Control Engineering — Alignment as Corrigibility by Design:**
+Stuart Russell's "Human Compatible" (2019) argues that the solution to AI alignment is not programming specific goals but designing uncertainty about goals — a control-theoretic approach where the AI is explicitly programmed to be uncertain about human preferences and therefore deferential (corrigible) to human correction. This maps onto robust control theory: rather than designing a controller optimized for a specific model of the plant (AI goal function matching human values exactly), robust control designs controllers that perform adequately across a range of plant models (AI that performs acceptably across a range of human value functions). The formal analog: Russell's inverse reward design (IRL-based uncertainty) parallels H∞ control design — minimizing worst-case performance over the entire uncertainty set rather than optimizing expected performance for the nominal model.
+
+**Connection to Evolutionary Biology — Goodhart's Law and Evolutionary Analogs:**
+Goodhart's Law ("when a measure becomes a target, it ceases to be a good measure") is the economic statement of a problem that evolutionary biology has studied for 150 years: the difference between the selection criterion (the measure) and the underlying fitness (the true objective). Evolutionary biology's analogous problem is "sensory trap" exploitation — traits that evolve to exploit evolved preferences produce maladaptive outcomes. The peacock's tail is Goodharted: the peahen's preference for large tails (which evolved as a proxy for health) has driven tails beyond any health-indicating function into pure competitive display. AI reward hacking is Goodharted: the AI maximizes the reward signal (measure) through paths that diverge from the intended behavior (target). The evolutionary insight: in sufficiently powerful optimization processes, misalignment between measure and target is the default, not the exception — making alignment engineering a constant necessity rather than a one-time specification.
+
+**Connection to Geopolitics — AI Safety as the Key Coordination Problem of the 21st Century:**
+The AI safety problem is not merely technical but geopolitical: competitive pressure between the US and China on AI capability development creates race dynamics that systematically underweight safety investments. Each actor knows that unilateral safety delays allow the competitor to race ahead; the resulting equilibrium is both parties under-investing in safety relative to the cooperative optimum. This is a classic prisoner's dilemma at the civilizational scale (see [[Geopolitics/2026-05-27-us-china-great-power-competition]]). The governance response — Bletchley Park AI Safety Summit (2023), Seoul AI Summit (2024), Paris AI Action Summit (2025) — is attempting to build the international regime that can solve the coordination problem. The 2026 reality: China has signed joint AI safety communiqués but maintains competitive separation on capability research; the US has implemented NIST AI Risk Management Framework but faces political pressure to loosen restrictions to maintain competitive advantage. The coordination problem is not solved.
+
+**Updated Related Connections:**
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — AI safety-capability race dynamics; US-China coordination problem on AI governance
+- [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — Global AI governance landscape; multilateral safety frameworks
+- [[Psychology/moral-psychology-and-ethical-decision-making]] — Moral psychology foundations for AI ethical constraints; constitutional AI as applied ethics

@@ -3,7 +3,7 @@ title: Retrieval-Augmented Generation (RAG) — Architecture, Mechanics, and Bes
 date: 2026-05-27
 tags: [ai, llm, rag, retrieval, vector-databases, embeddings, nlp, chunking, re-ranking, hybrid-search, GraphRAG, self-RAG, ColPali, RAGAS, BM25, FLARE, HyDE, dense-retrieval, sparse-retrieval, knowledge-grounding]
 source: "Lewis et al. (2020) Retrieval-Augmented Generation for Knowledge-Intensive NLP (arXiv:2005.11401); Karpukhin et al. (2020) DPR (arXiv:2004.04906); Gao et al. (2022) Precise Zero-Shot Dense Retrieval — HyDE (arXiv:2212.10496); Edge et al. (2024) GraphRAG (arXiv:2404.16130); Asai et al. (2023) Self-RAG (arXiv:2310.11511)"
-last_updated: 2026-06-02
+last_updated: 2026-06-06
 ---
 
 ## Summary
@@ -636,3 +636,20 @@ RAG is not just an engineering technique — it is an architecture for augmentin
 - [[valuation-fundamentals]]
 - [[technical-analysis-and-chart-patterns]]
 - [[value-investing-methodology]]
+
+
+### Saturday Cross-Disciplinary Synthesis: RAG as Artificial External Memory
+
+**Connection to Cognitive Science — Working Memory Augmentation:**
+RAG systems address the fundamental capacity limitation of LLMs — finite context windows analogous to working memory capacity limits — by providing an external memory that can be queried on demand, analogous to how humans use external artifacts (notes, books, databases) to extend working memory. The "extended mind" thesis (Clark & Chalmers, 1998) argues that cognitive processes can extend beyond the brain to include environmental resources like notebooks and computers — RAG implements this computationally. The architectural insight: RAG queries are episodic memory retrieval (specific facts from specific documents), while LLM weights encode semantic memory (general world knowledge distilled from training). The division mirrors human memory systems (see [[Psychology/memory-systems-and-learning-science]]): episodic memory enables contextually specific recall; semantic memory enables general knowledge application; their combination enables flexible, knowledge-rich reasoning.
+
+**Connection to Library Science — Information Architecture and Retrieval:**
+RAG systems reinvent, in vector space, the information architecture problems that library science has addressed for centuries: how to organize knowledge for efficient retrieval by relevance rather than by exact match. The shift from keyword retrieval (Boolean: does this document contain these words?) to semantic retrieval (does this document answer this conceptual question?) parallels the library science shift from card catalogs (exact metadata match) to subject headings (conceptual organization). The Dewey Decimal System encodes a theory of knowledge organization that is static (categories defined in advance); vector embedding spaces encode a theory of knowledge organization that is empirically emergent (similarity determined by statistical co-occurrence across training data). The practical difference: Dewey-style organization is easily understood but cannot handle fuzzy, analogical queries; embedding-space organization handles analogical queries naturally but the similarity space is opaque to human inspection.
+
+**Connection to Finance — RAG for Real-Time Financial Intelligence:**
+Financial applications of RAG are among the most commercially significant: Bloomberg's BloombergGPT (2023), Morgan Stanley's AI for wealth management, and Goldman Sachs's research assistant all use RAG to ground LLM outputs in real-time financial data. The specific finance RAG architecture: retrieval from a continuously updated financial knowledge base (earnings transcripts, SEC filings, news, analyst reports) conditioned on the query's time relevance (recent data weighted more heavily for current price analysis; historical data equally relevant for pattern analysis). The challenge unique to finance: documents contain numbers that are only meaningful in context (P/E ratio of 20× is either cheap or expensive depending on sector and macro regime), requiring the RAG system to retrieve not just the number but the interpretive context — motivating "multi-hop" RAG (retrieving context-explaining documents alongside the primary answer document).
+
+**Updated Related Connections:**
+- [[Finance/quantitative-finance-and-algorithmic-trading]] — RAG for real-time financial data access; LLM-based research analyst augmentation
+- [[Finance/hedge-funds-and-alternative-strategies]] — Alternative data RAG pipelines; earnings call transcript retrieval for fundamental analysis
+- [[Psychology/memory-systems-and-learning-science]] — External memory systems and extended cognition; RAG as artificial episodic memory

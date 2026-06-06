@@ -254,3 +254,20 @@ Inference at scale: a model serving 100M users daily at 1K tokens/query consumes
 - [[prompt-engineering]]
 - [[retrieval-augmented-generation]]
 - [[agentic-ai-and-multi-agent-systems]]
+
+
+### Saturday Cross-Disciplinary Synthesis: Inference Optimization as Economics of Intelligence
+
+**Connection to Economics — The Marginal Cost of Intelligence:**
+LLM inference optimization is fundamentally an economics problem: how to minimize the marginal cost of a unit of AI intelligence (cost per output token) to expand the market for AI applications. Moore's Law provided three decades of cost reduction in compute through hardware improvement; inference optimization provides a second lever — algorithmic efficiency — that in some dimensions has outpaced hardware progress. The marginal cost of GPT-3-class intelligence has fallen approximately 100× from 2020 to 2026 through a combination of hardware (H100 vs. A100 vs. V100 performance improvement), quantization (reducing from 32-bit to 4-bit precision at < 5% quality loss), and architectural efficiency (Mixture of Experts, speculative decoding). At the current cost trajectory, inference at GPT-3 quality will cost approximately $0.001/1000 tokens by 2028 — approaching the cost range where every internet interaction can include AI intelligence as a default feature.
+
+**Connection to Physics — Thermodynamic Limits of Computation:**
+The Landauer principle (1961) establishes the theoretical minimum energy required to erase one bit of information: kT ln2 (approximately 10⁻²¹ joules at room temperature). Current AI inference hardware operates approximately 10 million times less efficiently than this theoretical limit — meaning there is extraordinary room for energy efficiency improvement before hitting physical limits. Neuromorphic computing architectures (see [[neuromorphic-computing]]) that use spike-based computation (only firing when neurons are active, unlike always-on GPU computation) approach biological neural network energy efficiency (~20 watts for the human brain performing inference equivalent to billion-parameter models). The energy economics of AI inference is becoming a macroeconomic and geopolitical variable: global AI inference energy consumption is projected to reach 100+ TWh/year by 2030, comparable to the electricity consumption of mid-sized countries, creating energy supply chain and carbon footprint concerns that influence both business strategy and public policy.
+
+**Connection to Cognitive Science — Computational Complexity and Human Reasoning:**
+The parallel between LLM inference and human cognition extends to computational complexity: both systems face resource constraints (GPU memory and compute vs. working memory and neural energy budget) that require approximation strategies rather than exact computation. Human "satisficing" (choosing a "good enough" option rather than optimizing exhaustively) and LLM "speculative decoding" (using a small model to speculatively generate tokens, verified by the large model) are both approximation strategies that trade optimality for speed under resource constraints. The cognitive science implication: understanding how LLMs optimize inference — which approximations they make, what information they prune — may illuminate analogous processes in human cognition, as both systems are implementing approximate Bayesian inference under computational constraints.
+
+**Updated Related Connections:**
+- [[Finance/macroeconomics-101]] — Energy economics of AI inference; AI compute as strategic resource with macro implications
+- [[Tech & AI/neuromorphic-computing]] — Spike-based computation approaching thermodynamic efficiency limits
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — AI chip export controls and inference optimization as strategic competitive dimensions

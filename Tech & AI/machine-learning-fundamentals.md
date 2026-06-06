@@ -3,7 +3,7 @@ title: Machine Learning Fundamentals
 date: 2026-05-26
 tags: [ai, machine-learning, deep-learning, neural-networks, backpropagation, gradient-descent, Adam, supervised-learning, reinforcement-learning, self-supervised-learning, MoE, distillation, quantization, ZeRO, DPO, regularization, bias-variance-tradeoff, transfer-learning, fine-tuning]
 source: "Rumelhart, Hinton & Williams (1986) Learning Representations by Back-Propagating Errors (Nature); Krizhevsky et al. (2012) AlexNet (NeurIPS); He et al. (2015) Deep Residual Learning — ResNet (arXiv:1512.03385); Kingma & Ba (2015) Adam optimizer (arXiv:1412.6980); Goodfellow et al. 'Deep Learning' textbook (2016); Rajbhandari et al. (2020) ZeRO (arXiv:1910.02054)"
-last_updated: 2026-06-02
+last_updated: 2026-06-06
 ---
 
 ## Summary
@@ -574,3 +574,20 @@ The most consequential divergence is in **sample efficiency**. A human child dev
 - [[mental-models]]
 - [[stoicism-and-stoic-philosophy]]
 - [[2026-05-27-us-china-great-power-competition]]
+
+
+### Saturday Cross-Disciplinary Synthesis: Machine Learning as Computational Statistics and Applied Philosophy
+
+**Connection to Philosophy of Science — ML as Empirical Science and Falsification:**
+Machine learning exists at an unusual philosophical intersection: it is simultaneously a mathematical discipline (with proven theorems about learning rates, generalization bounds, PAC-learnability) and an empirical engineering practice where theory systematically fails to predict practice. The "deep learning mystery" — why deep networks generalize so well despite being dramatically over-parameterized (violating classical bias-variance tradeoff theory) — has produced a philosophical crisis analogous to anomalies in scientific paradigms (Kuhn, 1962). Belkin et al.'s "double descent" phenomenon (2019, PNAS) — where model performance improves past the classical bias-variance optimum when over-parameterized — suggests that our theoretical framework for understanding learning was wrong in ways we didn't know. This is a live example of scientific anomaly (data that doesn't fit the paradigm) driving paradigm revision — Kuhnian normal science in real time.
+
+**Connection to Genetics — Feature Selection and Genetic Architecture:**
+Machine learning faces a feature selection problem identical to a core problem in quantitative genetics: how many "features" (genes, SNPs) are informative about a complex trait? The curse of dimensionality in ML (exponentially more data required as dimensions increase) parallels the statistical power challenges in GWAS (genome-wide association studies): testing millions of genetic variants for association with complex traits. The solutions are structurally identical: regularization in ML (penalizing model complexity to prevent overfitting) parallels Bonferroni correction in GWAS (penalizing for multiple testing to prevent false positives). Transfer learning in ML (leveraging features learned in one domain for another) parallels pleiotropy in genetics (genes affecting multiple traits). The cross-disciplinary transfer has been productive: ML-inspired statistical methods (LASSO, ridge regression, elastic net) are now standard tools in statistical genetics.
+
+**Connection to Geopolitics — ML as Strategic Asset:**
+The 2026 geopolitical landscape treats machine learning capability as a strategic asset as significant as nuclear technology or semiconductor manufacturing. The US export control regime (October 2022 BIS rule, updated 2023 and 2024) restricts export of advanced AI chips (A100/H100 GPUs) to China, Russia, and other strategic competitors — explicitly treating the compute underlying ML training as a strategic technology. The "AI compute as strategic resource" framing has produced an unprecedented industrial policy response: US CHIPS Act ($39B for domestic semiconductor manufacturing), EU Chips Act (€43B), Japan's LSTC program (¥4T), and India's India AI Mission (₹10,371 crore) are all motivated partly by the strategic imperative to maintain domestic AI compute capabilities independent of adversarial supply chains.
+
+**Updated Related Connections:**
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — ML as strategic technology; chip export controls and AI capability competition
+- [[Finance/quantitative-finance-and-algorithmic-trading]] — ML in systematic finance; factor discovery using deep learning
+- [[Psychology/memory-systems-and-learning-science]] — Biological memory systems paralleling ML architectures; catastrophic forgetting solutions
