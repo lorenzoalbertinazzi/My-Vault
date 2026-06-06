@@ -1,0 +1,155 @@
+---
+title: South China Sea — Philippines-China Tensions and the ASEAN Code of Conduct Impasse (2026)
+date: 2026-06-06
+tags: [geopolitics, south-china-sea, philippines, china, asean, maritime-disputes, second-thomas-shoal, spratly-islands, us-military, code-of-conduct, UNCLOS]
+source: South China Morning Post; Philippines National Maritime Council; Crisis Group; Foreign Policy; Frontiers in Political Science; SAIS Review
+last_updated: 2026-06-06
+---
+
+## Summary
+
+The South China Sea remains the world's most active maritime flashpoint in 2026, with Philippine-China confrontations intensifying to the point that analysts describe the situation as "a powder keg" despite the absence of open warfare. China claims approximately 90% of the South China Sea through its "nine-dash line" (now "ten-dash line" after a 2023 revision extending into the Taiwan Strait), a claim ruled illegal by the 2016 Permanent Court of Arbitration tribunal under UNCLOS. The Philippines, Vietnam, Malaysia, Brunei, Taiwan, and Indonesia all maintain competing claims. Under President Ferdinand Marcos Jr. (elected 2022), the Philippines has dramatically hardened its posture — ending the accommodation policy of Duterte, livestreaming Chinese aggression against Philippine vessels, and deepening military integration with the United States through the Enhanced Defense Cooperation Agreement (EDCA). In 2026, China has employed water cannon, laser weapons, and military-grade flares against Philippine coast guard aircraft and resupply vessels; the Philippines has responded by renaming 131 maritime features in the Spratly Islands. Meanwhile, the Philippines chairs ASEAN in 2026 and is pushing for a finalized Code of Conduct — but experts assess it is "100% not achievable" this year. With 500+ US-Philippines military exercises planned for 2026 and China's steady militarization of artificial islands continuing, the risk of an unintended escalation that could trigger US mutual defense obligations has never been higher.
+
+## Key Points
+
+- **Philippine Executive Order (March 2026):** Renamed 131 maritime features in disputed Spratlys with Filipino names; China condemned it as infringement on sovereignty
+- **Five incidents in preceding weeks (April 2026):** Philippine National Maritime Council documented aggressive Chinese actions against Philippine vessels/aircraft
+- **Flare attack (April 9, 2026):** Chinese forces fired military-grade flares at Philippine Coast Guard aircraft over Mischief and Subi Reefs
+- **US-Philippines exercises 2026:** 500+ exercises planned (highest ever), including live-fire drills near disputed shoals
+- **Code of Conduct failure:** Philippines chairs ASEAN 2026; hopes to finalize CoC but expert consensus is "not achievable this year"
+- **China's position:** Hardened under Xi Jinping's "no concession" doctrine; PLAN (People's Liberation Army Navy) and CCG (China Coast Guard) operating simultaneously
+- **Vietnam, Malaysia, Indonesia:** All experiencing separate but related tensions with China; South China Sea coalescence into broader anti-Chinese maritime coalition
+
+## Details
+
+### Legal Framework and the Nine-Dash Line
+
+**UNCLOS (1982):** The United Nations Convention on the Law of the Sea provides the international legal framework:
+- Territorial sea: 12 nautical miles from baseline
+- Exclusive Economic Zone (EEZ): 200 nautical miles — sovereign rights to resources
+- Extended Continental Shelf: up to 350 nm for resource rights
+
+**China's nine-dash line:** A dashed boundary encompassing ~90% of the South China Sea, based on a 1947 Republic of China map. The claim is **not based on UNCLOS** and is incompatible with the EEZ rights of Vietnam, Philippines, Malaysia, Brunei, and Indonesia.
+
+**2016 PCA Tribunal Ruling:** Philippines brought case under UNCLOS Annex VII; July 2016 ruling:
+- Nine-dash line has no legal basis in international law
+- China's historical claims are not recognized under UNCLOS
+- Several Chinese-claimed features are legally rocks or submerged features, not islands (no EEZ entitlement)
+- China "interfered with Philippine fishing rights at Scarborough Shoal"
+
+China rejected the ruling as "null and void" and has never complied. The US, EU, Australia, Japan all endorsed the ruling's validity.
+
+**2023 update — "Ten-dash line":** China published a new official map adding a 10th dash extending into the Taiwan Strait, further expanding the claim and drawing protests from Vietnam, Malaysia, Indonesia, the Philippines, and India (the new map also showed disputed Indian territories as Chinese).
+
+### Key Contested Features
+
+**Second Thomas Shoal (Ayungin Shoal):**
+The most active flashpoint in 2026. Philippines intentionally grounded the BRP Sierra Madre (a WWII-era ship) there in 1999 to maintain a physical presence and sovereignty claim. A small contingent of Philippine Marines resides on the rusting vessel.
+
+China has systematically harassed Philippine resupply missions to the Sierra Madre since 2021:
+- Water cannon attacks on resupply boats
+- Laser dazzling of Philippine Coast Guard ships (temporary blindness)
+- Blocking maneuvers by CCG and maritime militia vessels
+- April 2026: Most aggressive confrontations yet; Philippines films and livestreams all incidents
+
+**Scarborough Shoal:**
+Controlled by China since 2012 (seized during Duterte predecessor Aquino's standoff). Philippines banned from traditional fishing waters. De facto Chinese annexation; no resupply equivalent to Sierra Madre.
+
+**Spratly Islands:**
+Archipelago of 750 features (reefs, shoals, islands). China controls ~7 artificial islands built on reefs since 2014–2015, totaling ~3,200 acres of reclaimed land. Each island features:
+- Runways capable of landing heavy bombers (Fiery Cross Reef: 3,100m runway)
+- Radar facilities and air defense systems
+- Hardened hangars for fighter aircraft (J-11B, J-16)
+- Dock facilities for PLA surface and submarine forces
+
+This militarization transforms the South China Sea into a Chinese anti-access/area denial (A2/AD) zone, complicating US carrier operations.
+
+**Paracel Islands:**
+Controlled entirely by China; seized from South Vietnam in 1974 (34 years before PCA ruling). Vietnam maintains claim; China resists any negotiation.
+
+### The Philippine Strategy Shift Under Marcos Jr.
+
+Rodrigo Duterte (2016–2022) pursued strategic accommodation with China: "friendly cooperation," backpedaling on 2016 PCA ruling, and in exchange received infrastructure promises (few materialized) while China expanded island presence.
+
+Ferdinand Marcos Jr. reversed course decisively:
+
+**1. Transparency strategy:** Philippines now livestreams and publicizes every Chinese harassment incident. This shifts from quiet diplomacy to international shaming. Result: vivid footage of Chinese water cannon attacks has dramatically increased global awareness and public sympathy.
+
+**2. EDCA expansion:** Agreed to 4 new EDCA base access sites in 2023, including bases in northern Luzon (facing Taiwan). Total: 9 Philippine military sites accessible to US forces. Enables US rapid deployment.
+
+**3. Legal challenges:** Philippines filed additional UNCLOS arbitration cases in 2024 on Chinese interference at Reed Bank (natural gas exploration area).
+
+**4. Multilateral coalition building:**
+- Joint patrols with US, Japan, Australia in 2025
+- First-ever trilateral Philippine-Japan-US maritime patrol (May 2025)
+- Philippines-Vietnam joint coast guard exercises
+
+**5. Renaming Spratly features (March 2026):**
+Executive Order assigning Filipino names to 131 maritime features. Legal significance: establishes Philippine administrative jurisdiction. China's reaction: "provocative, illegal, null and void." International community: mostly supportive of Philippine right to name features in its EEZ.
+
+### US Involvement and the Mutual Defense Treaty
+
+The 1951 US-Philippines Mutual Defense Treaty creates collective defense obligations. The US has periodically clarified:
+- **2023 (Blinken):** The MDT "extends to armed attacks on Philippine armed forces, public vessels, or aircraft — including those of the Coast Guard — anywhere in the South China Sea"
+- This is a deterrent signal to Beijing: harming Philippine military or coast guard vessels could trigger US Article V equivalent
+
+**2026 US-Philippines military posture:**
+- 500+ bilateral exercises (up from ~280 in 2020)
+- US Marine Littoral Regiment deployed to northern Philippines
+- US Typhon land-based missile system deployed to Luzon (2024): carries Tomahawk cruise missiles with range to reach southern China
+- Regular US Navy Freedom of Navigation Operations (FONOPs) through Chinese-claimed waters
+
+China has protested the Typhon deployment as "provocative" and demanded withdrawal; Philippines declined.
+
+### ASEAN Code of Conduct: Why It's Failing
+
+ASEAN and China have been negotiating a South China Sea Code of Conduct (CoC) since 2002 (Declaration on the Conduct of Parties); actual negotiations began 2017; single draft text circulated 2018.
+
+**Key disputes preventing finalization:**
+
+**Geographic scope:** Philippines and Vietnam want the CoC to cover the entire South China Sea; China insists on limiting to "non-disputed waters" — which renders it meaningless since all of China's claims are disputed.
+
+**Legal status:** Philippines wants a legally binding CoC; China wants a political declaration only (would avoid the 2016 PCA ruling's legal force).
+
+**Compliance mechanism:** Any enforcement mechanism is vetoed by China; Beijing insists on voluntary compliance only.
+
+**Third-party involvement:** China insists ASEAN-China only, no US/external parties involved in implementation; Philippines/Vietnam want US presence as deterrent.
+
+**China's veto power:** ASEAN requires consensus for decisions; Cambodia and Laos (Chinese client states) can block any meaningful ASEAN position, ensuring China faces only the weakest possible CoC language.
+
+**SCMP expert assessment (2026):** CoC "100% not achievable" this year. The CoC process has become a legitimacy exercise for China — participating signals multilateral engagement while blocking any substantive commitments.
+
+### Vietnam, Malaysia, Indonesia: The Broader Coalition
+
+The Philippines is not alone:
+
+**Vietnam:** Most contested EEZ after Philippines. China has rammed Vietnamese fishing boats (2020: killing fishermen), seized vessels, blocked oil drilling. Vietnam takes a quieter approach than Philippines (no livestreaming) but has quietly bought Russian submarines (Kilo-class, 6 vessels) and Israeli anti-ship missiles.
+
+**Malaysia:** Operates quietly; does not publicize incidents. Malaysian state oil company Petronas faces routine Chinese CCG harassment at Luconia Shoals; continues operations without escalation.
+
+**Indonesia:** Claims no territorial overlap with China (Indonesia officially maintains there is no territorial dispute) but Chinese fishing fleets and CCG regularly enter the Natuna Sea (Indonesian EEZ). Indonesia dispatched warships and aircraft; 2021-2026: dozens of standoffs.
+
+**Emerging pattern:** A de facto anti-Chinese maritime coalition is forming — US, Japan, Australia, Philippines, Vietnam — holding joint exercises, sharing intelligence, coordinating responses. Not a formal alliance, but a networked deterrence arrangement.
+
+### Risk Assessment: Escalation Pathways
+
+**Most likely scenario (2026-2028):** Continued "gray zone" harassment with no kinetic escalation. China achieves objectives through coercive but sub-military means; Philippines protests but cannot expel Chinese forces without triggering full conflict.
+
+**Escalation scenario 1 — Accidental kinetic incident:**
+Philippine or Chinese military vessel sinks during confrontation (fire suppression, ramming that goes wrong). Could trigger MDT consultations. US response would determine whether it escalates.
+
+**Escalation scenario 2 — Sierra Madre:**
+China forces Philippine Marines off the BRP Sierra Madre (currently resisting resupply). Philippines has MDT protection for Philippine armed forces; US may be forced to respond militarily.
+
+**Escalation scenario 3 — Taiwan crisis spillover:**
+A Chinese military action against Taiwan would immediately require China to control the South China Sea's air and maritime approaches. Philippines' EDCA bases on Luzon suddenly become direct targets.
+
+**De-escalation scenario:** US-China grand bargain over Taiwan or trade reduces incentive for maritime brinkmanship. Low probability given current trajectory.
+
+## Related
+
+- [[2026-05-30-china-taiwan-strait-military-tensions]]
+- [[2026-05-27-us-china-great-power-competition]]
+- [[2026-06-06-southeast-asia-asean-strategic-balance-2026]]
+- [[2026-05-27-us-china-strategic-competition]]
+- [[2026-06-06-turkey-strategic-autonomy-erdogan-2026]]
