@@ -3,7 +3,7 @@ title: FIFA World Cup 2026 — North America Hosts the Biggest Tournament in His
 date: 2026-05-30
 tags: [world-events, sports, FIFA, world-cup-2026, USA, soccer, football, geopolitics, CONCACAF, USMNT, north-america, expansion-48-teams, MetLife, Azteca, soft-power, sports-diplomacy, Pulisic, Pochettino]
 source: FIFA.com; Yahoo Sports; NBC Sports; Fox Sports/Telemundo rights data; FIFA revenue projections
-last_updated: 2026-06-03
+last_updated: 2026-06-06
 ---
 ## Summary
 The 2026 FIFA World Cup — hosted jointly by the United States, Canada, and Mexico across 16 venues from June 11 to July 19 — is the most expansive men's football tournament in history. For the first time, the field has expanded from 32 to 48 teams across 104 matches. The tournament carries outsized geopolitical and commercial significance: the first World Cup in North America since USA 1994, a test of US-Mexico relations under ongoing immigration and trade tensions, and a commercial bonanza with estimated revenues exceeding $11 billion. The US national team (USMNT) enters for the first time in eight years since their 2018 qualifying failure, generating intense domestic interest in a sport that has transformed American fandom.
