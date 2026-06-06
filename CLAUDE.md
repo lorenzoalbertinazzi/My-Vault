@@ -6,11 +6,11 @@ This is the personal knowledge vault for the user. Before using any web search t
 
 1. Grep for keywords across all notes:
    - Use Grep with pattern matching the topic
-   - Path: `C:\Users\lalbe\OneDrive\Desktop\My Vault`
+   - Path: `C:\Users\lalbe\My Vault`
    - File types: `*.md`
 
 2. List notes in a specific folder:
-   - Use Glob with patterns like `C:\Users\lalbe\OneDrive\Desktop\My Vault\Finance\*.md`
+   - Use Glob with patterns like `C:\Users\lalbe\My Vault\Finance\*.md`
 
 3. Read a specific note before going online — only search the web if the vault has nothing relevant or the note is clearly outdated.
 
