@@ -3,7 +3,7 @@ title: Prospect Theory and Decision-Making Under Uncertainty
 date: 2026-05-30
 tags: [psychology, behavioral-economics, prospect-theory, kahneman, tversky, decision-making, loss-aversion, cognitive-biases, reference-dependence, value-function, probability-weighting, endowment-effect, status-quo-bias, disposition-effect, framing-effects]
 source: "Kahneman & Tversky (1979) Prospect Theory: An Analysis of Decision Under Risk, Econometrica; Tversky & Kahneman (1992) Advances in Prospect Theory: Cumulative Representation of Uncertainty, J Risk Uncertainty; Thaler (1980) Toward a Positive Theory of Consumer Choice, JEconBehav; Kahneman (2011) Thinking, Fast and Slow"
-last_updated: 2026-06-02
+last_updated: 2026-06-06
 ---
 
 ## Summary
@@ -339,3 +339,20 @@ The options market is one of the most direct empirical tests of Prospect Theory 
 - [[Finance/options-basics]] — Prospect Theory explains the persistent overpricing of out-of-the-money options (lottery ticket demand from probability overweighting), the reluctance of covered-call writers to let positions be called away (loss aversion over the reference price), and why option buyers systematically pay too much for insurance puts (loss aversion amplifying the perceived value of downside protection)
 - [[Finance/portfolio-theory]] — Myopic loss aversion (Benartzi & Thaler 1995) explains the equity premium puzzle: investors who evaluate portfolios frequently (monthly) experience more loss-coded periods than annual evaluators and demand a higher risk premium; the normatively correct evaluation period (annual or longer) is what Markowitz's mean-variance framework implicitly assumes, but prospect theory predicts investors deviate toward more frequent re-evaluation and thus higher required compensation for equity risk
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Loss aversion in geopolitical competition: status quo powers vs. revisionist challengers
+
+
+### Saturday Cross-Disciplinary Synthesis: Prospect Theory as Universal Decision Framework
+
+**Connection to Medicine — Risk Communication and Medical Decision-Making:**
+The framing effect — one of prospect theory's core predictions — has life-and-death implications in medical decision-making. McNeil, Pauker & Tversky (1982) demonstrated that patients choosing between surgery and radiation therapy for lung cancer chose surgery at dramatically different rates depending on whether outcomes were framed as survival rates ("90% survive surgery 5 years") vs. mortality rates ("10% die within 5 years after surgery") — despite the information being numerically identical. The risky choice framing (mortality framing → avoid the risky surgery; survival framing → accept the risky surgery) reversed the majority choice in controlled studies. The FDA now requires multiple framing formats in drug risk communication precisely to prevent single-framing manipulation of patient decision-making. The prospect theory prediction was specific and correct: losses (deaths) are weighted more heavily than equivalent gains (survivals), producing systematically different risk preferences under mortality vs. survival framing.
+
+**Connection to Climate Policy — Loss Framing and Environmental Action:**
+Prospect theory provides a compelling explanation for the gap between stated climate concern and climate-relevant behavior change. The standard climate communication frame — "we will gain a livable future if we act now" — is a gain frame. Prospect theory predicts that gain frames are less motivationally powerful than equivalent loss frames. Research by Spence & Pidgeon (2010, Global Environmental Change) confirmed this: loss frames ("we will lose our coastlines, biodiversity, agricultural capacity") produce significantly greater willingness to act on climate mitigation than equivalent gain frames. The probability weighting function adds a second insight: very small probabilities of catastrophic outcomes (tail climate scenarios — 4°C+ warming, civilizational collapse) are psychologically underweighted in the middle probability range but overweighted in the extreme tail — creating the paradox where people simultaneously underweight moderate climate risks and catastrophize about low-probability extreme scenarios.
+
+**Connection to Technology — AI Decision Systems and Prospect Theory:**
+AI recommendation systems trained on human behavioral data implicitly encode prospect theory's predictions — because the training data (human choices) reflect loss aversion, reference-dependence, and probability weighting. A recommendation system trained on purchase behavior will learn to present "last one available!" (scarcity + loss aversion) and price anchoring ("was $100, now $60" — reference point + gain framing) as effective persuasion patterns — not because the system understands prospect theory, but because these patterns produce the purchase behavior that is the training signal. This creates a concerning dynamic: AI recommendation systems are learning human psychological vulnerabilities from behavioral data and deploying them as optimization targets — automating the exploitation of the same biases that behavioral economics documents. Regulation of this pattern (the EU's DSA prohibition on "systems using techniques that exploit users' vulnerabilities") acknowledges this dynamic but face implementation challenges.
+
+**Updated Related Connections:**
+- [[Tech & AI/reinforcement-learning-from-human-feedback]] — Prospect theory encoded in human preference training signals; loss aversion in RLHF reward functions
+- [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Status quo bias and loss aversion in great power negotiation; revisionist vs. status quo power asymmetric risk preferences
+- [[Finance/energy-transition-finance-and-green-capital-markets]] — Loss framing for climate action; stranded asset risk communication

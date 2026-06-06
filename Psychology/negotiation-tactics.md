@@ -3,7 +3,7 @@ title: Negotiation Tactics — Chris Voss and Roger Fisher
 date: 2026-05-27
 tags: [psychology, negotiation, BATNA, anchoring, Harvard-negotiation, Chris-Voss, FBI-negotiation, emotional-labeling, mirroring, framing, principled-negotiation, Fisher-Ury, conflict-resolution, persuasion, communication]
 source: "Fisher & Ury (1981) Getting to Yes; Voss (2016) Never Split the Difference; Malhotra & Bazerman (2007) Negotiation Genius; Schelling (1960) The Strategy of Conflict"
-last_updated: 2026-06-02
+last_updated: 2026-06-06
 enriched: 2026-05-29
 ---
 
@@ -397,3 +397,20 @@ The contemporary evidence supports neither pure school. David Lax and James Sebe
 - [[Tech & AI/prompt-engineering]] — Prompt engineering as a form of negotiation with LLMs; anchoring, framing, and calibrated questioning applied to model elicitation
 - [[Finance/hedge-funds-and-alternative-strategies]] — Activist hedge fund campaigns (Ackman vs. Herbalife, Elliott vs. Samsung) are among the most public and high-stakes demonstrations of negotiation tactics in financial markets: creating urgency, anchoring valuation expectations, building coalitions, and structuring credible commitment threats to force management capitulation or value realization
 - [[Finance/derivatives-futures-and-forwards]] — Derivatives term sheet negotiation — particularly for OTC products like structured notes, interest rate swaps, and commodity forwards — involves all the core negotiation dynamics: ZOPA determined by credit spreads and counterparty risk, anchoring on indicative pricing, and the use of commitment devices (ISDA master agreements) to shift subsequent negotiation into a framework set in the initial deal
+
+
+### Saturday Cross-Disciplinary Synthesis: Negotiation as Interdisciplinary Practice
+
+**Connection to Neuroscience — The Biology of Trust and Concession:**
+Negotiation outcomes are partly determined by the neurochemistry of the negotiators. Paul Zak's research documented that trust-building behaviors (warmth, reciprocity, vulnerability) trigger oxytocin release in the counterparty, which increases their propensity to make concessions and accept agreements. This is not merely metaphorical: measured oxytocin levels in controlled negotiation experiments predict concession behavior with r > 0.40. The practical negotiation implication: the pre-negotiation "warm-up" — small talk, rapport building, shared meals — is not merely social politeness but neurological preparation. The common business practice of conducting contentious negotiations immediately upon first contact (skipping rapport-building) may actually be self-defeating: the cortisol-elevated, oxytocin-depleted state of strangers in conflict produces worse outcomes for both parties than the same negotiation conducted after sufficient rapport has elevated oxytocin levels.
+
+**Connection to Game Theory — BATNA and the Information Game:**
+BATNA (Best Alternative to a Negotiated Agreement, Fisher & Ury, 1981) is the game-theoretic operationalization of the negotiator's outside option — the payoff available if no deal is reached. The stronger your BATNA, the higher your reservation price (minimum acceptable agreement) and the less desperate you appear — which shifts the Zeuthen-Nash bargaining solution in your favor. The game-theoretic subtlety: it is optimal to reveal a strong BATNA but keep a weak BATNA concealed. This creates the "information game within the negotiation game" — both parties are simultaneously trying to credibly signal their outside options while concealing their true reservation prices. The practice of competitive tendering (revealing that multiple bidders are competing) is a BATNA revelation mechanism; the common negotiator's tactic of "let me check with my principal" is a BATNA concealment mechanism (creating ambiguity about whether acceptance is within the negotiator's authority).
+
+**Connection to Geopolitics — Nuclear Diplomacy as High-Stakes BATNA:**
+The 2026 Iran nuclear negotiations (see [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]) provide a live case study in the negotiation framework at its most consequential. Both parties' BATNAs are extreme: Iran's BATNA is continued sanctions-damaged economy vs. maintaining nuclear program; the US BATNA is continued military operations vs. nuclear proliferation risk. The zone of possible agreement (ZOPA) — if one exists — is the overlap between what Iran will accept without military conflict continuation and what the US will accept without Iran obtaining nuclear weapons. The challenge: neither party's true BATNA is credibly revealed. Iran's nuclear weapons timeline is uncertain; US military capabilities and political resolve are uncertain. Each side is simultaneously trying to shift the other's estimate of the BATNA distribution while managing domestic political constraints on what agreements they can accept. This is the high-stakes version of the information game in every commercial negotiation.
+
+**Updated Related Connections:**
+- [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Live case study in nuclear diplomacy as applied negotiation theory
+- [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Multi-agent negotiation protocols; mechanism design for automated deal-making
+- [[Finance/mergers-and-acquisitions]] — M&A negotiation tactics; break-fee design as BATNA-shaping commitment device

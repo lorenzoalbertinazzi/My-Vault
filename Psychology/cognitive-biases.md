@@ -3,7 +3,7 @@ title: Cognitive Biases — A Practical Map
 date: 2026-05-26
 tags: [psychology, cognitive-biases, heuristics, decision-making, kahneman, tversky, anchoring, availability-heuristic, representativeness, confirmation-bias, hindsight-bias, dunning-kruger, System-1, System-2, behavioral-economics]
 source: "Kahneman (2011) Thinking, Fast and Slow; Tversky & Kahneman (1974) Judgment Under Uncertainty: Heuristics and Biases, Science; Thaler (1980) Toward a Positive Theory of Consumer Choice, JEconBehav; Ariely (2008) Predictably Irrational"
-last_updated: 2026-06-02
+last_updated: 2026-06-06
 enriched: 2026-05-29
 ---
 
@@ -430,3 +430,20 @@ Question: What is my actual confidence in this outcome, and is it calibrated?
 - [[Tech & AI/machine-learning-fundamentals]] — ML models exhibit bias-like failure modes (overfitting as recency bias; training data anchoring); understanding human biases informs model evaluation
 - [[Tech & AI/vector-databases-and-embeddings]] — Semantic similarity search in embedding space as a model of associative memory retrieval underlying availability heuristic
 - [[Tech & AI/retrieval-augmented-generation]] — RAG retrieval ranking affected by embedding-space biases; bias-aware retrieval design
+
+
+### Saturday Cross-Disciplinary Synthesis: Cognitive Biases as Cross-Domain Risk Factors
+
+**Connection to Organizational Theory — Institutional Biases and Systematic Failures:**
+Individual cognitive biases are amplified, not diluted, when individuals aggregate into institutions. Groupthink (Janis, 1972) produces collective overconfidence in strategic decisions. Organizational commitment escalation (Staw, 1976) produces institutional double-down on failing strategies that no individual would maintain alone. The NASA Challenger (1986) and Columbia (2003) disasters are the canonical case studies: organizational cultural biases (normalization of deviance, authority gradient suppression of dissent, production pressure framing) produced catastrophic decisions despite the presence of technically competent individuals who individually held accurate risk assessments. The organizational learning response — checklists, structured dissent procedures, devil's advocacy roles — is an institutional architecture designed to counteract the specific bias patterns that organizational dynamics amplify. James Reason's "Swiss Cheese Model" of accident causation formalizes this: systemic failures occur when organizational bias holes align, not through individual failures alone.
+
+**Connection to Epidemiology — Availability Bias and Pandemic Preparedness:**
+The COVID-19 pandemic demonstrated the devastating consequences of institutional availability bias in public health policy. Pre-COVID, pandemic preparedness exercises (Operation Dark Winter, 2001; Crimson Contagion, 2019) documented exactly the vulnerabilities that materialized in 2020 — but because no major respiratory pandemic had occurred in living memory, policymakers systematically underweighted the risk, allocating insufficient resources to preparedness. The availability heuristic predicted this failure precisely: the most recent high-salience pandemic (H1N1, 2009) was mild, and its ready availability in decision-makers' memory made it the mental prototype for "pandemic" — leading to systematic underestimation of the severe scenario. Post-COVID, the availability of the vivid COVID experience has swung the bias the other direction: MPOX, Ebola (see [[World Events/2026-05-27-ebola-outbreak-drc-uganda-2026]]), and other outbreaks are now responded to with dramatically greater urgency than pre-COVID base rates would justify — the availability heuristic operating in the opposite direction.
+
+**Connection to Technology — ML Bias as Institutional Cognitive Bias:**
+Machine learning models exhibit failure modes that are direct computational analogs to human cognitive biases: confirmation bias (training data selection that overrepresents certain patterns), anchoring (model outputs anchored to training distribution statistics rather than test distribution), availability bias (overweighting recent or frequently represented training examples), and representativeness heuristic (pattern-matching to prototype examples rather than base-rate reasoning). This is not metaphorical — the failure modes share mathematical structure. Understanding human cognitive biases thus directly informs ML audit practices: bias auditing frameworks for AI systems are explicitly borrowing from the cognitive bias taxonomy to develop systematic tests. The emerging field of "AI debiasing" parallels the behavioral economics debiasing literature, using structural interventions (calibration, adversarial testing, diverse training data) rather than awareness to correct systematic errors.
+
+**Updated Related Connections:**
+- [[Tech & AI/federated-learning-and-privacy-preserving-ml]] — Federated learning as technical debiasing for data access biases in AI training
+- [[World Events/2026-05-27-ebola-outbreak-drc-uganda-2026]] — Post-COVID availability bias overcorrection in epidemic response
+- [[Finance/factor-investing-and-smart-beta]] — Replication crisis in factor research as institutional confirmation bias

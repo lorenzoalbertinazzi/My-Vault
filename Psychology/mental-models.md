@@ -3,7 +3,7 @@ title: Mental Models — Thinking Frameworks
 date: 2026-05-26
 tags: [psychology, mental-models, decision-making, first-principles, inversion, second-order-thinking, Charlie-Munger, farnam-street, latticework, checklists, systems-thinking, critical-thinking, cognitive-frameworks, rationality, Bayesian-thinking]
 source: "Munger (1994) USC Business School Speech on Worldly Wisdom; Parrish (2019) The Great Mental Models Vol. 1; Bevelin (2007) Seeking Wisdom: From Darwin to Munger; Poor Charlie's Almanack (2005)"
-last_updated: 2026-06-02
+last_updated: 2026-06-06
 enriched: 2026-05-29
 ---
 
@@ -469,3 +469,20 @@ The strongest practitioners (Munger, Buffett, Nassim Taleb, Richard Feynman) com
 - [[Tech & AI/retrieval-augmented-generation]] — RAG architectures as implementation of Munger's latticework (stored models + retrieved specifics)
 - [[Tech & AI/prompt-engineering]] — Prompt design as applied mental model selection; chain-of-thought prompting operationalizes first-principles and second-order thinking
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Second-order thinking and Cynefin framework applied to great power competition analysis
+
+
+### Saturday Cross-Disciplinary Synthesis: Mental Models as Cognitive Leverage
+
+**Connection to Systems Thinking — Mental Models and Second-Order Consequences:**
+Peter Senge's "The Fifth Discipline" (1990) identified mental models as the primary barrier to organizational learning: individuals and institutions operate from implicit mental models that filter perception, preventing them from seeing data that contradicts existing assumptions. Systems thinking — the ability to model feedback loops, time delays, non-linearities, and emergent properties — is the highest-leverage mental model category because it enables reasoning about second and third-order consequences that event-level thinking misses. The classic Limits to Growth simulation (Club of Rome, 1972) demonstrated that exponential growth within finite systems produces collapse — a second-order consequence obvious from systems thinking but systematically missed by linear extrapolation, which was the dominant mental model of 1970s growth optimism. In 2026, the analogous insight: AI capability exponential growth within finite regulatory, social, and physical resource constraints will produce systemic effects (labor displacement, energy demand, geopolitical destabilization) that linear-extrapolation thinking about AI consistently underestimates.
+
+**Connection to Physics — Fermi Estimation as Applied Mental Model:**
+Enrico Fermi's technique of reasoning from first principles and order-of-magnitude estimates — "how many piano tuners are in Chicago?" solved through decomposition and multiplication — is one of the most transferable mental models from physics to business, geopolitics, and finance. Fermi estimation operationalizes Munger's "latticework of mental models" concept: complex problems are broken into components where existing models apply, and estimates are combined with appropriate uncertainty. The specific value in 2026: when AI systems provide confident-sounding but potentially hallucinated numerical answers, the ability to independently Fermi-estimate expected magnitudes is the primary human check on AI quantitative outputs. Teachers, consultants, and intelligence analysts who train Fermi estimation develop an "order-of-magnitude immune system" that detects numerical nonsense that superficially coherent AI outputs can contain.
+
+**Connection to Geopolitics — Mental Models and Strategic Surprise:**
+Military intelligence failures (Pearl Harbor, 9/11, Russia's Ukraine invasion surprise in 2022) share a common structure: the attacked party's mental models predicted that the attacker would not act because the costs appeared prohibitively high — a miscalculation caused by model divergence (different mental models of acceptable costs, strategic logic, and risk tolerance). Roberta Wohlstetter's analysis of Pearl Harbor ("Pearl Harbor: Warning and Decision," 1962) identified the "signal-to-noise" problem: the intelligence that the attack was coming was present in the data, but the mental model framework for interpreting the signals was absent. Creating better mental models for adversary decision-making — specifically, adopting the adversary's own strategic framework rather than projecting one's own — is the primary cognitive challenge in strategic intelligence. This is precisely what Kahneman's "outside view" prescribes: temporarily abandoning one's own mental model and adopting the adversary's reference class.
+
+**Updated Related Connections:**
+- [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Systems thinking models for AI ecosystem dynamics; emergent behavior prediction in AI agent networks
+- [[Geopolitics/2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — Strategic surprise and mental model failures in 2026 escalation dynamics
+- [[Finance/valuation-fundamentals]] — Fermi estimation for sanity-checking DCF valuations; order-of-magnitude checks on AI financial analysis

@@ -298,3 +298,20 @@ The major barrier to CBT access is therapist availability and cost (~$150–300/
 - [[emotional-intelligence]]
 - [[trauma-resilience-and-post-traumatic-growth]]
 - [[prospect-theory-and-decision-making]]
+
+
+### Saturday Cross-Disciplinary Synthesis: CBT as Applied Epistemology
+
+**Connection to Philosophy — CBT as Practical Epistemics:**
+Cognitive Behavioral Therapy's core claim — that psychological distress is primarily maintained by distorted thinking patterns (cognitive distortions) that can be identified, challenged, and corrected — is fundamentally an epistemological claim about the relationship between beliefs and reality. CBT's Socratic questioning technique ("What evidence supports this belief? What evidence contradicts it? Is there an alternative interpretation?") is a practical implementation of Popperian critical rationalism: beliefs should be held tentatively and tested against evidence rather than protected from disconfirmation. The overlap with science education and critical thinking pedagogy is not coincidental — Beck's cognitive therapy was explicitly influenced by George Kelly's Personal Construct Theory, which modeled the human as a scientist forming and testing hypotheses about the world. The therapeutic implication: anxiety and depression are, in part, failures of epistemic hygiene — holding untested negative beliefs with certainty while rejecting disconfirming evidence — and the cure is teaching better reasoning practices.
+
+**Connection to AI Safety — Alignment Through Cognitive Architecture:**
+CBT's effectiveness in correcting systematic reasoning errors in humans has inspired analogous approaches in AI alignment research. "Constitutional AI" (Anthropic, 2022) and related techniques use structured self-critique (the AI critiques its own responses against a set of principles) that is structurally equivalent to CBT's cognitive restructuring: the AI identifies potentially harmful responses (automatic thoughts), evaluates them against constitutional principles (cognitive challenge), and revises them. Debate-based alignment (Irving et al., 2018) similarly uses adversarial self-challenge to expose flawed reasoning in AI systems — treating AI misalignment as an AI-level cognitive distortion that structured challenge can correct. The CBT-alignment parallel suggests that building epistemically humble, self-correcting AI systems may require encoding CBT-style self-monitoring architectures rather than (only) training on human preference data.
+
+**Connection to Geopolitics — CBT Principles in Post-Conflict Reconciliation:**
+Mass violence and genocide create collective cognitive distortions at the societal level: survivor guilt, in-group victimhood narratives, dehumanization of the out-group, and catastrophizing future coexistence. Rwanda's Gacaca courts (community-based post-genocide justice, 1999–2012) were partly informed by community psychology principles derived from CBT — bringing perpetrators and survivors into structured dialogue designed to challenge both parties' distorted narratives about each other. Exposure therapy's logic (gradual, structured confrontation with feared stimuli reduces avoidance and anxiety) has been applied in Bosnia and Northern Ireland through structured contact programs between former adversaries. The psychiatric epidemiology literature on post-conflict populations documents PTSD prevalence as high as 35–50%, making CBT-based interventions a genuine public health and conflict-resolution priority in the 2026 multi-conflict world.
+
+**Updated Related Connections:**
+- [[Tech & AI/ai-safety-and-alignment]] — Constitutional AI as computational CBT; self-critique architectures for AI reasoning correction
+- [[Geopolitics/2026-05-30-horn-of-africa-sudan-ethiopia-regional-conflict]] — Mass trauma treatment in conflict zones; CBT-adapted interventions for displaced populations
+- [[Finance/behavioral-finance-and-investor-psychology]] — CBT techniques applied to trading psychology; thought records for managing emotional trading decisions
