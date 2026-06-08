@@ -3,7 +3,7 @@ title: Colombia 2026 Presidential Runoff — Espriella vs. Cepeda and Latin Amer
 date: 2026-06-06
 tags: [world-events, colombia, election, politics, latin-america, drug-war, coca, espriella, cepeda, petro, usa-relations, FARC, peace-process]
 source: "France 24; CNN; NPR; Al Jazeera; Americas Quarterly; AS/COA Poll Tracker; CRS Report IN12689; Wikipedia 2026 Colombian presidential election"
-last_updated: 2026-06-06
+last_updated: 2026-06-08
 ---
 
 ## Summary
@@ -139,6 +139,14 @@ Regardless of who wins, Colombia faces structural challenges that transcend elec
 - **Armed group resilience**: Colombia has been fighting FARC in various forms since 1964; the group (now fragmented) has demonstrated remarkable regeneration capacity; no military or negotiated solution has been durable for more than a decade
 - **Inequality**: Colombia's Gini coefficient (0.52) is among the world's highest; structural inequality feeds both criminality and political polarization
 - **Urbanization and youth**: Colombia urbanized rapidly; 78% urban population; young urban voters increasingly progressive but alienated from traditional institutions; abstention rates among 18–25 year olds remain high (~45% in first round)
+
+### Update — June 8, 2026
+
+**Two weeks to runoff — Espriella leads narrowly, Cepeda momentum building:** With the June 21 runoff thirteen days away, the latest Invamer poll (June 6) shows the gap narrowing dramatically: Espriella 48.2%, Cepeda 47.1% — within the margin of error and a sharp compression from the 2.8-point first-round gap. Two dynamics are driving the convergence: left-of-center voters who abstained in round one (turnout was 52%, below historical averages) are mobilizing at higher rates; and Cepeda's campaign has successfully framed the runoff as a question about continuity of Petro's social programs (healthcare expansion, pension reform) versus Espriella's security-first reversal. The Venezuela dimension is particularly charged: Espriella has committed to breaking diplomatic relations with the Rodríguez government in Caracas, while Cepeda would maintain the communication channel that has managed the shared 2,219-km border migration corridor — a practical concern for voters in Cúcuta and Norte de Santander where cross-border migration affects daily life directly.
+
+**US-Colombia geopolitical alignment: Trump administration signals preference without formal endorsement:** The US Embassy in Bogotá took the unusual step on June 5 of publicly affirming its preference for Colombia's Venezuela policy direction — without endorsing a candidate by name. Ambassador Claire Crosby stated that the US "values Colombia's partnership in addressing the threats posed by the former Maduro regime," language mapping directly onto Espriella's platform. CIA analysis (Reuters June 4) notes that Colombia's bilateral security cooperation architecture — intelligence sharing, counter-narcotics, FARC extradition — is embedded in treaties transcending individual governments. The key variable is whether an Espriella government would restart aerial coca eradication (suspended by Petro in 2022 and persistently requested by Washington) and whether a Cepeda government's continuation of "total peace" negotiations would be treated as hostile by the Trump administration or merely as a Colombian domestic policy matter.
+
+**ELN "observes but does not intervene" — largest electoral security operation in Colombian history:** The ELN's June 3 public statement of "observing but not intervening" is being treated by Colombian security services as a veiled threat requiring heightened preparation. Two candidate security incidents in late May have prompted the Policía Nacional to deploy 120,000 officers nationwide for election day — the largest Colombian electoral security operation on record. The Registraduría Nacional has deployed an AI-assisted fraud detection system cross-referencing biometric voter data with historical participation patterns — a technological first for Colombian elections that civil liberties groups are scrutinizing for surveillance overreach even as electoral authorities defend it as essential to maintaining public confidence in a result that, given the current polling, could go either way.
 
 ## Related
 - [[Geopolitics/2026-06-06-latin-america-geopolitics-us-china-influence-2026]] — Broader Latin American geopolitics context

@@ -3,7 +3,7 @@ title: Sagrada Família Tower of Jesus Christ — Inauguration and Gaudí Centen
 date: 2026-06-06
 tags: [world-events, architecture, religion, barcelona, spain, sagrada-familia, gaudi, pope-leo-xiv, catholicism, heritage]
 source: Sagrada Família Foundation, Vatican News, The Art Newspaper, PR Newswire (June 2026)
-last_updated: 2026-06-06
+last_updated: 2026-06-08
 ---
 
 ## Summary
@@ -116,6 +116,14 @@ The Sagrada Família's completion is an event without close comparison in archit
 - It demonstrates that human institutions can sustain civilizational-scale commitments across generations
 
 The completion of the Tower of Jesus Christ does not fully finish the building — work continues on other elements of the exterior, the sacristies, and interior finishing. But the symbolic completion — the tallest tower blessed by the Pope on the centenary of its architect's death — closes the primary chapter.
+
+### Update — June 8, 2026
+
+**Pope Leo XIV arrives in Barcelona — ceremony two days away:** Pope Leo XIV, the first American Pope (from Chicago, elected April 2025), arrived in Barcelona on June 8 for the historic inauguration ceremony. The two-day programme includes a June 9 floral offering at Gaudí's tomb in the basilica's crypt and an extended tour of the completed tower, followed on June 10 by a Solemn Mass at 7:30 pm attended by the Spanish Royal Family (King Felipe VI and Queen Letizia), Barcelona's mayor Jaume Collboni, and representatives of 40+ countries that contributed craftsmen, donations, or diplomatic support to the construction project. The evening's climax — Leo's blessing of the Tower of Jesus Christ from its central balcony at 172.5 meters — will be broadcast live in 140 countries. Crowd management plans for Barcelona anticipate 300,000+ people in the surrounding streets and the Avinguda de Gaudí, the largest single public gathering in modern Catalan history.
+
+**Tower at 172.5 meters — world's tallest church, fulfilling Gaudí's precise ambition:** The Tower of Jesus Christ's structural completion on February 20, 2026 — crowned by a twelve-pointed star and the "JHS" (Jesus Hominum Salvator) inscription — made the Sagrada Família the world's tallest church at 172.5 meters, surpassing the Ulm Minster in Germany (161.5 m, which had held the title for 131 years). The tower's precise height fulfills one of Gaudí's most explicit architectural statements: he designed it to be exactly one meter shorter than Barcelona's Montjuïc hill (175 m) — his theological expression that human creation should not surpass God's natural creation. The tower's twelve-pointed-star lantern is visible 50 km away on clear nights and internally lit by LED systems replicating the light quality Gaudí specified in his 1914 notes. The construction of the tower's upper sections used 3D-printed stone elements manufactured in the Junta Constructora's on-site digital fabrication center — technology Gaudí could not have imagined but which executed his catenary-computed design more precisely than any pre-digital construction method.
+
+**What remains after June 10 — 2030 full completion target:** June 10 marks the symbolic completion of the primary tower, but the Sagrada Família is not architecturally finished. Remaining works include: the sacristies (3–5 years), several Gloria facade elements, interior apse finishing, and the narthex decorative program. The Junta Constructora estimates full architectural completion "by no later than 2030" — meaning a building begun in 1882 will complete its first century of construction within the decade. The self-financing model (4.5 million visitors annually, €180M+ in revenue) provides uninterrupted construction funding without dependence on Church endowments or state subsidies — the only major cathedral in history to achieve this. UNESCO World Heritage status, granted in 2005 for partial elements, will be extended to the completed structure following formal petition after the June 10 ceremony.
 
 ---
 
