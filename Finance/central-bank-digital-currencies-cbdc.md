@@ -3,7 +3,7 @@ title: "Central Bank Digital Currencies (CBDCs): Architecture, Economics, and th
 date: 2026-05-30
 tags: [finance, CBDC, digital-currency, monetary-policy, central-banking, fintech, mBridge, e-CNY, financial-system, payments, dollar-hegemony, de-dollarization, blockchain, programmable-money, financial-inclusion, sanctions-evasion]
 source: "Atlantic Council CBDC Tracker (2026); IMF (2022) Virtual Handbook on Central Bank Digital Currency; BIS Innovation Hub mBridge Report (2022); Federal Reserve Discussion Paper (2022) Money and Payments: The U.S. Dollar in the Digital Age; Auer, Cornelli & Frost (2020) Rise of the Central Bank Digital Currencies, BIS Working Paper"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary
@@ -502,6 +502,72 @@ Research in behavioral economics consistently finds that digital payment methods
 - [[Tech & AI/blockchain-and-distributed-ledger]] — DLT infrastructure choice for CBDC architecture; permissioned vs. permissionless tradeoffs  
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — mBridge as dollar hegemony challenge; de-dollarization infrastructure  
 - [[Psychology/prospect-theory-and-decision-making]] — Payment decoupling and CBDC spending behavior; programmable money and behavioral design
+
+---
+
+### 2026 CBDC State of Play: June Update and Regulatory Inflection
+
+#### e-CNY Milestone Data and the Interest-Bearing Pivot
+
+By end-2025, China's digital yuan (e-CNY) had processed more than **3.4 billion transactions worth approximately ¥16.7 trillion (~$2.3 trillion)**. Pilots cover 26 cities including major provincial capitals. Critically, the e-CNY has been integrated directly into WeChat Pay and Alipay — China's two dominant consumer payment platforms — rather than requiring a separate app, fundamentally lowering adoption friction. Public-sector wage payments in several pilot zones are now partially disbursed in e-CNY, creating a use-case-driven adoption pathway that avoids the mandate-and-resist dynamic that undermined Nigeria's eNaira.
+
+The January 2026 structural pivot — reclassifying e-CNY from a central bank liability (digital cash) to an interest-bearing deposit liability of commercial banks — resolves the bank-disintermediation concern that dominated earlier designs. By routing e-CNY through commercial bank balance sheets while maintaining PBOC oversight and settlement finality, China achieves: (1) financial inclusion reach of a CBDC, (2) monetary policy transmission of a bank deposit, and (3) data collection and programmability of a central bank instrument. This is the most sophisticated CBDC architecture yet deployed at scale and is influencing every central bank reviewing their own CBDC designs.
+
+The interest-bearing feature creates a new monetary policy tool previously unavailable to the PBOC: the ability to set a differential interest rate on digital deposits to stimulate specific spending categories or geographies. A pilot rate of 0.5% on e-CNY balances used within specific consumption sectors in selected provinces effectively constitutes a geographically targeted monetary stimulus — impossible with conventional deposit rate policy.
+
+#### The CBDC Privacy Paradox: EU AI Act Intersection
+
+The EU AI Act's transparency provisions (General Purpose AI rules effective August 2, 2026) have created an unexpected intersection with CBDC policy. Central banks deploying AI-assisted anti-money-laundering systems within CBDC infrastructure — using machine learning to flag suspicious transaction patterns — must now provide documentation of those AI systems' decision-making processes under Article 13 of the AI Act (high-risk AI system requirements). This creates a novel tension:
+
+**The transparency paradox:** Disclosing how the CBDC monitoring AI detects suspicious transactions weakens the system's effectiveness (adversarial adaptation). Not disclosing it violates the Act. The European Central Bank's CBDC taskforce issued a preliminary guidance note (April 2026) arguing that CBDC transaction monitoring AI qualifies for the "national security exception" in Article 2(3) of the AI Act, exempting it from disclosure requirements. Critics argue this exception was intended for intelligence agencies, not monetary institutions.
+
+The practical resolution being discussed: tiered transparency where the algorithmic categories triggering monitoring are disclosed (threshold-based transaction amounts, geographical patterns) without disclosing the specific ML model weights that identify within-category anomalies. This "process transparency without model transparency" approach has precedent in credit scoring regulations under ECOA in the US (right to explanation for adverse credit decisions without disclosure of proprietary algorithms).
+
+#### Wholesale CBDC and T+1 Settlement: The Securities Market Revolution
+
+The move toward T+1 settlement in US equities (implemented May 2024) has accelerated discussion of T+0 atomic settlement using wholesale CBDC. The DTCC's report (February 2026) quantified the remaining friction in T+1: even after the T+2→T+1 reduction, approximately $450 billion in failed or delayed settlements occur annually due to the 24-hour window between trade execution and cash settlement finality. Wholesale CBDC would reduce this to zero through atomic delivery-versus-payment.
+
+**The specific mechanism (Project Agorá, BIS 2024–2026):** The BIS Innovation Hub launched Project Agorá to explore tokenized commercial bank deposits settling against wholesale CBDC on a unified DLT. Seven major central banks participate: Federal Reserve, Bank of England, ECB, Bank of Japan, Bank of Korea, Banque de France (representing the Eurosystem), and Swiss National Bank. Unlike mBridge (which focuses on cross-border payment), Project Agorá focuses on domestic securities settlement. Preliminary findings (Q1 2026):
+
+- Atomic DvP reduces intraday credit extension needs by an estimated 73% in simulated bond market settlements
+- The netting benefit of the current T+1 system (DTCC nets ~$2.5T to ~$400B in daily settlements) must be replicated through smart contract multilateral netting — technically complex but demonstrated in prototype
+- Legal finality of tokenized CBDC settlement requires legislative clarification in most jurisdictions: does a smart contract transfer constitute "payment" in the legal sense? This is the 2026 frontier of monetary law
+
+**Worked Example — Wholesale CBDC Repo Settlement:**
+Consider an overnight repo transaction between Bank A (cash lender) and Bank B (securities borrower):
+
+*Traditional T+1 flow:*
+- 3pm: Trade agreed, $500M cash vs. $510M 10-year Treasury (2% haircut)
+- Next day 10am: Fedwire transfers cash; DTC delivers securities
+- Overnight credit risk window: ~19 hours where one leg may settle before the other
+
+*Wholesale CBDC T+0 atomic flow:*
+- 3pm: Smart contract conditions set: w-USD from Bank A wallet ↔ tokenized Treasury from Bank B wallet
+- 3:00:00.237pm: Atomic execution — both legs settle simultaneously on shared ledger
+- Credit risk window: 237 milliseconds (transaction processing time)
+- Intraday liquidity requirement: Bank A must have w-USD pre-positioned, reducing but not eliminating intraday liquidity management
+
+This example illustrates both the benefit (essentially zero settlement risk) and the constraint (intraday liquidity pre-positioning requirements don't disappear — they're just managed differently).
+
+#### Competing Schools: Pro-CBDC vs. CBDC-Skeptic Arguments (2026 State of Debate)
+
+The CBDC debate has crystallized around two intellectually coherent positions that deserve structured presentation:
+
+**Pro-CBDC (The Modernization School):**
+Central banks led by the PBOC, Bank of England, ECB, and RBI argue that CBDCs are the inevitable modernization of public monetary infrastructure. Their core arguments in 2026:
+1. Private payment rails (Visa, Mastercard, Apple Pay) represent a growing systemic dependency on commercially-motivated entities for critical payment infrastructure. A CBDC provides a public-option digital payment rail not subject to commercial rent-seeking.
+2. The 1.4 billion global unbanked adults (World Bank 2024) require digital payment access that private banks have no economic incentive to provide. CBDC with mobile-only access reaches this population directly.
+3. The declining use of cash (Sweden: <8% of transactions in cash, 2025) means the public sector is losing its direct monetary presence entirely — CBDC preserves a public monetary anchor.
+4. Wholesale CBDCs reduce systemic risk in financial market infrastructure through atomic settlement, eliminating the Herstatt risk that existing T+1/T+2 systems carry.
+
+**CBDC-Skeptic (The Freedom School):**
+Voiced most forcefully in the US (House Republicans, Cato Institute, Bitcoin advocates) and increasingly in Europe (AfD in Germany, Reform UK):
+1. A central bank with complete transaction visibility creates an unprecedented surveillance infrastructure that could be misused by current or future governments for political control.
+2. Programmable money (spending restrictions, expiration dates, conditional use) represents an unacceptable extension of state power over private economic decision-making. The classical liberal distinction between rule of law (prohibiting specific actions) and arbitrary control (programming allowable actions into the money itself) is abolished.
+3. Negative interest rates on CBDC — now technically feasible — represent coercive confiscation of savings without democratic legislative approval. The zero-lower-bound is not a bug but a feature protecting savers from monetary policy overreach.
+4. CBDC displaced from commercial bank deposits weakens banks' lending capacity and intermediation role, potentially requiring central banks to directly extend credit — a much larger expansion of state control over capital allocation than is currently acknowledged.
+
+**The honest assessment:** Both positions contain genuine insights that cannot be dismissed as technically naive. The resolution — if one exists — lies in cryptographic architecture: zero-knowledge proof-based CBDCs can technically provide full AML compliance visibility to regulators while providing user-level privacy for ordinary transactions. But whether that technical possibility can be institutionalized with legally binding protections against government overreach remains the unresolved political economy question that will determine CBDC adoption trajectories in democratic societies through 2030.
 
 ### CBDC Wholesale Architecture and Interoperability: mBridge's 2026 Status
 

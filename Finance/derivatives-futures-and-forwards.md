@@ -3,7 +3,7 @@ title: Derivatives — Futures, Forwards, and Swaps
 date: 2026-05-30
 tags: [finance, derivatives, futures, forwards, swaps, hedging, risk-management, commodities, interest-rate-swap, CDS, cost-of-carry, basis-risk, margin, central-clearing, OTC-derivatives, SOFR, contango, backwardation]
 source: "Hull (2018) Options, Futures and Other Derivatives; CME Group data; BIS Triennial Central Bank Survey (2022); McDonald (2013) Derivatives Markets; Duffie (2010) How Big Banks Fail and What to Do About It"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary
@@ -382,6 +382,85 @@ The most significant derivatives market development in 2025–2026 is the rapid 
 - [[Tech & AI/cryptography-fundamentals-and-zero-knowledge-proofs]] — ZK-proofs for private derivatives settlement; privacy-preserving margin calculation  
 - [[World Events/2026-05-30-uae-exits-opec-oil-market-shift]] — UAE production expansion and commodity futures market structure disruption  
 - [[Psychology/game-theory-and-strategic-thinking]] — Nash equilibrium in derivative market microstructure; hedger-speculator interaction
+
+---
+
+### Interest Rate Swaps in the 2026 Rate Environment: Duration Management and Curve Positioning
+
+#### The Rate Environment Shapes the IRS Market
+
+As of June 2026, the Federal Funds Rate sits at 3.5–3.75% after a cumulative 175bps of cuts from the 5.25–5.50% peak. The 10-year US Treasury yield is approximately 4.15%, and the 2-year yields approximately 3.85% — producing a modestly positive 2s10s spread of +30bps after the prolonged inversion of 2022–2024. This yield curve configuration — a re-steepening from inversion — is the most important structural development in interest rate derivatives markets in 2026 and directly drives swap market activity.
+
+**Why re-steepening matters for IRS markets:**
+A positively sloped yield curve creates specific trading opportunities that are absent during inversions:
+1. **Curve steepeners** (long 2-year, short 10-year via swaps): In the traditional "bull steepener" pattern (short rates fall faster than long rates as Fed cuts), the payer of 2-year fixed rate benefits as 2-year rates decline from ~4% toward the projected neutral rate of ~2.5–3.0%
+2. **Duration extension trades**: Pension funds and insurance companies — which liability-match against long-duration liabilities — extend duration when the curve steepens, because long rates offer more compensation relative to short rates
+3. **Mortgage hedging demand**: The re-steepening curve has triggered refinancing activity as mortgage rates have declined from ~7.8% (2024 peak) toward ~6.4% (June 2026). The resulting negative convexity hedging by mortgage servicers (buying 10-year Treasury futures and entering receive-fixed swaps to offset prepayment risk) has been a significant flow driver
+
+**Worked Example: Liability-Driven Investing (LDI) Swap for a Pension Fund**
+
+A US corporate defined benefit pension fund has:
+- Liability duration: 15 years (long-dated pension obligations discounted at AA corporate rates)
+- Asset portfolio: 60% equities (duration ~0.5 years), 40% bonds (duration ~7 years)
+- Net portfolio duration: 0.60 × 0.5 + 0.40 × 7 = 3.1 years
+- Duration gap: 15 − 3.1 = 11.9 years (underfunded duration by 11.9 years)
+
+**To close the duration gap using receiver swaps:**
+Each 10-year IRS ($100M notional, receive-fixed 4.0%) has DV01 ≈ $82,000.
+Duration extension needed: 11.9 years × $500M portfolio = $5.95B in duration.
+Each 10-year IRS provides approximately 8.2 years of DV01-equivalent duration per $100M notional.
+
+Notional needed: $5.95B / (8.2/100) = $72.6M per year of duration, so for 11.9 years of duration: ~$864M notional in 10-year receiver swaps.
+
+The fund enters $864M in 10-year receiver swaps (pays SOFR, receives 4.0% fixed). Annual premium to receive-fixed swap = ($864M × 4.0% fixed) − ($864M × SOFR).
+
+If SOFR averages 3.5% over the period:
+Annual net receipt = $864M × (4.0% − 3.5%) = $4.32M per year
+Simultaneously: 1bp rate move (in fund's favor) generates: $82,000 × (864/100) = $708,480 in mark-to-market gain
+
+This LDI application now represents the single largest systematic demand driver in long-end US swap markets — pension funds managing duration gaps of $5–10B in aggregate constitute multi-trillion-dollar demand for long-dated receive-fixed positions.
+
+#### Carbon Derivatives: The Fastest-Growing Futures Market in 2026
+
+The EU Emissions Trading System (EU ETS) futures market has grown to become one of the most liquid commodity derivatives markets in Europe, with notional outstanding exceeding €500 billion and daily trading volumes of €3–5 billion. ETS futures (EUA contracts: 1 contract = 1,000 tonnes CO₂ equivalent) trade on ICE Futures Europe and have price-discovery characteristics that reveal important information about climate policy trajectories.
+
+**EUA Price Drivers (2026):**
+EU ETS allowance prices have traded in the €55–72/tonne range in 2026, influenced by:
+1. **Energy prices**: Higher gas prices push utilities toward coal (more CO₂-intensive), increasing demand for ETS allowances; conversely, lower gas prices reduce demand
+2. **Industrial output**: The 2026 European growth slowdown (1.0–1.5% GDP growth vs. 2.5% pre-pandemic trend) has reduced industrial production and therefore industrial ETS allowance demand — putting modest downward pressure on prices
+3. **Policy signal**: The European Commission's REPowerEU updates and the Carbon Border Adjustment Mechanism (CBAM) implementation create upward structural price support by signaling continued commitment to the €150/tonne long-run price target needed for industrial decarbonization
+4. **Market Stability Reserve (MSR)**: The automatic withdrawal mechanism removes allowances when the total stock exceeds 833 million — currently active, providing a price floor
+
+**Cross-market derivatives relationship: EUA futures and natural gas futures:**
+The EUA/gas correlation is one of the most important cross-commodity derivatives relationships in Europe:
+- When TTF (European natural gas) prices rise above ~€35/MWh (the "fuel-switching" threshold), gas-fired power generation becomes expensive relative to coal — coal usage increases — ETS demand increases — EUA prices rise
+- When TTF falls below €35/MWh, gas is economic and coal is displaced — ETS demand falls — EUA prices weaken
+
+In 2026, the Hormuz crisis has maintained elevated gas prices (TTF ~€48/MWh, up 25% from pre-crisis levels), keeping EUA demand elevated above the baseline. Energy traders hedge this cross-commodity exposure through "clean spark spread" swaps — a derivative that captures the spread between power prices, gas prices, and carbon costs simultaneously. Clean spark spread = Power price − (gas price/efficiency) − (EUA price × carbon intensity). These "clean spark spread" derivatives are among the most complex structured products in European energy markets, requiring simultaneous positions in power, gas, and carbon futures.
+
+**Voluntary Carbon Market (VCM) derivatives: nascent but growing:**
+ICE and CME both launched standardized voluntary carbon credit futures in 2022–2023, targeting the $2B+ voluntary market. These contracts face unique challenges not present in EUA futures: the heterogeneity of underlying credits (REDD+ deforestation avoidance vs. direct air capture vs. enhanced weathering) means a standardized contract requires defining a baseline credit quality, creating "basis risk" between the futures contract and the specific credits a corporation might hold or intend to retire. Despite this friction, open interest in voluntary carbon futures reached $1.2 billion by June 2026, driven by corporations seeking to hedge their 2030 net-zero commitments by locking in future credit prices before they potentially rise.
+
+#### The SOFR Options Market: Building Term Structure From Overnight Rates
+
+The SOFR transition created a derivatives market challenge beyond the IRS transition: the entire term structure of SOFR derivatives needed to be built from scratch using only the overnight rate. The SOFR futures curve at CME now provides the primary mechanism for building forward rate expectations, and SOFR options on these futures provide the volatility surface.
+
+**SOFR cap/floor market mechanics (2026):**
+SOFR interest rate caps — a series of caplets providing protection against SOFR rising above a strike level — are the primary rate hedge for corporate floating-rate borrowers. With $1.5T+ in US leveraged loans outstanding at SOFR + spreads, the demand for SOFR caps is structural.
+
+**Worked example: Corporate borrower buying a SOFR cap:**
+Company XYZ has a $200M term loan at SOFR + 400bps. With SOFR at 3.5%, current borrowing cost = 7.5%. The CFO wants protection against SOFR exceeding 4.5% (preventing all-in borrowing above 8.5%).
+
+3-year SOFR cap at 4.5% strike, $200M notional:
+- Cap structure: series of 12 quarterly caplets
+- Each caplet pays max(0, SOFR_quarterly − 4.5%) × $200M × 0.25
+- Total cap premium (market price, June 2026): approximately 150bps upfront = $3M
+
+If SOFR averages 5.5% for one year (100bps above cap strike):
+- Annual cap payout: (5.5% − 4.5%) × $200M = $2M
+- Cap has paid back 67% of premium in year one alone
+
+The cap premium (150bps) vs. the cost of the uncapped tail risk (SOFR could theoretically reach 7%+ in an inflationary shock scenario, costing $5M+ per year above the cap) makes this a straightforward insurance purchase for a heavily leveraged borrower. The 2022–2024 experience — where SOFR rose from 0% to 5.3% in 18 months, imposing enormous unhedged borrowing cost increases on leveraged companies — has significantly increased the institutional demand for SOFR cap protection, deepening the market's liquidity and improving pricing efficiency.
 
 ### Energy Derivatives in the Geopolitical Era: Brent Crude Options and the 2026 Hormuz Premium
 

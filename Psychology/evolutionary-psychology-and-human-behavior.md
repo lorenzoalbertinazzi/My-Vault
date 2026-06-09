@@ -3,7 +3,7 @@ title: Evolutionary Psychology and Human Behavior
 date: 2026-06-06
 tags: [psychology, evolutionary-psychology, human-behavior, natural-selection, sexual-selection, tribalism, kin-selection, reciprocal-altruism, evolutionary-biology]
 source: Buss (1994) "The Evolution of Desire"; Pinker (1997) "How the Mind Works"; Cosmides & Tooby (1992) "The Adapted Mind"; Hamilton (1964) inclusive fitness
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary
@@ -293,4 +293,26 @@ Dunbar's neocortex ratio hypothesis predicts that human social cognition can mai
 - Twitter: median follower count ~115 but active political users: thousands
 
 Research (Dunbar, 2017; Proceedings of the Royal Society B) on social network quality found that increasing friend count above ~150 on social media produced no increase in emotionally close relationships, but did produce measurable increases in anxiety (more people to monitor/manage) and decreased relationship quality per relationship. The evolutionary framework predicts: digital social networks expand quantity while degrading quality, optimizing for coalitional signaling (which requires large audiences) rather than genuine social bonding (which requires manageable relationship depth).
+
+## Evolutionary Mismatch in the Modern Environment: New Frontiers
+
+**The Mismatch Framework Applied to Chronic Disease:**
+
+Evolutionary mismatch — the condition of operating Stone Age hardware in a Space Age environment — has been well documented for diet and physical activity. A newer and more theoretically developed application concerns **mismatch with ancestral social threat detection patterns**. The evolved threat response is calibrated for episodic, physical dangers that resolved quickly (predator encounters, inter-tribal conflict). Modern social stressors are instead chronic, ambiguous, non-physical, and rarely fully resolve — creating a mismatch where the physiological threat cascade activates repeatedly without completing the evolutionary circuit of either fight/flight resolution or safety restoration.
+
+Bruce McEwen's allostatic load framework, updated by Slavich's Social Safety Theory (2020, Psychological Bulletin), argues that the brain's primary threat-monitoring function is specifically **social** exclusion and rejection — not physical danger. Across 30+ years of PsychoNeuroImmunology (PNI) research, social rejection and isolation activate identical inflammatory pathways as physical injury, via pro-inflammatory cytokine cascades (IL-6, TNF-α). The evolutionary logic: social exclusion in ancestral environments effectively was a death sentence (lone individuals had near-zero survival odds), so the brain evolved social exclusion monitoring as its highest-priority threat detection system.
+
+The mismatch consequence: digital platforms delivering continuous low-grade social evaluation signals (likes, follows, algorithmic visibility) trigger the social exclusion monitoring system at a frequency our ancestors never experienced. A 2025 study (Sherman et al., Psychological Science; N = 1,400 adolescents) found that adolescents receiving below-average social feedback on Instagram showed inflammatory biomarker elevations equivalent to those seen in moderate physical illness — a purely social mismatch response with real physiological costs.
+
+**Life History Theory and Contemporary Reproductive Strategy Shifts:**
+
+Life history theory (Kaplan & Gangestad, 2005) distinguishes "fast" strategies (early reproduction, many offspring, low parental investment) from "slow" strategies (delayed reproduction, few offspring, high parental investment), predicting that early environmental harshness calibrates individuals toward faster strategies. A major 2026 demographic puzzle — declining fertility rates even in high-resource environments — challenges this framework.
+
+Recent work by Hopcroft (2026, Evolution and Human Behavior) proposes a **resource competition recalibration**: in environments where resource competition is intense and child quality (education, social capital) rather than quantity determines reproductive fitness, slow strategies evolve further — potentially becoming "so slow as to produce zero offspring." Urban, high-income populations show below-replacement fertility not because of resource shortage but because the perceived investment required to produce a competitive offspring in modern environments is effectively infinite. The evolutionary mismatch here is that ancestral calibration mechanisms were not designed for environments where the "optimal" child quality standard is moving upward faster than parental investment capacity.
+
+**Kin Detection and Ethnic Conflict: The Fictive Kin Extension:**
+
+Hamilton's inclusive fitness predicts greater altruism toward genetic relatives. Cross-cultural research documents that this kin-preference can be extended to **fictive kin** — individuals classified as kin-equivalent through cultural marking even without genetic relationship. Military units, sports teams, and religious communities systematically exploit kin recognition mechanisms: shared rituals, uniforms, in-group language, and collective origin stories activate evolved kin-detection circuits.
+
+The dark application: ethnic and nationalist ideologies that construct biological kinship narratives (blood-and-soil rhetoric; racial categorization) are effectively hijacking kin-selection mechanisms to generate extraordinary in-group cooperation and out-group hostility. Experimental evidence (Bernhard et al., 2006, Nature; N = 900 Papua New Guineans across three tribal groups) found that in-group favoritism in resource allocation games was entirely explained by perceived ethnic identity, not actual genetic relatedness — demonstrating the malleability of evolved kin-preference circuits through cultural framing.
 

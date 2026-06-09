@@ -3,7 +3,7 @@ title: Mental Models — Thinking Frameworks
 date: 2026-05-26
 tags: [psychology, mental-models, decision-making, first-principles, inversion, second-order-thinking, Charlie-Munger, farnam-street, latticework, checklists, systems-thinking, critical-thinking, cognitive-frameworks, rationality, Bayesian-thinking]
 source: "Munger (1994) USC Business School Speech on Worldly Wisdom; Parrish (2019) The Great Mental Models Vol. 1; Bevelin (2007) Seeking Wisdom: From Darwin to Munger; Poor Charlie's Almanack (2005)"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 enriched: 2026-05-29
 ---
 
@@ -514,3 +514,30 @@ The underlying mental model principle: the adversary holds the most damaging ver
 **The If-Then Implementation Intention Sequence**
 
 Pre-mortem's debiasing value is maximized when combined with Gollwitzer's (1999) implementation intentions: "If [specific pre-mortem failure scenario] begins to occur, then I will [specific response]." The pre-mortem identifies failure modes; implementation intentions pre-commit a specific response to each identified mode before the stressful situation arises. Research on implementation intentions (meta-analysis: Gollwitzer & Sheeran 2006, k=94 studies) shows medium-large effect sizes (d=0.65) for goal completion when if-then plans are formed in advance — particularly powerful for high-stress, time-pressured situations where in-the-moment deliberative reasoning is most impaired by the exact cognitive narrowing and stress-induced biases that make pre-mortem preparation necessary.
+
+## The Latticework in Practice: Mental Model Selection and Calibration
+
+**The Selection Problem: When Models Mislead:**
+
+Munger's "latticework of mental models" metaphor implies that accumulating more models always improves thinking. The selection problem is under-discussed: models can be misapplied to domains where their core assumptions fail, producing confident but wrong analyses. Three systematic misapplication patterns:
+
+1. **Equilibrium thinking applied to far-from-equilibrium systems**: Nash equilibrium and supply-demand models assume systems converge to stable states. Complex adaptive systems (ecosystems, financial markets during crises, social movements) are persistently far from equilibrium — dominated by feedback loops, tipping points, and path dependencies that equilibrium models cannot capture. The 2008 financial crisis was partly a failure of risk models that assumed mean-reversion in a system experiencing regime change.
+2. **Individual-level models applied to group phenomena**: Attribution theory, confirmation bias, and most cognitive psychology models describe individual minds. When applied to organizational behavior, they systematically underestimate the role of institutional incentives, power dynamics, and social coordination effects that shape collective action in ways individual-level models cannot predict.
+3. **Linear causation models applied to feedback systems**: Most heuristics assume cause precedes effect in a one-directional chain. Systems thinking (Forrester, Senge) identifies that most consequential phenomena in organizations and economies involve circular causation where effects become causes — making simple root-cause analysis misleading.
+
+**Bayesian Updating as a Practice, Not Just a Principle:**
+
+Bayesian thinking is correctly included in most mental model frameworks, but its application is typically simplified to a directional principle ("update your beliefs when evidence arrives"). The practice of calibrated Bayesian updating requires two additional skills that are rarely discussed:
+
+- **Prior specification**: Before evaluating evidence, explicitly stating the prior probability of a claim in similar reference class cases. Kahneman's outside view — Flyvbjerg's reference class forecasting — is fundamentally about prior specification using base rates rather than inside-view case-specific reasoning. Without an explicit prior, "Bayesian updating" becomes post-hoc rationalization.
+- **Likelihood ratio estimation**: How much more likely would this evidence be if the hypothesis were true versus false? Most intuitive Bayesian updating overestimates the evidential value of confirmatory evidence and underestimates the power of disconfirming evidence. Tetlock's superforecasters are explicitly trained in likelihood ratio thinking — asking "what would I expect to observe if I were wrong?" — and this practice is one of the strongest predictors of forecasting accuracy across his 20-year Good Judgment Project dataset.
+
+**The Map-Territory Principle and Model Auditing:**
+
+All models are wrong; some are useful (Box, 1976). The underappreciated practice discipline is periodic **model auditing** — explicitly asking, for each mental model being applied in an important decision:
+
+- What are the core assumptions that must hold for this model to apply?
+- What empirical signals would indicate these assumptions are failing in this case?
+- What is the track record of this model in similar domains and decision types?
+
+Munger himself practiced this through his "fish where the fish are" principle — not just collecting models but maintaining awareness of which models have the highest predictive validity in which domains based on track record. This meta-cognitive practice — monitoring model performance and adjusting reliance accordingly — distinguishes genuine latticework thinking from a collection of sophisticated-sounding frameworks applied indiscriminately.

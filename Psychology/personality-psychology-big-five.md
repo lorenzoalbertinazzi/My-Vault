@@ -3,7 +3,7 @@ title: Personality Psychology and the Big Five (OCEAN) Model
 date: 2026-06-06
 tags: [psychology, personality, big-five, OCEAN, traits, openness, conscientiousness, extraversion, agreeableness, neuroticism, measurement, psychometrics, behavioral-prediction]
 source: "Costa & McCrae (1992), Revised NEO Personality Inventory; John & Srivastava (1999) in Handbook of Personality; Barrick & Mount (1991) meta-analysis; Funder, The Personality Puzzle (2019); Rentfrow et al. (2013) geographic personality mapping"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary
@@ -264,3 +264,19 @@ The evidence consistently shows differential malleability across traits. Conscie
 The neurological mechanism of volitional personality change runs through the same self-perception and behavioral activation pathways that underlie all habit formation. Aristotle's *Nicomachean Ethics* prescription — "we become just by doing just acts, temperate by doing temperate acts, brave by doing brave acts" — has received experimental confirmation from modern personality psychology. The sequence: (1) set behavioral implementation intentions for trait-consistent actions; (2) execute those actions repeatedly in varied contexts; (3) observe yourself executing those actions → self-perception update ("I am the kind of person who does X") → reduced activation threshold for X-type behaviors in future → trait score increase. Crucially, the change need not be consciously experienced as trait change — participants often report behavioral changes before noticing personality shifts, consistent with the bottom-up (behavior → identity) pathway rather than the top-down (belief → behavior) pathway that naive "positive thinking" approaches emphasize.
 
 For practitioners: the most efficient personality change intervention combines (1) identity reframing ("I am a disciplined person" rather than "I want to be more disciplined"), (2) implementation intentions (specific if-then behavioral plans), and (3) environmental design (restructuring the environment to make trait-consistent behaviors easier and trait-inconsistent behaviors harder — removing temptations for low-C, creating social accountability structures for targeted E). This three-element combination produces effects consistently larger than any single element alone.
+
+## The Dark Triad, Personality in Organizations, and Selection Science
+
+**The Dark Triad and Its Organizational Prevalence:**
+
+Paulhus and Williams (2002) introduced the "Dark Triad" framework — three personality traits that are distinct on standard Big Five measurement but overlap in their interpersonal harmfulness: **narcissism** (grandiosity, entitlement, admiration seeking), **Machiavellianism** (strategic manipulation, cynical worldview, emotional detachment), and **psychopathy** (callousness, impulsivity, antisocial behavior). Critically, none of these traits are captured by standard Big Five instruments — they occupy the space in personality that normal-range Big Five assessment systematically undersamples.
+
+The organizational relevance is substantial. Babiak and Hare's research on corporate psychopathy ("Snakes in Suits," 2006; updated 2019) estimated subclinical psychopathy prevalence in corporate management at approximately 3-4%, roughly 3-4 times the general population rate of ~1%. The selection mechanism: psychopathic traits — specifically superficial charm, ability to impression-manage under pressure, risk tolerance, and absence of anxiety during high-stakes evaluations — systematically advantage Dark Triad individuals in organizational selection processes calibrated around structured interviews, assessment centers, and reference-checking protocols that were not designed to detect dark trait presentation.
+
+The practical implication for hiring: standard competency-based interviews cannot distinguish Dark Triad presentations from genuine high-functioning competence. Forensic personality assessments (PPI-R, Triarchic Psychopathy Measure) exist but are rarely deployed in corporate selection. More tractable signals: multi-rater 360° feedback from previous subordinates (dark triad managers show dramatically higher subordinate-rated versus peer- and superior-rated performance), and reference checks specifically seeking information about how the candidate behaved under pressure toward lower-status others.
+
+**The HEXACO Model: The Sixth Dimension Dark Triad Misses:**
+
+The Big Five's limitation in capturing dark personality traits drove development of the HEXACO model (Ashton & Lee, 2007), which adds a sixth orthogonal dimension — **Honesty-Humility (H-H)** — capturing individual differences in sincerity, fairness, greed avoidance, and modesty. Low H-H is the psychometric bridge across all three Dark Triad constructs: narcissists, Machiavellians, and psychopaths all score low on H-H through distinct behavioral pathways (admiration seeking, strategic deception, and callousness respectively).
+
+HEXACO H-H predicts several outcomes that Big Five cannot: white-collar crime and ethical violations in organizational contexts (Zettler & Hilbig, 2010, European Journal of Personality; N=253, β = −0.40), counterproductive work behavior (Hershcovis et al., 2007, meta-analysis), and negotiation deception (Lee et al., 2013). For organizational selection in roles with high integrity requirements (finance, compliance, leadership), HEXACO assessment with H-H measurement provides incremental predictive validity above Big Five that cannot be obtained by any combination of standard Big Five facets — because H-H represents a dimension not present in Big Five's factor structure.

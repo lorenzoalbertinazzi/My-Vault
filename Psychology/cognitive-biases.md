@@ -3,7 +3,7 @@ title: Cognitive Biases — A Practical Map
 date: 2026-05-26
 tags: [psychology, cognitive-biases, heuristics, decision-making, kahneman, tversky, anchoring, availability-heuristic, representativeness, confirmation-bias, hindsight-bias, dunning-kruger, System-1, System-2, behavioral-economics]
 source: "Kahneman (2011) Thinking, Fast and Slow; Tversky & Kahneman (1974) Judgment Under Uncertainty: Heuristics and Biases, Science; Thaler (1980) Toward a Positive Theory of Consumer Choice, JEconBehav; Ariely (2008) Predictably Irrational"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 enriched: 2026-05-29
 ---
 
@@ -498,4 +498,28 @@ Users of large language models show a novel availability bias variant: because L
 - LLM content recalled with only 8% higher actual accuracy
 
 The gap — high confidence without proportional accuracy — reflects the availability heuristic applied to LLM-characteristic verbal fluency as a proxy for reliability. This "epistemic fluency bias" in LLM interaction represents one of the most important cognitive vulnerability categories for the AI era.
+
+### The Bias Blindspot and Meta-Cognitive Debiasing: What Actually Works
+
+The cognitive bias literature has documented dozens of systematic errors in judgment; the debiasing literature has been considerably less successful. A 2026 synthesis of debiasing research reveals both the limits of individual-level interventions and the structural interventions that reliably improve collective decision quality.
+
+**The Bias Blindspot: Why Self-Knowledge Doesn't Help**
+
+Pronin, Lin, and Ross (2002, *Personality and Social Psychology Bulletin*) identified the "bias blindspot" — the systematic tendency to recognize biases in others while being unable to detect them in one's own thinking. The bias blindspot is itself a bias, and importantly, it is uncorrelated with general intelligence and actually *increases* with cognitive sophistication in some domains — more analytically capable people are better at generating plausible rationalizations for their biased conclusions, making their biases harder to detect and more confidently held. In a 2022 replication and extension (Scopelliti et al., *Psychological Science*, N=661), participants who scored higher on Need for Cognition (a measure of analytical thinking motivation) showed *larger* bias blindspots — they were more convinced their judgments were bias-free, not less.
+
+This has a practical implication that runs counter to most bias awareness training: telling people about biases and asking them to watch for them in their own thinking rarely works. The bias operates at a level of processing that introspective access cannot reliably detect. What works instead is structural.
+
+**What Debiasing Strategies Actually Work:**
+
+The meta-analytic evidence (Larrick, 2004, *Handbook of Judgment and Decision Making*; Morewedge et al. 2015 large-scale field experiment with N=1,580) identifies three categories of consistently effective debiasing interventions, ranked by effect size:
+
+*Structural/Environmental (most effective, d=0.4–0.8):* Changing the decision environment rather than the person's cognition. Nudge architectures that alter defaults, add friction to System 1 responses, and make relevant information salient before irrelevant information. Pre-mortem analysis (imagining the decision has already failed and asking what went wrong) produces d=0.55 for reducing overconfidence specifically by activating alternative scenario search. Adversarial collaboration (having a committed opponent review your reasoning) is uniquely effective because it cannot be neutralized by the reasoner's own blind spots.
+
+*Process interventions (moderate, d=0.25–0.45):* Consider-the-opposite instructions, "what would have to be true for the other side to be correct" prompts, and consider-alternative-explanations protocols. The consider-alternative mechanism works by expanding the hypothesis space before commitment — requiring search for contradicting evidence before a conclusion is sealed. These work best when applied *before* initial judgment is formed (when they redirect information search) rather than after (when confirmation bias has already operated and the evidence set is already biased).
+
+*Education and awareness (smallest, d=0.05–0.25):* General bias education has consistently small and fragile effects. Morewedge et al.'s (2015) large-scale RCT compared a brief bias awareness video, interactive training game, and no training: only the interactive training (which required participants to practice catching biases in their own reasoning on calibrated problems) produced meaningful improvements (d=0.31 for anchoring, d=0.29 for representativeness) that persisted at 3-month follow-up. The passive video produced near-zero effects. The active requirement of practiced application — rather than conceptual understanding — is the operative mechanism.
+
+**The Night-Waking Research and Cognitive Bias:**
+
+A 2026 Penn State study found that sleep fragmentation (frequent night waking) impaired next-day cognitive performance *regardless of total sleep duration* — participants who slept 8 hours with multiple awakenings performed equivalently on visual working memory and processing speed tasks to participants who slept only 6 continuous hours. Sleep quality, not just quantity, determines the prefrontal resources available for System 2 deliberation. The cognitive bias implication: important decisions should be made after consolidated sleep, not after fragmented sleep — and many high-stakes decision contexts (medical night shifts, investor decisions after overnight flight, executive decisions after travel across time zones) systematically disadvantage decision quality through sleep fragmentation effects on the same prefrontal circuits that mediate bias correction.
 

@@ -3,7 +3,7 @@ title: Macroeconomics 101
 date: 2026-05-26
 tags: [finance, macroeconomics, GDP, inflation, unemployment, business-cycle, monetary-policy, fiscal-policy, central-banking, interest-rates, keynesian, monetarism, aggregate-demand, multiplier-effect, Taylor-rule, Phillips-curve, IS-LM, DSGE, Minsky-moment, secular-stagnation, MMT, debt-supercycle]
 source: "Mankiw (2020) Principles of Macroeconomics; Blanchard (2017) Macroeconomics; Keynes (1936) General Theory of Employment, Interest and Money; Friedman (1968) The Role of Monetary Policy, AER; Dalio (2018) A Template for Understanding Big Debt Crises; Minsky (1986) Stabilizing an Unstable Economy"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary
@@ -610,6 +610,63 @@ Modern central banking is fundamentally a psychology management exercise: if peo
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Supply chain fragmentation reshaping GDP components; nearshoring as structural capex driver
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — Current macro environment; 2026 slowdown dynamics
 - [[World Events/2026-05-27-us-iran-conflict-global-energy-crisis]] — Energy price shock as exogenous macro event; oil-importing EM crisis transmission
+
+### 2026 Macro Crossroads: AI Productivity Paradox, Nearshoring Investment Boom, and the r* Debate
+
+The intellectual center of 2026 macroeconomics is an unresolved empirical debate with enormous investment implications: has the "natural rate of interest" (r*) permanently shifted higher from its 2010s secular stagnation lows? The answer determines whether the 3.5–3.75% Federal Funds Rate is restrictive (slowing growth), neutral (neither stimulating nor restraining), or accommodative (still stimulating). Every major asset class valuation hinges on this question.
+
+#### The r* Debate: Where Does it Stand in 2026?
+
+The two camps:
+
+**Camp A: r* has risen structurally (Holston-Laubach-Williams 2025 update)**
+The New York Fed's Laubach-Williams r* model — the most closely watched estimate — shows the real neutral rate rising from ~0.5% (2015) to ~1.2–1.5% in 2025. The drivers cited:
+1. Defense spending boom: NATO members collectively adding $500B+ annually to defense budgets by 2026; this government investment directly increases demand for capital without equivalent increase in productive supply
+2. Energy transition capex: $3.4T annually in energy investment (IEA 2026), much of it financed through capital markets; creates structural demand for capital
+3. AI infrastructure investment: Data centers, semiconductor fabs, power infrastructure — the compute buildout requires $400–600B in annual capex at current trajectory
+4. Nearshoring: Reshoring semiconductor (CHIPS Act fabs), pharmaceutical, and critical minerals production involves capital investment at cost-inefficient but strategically motivated locations — permanently higher I in the GDP identity
+
+If r* = 1.5%, then the FFTR at 3.5% implies a real policy rate of (3.5% − 3.1% CPI) = 0.4% real — barely restrictive, explaining why the economy has remained resilient despite 525bps of tightening.
+
+**Camp B: Secular stagnation is returning (Summer-Furman 2026)**
+Larry Summers and Jason Furman co-authored a March 2026 Brookings paper arguing that the r* elevation is temporary:
+- Defense spending creates no productive capital (weapons depreciate to zero); it crowds out private investment without expanding the economy's productive frontier
+- Energy transition capex largely replaces existing energy infrastructure at higher capital cost; net productivity gain is uncertain
+- AI productivity gains are real but concentrated; the macro-level productivity impact will show in GDP data only in 2027–2030
+- Demographics remain structurally disinflationary: US workforce growth is near-zero; Japan/Europe already in labor force decline
+
+Their conclusion: r* returns to 0.5–0.8% once the current investment cycle normalizes. Implication: at FFTR 3.5%, the Fed is maintaining a real rate of 2.7–3.0% above neutral — substantially restrictive, and recession risk is underappreciated in consensus forecasts.
+
+**Current market pricing:** The 2-year TIPS yield (~1.35% real) and Fed forwards imply r* is approximately 1.0–1.2% — splitting the difference between the two camps.
+
+#### The AI Productivity Paradox: Solow's Revenge?
+
+Robert Solow's famous 1987 quip — "You can see the computer age everywhere except in the productivity statistics" — describes a pattern now repeating with AI. Despite massive AI investment since 2023, US labor productivity growth has been 1.8–2.2% annually through Q1 2026 — elevated relative to the 2010–2019 average (1.4%) but not dramatically so.
+
+Economists are debating three interpretations:
+
+**1. Long diffusion lag (optimistic):** Transformative general-purpose technologies (steam engine, electricity, internet) historically required 20–30 years to show in productivity statistics because: (a) complementary infrastructure must be built; (b) organizational practices must adapt; (c) incumbent human capital must retrain or turn over. On this view, AI productivity gains are 2030+ phenomenon.
+
+**2. Capability-deployment mismatch (cautious):** Current AI frontier models (GPT-5, Claude, Gemini) are impressive in narrow tasks but not yet reliably deployed in complex workflow integration. The $600B in AI capex (2025) has created infrastructure for future productivity but not yet generated the organizational transformation needed to realize it.
+
+**3. Measurement failure (methodological):** GDP accounting systematically undercounts digital and AI value creation because: (a) consumer surplus from free AI services ($0 GDP contribution); (b) quality improvements in AI-assisted services not captured by hedonics; (c) intermediate business AI use reducing costs but not showing in output statistics. Erik Brynjolfsson (Stanford) estimates true AI productivity contribution may be 2–3× measured GDP impact.
+
+**Investment implications:** If Interpretation 1 is correct, AI infrastructure (Nvidia, TSMC, hyperscaler data centers) is the greatest multi-decade capex cycle since electrification — undervalued even at current valuations. If Interpretation 3 is correct, current AI valuations already price in productivity gains that GDP statistics will never fully capture — fair value, not bubble. If Interpretation 2 is correct, current AI hardware valuations may be ahead of the cycle by 2–3 years.
+
+#### Balance of Payments Tensions: Dollar Cycle and EM Stress
+
+The 2026 global economy faces a structural dollar dynamic that creates EM stress even as DXY weakens. The mechanism:
+
+**Phase 1 (2022–2024): Dollar Strengthening Cycle**
+Fed hikes attracted capital flows into USD assets; DXY rose from 90 to 114; EM countries with dollar debt faced simultaneous currency depreciation + rising local interest rates + capital outflows = triple squeeze. Sri Lanka, Ghana, Pakistan, and Zambia entered IMF programs.
+
+**Phase 2 (2025–2026): Dollar Weakening Cycle**
+Fed cuts from 5.5% to 3.5% have weakened USD; DXY has fallen to ~100–102; EUR/USD at 1.13; EM currencies broadly appreciating. In theory, this should relieve EM stress. In practice, three complications:
+1. **Commodity exporters vs. importers bifurcation:** Oil-importing EMs (India, Turkey, South Korea) face Hormuz-driven energy cost shock even as their currencies appreciate — current account deterioration offset by currency benefit
+2. **Tariff disruption to export-led EMs:** Vietnam, Bangladesh, Mexico face demand disruption from US tariff realignment, weakening export-led growth models
+3. **Capital flows to "safe" EMs only:** Not all EMs benefit equally from dollar weakness; capital flows to liquid, reform-oriented EMs (India, Brazil, Mexico) while bypassing frontier markets
+
+**The BOP identity's 2026 implication:** If the US current account deficit continues at −3.5% of GDP (~$1T annually), the rest of the world must collectively hold $1T/year in additional US financial assets. With China reducing Treasury purchases and shifting to gold/bilateral swaps (OMFIF: China's reserve allocation to gold rose to 8% in 2025), the question is: who buys the marginal US Treasury? GCC SWFs (petrodollar recycling at elevated oil prices) and European insurance companies (seeking yield) are the proximate answer — but this reliance creates a fragility if oil prices normalize or European allocators shift.
 
 
 ### Saturday Cross-Disciplinary Synthesis: Macroeconomics as Integrative Framework for All Vault Knowledge

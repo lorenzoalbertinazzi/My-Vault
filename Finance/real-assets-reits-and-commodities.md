@@ -3,7 +3,7 @@ title: Real Assets — REITs, Commodities, and Inflation Hedges
 date: 2026-05-30
 tags: [finance, real-assets, REITs, commodities, inflation-hedge, portfolio, gold, oil, real-estate]
 source: "Gorton & Rouwenhorst (2006) Facts and Fantasies about Commodity Futures, Journal of Finance; Erb & Harvey (2006) The Strategic and Tactical Value of Commodity Futures, Financial Analysts Journal; Geltner et al. (2014) Commercial Real Estate Analysis and Investments; NAREIT Annual Statistical Digest (2025); Yale Endowment Annual Report (2023); Dalio (2018) A Template for Understanding Big Debt Crises; S&P GSCI Index Methodology (2024); Ibbotson & Siegel (1984) Real Estate Returns: A Comparison with Other Investments, Real Estate Economics"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary

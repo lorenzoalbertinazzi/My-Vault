@@ -3,7 +3,7 @@ title: Moral Psychology and Ethical Decision-Making
 date: 2026-06-06
 tags: [psychology, ethics, moral-psychology, moral-foundations, trolley-problem, moral-intuition, dual-process, moral-emotions, empathy, fairness, authority, harm, care, sanctity, loyalty, moral-disengagement, moral-licensing, ethical-leadership, neuroscience-of-morality]
 source: "Haidt (2012) The Righteous Mind; Haidt & Joseph (2004) Intuitive Ethics, Daedalus; Greene et al. (2001) An fMRI Investigation of Emotional Engagement in Moral Judgment, Science; Milgram (1963) Behavioral Study of Obedience, Journal of Abnormal and Social Psychology; Bandura (1990) Selective Activation and Disengagement of Moral Competence, Journal of Social Issues; Kohlberg (1969) Stage and Sequence, Handbook of Socialization Theory and Research"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary
@@ -127,3 +127,22 @@ While the original moral injury research was rooted in military experience, the 
 Healthcare worker moral injury surged during the COVID-19 pandemic (Mantri et al. 2021): emergency medicine physicians forced to allocate ventilators, deny care to salvageable patients, or watch preventable deaths due to institutional failures experienced classic moral injury presentations — guilt, self-condemnation, occupational disengagement, and spiritual crisis — that standard "resilience training" interventions failed to address because they targeted stress management rather than moral repair.
 
 The financial crisis analog: Hamber (2016) analyzed financial professionals during and after the 2008 crisis, finding that employees who executed transactions they believed harmful to clients — following institutional directives — showed moral injury symptom profiles distinct from general occupational stress. The *Lady Macbeth effect* (Zhong & Liljenquist 2006, *Science*, N=27) documented the somatic response: participants who recalled an ethical violation subsequently chose cleaning products 76% of the time vs. 41% in control — the compulsive desire to remove "moral stain" manifesting through physical contamination-cleansing responses, operationalizing the colloquial "washing one's hands of it" metaphor in experimental conditions.
+
+## Moral Disengagement in Algorithmic and AI-Mediated Contexts
+
+**The Diffusion of Responsibility in Human-AI Decision Chains:**
+
+Bandura's moral disengagement mechanisms documented in conventional organizational contexts operate with amplified force in AI-mediated decision environments. The core disengagement mechanism — diffusion of responsibility (distributing moral accountability across agents so no single agent feels fully responsible) — is structurally embedded in algorithmic decision chains. When an algorithm denies a loan, flags a criminal risk score, or recommends a medical treatment, no individual human author of that decision exists to bear moral accountability: the data scientists designed the model but did not make the specific decision; the executives deployed the model but did not specify the algorithm; the individual users executed the output but did not construct it.
+
+Awad et al.'s Moral Machine experiment (Nature, 2018; N = 2.3 million participants across 233 countries) documented global variation in moral preferences for autonomous vehicle decisions — but the more significant finding was that humans systematically assigned less moral responsibility to AI decision-makers than to human decision-makers making identical choices. The moral responsibility attribution asymmetry mirrors findings in organizational contexts: people hold human agents accountable for outcomes that they treat as morally neutral when the same outcome is attributed to a system, process, or algorithm.
+
+The practical implication for AI ethics governance: organizational responsibility for AI harms requires actively reassigning distributed responsibility to specific identified accountable individuals — the "algorithm owner" model — rather than treating AI outputs as organizational-level decisions. Without explicit accountability attribution, the natural social psychology of algorithmic systems produces diffused responsibility that Bandura's model predicts will fail to engage individual moral self-regulation.
+
+**Moral Foundations Theory Applied to Political Polarization:**
+
+Haidt's Moral Foundations Theory has gained its most consequential empirical application in explaining political polarization. Graham, Haidt, and Nosek (2009, Journal of Personality and Social Psychology; N = 23,000) demonstrated that liberals and conservatives do not merely disagree about policy but reason from fundamentally different moral foundations:
+
+- Liberals weight primarily Care/Harm and Fairness/Reciprocity; they apply Authority, Loyalty, and Purity foundations minimally
+- Conservatives apply all six foundations more equally — Authority, Loyalty, and Sanctity/Purity are not secondary concerns but constitute genuine moral imperatives of equivalent weight to Care and Fairness
+
+The political implication: cross-ideological persuasion attempts that rely exclusively on Care and Fairness arguments (the liberal moral vocabulary) fail to activate the conservative moral motivational system. Research by Feinberg and Willer (2015, Personality and Social Psychology Bulletin) demonstrated that reframing liberal policy positions in Loyalty, Authority, and Purity terms — presenting environmentalism as "protecting the purity of our sacred natural heritage" — significantly increased conservative policy support compared to standard Care/Harm framing. Moral foundations translation (reframing policies in the moral vocabulary of the audience) is empirically more effective than simply making stronger arguments within one's own moral frame.

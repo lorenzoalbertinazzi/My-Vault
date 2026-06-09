@@ -3,7 +3,7 @@ title: Memory Systems and Learning Science
 date: 2026-05-30
 tags: [psychology, memory, learning-science, working-memory, long-term-memory, spaced-repetition, Ebbinghaus, forgetting-curve, encoding, retrieval, neuroplasticity, hippocampus, episodic-memory, semantic-memory, cognitive-psychology]
 source: "Ebbinghaus (1885) Über das Gedächtnis; Baddeley & Hitch (1974) Working Memory; Tulving (1983) Elements of Episodic Memory; Wozniak (1990) Optimization of Learning; Roediger & Karpicke (2006) Test-Enhanced Learning, Psych Sci"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary
@@ -429,4 +429,26 @@ Brunet et al. (2018; 2024 follow-up; N = 149, RCT, McGill University) demonstrat
 - At 5-year follow-up: Treatment gains maintained with no relapse
 
 The reconsolidation-based treatment requires only brief memory reactivation + drug administration — potentially making effective PTSD treatment far more scalable than current cognitive-behavioral protocols requiring 12–24 sessions.
+
+## Sleep, Emotion, and the Memory Consolidation Hierarchy
+
+**Sleep's Selective Consolidation Function:**
+
+Research over the past decade has established that sleep is not a passive period of memory storage but an active selection and editing process. Walker and Stickgold's model of sleep-dependent memory consolidation identifies three distinct functions operating in different sleep stages:
+
+- **SWS (slow-wave sleep)**: Hippocampal sharp-wave ripples replay daytime experiences during SWS, transferring episodic memories to cortical storage. The transfer process is selective — memories tagged with emotional salience or motivational relevance during encoding are preferentially replayed and consolidated. Experiences that evoked strong dopamine or noradrenaline responses during waking are more likely to survive the SWS curation.
+- **REM sleep**: The theta oscillations of REM sleep serve a different function — "stripping" the emotional charge from consolidated memories (Walker's "overnight therapy" hypothesis) while preserving the factual content. PTSD, characterized by hyperactivation of noradrenaline during sleep, disrupts REM sleep architecture and may prevent the emotional desensitization of traumatic memories that normally occurs during healthy REM.
+- **Sleep spindles** (a feature of N2 sleep): Associated with declarative memory consolidation — particularly academic and procedural knowledge. Individuals with higher sleep spindle density show faster vocabulary acquisition and better mathematical problem-solving transfer.
+
+**The 2026 Sleep Fragmentation Finding and Memory:**
+
+The Penn State longitudinal study (January 2026, cited in sleep science) provides a memory-relevant finding extending beyond sleep duration. Night waking events — even when total sleep time is preserved — selectively degraded performance on episodic memory consolidation tasks (story recall and spatial navigation) more severely than on semantic memory tasks (fact retrieval). The implication: sleep continuity, not just duration, is required for hippocampal memory consolidation specifically; semantic memory appears more robust to fragmented sleep architecture.
+
+For knowledge workers relying on overnight consolidation of complex learned material, this finding argues for sleep quality optimization — minimizing fragmentation through consistent sleep timing, reduced alcohol (which suppresses REM), and temperature regulation — as much as for adequate duration.
+
+**The Testing Effect's Neural Mechanism: Retrieval-Induced Reconsolidation:**
+
+Roediger and Karpicke's retrieval practice effect has recently been given a cleaner neural account. Anderson et al. (2016, Nature Neuroscience) established that the act of retrieval (not passive re-reading) induces a brief period of memory lability — effectively re-opening the reconsolidation window. During this window, the retrieved memory can be strengthened through the act of successful retrieval, or updated with new contextual information. 
+
+This mechanism explains why retrieval practice produces stronger memories than restudying: retrieval forces reconsolidation, which is a memory-strengthening event at the molecular level (new protein synthesis, AMPA receptor upregulation at synapses). Re-reading, by contrast, activates recognition without triggering reconsolidation — producing familiarity without the molecular memory trace strengthening. The practical implication is that self-testing (flashcards, practice questions, free recall writing) is categorically distinct from passive review — not merely a motivational trick but a physiologically different memory process with superior consolidation outcomes.
 

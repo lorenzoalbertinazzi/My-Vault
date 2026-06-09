@@ -3,7 +3,7 @@ title: The Psychology of Leadership — Theory, Neuroscience, and Practice
 date: 2026-06-06
 tags: [psychology, leadership, organizational-psychology, management, power, motivation, transformational-leadership, neuroscience]
 source: research synthesis — Bass & Avolio, Burns 1978, French & Raven 1959, Hersey & Blanchard, academic literature
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary
@@ -298,3 +298,21 @@ Edmondson (2003, *Journal of Organizational Behavior*) identified the specific l
 Edmondson distinguishes between contexts requiring "execution" (routine, high-reliability tasks where deviation is dangerous) and "learning" (novel, uncertain tasks where experimentation is required). Psychological safety is more critical for the latter — during highly routine execution, structure and discipline may temporarily outperform psychological safety. The challenge for leaders is recognizing which context the team is in at any moment and adjusting accordingly.
 
 Cross-cultural application poses significant challenges: psychological safety as operationalized in US studies reflects relatively low power-distance cultural assumptions. In high power-distance cultures (Japan, South Korea, India, China), the expectation that team members should openly challenge leaders or admit mistakes in group settings violates cultural hierarchy norms — the same behaviors that signal psychological safety in US contexts signal disrespect in high power-distance ones. Edmondson and Lei (2014) found that in Chinese manufacturing teams, leader humility (not psychological safety framing per se) was the relevant predictor of learning behavior — the construct required cultural reframing to apply.
+
+## Leader Development, Character, and the New Organizational Context
+
+**The Power Corruption Thesis: What Happens to Leaders After Elevation:**
+
+Dacher Keltner's "power paradox" research (Berkeley, 2016; updated 2023) documents a systematic behavioral shift in individuals after acquiring positional power: the traits that made them effective at gaining power — empathy, social attentiveness, collaborative communication — are precisely the traits that power systematically attenuates. Laboratory studies using priming, field studies using promotion tracking, and neuroimaging consistently show that high-power individuals show reduced activation in mirror neuron circuits, lower accuracy on theory-of-mind tasks, and less perspective-taking in negotiation.
+
+The mechanism operates through reduced dependency: low-power individuals must monitor the environment carefully to navigate successfully (they are dependent on others); high-power individuals can afford to ignore others because their position provides resources and security without attentiveness. This creates a developmental trap: the leader development system selects for empathy and collaboration, elevates those who display them, and then places them in conditions that systematically erode the very qualities that drove their selection.
+
+Practical mitigation: organizations with the most durable high-performance leadership cultures — Bridgewater Associates' radical transparency, Amazon's "disagree and commit," Google's structured disagreeableness norms — have all built institutional structures that *require* leaders to continue dependent-minded attentiveness regardless of positional power. Forced information-seeking behaviors, mandatory 360° feedback from subordinates with actionable consequence, and explicit norms against "executive privilege" information processing all counteract the power-corruption dynamic.
+
+**Distributed and Shared Leadership: The Post-Hierarchical Evidence Base:**
+
+The dominant leadership psychology paradigm through the early 2000s was leader-centric: identifying traits, behaviors, and styles of the individual leader as the primary explanatory variable for team and organizational outcomes. An accumulating evidence base now challenges this frame. Pearce and Conger (2003) introduced **shared leadership** as a qualitatively distinct construct — leadership as a dynamic, rotating influence process distributed across team members rather than concentrated in a designated individual.
+
+Meta-analysis of shared leadership's performance outcomes (D'Innocenzo et al., 2016, *Journal of Applied Psychology*; k=42 studies, N = 3,198 teams) found overall ρ = 0.35 (corrected for sampling and measurement error) between shared leadership and team performance — comparable to the effect size for designated leader behavior. The moderators reveal when shared leadership outperforms hierarchical leadership: high task interdependence (team members must closely coordinate), high knowledge heterogeneity (different members hold different expertise needed for the task), and high decision time pressure (multiple simultaneous decisions preclude serial routing through a single leader) all amplify the shared leadership advantage.
+
+The 2026 organizational context — distributed teams, AI-augmented decision-making, rapid environmental change — amplifies all three moderating conditions. The implication is not that designated leadership is obsolete but that the ratio of directed to shared leadership should be dynamically calibrated to context, with most high-performance modern knowledge teams operating in a hybrid mode where designated leaders set frame and direction while execution decisions are distributed across the team in real time.

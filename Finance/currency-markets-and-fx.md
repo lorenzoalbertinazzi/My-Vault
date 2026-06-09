@@ -3,7 +3,7 @@ title: Currency Markets and Foreign Exchange (FX)
 date: 2026-05-28
 tags: [finance, forex, currency, macroeconomics, trading, carry-trade, purchasing-power-parity, interest-rate-parity, exchange-rate, reserve-currency, dollar-hegemony, de-dollarization, currency-crisis, Dornbusch-model, Mundell-Fleming, Triffin-dilemma]
 source: "Krugman & Obstfeld (2018) International Economics: Theory and Policy; BIS Triennial Central Bank Survey (2022); Burnside, Eichenbaum & Rebelo (2011) Carry Trade and Momentum in Currency Markets, AER; Dornbusch (1976) Expectations and Exchange Rate Dynamics, JPE; Mundell (1963) Capital Mobility and Stabilization Policy Under Fixed and Flexible Exchange Rates"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary
@@ -470,6 +470,78 @@ The behavioral finance of FX incorporates evolutionary psychology (see [[Psychol
 - [[Tech & AI/transformer-architecture]] — LLM-based central bank communication parsing for FX signal generation  
 - [[Tech & AI/prompt-engineering]] — Prompt design for automated FX policy signal extraction  
 - [[Geopolitics/2026-06-06-iran-gulf-escalation-kuwait-bahrain-june-2026]] — Gulf crisis FX implications; dollar safe-haven demand spike
+
+---
+
+### 2026 FX Landscape: Dollar Weakness, Yen Normalization, and the Competing Currency Bloc Hypothesis
+
+#### Dollar Structural Trend: Post-Peak USD World
+
+The consensus view among major FX research houses in June 2026 is that the dollar has entered a structural weakening phase following its 2022–2024 peak. MUFG Research, ABN AMRO, ING THINK, and J.P. Morgan Global Research all forecast further DXY weakness of 5–10% through end-2026 and into 2027, driven by:
+
+1. **Federal funds rate trajectory:** The FOMC's April 29, 2026 meeting maintained the target range at 3.5–3.75% — already 175bps below the 2023 peak of 5.25–5.50%. Market expectations embed 2–3 additional 25bp cuts in H2 2026 as core PCE trends toward 2% by early 2027. Rate differentials — the dominant FX driver — are compressing as the ECB and BOJ normalize while the Fed cuts.
+
+2. **PPP overvaluation:** The dollar remains overvalued vs. virtually all major pairs on purchasing power parity metrics. The Euro is estimated 8–12% undervalued vs. USD PPP; the yen 20–25% undervalued (though this reflects structural factors, not pure cyclical mispricing). Mean reversion toward PPP is a consistent long-run force operating against the dollar.
+
+3. **Fiscal sustainability concerns:** The US fiscal deficit running at ~6.5% of GDP in 2026 — elevated by defense spending increases, IRA clean energy subsidies, and interest expense on the $35T debt stock — creates a supply of dollar-denominated assets that requires corresponding demand. The US "twin deficit" (fiscal + current account) historically precedes dollar weakening cycles.
+
+4. **Reserve diversification:** The OMFIF/Global Public Investor 2025 Survey documented a notable shift: central bank reserve managers are increasing euro allocations and gold at the expense of dollar holdings. While dollar reserves remain dominant (~58% of allocated reserves globally), the marginal direction of change is toward diversification. The Russia sanctions episode permanently raised the tail risk of holding dollar reserves for non-allied nations.
+
+**EUR/USD Forecast and Rationale:**
+Major banks project EUR/USD reaching 1.22–1.26 by end-2026, from current ~1.13 levels. The euro's recovery is supported by: ECB rate normalization (expected additional hike in June 2026 before cutting), European fiscal consolidation after the post-Ukraine defense spending surge, and the structural shift away from dollar-only reserve management. Historically, EUR/USD has shown strong cyclical correlation with the Fed-ECB policy rate differential: when the spread narrows (Fed cutting faster than ECB), EUR/USD appreciates. The current differential favors this outcome.
+
+**Structural risk to the weak-dollar thesis:** The Trump administration's dollar policy is actively contested. Strong-dollar advocates within Treasury argue for maintaining dollar strength to restrain import inflation (the tariff-dollar tension — tariffs are inflationary, dollar strength is disinflationary, so they partially offset); weak-dollar proponents argue for a weaker dollar to boost US export competitiveness. This internal tension creates policy uncertainty that adds volatility above and beyond fundamental determinants.
+
+#### Yen Normalization: Historical Significance and Market Mechanics
+
+The Bank of Japan's policy normalization — raising the policy rate from -0.1% to 0.75% through a sequence of steps (January 2024, July 2024, January 2025, June 2026) — represents the unwinding of the most extreme monetary policy experiment in modern central banking history. Japan maintained near-zero or negative policy rates for nearly **30 years** (1995–2024), during which the yen carry trade grew to an estimated $4–6 trillion in notional positions globally.
+
+**USD/JPY trajectories:**
+- USD/JPY peak (2024): ~160 (historically extreme yen weakness)
+- USD/JPY June 2026: ~148 (partial normalization)
+- Consensus end-2026 forecast: ~145–150 (MUFG, HSBC, Goldman Sachs)
+- BOJ "neutral rate" estimate: ~1.0–1.5% (Ueda, June 2025 speech)
+- Implied terminal USD/JPY: ~135–140 if BOJ reaches neutral (5–7% additional yen appreciation)
+
+The **remaining yen carry trade:** BIS estimates suggest that $2.5–3.5 trillion in yen-funded positions remain outstanding as of June 2026, down from ~$4–6T at the 2024 peak. The August 2024 partial unwind (BOJ's unexpected 25bp hike) caused the Nikkei's largest single-day fall since 1987 (-12.4%) and temporary VIX spikes to 65. The remaining overhang represents ongoing systemic risk: if BOJ accelerates its normalization path (due to higher domestic inflation from Hormuz-driven energy costs), a second, larger unwind could produce a more severe cross-market disruption.
+
+**Japanese institutional repatriation flow:**
+Japanese life insurers and pension funds hold approximately $3.5 trillion in foreign (primarily US) bond and equity assets, much of it currency-hedged. As hedging costs have become prohibitive (USD/JPY hedging costs peaked above 5% annually, essentially eliminating the yield advantage of US Treasuries for Japanese investors), these institutions have been gradually repatriating — selling USD assets and buying yen assets. This structural flow is the institutional manifestation of the carry trade unwind and contributes to the long-run appreciation pressure on the yen independent of speculative carry positioning.
+
+#### Currency Hierarchies in the 2026 Multi-Conflict Environment
+
+The 2026 multi-conflict environment — US-Iran Hormuz crisis, ongoing Russia-Ukraine war, elevated Taiwan Strait tensions — has stress-tested and clarified the **safe-haven currency hierarchy** that was theoretically described but rarely tested simultaneously across multiple geopolitical fronts.
+
+**Empirical safe-haven performance (Feb–June 2026, indexed to 100 at pre-escalation):**
+- USD: 102 (modest safe-haven demand, offset by inflation concerns from oil shock)
+- CHF: 106 (strongest safe-haven performance — Switzerland's neutrality and non-NATO status reduce geopolitical exposure)
+- JPY: 95 (yen initially strengthened on safe-haven flows but then weakened as BOJ's inability to hike aggressively into a global slowdown became apparent)
+- Gold: 118 (strongest of all "currencies" — the ultimate geopolitical hedge outperforming all fiat safe havens)
+- EUR: 98 (European geographic exposure to Ukraine conflict and energy dependency create a modest discount vs. pre-crisis levels)
+
+**The broken JPY safe-haven correlation:**
+Historically, the yen was the reliable safe-haven currency in risk-off episodes. In 2026, this relationship has partially broken down because the mechanism that made JPY a safe haven (domestic institutional repatriation of foreign assets during global stress) is now complicated by the BOJ's normalization path. A global growth shock that would traditionally push the yen stronger (risk-off repatriation) simultaneously threatens to halt BOJ normalization (growth-supporting easy money → yen-weakening). These opposing forces have weakened the JPY's safe-haven reliability, validating the Swiss franc as the more dependable alternative.
+
+**The commodity-currency bloc:**
+Norway (NOK), Australia (AUD), Canada (CAD), and Brazil (BRL) have shown unusual coherence in 2026: all oil/commodity exporters, all performing well on a trade-weighted basis despite global uncertainty because commodity price premiums from Middle East disruptions are improving their terms of trade. This "commodity-currency bloc" performance — correlated appreciation despite different underlying economies — reflects the FX market's efficient pricing of commodity windfalls across exporters simultaneously, a pattern that has no precise historical precedent since the previous commodity booms (2004–2008, 2010–2014) were not accompanied by simultaneous geopolitical supply disruptions of this severity.
+
+#### Worked Example: Euro Appreciation Impact on a European Exporter's Hedging Strategy
+
+Consider a German automotive manufacturer (Volkswagen-type) with 40% of revenue in USD ($10 billion/year from North American sales), facing the consensus forecast of EUR/USD moving from 1.13 to 1.24 by end-2026.
+
+**Unhedged P&L impact:**
+- $10 billion at 1.13: €8.85 billion
+- $10 billion at 1.24: €8.06 billion
+- Revenue impact: −€790 million (−8.9% year-on-year from FX alone)
+- Operating margin impact (assuming 5% operating margin on USD revenues): reduces EUR operating income by €790M → equivalent to wiping out the entire USD revenue operating profit (5% × €8.85B = €442M) plus an additional €348M loss
+
+**Hedging mechanics:**
+The company's treasury team implements a 12-month rolling hedge:
+- At current spot 1.13, the 12-month EUR/USD forward = 1.1240 (USD discount reflects higher US rates vs. EUR rates under CIP)
+- Forward hedge: sell $10B 12-month forward at 1.1240 → locks €8.90B revenue regardless of spot rate
+- Cost of the hedge: zero upfront (forward has zero cost at inception), but if EUR/USD ends at 1.13 (hedge was unnecessary), opportunity cost = €790M (the gain the unhedged position would have realized)
+
+This illustrates the "hedge regret" that behavioral finance predicts: if EUR/USD stays at 1.13, the hedged company appears to have "paid" €790M to avoid a risk that didn't materialize. The treasurer who hedges faces career risk if the hedge was "unnecessary" — creating under-hedging bias at corporate treasuries, which in aggregate means EUR appreciation hurts European exporters more than fully-hedged models suggest.
 
 ### The 2024–2026 Yen Carry Trade Unwind: A Case Study in FX Systemic Risk
 

@@ -3,7 +3,7 @@ title: "Geopolitical Risk Premium: How Wars, Sanctions, and Instability Price In
 date: 2026-05-30
 tags: [finance, geopolitical-risk, risk-premium, commodities, oil, financial-markets, sanctions, war, emerging-markets, country-risk, volatility, GPR-index, safe-haven, de-dollarization, friend-shoring, supply-chain, OFAC, flight-to-quality, defense-stocks]
 source: "Caldara & Iacoviello (2022) Measuring Geopolitical Risk, American Economic Review; IMF World Economic Outlook (2022–2026); BIS Quarterly Review; BlackRock Geopolitical Risk Dashboard; Damodaran (2012) Country Risk: Determinants, Measures and Implications"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary

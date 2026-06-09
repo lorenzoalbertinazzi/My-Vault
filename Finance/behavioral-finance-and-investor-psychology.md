@@ -3,7 +3,7 @@ title: Behavioral Finance and Investor Psychology
 date: 2026-05-27
 tags: [finance, behavioral-finance, psychology, investing, biases, prospect-theory, loss-aversion, cognitive-biases, heuristics, overconfidence, anchoring, herding, mental-accounting, market-anomalies, EMH, adaptive-markets]
 source: "Kahneman & Tversky (1979) Prospect Theory, Econometrica; Kahneman (2011) Thinking, Fast and Slow; Shiller (2000) Irrational Exuberance; Thaler & Sunstein (2008) Nudge; Thaler (1999) Mental Accounting Matters, Journal of Behavioral Decision Making; Barber & Odean (2000) Trading Is Hazardous to Your Wealth, Journal of Finance; Lo (2004) The Adaptive Markets Hypothesis, Journal of Portfolio Management"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary
@@ -406,6 +406,38 @@ Already detailed in the section above, AMH resolves the debate by recognizing th
 5. **Market timing at extremes** (CAPE > 35 or VIX > 40): Statistically reliable but rarely actionable at sufficient scale
 
 The debate has been enormously productive precisely because it has been unresolved: decades of research attempting to reconcile EMH and behavioral finance have produced a far richer and more complete understanding of market dynamics than either school alone would have generated.
+
+---
+
+### 2026 Behavioral Finance: AI Markets, Political Narratives, and the New Irrationality
+
+#### AI-Driven Sentiment Cascades and the Amplified Availability Heuristic
+
+The diffusion of large language model-based news aggregators and AI chatbots into retail investor workflows has created a novel behavioral finance phenomenon in 2026: the **AI-amplified availability heuristic**. When a geopolitical event breaks — the Iran-US Hormuz escalation in May 2026 being the defining case — retail investors no longer receive information through sequential news consumption but through AI-generated summaries that condense days of developments into vivid, emotionally-charged capsules. Research from the Federal Reserve Bank of San Francisco (working paper, March 2026) found that retail options market activity now shows a 40–60% faster volatility spike following geopolitical news events compared to 2019 baseline data, consistent with AI tools accelerating the availability cascade. The psychological mechanism: AI summaries by design surface the most salient, emotionally impactful information — precisely the subset of news that the availability heuristic overweights. This creates a structural amplification of the bias at the point of consumption rather than at the point of decision.
+
+The practical investment implication is counterintuitive: the quality of financial information available to retail investors has never been higher, yet behavioral errors are if anything accelerating. This directly challenges the classical hypothesis that information asymmetry is the primary cause of behavioral mispricings — instead, even perfect information access, when filtered through emotionally-priming AI summaries, can worsen availability-driven overreaction. The corrective, as always, is not better information but better decision process: pre-committed rules, delayed execution windows, and devil's advocate reviews remain more effective than information quality improvements alone.
+
+#### Tariff Uncertainty and the "Ambiguity Aversion Premium" in 2026 Markets
+
+The 2025–2026 US tariff escalation cycle — with duties on Chinese goods swinging between ~145% and ~30% within weeks, pending another review — has produced a measurable behavioral premium that goes beyond standard risk aversion. **Ambiguity aversion** (Ellsberg, 1961) is the documented preference for known-probability risks over unknown-probability risks. Tariff policy in 2026 represents genuine Knightian uncertainty: the distribution of future tariff outcomes is not just unknown but unknowable, because outcomes depend on unpredictable bilateral negotiations. Multinational companies' capital expenditure surveys (Business Roundtable Q1 2026; NFIB Small Business Survey April 2026) show investment intention indices at levels more consistent with a severe recession than with current GDP growth of ~1.5–2%, precisely because firms cannot form probability estimates for their future cost structures. This Ellsberg-style ambiguity — not risk per se — is the behavioral mechanism producing the "uncertainty recession" that macro analysts have identified: the economy is slowing not from a specific shock but from the paralysis of decision-making under genuine Knightian uncertainty. The 2026 episode will likely become the canonical modern case study for the Ellsberg paradox applied to industrial policy.
+
+#### Regret Theory and the 2026 Value vs. Growth Capitulation
+
+**Regret theory** (Bell, 1982; Loomes & Sugden, 1982) posits that decision-makers anticipate regret over forgone alternatives and weight this anticipated regret in their choices. In investing, this manifests as the psychological cost of watching an asset you sold continue to rise — often more painful than an equivalent loss. The 2026 market environment provides a live test: value stocks (energy, defense, financials) dramatically outperformed growth stocks (technology, consumer discretionary) in 2022–2024 as interest rates rose. Investors who capitulated from growth to value in 2023–2024 after years of underperformance now face a partial reversal in 2026 as AI-driven earnings growth has restored some growth premium. Regret theory predicts this creates a characteristic behavioral pattern: investors anchor the portfolio decision to their most recent action (selling growth to buy value) and experience asymmetric regret when either leg reverses. The result in aggregate institutional behavior: style box rebalancing is systematically delayed relative to optimal, creating the documented "factor momentum" anomaly where value/growth cycles persist longer than fundamental reversion would predict, because regret-averse investors defer style adjustments.
+
+**Worked quantitative example of regret weighting:**
+An investor holds two portfolios:
+- Portfolio A: 100% Value ETF (return 2026: +3%)
+- Portfolio B: 70% Value / 30% Growth ETF (return 2026: +7%)
+
+Classical EUT: Portfolio B is clearly preferable given realized returns.
+Regret theory: The investor who switched from a 70/30 to 100% value in 2024 (after value's strong run) experiences: (a) direct loss of the growth premium foregone (+4% × 30% = 1.2% return gap), PLUS (b) regret premium for having made the "wrong" decision at the decision point in 2024. The combined psychological cost exceeds the arithmetic loss — predicting that investors will either: overcompensate by adding growth aggressively at the worst moment (chasing performance), or freeze entirely (avoidance of additional regret through inaction). Both are documented behaviors in style-rotation studies and both produce worse-than-optimal outcomes.
+
+#### The Dunning-Kruger Effect in Retail Options Markets (2026 Data)
+
+The proliferation of zero-days-to-expiry (0DTE) options trading in 2022–2026 has created a natural experiment in the **Dunning-Kruger effect** — the finding that incompetent actors overestimate their competence while experts underestimate theirs. CBOE data shows 0DTE options now represent over 50% of S&P 500 options volume by contract count, with retail participation estimated at 35–40% of this flow (vs. ~10% in longer-dated options). Academic analysis (Welch and Welch, 2025, SSRN working paper) of retail 0DTE trading accounts finds median holding periods of 18 minutes and loss rates of 73% of retail accounts over rolling 6-month windows — yet survey data shows these same traders rate their own options skill at 6.2 out of 10, substantially above what would be warranted by their outcomes. The overconfidence documented by Barber and Odean (2000) in stock trading has been amplified rather than reduced by the complexity increase from daily-expiry options. The Dunning-Kruger dynamic is particularly acute because 0DTE options' short time horizons mean that the feedback cycle between decision and outcome is compressed to hours, making it genuinely difficult to distinguish skill from noise — which ironically prevents the skill-calibrating that longer-duration outcomes would provide.
+
+**The policy implication** that behavioral finance researchers are increasingly noting: the democratization of sophisticated financial instruments does not automatically improve retail investor outcomes if the cognitive prerequisites for using those instruments — understanding of probability, volatility dynamics, and the baseline expected value of short-dated option purchases — are not simultaneously developed. The behavioral finance recommendation is not paternalistic exclusion but **structured friction**: mandatory brief educational modules before first 0DTE purchase, cooling-off periods for new accounts, and automatic notifications when account drawdowns exceed thresholds. These are implementation of Thaler's "libertarian paternalism" specifically calibrated for the 0DTE retail phenomenon.
 
 ---
 
