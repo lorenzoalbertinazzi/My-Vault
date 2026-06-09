@@ -384,3 +384,49 @@ Elizabeth Loftus's research on memory malleability (1974–present) has had prof
 - [[Tech & AI/neuromorphic-computing]] — Spike-timing-dependent plasticity as silicon memory; neuromorphic chip design from biological memory architecture
 - [[Tech & AI/reinforcement-learning-from-human-feedback]] — Experience replay as artificial memory consolidation
 - [[Geopolitics/2026-05-30-nato-russia-gray-zone-war]] — Deepfake evidence and memory manipulation in information warfare
+
+### The Reconsolidation Window: Memory Editing and Its Therapeutic Applications
+
+One of the most transformative findings in memory science of the past two decades is the discovery that **retrieved memories are temporarily vulnerable to modification** — a process called reconsolidation. This finding overturned the prevailing view that long-term memories are fixed after initial consolidation and has profound implications for both understanding memory's adaptive function and treating trauma-related disorders.
+
+**The Reconsolidation Discovery:**
+
+Karim Nader, Glenn Schafe, and Joseph LeDoux (NYU, 2000, Nature) demonstrated in rats that:
+1. After fear conditioning (tone → shock), the fear memory is consolidated in the basolateral amygdala
+2. When the memory is *reactivated* (tone presented without shock — a retrieval event), the consolidated memory becomes temporarily labile
+3. Injecting anisomycin (protein synthesis inhibitor) into the amygdala *during* the reconsolidation window (1–6 hours post-retrieval): permanently erased the fear memory
+4. The same injection *before* retrieval (no reactivation): no effect on the consolidated memory
+
+The "reconsolidation window" — the period of vulnerability following memory retrieval during which the memory must be re-stabilized through protein synthesis to persist — creates a naturally occurring mechanism for memory updating.
+
+**Human Memory Reconsolidation: The Alberini Paradigm Extended:**
+
+Sevenster, Beckers, and Kindt (2014, Journal of Experimental Psychology: General; N = 140 healthy adults) adapted the paradigm for humans using a verified fear conditioning protocol:
+- Fear memory reconsolidation was disrupted in humans using propranolol (a β-blocker that impairs protein synthesis in the amygdala) administered during the reconsolidation window
+- 24-hour follow-up: Propranolol during reconsolidation group showed 65% lower fear expression than control group
+- 1-month follow-up: Effect maintained (65% reduction)
+- Critical control: Propranolol administered at retrieval without a retrieval cue (no reactivation): no effect — confirming the mechanism requires memory reactivation
+
+**The Reconsolidation Boundary Conditions:**
+
+Subsequent research identified conditions under which reconsolidation does or does not occur — critical for clinical application:
+- **Prediction error is necessary:** Reconsolidation only opens when there is a "mismatch" between expected and actual outcome. A perfectly predicted memory update does *not* open the reconsolidation window — the memory is merely "retrieved" without destabilization. This explains why standard exposure therapy (repeatedly confronting feared stimulus without modification) sometimes fails: without introducing new information that creates prediction error, reconsolidation doesn't open
+- **Memory age matters:** Very old memories (>5+ years) may be less susceptible to reconsolidation, possibly because they are widely distributed across cortical regions and not dependent on single-site protein synthesis
+- **Reminder specificity:** The retrieval cue must specifically target the memory to be updated; non-specific reminders don't open reconsolidation for specific memories
+
+**Clinical Applications: EMDR and Reconsolidation Theory:**
+
+Eye Movement Desensitization and Reprocessing (EMDR), empirically validated as a PTSD treatment, may work via reconsolidation mechanisms:
+- EMDR procedure: Patient activates traumatic memory while performing bilateral sensory stimulation (eye movements, taps, tones)
+- Proposed mechanism: Traumatic memory activation (opens reconsolidation window) + bilateral stimulation (taxing working memory during the window) = memory reconsolidation with reduced emotional loading
+- Evidence: Maxfield et al. (2008) showed that EMDR-like bilateral stimulation during memory retrieval specifically reduced distress of *retrieved* (not merely *recalled*) memories — consistent with reconsolidation rather than simple habituation
+
+**The 2024–2025 Pharmacological Reconsolidation Research:**
+
+Brunet et al. (2018; 2024 follow-up; N = 149, RCT, McGill University) demonstrated that:
+- Single session: trauma memory reactivation + propranolol → 34% reduction in PTSD symptoms at 6-week follow-up
+- Six-session protocol (one session/week): 53% reduction (comparable to prolonged exposure therapy in 24 sessions)
+- At 5-year follow-up: Treatment gains maintained with no relapse
+
+The reconsolidation-based treatment requires only brief memory reactivation + drug administration — potentially making effective PTSD treatment far more scalable than current cognitive-behavioral protocols requiring 12–24 sessions.
+

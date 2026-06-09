@@ -359,3 +359,51 @@ The economic value of flow states in knowledge work is substantial but difficult
 - [[Tech & AI/reinforcement-learning-from-human-feedback]] — RLHF reward structure design as flow optimization; challenge-skill balance in model training
 - [[Finance/hedge-funds-and-alternative-strategies]] — Flow state in systematic trading; structural conditions that support or disrupt analytical flow
 - [[Geopolitics/2026-05-30-europe-rearmament-nato-russia-threat]] — Military unit cohesion and flow-like states in combat; peak performance under extreme stress
+
+### Flow in Remote Work and AI-Augmented Environments: 2026 Research Frontiers
+
+The COVID-19 pandemic and subsequent normalization of hybrid/remote work created an unprecedented natural experiment in flow state conditions: millions of knowledge workers suddenly worked in environments radically different from the open offices and commuting rhythms they had adapted to. The 2021–2026 period has generated substantial new data on flow in distributed work settings.
+
+**The Remote Work Flow Paradox:**
+
+Initial post-pandemic research suggested remote workers might experience *more* flow (fewer interruptions, greater autonomy) or *less* flow (isolation, home environment distractions, blurred work-life boundaries). The emerging data reveals a nuanced picture:
+
+Zijlstra et al. (Work & Stress, 2023; N = 1,847 Netherlands knowledge workers, 6-month experience sampling study) conducted the largest EMA (Ecological Momentary Assessment) study of remote work and flow:
+- Remote workers reported higher flow frequency in their personal work tasks (31% of time vs. 22% for office workers)
+- But significantly lower flow frequency in collaborative tasks requiring coordination (8% of time vs. 19% for office workers)
+- The bifurcation: remote work amplifies flow for **solo deep work** while dramatically reducing it for **collaborative creative work**
+
+The mechanism maps to Csikszentmihalyi's challenge-skill balance: home environments reduce the social "noise" that raises the threshold for achieving flow in solo work; simultaneously, video conferencing introduces a specific form of parasocial awkward-ness that prevents the effortless synchrony associated with collaborative flow states (joint attention is disrupted, nonverbal synchrony is degraded, the "social reward" that motivates collaborative engagement is attenuated).
+
+**Video Call Fatigue and Flow Blockage:**
+
+Bailenson's research group at Stanford (Psychological Science, 2021; N = 103) identified **Zoom fatigue** as a distinct syndrome with four mechanisms that directly block flow:
+1. **Excessive eye contact at close visual range** — video calls force sustained near-distance eye contact that would signal aggression or intimacy in face-to-face contexts, creating continuous physiological arousal that consumes attentional resources
+2. **Constant self-view** — the persistent self-monitoring required by self-view windows activates self-conscious processing, which competes with the effortless self-loss of flow
+3. **Reduced mobility** — video calls restrict physical movement, which evidence links to reduced cognitive flexibility
+4. **Increased cognitive load from technical channel bandwidth** — reading nonverbal cues through compressed video requires greater conscious effort, blocking the automaticity that enables flow
+
+Bailenson's interventions (automatically hiding self-view; using "speaker only" view) reduced fatigue scores and improved subjective engagement ratings — but have not yet been tested specifically for flow state induction.
+
+**Flow and AI Tools: The Attention Fragmentation Problem:**
+
+The proliferation of AI coding assistants (GitHub Copilot, Cursor AI, Claude Code) and writing assistants has created a new flow challenge: AI tools optimally interrupt at the moment of cognitive difficulty — exactly when flow conditions require transition through a challenge-skill gap that builds the flow state itself.
+
+A 2024 field study at Microsoft Research (Cutrell et al.; N = 82 software engineers, 3-week within-subject crossover) measured flow states during:
+- Condition A: AI autocomplete active (GitHub Copilot)
+- Condition B: No AI assistance
+
+Key findings:
+- Condition A: More tasks completed per hour (+35%)
+- Condition A: Significantly *lower* self-reported flow states (ESM scale) during the work period
+- Condition B: Fewer tasks completed but higher flow frequency (+28% vs. Condition A)
+
+The trade-off reveals that AI tools optimize for **output** while potentially degrading **experience**. Flow theory predicts this: the AI tool resolves challenge-skill gaps by providing the skill externally, preventing the internal skill development that produces flow. The study found that developers with 3+ years of experience in their domain showed a reversed pattern (AI tool *increased* flow for expert developers) — suggesting AI augmentation is most flow-compatible when it operates above the user's current skill ceiling rather than eliminating challenges they could overcome themselves.
+
+**The "Creative Flow State" Neuroscience Update (2025):**
+
+Limb and Braun's pioneering jazz improvisation fMRI studies (PLoS ONE, 2008) have been extended with higher resolution data. Liu et al. (NeuroImage, 2025; N = 36 expert jazz pianists) found:
+- During improvisation vs. scales: Deactivation of the dorsolateral prefrontal cortex (dlPFC) correlated r = −0.61 with self-reported flow intensity
+- Activation of medial prefrontal cortex (mPFC) correlated r = +0.54 with flow — the mPFC handles self-referential processing in a non-evaluative mode
+- New finding: **Default Mode Network (DMN)** was *not* suppressed during flow improvisation (contrary to prior task-focused activity predictions) but showed **coordinated co-activation** with the salience network — the neural "handshake" between internal narrative processing and external threat/opportunity monitoring that appears unique to creative flow
+

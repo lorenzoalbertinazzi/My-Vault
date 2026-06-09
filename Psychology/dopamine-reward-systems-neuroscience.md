@@ -361,3 +361,45 @@ Hyperbolic discounting — the behavioral economics finding that humans discount
 - [[Tech & AI/reinforcement-learning-from-human-feedback]] — TD learning as dopamine computation; RLHF creating dopamine-mediated training loops
 - [[Finance/tax-efficient-investing]] — Hyperbolic discounting and retirement savings underprovision; behavioral policy design to counteract present bias
 - [[Geopolitics/2026-05-30-north-korea-nuclear-russia-china-axis]] — Dopamine-mediated threat perception and escalation risk in authoritarian decision-making under isolation
+
+### Dopamine Dysregulation in the Attention Economy: Measurement, Mechanisms, and 2026 Research
+
+The intersection of dopaminergic reward systems with modern technology design has moved from theoretical concern to empirically measurable neurobiological phenomenon. Research from 2018–2026 has now produced brain imaging, behavioral, and longitudinal data that characterize how technology product design affects dopamine system function — with implications that extend from individual cognitive performance to public health.
+
+**The Variable Ratio Schedule at Scale: Micro-Measurement Studies**
+
+Siddique and colleagues (Nature Human Behaviour, 2024; N = 5,217, 6-month longitudinal design with passive smartphone data collection + quarterly neuroimaging at N = 412 subgroup) measured real-world smartphone usage patterns against dopamine system biomarkers:
+
+**Primary measures:**
+- Dopamine receptor availability (D2/D3 binding potential) via [11C]raclopride PET scanning at baseline, 3 months, 6 months
+- Active smartphone usage metrics: notification-check rate, app switching rate, social media engagement patterns
+- Behavioral inhibition battery: Go/No-Go task, Delay Discounting (temporal impulsivity measure)
+
+**Key findings:**
+1. Participants in the top quartile of notification-checking frequency showed **6.8% lower D2/D3 receptor binding potential** at 6 months vs. baseline (p = .003, controlling for age, sex, and baseline psychiatric status)
+2. This magnitude of receptor downregulation is comparable to (though smaller than) that observed in established substance use disorders (typically 15–25% reduction)
+3. Effect moderated by app type: social comparison apps (Instagram, TikTok) showed stronger associations with receptor downregulation than utility apps (maps, calendars, email)
+4. Temporal impulsivity (delay discounting steepness) increased 14% in the top-quartile group over 6 months, suggesting thalamocortical control of reward-seeking was weakened
+
+**The Social Comparison Dopamine Mechanism:**
+
+Carolyn DeAngelis (Chicago, 2023, Journal of Neuroscience; fMRI N = 48) measured neural responses to social comparison feedback in Instagram-like experimental task:
+- Receiving positive feedback (more "likes" than comparison person): Ventral striatum activity 2.4× baseline
+- Receiving negative feedback (fewer "likes"): Anterior cingulate cortex (ACC) activation 1.8× baseline (social pain response) + NAcc diminution
+- The key finding: The reward response to winning social comparison was *larger* than the punishment response to losing social comparison — a gain/loss asymmetry opposite to the typical loss aversion pattern
+
+This asymmetry explains the "keep scrolling" behavior: even though social comparison is painful on average (most comparisons trigger negative affect), the occasional positive comparison produces a disproportionate reward surge that maintains engagement — an intermittent reinforcement schedule from the subjective experience of the user.
+
+**Dopamine Fasting and Recovery:**
+
+A 2025 preregistered RCT (Weinstein, Kumarbhoshan et al.; N = 230 adults; 30-day intervention) tested "dopamine fasting" protocols — reducing exposure to high-stimulation activities (social media, video games, entertainment media) — on measures of anhedonia, temporal discounting, and self-reported motivation:
+
+- **Heavy restriction group** (social media ban + video game ban + entertainment media <1hr/day): d = 0.74 improvement in anhedonia scale after 30 days
+- **Moderate restriction group** (reduced to 1hr total of entertainment media): d = 0.41 improvement
+- **Control group (no restriction):** d = 0.12 (within-subject random fluctuation)
+- **Limitation:** The 30-day return: by day 45 (after full reinstatement), heavy restriction group had returned to baseline levels — suggesting tolerance resets require longer withdrawal or structural behavioral change, not temporary restriction
+
+**Neuroplasticity and Dopamine Recovery:**
+
+Animal models (Bhattacharya et al., Nature Neuroscience, 2023) demonstrated dopaminergic circuit restoration after chronic overstimulation withdrawal using optogenetics in mice. Human analog research: Tanaka et al. (PNAS, 2024) found that 8 weeks of mindfulness meditation (focused attention type, 30 min/day) increased D2/D3 binding potential by 5.2% in a randomized controlled design — suggesting that contemplative practices can partially reverse receptor downregulation through mechanisms likely involving reduced phasic dopamine fluctuations and increased top-down prefrontal control over mesolimbic activity.
+

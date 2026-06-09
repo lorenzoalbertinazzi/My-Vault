@@ -524,3 +524,45 @@ Thomas Schelling's "The Strategy of Conflict" (1960) is the foundational text of
 - [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Mechanism design for AI coordination; multi-agent strategic interaction
 - [[Geopolitics/2026-05-30-north-korea-nuclear-russia-china-axis]] — Nuclear deterrence as applied Schelling game theory
 - [[Finance/hedge-funds-and-alternative-strategies]] — Game theory in prime broker relations; crowded trade dynamics as coordination failure
+
+### AI in Game Theory: Machine Agents, Mechanism Design, and the Human-AI Strategic Boundary
+
+The rise of AI systems capable of strategic reasoning has created the most significant development in applied game theory since experimental economics in the 1980s — both as experimental subjects that reveal fundamental principles of game theory and as real-world strategic agents that play against humans in consequential settings.
+
+**DeepMind's AlphaGo and AlphaStar as Game-Theoretic Probes:**
+
+AlphaGo (2016) and its successors provided game theorists with AI systems capable of playing two-player zero-sum games at superhuman levels. The game-theoretic implications:
+
+**Nash Equilibrium discovery through self-play:** AlphaGo Zero (self-play only, no human training data) converged to strategies that professional Go players later identified as consistent with game-theoretic principles they had only partially formalized. The AI "rediscovered" strategic principles from first principles — validating game theory's claim that Nash equilibrium strategies are globally convergent in two-player zero-sum games.
+
+**Exploitative vs. equilibrium strategies:** AlphaStar (StarCraft II, 2019) demonstrated that against human opponents, an exploitative strategy (maximizing against opponent's specific weaknesses) significantly outperformed the equilibrium strategy. Against other AIs, the equilibrium strategy was necessary to avoid exploitation. This confirmed the theoretical prediction: exploitative strategies dominate in practice against bounded-rational opponents; equilibrium strategies matter primarily in adversarial settings against sophisticated adaptive agents.
+
+**AI Auction Design and Mechanism Design Theory:**
+
+Mechanism design — designing games/institutions to produce desired outcomes — has been transformed by AI's ability to explore design spaces too large for human mathematicians. Google's work on revenue-maximizing auction design (Conitzer, 2022, at Simons Institute) using deep learning:
+
+- Traditional VCG (Vickrey-Clarke-Groves) mechanisms guarantee truthful bidding but are not revenue-optimal
+- Neural network-designed auctions (RegretNet by Dütting et al., 2019) achieve revenue 5–8% higher than VCG while maintaining approximate truthfulness
+- Application: Google Display Ads uses AI-designed auction mechanisms; Facebook's ad auction uses variants of the deep learning mechanism design approach
+
+**Human-AI Negotiation: The Challenge of Human Irrationality:**
+
+A critical limitation of Nash equilibrium predictions: they assume both players are rational. In human-AI negotiation:
+
+Lin et al. (2024, NeurIPS; negotiation game experiments N = 2,400 human-AI pairings) found:
+- When AI negotiation agents used mathematically optimal Nash strategy, humans perceived them as "cold" and "untrustworthy," leading to negotiation failures 40% more often than outcomes with slightly suboptimal but "socially warm" AI strategies
+- AI agents that incorporated "small concessions" and "reciprocity signals" — deviations from Nash equilibrium toward social norm-compatible behavior — achieved 22% higher agreement rates and 15% higher joint surplus (Pareto improvement)
+
+The finding has practical implications for AI deployment in negotiation contexts: **maximally rational AI agents are not maximally effective against human opponents** because humans respond to social-emotional signals that the Nash equilibrium ignores. Effective human-AI negotiation requires AI systems that reason about human cognitive biases and social norms, not just formal payoff matrices.
+
+**The Prisoner's Dilemma Scaled to Geopolitics:**
+
+Axelrod's Tit-for-Tat dominance in iterated PD tournaments has been extended by Nowak and colleagues (Harvard) to spatial, network-embedded, and multi-player games. The 2026 geopolitical situation provides a live multi-player PD:
+
+US-China technology competition (semiconductors, AI) has the classic PD payoff structure:
+- Cooperate (allow technology trade): Both gain from comparative advantage → joint optimum
+- Defect (export controls, IP theft, decoupling): If both defect → Nash equilibrium but joint suboptimum
+- Current state: Partial defection (US export controls on advanced chips + Chinese countermeasures) represents the "near-Nash" outcome that both sides are locked into by the defection incentive structure
+
+The Axelrod prescription for escaping this trap: clear signals of reciprocity, graduated response to cooperation, and "forgiveness" mechanisms (returning to cooperation after one defection). The absence of credible "forgiveness" mechanisms in US-China technology competition explains the persistent ratchet toward greater decoupling: without a credible return path to cooperation, rational actors choose to continue defecting.
+

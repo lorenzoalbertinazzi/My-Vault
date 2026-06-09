@@ -256,3 +256,41 @@ The evolutionary psychology of intergroup conflict — tribal in-group/out-group
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Evolutionary tribalism and nationalist mobilization in great power competition
 - [[Finance/behavioral-finance-and-investor-psychology]] — Ecological rationality framework; heuristics as evolved financial reasoning tools
 - [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Evolutionary game theory foundations for multi-agent system design
+
+### Digital Tribalism and the Evolved Mind: How Ancient Group Psychology Drives Online Behavior
+
+Evolutionary psychology provides the most coherent explanatory framework for the otherwise puzzling patterns of online behavior — extreme partisanship, outrage amplification, rapid in-group/out-group formation, and the persistence of tribalistic conflict despite globalization and unprecedented access to information.
+
+**The Coalitional Psychology Foundation:**
+
+John Tooby and Leda Cosmides (2010, Philosophical Transactions of the Royal Society B) developed the **coalitional instincts** framework: human minds contain specialized machinery for tracking group membership, calibrating cooperation within coalitions, and coordinating aggressive competition with other coalitions. This evolved in a context where:
+- Groups ranged from 50–150 individuals (Dunbar's number)
+- Intergroup conflict was a constant selective pressure (Bowles, 2006, Science: evidence for 25%+ of adult male deaths from intergroup violence in pre-state societies)
+- Coalition loyalty was "existentially" important — exclusion from one's group was a death sentence in Pleistocene conditions
+
+**Digital Platforms as Superstimuli for Coalitional Psychology:**
+
+Haidt and Rose-Stockwell (The Atlantic, 2019) and subsequent research by Brady et al. (2019, Psychological Science; Twitter data N = 560K+ tweets) showed that:
+- Moral-emotional language (words that combine moral condemnation with emotional affect: "traitor," "destroy," "evil") in tweets predicts retweet rate 20% better than moral language alone or emotional language alone
+- Effect was linear: each additional moral-emotional word added ~18% to retweet probability
+- This "outrage amplification" is consistent with coalitional psychology: signals that identify and denounce out-group threats are exactly the information that coalitional instincts prioritize as worth spreading
+
+The mechanism is an evolutionary mismatch: our minds are calibrated to evaluate coalitional threats in a 150-person group where false positives (wrongly identifying a threat) are recoverable, and false negatives (missing a genuine threat) could be catastrophic. In a Twitter/X environment where "the group" is potentially millions of followers and the "threat" is a tweet, the same calibration produces massive overreactions to minor perceived slights.
+
+**Status Competition Online: Costly Signaling in Digital Environments:**
+
+Costly signaling theory (Zahavi 1975; Maynard Smith & Harper 2003) predicts that reliable signals of quality must be costly to produce — making them hard to fake. In digital environments, traditional costly signals (physical prowess, resource display) are not available. New costly signals have emerged:
+- **Twitter "takes"**: Extreme, maximally-differentiated opinions that risk social censure signal authentic conviction (costly because it alienates potential allies)
+- **Public self-sacrifice rituals**: Canceling or "calling out" even mild violations of in-group norms signals high commitment to in-group values (costly because it creates enmity)
+- **Expertise displays**: Highly detailed, jargon-laden posts that are costly to produce signal domain competence
+
+Costly signaling theory predicts that radicalization in online communities follows a predictable pattern: as ordinary opinion expression becomes cheap (everyone tweets), the differentiation pressure escalates the extremity of signals. The research by Bail et al. (2018, PNAS) on political polarization and social media found that following Twitter bots exposing users to opposing viewpoints *increased* polarization — consistent with costly signaling: exposure to out-group views activates threat response and incentivizes stronger in-group signaling.
+
+**Dunbar's Number and Platform Architecture:**
+
+Dunbar's neocortex ratio hypothesis predicts that human social cognition can maintain genuine relationships with approximately 150 people. Digital platforms violated this limit by design:
+- Facebook's average user: ~300–400 "friends" (far exceeding Dunbar's limit)
+- Twitter: median follower count ~115 but active political users: thousands
+
+Research (Dunbar, 2017; Proceedings of the Royal Society B) on social network quality found that increasing friend count above ~150 on social media produced no increase in emotionally close relationships, but did produce measurable increases in anxiety (more people to monitor/manage) and decreased relationship quality per relationship. The evolutionary framework predicts: digital social networks expand quantity while degrading quality, optimizing for coalitional signaling (which requires large audiences) rather than genuine social bonding (which requires manageable relationship depth).
+

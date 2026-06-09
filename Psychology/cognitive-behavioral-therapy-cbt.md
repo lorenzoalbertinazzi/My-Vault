@@ -315,3 +315,52 @@ Mass violence and genocide create collective cognitive distortions at the societ
 - [[Tech & AI/ai-safety-and-alignment]] — Constitutional AI as computational CBT; self-critique architectures for AI reasoning correction
 - [[Geopolitics/2026-05-30-horn-of-africa-sudan-ethiopia-regional-conflict]] — Mass trauma treatment in conflict zones; CBT-adapted interventions for displaced populations
 - [[Finance/behavioral-finance-and-investor-psychology]] — CBT techniques applied to trading psychology; thought records for managing emotional trading decisions
+
+### Digital CBT and AI-Assisted Mental Health: Evidence and Limitations
+
+The proliferation of digital mental health interventions — smartphone apps, text-based therapy, and AI-assisted cognitive restructuring tools — represents the most significant delivery innovation in CBT since the move from inpatient to outpatient treatment. The empirical evidence on their efficacy requires careful parsing of study quality, comparison conditions, and clinical population.
+
+**The Evidence Base for iCBT (Internet-Based CBT):**
+
+The highest-quality meta-analysis to date: Olthuis et al. (2016, Journal of Anxiety Disorders; k = 24 RCTs, N = 2,695 participants) found:
+- **Guided iCBT** (with therapist support via email/secure message): Effect sizes for anxiety disorders d = 0.88 — comparable to face-to-face CBT (d = 0.90 in matched populations)
+- **Unguided iCBT** (fully self-directed, no therapist contact): d = 0.62 — significantly lower, particularly for severe anxiety
+- Dropout rates: Guided iCBT 13%; Unguided iCBT 32%; Face-to-face CBT 8%
+
+The "minimal contact" finding is important: even brief weekly check-in messages (10 minutes/week by a trained therapist assistant) doubled completion rates and substantially improved outcomes for unguided iCBT — suggesting the therapeutic alliance's function in CBT cannot be fully replaced by automated delivery.
+
+**Smartphone Application Studies:**
+
+The most rigorous smartphone app trial: Watts et al. (2020, JAMA Psychiatry; N = 1,672 participants with mild-moderate depression, RCT) testing CBT-based apps:
+- App with behavioral activation components: PHQ-9 improvement of 3.2 points vs. 1.8 points control (8-week follow-up)
+- App with cognitive restructuring components only: 2.1 points improvement (less effective than behavioral components)
+- Neither app achieved full clinical response (≥50% PHQ-9 reduction) in more than 22% of participants
+
+The implication: apps work for mild depression and may provide meaningful symptom reduction, but rarely produce full clinical recovery in isolation. They are best conceptualized as "adjunctive care" or "stepped care" tools — appropriate as a first step before face-to-face therapy for mild symptoms.
+
+**AI-Assisted CBT Chatbots: Woebot Research:**
+
+Woebot (developed at Stanford; Fitzpatrick et al., 2017, JMIR Mental Health; N = 70 college students, RCT) is the most studied CBT chatbot:
+- Primary finding: 2-week Woebot usage reduced PHQ-9 by 4.0 points vs. 1.0 points for waitlist control
+- Effect size: d = 1.0 (large)
+- But: comparison to waitlist (no treatment) control; not compared to therapist-delivered CBT
+- Generalizability: college-age, self-selected mild-moderate symptoms; not generalizable to clinical populations
+
+A follow-up Woebot study (Darcy et al., 2021; N = 667, RCT, 8-week, versus iCBT and waitlist) found that Woebot performed comparably to structured iCBT for depression outcomes but showed superior adherence (78% completion vs. 62% for structured iCBT) — suggesting AI chatbots' conversational interface improves engagement relative to structured digital programs.
+
+**The Alliance Problem in AI Therapy:**
+
+Research consistently identifies "therapeutic alliance" — the quality of the relationship between therapist and client — as the strongest predictor of CBT outcomes (across studies), accounting for ~30–40% of outcome variance. Norcross & Lambert (2019) meta-analysis found that the working alliance effect is larger than the specific technique effect for most conditions.
+
+AI systems can approximate some alliance functions:
+- Consistent availability (unlike human therapists who are unavailable nights/weekends)
+- Non-judgmental responses (no micro-expressions, no perceived disapproval)
+- Unconditional positive regard (by design)
+
+But cannot currently replicate:
+- Genuine understanding of the *personal* context of the client's symptoms
+- Adaptive case formulation that modifies in response to new life information
+- The reparative experience of a healthy human relationship for individuals with relational trauma
+
+The 2025 clinical consensus (APA Technology in Mental Health Task Force report): AI-assisted CBT tools are appropriate for "low acuity" populations (mild symptoms, no active suicidality, no complex PTSD or personality disorder) as first-line interventions or between-session homework supplements. Clinical supervision remains necessary for moderate-severe presentations.
+

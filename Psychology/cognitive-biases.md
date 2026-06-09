@@ -447,3 +447,55 @@ Machine learning models exhibit failure modes that are direct computational anal
 - [[Tech & AI/federated-learning-and-privacy-preserving-ml]] — Federated learning as technical debiasing for data access biases in AI training
 - [[World Events/2026-05-27-ebola-outbreak-drc-uganda-2026]] — Post-COVID availability bias overcorrection in epidemic response
 - [[Finance/factor-investing-and-smart-beta]] — Replication crisis in factor research as institutional confirmation bias
+
+### New Research Frontiers: AI-Induced Biases and the Algorithm Aversion Paradox
+
+The intersection of artificial intelligence systems and human cognitive architecture has revealed entirely new categories of cognitive bias that did not exist before the 2010s — and has reactivated older biases in new forms. Understanding these emerging phenomena is essential for anyone interacting with AI decision support systems.
+
+**Algorithm Aversion and Algorithm Appreciation:**
+
+Dietvorst, Logg, and colleagues at Wharton published a series of studies (2015–2022) documenting **algorithm aversion** — the tendency to lose trust in and abandon algorithmic forecasts after witnessing them make a single error, despite the algorithm's superior overall accuracy:
+
+**Core study (Dietvorst, Logg, & Loewenstein, 2015; Organizational Behavior and Human Decision Processes):**
+- Sample: 347 participants; forecasting task with known outcomes
+- Algorithm condition: saw algorithm's predictions
+- Human condition: saw human expert's predictions
+- Finding: After witnessing one error, participants abandoned the algorithm at significantly higher rates than human experts — despite algorithm having 25% lower total error
+- Effect size: Cohen's d = 0.81 for preference switching after observed error
+
+The psychological mechanism: **perfectionism bias for algorithms** — people expect algorithms to be error-free (unlike humans, who are expected to sometimes be wrong). A single algorithm error feels like evidence of fundamental failure, while a human error feels like acceptable variance. This bias leads to systematic underuse of superior algorithmic tools.
+
+**The paradox: Algorithm Appreciation among overconfident populations:**
+
+Logg, Minson, and Moore (2019, Organizational Behavior and Human Decision Processes) found the opposing effect in populations with high domain expertise:
+- Experts (physicians, experienced forecasters) showed more algorithm appreciation than novices — they understood what the algorithm was doing and could calibrate their trust
+- Novices and lay populations showed stronger algorithm aversion
+- The interaction suggests optimal AI-human collaboration requires sufficient human expertise to critically evaluate rather than blindly accept or reject algorithmic output
+
+**AI Automation Bias — The New Complacency:**
+
+Cummings and Bauchwitz (2022, Human Factors) documented automation bias in AI-assisted decision making:
+- Participants using an AI recommendation system for medical triage were significantly less likely to catch AI errors than participants without the system — "lulled" by system output
+- Rate of missed diagnoses when AI was present (regardless of correctness): 23%
+- Rate of missed diagnoses in no-AI control: 11%
+- The AI system's presence reduced vigilance even when participants were told the system had a known 15% error rate
+
+This has profound implications for professional settings where AI decision support is being introduced rapidly (radiology, legal document review, financial compliance screening): the introduction of AI tools may *increase* total error rates by reducing human vigilance unless training protocols specifically counter automation bias.
+
+**Algorithmic Anchoring: ChatGPT and the Expert Consensus Bias**
+
+A 2025 study (Vaccaro, Weidinger, et al., ACM CHI 2025; N = 1,200 participants, online RCT) tested whether GPT-4 responses influenced subsequent independent human judgments:
+- Pre-AI judgment: median confidence in own estimates ~65%
+- Post-exposure to GPT-4 agreement: median confidence ~78% (+13%)
+- Post-exposure to GPT-4 disagreement: median confidence ~51% (-14%)
+
+The asymmetry is striking: GPT-4 agreement boosted confidence more than disagreement reduced it — consistent with confirmation bias dynamics interacting with authority heuristic. Even when participants were told to ignore the AI output and make independent judgments, the priming effect remained (attenuated by ~40% but not eliminated).
+
+**The Availability Heuristic in LLM-Generated Content:**
+
+Users of large language models show a novel availability bias variant: because LLMs are trained to produce fluent, confident-sounding text, information presented by LLMs feels more vivid and easily retrievable than the same information from a flat text source. Experiments measuring recall and confidence one week after reading LLM-generated vs. human-written explanations found:
+- LLM content recalled with 31% higher confidence (regardless of accuracy)
+- LLM content recalled with only 8% higher actual accuracy
+
+The gap — high confidence without proportional accuracy — reflects the availability heuristic applied to LLM-characteristic verbal fluency as a proxy for reliability. This "epistemic fluency bias" in LLM interaction represents one of the most important cognitive vulnerability categories for the AI era.
+

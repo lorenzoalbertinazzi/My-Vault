@@ -99,3 +99,31 @@ The moral psychology insight: Milgram's participants were not sadists — they s
 - [[Finance/behavioral-finance-and-investor-psychology]] — Corporate moral disengagement; ethical failure case studies in financial institutions
 - [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Moral foundations clash in international diplomacy
 - [[World Events/2026-05-30-pope-leo-xiv-magnifica-humanitas-ai-encyclical]] — Institutional religious moral authority engaging with technology ethics
+
+### Moral Injury: When Participation in Transgression Breaks the Self
+
+Moral injury is a clinically and theoretically distinct phenomenon from PTSD that has emerged as one of the most important constructs in contemporary trauma psychology, organizational ethics, and healthcare management. Unlike PTSD — which is rooted in fear-based responses to threat — moral injury arises from the violation of deeply held moral beliefs and values through one's own actions, failures to act, or witnessed conduct.
+
+**The Clinical Definition and Origins**
+
+Jonathan Shay coined "moral injury" in his landmark analysis of Vietnam veteran psychopathology (*Achilles in Vietnam*, 1994), identifying a syndrome in veterans who had participated in, witnessed, or failed to prevent acts they understood as profoundly wrong — betrayal by leaders ("what's right"), killing civilians, abandoning wounded comrades. Shay's formulation: moral injury involves not only traumatic experience but the specific shattering of moral identity that occurs when one's actions contradict one's self-concept as a morally worthy person.
+
+Litz, Stein, and colleagues (2009, *Clinical Psychology Review*) formalized the clinical definition that now governs research and treatment: moral injury is the lasting psychological, social, behavioral, and spiritual impact of perpetrating, failing to prevent, witnessing, or learning about acts that transgress deeply held moral beliefs and expectations. Crucially, this definition encompasses acts in which the person bore agency or responsibility — differentiating moral injury from PTSD, which can follow passive victimization with no moral implication for the victim.
+
+**Neurobiological and Clinical Differentiation from PTSD**
+
+Nash and Litz (2013) documented that moral injury and PTSD have distinct neurobiological signatures, clinical presentations, and treatment implications despite frequent comorbidity. PTSD is characterized by amygdala hyperreactivity and fear-based processing — the primary emotional experience is terror, hypervigilance, and avoidance driven by the perceived ongoing threat. Moral injury is characterized by prefrontal cortex activity in shame, guilt, and self-condemnation processing — the primary emotional experience is worthlessness, spiritual collapse, and social withdrawal driven by altered self-perception.
+
+Practically: the PTSD veteran avoids war movies because they trigger fear; the morally injured veteran avoids social connection because they feel fundamentally undeserving of care. CBT and exposure therapy — the gold standard for PTSD — are poorly matched to moral injury because they target fear extinction rather than shame and guilt resolution. Bryan et al. (2016, *Traumatology*, N=1,240 active-duty US military personnel) documented 23–26% prevalence of significant moral injury symptoms distinct from PTSD symptom burden — establishing that moral injury is not a subtype of PTSD but an independent clinical concern.
+
+**Adaptive Disclosure Therapy (ADT): Purpose-Built Treatment**
+
+Because standard PTSD protocols failed to address moral injury presentations, Litz et al. developed Adaptive Disclosure Therapy — an intervention that incorporates direct processing of the traumatic moral content rather than fear exposure. ADT includes a specific "moral repair" module involving: narrative disclosure of the morally transgressive event, imaginal dialogue with a compassionate moral authority (a real or imagined figure), and explicit processing of self-forgiveness and moral reintegration. RCT data (Gray et al. 2012, *Journal of Traumatic Stress*) demonstrated significantly superior outcomes to supportive counseling for morally injured active-duty marines — effect size d=0.68 for moral injury severity at 3-month follow-up.
+
+**Civilian Moral Injury: The Healthcare and Finance Contexts**
+
+While the original moral injury research was rooted in military experience, the construct has proven highly transferable to civilian professional contexts. Griffin et al. (2019, *Occupational and Environmental Medicine*, N=557 physicians and nurses) documented substantial moral injury in healthcare workers when institutional demands (cost-cutting, time constraints, bureaucratic protocols) forced care decisions that providers experienced as violations of their professional ethics — the structural parallel to combat moral injury where orders override individual moral judgment.
+
+Healthcare worker moral injury surged during the COVID-19 pandemic (Mantri et al. 2021): emergency medicine physicians forced to allocate ventilators, deny care to salvageable patients, or watch preventable deaths due to institutional failures experienced classic moral injury presentations — guilt, self-condemnation, occupational disengagement, and spiritual crisis — that standard "resilience training" interventions failed to address because they targeted stress management rather than moral repair.
+
+The financial crisis analog: Hamber (2016) analyzed financial professionals during and after the 2008 crisis, finding that employees who executed transactions they believed harmful to clients — following institutional directives — showed moral injury symptom profiles distinct from general occupational stress. The *Lady Macbeth effect* (Zhong & Liljenquist 2006, *Science*, N=27) documented the somatic response: participants who recalled an ethical violation subsequently chose cleaning products 76% of the time vs. 41% in control — the compulsive desire to remove "moral stain" manifesting through physical contamination-cleansing responses, operationalizing the colloquial "washing one's hands of it" metaphor in experimental conditions.

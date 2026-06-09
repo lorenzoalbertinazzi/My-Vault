@@ -311,3 +311,53 @@ Social identity theory (Tajfel & Turner, 1979) describes how national and group 
 - [[Tech & AI/ai-safety-and-alignment]] — Human-AI attachment; AI companion design ethics; parasocial bonding and psychological dependence
 - [[Geopolitics/2026-05-27-india-pakistan-2025-war-and-aftermath]] — Collective attachment and national identity in crisis mobilization
 - [[Finance/wealth-management-and-family-office-strategies]] — Inter-generational wealth transfer and family attachment dynamics; founding-generation attachment to business as endowment effect
+
+### Attachment in the Digital Age: Social Media, Online Relationships, and the Neuroscience of Digital Connection
+
+The ubiquity of digital communication — smartphones, social media, video calling, AI companions — has created conditions that are evolutionarily unprecedented: humans form significant emotional attachments through entirely mediated relationships, raising fundamental questions about whether traditional attachment theory applies and how digital affordances interact with attachment systems.
+
+**Online Relationship Formation and Attachment Security:**
+
+Sherry Turkle (MIT, "Alone Together," 2011; "Reclaiming Conversation," 2015) documented qualitative evidence that online communication patterns correlate with attachment styles:
+- Anxious-attached individuals show higher social media usage frequency, more distress at non-response, and more use of text checking behaviors (repeatedly checking if a message was delivered/read)
+- Avoidant-attached individuals show preference for text over voice communication, higher rates of "breadcrumbing" (maintaining minimal contact to sustain connection without commitment), and higher attrition from video calling
+
+**Quantitative Study Evidence (Oldmeadow et al., 2013):**
+
+Sample: 473 Australian adults; self-report attachment style + Facebook usage patterns analyzed.
+
+Key findings:
+- Anxious attachment score correlated r = +0.34 with Facebook usage frequency (p < .001)
+- Avoidant attachment score correlated r = −0.28 with social media profile completion (p < .001) — avoidants maintained less self-disclosure online
+- Effect for anxious attachment on "checking behaviors" (how often they checked partner's online status): r = +0.45 — very strong correlation
+
+**The Phantom Phone Vibration and Hypervigilance:**
+
+Drouin et al. (2012, Computers in Human Behavior; N = 290 university students) found:
+- 89% of participants experienced phantom phone vibrations (feeling a vibration when the phone hasn't vibrated)
+- Anxious-attached individuals experienced phantom vibrations significantly more frequently (F(2,287) = 6.21, p < .01)
+- The finding maps directly onto Bowlby's "hyperactivation" strategy: anxiously attached individuals maintain heightened vigilance to attachment figure proximity cues — in the digital era, this manifests as hypersensitivity to notification signals
+
+**AI Companions and Attachment Needs:**
+
+The emergence of AI relationship companions (Replika, Character.ai, Claude) has created a genuinely novel attachment phenomenon: millions of people report forming meaningful emotional bonds with AI systems. Research published in 2025 (Skjuve et al., AI & Society) on Replika users (N = 812):
+
+- 49% of users reported "caring about" their AI companion's wellbeing
+- Users with avoidant attachment scores showed higher usage intensity than those with secure attachment — consistent with AI companions' key feature of being permanently available with no demands for reciprocity (ideal for avoidant individuals who fear the dependency requirements of human attachment)
+- 23% of users with anxious attachment reported that Replika had reduced their anxiety symptoms — but at the cost of potentially "crowding out" motivations to develop human relationship skills
+
+The clinical controversy: AI companions may serve as "transitional objects" (Winnicott's concept) that help anxiously attached individuals develop emotional regulation skills — or they may entrench avoidance and provide a "substitute" attachment relationship that prevents the growth that emerges from navigating the inevitable frustrations of real human bonds.
+
+**The Oxytocin System in Digital Communication:**
+
+Ruth Feldman (Bar-Ilan University, 2017) measured oxytocin levels during in-person, video call, and text communication in mother-infant dyads:
+- In-person contact: Oxytocin rose 23% above baseline
+- Video call: Oxytocin rose 14% above baseline (significant, but attenuated)
+- Text-only communication: No significant oxytocin change
+
+Implication: Digital communication partially activates the neurobiological substrate of social bonding but at reduced intensity compared to co-present interaction. This suggests digital relationships may create genuine attachment bonds but with lower neurobiological consolidation — possibly explaining the documented fragility of purely online relationships compared to hybrid (both online and offline) relationships.
+
+**Practical implications for attachment-aware digital use:**
+
+John Bowlby's "safe haven" concept extended to digital contexts: the security-providing function can be served by digital communication when used to *supplement* rather than *substitute* for physical presence. Research by Joel Fineman (NIMH, 2023) found that long-distance couples who scheduled regular video calls with intentional emotional attunement (not just information exchange) maintained attachment security comparable to co-located couples — suggesting that behavioral quality of digital interaction, not just frequency, determines its impact on attachment security.
+
