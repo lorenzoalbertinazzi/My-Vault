@@ -3,7 +3,7 @@ title: Securitization, ABS, MBS, and Structured Products
 date: 2026-06-06
 tags: [finance, securitization, structured-products, ABS, MBS, CDO, CLO, credit, fixed-income, financial-crisis]
 source: BIS Quarterly Review, SIFMA, IMF Global Financial Stability Reports, Gorton & Metrick (2012)
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary

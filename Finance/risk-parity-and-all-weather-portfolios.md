@@ -3,7 +3,7 @@ title: Risk Parity and All-Weather Portfolios
 date: 2026-06-06
 tags: [finance, portfolio-management, risk-parity, asset-allocation, bridgewater, ray-dalio, volatility, diversification]
 source: Bridgewater Associates research, Dalio (2011) "Engineering Targeted Returns & Risks", Asness et al. (2012) "Leverage Aversion and Risk Parity", AQR Capital
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 ## Summary

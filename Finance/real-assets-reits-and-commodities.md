@@ -554,3 +554,76 @@ AI data center demand is fundamentally reshaping energy infrastructure investmen
 
 3. **"Electron yield" investing:** Some institutional investors now structure energy + data center investments as integrated packages — building a solar farm, battery storage, and data center on the same parcel, achieving near-zero marginal energy cost and premium data center pricing, creating a "power arbitrage" of 3–5× the solar energy value.
 
+### 2026 Real Assets: Hormuz Commodity Shock, Critical Mineral Geopolitics, and the Farmland Inflation Hedge
+
+The 2026 real assets landscape is being reshaped by three concurrent forces: the Hormuz crisis creating the most significant energy price dislocation since 2022, critical mineral supply chains becoming geopolitical weapons, and farmland establishing itself as the top-performing institutional real asset sub-class in an inflationary environment.
+
+#### Energy Commodities: The Hormuz Premium and Its Investable Implications
+
+The Iranian military threat to the Strait of Hormuz (through which approximately 21 million barrels per day of oil and 20% of global LNG transits) has created a structural "geopolitical risk premium" in energy commodities that systematic investors can both measure and monetize.
+
+**Hormuz premium decomposition (Brent crude, June 2026):**
+- Fundamental supply/demand baseline (pre-conflict): ~$78–82/barrel
+- Current spot: ~$95–105/barrel
+- Implied Hormuz premium: $13–23/barrel
+- Historical analogies: 1990 Gulf War premium = $28/barrel; 2011 Libya disruption = $20/barrel; 2022 Russia invasion = $30/barrel peak
+
+**Investment implications across the real asset spectrum:**
+
+*Oil & Gas (MLPs, Royalty Trusts):*
+US domestic producers are benefiting from the Hormuz premium without the supply disruption risk (Permian Basin, Bakken production unaffected by Middle East logistics). Enterprise Products Partners (EPD), Energy Transfer (ET) — major MLP operators with Gulf Coast export terminals — are capturing premium pricing with $3–5/barrel higher netbacks than pre-crisis. Current MLP distribution yields: 7–9% (elevated vs. 5–6% 2021–2024 average).
+
+*Natural Gas:*
+European TTF gas prices have risen to €42–48/MWh from €22–28 pre-crisis, as LNG alternatives to the Gulf route face diversion premiums. Henry Hub (US) is more insulated but the US LNG export capacity constraint limits US-Europe arbitrage. Net effect: US gas producers remain at $2.50–3.00/MMBtu while European buyers pay $12+ equivalent — the largest US-EU gas price spread in history outside of 2022.
+
+*Shipping and Infrastructure:*
+Tanker companies (Frontline, DHT Holdings, International Seaways) generating extraordinary returns as spot VLCC (Very Large Crude Carrier) day rates hit $100,000–150,000/day (vs. $20,000–30,000 pre-crisis). These are effectively leveraged plays on the Hormuz premium with limited long-dated forward pricing available.
+
+#### Critical Minerals: The Geopolitical Real Asset Frontier
+
+The energy transition requires an estimated 6× increase in critical mineral production (copper, lithium, cobalt, nickel, manganese, rare earth elements) by 2040 (IEA). The intersection of this demand with geographic supply concentration in geopolitically complex jurisdictions creates a new real asset investment category: **critical mineral royalties and streaming**.
+
+**Supply concentration risks (2026 data):**
+- Cobalt: 72% of production in Democratic Republic of Congo (DRC); Glencore controls 40% of DRC cobalt
+- Lithium: 68% in Chile, Australia, Argentina; Chile's lithium nationalization capped Albemarle/SQM expansion
+- Nickel: 48% in Indonesia; export ban on unprocessed ore forces processing within Indonesia
+- Rare earths: 60% in China (processing >80% of global raw material regardless of origin)
+
+**The royalty streaming model as inflation-protected real asset:**
+Franco-Nevada (FNV) and Royal Gold (RGLD) pioneered streaming/royalty models for gold mining; the structure is now being applied to critical minerals. A streaming agreement:
+- Investor provides upfront capital to a mining company ($500M example)
+- In return, receives right to purchase X% of future metal production at a fixed, below-market price (e.g., 20% of copper production at $1.50/lb when spot is $4.50/lb)
+- Revenue grows with production volume AND benefits if spot prices rise above the stream price
+
+**Return characteristics:** Critical mineral royalty portfolios target 12–16% IRR with:
+- Inflation protection (royalties are a % of revenue, not fixed cost → rise with commodity prices)
+- Geopolitical risk mitigation (diversified across multiple countries/mines)
+- No direct operational risk (royalty holder bears no mining cost risk)
+
+The 2026 US CHIPS Act and EU Critical Raw Materials Act have created government-sponsored demand for domestically-processed critical minerals, creating an additional off-take support structure for royalty agreements in North American and European mines.
+
+#### Farmland: The Overlooked Inflation Hedge
+
+While commodities and REITs typically dominate real asset discussions, **farmland** has delivered the most consistent inflation-protected returns of any real asset sub-class over the 2020–2026 period:
+
+**US Farmland Return Data (NCREIF Farmland Index):**
+- 2022: +21.4% total return (income + appreciation)
+- 2023: +14.2% total return
+- 2024: +11.8% total return
+- 2025: +12.1% total return
+
+These returns combine:
+- **Land appreciation:** Driven by agricultural commodity prices (corn, soy, wheat at elevated levels from Ukraine disruption), demand for biofuel/SAF (Sustainable Aviation Fuel) feedstocks, and limited supply (USDA: arable land per capita declining at 1.2% annually)
+- **Rental income:** Cash rent from tenant farmers, typically CPI-escalated with 3–5 year lease terms, providing 3–4% annual income component
+
+**Farmland inflation correlation:** 0.72 (vs. 0.55 for commodities futures, 0.35 for REITs) — the highest of any liquid investable real asset class.
+
+**Access vehicles:**
+- **Gladstone Land (LAND):** Public farmland REIT; 168 farms, 113,000+ acres across 15 states
+- **Farmland Partners (FPI):** Larger public REIT; 186,000+ acres; tenants include Archer-Daniels Midland
+- **Nuveen Farmland:** Private real asset vehicle for institutional LPs; $2B+ AUM; ~$12,500/acre average valuation
+- **AcreTrader:** Direct farmland investment platform for accredited investors; minimum $10,000; provides fractional ownership
+
+**The carbon credit overlay:**
+Farmland in 2026 is increasingly valued not just for crop production but for carbon sequestration. Regenerative agriculture practices (no-till, cover cropping, soil carbon buildup) generate voluntary carbon credits worth $30–80/tonne CO2. A 1,000-acre US Midwest farm sequestering 0.5 tonnes CO2/acre/year × $50/credit = $25,000/year in additional carbon income on top of $100,000+ in crop rental income — approximately a 25% income boost. This "carbon premium" in farmland valuations is not yet fully priced by public REIT multiples, potentially creating a systematic undervaluation that real asset investors can exploit.
+
