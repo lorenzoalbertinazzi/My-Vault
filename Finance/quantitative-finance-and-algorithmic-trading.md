@@ -504,3 +504,73 @@ The most fundamental epistemological challenge in quantitative finance is the pr
 - [[Tech & AI/transformer-architecture]] — Temporal Fusion Transformers for financial time series; attention mechanisms and return prediction  
 - [[Tech & AI/reinforcement-learning-from-human-feedback]] — RL for optimal trading execution; dynamic programming in derivatives hedging  
 - [[Psychology/mental-models]] — Bayesian reasoning as the core epistemological tool for quant research; prior formation about alpha plausibility
+
+### Machine Learning in Production Quantitative Finance: Architecture, Pitfalls, and 2026 Developments
+
+The application of machine learning to quantitative finance has moved from academic experimentation to production deployment at scale. Understanding the specific ways ML succeeds and fails in financial applications requires addressing issues that don't arise in other ML domains: non-stationarity, low signal-to-noise ratio, and look-ahead bias.
+
+**The Financial ML Problem: Why Standard ML Fails**
+
+Standard ML (image classification, natural language processing) operates in domains where:
+- Signal-to-noise ratio is high (90%+ of variation is signal)
+- Data is stationary (images of cats look the same in 2015 and 2025)
+- Data is abundant (billions of labeled examples)
+
+Financial ML must cope with:
+- **Extreme low signal-to-noise:** A stock return prediction R² of 1–3% is *excellent*; in NLP, 1% R² would be useless
+- **Non-stationarity:** Relationships that held in 2010 (e.g., value factor premium) may not hold in 2020 (value decade-long underperformance) for fundamental economic reasons
+- **Small effective sample size:** 20 years of daily data = 5,000 observations; 20 years of monthly = 240 — tiny by ML standards
+- **Survivorship and look-ahead bias:** Constructing datasets without these biases is extremely difficult; most published results are contaminated
+
+**The Marcos López de Prado Framework (Advances in Financial Machine Learning, 2018):**
+
+López de Prado's work has become the practitioner standard for avoiding ML pitfalls in finance. Key contributions:
+
+**1. Fractional differentiation for stationarity:**
+Financial time series (prices) are non-stationary (unit root processes). Standard ML requires stationary inputs. Log-returns are stationary but lose "memory" of price levels. Fractional differentiation with parameter d ∈ (0,1) achieves a balance:
+
+```
+x̃_t = Σₖ w_k × x_{t-k}
+
+Where w_k = Π_{j=0}^{k-1} (d-j)/(j+1) (binomial series coefficients)
+
+d = 1: standard differencing (full stationarity, zero memory)
+d = 0: original level series (maximum memory, non-stationary)
+d ≈ 0.3–0.5: minimum differencing for stationarity while retaining maximum memory
+```
+
+Testing stationarity at the minimum d value that passes ADF (Augmented Dickey-Fuller) test preserves historical patterns while satisfying ML input requirements.
+
+**2. Purging and embargo for cross-validation:**
+
+Standard k-fold cross-validation assumes observations are i.i.d. (independent and identically distributed). Financial observations have overlap (monthly features constructed from daily data create 20-day overlapping windows), which contaminates train/test splits. The solution:
+- **Purging:** Remove all training samples whose label-generation period overlaps with the validation period
+- **Embargo:** After each validation fold, impose a time embargo (e.g., 5 days) before the next training fold begins
+
+Without purging and embargo, reported Sharpe ratios in backtests are typically 2–4× inflated — explaining why live performance consistently disappoints published backtests.
+
+**3. Feature importance: MDI vs. MDA vs. SFI:**
+
+Three methods for measuring which features drive model predictions:
+- **Mean Decrease Impurity (MDI):** Standard Random Forest feature importance; biased toward high-cardinality features
+- **Mean Decrease Accuracy (MDA):** Permutation importance; robust but slow
+- **Single Feature Importance (SFI):** Train model with only one feature at a time; cleanest isolation but misses interactions
+
+**The 2026 Deep Learning Applications:**
+
+**Transformer-based price prediction:**
+Adapted from NLP, temporal transformers (TFT — Temporal Fusion Transformer, Lim et al. 2019) process multi-asset return sequences with attention mechanisms that identify which time steps are most predictive. In production at Two Sigma (publicly disclosed in research), TFTs achieve Sharpe ratios ~10–15% above comparable LSTM baselines for medium-frequency equity signals.
+
+**LLM-based alternative data extraction:**
+Large language models extract alpha signals from:
+- Earnings call transcripts (tone, executive confidence, specific forward guidance)
+- Patent filings (technology advancement timing signals)
+- SEC filings (material changes buried in footnotes)
+- Social media sentiment (Reddit, Twitter/X — but regime changes as platforms evolve)
+
+The key challenge: **regime change detection**. When ChatGPT became widely available (November 2022), retail investors began using LLMs to analyze earnings transcripts — potentially arbitraging the same signals institutional quants were extracting. Signals based on pre-2023 transcript analysis may now have compressed half-lives.
+
+**Reinforcement learning for execution:**
+
+Almgren-Chriss (2000) optimal execution has been extended using RL agents that learn environment-specific execution policies. DeepMind's collaboration with financial firms (undisclosed) has produced RL execution agents that learn to minimize market impact costs through adaptive arrival price strategies, outperforming VWAP by 3–7bps on average in liquid US equities.
+

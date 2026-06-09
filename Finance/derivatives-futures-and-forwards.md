@@ -382,3 +382,77 @@ The most significant derivatives market development in 2025–2026 is the rapid 
 - [[Tech & AI/cryptography-fundamentals-and-zero-knowledge-proofs]] — ZK-proofs for private derivatives settlement; privacy-preserving margin calculation  
 - [[World Events/2026-05-30-uae-exits-opec-oil-market-shift]] — UAE production expansion and commodity futures market structure disruption  
 - [[Psychology/game-theory-and-strategic-thinking]] — Nash equilibrium in derivative market microstructure; hedger-speculator interaction
+
+### Energy Derivatives in the Geopolitical Era: Brent Crude Options and the 2026 Hormuz Premium
+
+The 2026 Iran-US conflict and the resulting Strait of Hormuz crisis provided one of the most significant stress tests of energy derivatives markets in a generation, illuminating how geopolitical risk prices through the options market and what the structure of crude oil options tells us about market-implied supply disruption risk.
+
+**Brent Crude Options: Volatility Surface Structure**
+
+Crude oil options trade on an implied volatility surface with three key dimensions:
+- **Strike (moneyness):** ATM vs. OTM calls vs. OTM puts
+- **Tenor:** Front-month vs. back-months
+- **Call skew:** OTM calls carry premium relative to puts in crude oil (unlike equities where puts are expensive) — because "supply shock" scenarios (upside for oil) are more feared than demand destruction scenarios
+
+**The Hormuz risk premium in options terms (June 2026 empirical data):**
+Before the Iranian mine-laying in May 2026:
+- 3-month ATM implied volatility: ~32%
+- 25-delta call/put skew: +8 vols (calls premium over puts)
+- 1-month ATM IV: ~28%
+
+During the escalation (June 2026):
+- 3-month ATM IV: ~58% (81% increase)
+- 25-delta call skew: +22 vols (extreme call premium — market pricing upside scenarios)
+- Near-term (2-week) IV: ~85% (extreme short-term uncertainty)
+
+**Calculating the options-implied supply disruption probability:**
+
+Using risk-neutral probability framework, the price of an OTM call tells us the probability-weighted expected value of a price spike. For a $150/barrel call on Brent (spot ~$96 at the time):
+
+```
+Call price (~$8.50/barrel) ≈ π × E[Brent - $150 | Brent > $150] × e^(-rT)
+
+Solving backward for π (risk-neutral probability of breach):
+π ≈ C / [E(payoff given exercise) × discount]
+π ≈ $8.50 / [$25 × 0.995] ≈ 34%
+```
+
+This implied ~34% probability of Brent exceeding $150/barrel within 3 months — an extreme reading reflecting genuine uncertainty about Hormuz closure duration, not a permanent expectation.
+
+**The cost-of-carry in energy futures and storage dynamics:**
+
+The **convenience yield (q)** is unique to physical commodities and represents the value of having immediate access to the physical commodity:
+
+```
+F₀ = S₀ × e^((r + u - q)T)
+
+For Brent crude (June 2026):
+S₀ = $96/barrel
+r = 5.2% (risk-free)
+u = 0.8%/year storage cost (Cushing tank farms: ~$0.08/month)
+q = ? (solved from futures curve)
+
+1-month F = $97.20 → e^(0.052+0.008-q)/12 implies q ≈ 0.005/month = 0.06% convenience yield (very low, market in contango)
+12-month F = $94.50 → backwardation in back-months, implying q ≈ 0.9% annual at 12-month tenor
+```
+
+**Backwardation vs. Contango:**
+- **Backwardation** (front > back): F < S; convenience yield high; physical market tight; OPEC discipline
+- **Contango** (front < back): F > S; storage builds; carrying costs positive; convenience yield low
+
+The Hormuz crisis created a *transient* acute backwardation in front months (1–3 month horizon) while the back-months (6–12 months) remained in contango — encoding the market's expectation that the disruption was temporary (risk premium) rather than permanent (structural scarcity).
+
+**Structured product application: Asian oil options for hedging**
+
+Airlines and shipping companies hedge fuel costs using **Asian options** (average-price options) because their fuel cost exposure is the average price over the entire quarter, not a single date:
+
+```
+Asian Call payoff = max(0, Average(S₁, S₂, ... Sₙ) - K)
+
+For Qatar Airways: hedge 70% of Q3 2026 fuel needs at $85/barrel ceiling
+Cost of Asian call: $4.20/barrel (much cheaper than European call due to averaging effect)
+Break-even: only achieves positive P&L if average Brent > $89.20 for Q3
+```
+
+The averaging mechanism reduces option cost by ~30–40% vs. European options on the same strike, making them the standard hedging tool in the airline industry.
+

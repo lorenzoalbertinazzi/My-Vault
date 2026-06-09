@@ -489,3 +489,68 @@ The 2026 geopolitical environment has elevated resource nationalism — governme
 - [[Geopolitics/2026-06-06-south-china-sea-philippines-china-tensions-2026]] — South China Sea seabed mineral rights and critical mineral supply chain geopolitics  
 - [[Tech & AI/edge-computing-and-on-device-ai]] — AI hardware demand for critical minerals; edge computing data center real estate  
 - [[Psychology/evolutionary-psychology-and-human-behavior]] — Evolutionary psychology of land ownership; property as extended phenotype
+
+### Data Center Infrastructure Finance: The AI-Driven Real Asset Supercycle
+
+The explosion of AI computing demand has created the most significant new real asset investment category in two decades: **hyperscale data center infrastructure**. Understanding the financial economics of this sector requires integrating traditional real estate analytics with technology infrastructure and energy considerations.
+
+**The AI Compute Demand Curve:**
+
+The scale of AI training and inference compute requirements has been consistently underestimated by market participants:
+- GPT-3 (2020): ~3.1 × 10²³ floating point operations (FLOPs) training compute
+- GPT-4 (2023): estimated ~2 × 10²⁵ FLOPs (64× increase)
+- Frontier models (2026): ~10²⁷ FLOPs (100× GPT-4, or 6,400× GPT-3)
+- Semiconductor efficiency improvements: ~2× per 18 months (Moore's Law analog for ML compute)
+
+Even accounting for efficiency gains, **inference demand** (running models, not training) has grown faster than training because every API call, every AI assistant, every model serving constitutes inference. Inference represents ~60–70% of total AI compute demand (vs. training's 30–40%) and scales with user adoption, not just frontier model development.
+
+**The Power Constraint and Energy Finance:**
+
+Modern AI data centers are constrained by **power availability**, not physical space. A standard 2010-era data center: ~10–15 kW/rack. AI GPU clusters: 80–130 kW/rack. Liquid cooling is now essential (traditional air cooling fails above ~30 kW/rack).
+
+```
+Financial model for a 100MW AI data center (Tier IV standard):
+
+Capital expenditure:
+  Land and construction:              $800M
+  Power infrastructure (transformers,
+    switchgear, backup generators):   $600M
+  Cooling (liquid cooling systems):   $400M
+  Networking (100G+ fiber):           $200M
+  Total CapEx:                      $2,000M
+
+Annual operating costs at 100% utilization:
+  Power (100MW at $0.06/kWh × 8,760h):  $52.6M/year
+  Labor (200 FTE at $120K avg):          $24M/year
+  Maintenance & O&M:                     $40M/year
+  Total OpEx:                           $116.6M/year
+
+Revenue model (Hyperscaler lease at $12M/MW/year):
+  Annual revenue (100MW):               $1,200M/year
+  NOI = Revenue - OpEx:                 $1,083M/year
+  Cap Rate (market comp 2026):          ~5.5%
+  Implied Property Value:               $1,083M / 0.055 = $19.7B
+  
+  Development profit: $19.7B - $2.0B construction = $17.7B (!!)
+  Return on Cost: $1,083M / $2,000M = 54.2%
+```
+
+This extraordinary return profile explains why institutional capital has flooded into data center development: a "stabilized" AI data center with a hyperscaler tenant produces capitalized values 9–10× construction cost — compared to industrial warehouses (Prologis-style) at 1.5–2× construction cost.
+
+**REIT Sector Performance:**
+
+The data center REIT sector (Equinix EQIX, Digital Realty DLR, Iron Mountain IRM, CyrusOne) significantly outperformed the broader REIT index:
+- 2023: Data center REITs +40% vs. FTSE NAREIT All Equity +12%
+- 2024: Data center REITs +22% vs. FTSE NAREIT All Equity +8%
+- 2026: Sustained premium; Equinix trades at 35× AFFO (vs. ~22× for broad REIT average)
+
+**The Energy-Real Asset Nexus:**
+
+AI data center demand is fundamentally reshaping energy infrastructure investment. Key dynamics:
+
+1. **Nuclear renaissance:** Hyperscalers (Google, Amazon, Microsoft) are signing long-term Power Purchase Agreements (PPAs) directly with nuclear power plants to guarantee clean, reliable 24/7 power. Three Mile Island (Unit 1, Constellation Energy) was restarted after Microsoft signed a 20-year PPA. Small Modular Reactors (SMRs) — particularly NuScale and TerraPower designs — are now viable investable assets precisely because AI data center demand creates the creditworthy long-term off-take needed to justify nuclear development costs.
+
+2. **Grid interconnection queue:** In the US, the FERC interconnection queue for new power projects (renewables + data center substations) exceeded 2,600 GW in 2025 — approximately 2.5× the current US generating capacity waiting for grid connection. The bottleneck is not power generation but **transmission infrastructure** — creating a ~$500B infrastructure investment opportunity over 2025–2035 (EPRI estimate).
+
+3. **"Electron yield" investing:** Some institutional investors now structure energy + data center investments as integrated packages — building a solar farm, battery storage, and data center on the same parcel, achieving near-zero marginal energy cost and premium data center pricing, creating a "power arbitrage" of 3–5× the solar energy value.
+

@@ -573,3 +573,56 @@ The GPR framework (Caldara-Iacoviello) was developed to measure the impact of ki
 - [[Tech & AI/federated-learning-and-privacy-preserving-ml]] — Intelligence sharing among allies; privacy-preserving threat detection across borders  
 - [[Psychology/psychology-of-leadership]] — Elite decision-making under crisis; groupthink vs. devil's advocacy in foreign policy  
 - [[World Events/2026-06-06-iran-gulf-escalation-kuwait-bahrain-june-2026]] — 2026 Gulf escalation case study in geopolitical risk premium
+
+### Sanctions as Financial Weapons: The Quantitative Architecture of Economic Coercion
+
+The weaponization of the international financial system through sanctions has accelerated dramatically since 2022, creating a new sub-discipline of financial analysis: quantifying the economic and market impact of sanctions regimes with precision.
+
+**The Architecture of Modern Financial Sanctions:**
+
+The US Treasury's Office of Foreign Assets Control (OFAC) administers the world's most extensive sanctions infrastructure. Key designations:
+
+- **SDN (Specially Designated Nationals) List:** ~12,000 individuals, entities, vessels, aircraft banned from US financial system; any US person transacting with SDNs faces criminal liability up to $1M and civil penalties of $356,579 per violation (2026 adjusted figure)
+- **CAATSA (Countering America's Adversaries Through Sanctions Act, 2017):** Secondary sanctions — third-country entities that "knowingly" transact with sanctioned Russian defense/intelligence entities face US penalties
+- **SWIFT disconnection:** Russia's removal from SWIFT (March 2022) affected ~8 of 10 largest Russian banks, disrupting ~90% of their international transaction capability within 72 hours
+
+**Quantifying the Russia sanctions impact (case study):**
+
+Pre-invasion baseline (January 2022): Russia GDP = $1.78 trillion, foreign reserves = $643B, current account surplus = ~$120B/year.
+
+By December 2022 outcome (IMF revision):
+- GDP fell -2.1% (much smaller than the -10 to -15% predicted by consensus)
+- Ruble recovered from 140/$1 to 60/$1 after emergency measures (mandatory FX repatriation, 20% emergency rate hike to 20%)
+- But long-run damage: technology embargo + capital goods import ban has de-industrialized the economy
+- 2026 IMF estimate: Russia's potential output permanently reduced by 8–12% relative to pre-war trajectory
+
+**Why sanctions underperformed short-run expectations:**
+1. Russia ran a commodity export economy; energy exports continued (particularly to Asia)
+2. Trade redirection: India increased Russian oil imports from near zero to ~2M barrels/day by 2025; China absorbed LNG, fertilizers, grain
+3. "Sanctions arbitrage": Turkish, UAE, and Central Asian entities provided re-export channels for sanctioned goods
+4. The ruble's recovery used capital controls that suppressed imports rather than generating real economic adjustment
+
+**Damodaran Country Risk Premium with Sanctions:**
+
+The standard Damodaran framework adjusts discount rates for country risk:
+```
+Country Risk Premium (CRP) = Sovereign Spread × (σ_equity / σ_bonds)
+
+Russia (June 2026 estimates):
+Sovereign Spread: effectively defaulted; EMBI+ spread not calculable
+σ_equity: MOEX continues trading; volatility ~45%/year
+σ_bonds: Russian bonds not tradeable for Western investors
+CRP for Russia: effectively infinite for Western portfolio investors → total exclusion from institutional indices
+```
+
+MSCI removed Russia from all its indices in March 2022. Russia's weight in MSCI EM was ~3.2% — equivalent to approximately $20–35 billion in passive forced selling as index funds rebalanced. This contributed to the market impact beyond the fundamental economic damage.
+
+**The Sanctions Evasion Industry and Financial Intelligence:**
+
+A $50–100 billion annual industry has emerged to facilitate sanctions evasion. Key mechanisms:
+- **Shell company networks:** Front companies in non-sanctioned jurisdictions (UAE, Turkey, Armenia, Georgia) that act as intermediaries
+- **Ship-to-ship oil transfers:** Sanctioned tankers transfer cargo to non-sanctioned vessels at sea (documented by Kpler and TankerTrackers satellite tracking)
+- **Correspondent banking "nesting":** Small banks in non-sanctioned jurisdictions access US correspondent banking relationships to process payments on behalf of sanctioned entities (the subject of OFAC enforcement actions worth $1.3B in fines in 2024–2025)
+
+The investment implication: companies with significant exposure to sanctions-adjacent jurisdictions face growing compliance risk and reputational risk that creates a measurable discount in valuations — the "sanctions discount" estimated at 15–25% for companies with substantial Russia/Iran/North Korea-adjacent revenues.
+

@@ -261,3 +261,56 @@ Islamic finance's core profit-sharing contracts (mudarabah — silent partnershi
 - [[Finance/sovereign-wealth-funds]] — GCC SWFs as primary allocators to Islamic finance  
 - [[Geopolitics/2026-05-30-israel-palestine-gaza-war-2026]] — BDS movement and Islamic finance as alternative for Muslim institutional investors divesting from Israel-linked assets  
 - [[World Events/2026-05-30-uae-exits-opec-oil-market-shift]] — UAE production expansion and Islamic finance AUM growth acceleration
+
+### Sukuk Structuring Deep Dive: Issuance Mechanics and Pricing
+
+Sukuk issuance has become a sophisticated financial engineering discipline that, while rooted in Shariah compliance, requires the same level of technical precision as any structured finance transaction. Understanding the mechanics illuminates both the innovation and the constraints of Islamic capital markets.
+
+**Sukuk Ijarah Step-by-Step Issuance:**
+
+Consider a sovereign sukuk issued by Malaysia's government (MYR 5 billion, 5-year tenor, 2026):
+
+**Step 1 — Asset identification:** The Malaysian government identifies qualifying assets — typically government-owned real estate, infrastructure, or rights — to serve as the underlying ijara asset. In this case, selected government buildings with combined appraised value of MYR 6 billion.
+
+**Step 2 — SPV establishment:** A Labuan-incorporated SPV (Malaysia Global Sukuk Inc.) is established as the issuer. The SPV is bankruptcy-remote from the government.
+
+**Step 3 — Asset sale (true sale or beneficial title):** The government transfers *beneficial interest* (not full legal title, which would be impractical for government property) in the buildings to the SPV.
+
+**Step 4 — SPV leases back to government:** The SPV leases the buildings back to the government at a rent equal to the sukuk profit rate (e.g., 4.2% per annum on MYR 5B = MYR 210M annually).
+
+**Step 5 — Sukuk certificate issuance:** The SPV issues certificates to investors, who each hold proportional beneficial ownership in the sukuk pool. Investors receive the lease income (MYR 210M/year) distributed proportionally.
+
+**Step 6 — Purchase undertaking at maturity:** The government commits to purchase back the asset from the SPV at maturity at the original price (MYR 5 billion). This purchase undertaking (wa'd) is a unilateral promise, not a bilateral contract — a key Shariah distinction that avoids guaranteed capital return.
+
+**Pricing dynamics:**
+
+Sukuk pricing relative to conventional bonds reflects the following components:
+
+```
+Sukuk Profit Rate = Risk-Free Rate + Credit Spread + Liquidity Premium - Structural Premium
+
+For Malaysia Sovereign Sukuk (2026):
+Risk-Free Rate (MGS benchmark):  4.05%
+Credit Spread:                   0.12% (sovereign Malaysia)
+Liquidity Premium:               0.08% (smaller market than conventional)
+Structural Premium:              -0.05% (SRI/ESG demand creates slight demand premium)
+─────────────────────────────────────────
+Sukuk Profit Rate:               4.20%
+```
+
+**Innovative structures: Sustainability Sukuk (Sustainable and Responsible Investment Sukuk)**
+
+Malaysia's Securities Commission has introduced the SRI Sukuk Framework (2014, enhanced 2020), enabling sukuk proceeds to fund projects meeting both Shariah AND ESG criteria. By 2025, SRI sukuk issuance reached MYR 48 billion (cumulative), making Malaysia the global leader in SRI sukuk. The Green Sukuk segment specifically funds renewable energy projects — Malaysia's Tadau Energy issued the world's first green sukuk in 2017 ($58M for solar PV plants in Sabah).
+
+**The Shariah Compliance Risk in Sukuk:**
+
+A critical but underappreciated risk in sukuk investing is "Shariah annulment risk" — the possibility that a Shariah Supervisory Board ruling or fatwa later determines the structure was non-compliant, potentially voiding the instrument. This occurred in 2008 when the AAOIFI (Accounting and Auditing Organization for Islamic Financial Institutions) issued a controversial ruling that approximately 85% of existing sukuk structures were non-compliant because they included unconditional purchase undertakings (which are economically similar to capital guarantees, thus resembling interest-bearing debt).
+
+The ruling caused significant market disruption — sukuk issuance fell sharply in 2008–2009 as the market restructured. The resolution involved replacing "unconditional" purchase undertakings with "performance-linked" undertakings in new issuances, while grandfathering existing structures. This episode illustrates a unique regulatory risk specific to Islamic finance: regulatory authority is exercised through religious jurisprudence rather than secular law.
+
+**Scholarly divergence and market fragmentation:**
+
+The four major Sunni jurisprudential schools (Hanafi, Maliki, Shafi'i, Hanbali) and the distinct Gulf/Malaysian regulatory traditions create genuine cross-market incompatibilities. A tawarruq structure acceptable under the AAOIFI's Gulf-centric standards may be refused by Malaysia's Securities Commission. This "Shariah arbitrage" — where issuers structure in the more permissive jurisdiction — has been a persistent feature of the market since 2008.
+
+The Islamic Financial Services Board (IFSB) and AAOIFI coordinate internationally but their standards are advisory, not legally binding. Market participants estimate that full global standardization would increase sukuk issuance by 30–40% by reducing friction costs for cross-border transactions.
+

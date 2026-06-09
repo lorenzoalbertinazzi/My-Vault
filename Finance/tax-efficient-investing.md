@@ -240,3 +240,72 @@ Direct indexing — holding individual stocks in a portfolio rather than a poole
 - [[Psychology/habit-formation]] — Tax-deferral as forced saving habit; commitment devices in retirement account design  
 - [[Geopolitics/2026-06-06-latin-america-geopolitics-us-china-influence-2026]] — Offshore tax jurisdiction dynamics; OECD Pillar Two minimum global tax and capital flows  
 - [[Psychology/prospect-theory-and-decision-making]] — Disposition effect as behavioral tax inefficiency; loss aversion overriding tax-rational decision-making
+
+### Direct Indexing: The Personalized Tax Alpha Revolution
+
+**Direct indexing** — owning the individual securities comprising an index in a separately managed account (SMA) rather than an index fund — has become the fastest-growing innovation in wealth management since the creation of ETFs, driven primarily by its superior tax optimization capabilities and the declining cost of zero-commission trading.
+
+**How Direct Indexing Works:**
+
+Instead of buying the S&P 500 ETF (SPY), a direct indexing client holds 300–500 individual stocks in proportions that replicate the index's risk profile. This creates opportunities unavailable in pooled funds:
+
+```
+Traditional ETF approach:
+  Own SPY ($500K)
+  If SPY -15% in sector sell-off: $75K paper loss
+  Tax consequence: NO realized loss (still holding ETF)
+  
+Direct indexing approach:
+  Own ~400 individual S&P 500 stocks ($500K)
+  If tech sector sells off -25% (with 25% portfolio weight): $31K loss in tech stocks
+  Tax consequence: CAN harvest $31K in losses while:
+    (a) maintaining sector exposure via replacements (Microsoft → Alphabet)
+    (b) avoiding wash sale rules via 30-day waiting + similar-but-not-identical replacements
+```
+
+**The annual tax alpha from direct indexing:**
+
+Independent research consistently finds that direct indexing generates 1–2% annual tax alpha through systematic harvesting:
+- Aperio (now Blackrock): documented 1.1% after-tax alpha for typical portfolios
+- Parametric Portfolio Associates: 1.5–2.0% for tax-sensitive clients with high realized gains elsewhere
+- Wealthfront direct indexing: 1.3% documented alpha for 15-year simulations
+
+Over 30 years at 7% gross return, 1.5% annual tax alpha produces:
+```
+$1M × (1.07 - 0.00)^30 = $7.61M (no tax drag, pre-withdrawal)
+$1M × (1.07 - 0.015)^30 = $5.74M (0% tax alpha = standard ETF)
+$1M × (1.07 - 0.00)^30 = $7.61M ($4.41M difference from 1.5% drag avoidance over 30 years)
+```
+
+Actually, the comparison should account for taxes at sale — but the compound growth differential from deferring taxable events is meaningful.
+
+**The Wash Sale Rule and Direct Indexing Navigation:**
+
+IRS Revenue Code Section 1091 prohibits claiming a loss if you repurchase the "same or substantially identical" security within 30 days before or after the sale. Direct indexing navigates this through:
+- **Cross-ticker substitution:** Sell AAPL (after a -20% decline), immediately buy MSFT → same sector, different ticker = not wash sale
+- **Sector fund bridging:** Sell individual stocks at a loss, hold sector ETF for 31 days, then reconstitute individual positions
+- **Tax-lot specific identification:** Sell highest-cost lots first (HIFO — Highest In, First Out) to maximize realized losses
+
+**Concentration risk integration:**
+
+For clients with concentrated stock positions (pre-IPO shares, employer stock, inherited positions), direct indexing can build a custom complementary portfolio that:
+1. Provides S&P 500 exposure while *excluding* the concentrated stock and its sector
+2. Gradually diversifies the concentrated position through systematic loss harvesting in other securities
+3. Manages the estate planning dimension (stepped-up cost basis at death may make it optimal to delay realization)
+
+**The personalization dimension beyond tax:**
+
+Modern direct indexing platforms (Parametric, Aperio/BlackRock, Canvas by Wealthfront, Fidelity Managed FidFolios) offer additional customization:
+- **ESG/values screens:** Exclude specific companies (tobacco, weapons, prisons, fossil fuels) from the index replication
+- **Factor tilts:** Systematically overweight value, quality, or low-volatility stocks within the index framework
+- **Custom restrictions:** Companies with specific labor practices, political donations, or governance failures excluded on request
+
+**Minimum AUM requirements and democratization:**
+
+The traditional direct indexing minimum was $500K–$1M (due to fractional share limitations and trading costs). The zero-commission revolution and fractional shares at Schwab, Fidelity, and Apex Clearing have reduced minimums:
+- Wealthfront Direct Indexing: $100,000 minimum (2024)
+- Fidelity Managed FidFolios: $5,000 minimum (2025) — "mass affluent" democratization
+- Robinhood direct indexing pilot: $2,000 minimum (2026) — retail democratization
+
+By 2026, direct indexing AUM in the US exceeded $500 billion, up from $350 billion in 2023 — the fastest-growing segment of wealth management.
+

@@ -525,3 +525,73 @@ Duration (Macaulay duration) — the weighted average time to receive a bond's c
 - [[Tech & AI/quantum-computing-architecture-and-applications]] — Quantum algorithms for bond portfolio optimization; quantum Monte Carlo for mortgage-backed security valuation  
 - [[Psychology/memory-systems-and-learning-science]] — Duration as cognitive metaphor; how bond traders build intuition for time-value structures  
 - [[Geopolitics/2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — Long-dated bond risk in European defense spending escalation; fiscal dominance risk in NATO economies
+
+### The 2026 Yield Curve: Disinversion, Term Premium, and Duration Management
+
+After the most aggressive Federal Reserve tightening cycle in 40 years (525bps in 16 months, 2022–2023), the US Treasury yield curve underwent a historically significant evolution in 2024–2026 that offers a rich case study in fixed income analytics.
+
+**The Yield Curve Inversion and Its Resolution:**
+
+**Timeline of the 2023–2026 curve dynamics:**
+- Peak inversion: July 2023 — 2-year Treasury at 5.09%, 10-year at 3.86% → 2s10s spread = −123bps (most inverted since 1981)
+- December 2024: Fed begins cutting; 2s10s spread narrows to −45bps
+- March 2025: Curve "uninverts" — 2s10s at +5bps (first positive reading since 2022)
+- June 2026: 2-year at 3.85%, 10-year at 4.72% → 2s10s spread = +87bps (steepened curve)
+
+The steepening occurred through a **bear steepener** mechanism in 2025–2026: long-term yields rose faster than short-term yields, driven by:
+1. **Term premium re-emergence:** After a decade near zero, the 10-year ACM term premium (Adrian, Crump, Moench model at NY Fed) rose from −0.8% in 2021 to +1.1% in June 2026 — the highest since 2014
+2. **Fiscal premium:** US federal deficit running 5–6% of GDP in peacetime raised concern about Treasury supply overwhelming demand; the "Treasury premium" or "fiscal risk premium" became measurable
+3. **Inflation uncertainty persistence:** Real yields at the long end reflect long-run neutral rate uncertainty; r* estimates rose from ~0.5% to ~1.2% (NY Fed estimate)
+
+**Term Premium Decomposition:**
+
+The 10-year Treasury yield can be decomposed as:
+```
+y₁₀ = r*₁₀ + π*₁₀ + TP₁₀
+
+Where:
+r*₁₀ = expected average real short rate over 10 years
+π*₁₀ = expected average inflation over 10 years
+TP₁₀ = term premium (compensation for duration risk)
+```
+
+Using ACM model data (June 2026):
+- y₁₀ = 4.72%
+- r*₁₀ ≈ 1.2% (estimated neutral real rate)
+- π*₁₀ ≈ 2.3% (5y/5y forward breakeven)
+- TP₁₀ = 4.72% − 1.2% − 2.3% = **+1.22%**
+
+This positive term premium — historically averaging 1.0–1.5% before the 2008–2020 "QE era" compressed it to negative — fundamentally changes the duration-return trade-off for fixed income investors.
+
+**Duration Management: Worked Numerical Example**
+
+An institutional portfolio manager holds a $500M Treasury bond portfolio with the following characteristics:
+- Modified Duration: 7.4 years
+- Portfolio DV01 (Dollar Value of 01): $500M × 7.4 × 0.0001 = **$370,000 per bp**
+
+**Scenario 1 — Rates rise 50bps (adverse):**
+Price change ≈ −Duration × ΔY × Portfolio Value = −7.4 × 0.005 × $500M = **−$18.5M loss**
+Convexity adjustment: +½ × Convexity × (ΔY)² × Portfolio = +½ × 65 × (0.005)² × $500M = +$406,250
+Net loss: ~$18.1M (convexity provides partial cushion in large rate moves)
+
+**Scenario 2 — Rate cut of 100bps (favorable):**
+Price change ≈ +7.4 × 0.01 × $500M = **+$37M gain**
+Convexity adjustment: +½ × 65 × (0.01)² × $500M = +$1.625M
+Net gain: ~$38.6M
+
+**Key insight from convexity:** Long-duration bonds exhibit positive convexity — they gain *more* than the linear approximation when yields fall and lose *less* than linear approximation when yields rise. This asymmetry has a price: more convex bonds command higher prices (lower yields) in the market. Convexity is particularly valuable in volatile rate environments.
+
+**Liability-Driven Investing (LDI) and Duration Matching:**
+
+Pension funds must match the duration of their assets to their liabilities — the present value of future pension payments. For a mature pension fund with average liability duration of 14 years:
+- Asset duration target: match 14-year liability duration
+- With equities (zero duration), bonds must carry extra duration to compensate
+
+If a pension fund is 60% bonds (duration 8) + 40% equities (duration 0): Portfolio duration = 0.6 × 8 = 4.8 years — massively short of the 14-year liability duration. 
+
+**LDI solution:** Use Treasury futures or interest rate swaps to add duration without consuming additional capital:
+- Pay-fixed interest rate swap adds duration equivalent to the bond exposure
+- A 30-year receiver swaption (right to receive fixed, pay floating) hedges the downside of rates falling (which would increase liability values)
+
+The UK LDI crisis of September 2022 demonstrated the catastrophic danger of this approach: UK pension funds held leveraged LDI strategies (50–100× leverage in some cases on the liability-hedging swap portfolio). When gilts sold off suddenly following the Kwarteng budget, variation margin calls overwhelmed pension fund liquidity, forcing gilt selling that accelerated the selloff — creating a feedback loop. The Bank of England had to intervene with emergency gilt purchases to prevent systemic collapse. The lesson: duration matching via leverage requires careful liquidity management and stress testing.
+

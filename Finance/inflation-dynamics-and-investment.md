@@ -292,3 +292,60 @@ The 2026 global inflation environment is structurally different from the 2021–
 - [[World Events/2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — Hormuz crisis direct energy price impact on global CPI  
 - [[Psychology/memory-systems-and-learning-science]] — Memory consolidation of inflation experiences; cohort effects in expectations formation  
 - [[Psychology/social-psychology-and-group-dynamics]] — Wage-price spiral as social coordination phenomenon; union bargaining and inflation propagation
+
+### Inflation-Linked Derivatives: Real Rate Swaps and Inflation Floors in Practice
+
+The sophisticated institutional management of inflation risk extends far beyond TIPS bonds into a rich ecosystem of **inflation-linked derivatives** — instruments that allow precise calibration of inflation exposure at different maturities, in different reference indices, and with different payoff structures. Understanding these instruments reveals how professional fixed income managers actually hedge and express views on inflation.
+
+**Zero-Coupon Inflation Swap (ZCIS):**
+
+The most fundamental inflation derivative is the zero-coupon inflation swap, where one party pays a fixed annualized rate r (the "breakeven") and receives the actual CPI return over the tenor:
+
+```
+At maturity T:
+Fixed leg pays:  N × [(1 + r)^T − 1]
+Floating leg pays: N × [CPI(T)/CPI(0) − 1]
+
+Net settlement = N × [CPI(T)/CPI(0) − (1+r)^T]
+```
+
+**Worked example (US 5-year ZCIS, June 2026):**
+- Notional N = $100M
+- Fixed rate (breakeven): 2.58% per annum
+- CPI(0) = 316.4 (CPI-U, June 2026)
+- Fixed leg at maturity: $100M × [(1.0258)⁵ − 1] = $100M × 0.1358 = $13.58M
+
+If actual CPI at maturity (June 2031) = 355.8 (implying ~2.38% actual inflation):
+- Floating leg: $100M × [355.8/316.4 − 1] = $100M × 0.1245 = $12.45M
+- Net settlement: Inflation receiver pays $12.45M − $13.58M = receiver loses $1.13M (actual inflation came in below breakeven)
+
+The ZCIS market allows institutions to take pure inflation views without the duration risk embedded in TIPS. The 5-year ZCIS has a zero duration profile — the fixed and floating legs cancel out duration exposure, leaving only inflation exposure.
+
+**Inflation Floors and Their 2021–2022 Payoff:**
+
+An **inflation floor** protects against deflation (or below-target inflation). A 1% floor on 5-year US CPI inflation:
+- Pays the holder if average annual CPI < 1% over 5 years
+- The "floor premium" varies with deflation expectations
+
+In 2019–2020, with deflationary fears from COVID, 5-year inflation floors at 1% strike cost approximately 50–75bps (i.e., $50,000–$75,000 per $10M notional). Investors holding these floors were paid nothing as inflation surged. But pensions with inflation-sensitive liabilities who had purchased the floors as cheap disaster insurance correctly identified the asymmetric payoff.
+
+**Inflation Cap:** Protects against inflation exceeding a cap level. 5-year 4% inflation cap (bought by corporate treasurers with fixed-price energy supply contracts) provided positive payoff during 2022 when realized inflation exceeded 4%. These caps were priced at 10–15bps in early 2020 (nearly free disaster insurance in retrospect).
+
+**Year-on-Year (YoY) Inflation Swaps:**
+
+Unlike zero-coupon swaps settled once at maturity, year-on-year swaps pay annually:
+
+```
+Annual payment = N × [CPI(t)/CPI(t-1) − (1 + r)]
+```
+
+These are used by utilities and regulated infrastructure companies whose revenue formulas contain annual CPI escalators. A UK water company with revenue tied to RPI (Retail Price Index) uses YoY RPI swaps to match asset-side inflation risk with liability-side RPI revenue.
+
+**The "Seasonality" Problem in Inflation Derivatives:**
+
+CPI and RPI have well-documented seasonal patterns (summer energy prices, January rent adjustments, back-to-school). Month-on-month inflation swaps that settle on specific CPI release dates must account for these patterns; the January seasonal premium in CPI swaps has historically been ~15bps above the average monthly rate (January is a high-reset month for utilities, housing, and healthcare insurance).
+
+**2026 Institutional Applications:**
+
+European insurers (Allianz, Axa, Zurich) routinely purchase 20–30 year EUR inflation swaps linked to HICP (Harmonized Index of Consumer Prices) to match inflation-indexed annuity liabilities with inflation-hedged asset streams. The notional outstanding in European inflation swaps exceeds €2 trillion (LCH clearing data), making this one of the largest specialized derivatives markets globally. Managing this market requires expertise in inflation carry (holding a receiver position in an environment where actual inflation runs below breakeven generates negative carry), basis risk (CPI vs. PCE in the US; RPI vs. CPI in the UK; HICP vs. national CPI in Europe), and curve dynamics (the shape of the inflation curve across maturities reflects structural inflation expectations at different horizons).
+

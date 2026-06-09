@@ -487,3 +487,84 @@ Traditional DCF valuation was developed for industrial companies with relatively
 - [[Tech & AI/agentic-ai-and-multi-agent-systems]] — AI platform valuation; network effect modeling for AI ecosystem companies  
 - [[Psychology/mental-models]] — Inversion in valuation: what would need to be true for the current price to be justified?  
 - [[Geopolitics/2026-05-30-china-taiwan-strait-military-tensions]] — Taiwan geopolitical discount in semiconductor company valuations; country risk premium integration
+
+### AI Company Valuation Frameworks: Beyond Traditional DCF
+
+The emergence of frontier AI companies as the most valuable assets in the 2020s has forced a fundamental rethinking of valuation methodology. Traditional DCF and comparable company analysis struggle when applied to companies with near-zero current revenue but potential to capture trillion-dollar markets, non-linear cost curves (training compute costs rising faster than revenue), and regulatory/safety risks with no historical precedent.
+
+**The Optionality Valuation Framework for AI:**
+
+The most theoretically sound approach to valuing frontier AI companies treats them as **compound options on technological capabilities** rather than discounted cash flow streams:
+
+```
+AI Company Value = Current Business Value + Option Value on Capability Advances
+
+Current Business Value = PV(near-term revenue from existing products)
+Option Value = Σᵢ [π_i × V_i × e^(-r×t_i)] - Investment_i
+
+Where:
+π_i = probability of achieving capability threshold i
+V_i = value created if threshold i is achieved
+t_i = time to achieve threshold i
+Investment_i = required investment
+```
+
+**Real Data Application — Anthropic (2024 valuation at $60B):**
+
+At the time of the 2024 $60B valuation:
+- ARR: ~$350M (approximately 170× EV/Revenue)
+- The implied "current business value" at even 100× revenue: $35B
+- Implied option value: $60B - $35B = $25B in optionality
+
+The $25B option value reflects market pricing of:
+1. P(AGI-level system by 2030) × Economic value captured = ~$10B component
+2. P(Constitutional AI becoming enterprise standard) × Enterprise market TAM = ~$8B component
+3. P(Regulatory advantage over closed competitors) × Premium valuation = ~$7B component
+
+**The "Option Value Decay" Problem:**
+
+Unlike real options on physical assets (where optionality has a defined exercise price), AI capability options face "winner-take-most" dynamics — OpenAI's GPT-4 achievement in March 2023 destroyed significant option value for competing labs by demonstrating that the first capability threshold could be achieved, driving imitators to collapse their expected differentiation. A valuation model must account for competitive option decay.
+
+**Comparable Companies for AI: The "Technology Platform" Comps Set**
+
+Investment bankers value AI companies against two comp sets that reflect different aspects:
+
+*Infrastructure AI comps (AWS, Azure, GCP):*
+- AWS 2024: $100B revenue, 35% EBIT margin → EV/EBITDA ~20×
+- AI infrastructure companies with similar cost/margin economics command 25–35× EBITDA
+
+*Software AI comps (Salesforce, ServiceNow):*
+- SaaS with AI-embedded functionality: ~10–15× NTM revenue (normalized from 2021 highs of 30-40×)
+- AI-native SaaS (Palantir, C3.ai): 15–25× NTM revenue (AI premium)
+
+The analytical challenge: AI companies don't fit cleanly into either category. An "AI model company" (Anthropic, OpenAI) is simultaneously:
+- A research organization (no comparable comp set)
+- An infrastructure provider (competes with AWS)
+- A software vendor (API calls to enterprises)
+- An option on AGI (no comp set exists)
+
+**Normalized Revenue and "Steady-State" Valuation:**
+
+For AI companies with rapidly growing but still-small revenues, the most defensible approach is **steady-state normalization**:
+
+1. Project revenue to "steady state" (5–7 years out) when growth normalizes to 20–30%/year
+2. Apply a terminal EBIT margin assumption (SaaS industry: 25–35% at scale)
+3. Apply a terminal EV/EBITDA multiple consistent with the steady-state growth rate
+4. Discount back at WACC
+
+```
+OpenAI hypothetical steady-state (year 2030):
+  Revenue: $50B (implied by $5B ARR × 10× growth in 6 years)
+  EBIT margin: 30% (high-margin software economics)
+  EBIT: $15B
+  EV/EBIT at 20× (consistent with 15% terminal growth): $300B EV
+  
+  Discounted to 2026 at 15% WACC over 4 years:
+  PV = $300B / (1.15)^4 = $300B / 1.749 = $171B
+  
+  Compared to implied valuation at $157B (late 2024 round): reasonable but assumes
+  successful scaling without major competitive disruption
+```
+
+This framework illustrates how the "obscenely high" multiples paid for AI companies can be rationalized — but also how sensitive they are to terminal growth and margin assumptions, making even 20% changes in assumptions move valuations by 30–50%.
+

@@ -277,3 +277,61 @@ Artificial intelligence is transforming M&A practice at multiple stages. In due 
 - [[Tech & AI/retrieval-augmented-generation]] — RAG systems for contract review, precedent research, and regulatory filing analysis in M&A  
 - [[Psychology/social-psychology-and-group-dynamics]] — Groupthink in M&A boards; confirmation bias in deal approval processes  
 - [[Psychology/negotiation-tactics]] — Negotiation dynamics in M&A; BATNA calculation in competitive auctions
+
+### AI-Driven M&A Wave 2025–2026: Strategic Logic and Valuation Challenges
+
+The 2025–2026 M&A landscape has been dominated by a structural acquisition wave driven by artificial intelligence — with hyperscalers, enterprise software companies, and defense contractors all pursuing AI capability acquisitions at historically elevated multiples. This wave illustrates both the application of M&A theory and its limitations when valuing transformative technology.
+
+**The AI Capability Acquisition Thesis:**
+
+Three distinct acquisition motivations characterize the AI M&A wave:
+
+**1. Talent acqui-hire at scale (2023–2024 dominant pattern):**
+Microsoft's $650M+ investment in Inflection AI (March 2024) — structured to hire Mustafa Suleyman and key researchers while acquiring the IP non-exclusively — represents the purest form of talent M&A. The deal's $650M price valued the talent at approximately $7–12M per key researcher, orders of magnitude above traditional acqui-hire pricing. The accounting structure (investment rather than acquisition) avoided many acquisition disclosures while achieving operational objectives.
+
+**2. Data moat acquisition:**
+Companies with proprietary training data (health records, legal contracts, financial transactions, scientific papers) became acquisition targets for AI companies seeking to differentiate models. Thomson Reuters acquired Casetext (legal AI, $650M, 2023) specifically for its corpus of legal precedents and document processing pipeline, not its team or revenue ($30M ARR at acquisition → 22× revenue multiple).
+
+**3. Infrastructure capability acquisitions:**
+Hyperscalers (Google, Microsoft, Amazon) have acquired or invested in AI hardware startups to reduce dependence on NVIDIA:
+- Google's Tensor Processing Unit ecosystem
+- Amazon's Trainium/Inferentia chips (acquired Annapurna Labs for $350M in 2015 — a prescient "cheap" infrastructure bet)
+- Microsoft's investment in custom silicon designs via OpenAI partnership
+
+**Valuation framework challenges for AI acquisitions:**
+
+Traditional M&A valuation frameworks fail for frontier AI companies because:
+
+1. **Revenue lags option value:** An AI model company with $50M ARR but control of a general-purpose model with potential trillion-dollar applications cannot be valued on revenue multiples
+2. **Cost-to-recreate vs. discounted cash flow:** For IP-heavy AI deals, the relevant comparison is: (a) DCF of projected future cash flows, (b) cost to rebuild the technology from scratch, and (c) option value of potential market disruption
+
+**Anthropic as a case study in AI valuation ambiguity:**
+
+Amazon's $4B investment (cumulative 2023–2024) + Google's $2B in Anthropic valued the company at ~$60B (2024 funding round). Anthropic's revenue in 2024: estimated $300–400M ARR. The implied EV/Revenue multiple: ~150–200×, comparable to the highest peak multiples paid for SaaS companies at the 2021 peak. The question acquirers must answer: what discount rate applies to cash flows from a general-purpose AI company with unbounded potential but uncertain regulatory, safety, and competitive risk?
+
+**The regulatory dimension (FTC and EU DG Competition):**
+
+The FTC under Lina Khan (2021–2025) challenged numerous AI-related deals on novel theories:
+- Microsoft/Activision: Approved after remedies (2023) but set precedent for behavioral remedies in gaming/AI
+- Adobe/Figma: Blocked (2024) — $20B deal abandoned after EU/DOJ concerns about creative tools monopolization
+- Amazon/Roomba (iRobot): Blocked on data concerns — Roomba's floor mapping data was primary asset; regulators viewed home interior data as competitively sensitive
+
+The 2026 EU AI Act creates new M&A scrutiny: acquiring a "high-risk AI system" requires notification to EU AI Office and may require conformity assessment before closing — adding 3–6 months to EU deal timelines for AI acquisitions.
+
+**Earnout structures in AI deals:**
+
+Given valuation uncertainty, AI deals increasingly use earnout provisions — additional consideration paid if the acquired entity achieves performance milestones:
+
+```
+Deal structure (hypothetical AI company, $400M headline):
+Base consideration: $250M (cash at close)
+Earnout tranche 1: $75M if ARR exceeds $100M within 24 months
+Earnout tranche 2: $75M if model achieves defined benchmark performance thresholds
+Maximum consideration: $400M
+
+Accounting treatment: Only $250M recognized at close (Measurement Period)
+Contingent consideration ($150M): Remeasured at each reporting date
+```
+
+Earnouts introduce post-merger conflict: acquired team's compensation depends on achieving targets that acquirer may affect through resource allocation. The integration management office must carefully separate earned autonomy (let the team hit targets) from strategic integration (capture synergies), which frequently conflict.
+

@@ -454,3 +454,57 @@ The 2026 yield curve environment is a case study in geopolitics-macro interactio
 - [[Tech & AI/machine-learning-fundamentals]] — ML yield curve modeling; neural network term structure estimation  
 - [[Geopolitics/2026-05-30-europe-rearmament-nato-russia-threat]] — NATO defense spending and fiscal dominance risk in European yield curves  
 - [[World Events/2026-06-06-russia-massive-attack-ukraine-kyiv-june-2026]] — War escalation and flight-to-quality Treasury demand; yield curve stress test
+
+### The Term Premium in 2026: Quantitative Decomposition and Investment Implications
+
+The **term premium** — the extra yield investors demand for holding long-dated bonds rather than rolling short-term bonds — has undergone the most significant structural shift in 20 years, with profound implications for fixed income portfolio management, equity valuations, and fiscal sustainability.
+
+**What Happened to the Term Premium:**
+
+The ACM (Adrian, Crump, Moench) model developed at the New York Fed decomposes 10-year Treasury yields into:
+1. Expected average short-term rate over 10 years (expectation component)
+2. Term premium (compensation for duration risk and uncertainty)
+
+| Period | 10Y Yield | Expected Rate Component | Term Premium |
+|--------|----------|------------------------|-------------|
+| 1990–2000 average | 6.7% | 4.8% | +1.9% |
+| 2005–2008 pre-crisis | 4.7% | 3.8% | +0.9% |
+| 2013 post-QE | 2.8% | 2.1% | +0.7% |
+| 2020–2021 QE peak | 0.9% | 0.3% | −0.4% (!) |
+| July 2023 inversion peak | 3.86% | 4.5% | −0.64% |
+| June 2026 | 4.72% | 3.5% | +1.22% |
+
+The extraordinary development: from 2016–2021, the term premium was *negative* — investors were so desperate for safe, liquid, long-duration assets (driven by global savings glut, QE, and regulatory demand for HQLA) that they accepted *lower* yields on 10-year bonds than were expected from rolling short-term instruments. This negative term premium was a historical anomaly.
+
+The return to positive term premiums represents normalization — investors now again demand compensation for duration risk, consistent with the pre-QE era.
+
+**Causes of the term premium re-emergence:**
+
+**1. Fiscal uncertainty premium:**
+US federal debt at 124% of GDP in 2026 raises questions about long-run fiscal sustainability. Term premium partly reflects "default probability" on the longest-dated instruments. Even for the US (perceived as risk-free), investors demand a small premium for fiscal uncertainty at the 30-year horizon.
+
+**2. Inflation uncertainty premium:**
+Post-2021, the distribution of inflation outcomes has widened in investors' priors. A 10-year bond locked to a 4.72% nominal yield is exposed to inflation realizations that could be 1.5% (real return 3.2%) or 5% (real return −0.3%). The wider uncertainty demands a higher premium.
+
+**3. Supply/demand imbalance:**
+The Federal Reserve's Quantitative Tightening (QT) — allowing $60–95B/month in Treasuries to mature without reinvestment — has removed the largest marginal buyer from the market. Combined with record Treasury issuance ($2T+ annual borrowing in 2024–2026), the market must absorb supply without Fed support. Foreign central bank demand has also fallen (China's Treasury holdings declined from $1.3T in 2021 to $0.77T in 2026 as they diversified away from USD assets).
+
+**Investment implications of elevated term premium:**
+
+**1. Bond investors are now compensated:** With the 10-year yield at 4.72% and the term premium at +1.22%, long-duration Treasuries offer genuine risk-adjusted compensation for the first time since 2014. Pension fund actuaries using a 4.5% discount rate for liabilities can match assets-to-liabilities in long bonds rather than taking equity risk for yield.
+
+**2. Equity valuation compression:** The equity risk premium (ERP) vs. the risk-free rate determines P/E justification:
+```
+Equity Earnings Yield = 1/PE
+Bond Yield = 4.72% (10-year Treasury)
+Equity risk premium = Earnings yield - Bond yield
+
+At PE=22: Earnings yield = 4.55%; ERP = 4.55% - 4.72% = -0.17%
+At PE=18: Earnings yield = 5.56%; ERP = 5.56% - 4.72% = +0.84%
+```
+
+The near-zero (slightly negative) ERP at current equity multiples means equities are priced to offer essentially the same risk-adjusted return as risk-free bonds — suggesting limited equity upside unless bond yields fall (positive for equities) or earnings grow significantly.
+
+**3. Mortgage rate transmission:**
+The 30-year fixed mortgage rate closely tracks the 10-year Treasury + mortgage spread (~170bps). With 10-year at 4.72%, 30-year mortgage rates at 6.4–6.8% in 2026. Housing affordability at historically poor levels: the monthly payment for a median-priced US home (~$420,000) at 6.5% mortgage rate = $2,656/month, vs. $1,289/month at 3.0% (2021 rate). This 2× payment increase has permanently priced out marginal buyers and suppressed housing turnover.
+

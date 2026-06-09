@@ -227,3 +227,56 @@ The 2022–2026 multi-conflict environment has provided an unprecedented natural
 - [[Geopolitics/2026-05-30-europe-rearmament-nato-russia-threat]] — Defense sector value-momentum co-factor; geopolitical factor emergence  
 - [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — AI governance as a factor risk; regulatory risk premium in AI-exposed equities  
 - [[Psychology/mental-models]] — Bayesian prior formation as meta-skill for factor investment decisions; avoiding the factor zoo
+
+### Factor Crowding and Liquidity Risk: The 2026 Market Structure Challenge
+
+As factor investing has moved from academic curiosity to mainstream institutional allocation, the concentration of capital in systematic factor strategies has created a new structural risk: **factor crowding** — the condition where so many investors are positioned in the same factor exposures that the factor's risk profile is qualitatively different from its historical behavior.
+
+**Measuring Factor Crowding:**
+
+AQR Capital published a foundational framework for measuring crowding (Asness, Ilmanen, Israel, Frazzini, 2015). The key metric: **crowding indicator** = correlation of factor portfolio with aggregate flow into factor strategies. A highly-correlated portfolio (crowding indicator > 0.5) is at risk of synchronized de-risking.
+
+**The "Factor Bubble" Question — Empirical Analysis:**
+
+Arnott, Harvey, Kalesnik, and Linnainmaa (2021, Journal of Portfolio Management) analyzed 15 major factors and found:
+- 12 of 15 factors became more expensive (higher relative valuations) from 2006–2021 as AUM inflows pushed up the prices of high-factor-score stocks
+- The "value spread" within the value factor (cheapest stocks vs. most expensive) widened significantly — suggesting that value stocks were genuinely cheap relative to growth, partly because of growth-tilted flows
+- Estimated ~1.5% annual return headwind to factor strategies from crowding-induced valuation stretch in growth/quality factors
+
+**The August 2024 and March 2025 Factor Unwind Events:**
+
+**August 2024 (momentum/low-volatility unwinding):**
+The BOJ rate hike and yen carry trade unwind triggered a simultaneous unwinding of:
+1. Low-volatility long positions (typically held by risk-parity strategies)
+2. Momentum positions (many carry-trade beneficiaries were momentum long positions)
+3. High-beta shorts (momentum short positions)
+
+The result: momentum factor return for August 2024 = −8.7% (the largest single-month momentum drawdown since 2009). AQR Momentum Fund (AMOMX) fell 9.2% in August alone.
+
+**March 2025 (value/quality rotation):**
+Fed signaling of delayed cuts in Q1 2025 triggered a rotation from duration-sensitive growth stocks toward value names. The value factor (HML) gained +6.3% in March 2025 — creating sharp reversals for multi-strategy funds with growth tilts. Two hedge funds (undisclosed) reportedly lost 3–5% of AUM in two days due to factor correlation breakdown when their "market-neutral" portfolios turned out to have significant factor exposure.
+
+**The Crowding Index for Major Factors (June 2026):**
+
+| Factor | Crowding Level | Signal |
+|--------|---------------|--------|
+| Quality/Profitability | HIGH (82nd percentile) | Significant crowding — many strategies attracted to quality stocks |
+| Low Volatility | HIGH (78th percentile) | Risk-parity flows into defensive stocks |
+| Momentum | MODERATE (61st percentile) | Partially unwound post-2024 |
+| Value | LOW (28th percentile) | Underowned after decade of underperformance |
+| Size (Small Cap) | MODERATE (45th percentile) | Increasing flows but not crowded |
+
+**Defensive strategies for crowded factor exposures:**
+
+**1. Factor timing via valuation spreads:**
+When the value spread within a factor (difference between valuations of the long and short legs) reaches historically extreme levels, factor timing models suggest reducing exposure. For quality factor in 2026: high-quality stocks trade at 45th percentile P/E premium vs. average quality — historically (70th+ percentile) signals future underperformance.
+
+**2. Stress testing for liquidation scenarios:**
+Factor portfolios should be stress-tested with "liquidation correlation" assumptions: in a risk-off event, what is the correlation between factor return and market return? Historical data shows:
+- Momentum correlates at −0.7 with market during market crashes (momentum crashes)
+- Low volatility correlates at −0.3 (less crash risk but positive correlation with bond volatility)
+- Value correlates at −0.2 in normal recessions, +0.4 in inflationary downturns (no consistent hedge)
+
+**3. Crowding-neutral factor portfolios:**
+JP Morgan's quantitative strategies group has developed "crowding-adjusted" factor portfolios that reduce weights in stocks owned by many systematic strategies. The crowding signal is estimated from options market term structure, short interest, and 13F filing analysis. Their crowding-adjusted quality portfolio showed 35bps lower drawdown during the August 2024 event compared to standard quality portfolios.
+

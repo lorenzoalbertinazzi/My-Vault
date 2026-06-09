@@ -532,3 +532,96 @@ Research in cognitive science reveals that human intuition is systematically mis
 - [[Tech & AI/machine-learning-fundamentals]] — Maximum entropy ML models parallel maximum entropy portfolios; Jaynes' principle in ML regularization  
 - [[Psychology/cognitive-load-theory-and-learning]] — Cognitive complexity of portfolio theory for individual investors; simplification vs. optimization tradeoff  
 - [[Geopolitics/2026-05-30-europe-rearmament-nato-russia-threat]] — Defense sector rearmament as structural portfolio tilt; European defense industry investment case
+
+### Factor-Aware Mean-Variance Optimization: The Barra Multi-Factor Model
+
+The classic Markowitz mean-variance optimization fails in practice at institutional scale because it requires estimating N(N+1)/2 covariance parameters for N assets — for a 500-stock portfolio, that is 125,250 parameters, of which many are estimated with high error. **Multi-factor risk models** solve this by expressing the covariance matrix as a function of factor exposures and factor covariances:
+
+**The Factor Risk Model:**
+```
+Return of stock i: rᵢ = αᵢ + Σⱼ βᵢⱼ × Fⱼ + εᵢ
+
+Where:
+βᵢⱼ = stock i's exposure to factor j (estimated from fundamental or statistical analysis)
+Fⱼ = return to factor j (e.g., market, value, size, momentum, sector)
+εᵢ = idiosyncratic (stock-specific) return (assumed uncorrelated across stocks)
+```
+
+**The covariance matrix decomposition:**
+```
+Cov(rᵢ, rⱼ) = Σₖ Σₗ βᵢₖ × βⱼₗ × Cov(Fₖ, Fₗ) + σ²(εᵢ) × δᵢⱼ
+
+In matrix notation: Σ = B × F × Bᵀ + D
+
+Where:
+B = N × K matrix of factor exposures (N stocks, K factors)
+F = K × K factor covariance matrix
+D = N × N diagonal matrix of specific (idiosyncratic) variances
+```
+
+This structure reduces the estimation problem from 125,250 parameters (for 500 stocks) to approximately (K² + K)/2 + N parameters — for K=50 factors, only 1,275 factor covariance + 500 specific variance = 1,775 parameters, a 70× reduction in estimation burden with dramatically better out-of-sample performance.
+
+**MSCI Barra GEM3 (Global Equity Model):**
+
+The industry standard Barra model for global equities uses approximately 50–60 factors organized hierarchically:
+- **World factor** (1): global equity market
+- **Regional factors** (4): Americas, Europe, Pacific, Emerging
+- **Country factors** (40+): each national market has residual country factor
+- **Sector factors** (11 GICS sectors)
+- **Style factors** (10–12): Value, Growth, Size, Momentum, Volatility, Quality, Earnings Variability, Financial Leverage, etc.
+
+**Worked risk decomposition (hypothetical US equity portfolio):**
+
+Consider a 60-stock US large-cap portfolio. Running through the Barra US Equity Model (USE4):
+
+```
+Portfolio risk decomposition (annualized tracking error vs. S&P 500 benchmark):
+
+Total Active Risk:          3.8%
+├── Common Factor Risk:     3.2%
+│   ├── Style factors:      2.1%
+│   │   ├── Value tilt:     1.4% (overweight cheap stocks vs. benchmark)
+│   │   ├── Size tilt:      0.3% (overweight small/mid)
+│   │   └── Momentum:       0.4% (overweight recent winners)
+│   ├── Sector bets:        0.9% (overweight Technology, Energy)
+│   └── Country:            0.2% (minor ADR effects)
+└── Specific Risk:          2.1% (idiosyncratic from stock concentration)
+
+Information Ratio target:   0.8
+Expected Alpha:             0.8 × 3.8% = 3.0% annualized
+```
+
+**The mean-variance optimization problem with factor constraints:**
+
+```
+Maximize: w'μ - (λ/2) × w'Σw
+Subject to:
+  w'1 = 1 (weights sum to 1)
+  0 ≤ wᵢ ≤ 0.05 (maximum 5% in any stock)
+  |wᵢ - wᵢ_benchmark| ≤ 0.03 (±3% from benchmark weight)
+  |factor exposure tilt| ≤ 0.3 std dev (factor constraints)
+  Tracking error ≤ 4% (total active risk constraint)
+```
+
+The factor constraints (last two lines) are the institutional innovation that makes Markowitz practicable — they prevent the optimizer from taking extreme factor bets that backtesting data may support but which represent excessive concentration in a single risk driver.
+
+**Black-Litterman Model: Views + Prior = Posterior:**
+
+The Black-Litterman (1990) model addresses the key failure mode of mean-variance optimization: extreme sensitivity to expected return estimates. The model combines:
+- **Prior (equilibrium):** Expected returns implied by current market capitalization weights (reverse-optimization: μ_eq = λ × Σ × w_mkt)
+- **Views:** Manager's specific return predictions with confidence levels
+- **Posterior:** Bayesian combination that tilts away from equilibrium proportionally to the manager's view confidence
+
+```
+Posterior expected returns:
+μ_BL = [(τΣ)⁻¹ + P'Ω⁻¹P]⁻¹ × [(τΣ)⁻¹μ_eq + P'Ω⁻¹Q]
+
+Where:
+P = picks matrix (which assets the views relate to)
+Q = vector of view returns
+Ω = uncertainty matrix (diagonal, reflecting confidence in each view)
+τ = scalar (typically 0.025–0.05) scaling the uncertainty in the prior
+```
+
+The intuition: if you're highly confident in a view (small Ω), the posterior tilts strongly toward your view; if uncertain (large Ω), the posterior stays close to equilibrium. This prevents the optimizer from aggressively acting on uncertain signals.
+

@@ -495,3 +495,52 @@ Graham's "margin of safety" concept — buying assets at a significant discount 
 - [[Psychology/stoicism-and-stoic-philosophy]] — Stoic philosophy as value investing framework; Mr. Market and the Stoic dichotomy of control  
 - [[Psychology/prospect-theory-and-decision-making]] — Why overpriced growth stocks are behaviorally preferred; value premium as exploitation of loss aversion and narrative bias  
 - [[Tech & AI/ai-safety-and-alignment]] — AI and automation risk for value investor's moat analysis; disruption assessment in intrinsic value modeling
+
+### Value Investing in the AI Era: Adaptation or Obsolescence?
+
+The 2020–2026 period has forced value investors to confront a fundamental question: has the rise of AI-driven productivity and "infinite scalability" software businesses permanently expanded the appropriate P/E multiples for growth businesses, making traditional Graham-style value criteria obsolete? Or does the historical relationship between price and value persist, simply with different reference points?
+
+**The Case That Value Investing Must Evolve:**
+
+*Argument 1: Intangible assets dominate modern business value*
+
+Graham's framework was built for an economy where 80%+ of corporate value was in tangible assets (factories, inventory, real estate). By 2026, approximately 90% of S&P 500 market cap is attributable to intangible assets — brand, intellectual property, data, algorithms, software, customer relationships. Price-to-book (P/B) ratios of 5–10× are not overvaluation for software businesses; they reflect genuine economic reality that book value understates true worth.
+
+Empirical evidence: Lev & Gu (2016, "The End of Accounting") documented that accounting-based metrics (P/E, P/B) explain only 5% of cross-sectional stock return variation by 2012 — down from 30% in 1970. The remaining 95% is explained by intangible-related factors not captured in GAAP financial statements.
+
+*Argument 2: AI creates non-linear scalability*
+
+A traditional manufacturing company with 2× revenue needs approximately 1.8× employees, 1.7× capital, and 1.6× management bandwidth. A software company with AI-driven features can scale revenue 10× with 2× employees (by 2026: 3× revenue with zero marginal cost for AI features). This non-linearity means high initial multiples may be rational discounting of future earnings at scale.
+
+**The Case That Value Investing Principles Persist:**
+
+*Argument 1: Reversion to mean economics is structural*
+
+Warren Buffett (2023 Berkshire letter): "Over the past six decades, I have watched US businesses generate extraordinary amounts of earnings — earnings that have, in aggregate, grown dramatically. In any given year, a few bright stars will generate returns on equity that far exceed their cost of capital. These exceptional performers will attract competitors and capital. The natural tendency is toward mediocrity."
+
+The AI sector is not immune to this dynamic: OpenAI's initial pricing power ($0.02/1K tokens for GPT-4 in 2023) compressed to $0.00015/1K tokens for comparable capability by 2026 as compute costs fell and competition intensified. Extraordinary returns attract capital and competition; monopoly moats based on pure technology erode faster than those based on distribution networks, relationships, or regulatory licenses.
+
+*Argument 2: The quality-adjusted value framework*
+
+Buffett and Munger's evolution — from Graham's "cigar butt" to "wonderful businesses at fair prices" — is the correct adaptation. A business with 40% ROIC growing at 20% per year is worth a P/E of 30–40×, not 10×. The formula:
+
+```
+Justified P/E = (Payout Ratio) / (Cost of Equity - Growth Rate)
+             = (1 - Retention Rate) / (Ke - g)
+
+For a business with ROIC=40%, reinvestment rate=50%, Ke=10%:
+  g = ROIC × Reinvestment = 40% × 50% = 20%
+  Payout = 50%
+  Justified P/E = 0.50 / (0.10 - 0.20) = undefined (growth > cost of equity!)
+```
+
+When growth rate exceeds cost of equity (only temporarily sustainable for exceptional businesses), normal P/E arithmetic breaks down — requiring a multi-stage model. Buffett's approach: identify businesses that can *sustain* ROIC > Ke for 10–20 years, then buy at a multiple that still provides margin of safety vs. intrinsic value.
+
+**2025–2026 Case Studies in AI Value Investing:**
+
+*Microsoft at $400/share (2023, P/E ~35×):* Value investors who applied traditional criteria (>35× is "expensive growth") missed a 30%+ return. Buffett-framework analysis suggested Microsoft had genuine Copilot/Azure moats worth the premium — the AI integration created pricing power improvements and switching costs that justified the multiple.
+
+*Tesla at $200/share (2024, P/E ~70×):* Traditional value analysis correctly flagged the multiple as unsustainable for an auto manufacturer. AI/software premium investors defended it based on autonomous driving optionality. The stock subsequently underperformed the S&P 500 as EV competition intensified and margins compressed.
+
+The lesson: the framework must be applied case-by-case to assess whether the AI premium reflects genuine, durable economic moats or speculative option value with poor margins of safety.
+

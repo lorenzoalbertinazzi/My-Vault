@@ -470,3 +470,54 @@ The behavioral finance of FX incorporates evolutionary psychology (see [[Psychol
 - [[Tech & AI/transformer-architecture]] — LLM-based central bank communication parsing for FX signal generation  
 - [[Tech & AI/prompt-engineering]] — Prompt design for automated FX policy signal extraction  
 - [[Geopolitics/2026-06-06-iran-gulf-escalation-kuwait-bahrain-june-2026]] — Gulf crisis FX implications; dollar safe-haven demand spike
+
+### The 2024–2026 Yen Carry Trade Unwind: A Case Study in FX Systemic Risk
+
+The Japanese yen carry trade — borrowing in yen at near-zero interest rates to invest in higher-yielding currencies — represents one of the largest structural positions in global FX markets, and its partial unwind in August 2024 provided a stunning real-world case study in how currency market positioning can trigger multi-asset contagion.
+
+**The carry trade mechanics (quantified):**
+The yen carry trade borrows yen at Japan's overnight call rate (~0.1–0.25% in 2024) to invest in:
+- US 3-month Treasury bills (~5.3% in 2024) → 510bps positive carry
+- Australian dollar deposits (~4.35%) → 410bps carry  
+- Brazilian real (~10.5%) → 1025bps carry
+
+Gross estimated outstanding yen carry positions in 2024: **$4–6 trillion** (BIS estimates from cross-border bank claims and FX derivatives positioning data). No single authoritative figure exists; the $4T+ estimate comes from triangulating multiple data sources.
+
+**The August 2024 flash unwind:**
+On July 31, 2024, the Bank of Japan unexpectedly raised its policy rate from 0.1% to 0.25% — a modest move but one that signaled the end of the BOJ's decades-long ultra-easy policy trajectory. The reaction:
+
+- JPY/USD moved from ~155 to ~141 in three weeks (yen appreciated 9.3%)
+- The S&P 500 fell 6% in two days (August 5–6, 2024)
+- Nikkei 225 crashed 12.4% on August 5 — the largest single-day decline since 1987
+- VIX spiked from ~15 to ~65 intraday on August 5 (highest since COVID-19)
+- Nasdaq fell 3.4% on the same day
+
+**Why a currency move caused equity market convulsion:**
+The mechanism: Yen appreciation forces carry trade unwinding. Carry traders who borrowed yen must repurchase yen to repay loans. To raise capital to buy yen, they sell their "funded" assets — US equities, EM bonds, commodity-linked currencies. The selling is simultaneous and self-reinforcing: yen appreciation → forced yen purchases → further yen appreciation → further forced selling (convex feedback loop).
+
+The August 2024 event was a *partial* unwind. Estimates suggest 25–35% of the carry trade was liquidated. The full unwind — if the BOJ normalizes rates to 1–2% — would represent the largest forced deleveraging event in FX markets since the 1998 LTCM crisis, with estimated assets at risk of ~$1.5–2.5 trillion.
+
+**The Interest Rate Parity (IRP) framework applied:**
+Covered Interest Rate Parity (CIP) states:
+```
+F/S = (1 + r_d) / (1 + r_f)
+
+Where F = forward rate, S = spot rate, r_d = domestic rate, r_f = foreign rate
+```
+
+For JPY/USD in 2024 (annualized):
+- S = 155 JPY/USD
+- r_USD = 5.3%, r_JPY = 0.1%
+- CIP implies: F = 155 × (1.001 / 1.053) = 147.6 JPY/USD (yen should be at premium forward)
+
+The 1-year forward rate was approximately 148 JPY/USD, broadly consistent with CIP. **Uncovered Interest Rate Parity (UIP)** — which would predict actual spot rate convergence — consistently fails: high-yield currencies tend to *appreciate* rather than depreciate, enabling the carry trade to persist.
+
+**Carry trade profitability (historical):**
+- 2000–2007: Long AUD/JPY, NZD/JPY → +8.5% annually including carry, +23% with momentum overlay
+- 2008 Lehman crisis: Carry trades lost -35% in 6 weeks as risk-off triggered simultaneous unwind
+- 2011–2014: +12% annually; yen weakening added currency gain to carry
+- 2024 partial unwind: -15% on JPY/USD carry in August alone
+
+**The 2026 outlook:**
+The BOJ raised rates to 0.5% in January 2025 and 0.75% in June 2026. The narrowing interest rate differential with the US (Fed cut to 4.0% by mid-2026) has reduced the carry trade incentive. Estimated outstanding carry positions: $2.5–3.5 trillion (reduced from 2024 peak). The risk of a second, more severe unwind remains elevated — particularly given concurrent geopolitical uncertainty that could trigger broad risk-off positioning simultaneously with BOJ normalization.
+

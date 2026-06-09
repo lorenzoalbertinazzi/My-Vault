@@ -628,3 +628,57 @@ Dynamic Stochastic General Equilibrium (DSGE) models — the dominant framework 
 - [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Agent-based macroeconomic models as alternative to DSGE; heterogeneous agent modeling  
 - [[Geopolitics/2026-06-06-latin-america-geopolitics-us-china-influence-2026]] — EM macroeconomic vulnerability to commodity shocks and dollar dominance  
 - [[World Events/2026-06-06-colombia-presidential-election-2026-runoff]] — Political business cycle in Latin America; electoral macro policy distortions
+
+### Fiscal Dominance: When Debt Levels Constrain Monetary Policy
+
+**Fiscal dominance** — the condition where government debt levels are so high that the central bank's monetary policy is constrained by fiscal considerations — has emerged as one of the most important and contested concepts in macroeconomics for the 2020s. The historically unprecedented peacetime debt levels across G7 economies have made fiscal dominance a live policy concern rather than merely a theoretical construct.
+
+**The Theoretical Framework (Sargent & Wallace, 1981):**
+
+Thomas Sargent and Neil Wallace's "Some Unpleasant Monetarist Arithmetic" (1981) established the fundamental insight: in a world where the government faces an *intertemporal budget constraint*, monetary and fiscal policy are not truly independent. The government's budget constraint requires that the present value of future primary surpluses equals outstanding debt:
+
+```
+B_t = PV[∑(t=0 to ∞) (T_{t+s} - G_{t+s}) × discount factors]
+```
+
+If the government cannot or will not raise taxes (T) or cut spending (G) sufficiently to service debt B, then the central bank faces a choice:
+1. **Monetary dominance:** Allow default; refuse to monetize debt → sovereign default
+2. **Fiscal dominance:** Monetize debt (print money) → inflation reduces real value of debt burden
+
+In fiscal dominance regimes, the "unpleasant arithmetic" is that tight monetary policy today may cause *more* inflation in the future by increasing debt service costs, which eventually forces monetization.
+
+**Current Debt Levels and Sustainability Thresholds:**
+
+| Country | Debt/GDP (2026) | Primary Deficit/GDP | Real Interest Rate | DSA Sustainable? |
+|---------|----------------|--------------------|--------------------|------------------|
+| Japan | 256% | -2.5% | -0.1% | Marginally (ZIRP essential) |
+| Italy | 141% | -2.0% | +1.2% | Debated |
+| USA | 124% | -3.8% | +1.5% | Near threshold |
+| France | 113% | -3.5% | +1.3% | Under pressure |
+| UK | 102% | -2.8% | +1.8% | Monitored |
+
+**The r vs. g comparison:** Debt dynamics are sustainable when the real growth rate (g) exceeds the real interest rate (r). When r > g, debt-to-GDP grows automatically without any primary deficit — requiring ever-larger primary surpluses to stabilize. For the US:
+- r (real 10-year): ~1.5% in 2026
+- g (real GDP growth): ~2.2% projected
+- r < g → technically sustainable, but the gap is narrow and IMF projects r > g by 2028 under current trajectory
+
+**Japan as the extreme case study:**
+
+Japan's 256% debt/GDP is the highest in the developed world and provides evidence for the fiscal dominance hypothesis in practice:
+- Bank of Japan has maintained Yield Curve Control (YCC) — capping 10-year JGB yields at 1.0% despite global rate rises — explicitly to keep government borrowing costs manageable
+- If Japan allowed JGB yields to rise to market-clearing levels (estimated ~3–4% given inflation trajectory), interest payments would consume ~40–50% of government revenue
+- The BOJ holds ~55% of all outstanding JGBs — unprecedented central bank concentration in government debt
+- In January 2025, BOJ abandoned YCC, allowing 10-year yields to rise to 1.5%, triggering a cascade in global bond markets and JPY carry trade unwinding (see [[currency-markets-and-fx]])
+
+**Implications for investors:**
+
+Fiscal dominance creates a specific investment thesis: governments facing high debt + high borrowing costs will eventually (or already are) accepting above-target inflation as a mechanism of "financial repression" — reducing the real value of nominal debt without explicit default.
+
+Investors protecting against fiscal dominance should:
+1. Overweight **real assets** (gold, real estate, TIPS, commodities)
+2. Underweight **long-duration nominal bonds** of fiscally-stressed sovereigns
+3. Consider **foreign currency diversification** (Swiss franc, Singapore dollar — fiscal surplus countries)
+4. Examine **inflation-linked revenue streams** (infrastructure with CPI escalators, regulated utilities)
+
+The IMF (2026 Fiscal Monitor) explicitly warned that the combination of elevated public debt and higher interest rates has pushed 22 advanced economies into "elevated fiscal risk" territory — the first time this designation has been applied to advanced economies since the post-WWII debt deleveraging period.
+

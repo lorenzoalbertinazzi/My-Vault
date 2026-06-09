@@ -351,3 +351,45 @@ Elite discretionary traders in hedge fund environments describe decision states 
 - [[Tech & AI/agentic-ai-and-multi-agent-systems]] — Hedge fund pod model as organizational analog for multi-agent AI systems  
 - [[Psychology/flow-state-and-peak-performance]] — Flow state in discretionary trading; meta-cognition as trader self-management  
 - [[Psychology/dopamine-reward-systems-neuroscience]] — Cortisol and testosterone cycles affecting hedge fund trader risk-taking
+
+### Multi-Strategy Platform Funds: The Dominant Architecture of 2025–2026
+
+The most significant structural transformation in the hedge fund industry over 2015–2026 has been the explosive growth of **multi-strategy platform funds** — mega-funds that operate as internal marketplaces of independent portfolio management teams ("pods"), each trading with allocated capital, tight risk limits, and a "pass-through" fee structure that transfers costs directly to investors.
+
+**The Platform Model: How It Works**
+
+The canonical multi-strat platform fund (Citadel Wellington, Millennium Management, Balyasny, Point72, Schonfeld) operates fundamentally differently from traditional hedge funds:
+
+1. **Pod structure:** 100–500 independent teams ("pods") each run by a portfolio manager (PM) with 3–15 analysts/traders. Each pod operates as a micro-fund with its own P&L, risk limit, and strategy mandate
+2. **Capital allocation:** The platform allocates capital to pods based on risk-adjusted performance. A pod with Sharpe >2.0 gets more capital; a pod with drawdown >5% faces automatic reduction
+3. **Risk management:** Centralized risk function monitors gross/net exposure, factor concentrations, correlation between pods — ensuring the overall fund achieves diversification benefit that individual pods cannot
+4. **Pass-through costs:** Most platform funds pass through technology, data, and compensation costs directly to investors. Citadel's all-in costs reach 7–8% of AUM annually — but this is on top of the traditional "1 and 30" (1% management fee, 30% performance fee)
+
+**Performance data (real numbers):**
+
+| Fund | AUM (2026) | 2022 Return | 2023 Return | 5-yr CAGR | Notes |
+|------|-----------|------------|------------|-----------|-------|
+| Citadel Wellington | ~$65B | +38.1% | +15.3% | ~17% | Industry benchmark |
+| Millennium Management | ~$70B | +12.4% | +10.2% | ~13% | Largest by AUM |
+| Balyasny Asset Mgmt | ~$21B | +10.3% | +7.8% | ~10% | Mid-tier platform |
+| Point72 Asset Mgmt | ~$31B | +8.2% | +11.5% | ~11% | Stevie Cohen's fund |
+
+**Why 2022 validated the platform model:**
+
+The year 2022 was catastrophic for most hedge funds (average return: −4.5%) and devastating for traditional long/short equity (average: −10%). Multi-strat platforms outperformed because:
+- Rate-hedged positioning: equity pods were paired with rates/macro pods that profited from rising rates
+- Geographic diversification: pods in energy, commodities, and EM benefited from the inflationary shock
+- Tight risk management: losing pods were reduced before drawdowns became severe
+
+**The talent war and PM compensation:**
+
+Star PMs at top platforms earn 10–15% of their personal P&L (payout ratio), with additional carry-like compensation for consistent performance. A PM generating $100M P&L on $500M allocated capital (20% return on allocated capital) earns $10–15M. The "garden leave" problem: platforms now pay PMs to sit out contractual non-compete periods when they switch firms — garden leave payments of $5–50M became standard in the industry by 2024.
+
+**The Weinstein/Schonfeld 2026 controversy:**
+
+A notable 2026 development: Greg Weinstein (formerly Deutsche Bank structured credit trader) left Schonfeld to launch an independent fund, triggering litigation over $60M in deferred compensation. The case highlighted the tension between platform funds' compensation structures (which use multi-year deferrals to retain talent) and PMs' desire to be independent entrepreneurs — a fundamental agency conflict that no fee structure fully resolves.
+
+**The multi-strat arms race and crowding:**
+
+As of mid-2026, approximately 12–15 major platform funds collectively manage $500–600 billion. Their collective factor exposure has created a "pod crowding" phenomenon: top-rated momentum stocks carry a 15–20% premium valuation attributable to platform demand (BTIG quant research, 2025). When platforms simultaneously reduce equity exposure (as they did briefly in March 2025), market impact is significant — academic research by Greenwald and Kamarashev (2025) documented that platform de-risking explains 30–40% of equity market volatility on "de-risk days."
+

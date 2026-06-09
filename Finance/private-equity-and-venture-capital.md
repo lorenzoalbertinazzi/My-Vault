@@ -497,3 +497,76 @@ Venture capital has among the lowest diversity of any major financial sector: 20
 - [[Tech & AI/agentic-ai-and-multi-agent-systems]] — AI-enabled startups transforming VC opportunity landscape; agent systems for VC due diligence  
 - [[Psychology/psychology-of-leadership]] — Founder psychology and VC selection criteria; charisma vs. capability in investment decisions  
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — US-China competition in strategic technology VC; CFIUS restrictions on Chinese VC in US critical tech
+
+### Secondary Markets and the GP-Led Restructuring Revolution
+
+The private equity secondary market — transactions in which existing LP interests or fund assets are transferred to new buyers before the original fund's end of life — has evolved from a niche liquidity mechanism into a core institutional asset class, reshaping the capital allocation dynamics of private markets.
+
+**Secondary Market Scale and Growth:**
+
+Total secondary transaction volume:
+- 2015: ~$37 billion
+- 2019: ~$88 billion
+- 2021: ~$134 billion (record at the time)
+- 2023: ~$114 billion (slight decline on valuation adjustments)
+- 2025: ~$165 billion (new record; GP-led transactions dominant)
+
+The key structural shift: from LP-led secondaries (LPs selling fund stakes) to **GP-led secondaries** (GPs restructuring their own funds). GP-led transactions grew from 25% of volume in 2018 to approximately 55% by 2025.
+
+**The Continuation Vehicle (CV): Mechanics and Conflicts**
+
+The dominant GP-led structure is the **continuation fund** or **continuation vehicle (CV)**:
+
+1. A GP identifies 1–3 high-performing portfolio companies in a maturing fund (often the "star assets" generating the most value)
+2. The GP creates a new vehicle ("Fund X Continuation") and offers existing LPs a choice: (a) sell their exposure to the select assets at a negotiated price, or (b) roll into the new vehicle
+3. New investors (typically large secondary buyers: Ardian, Lexington Partners, Ares, Hamilton Lane) provide fresh capital, giving existing LPs who want liquidity a cash exit
+4. The GP earns a new carried interest on the continuation vehicle, effectively resetting the carry clock on already-profitable assets
+
+**The conflict of interest problem:**
+
+The GP simultaneously is:
+- The seller (representing the existing fund's LPs, who may want to sell at the highest price)
+- The buyer (acting as manager of the continuation fund, wanting to buy at the lowest price)
+- The beneficiary (receiving new carry if the continuation fund succeeds)
+
+This triple conflict has drawn SEC scrutiny. The SEC's 2022 Private Fund Adviser Rules required enhanced disclosure for GP-led secondary transactions and "fairness opinions" from independent third parties. The LP Advisory Committee (LPAC) must approve GP-led secondaries at most major funds, providing some governance protection.
+
+**NAV (Net Asset Value) Lending: The New Leverage Tool**
+
+Parallel to secondary development, **NAV lending** — credit facilities extended against a portfolio of PE fund investments using NAV as collateral — has grown from negligible to ~$100 billion in 2025 (Preqin). The mechanics:
+
+```
+PE Fund LP commits $500M → GP invests in 20 companies → Current NAV: $800M
+
+NAV Loan: Up to 20–25% of NAV = $160–200M at SOFR + 250–350bps
+Purpose: Fund new investments, pay interim distributions, bridge to exits
+
+Risk: If portfolio deteriorates and NAV falls below loan covenant threshold,
+      forced asset sales at distressed prices can destroy LP returns
+```
+
+NAV lending is controversial. LPs view it as invisible leverage on their already-leveraged PE investments — they committed to "unlevered" fund economics and now find their NAV being pledged as collateral for a loan the GP uses to defer exit or fund new deals. The SEC Private Fund Rules (2023) mandated disclosure of NAV borrowing to LPs.
+
+**The J-Curve and IRR Gaming:**
+
+The traditional J-curve creates a structural incentive for GPs to call capital slowly (fees are charged on invested capital in harvest period) and return capital quickly — even if the optimal economic outcome is to hold assets longer. IRR calculation:
+
+```
+IRR calculation makes early cash flows more valuable than late ones:
+
+Fund A: Returns $1B in Year 3 on $500M invested in Year 1
+IRR = (1B/500M)^(1/2) - 1 = 41.4%
+
+Fund B: Returns $2B in Year 7 on $500M invested in Year 1
+IRR = (2B/500M)^(1/6) - 1 = 26.0%
+
+PME comparison against S&P 500:
+Fund A PME: 1.85× (modest) since S&P returned ~40% in 3 years
+Fund B PME: 2.4× (superior) but looks worse by IRR
+
+Key insight: MOIC (Multiple on Invested Capital) and PME
+(Public Market Equivalent) are better long-run value metrics than IRR
+```
+
+This is why institutional LPs have increasingly demanded PME reporting alongside IRR — PME benchmarks the PE return against what would have been earned in public markets with equivalent cash flow timing, eliminating the mathematical advantage IRR gives to short-hold investments.
+

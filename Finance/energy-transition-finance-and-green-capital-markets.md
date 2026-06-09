@@ -96,3 +96,42 @@ The US Investment Tax Credit (ITC) for solar — which provided a 30% tax credit
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — IRA vs. EU Green Deal; Chinese clean tech dominance as geopolitical leverage
 - [[World Events/2026-05-30-global-economic-outlook-2026-slowdown]] — 2026 clean energy investment acceleration despite macro slowdown
 - [[World Events/2026-05-30-uae-exits-opec-oil-market-shift]] — UAE energy diversification and clean energy investment as oil revenue hedge
+
+### Carbon Border Adjustment Mechanism (CBAM): The New Trade-Climate Interface
+
+The European Union's **Carbon Border Adjustment Mechanism (CBAM)** — entered full transitional phase in October 2023 and moving to full application in 2026 — represents the most significant structural change to global trade finance since the WTO's creation. CBAM directly links carbon pricing to import tariffs, creating a new financial instrument category that capital markets must price.
+
+**CBAM mechanics:**
+CBAM requires importers of covered goods (initially cement, aluminium, fertilizers, iron/steel, electricity, and hydrogen) to purchase **CBAM certificates** corresponding to the carbon price that *would* have been paid under the EU ETS if the goods had been produced in the EU. The price per CBAM certificate equals the weekly average auction price of EU ETS allowances.
+
+**Quantitative exposure (2026 figures):**
+- Sectors initially covered represent ~17% of EU industrial CO₂ emissions (IPCC estimate)
+- By 2034, CBAM covers all sectors in the EU ETS — expanding to ~$37 billion annually in CBAM certificates (European Commission impact assessment)
+- Current EU ETS allowance price: ~€58–72/tonne (June 2026)
+- For a Chinese steel mill exporting to the EU without any domestic carbon price, CBAM cost = ~€60/tonne × embodied carbon intensity (~1.8 tCO₂/tonne steel) = ~€108/tonne steel premium — approximately 20–25% of the landed steel price
+
+**Investment implications of CBAM:**
+
+*Winners:*
+- Domestic EU producers with existing ETS compliance (their competitive disadvantage relative to unpriced imports disappears)
+- Producers in countries with equivalent or higher carbon pricing: Norway, Switzerland, UK, potentially Canada and US if IRA carbon pricing provisions strengthen
+- CBAM compliance specialists (consultants, carbon accounting software, certification bodies)
+- Low-carbon materials producers (green steel using hydrogen-based direct reduction iron; green aluminium using renewable energy)
+
+*Losers:*
+- High-carbon-intensity exporters from India, China, Russia, Turkey (major steel and aluminium exporters to EU)
+- European importers of covered goods (pass-through to downstream manufacturers)
+- Trade finance banks with credit exposure to affected commodity flows
+
+**The "carbon leakage" concept CBAM addresses:**
+Without CBAM, the EU ETS creates carbon leakage: EU manufacturers pay carbon prices, competing importers do not, incentivizing production to shift to non-EU jurisdictions with no carbon cost. CBAM eliminates this incentive, making carbon pricing trade-neutral. The WTO legality remains contested — CBAM could violate Most Favored Nation (MFN) principles by treating imports differently based on origin country's climate policy, but the EU argues it is a legitimate environmental measure under GATT Article XX.
+
+**Green steel finance and the CBAM-driven investment wave:**
+
+H2 Green Steel (Sweden), ThyssenKrupp (Germany), and ArcelorMittal are investing $3–8 billion each in hydrogen-based direct reduction iron (DRI) facilities that produce steel with ~95% lower CO₂ intensity. The financial logic is direct: CBAM creates a €108/tonne premium for conventionally produced steel imported from China, making hydrogen-DRI financially viable at a green premium of €80–120/tonne — which hydrogen-DRI can achieve at current European electrolyzer costs (~€2.5–3.5/kg hydrogen).
+
+The financing structures are novel: long-term offtake agreements with European automakers (BMW, Mercedes) who need low-carbon steel for regulatory compliance embed a "carbon price floor" that derisk green steel project finance, allowing project bonds at 200–250bps over risk-free rather than the 400–500bps that uncontracted projects would require.
+
+**The Article 6 Paris Agreement mechanism:**
+CBAM intersects with Article 6 of the Paris Agreement, which establishes international carbon credit markets. Countries with their own carbon pricing can earn "Article 6 credits" that offset CBAM obligations — creating a potential market where emerging markets monetize their lower-carbon production processes into CBAM certificate credits. The Article 6.4 mechanism (the "Paris Agreement Crediting Mechanism") is still being negotiated but could become a major capital flow channel from EU to developing world clean industry investment.
+

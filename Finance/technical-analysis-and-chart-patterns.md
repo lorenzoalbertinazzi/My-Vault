@@ -479,3 +479,89 @@ The behavioral finance explanation for technical analysis alpha is more rigorous
 - [[Psychology/cognitive-biases]] — Pattern recognition biases; confirmation bias in chart reading; pareidolia in price patterns  
 - [[Tech & AI/computer-vision-and-convolutional-neural-networks]] — CNN for automated chart pattern recognition; deep learning technical analysis systems  
 - [[Tech & AI/machine-learning-fundamentals]] — ML trend-following strategies; feature engineering from price and volume data
+
+### Algorithmic Pattern Recognition: When Technical Analysis Meets Quantitative Finance
+
+The traditional view in quantitative finance has been skeptical of technical analysis — the efficient market hypothesis suggests that chart patterns should be arbitraged away the moment they are discovered. The more nuanced 2026 view is that technical analysis represents an attempt to operationalize market microstructure dynamics and behavioral finance phenomena that have empirically measurable (if small) predictive power when properly tested.
+
+**The Andrew Lo Meta-Analysis Framework:**
+
+Andrew Lo (MIT) and colleagues — particularly "Foundations of Technical Analysis" (2000, with Mamaysky and Wang) in the Journal of Finance — applied rigorous statistical testing to technical patterns using nonparametric kernel regression. Their findings:
+
+- Several technical patterns (head-and-shoulders, double bottom, broadening wedge) show statistically significant incremental information content for short-term returns (5–10 day horizon) when properly tested on multiple markets
+- The effect sizes are small: R² of ~1–3% for the best patterns
+- Persistence post-discovery is mixed: some patterns fade as algorithmic traders arbitrage them; others persist because they reflect durable behavioral regularities (momentum, mean-reversion)
+
+**The Quantified Technical Patterns:**
+
+**1. Head-and-Shoulders (H&S) Pattern:**
+
+The H&S pattern is defined by:
+- Left shoulder: Price rises then falls
+- Head: Price rises to new high then falls to similar trough level
+- Right shoulder: Price rises to similar level as left shoulder then falls
+- **Neckline:** The horizontal or slightly sloped line connecting the two troughs
+
+Empirical statistics (Bulkowski's Encyclopedia of Chart Patterns, exhaustive database):
+- 93% of H&S patterns correctly predicted direction when measured at neckline break
+- Average decline after confirmed H&S break: -16% from neckline
+- Average duration to price target: 67 days
+- Sample: 431 head-and-shoulders patterns in US equities (1991–2020)
+
+**The price target calculation:**
+```
+H&S Price Target = Neckline Price - (Head Price - Neckline Price)
+
+Example:
+  Head: $150
+  Neckline: $130
+  H&S height: $150 - $130 = $20
+  Price target after breakdown: $130 - $20 = $110 (15.4% decline)
+```
+
+**2. Volume-Price Relationship:**
+
+Technical analysis's most empirically defensible component is the **volume-price relationship**:
+- Price rises on high volume signal institutional buying (genuine demand)
+- Price rises on low volume signal weak momentum (likely to reverse)
+- Price declines on high volume signal distribution (institutional selling)
+
+Granville's On-Balance Volume (OBV) operationalizes this:
+```
+If Price today > Price yesterday: OBV_t = OBV_{t-1} + Volume_t
+If Price today < Price yesterday: OBV_t = OBV_{t-1} - Volume_t
+
+Divergence signal: Price making new highs but OBV declining
+→ volume not confirming the price move → potential reversal
+```
+
+Quantitative validation: OBV divergence precedes price reversals with ~58% accuracy at 20-day horizon — better than random (50%) but barely sufficient for trading edge after transaction costs.
+
+**3. The Algorithmic Pattern Recognition Era:**
+
+By 2026, hedge funds and algorithmic trading firms have fully automated technical pattern recognition:
+
+- **Convolutional Neural Networks (CNNs):** Jiang and Kelly (2021, Review of Financial Studies) demonstrated that CNNs trained on price chart images predict 5-day returns with Sharpe ratio ~0.85 out-of-sample (1993–2019, US equities) — stronger than any individual traditional factor model
+- The CNN "sees" patterns that are not explicitly labeled — it discovers that certain price/volume configurations predict returns, without being told which patterns matter
+- Key findings from the CNN study: The model overweights recent information (consistent with momentum) but also identifies mean-reversion in specific volatility configurations (consistent with RSI logic)
+
+**4. RSI (Relative Strength Index) — Quantified:**
+
+The RSI is a momentum oscillator developed by Welles Wilder (1978):
+```
+RSI = 100 - [100 / (1 + RS)]
+RS = Average Gain over N periods / Average Loss over N periods
+
+Traditional interpretation:
+  RSI > 70: "Overbought" → potential reversal
+  RSI < 30: "Oversold" → potential reversal
+  RSI = 50: Midpoint (neutral momentum)
+```
+
+Quantitative testing of RSI(14) for mean-reversion signals in US equities (Connors & Alvarez research):
+- RSI < 10 signal: Next 5-day forward return averaged +1.8% (vs. +0.1% unconditional) — strong
+- RSI > 90 signal: Next 5-day forward return averaged −0.9% — modest but consistent
+- Context matters: RSI signals are more reliable in uptrending markets (price above 200-day MA) than downtrending markets
+
+The key conclusion: technical analysis works as a systematic, quantified probability-adjustment tool — not as a standalone "pattern = outcome" deterministic system. Integrated into a multi-signal framework with proper statistical testing, position sizing, and risk management, technical signals add marginal predictive value above fundamental factors alone.
+

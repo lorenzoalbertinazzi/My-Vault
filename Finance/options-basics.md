@@ -487,3 +487,62 @@ The Merton (1974) structural credit model established that equity is equivalent 
 - [[Tech & AI/reinforcement-learning-from-human-feedback]] — RL as options pricing in real-time sequential decision optimization; American option analogy  
 - [[Psychology/prospect-theory-and-decision-making]] — Probability weighting in options trading; overweighting of tail probabilities creating systematic options mispricings  
 - [[Geopolitics/2026-06-06-iran-gulf-escalation-kuwait-bahrain-june-2026]] — VIX term structure inversion during binary geopolitical events; options market as geopolitical risk barometer
+
+### Zero-Days-to-Expiry (0DTE) Options: The New Market Microstructure
+
+The explosion of **zero-days-to-expiry (0DTE) options** — contracts expiring the same calendar day they are traded — has fundamentally transformed equity options market microstructure since 2022, creating new sources of volatility, new hedging challenges for dealers, and a new class of retail speculative behavior that warrants deep understanding.
+
+**The 0DTE Market Structure:**
+
+Prior to 2022, S&P 500 index options (SPX) expired on three days per week (Monday, Wednesday, Friday). In May 2022, CBOE expanded to daily expirations (every trading day). The market response was extraordinary:
+
+- **April 2022:** 0DTE options accounted for approximately 20% of daily SPX options volume
+- **December 2022:** 0DTE share rose to ~44%
+- **June 2026:** 0DTE options represent approximately 55–60% of daily SPX options notional volume
+- **Daily notional:** ~$500–800 billion in 0DTE SPX options on average days; spikes to >$1 trillion on volatile days
+
+This represents the most significant structural shift in equity derivatives since the creation of listed options themselves.
+
+**The gamma dynamics of 0DTE:**
+
+Because 0DTE options expire at the end of the same day, their gamma (the second derivative of option price with respect to underlying price) is extraordinarily high near-the-money:
+
+```
+For a 0DTE ATM option with S = $5,000, σ = 18%/year, T = 1/252 year:
+
+Delta ≈ N(d₁) ≈ 0.50 (by definition for ATM options)
+Gamma = N'(d₁) / (S × σ × √T) = 0.399 / (5000 × 0.18 × 0.063) = 0.399 / 56.7 ≈ 0.00704 per dollar
+
+Interpretation: For every $1 move in SPX, the delta changes by 0.00704
+For a $10 move (0.2% intraday swing): Δ(delta) = 0.00704 × 10 = 0.0704
+```
+
+A market maker with $10 billion notional exposure in ATM 0DTE contracts faces a **delta exposure that shifts by $70 million for every $10 move in SPX** — requiring continuous rebalancing throughout the day. This is extreme gamma scalping that creates a mechanical feedback loop:
+
+- **When SPX falls:** 0DTE put buyers' delta increases → dealers who sold puts must sell SPX futures to re-hedge → accelerates decline
+- **When SPX rises:** 0DTE call buyers' delta increases → dealers who sold calls must buy SPX futures → accelerates rise
+
+**The intraday volatility amplification effect:**
+
+SpotGamma and Tier1Alpha (options analytics firms) have documented that 0DTE-heavy trading days show significantly higher intraday price oscillations:
+- Days with >$600B 0DTE volume: average intraday range (high-low) of 1.2% vs. 0.7% on low-0DTE days
+- "Gamma flip" dynamics: when SPX crosses the 0DTE "put wall" (strike with maximum open put interest), dealer hedging reverses direction, creating sharp reversals
+
+**The retail participation phenomenon:**
+
+Thinkorswim (TD Ameritrade) and Robinhood data suggest approximately 30–40% of 0DTE volume originates from retail traders. The appeal:
+1. **Leverage:** A $5,000 SPX position controlled via 0DTE options requires only $50–200 in premium (100:1 leverage or more)
+2. **Defined risk:** Maximum loss is limited to premium paid
+3. **Entertainment value:** The rapid P&L fluctuations during the trading day provide the psychological stimulation of high-frequency feedback (see [[Psychology/dopamine-reward-systems-neuroscience]])
+
+**The "lottery ticket" distribution:** 0DTE options pricing follows power-law tails due to the extreme skewness of payoffs. A 0.5-delta put costs approximately $1,500/contract; a 0.05-delta OTM put costs $25/contract — a 60-to-1 ratio in premium for a 10-to-1 ratio in delta probability. Retail buyers systematically overpay for the 0.05-delta "lottery" options because they weight the psychological impact of a large payout more than the actuarial probability.
+
+**Volatility term structure implications:**
+
+The massive 0DTE market has created a distinct **very-short-term volatility** level that can diverge substantially from the VIX (30-day implied volatility). Practitioners now monitor:
+- VIX: 30-day implied vol (~18% in normal conditions)
+- 1-week IV: ~15% in normal; spikes to 35%+ during events
+- 0DTE IV: effectively unobservable as "implied vol" since there's almost no time value — the market moves directly in delta-gamma space
+
+This has motivated creation of the **VOLI index** (1-day implied volatility) by CBOE, providing a real-time read on single-day market risk expectations.
+

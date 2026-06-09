@@ -502,3 +502,38 @@ Research in behavioral economics consistently finds that digital payment methods
 - [[Tech & AI/blockchain-and-distributed-ledger]] — DLT infrastructure choice for CBDC architecture; permissioned vs. permissionless tradeoffs  
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — mBridge as dollar hegemony challenge; de-dollarization infrastructure  
 - [[Psychology/prospect-theory-and-decision-making]] — Payment decoupling and CBDC spending behavior; programmable money and behavioral design
+
+### CBDC Wholesale Architecture and Interoperability: mBridge's 2026 Status
+
+The most consequential development in CBDC design since 2022 has been the maturation of **wholesale CBDC** (wCBDC) infrastructure — particularly the mBridge project — which has evolved from a proof-of-concept into a functioning, geopolitically significant alternative to SWIFT for cross-border interbank payments.
+
+**mBridge Technical Architecture:**
+The mBridge Ledger (mBL) is a purpose-built distributed ledger technology (DLT) platform co-developed by the BIS Innovation Hub Hong Kong Centre with the central banks of China (PBOC), Hong Kong (HKMA), Thailand (BOT), and the UAE (CBUAE). As of 2026, Saudi Arabia's SAMA has joined as a full participant. The platform operates on a modified Proof-of-Authority consensus mechanism rather than Proof-of-Work or Proof-of-Stake, allowing trusted central bank nodes to validate transactions with sub-second finality.
+
+**Key technical parameters (2025 pilot data):**
+- Transaction finality: 2–8 seconds (vs. SWIFT average 2–5 days for correspondent banking)
+- Cost per transaction: approximately $0.02 (vs. $25–40 typical international wire transfer cost)
+- Scalability: tested to 100+ transactions per second; target 10,000+ TPS for production
+- Currency settlement: atomic simultaneous exchange eliminates settlement risk (the Herstatt risk that arises in conventional FX settlement when one leg settles before the other)
+
+**Programmability and smart contracts:**
+The mBL supports programmable transactions — escrow conditions, payment milestones, trade finance triggers. A Chinese exporter shipping goods to a UAE importer can structure payment to release atomically when a bill of lading is registered on-chain, eliminating the 30–90 day documentary collection delay in conventional trade finance. This creates a "money that can be programmed" capability fundamentally distinct from electronic bank transfers.
+
+**The geopolitical dimension: Sanctions bypass architecture**
+The mBridge controversy centers on its potential to create a settlements infrastructure that bypasses the SWIFT/US dollar system, potentially enabling countries under US sanctions to conduct international trade. This is not merely theoretical: Russia, after the exclusion of its banks from SWIFT in March 2022, has actively explored connecting to mBridge-compatible infrastructure through Chinese correspondent banking channels. The BIS position (confirmed by Agustín Carstens, 2024) is that mBridge has "no nefarious intent" and requires participants to maintain full AML/KYC compliance. However:
+
+- The technical architecture creates a parallel payments rail that does not route through US correspondent banks
+- US Treasury has explicitly flagged mBridge as a potential OFAC compliance risk
+- The BIS stepped back from the project as an "observer" in late 2024 amid these concerns
+- China's participation gives Beijing institutional influence over the platform's governance
+
+**Quantitative impact on dollar hegemony:**
+The Milken Institute (2024) estimated that if mBridge (or equivalent) achieved 10–20% of global cross-border payment flows currently processed through SWIFT, it would represent a meaningful reduction in demand for US dollar liquidity reserves — potentially reducing USD reserve holding requirements for participating countries by $200–400B. The IMF's 2026 Annual Report flagged wCBDC interoperability as one of the top five structural changes to the international monetary system.
+
+**Retail CBDC contrast — the "two-tier" model:**
+While wholesale CBDC debates focus on geopolitics and interbank efficiency, the retail CBDC debate centers on different issues: financial inclusion vs. surveillance risk, bank disintermediation, and programmability concerns. The emerging international consensus (ECB, Fed, Bank of England) is a **"two-tier" design**:
+- **Tier 1:** Central bank issues CBDC to commercial banks (wholesale layer)  
+- **Tier 2:** Commercial banks distribute CBDC to retail customers under existing banking licenses
+
+This preserves commercial banks' role in intermediation, privacy, and customer relationships while allowing the central bank to modernize the base money infrastructure. China's e-CNY has experimented with this model since 2021, with over 260 million wallet downloads and ~¥7 trillion in transaction volume by end-2025 (though most transactions remain incentivized via government-subsidized discounts rather than organic adoption).
+
