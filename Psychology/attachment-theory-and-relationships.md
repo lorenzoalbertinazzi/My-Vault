@@ -3,7 +3,7 @@ title: Attachment Theory and Adult Relationships
 date: 2026-05-30
 tags: [psychology, attachment-theory, relationships, bowlby, ainsworth, adult-attachment, neuroscience, therapy, developmental-psychology, interpersonal-psychology, secure-attachment, anxious-attachment, avoidant-attachment, oxytocin, emotionally-focused-therapy]
 source: "Bowlby Attachment and Loss trilogy (1969–1980); Ainsworth et al. (1978) Patterns of Attachment; Hazan & Shaver (1987) Romantic Love Conceptualized as an Attachment Process, JPSP; Mikulincer & Shaver (2007) Attachment in Adulthood; Fonagy et al. (2002) Affect Regulation, Mentalization, and the Development of the Self"
-last_updated: 2026-06-06
+last_updated: 2026-06-09
 ---
 
 
