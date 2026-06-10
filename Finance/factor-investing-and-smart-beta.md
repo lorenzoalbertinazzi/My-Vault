@@ -392,3 +392,99 @@ JP Morgan's quantitative strategies group has developed "crowding-adjusted" fact
 **The AI factor concentration problem.** A distinct challenge in 2026 factor investing is that S&P 500 index concentration in AI-exposed stocks (the "Magnificent Seven" — Apple, Microsoft, Nvidia, Alphabet, Amazon, Meta, Tesla — represent ~30% of S&P 500 market cap) distorts standard factor exposures. The market factor (beta = 1) now heavily overlaps with AI-sector exposure, making a "pure market beta" position a de facto AI sector overweight. The low-volatility factor is particularly affected: the strategy of buying low-volatility stocks and shorting high-volatility stocks mechanically underweights AI stocks (which have high volatility) and overweights defensive sectors — creating a persistent structural underperformance in AI-driven market environments. Factor managers at Invesco, Wisdomtree, and MSCI are actively researching "AI-adjusted" factor definitions that separate market beta from AI-sector beta, allowing investors to maintain intended factor tilts without systematic sector concentrations that the original factor definitions never intended.
 
 **Norway GPFG factor allocation: real-world scale.** The Norwegian Government Pension Fund Global (GPFG), the world's largest sovereign wealth fund at ~$1.9 trillion AUM, allocates approximately 7% of its equity portfolio (~$60 billion) to explicit factor strategies, primarily value, small-size, and low-volatility. The Fund's 2025 Annual Report documents that its factor allocations generated 0.4 percentage points of excess return vs. the reference index over the 2015–2025 decade — modest but statistically significant at this sample size, and worth approximately $7.5 billion in absolute terms.
+
+---
+
+### Factor Construction Methodologies, the P-Hacking Problem, and Rebalancing Effects
+
+#### Factor Construction: From Academic Definition to Investment Product
+
+The translation of an academically documented factor premium into an investable portfolio involves a series of construction choices that substantially affect returns, turnover, and capacity.
+
+**The five construction decisions:**
+
+**1. Universe definition:**
+- Broad universe (all US stocks including microcaps): captures the purest academic factor premium but microcap stocks have high transaction costs and limited capacity. Fama-French use NYSE breakpoints applied to the NYSE-AMEX-NASDAQ universe, which includes very small stocks.
+- Investable universe (stocks above $200M market cap): more practical but potentially misses tail of premium
+- Large-cap-only (S&P 500 constituents): lowest transaction costs; factor premiums are significantly smaller (most factor research shows premiums concentrated in small and mid-cap stocks)
+
+**2. Signal measurement:**
+- Value factor: Book-to-price (B/P)? Book includes goodwill, off-balance-sheet items. Enterprise Value/EBIT? Sales/EV? Price-to-earnings? Each definition produces a different portfolio with different return characteristics.
+- Momentum factor: 12-1 (12-month trailing return, excluding last month — the standard Jegadeesh-Titman definition)? Or 6-1? Or 1-month (short-term reversal)? The choice dramatically changes the portfolio.
+
+**3. Score construction:**
+- **Ranking (z-score):** Rank all stocks by signal; assign z-scores. Avoids outlier distortion.
+- **Raw ratio:** Use raw B/P ratios. Outliers dominate.
+- **Winsorization:** Cap extreme values at 1st/99th percentile. Common practice.
+
+**4. Weighting:**
+- Equal weighting: Every stock in the factor portfolio has equal weight. Maximum factor purity; high turnover; limited capacity.
+- Factor score weighting: Weight proportional to z-score. Intermediate.
+- Market cap weighting: Multiply factor score by market cap. Maximum capacity; factor effect diluted.
+
+**5. Rebalancing:**
+- Monthly: Maximum factor freshness; maximum turnover (and transaction costs)
+- Quarterly: Standard for most smart beta products
+- Annually: Lowest turnover; most factor "staling" (holding stocks that have migrated away from factor definition)
+
+**The construction effect on returns:** Research by Hou, Xue & Zhang (2020, *Review of Financial Studies*) replicating 452 published anomalies found that construction choices explain 30–50% of return variation across implementations of the same factor. A value factor constructed with quarterly rebalancing and equal-weighting in the full US universe returns approximately 4.2% per year (1963–2020); the same factor with annual rebalancing and market-cap weighting returns approximately 1.9% per year.
+
+#### The Factor Zoo and P-Hacking: Statistical Validity Crisis
+
+The "factor zoo" refers to the explosion of published factors in academic finance — from the original market beta (CAPM, 1964) to an estimated **400+ factors** documented in the literature by Harvey, Liu & Zhu (2016). The vast majority are spurious discoveries from data mining.
+
+**The multiple testing problem:**
+When a researcher tests 100 independent hypotheses at p < 0.05, they expect to find 5 "significant" results purely by chance — false discoveries. In financial research with 200+ years of cumulative published studies testing thousands of hypotheses:
+- Traditional threshold: t-statistic > 2.0 (p < 0.05, two-tailed)
+- Harvey, Liu & Zhu recommended threshold: t-statistic > 3.0 (accounting for multiple testing)
+
+At t > 3.0, roughly **65% of published factors remain significant**. At the traditional t > 2.0, nearly all 400+ factors appear significant. The difference: 200+ factors are likely false discoveries discoverable only by chance in historical data.
+
+**The publication bias mechanism:**
+Positive results are published; negative results sit in file drawers. If 20 researchers independently test the same hypothesis and one finds significance by chance, only the significant result is published. The academic finance literature is subject to severe publication bias because: (1) journals require novel significant findings; (2) data mining is computationally easy; (3) replication failures are rarely published.
+
+**Post-publication decay as the litmus test:**
+McLean & Pontiff (2016, *Journal of Finance*) studied 97 factor anomalies pre- and post-publication. Key findings:
+- Pre-publication alpha: 100% (by definition, as they were selected for publication)
+- In-sample period after publication: 58% of alpha remains
+- Out-of-sample period (data not available to researchers): 44% of alpha remains
+- Interpretation: 56% of factor alpha disappears in the period the researcher couldn't access — suggesting that 56% is data mining artifact, not a real economic mechanism
+
+**The surviving factors (with >3.0 t-statistic AND post-publication persistence):**
+Based on the consensus of Fama-French (2015, 2018), AQR (Asness et al.), and Bloomberg/MSCI research:
+1. **Market beta** (t ≈ 5.0): The CAPM market premium — still significantly positive over long periods
+2. **Value (HML)** (t ≈ 3.2): Significantly positive over 1963–2025, with the 2007–2020 dip appearing to be temporary regime
+3. **Profitability/Quality (RMW)** (t ≈ 3.8): Robust out-of-sample
+4. **Investment (CMA)** (t ≈ 3.5): Robust
+5. **Momentum (UMD)** (t ≈ 4.2): High average return but severe crash risk (May 2009 −42%)
+6. **Low volatility (BAB — Betting Against Beta)** (t ≈ 3.4): Robust, particularly in international markets
+
+Factors with weaker statistical support that are increasingly questioned: short-term reversal (trading cost sensitive), liquidity (alternative explanations sufficient), idiosyncratic volatility (negative sign puzzling).
+
+#### Rebalancing Frequency and Its Impact on Factor Returns
+
+Research by Novy-Marx (2020, *Review of Financial Studies*) decomposes factor premium into fast and slow components:
+- **Fast premium** (realized at monthly rebalancing): approximately 60% of total premium for momentum; 30% for value
+- **Slow premium** (persistent over quarters to years): approximately 40% for momentum; 70% for value
+
+**Implication:** Momentum requires frequent rebalancing (monthly) to capture most of its premium — the ranking changes rapidly. Value can be captured with less frequent rebalancing (quarterly or annually) with modest premium sacrifice.
+
+**Transaction cost breakeven:**
+- Momentum factor gross alpha: ~7% annually
+- Turnover at monthly rebalancing: ~100% per year (entire portfolio rotates annually)
+- At 20 bps one-way transaction costs: 100% × 2 × 0.20% = 0.40% annual cost
+- Net alpha: 6.6% — still significant, but the cost is real
+
+- At 50 bps one-way (for illiquid mid-caps): 1.0% annual cost → net alpha 6.0%
+- At 100 bps one-way (for small-caps): 2.0% cost → net alpha 5.0%
+
+This explains why the momentum factor's theoretical premium largely disappears in the smallest cap quintile — transaction costs consume the entire premium. The practical momentum strategy is restricted to mid-cap+ stocks where market impact remains manageable.
+
+---
+
+## Related
+
+- [[Modern-Portfolio-Theory]] — factor model context within mean-variance optimization
+- [[quantitative-finance-and-algorithmic-trading]] — systematic factor implementation and signal processing
+- [[behavioral-finance-and-investor-psychology]] — behavioral explanations for factor premiums
+- [[hedge-funds-and-alternative-strategies]] — factor-based hedge fund strategies (AQR, LSV, DFA)

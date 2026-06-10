@@ -500,3 +500,75 @@ The outperformance of macro/CTA strategies reflects the multi-dimensional trend 
 **Renaissance Technologies' Medallion Fund — the 2026 performance.** Medallion, accessible only to current and former RenTech employees and their families, maintained its extraordinary performance in 2025 with an estimated net return of 67% (before the ~5% management fee and ~44% performance fee, before-fee gross return estimated at ~130%). The fund's AUM is capped at $15 billion to preserve alpha. The $10 billion in annual performance fees collected by RenTech employees is the single largest annual compensation flow to a single fund in financial history. Medallion's 2026 performance is not yet public but is widely assumed to have benefited from the multi-asset volatility created by the Hormuz crisis and Fed policy uncertainty — the exact regime where high-frequency statistical arbitrage and machine learning-based signal models thrive.
 
 **Shorting in the 2026 environment: the unique pressures on short-sellers.** Running short positions in 2026 has become structurally more difficult for three reasons: (1) **The cost of borrow** — particularly for AI-related and high-momentum stocks — has increased dramatically; Tesla short interest costs reached 9.8% annually in Q1 2026, making sustained short positions in momentum names uneconomical unless price declines materialize quickly; (2) **The Reddit-and-AI-narrative amplification** of short-squeeze dynamics, where retail social media communities can identify and target heavily shorted stocks with coordinated buying pressure at negligible individual cost; (3) **The gamma squeeze mechanism in 0DTE options**, where large option purchases force dealer hedging that accelerates price moves against short sellers. Hedge funds with significant short books have either reduced position size, moved to put options (capped downside, defined cost), or focused shorts on highly liquid large-caps where retail coordination is less effective. The practical result: effective alpha from short positions has declined approximately 30–40% since 2020, forcing long/short equity managers to generate more of their returns from long alpha rather than short alpha.
+
+---
+
+### Hedge Fund Structure, Fee Compression, and Managed Account Platforms
+
+#### The 1940 Investment Company Act Exemptions: How Hedge Funds Are Structured
+
+Hedge funds avoid regulation as investment companies under the Investment Company Act of 1940 by qualifying for two primary exemptions:
+
+**Section 3(c)(1) exemption:** Available to funds with fewer than 100 beneficial owners and not making a public offering. Typically used by smaller funds; limits AUM scalability due to headcount restriction.
+
+**Section 3(c)(7) exemption:** Available to funds selling exclusively to "qualified purchasers" (individuals with $5M+ in investments; institutions with $25M+ in investments) with no limit on the number of investors. This is the standard exemption for institutional hedge funds.
+
+**Accredited investor vs. qualified purchaser:**
+- Accredited investor (Reg D threshold): $200K individual income or $1M net worth (excluding primary residence) — the threshold for many private fund investments
+- Qualified purchaser: Much higher ($5M investable assets for individuals) — required for 3(c)(7) funds
+
+**The Dodd-Frank additional requirements (2010):**
+Post-Dodd-Frank, hedge funds with >$150M in AUM must register with the SEC as Investment Advisers (IA registration) and file Form PF (Private Fund disclosure) with information about fund leverage, counterparty exposure, and portfolio composition. This created the current regulatory overlay: hedge funds are exempt from ICA but regulated at the adviser level.
+
+**The General Partner / Limited Partner structure:**
+- **General Partner (GP):** The fund manager (e.g., "Citadel LP" manages "Citadel Wellington Fund"). The GP has unlimited liability for fund obligations (in a partnership structure) and is typically the owner of the management company. GP earns management fees.
+- **Limited Partners (LPs):** Investors. Limited liability — they can only lose their investment (not more). LPs have no management rights but typically have limited governance rights through LPACs (LP Advisory Committees) for major decisions (key person events, material conflicts, amendments to fund terms).
+
+**Offshore structure for tax efficiency:**
+Most large hedge funds maintain parallel onshore (Delaware LP) and offshore (Cayman Islands Ltd.) fund vehicles. The offshore vehicle:
+- Accepts non-US investors (who would otherwise face US withholding tax issues)
+- Accepts US tax-exempt investors (endowments, pension funds, who want to avoid Unrelated Business Taxable Income from leveraged partnerships)
+- Is typically a "master-feeder" structure where the Cayman vehicle feeds into a common US master fund that does the actual trading
+
+#### Fee Compression: From "2 and 20" to "1 and 15"
+
+The classic hedge fund fee structure — 2% annual management fee + 20% performance fee (carried interest) on all profits above a high-water mark — has been under sustained pressure from:
+
+1. **Institutional investor bargaining power:** Large pensions and endowments committing $500M+ have successfully negotiated management fee reductions to 1.0–1.5% and performance fees to 15%
+2. **Persistent underperformance:** The HFRX Global Hedge Fund Index returned approximately 3.5% annually over 2009–2019, vs. the S&P 500's 14.7% annually — the fee drag partially explains this gap, but the gross-of-fee performance also underperformed
+3. **Long-only alternative:** A 60/40 passive portfolio (charging 0.05% total expense ratio) outperformed the average hedge fund after fees over 10 of the 15 years to 2025
+
+**Current fee landscape (2026):**
+- **Average management fee:** 1.35% (down from 1.75% in 2010)
+- **Average performance fee:** 17.4% (down from 19.8% in 2010)
+- **Trend:** Fee compression accelerating as investors demand net-of-fee performance accountability
+- **Survivors of "2 and 20":** Only elite multi-managers (Millennium, Citadel, DE Shaw) and demonstrably exceptional performers (Renaissance Medallion — theoretically) maintain 2 and 20 or higher
+
+**The hurdle rate debate:**
+Most hedge funds have no minimum hurdle rate — any profit above the high-water mark triggers performance fees. Fixed income hedge funds charging 20% performance fees on returns earned during the 2020–2021 zero-rate environment generated enormous fees while delivering returns that were essentially the result of central bank policy, not skill. The CalPERS (California pension fund) campaign to require 8% hurdle rates before performance fees trigger gained significant institutional LP support in 2024–2025, with approximately 15% of institutional hedge fund mandates now including hurdle rates.
+
+#### Managed Account Platforms: Transparency and Control
+
+**Managed accounts** give institutional investors direct ownership of a separately managed portfolio following a specific strategy — rather than investing in a commingled fund. The major platform operators: Lyxor (Societe Generale), Innocap, Rothschild & Co, HedgeMark (BNY Mellon), and the large prime brokers (Goldman Sachs, JP Morgan).
+
+**Advantages vs. commingled funds:**
+1. **Daily transparency:** LP can see every position in real-time — the hedge fund manager has no ability to hide risks or hold illiquid positions without LP knowledge
+2. **Liquidity:** LP controls redemption of their own account (not subject to fund-level gates and redemption restrictions that can trap capital in commingled funds during stress)
+3. **Segregated custody:** Assets held in LP's own account at their prime broker — no exposure to hedge fund level counterparty risk or frauds (like Madoff, which required investors to trust custody to the same entity doing the trading)
+4. **Custom modifications:** Large LPs can negotiate exclusion of specific securities, sectors, or countries from their managed account
+
+**Disadvantages:**
+1. **Higher minimum:** Typically $50–100M minimum per strategy (vs. $500K for retail hedge fund vehicles) — limits to large institutional investors
+2. **Information asymmetry:** The portfolio is fully visible to the LP, but the LP cannot "translate" what they see into strategy understanding without significant analytical capability. A managed account showing 5,000 positions in a statistical arbitrage strategy tells the LP almost nothing about risk unless they have quant infrastructure to analyze it.
+3. **Performance may differ from main fund:** If the managed account has different trading costs (due to smaller size), different cash management, or exclusions, performance can diverge from the main fund (sometimes favorably, sometimes unfavorably)
+
+**2026 managed account adoption:** Approximately $285 billion is managed via dedicated hedge fund managed account platforms (excluding SMAs managed directly at prime brokers) — up 8% annually since 2020 as institutional demand for transparency and liquidity has grown post-COVID, post-2022 rate shock.
+
+---
+
+## Related
+
+- [[private-equity-and-venture-capital]] — GP/LP structure parallels; closed-end fund mechanics
+- [[factor-investing-and-smart-beta]] — factor-based "hedge fund replication" strategies
+- [[risk-parity-and-all-weather-portfolios]] — Bridgewater as dominant risk parity hedge fund
+- [[derivatives-futures-and-forwards]] — derivative instruments used by hedge fund strategies

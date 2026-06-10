@@ -508,3 +508,124 @@ The near-zero (slightly negative) ERP at current equity multiples means equities
 **3. Mortgage rate transmission:**
 The 30-year fixed mortgage rate closely tracks the 10-year Treasury + mortgage spread (~170bps). With 10-year at 4.72%, 30-year mortgage rates at 6.4–6.8% in 2026. Housing affordability at historically poor levels: the monthly payment for a median-priced US home (~$420,000) at 6.5% mortgage rate = $2,656/month, vs. $1,289/month at 3.0% (2021 rate). This 2× payment increase has permanently priced out marginal buyers and suppressed housing turnover.
 
+
+---
+
+### Duration, Convexity, and Key Rate Duration: The Practitioner's Toolkit
+
+#### Duration: From Macaulay to Modified to DV01
+
+**Macaulay Duration** — named after Frederick Macaulay (1938) — is the weighted average time to receipt of all cash flows, where weights are proportional to the present value of each cash flow:
+
+```
+D_mac = [Σₜ t × CF_t / (1+y)^t] / Bond Price
+```
+
+**Worked example — 10-year US Treasury, 4.40% coupon, YTM = 4.72%:**
+
+| Year | Cash Flow ($) | PV Factor (4.72%) | PV of CF ($) | Year × PV |
+|------|--------------|-------------------|--------------|-----------|
+| 1 | 44 | 0.9549 | 42.02 | 42.02 |
+| 2 | 44 | 0.9118 | 40.12 | 80.24 |
+| 3 | 44 | 0.8706 | 38.31 | 114.93 |
+| 4 | 44 | 0.8313 | 36.58 | 146.31 |
+| 5 | 44 | 0.7939 | 34.93 | 174.66 |
+| 6 | 44 | 0.7581 | 33.36 | 200.15 |
+| 7 | 44 | 0.7239 | 31.85 | 222.95 |
+| 8 | 44 | 0.6912 | 30.41 | 243.27 |
+| 9 | 44 | 0.6600 | 29.04 | 261.35 |
+| 10 | 1,044 | 0.6301 | 657.82 | 6,578.2 |
+| **Total** | | | **$974.44** | **$8,064.1** |
+
+```
+D_mac = 8,064.1 / 974.44 = 8.27 years
+```
+
+**Modified Duration:** The practical tool for interest rate sensitivity:
+```
+D_mod = D_mac / (1 + y/m)   [m = coupon payments per year]
+D_mod = 8.27 / (1 + 0.0472/2) = 8.27 / 1.0236 = 8.08
+```
+
+Interpretation: A 1% (100 bps) increase in yield reduces the bond price by approximately 8.08%.
+
+```
+ΔP/P ≈ −D_mod × Δy
+ΔP = −8.08 × 0.01 × $974.44 = −$78.73
+```
+
+**DV01 (Dollar Value of 01, i.e., 1 basis point):**
+```
+DV01 = −(ΔP / Δy) × 0.0001 = D_mod × P × 0.0001 = 8.08 × 974.44 × 0.0001 = $0.787 per $100 face
+```
+
+For a $10M face position: DV01 = $78,700. Each basis point move in yield generates $78,700 of P&L — the primary portfolio sensitivity metric used by fixed income traders.
+
+#### Convexity: The Second-Order Effect
+
+Duration provides a linear approximation of price-yield relationship. For large yield moves, the second-order effect — **convexity** — matters:
+
+```
+ΔP/P ≈ −D_mod × Δy + (1/2) × C × (Δy)²
+```
+
+Where convexity C for a bond paying annual coupons:
+```
+C = [Σₜ t(t+1) × CF_t / (1+y)^{t+2}] / Price
+```
+
+**For our 10-year Treasury:** Convexity ≈ 75 (in years squared). For a 2% (200 bps) yield shock:
+```
+ΔP/P = −8.08 × 0.02 + (1/2) × 75 × (0.02)² = −0.1616 + 0.015 = −14.66%
+```
+
+Without convexity: −16.16% (the linear duration approximation).
+With convexity: −14.66% — the bond price falls less than duration alone predicts for large yield moves.
+
+**Positive vs. negative convexity:**
+- **Positive convexity** (most government bonds, corporate bonds): Bond prices fall less than duration predicts when rates rise, and gain more than duration predicts when rates fall. Convexity is your friend — you want it. Investors pay a premium for convexity.
+- **Negative convexity** (mortgage-backed securities with prepayment options, callable corporate bonds): When rates fall, borrowers prepay/call → bond price capped; when rates rise, duration *extends* as prepayment slows → bond price falls faster than expected. MBS exhibit the worst of both worlds.
+
+**Why convexity matters in portfolio management:** During the October 2023 rate spike (10-year Treasury yield rose 100bps in 6 weeks), fixed income portfolios holding MBS (negative convexity) underperformed equivalent-duration Treasury portfolios by 2–4%, as the MBS portfolios experienced duration extension just as they were losing value.
+
+#### Key Rate Durations: Partial Price Sensitivity
+
+Modified duration assumes parallel yield curve shifts (all maturities move by the same amount). In practice, yield curve shape changes — the curve steepens, flattens, butterflies, or twists. **Key Rate Durations (KRDs)** decompose total duration sensitivity into sensitivity at specific maturity "key rates" (typically 2Y, 5Y, 10Y, 30Y for US Treasuries):
+
+```
+KRD_k = −(∂P/∂y_k) / P
+```
+
+Where y_k is the par yield at key rate k, keeping all other key rates constant.
+
+**Example — a fixed income portfolio's KRD profile:**
+
+| Key Rate | Portfolio KRD | Benchmark KRD | Active KRD |
+|----------|--------------|---------------|------------|
+| 2-year | 1.2 | 1.8 | −0.6 (underweight front-end) |
+| 5-year | 2.8 | 2.2 | +0.6 (overweight belly) |
+| 10-year | 3.1 | 3.0 | +0.1 (neutral) |
+| 30-year | 0.9 | 2.0 | −1.1 (underweight long-end) |
+
+This KRD profile is "long the belly, short the wings" — a butterfly position that profits if the yield curve becomes more concave (5Y yields fall relative to 2Y and 30Y). The total active duration = −0.6 + 0.6 + 0.1 − 1.1 = −1.0 years (slightly short overall).
+
+Portfolio managers use KRDs to ensure their positions express exactly the intended views on curve shape — not just level — and to prevent unintended exposures to curve twists that might arise from security selection.
+
+#### The Term Structure Theories: Why the Yield Curve Has Its Shape
+
+**1. Pure Expectations Theory:** Long-term yields equal expected average future short-term rates. A 10-year yield of 4.72% implies the market expects average 1-year rates to be 4.72% over the next decade. *Implication:* The yield curve is a complete forecast of future short-term rates. *Failure mode:* Doesn't explain the systematically positive term premium (longer bonds consistently outperform rolling short-term bonds over long periods — implying something beyond pure expectations).
+
+**2. Liquidity Preference Theory (Keynes/Hicks):** Investors prefer liquidity (short maturities); they must be compensated with a *term premium* to hold long-duration bonds. Long yields = expected short yields + liquidity/term premium. *Explains:* Normal upward-sloping yield curve even when the future rate path is flat.
+
+**3. Market Segmentation Theory:** Different investor groups operate at different maturities for regulatory or liability-matching reasons (pension funds at long-end, money market funds at short-end), and supply-demand imbalances at each maturity independently determine yields. *Explains:* Why certain maturity segments can have unusually high or low yields due to regulatory changes (e.g., pension fund liability matching demand pushing down 30-year yields in 2012–2015 even when short rates were rising).
+
+**Current yield curve dynamics (June 2026):** The 2Y-10Y spread at approximately +20 bps — barely positive after 30 months of inversion — is the subject of intense debate. The Fed's dot plot implies continued gradual easing, which would steepen the curve via short-end yield declines. The fiscal deficit and supply concerns are pushing the long-end higher (term premium expansion). The net result: a "bear steepener" scenario where both ends rise but the long-end rises faster remains a key risk for duration investors in the second half of 2026.
+
+---
+
+## Related
+
+- [[Federal-Reserve-and-Monetary-Policy]] — Fed policy determines the short end of the yield curve
+- [[fixed-income-deep-dive]] — credit spread on top of Treasury base curve
+- [[Value-at-Risk-and-CVaR]] — interest rate DV01 feeds directly into VaR calculations
+- [[Modern-Portfolio-Theory]] — bond allocation in multi-asset portfolios

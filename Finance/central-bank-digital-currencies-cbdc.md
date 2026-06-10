@@ -617,3 +617,75 @@ This preserves commercial banks' role in intermediation, privacy, and customer r
 **The June 2026 status of Project Mariana follow-on work.** Building on Project Mariana's proof-of-concept, the BIS Innovation Hub announced in March 2026 that **Project Meridian FX** — a collaboration between the Bank of England, Federal Reserve Bank of New York, and three additional G10 central banks — will test atomic cross-border CBDC FX settlement for real-time gross settlement systems. The technical target: achieve atomic simultaneous settlement of two legs of a cross-currency transaction (eliminating Herstatt risk) with T+0 finality and interoperability with existing RTGS systems (Fedwire, CHAPS, TARGET2). Preliminary results from the sandbox environment, shared at the BIS Annual General Meeting in June 2026, show sub-second settlement finality for G10 currency pairs using a bridge CBDC architecture — meaning neither central bank needs to hold the other's currency; a temporary bridge token mediates the exchange.
 
 **Oil market context: WTI at ~$91/barrel (June 8, 2026) and CBDC settlement urgency.** The Hormuz crisis-driven oil price spike — WTI reaching $95/barrel in early June 2026 before easing to ~$91 as ceasefire signals emerged — has materially accelerated GCC central banks' interest in CBDC settlement infrastructure. At $91/barrel, global daily oil trade represents approximately $270 billion per day in cash flows. Under the current SWIFT/correspondent banking system, settling these flows requires ~$1.7 trillion in pre-positioned nostro/vostro accounts globally (Oliver Wyman estimate). CBDC settlement eliminates this pre-positioning requirement — freeing over $1.5 trillion in captive liquidity that currently earns near-zero returns while sitting in correspondent accounts. The financial incentive for oil-exporting and oil-importing nations to migrate to CBDC settlement is therefore not merely geopolitical but directly quantifiable in dollar terms, independent of any sanctions evasion motivation.
+
+---
+
+### Retail CBDC Design Choices, Financial Inclusion, and the Digital Dollar Debate
+
+#### The Architecture Decision Tree for Retail CBDCs
+
+Central banks designing retail CBDCs face a series of binary architectural choices that determine the CBDC's economic and privacy characteristics:
+
+**1. Direct vs. Indirect (Two-Tier) Model:**
+- **Direct (account-based CBDC):** Citizens hold accounts directly at the central bank. The central bank knows every transaction. Maximum traceability; potentially displaces commercial banks.
+- **Indirect (two-tier):** Central bank issues CBDC to commercial banks; banks distribute to retail customers. Commercial banks maintain customer relationships and KYC/AML; central bank holds wholesale reserves. China's e-CNY and the ECB's digital euro both use two-tier models.
+
+**Why most central banks choose indirect:**
+Commercial banks currently manage consumer finance relationships, KYC compliance, credit assessment, and deposit insurance. Bypassing them would: (1) require the central bank to manage relationships with billions of customers; (2) potentially cause a bank run as depositors shift funds from commercial banks (uninsured above threshold) to central bank CBDC (implicitly guaranteed); (3) eliminate commercial bank credit intermediation, requiring the central bank to step into lending — a profound change to monetary architecture.
+
+**2. Token-based vs. Account-based:**
+- **Token-based:** CBDC exists as a digital "coin" with value stored in the token itself (like a digital banknote). Possession of the token = ownership. More privacy-preserving; enables offline payments; vulnerable to theft if the token is lost or stolen.
+- **Account-based:** CBDC value is recorded in a ledger; transactions are transfers between accounts. Requires identity verification at every transaction; easier to implement AML controls; full auditability.
+
+**3. Interest-bearing vs. Non-interest-bearing:**
+- **Interest-bearing CBDC:** Offers a policy rate (positive or negative) directly to retail holders. This is a powerful monetary policy instrument — the central bank can implement negative rates directly on retail savings (currently impossible as people hold physical cash as a zero-yield alternative to negative-rate bank deposits). Concern: interest-bearing CBDC competes directly with commercial bank deposits, accelerating disintermediation.
+- **Non-interest-bearing (cash equivalent):** Maintains the zero-rate floor; does not compete with bank deposits. Most central banks plan non-interest-bearing retail CBDCs specifically to avoid bank disintermediation.
+
+**4. Programmability:**
+- **Programmable CBDC:** Smart contracts can restrict how CBDC can be spent (only food, only within a geographic area, expiring after a certain date). This enables highly targeted fiscal stimulus — the government can issue CBDC that can only be spent at small businesses within 90 days, achieving behavioral objectives impossible with cash transfers.
+- **Non-programmable:** Functions as digital cash with no behavioral restrictions.
+
+**Concern:** Programmable CBDC with spending restrictions is deeply concerning from a civil liberties perspective — governments could theoretically restrict CBDC to approved expenditures, penalize disfavored political activity by restricting CBDC access, or implement social credit score-linked spending limits. These concerns are not hypothetical in authoritarian jurisdictions.
+
+#### The Financial Inclusion Case for CBDC
+
+**The unbanked population:** Globally, approximately 1.4 billion adults lack access to formal financial accounts (World Bank Global Findex, 2022). In the US, approximately 4.5% of households (5.9 million) are "unbanked" — disproportionately low-income, minority, and rural populations. CBDC proponents argue that a universally accessible digital currency could provide basic financial services to unbanked populations without requiring commercial bank accounts.
+
+**How CBDC enables financial inclusion:**
+1. **No minimum balance requirement:** Unlike commercial bank accounts (which often have minimum balance requirements and fees), CBDC accounts could be free with no minimum
+2. **No credit history requirement:** CBDC access based on identity (biometric or ID document), not creditworthiness
+3. **Mobile-first access:** CBDC accessible via basic smartphone without internet (using NFC or QR codes for offline transactions) — relevant for rural populations with limited connectivity
+
+**The Indian Stack model — a CBDC-adjacent success:**
+India's Unified Payments Interface (UPI) has achieved financial inclusion objectives without a formal CBDC:
+- 100M+ active users registered within 5 years of launch (2016)
+- $3.7 trillion in UPI transactions in fiscal year 2025
+- Real-time account-to-account transfers at zero cost
+
+UPI is account-based (connected to commercial bank accounts or e-wallets), not a CBDC, but its success demonstrates the financial inclusion potential of well-designed digital payment infrastructure. India's consideration of a "Digital Rupee" is partly informed by UPI's success — the question is what additional functionality a formal CBDC provides beyond what UPI already achieves.
+
+#### The Digital Dollar Debate (United States)
+
+The Federal Reserve has been more cautious than most major central banks on CBDC development. The Fed's formal position (as of 2026): conducting research and experimentation but **not moving forward without clear support from the executive branch and Congress.**
+
+**Arguments for a Digital Dollar:**
+1. **Preserve dollar dominance:** As other nations' CBDCs are used in cross-border trade (particularly in EM bilateral trade), the absence of a Dollar CBDC may erode the USD's role in international payments
+2. **Payment system modernization:** The US banking system's core settlement infrastructure (Fedwire, ACH) runs on 1970s-era technology. A CBDC could modernize the plumbing.
+3. **Financial inclusion:** Reach the 4.5% of US households without bank accounts with government-issued digital currency
+
+**Arguments against a Digital Dollar:**
+1. **Privacy concerns:** Congressional Republicans have been vociferous in opposing CBDC, framing it as government surveillance of financial transactions. The Financial Freedom Act (proposed 2024) would explicitly prohibit the Fed from issuing retail CBDC.
+2. **Commercial bank disintermediation:** If Americans shift savings from bank accounts to Fed-held CBDC accounts, banks lose a key funding source, potentially reducing credit availability
+3. **Cybersecurity risk:** A single point of failure in a nationwide digital currency system creates a highly attractive target for nation-state cyberattacks (China, Russia, North Korea)
+4. **The FedNow alternative:** The Fed launched FedNow (real-time payment settlement) in July 2023, achieving many modernization objectives without creating a retail CBDC
+
+**Political economy:** The combination of Republican opposition to CBDC-as-surveillance and the current administration's embrace of private cryptocurrency (Bitcoin reserve legislation proposed in Q1 2026) has effectively frozen Digital Dollar development. The Fed's June 2026 public posture: monitoring international CBDC developments while conducting wholesale CBDC research (Project Meridian FX) without committing to retail CBDC timelines.
+
+---
+
+## Related
+
+- [[blockchain-and-distributed-ledger]] — blockchain technology underlying many CBDC architectures
+- [[Federal-Reserve-and-Monetary-Policy]] — Fed's role in designing and potentially issuing CBDC
+- [[currency-markets-and-fx]] — CBDC implications for international payments and reserve currency status
+- [[macroeconomics-101]] — monetary economics of CBDC issuance and its macroeconomic effects

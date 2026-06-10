@@ -633,3 +633,116 @@ The incentive conflict: the GP controls the selection of which assets go into th
 **AI VC returns: the 2026 distribution.** PitchBook data for AI-related VC funds vintages 2018–2021 (now in the DPI-generating phase) shows extreme return dispersion: the top quartile of AI-focused VC funds (primarily those that led OpenAI, Anthropic, or Nvidia-adjacent semiconductor design) generated 5–10× DPI (distributions to paid-in capital); the median AI fund generated approximately 1.8× DPI; the bottom quartile (comprising the large cohort of undifferentiated AI application companies) returned 0.4–0.8× DPI — capital-destroying. This distribution is consistent with the venture model's power law dynamics but is more extreme than typical SaaS vintage returns, reflecting the higher variance of the AI investment thesis.
 
 **US GDP at 2.2–2.5% growth with AI investment as the driver.** Goldman Sachs's projection of 2.5% US GDP growth in 2026 explicitly identifies AI-related business investment (equipment, IP, data centers) as the primary swing factor over consensus. The $600+ billion in annual US data center investment (2025 run rate, per McKinsey) and the associated semiconductor equipment purchasing represent the largest private-sector capital expenditure program in US history — comfortably exceeding the Manhattan Project or the Interstate Highway System in inflation-adjusted terms when measured as a share of GDP. PE and VC investors positioned in data center REITs, AI infrastructure companies, and power generation assets (needed to feed AI data centers' energy appetite) have been direct beneficiaries of this investment wave.
+
+---
+
+### LPA Mechanics, MOIC vs. IRR, and the J-Curve Effect in Detail
+
+#### Limited Partnership Agreement (LPA): The Governing Document
+
+The **Limited Partnership Agreement** is the foundational legal contract governing the relationship between the General Partner (PE/VC fund manager) and Limited Partners (investors). The LPA specifies every aspect of the fund's operation, economics, and governance. Key provisions:
+
+**Investment Period and Fund Life:**
+- Investment period: typically 5 years — the GP has 5 years to deploy committed capital into new investments
+- Fund life: typically 10 years (with 2 one-year extensions at GP discretion, and sometimes a further extension with LPAC approval)
+- After the investment period ends, the GP can no longer make new investments but continues managing existing portfolio companies
+
+**Commitment and Drawdown:**
+LPs commit capital (e.g., $100M) but do not transfer it at fund close. Instead, the GP issues **capital calls** as investments are made — typically 5–7 capital calls of $10–20M each over the investment period. This means LPs must maintain liquidity reserves sufficient to respond to capital calls within the typical 10-15 business day response period.
+
+**Management Fee:**
+- During investment period: typically 2% of total committed capital annually ($100M × 2% = $2M/year)
+- After investment period: typically 2% of NAV (invested capital at cost) — mechanically declines as investments are realized
+- Total fee burden over a 10-year fund: approximately 15–18% of committed capital (the fee drag that motivates LPs to negotiate fee reductions)
+
+**Carried Interest (Carry):**
+The GP's share of profits — the primary economic incentive. Standard structure:
+- GP receives 20% of all profits above the committed capital returned to LPs
+- Most LPAs also specify a **preferred return (hurdle rate)** — typically 8% per annum — that LPs must receive before the GP takes any carry:
+
+**Waterfall mechanics (most common: European/whole-fund waterfall):**
+1. Return of all LP capital (100%)
+2. 8% preferred return to LPs on contributed capital (the hurdle)
+3. **GP catch-up:** GP receives 80%+ of distributions until they have received 20% of total profits
+4. 80/20 split: LPs receive 80% of remaining profits; GP receives 20%
+
+**Clawback:**
+If early investments are realized at high multiples (generating carry for the GP), but later investments fail, the GP may have received more carry than it deserves in aggregate. The **clawback provision** requires the GP to return excess carry payments. In practice, clawbacks are extremely rare (most GPs return carry only when the fund is substantially invested, minimizing early-realization skew) but have occurred in distressed technology funds from the 2000–2002 downturn.
+
+**Key Man Clause:**
+If one or more "key person" investment professionals (typically the fund's managing partners) leave the firm, the fund enters a "key man event" — new investments are suspended until LPs vote on the fund's future. This protects LPs from the GP's investment team being decimated by departures while still obligated to invest LP capital. Key man clauses are heavily negotiated: LPs want narrow definitions (any departure of a senior partner triggers); GPs want broad definitions (only if all three named individuals leave simultaneously).
+
+#### MOIC vs. IRR: Two Lenses on the Same Return
+
+**MOIC (Multiple of Invested Capital):** Total value returned / capital invested
+```
+MOIC = (Total Realized + Unrealized Value) / Total Capital Invested
+
+Example: $100M invested → $280M total returned → MOIC = 2.80×
+```
+
+**IRR (Internal Rate of Return):** The discount rate that makes NPV of all cash flows (investments + distributions) equal to zero — the rate of return accounting for timing:
+```
+0 = −C₀ + C₁/(1+IRR) + C₂/(1+IRR)² + ... + Cₙ/(1+IRR)ⁿ
+```
+
+**Why both metrics are necessary:**
+
+*The MOIC limitation:* A 2.80× MOIC could be achieved in 3 years (extraordinary) or 10 years (average). MOIC ignores timing. For two funds that both return 2.80× on $100M:
+- Fund A (5-year hold): IRR = 22.9%
+- Fund B (8-year hold): IRR = 13.7%
+
+Fund A is dramatically superior in capital efficiency — that capital can be redeployed twice vs. Fund B's once.
+
+*The IRR limitation:* IRR is extremely sensitive to the timing of early cash flows. PE managers can "game" IRR by:
+- **Quick flips:** Selling easily realizable assets early in the fund's life generates high early returns that inflate the IRR of the overall fund, even if the remaining portfolio ultimately underperforms
+- **NAV loans / subscription lines:** Borrowing against uncalled LP commitments (rather than calling capital from LPs) delays the "start date" for LP capital, artificially boosting IRR (the denominator is smaller for longer)
+
+**The DPI/RVPI/TVPI framework:**
+- **DPI** (Distributed to Paid-In): Realized cash returns / contributed capital. DPI = 1.5 means LPs have received $1.50 back for every $1 invested so far
+- **RVPI** (Residual Value to Paid-In): Unrealized NAV / contributed capital. RVPI = 0.8 means remaining portfolio is marked at $0.80 for every $1 invested
+- **TVPI** (Total Value to Paid-In = MOIC): DPI + RVPI = 2.3 in this example
+
+A fund with high RVPI and low DPI is "value on paper" — the NAV marks may be unreliable. Limited partners increasingly focus on DPI as the only "hard" performance metric — unrealized value is a matter of valuation methodology until cash hits their accounts.
+
+#### The J-Curve: Why Early Fund Performance Is Misleading
+
+The **J-Curve** describes the characteristic cash flow and return profile of a private equity fund over its life:
+
+**The mechanism (5 phases):**
+
+**1. Deployment phase (Years 1–3):** LPs contribute capital (negative cash flows). Management fees begin. The fund is investing at acquisition cost, and no portfolio companies have been exited. NAV = contributed capital minus management fees and expenses → NAV is below contributed capital. TVPI < 1.0×. Reported IRR: deeply negative.
+
+**2. Early portfolio building (Years 2–4):** Investments are marked at cost (GAAP fair value remains approximately cost for 12 months unless significant performance change). Some companies improve operationally but haven't been sold. TVPI slowly rises toward 1.0×.
+
+**3. First exits (Years 4–6):** Portfolio companies are sold. Cash distributions begin. DPI rises above zero. If exits are successful, TVPI rises meaningfully above 1.0×. IRR starts to be meaningful.
+
+**4. Maturity (Years 7–9):** Majority of portfolio realized. Remaining companies may be held for strategic reasons or proving more difficult to exit. Fund enters extensions if necessary. IRR and TVPI become relatively stable.
+
+**5. Wind-down (Years 9–11):** Final portfolio companies sold or distributed in-kind. Final IRR calculated. Clawback provisions settled if applicable. Fund closed.
+
+**The J-Curve visualization:**
+```
+NAV/TVPI
+1.5×         |                        ****Final exit value
+1.3×         |                  *****
+1.0×-------- |         *****---------
+0.8×         |  *****
+0.6×         |***
+             |_________________________
+             Year 1  3   5   7   9   11
+```
+
+**Investment implication:** Investors who see a young PE fund reporting −20% IRR in Year 2 should not be alarmed — this is virtually guaranteed by the J-Curve mechanics. The meaningful evaluation period begins in Year 5+, when the fund has deployed most capital and made at least a few exits. Comparing a 3-year-old fund's IRR to a 7-year-old fund's IRR is category error; the J-Curve makes them incomparable without horizon adjustment.
+
+**The "time zero problem" — vintage year normalization:**
+The correct comparison: Pooled IRR for all PE funds with the same vintage year (year of fund final close), measured at the same calendar date. Cambridge Associates provides this benchmark annually; LP performance evaluations should always benchmark against vintage-year peers, not against public market returns measured from a different start date.
+
+---
+
+## Related
+
+- [[hedge-funds-and-alternative-strategies]] — GP/LP structure parallels; managed account alternatives
+- [[sovereign-wealth-funds]] — SWF co-investment in PE funds; Yale model allocation
+- [[mergers-and-acquisitions]] — PE exit via strategic sale; CFIUS in PE cross-border deals
+- [[valuation-fundamentals]] — LBO valuation methodology; comparable company analysis for PE exits

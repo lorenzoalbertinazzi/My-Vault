@@ -437,3 +437,118 @@ The 1973–1974 OPEC oil embargo provides the closest historical analogy to the 
 **TIPS performance in the current environment.** Treasury Inflation-Protected Securities (TIPS) — bonds whose principal adjusts with the CPI — are the direct beneficiary of elevated inflation. The 10-year TIPS real yield stands at approximately +1.9% in June 2026, implying total nominal yield (real yield + breakeven) of approximately 4.4% (consistent with the 10-year nominal Treasury). For long-horizon investors (pension funds, insurance companies), 10-year TIPS at +1.9% real yield is the highest real return available on a risk-free, inflation-protected basis since 2009, creating a compelling allocation relative to historical context. The TIPS allocation in a 60/40 portfolio (replacing some nominal Treasuries) has provided approximately 0.6 percentage points of additional inflation-adjusted return in 2026 vs. a purely nominal bond portfolio.
 
 **Commodity inflation vs. services inflation — the divergence.** The 2026 inflation structure exhibits a notable divergence: goods/energy inflation is running at approximately 4.2% annually (oil-driven), while services inflation has moderated to approximately 3.1% (down from 6%+ in 2022–2023). This divergence creates differentiated investment implications: commodity-linked equities (energy producers, agricultural processors) benefit from goods inflation; labor-intensive services businesses (hotels, restaurants, financial services) face margin pressure from sticky wage costs that lag the moderation in services price inflation. The ideal inflation portfolio in the current environment is therefore not a simple "hard assets" tilt but a carefully calibrated exposure to commodities (long) + services pricing power (selective long) + long-duration bonds (cautiously underweight given ongoing inflation risk).
+
+---
+
+### The Fisher Equation, COLA Mechanisms, Real Wage Dynamics, and Wage-Price Spiral Risk
+
+#### The Fisher Equation: Decomposing Nominal Interest Rates
+
+Irving Fisher's (1907) fundamental insight: the **nominal interest rate** is approximately equal to the **real interest rate** plus **expected inflation**:
+
+```
+(1 + r_nominal) = (1 + r_real) × (1 + π_expected)
+
+Approximation: r_nominal ≈ r_real + π_expected
+```
+
+**Why this matters for investors:**
+- A 4.72% 10-year Treasury yield with 2.5% expected inflation implies a real interest rate of approximately 2.22%
+- A 3.2% nominal corporate bond with 2.5% expected inflation yields only 0.7% real
+- If expected inflation rises to 4.0%, the same 4.72% Treasury yields a *negative* real rate of −0.72% — the investor is losing purchasing power despite receiving positive nominal income
+
+**The ex ante vs. ex post distinction:**
+The Fisher equation uses *expected* inflation. The realized real return is the ex post Fisher equation:
+```
+r_real (realized) = r_nominal − π_actual
+```
+
+During the 2021–2022 inflation surge, investors holding 10-year Treasuries at 1.5% nominal yield experienced:
+```
+r_real = 1.5% − 9.1% = −7.6% (June 2022, peak CPI)
+```
+
+A −7.6% real return destroyed more purchasing power than most bear markets destroy nominal wealth — illustrating why inflation is uniquely destructive for fixed-rate bond investors who cannot re-price.
+
+**The Fisher Effect in practice (2026):**
+The 10-year TIPS breakeven (the market-implied expected inflation over 10 years) stands at approximately 2.5% in June 2026. The 10-year nominal Treasury at 4.72% implies:
+```
+r_real = 4.72% − 2.5% = 2.22%
+```
+
+This is consistent with the independently measured 10-year TIPS real yield of approximately +1.9% (a slight inconsistency reflects market liquidity differences and the "inflation uncertainty premium" embedded in nominal bonds but not TIPS).
+
+#### COLA Mechanisms: Inflation Indexation in Practice
+
+**Cost-of-Living Adjustments (COLAs)** automatically adjust income streams for inflation. The major COLA-linked programs in the US:
+
+**Social Security COLA:**
+The Social Security Administration applies an annual COLA based on the CPI-W (CPI for Urban Wage Earners and Clerical Workers) measured from Q3 of the prior year to Q3 of the current year. COLAs in recent years:
+- 2021: 1.3%
+- 2022: 5.9% (reflecting 2021 inflation)
+- 2023: 8.7% (the largest since 1982, reflecting 2022 inflation peak)
+- 2024: 3.2%
+- 2025: 2.5%
+- 2026: Approximately 2.8% (preliminary estimate based on Q1 CPI-W data)
+
+**Investment implication:** Social Security provides an implicit government guarantee of inflation-adjusted income — a valuable feature that informs the optimal portfolio allocation for retirees. A retired couple receiving $50,000/year in Social Security benefits effectively "owns" an inflation-indexed annuity with a present value of approximately $1.4M (at a 3.5% real discount rate over 25 years of expected payments). This implicit inflation-protected asset should be counted when determining the additional inflation protection needed in their investment portfolio.
+
+**TIPS: The Explicit Inflation-Indexed Government Bond:**
+Treasury Inflation-Protected Securities adjust their **principal** (face value) by the CPI each month. Interest payments are calculated on the inflation-adjusted principal:
+```
+TIPS Interest Payment = (Original Principal × Inflation Index Ratio) × Coupon Rate / 2
+
+Example: $1,000 TIPS with 1.9% coupon after 10 years of 3.0% average inflation:
+Adjusted Principal = $1,000 × (1.03)^10 = $1,344
+Semi-annual interest payment = $1,344 × 1.9% / 2 = $12.77
+```
+
+At maturity, TIPS pay the greater of the inflation-adjusted principal or the original principal — protecting against deflation.
+
+**TIPS in the current environment:** With 10-year TIPS real yield at +1.9% and CPI running 3.4%, the nominal yield on current TIPS is approximately 5.3% — above the 4.72% nominal Treasury yield. This apparently anomalous relationship (TIPS yielding more than nominal Treasuries!) reflects the fact that current CPI is running above the 10-year breakeven (the market's *long-run* inflation expectation is 2.5%, even though current inflation is 3.4%). Investors who believe inflation will persist above 2.5% should strongly prefer TIPS; those who believe inflation will normalize below 2.5% should prefer nominal Treasuries.
+
+#### Real Wage Dynamics and the 2026 Labor Market
+
+**Real wages** = nominal wages adjusted for inflation. The distinction between nominal and real wage gains is crucial for understanding consumption, labor market conditions, and the risk of a wage-price spiral.
+
+**Recent history:**
+| Period | Nominal Wage Growth (YoY) | CPI Inflation | Real Wage Growth |
+|--------|--------------------------|--------------|-----------------|
+| 2021 | +4.7% | +7.0% | −2.3% (pandemic-era real wage *decline* despite nominal gains) |
+| 2022 | +5.2% | +8.0% | −2.8% (peak real wage destruction) |
+| 2023 | +4.8% | +4.1% | +0.7% (real wages recovering) |
+| 2024 | +4.2% | +2.9% | +1.3% (real wages solidly positive) |
+| 2025 | +3.8% | +2.5% | +1.3% (continued real gains) |
+| 2026 (Q1) | +3.9% | +3.2% | +0.7% (energy shock squeezing real wages) |
+
+The Hormuz energy shock has resumed the squeeze on real wages in 2026 — not because nominal wages aren't rising, but because the energy component of consumer prices is rising faster than wages. This real wage compression reduces consumer purchasing power and is the main transmission mechanism by which a supply-side commodity shock reduces real economic activity without raising unemployment immediately.
+
+#### The Wage-Price Spiral: Mechanism and 2026 Risk Assessment
+
+The wage-price spiral — where rising prices prompt workers to demand higher wages, which raises business costs, which further raises prices — is the mechanism by which a temporary supply shock becomes embedded, persistent inflation.
+
+**The spiral mechanism:**
+1. Energy shock raises production costs and consumer prices
+2. Workers experience negative real wage growth and negotiate for higher nominal wages at contract renewal
+3. Higher labor costs raise businesses' production costs
+4. Businesses raise output prices to protect margins
+5. Higher prices → higher nominal wages demanded → cycle continues
+
+**Historical precedent:** The 1973 Arab oil embargo triggered exactly this spiral. The initial shock: oil from $3 to $12/barrel. The propagation: UAW contracts negotiating 8–10% annual wage increases; airlines, trucking, and manufacturing passing energy costs into prices; the Fed accommodating with loose monetary policy. By 1974, non-energy inflation was running at 7% — the spiral had embedded energy shock into core prices.
+
+**2026 risk assessment:**
+Three factors suggest the spiral risk is moderate (not high):
+1. **Declining union density:** US private sector union membership at 6.3% (2025) vs. 24% in 1973. Wage-setting is more decentralized and less linked to explicit inflation adjustments.
+2. **Fed credibility:** 5y5y forward inflation expectations at 2.4% — workers believe the Fed will control inflation at 2%, reducing incentive to demand large preemptive wage increases.
+3. **Demand moderation:** The current energy shock is primarily supply-side; domestic demand is not overheating (PCE growth at 2.2% vs. the 4–5% of 2021–2022 post-stimulus spending surge).
+
+One offsetting risk: the Atlanta Fed's Wage Growth Tracker (June 2026) shows job-switchers receiving 5.8% wage growth vs. job-stayers at 3.9% — the premium for switching jobs remains above pre-pandemic norms (historically ~0.5pp), suggesting labor market tightness that could sustain nominal wage pressure if employment holds.
+
+---
+
+## Related
+
+- [[Federal-Reserve-and-Monetary-Policy]] — monetary policy response to inflation dynamics
+- [[yield-curve-and-bonds]] — TIPS as inflation-indexed instruments; nominal yield decomposition
+- [[macroeconomics-101]] — inflation in the AS-AD framework
+- [[real-assets-reits-and-commodities]] — commodity prices as inflation drivers

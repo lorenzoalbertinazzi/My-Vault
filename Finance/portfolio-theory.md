@@ -698,3 +698,110 @@ The intuition: if you're highly confident in a view (small Ω), the posterior ti
 **Alternative 60/40: Risk Parity with commodities.** The practical response to the breakdown of the traditional 60/40 is to add a third asset class — commodities — to the portfolio. A risk-parity version of a diversified portfolio allocating equally to the risk contribution of equities, bonds, and commodities shows significantly improved Sharpe ratio in inflationary regimes. The Bridgewater "All Weather" portfolio thesis holds that in any macroeconomic environment, at least one of four asset classes (equities, bonds, gold/commodities, inflation-linked bonds) should perform well. In 2022: bonds and equities both fell; gold and commodities rose sharply. In 2026: equities and bonds performing moderately; commodities (oil, energy) surging. The diversification benefit of the third asset class becomes economically meaningful precisely when the traditional two-asset diversification fails.
 
 **Recent research on optimal portfolio rebalancing with transaction costs.** A 2025 paper by Leland (Stanford) and Vilkov (Frankfurt School) revisits the rebalancing frequency puzzle: how often should a long-term investor rebalance? The classic finding (from Merton's continuous-time models) is that continuous rebalancing is optimal in the frictionless case; with transaction costs, the optimal strategy involves "no-trade" bands around target allocations and rebalances only when allocations drift outside the bands. The 2025 update incorporates regime-switching: in high-volatility regimes (like 2022 or 2026 Hormuz disruptions), the optimal band width narrows (rebalance more frequently to capture tactical mean-reversion), while in low-volatility regimes (like 2017 or early 2021), the optimal band widens. This regime-conditional rebalancing adds approximately 0.3–0.5 percentage points of annual return vs. simple calendar-based rebalancing in simulations over the 1970–2025 period.
+
+---
+
+### Kelly Criterion, Optimization Constraints, and Liability-Driven Investing
+
+#### The Kelly Criterion: Optimal Position Sizing Under Uncertainty
+
+The **Kelly Criterion** (developed by John Kelly at Bell Labs, 1956) specifies the optimal fraction of capital to bet on a favorable gamble to maximize the *long-run geometric growth rate* of wealth — not the expected dollar return, which Kelly shows leads to overbetting and eventual ruin.
+
+**The Kelly formula:**
+For a bet with probability p of winning (return b on the bet) and probability (1-p) of losing the entire stake:
+```
+f* = p − (1−p)/b = (pb − (1−p)) / b = (Edge) / (Odds)
+```
+
+**Example:** A coin has a 55% chance of heads (p = 0.55), 45% of tails (p = 0.45). You win $1 for heads, lose $1 for tails (b = 1):
+```
+f* = (0.55 × 1 − 0.45) / 1 = 0.10 = 10%
+```
+
+The Kelly Criterion says bet 10% of wealth on each flip. This maximizes the long-run expected log wealth — the geometric growth rate.
+
+**Why not bet more?** If you bet 20% instead of 10%:
+- Expected dollar return per flip: 0.55 × 0.20 − 0.45 × 0.20 = +2% (higher than 10% Kelly's +1%)
+- But geometric growth rate: exp(0.55 × ln(1.20) + 0.45 × ln(0.80)) = exp(0.101 − 0.101) = 1.0 (zero growth!)
+
+Overbetting destroys geometric growth even when expected return per bet is positive. The mathematics of compounding punishes volatility severely — this is the essence of the Kelly insight.
+
+**Continuous Kelly for investment portfolios:**
+For a portfolio with expected excess return μ and variance σ²:
+```
+f* = μ / σ²
+```
+
+For the S&P 500 (μ = 6% excess return, σ = 15%):
+```
+f* = 0.06 / (0.15)² = 0.06 / 0.0225 = 2.67
+```
+
+The full Kelly position on the S&P 500 implies 2.67× leverage — investing 267% of wealth in equities! This seems extreme. In practice, investors use "fractional Kelly" (typically half-Kelly = 1.33× equity exposure with leverage) both because the Kelly formula is sensitive to estimation error and because the full Kelly volatility (very high drawdowns on the path to optimal long-run wealth) exceeds most investors' risk tolerance.
+
+**Kelly and parameter estimation uncertainty:**
+The Kelly formula is extremely sensitive to misestimating μ (expected return). If true μ = 4% but you use 6%, you'll bet 2.67× when the optimal is only 1.78× — a 50% overbetting error. Over-Kellying by 50% produces a geometric growth rate that is nearly equivalent to the correct Kelly position over 30 years but with dramatically higher volatility along the path. This is why institutional investors never use full Kelly — they explicitly haircut μ estimates and use fractional Kelly as a conservative approach.
+
+#### Portfolio Optimization with Realistic Constraints
+
+The Markowitz mean-variance optimization (MVO) in its unconstrained form produces portfolios that are:
+- Highly concentrated in a small number of assets
+- Sensitive to small changes in expected returns (the "garbage in, garbage out" problem)
+- Practically unimplementable (extreme short positions, unrealistic leverage)
+
+**Practical constraints typically added:**
+
+**Long-only constraint:** wᵢ ≥ 0 for all i. The most common single constraint, which substantially increases portfolio stability and reduces sensitivity to return estimation error. The long-only constraint is effectively a strong prior that expected returns are positive for all included assets.
+
+**Weight bounds:** wᵢ ≥ −0.05 (limited short selling) or wᵢ ≤ 0.15 (position concentration limit). These prevent extreme allocations while allowing modest deviations from the benchmark.
+
+**Sector constraints:** |Σᵢ∈sector wᵢ − Σᵢ∈sector w_bmark,i| ≤ 5% for each sector. Prevents the optimizer from exploiting apparent expected returns in one sector by concentrating all risk there.
+
+**Turnover constraints:** Σᵢ |wᵢ − w_current,i| / 2 ≤ T for some maximum turnover T. Limits transaction costs. In practice, institutional portfolio construction runs rebalancing cycles (monthly or quarterly) constrained to 5–20% portfolio turnover per cycle.
+
+**Robust optimization:** As Goldfarb and Iyengar (2003) formalized, robust optimization explicitly accounts for estimation uncertainty in expected returns by solving for the portfolio that maximizes expected return in the *worst case* within an uncertainty ellipsoid around the estimated μ. This produces more diversified, stable portfolios without requiring the analyst to specify precise priors (as in Black-Litterman).
+
+#### Liability-Driven Investing: When the Benchmark Is a Liability
+
+**Liability-Driven Investing (LDI)** is the portfolio management framework for institutions (pension funds, insurance companies, endowments with payout commitments) where the objective is not to maximize absolute returns but to **match or exceed liability growth** — ensuring the assets are sufficient to meet future obligations.
+
+**The surplus framework:**
+Instead of maximizing portfolio return, LDI maximizes portfolio *surplus*:
+```
+Surplus = Asset Value − PV(Liabilities)
+Objective: Maximize E[Surplus] subject to Prob(Surplus < 0) ≤ tolerance
+```
+
+**Key insight:** The relevant risk measure is not portfolio volatility but **surplus volatility** — which depends on the correlation between assets and liabilities. An asset that is volatile in isolation may be nearly risk-free in the LDI framework if it perfectly hedges the liability cash flows.
+
+**The liability benchmark:**
+A defined benefit pension fund's liabilities are a stream of future payments to retirees. These payments are:
+- **Nominal** (if not CPI-indexed): similar to a long-duration nominal bond; hedged by long-duration Treasuries and investment-grade bonds
+- **Real** (if CPI-indexed): similar to long-duration TIPS; hedged by TIPS
+
+The duration of a typical UK defined benefit pension liability is approximately 20–25 years — far longer than most bond market indices (10-year benchmark). US pension liabilities have approximately 15–18 year duration. This creates the "duration gap" that LDI programs seek to close.
+
+**The LDI implementation spectrum:**
+
+**1. Physical bonds (conservative):**
+Purchase long-duration Treasuries and TIPS to match liability duration. Maximum funding security; foregoes return-seeking assets entirely.
+
+**2. Liability overlay (balance sheet efficiency):**
+Maintain return-seeking assets (equities, alternatives) for long-term surplus growth AND add an overlay of interest rate swaps (receive-fixed, 30-year) to hedge the duration gap without liquidating the return-seeking portfolio. The overlay adds duration without capital commitment.
+
+**3. Glide path (dynamic LDI):**
+As the funded ratio improves (assets / liabilities rises toward 100%), automatically shift the liability hedge ratio from partial (40–50%) to full (100%) by purchasing more bonds and reducing equities. This "risk-off glide path" is now standard in UK occupational pension schemes under the Pension Protection Fund's supervision.
+
+**UK LDI crisis (September–October 2022):**
+The Bank of England's emergency 65bp yield rise (triggered by the "mini-budget" fiscal stimulus) caused 30-year UK gilt yields to spike 1.5% in days. UK pension funds using LDI overlays with leverage (selling gilts forward to fund repo, using proceeds to buy more gilts for duration matching) faced margin calls they couldn't meet — creating a forced selling spiral that pushed yields even higher. The Bank of England was forced to intervene with emergency gilt purchases to break the doom loop.
+
+**Lesson:** LDI with leverage creates procyclicality — exactly the mechanism that amplifies stress. The post-crisis UK LDI framework (LGIM, BlackRock, Insight Investment redesigned their LDI products) now incorporates lower leverage, greater liquidity buffers, and pre-positioned repo facilities to manage margin call risk. In the US, LDI overlay leverage is more limited (regulatory requirements for insurance companies restrict leverage), but the systemic risk of simultaneous de-risking among correlated liability-hedging programs remains a structural concern.
+
+---
+
+## Related
+
+- [[Modern-Portfolio-Theory]] — mean-variance optimization as portfolio theory foundation
+- [[yield-curve-and-bonds]] — duration and convexity — the currency of LDI
+- [[Value-at-Risk-and-CVaR]] — risk measures in the liability framework
+- [[derivatives-futures-and-forwards]] — interest rate swaps as LDI overlay instruments

@@ -699,3 +699,104 @@ The credit quality divergence between California and Texas GO (general obligatio
 3. **Convexity of mortgage-backed securities (MBS):** With rates in the 4–5% range and the existing housing stock largely locked into sub-3% mortgages (originated 2020–2022), prepayment speeds on agency MBS are historically low. This creates "negative convexity" at the portfolio level: as rates fall, prepayment acceleration (as homeowners refinance) caps MBS price gains; if rates rise, extending duration amplifies losses. The Fed's $2.3 trillion agency MBS portfolio (from QE purchases) is subject to the same convexity dynamics, creating complex feedback between MBS market dynamics and Fed balance sheet management.
 
 **The corporate credit refinancing wall — 2026–2028.** The investment-grade and high-yield corporate bond market faces a significant maturity wall as debt issued at near-zero rates in 2020–2022 comes due for refinancing at current 4–9% rates. Bloomberg Intelligence estimates approximately $1.2 trillion in IG and HY corporate maturities in 2026–2028, with average refinancing rate increases of 200–400 bps above original issuance rates. For an IG issuer that borrowed at 1.5% in 2021 and must refinance at 4.5% in 2026, interest expense increases by 200% — a substantial drag on operating cash flows that reduces debt capacity and increases default risk for borderline credits.
+
+---
+
+### Duration Immunization, OIS-SOFR Basis, and Inflation-Linked Bond Mechanics
+
+#### Duration Immunization: Protecting Bond Portfolios Against Rate Changes
+
+**Immunization** is a fixed income portfolio management technique that makes the portfolio's value insensitive to parallel yield curve shifts — "immunizing" the investor from interest rate risk. First formalized by F.M. Redington (1952) in the context of British life insurance liabilities.
+
+**The three conditions for immunization:**
+1. **Duration matching:** Portfolio duration = liability duration (PVs match)
+2. **Present value matching:** PV of assets = PV of liabilities
+3. **Convexity condition:** Portfolio convexity ≥ liability convexity (assets gain more than liabilities from a yield shift in either direction)
+
+**Why all three conditions are necessary:**
+If only conditions 1 and 2 hold but convexity is mismatched: for small yield changes (within the linear approximation), the portfolio is immunized. But for large yield moves, convexity differences create a surplus or deficit that breaks the immunization. Ensuring asset convexity exceeds liability convexity creates a "convexity cushion" — large yield moves increase the surplus, enhancing immunization robustness.
+
+**Worked example — Life insurance company:**
+A life insurer has $100M in liabilities due in 10 years (modified duration = 9.5 years, convexity = 95).
+
+Portfolio choices for immunization:
+- Option A: 10-year Treasury bond (D_mod = 8.5, C = 80) — duration 1 year short, undershoot
+- Option B: 12-year Treasury bond (D_mod = 10.2, C = 120) — duration 0.7 years long, overshoot
+- Option C: Combination of 5-year (D_mod = 4.5, C = 25) and 15-year (D_mod = 11.5, C = 155):
+
+Portfolio duration: w × 4.5 + (1−w) × 11.5 = 9.5 → w = 0.286 (28.6% in 5-year, 71.4% in 15-year)
+Portfolio convexity: 0.286 × 25 + 0.714 × 155 = 7.15 + 110.7 = 117.8 > 95 (liability convexity)
+
+Option C is immunized: duration matches the 9.5 target, and convexity (117.8) exceeds liability convexity (95) by 22.8 units — a substantial convexity cushion that protects against large yield moves.
+
+**Dynamic immunization:**
+As time passes and yields change, portfolio duration drifts away from liability duration (duration of both changes over time, but at different rates). Periodic rebalancing is required — typically monthly for large insurance portfolios — to maintain the duration match. The cost of rebalancing (transaction costs) is the practical constraint that limits immunization precision.
+
+#### The OIS-SOFR Basis: The New Risk-Free Rate Landscape
+
+**OIS (Overnight Index Swaps)** are interest rate swaps where the floating leg pays the overnight risk-free rate (SOFR in USD markets, ESTR in EUR, SONIA in GBP) compounded over the swap term. The OIS rate is the market's expectation of average overnight rates over the swap's life.
+
+**Why OIS has replaced LIBOR as the risk-free discount curve:**
+Before 2012, banks discounted swap cash flows at LIBOR — the borrowing rate of high-grade banks for the applicable tenor (1-month, 3-month, 6-month). During the 2008 financial crisis, LIBOR spread above OIS by 350+ basis points — banks were charging significant credit and liquidity premiums over the true risk-free rate. This meant that swap NPV calculations were using a credit-risky discount rate for transactions that were *economically* risk-free (when fully collateralized through CSA/margin agreements).
+
+The industry (ISDA CSA standard, ~2013) shifted to **OIS discounting** for fully collateralized derivatives: cash flows discounted at OIS rates, which better represent the opportunity cost of the collateral posted. This moved approximately $1.5 trillion in overnight collateral pools to earn OIS rates — a meaningful shift in funding economics.
+
+**The SOFR term structure vs. OIS:**
+**SOFR Term rates** (published by CME) capture expectations of future overnight SOFR. The **OIS curve** (traded in the derivatives market for any maturity) represents the same expectation priced through derivative markets. In theory, Term SOFR at tenor T should equal the fair OIS rate at tenor T — any difference is a "SOFR basis" that creates the short-term arbitrage opportunity described in the derivatives note.
+
+**Current SOFR rates (June 2026):**
+- SOFR Overnight: 4.31% (reflecting Fed funds at 3.625% — SOFR is slightly different due to repo market mechanics)
+- Term SOFR 1-month: 4.35%
+- Term SOFR 3-month: 4.28% (inverted relative to overnight — markets expect Fed cuts)
+- SOFR OIS 2-year: 3.96%
+- SOFR OIS 5-year: 4.18%
+
+The inversion in the SOFR curve (front-end higher than 2-year and 5-year OIS) encodes the market's view that the Fed will cut rates approximately 40–50 bps over the next 12–18 months.
+
+#### Inflation-Linked Bond Mechanics: A Deep Dive
+
+**TIPS (Treasury Inflation-Protected Securities) mechanics:**
+
+The inflation adjustment is calculated daily, published monthly, and uses the **All-Urban CPI (CPI-U)** with a 3-month lag (June 2026 TIPS uses March 2026 CPI as the reference month):
+
+```
+Inflation-Adjusted Principal = Original Principal × (CPI_current / CPI_issuance)
+```
+
+Where CPI_current is the reference CPI for the current date (interpolated between monthly CPI values to produce a daily Index Ratio).
+
+**Index Ratio calculation (example):**
+- TIPS issued June 2016, Reference CPI at issuance: 240.229
+- Reference CPI June 2026 (March 2026 CPI, 3-month lag): 315.8 (approximate)
+- Index Ratio: 315.8 / 240.229 = 1.315
+- If original face value = $1,000, inflation-adjusted principal = $1,315
+
+**Semi-annual coupon on $1,000 TIPS with 0.625% coupon:**
+Payment = $1,315 × 0.625% / 2 = $4.11 per semi-annual period (vs. $3.13 on the original face)
+
+The coupon *and* principal grow with inflation. At maturity, the investor receives max($1,315, $1,000) — the deflation floor ensures the minimum repayment is the original par value.
+
+**The breakeven inflation rate:**
+```
+Breakeven = Nominal Treasury Yield − TIPS Real Yield
+Breakeven (10-year June 2026) = 4.40% − 1.90% = 2.50%
+```
+
+The breakeven is the inflation rate that makes TIPS and nominal Treasuries equivalent in total return. An investor expecting inflation above 2.50% over 10 years should prefer TIPS; below 2.50%, prefer nominal Treasuries.
+
+**UK Index-Linked Gilts vs. TIPS — key differences:**
+- UK linkers use RPI (Retail Price Index), not CPI — RPI includes mortgage interest payments and other items not in CPI, and historically runs 0.5–1.0pp above CPI
+- 8-month rather than 3-month indexation lag (historically longer; being reduced to 3-month for new issues post-2019)
+- Real yields have been significantly lower (sometimes deeply negative) than US TIPS due to structural pension fund demand for long-duration linkers
+
+**TIPS in the 2026 environment:**
+With PCE inflation at ~2.8% (current) vs. 2.50% breakeven, TIPS are earning approximately 0.3% annual "inflation carry" — the actual inflation exceeding the priced-in expectation provides additional return for TIPS holders. Over a 10-year horizon, if the Hormuz-driven energy shock sustains average inflation at 2.8% vs. the priced-in 2.5%, the TIPS investor earns an additional 3% cumulative return (0.3% × 10 years) vs. an equal-duration nominal Treasury holder. For long-horizon institutional investors, this positive "inflation carry" combined with the highest TIPS real yields since 2009 makes TIPS an attractive allocation in June 2026.
+
+---
+
+## Related
+
+- [[yield-curve-and-bonds]] — duration, convexity and yield curve theory
+- [[Federal-Reserve-and-Monetary-Policy]] — Fed funds rate and SOFR relationship
+- [[inflation-dynamics-and-investment]] — TIPS as inflation protection in portfolio construction
+- [[derivatives-futures-and-forwards]] — OIS swaps and SOFR curve mechanics

@@ -666,3 +666,112 @@ Almgren-Chriss (2000) optimal execution has been extended using RL agents that l
 **Alpha half-life estimation methodology.** A rigorous approach to alpha decay analysis involves decomposing a signal's return into: (1) fundamental component (return based on underlying economic mechanism — this decays slowly or not at all if the mechanism persists); (2) behavioral/mispricing component (return from exploiting investor biases — decays as awareness and competition increase); (3) statistical artifact (return from in-sample data mining — decays immediately upon out-of-sample testing). For momentum in US equities (the best-documented behavioral factor), the fundamental component is estimated at ~3% annually (persistent), the behavioral component at ~4% pre-2000 decaying to ~2% post-2015, and the statistical artifact at ~1% in the original Jegadeesh-Titman (1993) paper (decayed to zero after publication). Total: from ~8% to ~5% annually — still significant but meaningfully reduced.
 
 **High-frequency trading (HFT) market quality in 2026.** The HFT industry — which generates most of its revenue from market-making and latency-sensitive arbitrage — has faced a structural compression of margins as the number of competitors increased and co-location latency advantages became commoditized. The average quoted bid-ask spread for S&P 500 component stocks has fallen from ~4 basis points in 2010 to ~1 basis point in 2026 — a 75% compression that primarily reflects HFT competition driving down market-making margins. This compression has benefited retail and institutional investors (lower transaction costs) while squeezing HFT profitability. The industry response: HFT firms have extended their strategies to less liquid equity markets (mid-cap, small-cap), FX, and fixed income where latency advantages remain significant and bid-ask spreads are 5–20× the large-cap equity level. The SEC's Market Data Infrastructure Rule (finalized 2023), which consolidated market data feeds and reduced informational latency advantages for top-tier HFT firms, has further reduced the alpha available from pure speed advantages in US equities.
+
+---
+
+### Statistical Arbitrage, Pairs Trading Mechanics, and Factor Model Construction
+
+#### Statistical Arbitrage: Exploiting Transient Mispricings
+
+**Statistical arbitrage (stat arb)** encompasses strategies that exploit short-term deviations from statistical relationships between securities, expecting mean reversion. Unlike pure arbitrage (riskless profit), stat arb accepts statistical (not mathematical) convergence risk.
+
+**The core taxonomy:**
+
+**1. Pairs Trading (Market-Neutral Stat Arb):**
+The simplest stat arb strategy — identify two historically correlated securities, go long the relatively cheap one and short the relatively expensive one, profit from convergence.
+
+**2. Factor-Neutral Baskets:**
+Go long a basket of underpriced securities and short a basket of overpriced securities, constructed to be neutral to known risk factors (market beta, sector, style). More diversified than pairs; requires factor model estimation.
+
+**3. ETF/Component Arbitrage:**
+Exploit mispricing between an ETF and its underlying constituents. The ETF creation/redemption mechanism keeps prices tightly aligned for liquid ETFs, but during stress episodes (March 2020 bond ETF dislocation) the ETF premium/discount to NAV can widen substantially.
+
+**4. Index Rebalancing Anticipation:**
+S&P 500 index changes are announced approximately 5 business days before the effective date. During this window, passive index funds must buy the new addition and sell the deletion. Anticipatory buying before the effective date generates a systematic alpha for traders who anticipate the index change.
+
+#### Pairs Trading: The Cointegration Foundation
+
+Pure correlation-based pairs trading (buy the lower-performing stock, sell the higher-performing) fails because most price correlations are **spurious** — two random walk stocks may have high price correlation while their returns are uncorrelated. The correct framework is **cointegration**.
+
+**Cointegration vs. correlation:**
+- **Correlation:** Two return series move together simultaneously. Two drifting random walks can have high price correlation spuriously.
+- **Cointegration:** Two price series share a common stochastic trend — a linear combination of the two prices is stationary (mean-reverting) even though each individual price is a non-stationary random walk.
+
+**Testing for cointegration (Engle-Granger, 1987):**
+Step 1: Regress price of Stock A on price of Stock B:
+```
+P_A(t) = β × P_B(t) + ε(t)
+```
+Step 2: Test the residual ε(t) = P_A(t) − β × P_B(t) for stationarity using the Augmented Dickey-Fuller (ADF) test.
+- If ADF test rejects unit root: ε(t) is stationary → A and B are cointegrated → pairs trade is valid
+- If ADF fails to reject unit root: ε(t) is a random walk → no mean reversion → pairs trade has no statistical basis
+
+**Worked example — Royal Dutch Shell A vs. B shares (historical):**
+Before the 2005 merger of Royal Dutch Shell's dual-listed structure, Dutch shares (RDSA) and UK shares (RDSB) were claims on the same assets but traded on different exchanges. The spread (RDSA − β × RDSB) was cointegrated because both tracked the same underlying asset value. When the spread widened to 2+ standard deviations (temporary arbitrage), traders could be confident of mean reversion — the first textbook cointegrated pairs trade.
+
+**2026 pairs — sector-specific cointegration:**
+Applicable pairs in June 2026:
+- Visa (V) vs. Mastercard (MA): Same business model, highly cointegrated since MA's IPO (2006). ADF test: strongly rejects unit root with p < 0.001.
+- Exxon (XOM) vs. Chevron (CVX): Integrated oil companies with similar refining, upstream, and downstream exposure. Cointegration breaks during large acquisitions (Chevron's Hess deal in 2024 created temporary structural break).
+- JPMorgan (JPM) vs. Bank of America (BAC): Large US banks with similar business mixes. Cointegrated with a lag — regulatory differences create occasional divergences that take 2–6 weeks to close.
+
+**Practical challenges:**
+1. **Cointegration is non-stationary over time:** Pairs that were cointegrated may stop being cointegrated due to business model changes, spin-offs, or regulatory changes. Continuous re-estimation required (rolling window ADF).
+2. **Transaction costs:** Bid-ask spreads, borrow costs for short leg, and price impact erode spreads; net spread must exceed total transaction costs.
+3. **The half-life problem:** A cointegrated spread with a 30-day half-life (expected to mean-revert to zero in 30 days) generates reasonable returns; a 6-month half-life may not — capital is tied up too long.
+
+#### Factor Model Construction: From Signal to Portfolio
+
+A quantitative factor model translates raw signals (data → characteristics → expected returns) into a systematic portfolio. The full pipeline:
+
+**Step 1 — Signal identification and research:**
+- Review academic literature for documented anomalies with t > 3.0 (post-publication alpha adjustments applied)
+- Backtest on historical data: ensure out-of-sample (post-discovery) performance holds
+- Stress test for transaction cost sensitivity and capacity constraints
+
+**Step 2 — Signal normalization:**
+Convert raw signals to cross-sectional z-scores (by month/quarter):
+```
+z_i = (x_i − μ_x) / σ_x
+```
+Where x_i is the raw signal for stock i, μ_x is the cross-sectional mean, σ_x is the cross-sectional standard deviation. Z-scored signals ensure comparability across stocks with different levels and scales.
+
+**Step 3 — Signal combination (factor alpha):**
+Combine multiple normalized signals into a composite alpha signal using either:
+- **Equal weighting:** Simple average of z-scores
+- **IC-weighted:** Weight signals proportional to their information coefficient (IC = correlation of signal with next-period return)
+- **Optimization:** Maximize the expected IC of the composite signal subject to diversification constraints
+
+The **Information Coefficient (IC):** The correlation between predicted returns (from the signal) and actual returns.
+```
+IC = Corr(Signal_t, Return_{t+1})
+```
+An IC of 0.05 is excellent for a single factor; most institutional quant models run IC of 0.02–0.08 for individual signals. Combining multiple low-IC signals with low mutual correlation ("diversification in alpha") creates composite ICs of 0.06–0.15 in the best quant models.
+
+**Step 4 — Portfolio construction:**
+Convert the composite alpha signal into portfolio weights:
+```
+w_i = f(α_i, σᵢ, ρᵢⱼ, constraints)
+```
+Where α_i is the composite alpha signal, σᵢ is the residual risk of stock i (idiosyncratic volatility), and ρᵢⱼ is the pairwise correlation.
+
+**Optimization approaches:**
+- **1/Residual Variance weighting:** w_i ∝ α_i / σᵢ² — weights high-alpha, low-risk stocks more
+- **Mean-variance optimization:** Solve max_w α'w − λ × w'Σw subject to constraints. Risk model (Σ) is critical — use a commercial risk model (Barra, Axioma, Northfield) for 500+ stock portfolios.
+- **Constraint hierarchy:** Market neutrality → sector neutrality → factor neutrality → turnover constraint → capacity constraint. Add constraints progressively; each reduces expected return but improves risk management.
+
+**Step 5 — Execution and slippage modeling:**
+Estimate market impact before trading:
+```
+Market Impact ≈ η × σᵢ × (TradeSize / ADV)^0.6
+```
+Where ADV is average daily volume and η ≈ 0.5–1.0 (a market-impact coefficient). This Kyle-Barra formula shows that slippage scales super-linearly with trade size relative to volume — a 10% ADV trade incurs ~4× more impact than a 2% ADV trade, not 5×.
+
+---
+
+## Related
+
+- [[Modern-Portfolio-Theory]] — portfolio optimization theory underlying factor model construction
+- [[factor-investing-and-smart-beta]] — factor premiums targeted by quantitative strategies
+- [[behavioral-finance-and-investor-psychology]] — behavioral mispricing as quant signal source
+- [[hedge-funds-and-alternative-strategies]] — quantitative hedge fund strategies using stat arb

@@ -549,3 +549,95 @@ The averaging mechanism reduces option cost by ~30–40% vs. European options on
 **Energy futures in the Hormuz crisis context.** The Hormuz closure (since late February 2026) has created extraordinary conditions in crude oil futures basis markets. WTI futures at ~$91/barrel (June 2026) are in sharp **backwardation** — the front-month contract trades above the 12-month contract by approximately $8/barrel — reflecting the market's view that the Hormuz disruption is temporary and oil prices will normalize. Simultaneously, Brent futures (North Sea crude, not Hormuz-dependent) trade in a much narrower backwardation, while Middle East sour crude grades (Dubai, Oman) trade at unusual premiums to their historical Brent discount, reflecting the physical supply tightness in Gulf-origin barrels. These basis relationships — WTI backwardation, the Brent-Dubai premium inversion, the WTI-WCS spread (Canadian heavy vs. US light) — are the raw material for commodity basis trades that energy hedge funds exploit during supply disruptions. A roll yield of approximately **$8/barrel × 12 months = $96/barrel annualized** on WTI futures represents an extraordinary rolling return available purely from the term structure, independent of spot price direction.
 
 **Commodity trading advisors (CTAs) in the current environment.** CTAs — systematic trend-following hedge funds that trade primarily futures across commodities, rates, FX, and equities — have generated strong returns in 2025–2026 by being long energy futures (the Hormuz trend), long dollar (safe-haven trend), and short long-duration rates (the "higher for longer" trend). The SG CTA Index was up approximately 18% in the twelve months to May 2026 — significantly outperforming equities (+8%) and fixed income (-2%). This outperformance validates the diversifying role of systematic trend-following during geopolitical stress regimes, when persistent dislocations across multiple asset classes create the conditions that trend models are designed to exploit.
+
+---
+
+### Interest Rate Swap Mechanics, Duration of a Swap, and CVA/DVA
+
+#### Interest Rate Swap: The Most Liquid Derivatives Market
+
+An **interest rate swap (IRS)** is a bilateral agreement to exchange a series of fixed interest rate payments for floating rate payments (or vice versa) on a notional principal amount. No principal is exchanged — only interest payments are swapped. The IRS market is the world's largest derivatives market: approximately **$360 trillion** in notional outstanding (BIS OTC derivatives statistics, 2025 H1).
+
+**Standard "vanilla" IRS mechanics:**
+- **Fixed leg:** Payer A agrees to pay Fixed Rate (say, 4.10%) semiannually × Notional ($100M) = $2.05M every 6 months
+- **Floating leg:** Payer B (= the fixed-rate receiver) agrees to pay SOFR compounded in arrears, quarterly, reset quarterly
+- **Net settlement:** At each settlement date, the two parties net out their obligations. If SOFR-based payment = $2.10M and fixed payment = $2.05M, the fixed receiver pays $50,000 net.
+
+**The economic logic:**
+A bank that has issued 5-year fixed-rate mortgages (earning fixed) but funds itself with short-term deposits (paying floating) has a **duration mismatch** — interest rate risk. The bank enters an IRS where it *pays fixed and receives floating*: this converts its fixed mortgage income into floating income, neutralizing the duration mismatch. The mortgage customer (borrower) still pays fixed; the market (swap counterparty) absorbs the rate risk.
+
+**Swap pricing — the par rate:**
+The fixed rate on a par interest rate swap is set so that the present value of the fixed leg equals the present value of the floating leg at inception (zero initial value):
+```
+PV(fixed leg) = PV(floating leg)
+
+Fixed Rate = [1 − D(T)] / Σₜ D(t_i) × (t_i − t_{i-1})
+```
+Where D(t) is the OIS discount factor at time t. This is bootstrapped from the OIS/SOFR curve observed in the market.
+
+**Current par swap rates (June 2026, USD IRS):**
+- 1-year: 4.35%
+- 2-year: 4.05%
+- 5-year: 4.28%
+- 10-year: 4.52%
+- 30-year: 4.85%
+
+The "IRS curve" is inverted at the short end (2Y below 5Y) and upward-sloping at the long end — reflecting the market's expectation that the Fed will cut rates over 1–2 years but long-term rates will remain elevated due to term premium and inflation uncertainty.
+
+#### Duration of an Interest Rate Swap
+
+The **duration of an IRS** reflects the combined interest rate sensitivity of the fixed and floating legs:
+
+**Duration of the fixed leg:**
+Identical to a fixed-rate bond's duration with the same maturity and coupon. For a 10-year swap at 4.52% fixed, the fixed leg has Macaulay duration of approximately 8.0 years and DV01 of approximately $80,000 per $100M notional per basis point.
+
+**Duration of the floating leg:**
+The floating leg resets to market rates at each reset date. Between reset dates, the floating leg behaves like a floating rate note maturing at the next reset date — very short duration (typically days to 3 months). Floatingleg DV01 ≈ $0–$25,000 per $100M for a quarterly reset swap.
+
+**Net swap DV01:**
+```
+DV01_swap = DV01_fixed − DV01_floating ≈ $80,000 − $8,000 = $72,000 per $100M
+
+(Pay-fixed swap: positive rate sensitivity — position gains when rates fall)
+(Receive-fixed swap: negative rate sensitivity — position gains when rates rise)
+```
+
+**Pension fund application:** A pension fund with $1B in liabilities (modeled as a series of fixed payments with 15-year duration = DV01 of $1.5M per bp) and a portfolio of 10-year bonds (DV01 of $800K per bp) has a duration mismatch of $700K per bp — the liabilities are more interest-rate-sensitive than the assets. A receive-fixed IRS ($700K DV01 / $72K per $100M = $970M notional in 10Y receive-fixed swaps) closes the gap, creating a liability-driven investing (LDI) hedge.
+
+#### CVA and DVA: Counterparty Credit Risk in OTC Derivatives
+
+**Credit Valuation Adjustment (CVA)** is the market value of the counterparty default risk embedded in an OTC derivatives position:
+```
+CVA = (1 − Recovery) × E[Max(MtM(t), 0)] × PD(t)
+```
+
+Where MtM(t) is the mark-to-market value at time t (exposure exists only when MtM > 0 — when counterparty *owes you* money), PD(t) is the probability of default at time t, and Recovery is the estimated recovery rate (typically 40%).
+
+**Intuition:** You are in a 10-year pay-fixed swap with Bank X. If rates fall sharply, the swap becomes valuable to you (Bank X owes you money). But if Bank X defaults when rates are low, you receive the recovery value (40%) of what they owe — not the full amount. CVA quantifies this risk and reduces the derivative's fair value:
+```
+Fair Value of Derivative = Risk-Free Price − CVA (+ DVA)
+```
+
+**DVA (Debt Valuation Adjustment):** The symmetric concept — the value of *your own* credit risk to the counterparty. If you default when your derivatives position is out-of-the-money to you (you owe the counterparty), the counterparty only recovers 40% — this is a *benefit* to you, captured as DVA:
+```
+DVA = (1 − Recovery) × E[Max(−MtM(t), 0)] × PD_own(t)
+```
+
+**Accounting controversy:** Under IFRS 13 and ASC 820, CVA and DVA must be reflected in fair value accounting. When a bank's own creditworthiness deteriorates, DVA *increases* the reported fair value of its derivatives liabilities — a perverse income statement gain (the bank "profits" from its own credit deterioration). During the 2011 European sovereign crisis, several major banks (Citigroup, Goldman Sachs, JP Morgan) reported billions in DVA gains that partially offset trading losses — generating controversy about whether this accounting was economically meaningful.
+
+**Post-2012 XVA framework:** The financial crisis revealed that bilateral CVA/DVA was insufficient. The full XVA framework (now standard at major dealers) includes:
+- **FVA (Funding Valuation Adjustment):** Cost of funding uncollateralized derivatives positions
+- **KVA (Capital Valuation Adjustment):** Regulatory capital cost embedded in long-dated derivatives
+- **MVA (Margin Valuation Adjustment):** Cost of posting initial margin under UMR (Uncleared Margin Rules)
+- **ColVA (Collateral Valuation Adjustment):** Cost of non-cash collateral with optionality
+
+The sum (XVA = CVA + DVA + FVA + KVA + MVA + ColVA) explains why OTC derivative pricing has become increasingly complex and why central clearing (eliminating bilateral credit risk through a central counterparty) has become strongly preferred post-Dodd-Frank.
+
+---
+
+## Related
+
+- [[credit-markets-and-credit-risk]] — CVA connects interest rate and credit risk
+- [[yield-curve-and-bonds]] — IRS curve as the foundation of fixed income pricing
+- [[Federal-Reserve-and-Monetary-Policy]] — SOFR as the benchmark for floating legs of swaps
+- [[hedge-funds-and-alternative-strategies]] — derivatives strategies used by macro and fixed income funds

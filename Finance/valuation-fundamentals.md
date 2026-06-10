@@ -590,3 +590,122 @@ The AI technology premium is extreme by any historical standard. Nvidia (NVDA), 
 **The quality spread and earnings quality assessment in 2026.** In the current environment where corporate debt costs have risen 200–400 bps since 2021, "earnings quality" — the degree to which reported earnings reflect durable, cash-based economic profit rather than accounting adjustments — has become a more critical valuation input. A comprehensive earnings quality framework involves: (1) **accruals ratio** = (Net Income − CFO) / Average Net Operating Assets — a high positive accruals ratio indicates earnings are accruing faster than cash generation, a warning sign; (2) **EBITDA-to-Free-Cash-Flow bridge**: a healthy company converts >80% of EBITDA to FCF; conversion below 60% warrants investigation of capex intensity, working capital drag, or interest cost burden; (3) **Maintenance vs. growth capex distinction**: companies that conflate maintenance capex with growth capex in investor disclosures overstate "normalized" FCF.
 
 **Sum-of-the-parts (SOTP) valuation — practical application for conglomerates.** Sum-of-the-parts analysis values a diversified company by valuing each business segment independently and summing them, often revealing a "conglomerate discount" — the tendency of diversified companies to trade at less than the sum of their parts. Google parent Alphabet provides a current example: breaking down Alphabet's implied valuation reveals the "conglomerate discount" from its Other Bets (Waymo, DeepMind as standalone businesses) relative to Google Search/YouTube/Cloud as the core businesses. Analysts applying SOTP: (1) Google Services (Search, YouTube, Maps): $1.6T (20× EBITDA); (2) Google Cloud: $400B (15× revenue, reflecting AWS/Azure comparable); (3) Waymo (robotaxi): $100–200B (discounted DCF on 2030+ revenues); (4) Alphabet Capital (25% stake in SpinCo assets): $50B. Total SOTP: $2.15–2.25T vs. current market cap ~$2.0T — suggesting modest upside from sum-of-parts realization. The discount largely reflects market uncertainty about how to value the optionality in emerging businesses.
+
+---
+
+### LBO Valuation Floor, Comparable Company Analysis, and Precedent Transactions
+
+#### The LBO Valuation Floor: Why PE Bidders Set a Price Minimum
+
+The **LBO model** (Leveraged Buyout analysis) defines the maximum price a private equity buyer would pay for a target based on its ability to service the acquisition debt and generate sufficient returns for PE investors. In competitive M&A processes, the LBO model creates a **valuation floor** — the minimum acceptable acquisition price at which PE buyers can achieve their target returns (typically 15–25% IRR on equity invested).
+
+**LBO model logic:**
+A PE firm acquires Company X. The firm contributes equity (typically 30–40% of total purchase price), and the remaining 60–70% is borrowed (leveraged loans, high yield bonds, mezzanine). The debt is repaid from the company's operating cash flows over 5 years. The firm exits by selling the company (via trade sale, secondary PE buyout, or IPO) at a target EBITDA multiple.
+
+**LBO valuation floor — worked example:**
+
+Company X characteristics:
+- Current EBITDA: $100M
+- Target leverage: 5.5× EBITDA = $550M in debt
+- Required equity: 35% of total capitalization
+- PE target return: 20% IRR (5-year hold)
+- Assumed exit multiple: same as entry multiple (no multiple expansion)
+- EBITDA growth: 8% per year (management and operational improvement)
+
+Exit EBITDA: $100M × (1.08)^5 = $146.9M
+Exit EV (at same entry multiple): $146.9M × entry multiple
+Exit equity value = Exit EV − Remaining debt (after 5 years of debt paydown)
+
+Remaining debt (assumes $30M/year paydown from excess cash flow): $550M − $150M = $400M
+
+For a 20% IRR: Investment must 2.49× (= 1.20^5) over 5 years
+Equity invested = 35% × (Entry EV)
+
+Setting up: $2.49 × (0.35 × Entry EV) = Exit multiple × $146.9M − $400M
+
+If entry multiple = 9× EBITDA → Entry EV = $900M → Equity = $315M
+At 20% IRR, equity must grow to: $315M × 2.49 = $784M
+Exit equity = 9× × $146.9M − $400M = $1,322M − $400M = $922M ✓ (Exceeds required $784M — good deal)
+
+If entry multiple = 12× EBITDA → Entry EV = $1,200M → Equity = $420M
+Required exit equity: $420M × 2.49 = $1,045M
+Exit equity = 12× × $146.9M − $400M = $1,763M − $400M = $1,363M ✓ (Still works but with thinner cushion)
+
+If entry multiple = 14× EBITDA → Entry EV = $1,400M → Equity = $490M
+Required exit equity: $490M × 2.49 = $1,220M
+Exit equity = 14× × $146.9M − $400M = $2,057M − $400M = $1,657M ✓ (Works, but leverage ratio is 550/1400 = 39% — lower than 5.5×)
+
+*With higher entry multiple, either the leverage ratio drops (less efficient LBO) or more equity is required. The maximum entry multiple (LBO floor) is the multiple at which the deal exactly meets the PE return hurdle.*
+
+**Strategic vs. PE buyer premium:** Strategic buyers (corporate acquirers) can pay above the LBO floor because they capture synergies (cost reductions, revenue gains) that PE buyers cannot access. A strategic buyer generating $20M/year in synergies effectively acquires at a $20M higher EBITDA, supporting a higher acquisition price. In competitive M&A processes, the strategic buyer's "synergy capacity" allows them to bid 20–40% above the LBO floor.
+
+#### Comparable Company Analysis (Trading Comps)
+
+Trading comps value a private company or non-traded division by reference to the EV/EBITDA, P/E, and EV/Revenue multiples at which public "comparable" companies trade.
+
+**Step-by-step process:**
+
+**1. Select the comparable universe:**
+Identify 8–15 public companies in the same or closely related industries. The criteria for inclusion: similar business model, similar end markets, similar growth profile, similar margins. Including companies that are merely in the same "sector" (e.g., including a software company when valuing a semiconductor company because both are "technology") produces meaningless comps.
+
+**2. Gather financial metrics:**
+For each company: current stock price, shares outstanding, cash, debt → Enterprise Value. Revenue (LTM, NTM), EBITDA (LTM, NTM), Net Income, Free Cash Flow. Source: Bloomberg, Capital IQ, or public filings.
+
+**3. Calculate multiples:**
+- EV/EBITDA: most widely used across industries; normalizes for capital structure
+- EV/Revenue: used when EBITDA is negative or highly variable (early-stage growth companies)
+- P/E: used for financial companies (where EV is not meaningful) and profitable companies
+- EV/EBIT: used when depreciation/amortization variation is large across comps
+
+**4. Apply median/mean multiple to target:**
+Target EV = Median EV/EBITDA of comps × Target EBITDA
+
+**Key judgment calls:**
+- Which percentile (25th, median, 75th) to apply: apply higher multiple for premium-quality targets
+- Which financial metric period (LTM vs. NTM): applying next-twelve-months EBITDA is forward-looking and more relevant for growing companies
+- Normalization: adjust for one-time items, restructuring charges, stock-based compensation (controversy: should SBC be included in EBITDA? GAAP includes it; many analysts add it back; major error source)
+
+**2026 software sector comps example:**
+| Company | EV/NTM Revenue | EV/NTM EBITDA | Rule of 40 Score |
+|---------|----------------|--------------|-----------------|
+| Peer A (AI-heavy) | 14× | 40× | 72 |
+| Peer B (established SaaS) | 9× | 22× | 58 |
+| Peer C (mature growth) | 6× | 15× | 48 |
+| Peer D (declining growth) | 4× | 11× | 35 |
+| Median | 7.5× | 18.5× | 53 |
+
+For a private company with $50M NTM EBITDA and a Rule of 40 score of 60: applying the 75th percentile multiple (above median, justified by premium quality): EV = 25× × $50M = $1.25B.
+
+#### Precedent Transactions: Control Premium Benchmark
+
+Precedent transactions (deal comps) analyze the multiples paid in prior M&A deals for comparable companies. The key difference from trading comps: transaction multiples include a **control premium** — the premium an acquirer pays above the standalone market price to obtain control of the target.
+
+**Control premium statistics:**
+- Average control premium (M&A data 2015–2025): 28–35% above unaffected stock price
+- Range: 15% (negotiated deals, friendly transactions) to 70%+ (hostile takeover defense situations, bidding wars)
+- Variation by industry: technology (higher premiums, 35–45%), consumer staples (lower, 20–28%), financial services (lower, 15–25%)
+
+**Precedent transaction multiples vs. trading comps:**
+| Metric | Trading Comps (median, 2026) | Precedent Transactions (median, 2020–2026) |
+|--------|------------------------------|------------------------------------------|
+| EV/EBITDA (Technology) | 22× | 30× |
+| EV/EBITDA (Healthcare) | 14× | 19× |
+| EV/Revenue (SaaS) | 7.5× | 11× |
+
+The premium of precedent transactions over trading comps (approximately 30–40%) represents the control premium embedded in acquisition pricing — a critical input when advising a company considering a sale process vs. remaining public.
+
+**Selection criteria for precedent transactions:**
+- Same industry/subsector (narrow definition)
+- Within 5 years (older transactions have less relevance to current valuations)
+- Comparable size (avoid including $10M microcap deals when valuing a $1B company)
+- Disclosed multiples (many deals are private with undisclosed terms)
+- Arm's-length transactions (exclude hostile takeovers, distressed sales, related-party transactions)
+
+---
+
+## Related
+
+- [[Discounted-Cash-Flow-Analysis]] — DCF as the intrinsic value anchor vs. relative value from comps
+- [[private-equity-and-venture-capital]] — LBO mechanics and PE return calculation
+- [[mergers-and-acquisitions]] — valuation methodologies in M&A advisory context
+- [[factor-investing-and-smart-beta]] — value factor as a systematic screen using valuation multiples

@@ -645,3 +645,81 @@ Quantification: J.P. Morgan Global Research estimates the WTI price decompositio
 **Friend-shoring financial premium in semiconductor supply chains.** The geopolitical risk premium extends beyond commodities into manufacturing supply chains. A McKinsey Global Institute analysis (April 2026) estimates that the incremental cost of "friend-shoring" — relocating semiconductor production from lowest-cost Asian locations to allied nations — averages **25–35% above the globally optimized cost** for established process nodes and 15–20% for leading-edge nodes. This friend-shoring premium is now embedded in the valuation of semiconductor equipment companies (ASML, Applied Materials, Lam Research) and chipmakers (TSMC's Arizona expansion, Samsung's Texas fab, Intel's Ohio plant) — investors are paying for geographic supply chain resilience that has no purely financial justification. In aggregate, McKinsey estimates that already-committed friend-shoring semiconductor investment exceeds $350 billion globally, representing the largest single geopolitically-motivated capital allocation in the history of industrial policy.
 
 **The MSCI conflict-proximity discount — updated 2026 data.** MSCI's research team published an updated analysis in May 2026 of the equity valuation discount associated with proximity to active conflicts. The 2026 findings expand the 2023 analysis: countries within 500 miles of an active conflict face a persistent **4.2 percentage point P/E multiple discount** vs. comparable countries outside the conflict zone (revised upward from the 2–4% range cited in earlier research). The discount is highest for small-cap equities (5.8pp) and lowest for large-cap multinationals (2.1pp), consistent with the hypothesis that geopolitical risk is priced as a local operational risk rather than a global macro risk. Countries benefiting from conflict-adjacent positions — Pakistan (mediation role), Qatar (LNG premium), Israel's defense sector (despite Gaza exposure) — show specific valuation premiums within subsectors that benefit from the geopolitical environment, creating within-country valuation bifurcations that sector-specific analysis can capture.
+
+---
+
+### Taiwan Risk Framework, Political Risk Insurance, and DFC/OPIC
+
+#### Taiwan Strait Risk: Pricing a Tail Risk That Hasn't Happened
+
+**The Taiwan scenario as systemic risk:**
+A Taiwan Strait conflict — ranging from a full naval blockade to kinetic conflict — is widely regarded as the single largest tail risk in global financial markets. The economic stakes:
+- TSMC (Taiwan Semiconductor Manufacturing Company) produces approximately **92% of the world's most advanced semiconductors** (3nm and below) and approximately 60% of total global chip fabrication value
+- A conflict disrupting TSMC production would simultaneously impair supply chains for: consumer electronics, automobiles, data centers, military systems, and virtually every digital product
+- The GDP impact of a 12-month disruption of advanced semiconductor supply has been modeled by McKinsey (2023) at **$600 billion–$2 trillion** in global economic damage — comparable to the 2008 financial crisis
+
+**How markets price Taiwan risk in 2026:**
+Equity: Taiwan Semiconductor (TSM, US ADR) trades at approximately a 30–35% discount to what its earnings power would command absent geopolitical risk — an observable "Taiwan discount." Morgan Stanley has modeled the Taiwan discount using synthetic comparable companies (South Korean, US, and Dutch semiconductor peers) to isolate the political risk component.
+
+Credit: Taiwan sovereign CDS at approximately 120 bps — higher than similarly-rated South Korea (60 bps) and Singapore (20 bps), reflecting the specific Taiwan risk premium.
+
+Options: Taiwan stock market (TAIEX) implied volatility at ~22%, vs. KOSPI (South Korea) at ~16% — a 6 percentage point vol premium attributable to geopolitical risk.
+
+**The "deterrence premium" — what market pricing implies:**
+Integrating the discount across asset classes, markets are implicitly pricing:
+- Probability of significant conflict in the next 5 years: approximately 8–12% (derived from option pricing models)
+- Probability of kinetic conflict in the next 10 years: approximately 15–20%
+
+These probabilities are broadly consistent with think-tank assessments (RAND, Atlantic Council, CNAS) that put meaningful Taiwan conflict risk at 15–25% over 10 years under current circumstances.
+
+**The "stranglehold" hedge:**
+Institutional investors cannot directly short "Taiwan conflict risk" (no contract exists). Indirect hedges:
+- Long VIX calls (spike in systemic risk)
+- Long USD/JPY puts (yen appreciates strongly in risk-off)
+- Long gold (safe haven)
+- Short semiconductor equipment companies (ASML, AMAT — most exposed to supply chain disruption)
+- Short TSMC US ADR
+
+**Xi's 2027 deadline thesis:** The 2027 100th anniversary of the People's Liberation Army is cited by some analysts as a politically significant deadline for CCP leadership to demonstrate military capability, potentially accelerating Taiwan risk. The 2026 Taiwan Strait military activity has been elevated (daily PLA air incursions into ADIZ exceeding 2023 baseline by 40%), but direct kinetic action remains low probability given US carrier strike group positioning.
+
+#### Political Risk Insurance: MIGA, OPIC, and DFC
+
+**The political risk insurance (PRI) ecosystem:**
+Multinational companies and investors in emerging markets face political risks that commercial insurance cannot cover — government expropriation, currency transfer restrictions (inability to repatriate profits), war and civil disturbance, and breach of contract by host governments. Specialized political risk insurers provide coverage:
+
+**World Bank Group: MIGA (Multilateral Investment Guarantee Agency):**
+- Established 1988; provides guarantees (insurance) against non-commercial risks in developing countries
+- Coverage types: Expropriation, currency inconvertibility, war and civil disturbance, breach of contract
+- Maximum coverage: $1.37 billion per project (FY2024)
+- Projects covered: 2026 — renewable energy in SSA, infrastructure in MENA, manufacturing in SE Asia
+- Advantage: MIGA's World Bank affiliation deters host governments from triggering claims (damaging World Bank relationship is too costly)
+
+**US DFC (Development Finance Corporation):**
+Created in 2018 by merging OPIC (Overseas Private Investment Corporation) and other agencies, DFC provides:
+- **Political risk insurance:** Up to $1B per project for US investors and companies
+- **Direct loans and guarantees:** Project finance in developing countries
+- **Equity co-investments:** DFC can take equity stakes in development-stage projects
+- **Investment ceiling:** $60B (expanded from $29B OPIC limit) in support commitments
+- **National security mandate:** DFC explicitly targets countries at risk of Chinese infrastructure influence ("Belt and Road alternative"), prioritizing Indo-Pacific, Sub-Saharan Africa, and Latin American projects
+
+**Lloyd's of London political risk syndicate:**
+Specialized underwriters (Markel, Atradius, Zurich Political Risk) offer commercial PRI covering:
+- Expropriation: 5 years coverage, typically 90–95% of investment
+- Political violence: Damage to insured assets from government action or rebellion
+- CEND (Contract Frustration, Expropriation, Nationalization, Deprivation): Broader contract-related protections
+- Premiums: 0.2–2.0% of insured value annually depending on country and coverage type
+
+**2026 DFC focus areas:**
+The DFC's June 2026 strategic review explicitly prioritizes: (1) critical mineral supply chains in Zambia, DRC, and Chile (as a Belt-and-Road alternative); (2) undersea cable infrastructure in SE Asia (reducing dependence on China-controlled landing stations); (3) pharmaceutical manufacturing in India and Vietnam (supply chain diversification from China); (4) data center infrastructure in friendly nations for AI workload resiliency. The DFC has committed $8.2B in new guarantees and insurance in the 12 months ending June 2026 — the highest annual commitment since its 2018 formation.
+
+**The Pakistan case study — DFC in practice:**
+Pakistan's June 2026 IMF program stress (Hormuz-driven energy import cost surge of ~$3.8B annually above program assumptions) has made the DFC-backed Thar coal-to-solar transition project politically salient. DFC provided $400M in project finance guarantees for the replacement of 2,200 MW of Thar coal capacity with domestic solar, reducing Pakistan's fuel import exposure. At $91/barrel equivalent oil prices, the DFC-backed project is now generating significant economic benefit for Pakistan's current account — a real-world demonstration of DFC's dual mandate of development impact and US strategic interest alignment.
+
+---
+
+## Related
+
+- [[macroeconomics-101]] — geopolitical risk in macroeconomic framework
+- [[currency-markets-and-fx]] — geopolitical risk premium in FX markets
+- [[energy-transition-finance-and-green-capital-markets]] — DFC role in clean energy finance in developing countries
+- [[sovereign-wealth-funds]] — SWF exposure to geopolitical risk

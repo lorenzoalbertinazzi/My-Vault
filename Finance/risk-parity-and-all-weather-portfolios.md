@@ -307,3 +307,87 @@ This calculation illustrates why risk parity delivered poor absolute returns in 
 3. **Alternative diversifiers beyond traditional four-box:** Adding merger arbitrage (low correlation to macro factors), catastrophe bonds (pure insurance risk), and liquid alternatives (trend-following CTAs) as additional risk parity buckets that diversify specifically against the inflation-deflation and growth shock quadrants.
 
 **Current All Weather portfolio positioning (June 2026).** In the current macroeconomic environment — moderate growth (2.2% GDP), elevated inflation (PCE 2.8%), geopolitically elevated commodity prices — a classic All Weather portfolio is positioned: (a) Equities: underweight vs. benchmark (growth concerns, high valuations); (b) Long Treasuries: underweight (inflation risk, fiscal deficit headwinds); (c) Commodities: overweight (energy supply shock, inflation hedge); (d) Gold: overweight (geopolitical safe haven, central bank buying); (e) TIPS: overweight (pure inflation protection). This positioning has generated approximately +8.5% YTD through May 2026 vs. the S&P 500's +7.8% — a modest outperformance that, combined with lower volatility, provides a better risk-adjusted return but does not dramatically outperform the equity market in a partial-risk-on environment.
+
+---
+
+### Ray Dalio's Framework, Historical Return Analysis, and Leverage Mechanics in Detail
+
+#### Ray Dalio's Macroeconomic Framework: The Machine That Is the Economy
+
+Ray Dalio, founder of Bridgewater Associates, developed the All Weather portfolio as the practical implementation of his "Economic Machine" framework — a model of how economies cycle through four environments defined by the intersection of economic growth and inflation directions:
+
+**The Four Quadrants:**
+1. **Rising Growth + Rising Inflation** (inflationary boom): Equities perform well; commodities outperform; TIPS neutral; nominal bonds underperform
+2. **Rising Growth + Falling Inflation** (goldilocks): Equities perform best; nominal bonds perform well; commodities neutral
+3. **Falling Growth + Rising Inflation** (stagflation): Commodities and gold outperform; everything else struggles; TIPS outperform nominal bonds
+4. **Falling Growth + Falling Inflation** (deflationary bust): Nominal Treasuries surge; gold moderately positive; equities and commodities suffer
+
+The All Weather portfolio is constructed to be *risk-balanced* across all four quadrants: no single quadrant should dominate returns. The target: 25% of the total portfolio's risk budget allocated to each of the four environments. Since different assets have different volatilities, capital allocation must deviate from risk allocation — this requires leverage on bonds (low-volatility assets) to achieve risk parity with equities (high-volatility assets).
+
+**Historical economic regime frequencies (1960–2025):**
+- Rising growth + rising inflation: ~25% of quarters
+- Rising growth + falling inflation: ~25% of quarters
+- Falling growth + rising inflation: ~10% of quarters (least common, most difficult)
+- Falling growth + falling inflation: ~20% of quarters
+- Mixed/transitional: ~20% of quarters
+
+No portfolio can "win" every quarter. All Weather's goal is to *not lose severely* in any quarter — a portfolio that loses 5% in its worst environment is superior to one that loses 30%, even if the latter has higher average returns.
+
+#### Historical Return Analysis: Long-Run All Weather Performance
+
+Bridgewater has published back-tested All Weather performance to 1925. Third-party analysis (Dalio, *Principles for Navigating Big Debt Crises*, 2018; AQR 2020 replication study) provides the following characteristics:
+
+**Long-run All Weather statistics (1972–2025, approximate):**
+- Annualized return: ~8.8% (vs. S&P 500: ~10.5%)
+- Annualized volatility: ~10.2% (vs. S&P 500: ~15.8%)
+- Sharpe ratio: ~0.62 (vs. S&P 500: ~0.50)
+- Maximum drawdown: −25.6% (1973–1974, stagflation episode) vs. S&P 500: −50.9% (2008–2009)
+- Percent of years positive: ~75% vs. S&P 500 ~70%
+
+**The critical trade-off:** All Weather delivers similar Sharpe ratios to equities with significantly lower drawdowns, but lower absolute returns. For investors with long time horizons and high risk tolerance (endowments, sovereign wealth funds), the S&P 500's higher absolute return may justify the higher drawdown risk. For investors with liability constraints (insurance companies, pension funds) or shorter time horizons, All Weather's lower drawdown is worth more than its lower expected return.
+
+**2022 stress test quantification:**
+The 2022 episode was uniquely damaging because all four asset classes in the All Weather portfolio declined simultaneously:
+- US equities (SPY): −18.2%
+- Long-duration Treasuries (TLT): −31.2%
+- Commodities (DJP): +27.5% (positive!)
+- Gold (GLD): −0.3% (flat)
+- TIPS (TIP): −12.1% (fell despite inflation because real yields rose sharply)
+
+Portfolio result: approximately −14.2% for a typical All Weather implementation (the heavy allocation to long bonds was the primary driver of losses, with the leverage amplifying the nominal bond drawdown).
+
+**The 40-year context:** All Weather's design was heavily influenced by the 1980–2020 secular decline in bond yields (from 16% in 1981 to 0.5% in 2020) — a period in which long bonds generated equity-like returns with negative correlation to equities. The model was essentially *optimized for* a falling-rate regime it did not expect. Dalio explicitly acknowledged this in a 2022 LinkedIn essay, noting that the "Lost Decade" for bonds required fundamental rethinking.
+
+#### Leverage Mechanics: How Risk Parity Actually Borrows
+
+The mathematical requirement for risk parity is clear: if bonds have 1/3 the volatility of equities, the portfolio must hold 3× more bond notional than equity notional to equalize risk contributions. For a target 10% portfolio volatility:
+
+**Unlevered risk-parity weights:**
+- Equities: 20% of portfolio (equity vol ~15% → risk contribution = 0.20 × 15% = 3%)
+- Nominal bonds: 55% of portfolio (bond vol ~7% → risk contribution = 0.55 × 7% = 3.85%)
+- Commodities: 15% (commodity vol ~15% → risk contribution = 0.15 × 15% = 2.25%)
+- TIPS/Gold: 10% (TIPS vol ~7% → risk contribution = 0.10 × 7% = 0.7%)
+Total risk budget: ~9.8% (approximately 10% with correlations accounted for)
+
+This portfolio uses no leverage — but has low absolute returns (lower equity allocation). To *increase* expected returns while maintaining risk parity, the fund applies leverage:
+
+**Levered risk-parity portfolio (Bridgewater All Weather style):**
+Scale up all weights by 1.7× while borrowing 70% of the portfolio value:
+- Equities: 34% of levered portfolio (borrowing costs apply to the 70% financed portion)
+- Nominal bonds: 93.5% (!)
+- Commodities: 25.5%
+- TIPS/Gold: 17%
+
+Financing cost: 70% × SOFR ≈ 70% × 4.3% = 3.01% annual drag on the portfolio. At 1.7× leverage, a 1% loss in the underlying risk parity portfolio becomes a 1.7% loss — the leverage amplifies both gains and losses proportionally.
+
+**Repo and prime brokerage funding:**
+The bond exposure is typically achieved through: (1) long positions in bond futures (leveraged exposure with minimal margin requirement); (2) Treasury repo (borrow cash against Treasury collateral to buy more Treasuries); (3) interest rate swaps (receive fixed, pay floating — economically equivalent to owning long-duration bonds without committing capital). The "funding cost" is therefore SOFR on the repo/swaps — the approximately 3% annual drag calculated above.
+
+---
+
+## Related
+
+- [[Federal-Reserve-and-Monetary-Policy]] — SOFR funding costs directly affect risk parity's leverage economics
+- [[Modern-Portfolio-Theory]] — risk parity as extension of Markowitz's diversification framework
+- [[yield-curve-and-bonds]] — long-duration bond mechanics central to risk parity implementation
+- [[hedge-funds-and-alternative-strategies]] — Bridgewater as the world's largest hedge fund deploying risk parity

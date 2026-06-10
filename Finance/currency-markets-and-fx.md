@@ -605,3 +605,88 @@ The BOJ raised rates to 0.5% in January 2025 and 0.75% in June 2026. The narrowi
 **WTI crude at $91 and FX implications (June 2026).** The Hormuz crisis-driven WTI spike to $95/barrel (late May 2026) before partial retreat to ~$91 (June 8, 2026) has created a distinctive commodity-currency divergence. Norway's krone (NOK) appreciated 4.2% against the euro since the Hormuz closure began — consistent with Norway's status as Europe's largest oil supplier and the windfall revenue effect. Canada's dollar (CAD) appreciated 2.8% against the USD. Australia's dollar (AUD) appreciated 1.9% (energy exports benefit). These commodity-currency gains have been partially offset by global growth slowdown concerns (China PMI slipping, European manufacturing contraction), creating a cross-current that has compressed commodity currency Sharpe ratios relative to the simple oil-price exposure their currencies nominally provide.
 
 **Pakistan's rupee as an Iran mediation risk proxy.** An empirically interesting currency relationship that has emerged in 2026: the Pakistani rupee (PKR/USD) has shown elevated sensitivity to Iran deal signals since Pakistan's successful mediation role in the US-Iran ceasefire negotiations earlier in 2026. Trump's June 2 statement that a deal was expected "within a week" pushed PKR 0.8% stronger against the dollar before Iran's rebuttal reversed the move. This "geopolitical standing premium" in the PKR — where Pakistan's diplomatic success translates into perceived improvements in its IMF program credibility and bilateral funding prospects — creates a currency pair that is, unusually, more sensitive to Iran nuclear deal probabilities than to domestic macro indicators. This represents a genuine regime shift in PKR pricing: the structural factors (current account deficit, IMF dependency, inflation) remain the dominant long-run drivers, but the short-run signal has become the success probability of Pakistan's Iran mediation mandate — a entirely political variable with no analog in standard FX models.
+
+---
+
+### Purchasing Power Parity, the Impossible Trinity, and Corporate FX Hedging
+
+#### Purchasing Power Parity: Long-Run Exchange Rate Theory
+
+**Purchasing Power Parity (PPP)** — rooted in David Hume's price-specie-flow mechanism (1752) and formalized by Gustav Cassel (1918) — holds that in the long run, exchange rates adjust to equalize the purchasing power of currencies:
+
+**Absolute PPP:**
+```
+S = P_domestic / P_foreign
+```
+The exchange rate S (domestic currency per unit of foreign) should equal the ratio of domestic to foreign price levels. If a McDonald's Big Mac costs $5.69 in the US and £4.39 in the UK, the PPP-implied exchange rate is 5.69/4.39 = 1.296 USD/GBP.
+
+**The Economist's Big Mac Index:** Running since 1986, the Big Mac Index applies absolute PPP to a standardized good (the Big Mac) to assess currency under/overvaluation:
+
+| Currency | Big Mac Price (June 2026) | vs. USD | PPP Rate | Market Rate | Under/Overvalued |
+|----------|--------------------------|---------|----------|-------------|-----------------|
+| Euro (EUR) | €5.85 | $6.31 | 0.90 USD/EUR | 1.079 USD/EUR | EUR overvalued 19% |
+| British Pound (GBP) | £4.39 | $5.57 | 0.808 USD/GBP | 1.269 USD/GBP | GBP undervalued 13% |
+| Japanese Yen (JPY) | ¥450 | $3.00 | 79.3 JPY/USD | 148.2 JPY/USD | JPY undervalued 47% |
+| Swiss Franc (CHF) | CHF 6.90 | $7.65 | 1.214 USD/CHF | 1.108 USD/CHF | CHF overvalued 10% |
+| Chinese Yuan (CNY) | ¥28.2 | $3.88 | 7.27 CNY/USD | 7.26 CNY/USD | CNY approximately fair |
+
+The JPY undervaluation of ~47% is the most extreme in the Big Mac Index's history for a major currency — reflecting the sustained yen weakness driven by the large US-Japan interest rate differential and the BOJ's delayed normalization.
+
+**Relative PPP:**
+```
+ΔS = π_domestic − π_foreign
+```
+The change in the exchange rate should equal the inflation differential. A country with 5% higher inflation than the US should see its currency depreciate by 5% annually against the USD. Relative PPP holds better than absolute PPP over 5+ year horizons:
+
+Academic evidence: Rogoff (1996, *Journal of Economic Literature*) documented the "PPP puzzle" — absolute PPP deviations (real exchange rate misalignments) are large and persistent in the short-medium run (the half-life of PPP deviations is estimated at 3–5 years), but gradually correct over 10–30 year horizons. This slow convergence means PPP is primarily a long-run anchor for strategic currency allocation, not a short-term trading signal.
+
+#### The Impossible Trinity (Mundell's Trilemma)
+
+Robert Mundell's **Impossible Trinity** (1963) states that a country cannot simultaneously achieve all three of:
+1. **Free capital flows** (unrestricted movement of money across borders)
+2. **Fixed exchange rate** (pegging the domestic currency to a foreign currency)
+3. **Independent monetary policy** (setting interest rates for domestic economic objectives)
+
+A country can achieve any two, but not all three:
+- **Free flows + Fixed rate** (but no monetary independence): The Gold Standard (1870–1914), Hong Kong's dollar peg, GCC dollar pegs — capital flows freely, exchange rate is fixed, but interest rates must match the anchor currency (effectively surrendering monetary sovereignty)
+- **Free flows + Monetary independence** (but floating exchange rate): US, EU, UK, Japan, Canada, Australia — capital flows freely, central banks set rates independently, but exchange rates float
+- **Fixed rate + Monetary independence** (but capital controls): China's managed yuan system (capital controls limit capital outflows, allowing the PBOC to manage both the exchange rate and domestic interest rates) — though China has been gradually liberalizing capital flows, creating increasing tension with this corner of the trilemma
+
+**2026 application — China's escape from the trilemma:**
+China manages approximately 50% capital account openness (significantly liberalized since 2015 but far from fully open). With the yuan approximately fair-valued on PPP metrics (Big Mac Index), the PBOC can maintain loose monetary policy (supporting 5% GDP growth target) without triggering massive capital outflows that would depreciate the yuan — because the residual capital controls slow the adjustment. As China further liberalizes capital flows (the Trilemma predicts this will require either greater yuan flexibility or tighter monetary policy to match global rates), the policy tension will increase. The most likely resolution: a somewhat more flexible yuan range (wider CNY trading band vs. the current ±2% daily limit) combined with continued gradual capital account liberalization.
+
+#### Corporate FX Hedging: Strategies and Instruments
+
+Corporate treasury departments hedge FX risk to reduce earnings volatility and protect the value of foreign currency cash flows. The three main instruments:
+
+**1. Forward contracts:**
+The simplest hedge — lock in an exchange rate today for a future transaction. A US company with €50M in expected European revenues in 6 months:
+- Current EUR/USD spot: 1.079
+- 6-month forward rate: 1.075 (reflecting interest rate differential: USD > EUR)
+- Sell €50M forward at 1.075 → guaranteed $53.75M USD receipt, regardless of where EUR/USD moves
+
+**Cost:** Zero upfront cost (forward contracts are zero-NPV at initiation if fairly priced). But if EUR/USD rises to 1.12 by settlement, the company gives up $2.25M in upside.
+
+**2. FX Options:**
+Buy a put option to sell EUR at 1.08 (near current spot), paying a premium of approximately $600K for the 6-month put on €50M notional:
+- If EUR/USD falls to 0.95: exercise the put, sell at 1.08 → receive $54M (protecting full downside)
+- If EUR/USD rises to 1.15: don't exercise, sell at spot 1.15 → receive $57.5M (full upside, net of $600K premium)
+
+**Trade-off:** Options cost money upfront (~1.2% of notional for ATM 6-month FX put) but preserve upside. Forward contracts are free but eliminate upside. The rational choice depends on how much the company values the option's upside preservation.
+
+**3. Cross-currency swaps (CCS):**
+For multi-year hedging (e.g., a US company with a €200M subsidiary generating annual cash flows for 10 years):
+A CCS simultaneously exchanges: (1) principal at initiation (USD for EUR at spot rate); (2) interest payments during the life of the swap (USD company pays EUR interest, receives USD interest from counterparty); (3) principal at maturity (reverse the initial exchange at the same original spot rate).
+
+Economically, the CCS converts USD borrowing costs into EUR borrowing costs — the company borrows USD in the bond market, enters a CCS, and effectively borrows EUR at EUR market rates without accessing the European bond market. This is the primary funding instrument for multinational treasuries managing multi-currency balance sheets.
+
+**Hedge accounting (IAS 39/IFRS 9):** Under IFRS 9, hedge accounting allows companies to match FX hedging gains/losses with the underlying hedged item in the income statement, reducing P&L volatility. Without hedge accounting, FX derivatives would create accounting volatility even when the economic hedge is effective — confusing investors. Designation of a hedge requires: (1) formal hedge documentation at inception; (2) effectiveness testing (hedge must be "highly effective" — 80–125% ratio of hedge gain/loss to hedged item gain/loss); (3) ongoing effectiveness assessment.
+
+---
+
+## Related
+
+- [[macroeconomics-101]] — Mundell-Fleming open economy framework
+- [[Federal-Reserve-and-Monetary-Policy]] — US interest rate policy driving USD dynamics
+- [[derivatives-futures-and-forwards]] — forward and swap instruments used in FX hedging
+- [[geopolitical-risk-premium-and-markets]] — geopolitical factors in FX market dynamics

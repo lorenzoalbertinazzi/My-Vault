@@ -642,3 +642,117 @@ The CFTC has separately proposed position limits on 0DTE equity index options fo
 **Put-call parity and the 0DTE skew.** Put-call parity must hold for European-style options: C − P = S − PV(K). For 0DTE options, the put-call parity relationship holds to within transaction costs, but the implied volatility smile/skew is extremely steep and time-varying intraday. Specifically: 0DTE options show a pronounced volatility skew (downside puts have significantly higher implied vol than equivalent calls) that is steeper than for longer-dated options and that changes rapidly as intraday price action unfolds. This creates opportunities for sophisticated options traders to monetize the skew by selling overpriced puts and buying calls (or vice versa) on intraday dips — strategies that require fast execution infrastructure and robust delta-hedging but have shown systematic profitability in academic backtests (Chen & Majewski, 2025, *Journal of Derivatives*).
 
 **Gamma exposure ($GEX) as a market positioning indicator.** Options market makers in aggregate carry gamma exposure ($GEX) that flips sign at different price levels. When aggregate $GEX is positive (market makers are long gamma — they have sold options to clients and hedged by buying spot), their dynamic hedging stabilizes prices (buy on dips, sell on rallies). When $GEX is negative (market makers are short gamma — they have bought options from clients and hedged by selling spot), their hedging destabilizes prices (sell on dips, buy on rallies — amplifying moves). SpotGamma and GammaLab have built institutional businesses tracking daily $GEX levels. In June 2026, key $GEX observations: S&P 500 positive gamma at 5,500–5,700 (stabilizing zone), with large negative gamma below 5,300 (potential amplification if the index drops there). This framework has become standard in options-aware portfolio management at multi-strategy hedge funds.
+
+---
+
+### Options Strategies, Implied Volatility Surface, and Greeks in Portfolio Management
+
+#### Options Strategies: From Basic to Structured
+
+Options enable construction of payoffs impossible with stocks alone. The core strategies range from basic hedging to sophisticated income generation:
+
+**1. Covered Call — Income Generation with Capped Upside:**
+```
+Position: Long 100 shares + Short 1 call option at strike K
+P&L at expiry:
+  If S < K: Stock gains + premium received; no call exercise
+  If S > K: Stock capped at K (call exercised against you) + premium retained
+Max gain: (K − S₀) + premium
+Max loss: S₀ − Premium (stock can fall to zero)
+Break-even: S₀ − Premium
+```
+
+**Example (June 2026, MSFT at $420):**
+- Own 100 shares MSFT at $420 = $42,000 position
+- Sell 1 MSFT call, strike $440, expiring August 2026 (2 months) for $8.50/share
+- Premium received: $850 (2.0% of position value in 2 months = ~12% annualized)
+- If MSFT stays below $440: Keep shares + $850 cash
+- If MSFT rises to $460: Sell shares at $440 (miss $2,000 of upside), keep $850
+
+**Strategic use:** Generate income in sideways markets. Reduces cost basis. The Covered Call Strategy is the most widely used options overlay by institutional and retail investors — Global X's XYLD ETF (covered calls on S&P 500) has $3.4B AUM in June 2026.
+
+**2. Protective Put — Portfolio Insurance:**
+```
+Position: Long 100 shares + Long 1 put option at strike K
+P&L at expiry:
+  If S > K: Stock gains, put expires worthless (lose premium)
+  If S < K: Stock loss limited at K (put exercised) − premium paid
+Max gain: Unlimited upside (from stock appreciation)
+Max loss: (S₀ − K) + Premium (limited downside)
+```
+
+**Example (Hormuz crisis hedge, June 2026):**
+- Own 100 shares S&P 500 ETF (SPY) at $550 = $55,000 position
+- Buy 1 SPY put, strike $510 (7.3% OTM), expiring December 2026 for $12.50/share
+- Premium paid: $1,250 (2.3% of position value)
+- Downside protected below $510: Any decline below $510 is covered by the put
+- Trade-off: Give up $1,250 if SPY stays above $510
+
+**Cost of insurance:** At 15% annualized implied vol, the ATM put costs approximately 3.5–4.0% annually — the "price of insurance" for equity portfolios. Institutional investors balance this cost against their drawdown tolerance.
+
+**3. Collar — Low-Cost Downside Protection:**
+```
+Position: Long 100 shares + Long put at K_lower + Short call at K_upper
+Net premium: Usually near zero (call premium offsets put premium)
+```
+
+The collar caps both downside (at K_lower) and upside (at K_upper) — a "free" hedge using the call premium to fund the put. Popular for corporate executives hedging concentrated stock positions without selling shares.
+
+**4. Straddle — Playing Volatility Itself:**
+```
+Position: Long call at K + Long put at K (same strike, same expiry)
+Max loss: Premium paid for both options
+Break-even: K ± Total Premium paid
+Profitable if: |S − K| > Total Premium (stock moves a lot in either direction)
+```
+
+**Straddle example (pre-earnings play):**
+NVDA trading at $140/share before Q2 2026 earnings. Buy the $140 strike straddle expiring this Friday for $7.50 total premium:
+- Break-even: $132.50 (down) or $147.50 (up) — need >5.4% move to profit
+- Implied move (estimated from ATM straddle price): 5.4% in either direction
+- If NVDA reports blowout results and jumps to $158: P&L = ($158 − $140) − $7.50 = +$10.50 (140% gain on premium)
+- If NVDA disappoints and drops to $125: P&L = ($140 − $125) − $7.50 = +$7.50 (100% gain)
+- If NVDA barely moves to $142: P&L = $2 − $7.50 = −$5.50 (73% loss of premium)
+
+Straddles are essentially a bet on realized volatility exceeding implied volatility — a trade with definable maximum loss and unlimited theoretical gain.
+
+**5. Iron Condor — Selling Volatility:**
+```
+Position: Sell OTM put + Buy farther OTM put + Sell OTM call + Buy farther OTM call
+Max gain: Net premium received (if stock stays between inner strikes at expiry)
+Max loss: Width of spread − premium received (limited by bought wings)
+```
+
+The Iron Condor is the volatility-seller's workhorse — collecting premium while the market trades sideways. Highly sensitive to realized volatility exceeding implied volatility (the "short vega" risk).
+
+#### The Implied Volatility Surface: Reading the Market's Risk Map
+
+The 3D surface of implied volatility as a function of strike and expiry is the most information-rich single artifact of options markets:
+
+**The skew dimension (across strikes at fixed expiry):**
+Equity implied vol is highest for downside OTM puts (puts 10–20% below spot) and lowest for OTM calls. For S&P 500 (June 2026):
+- ATM (strike = spot): 15.0% implied vol
+- 10% OTM put: 19.5% implied vol (4.5% skew premium)
+- 10% OTM call: 13.0% implied vol (2.0% skew discount)
+
+The skew reflects: (1) demand from institutions buying puts to protect portfolios; (2) supply from investors selling covered calls (reducing call premium); (3) the "leverage effect" — equity prices and volatility are negatively correlated.
+
+**The term structure dimension (across expiries at fixed strike):**
+- 1-month ATM implied vol: 13.5%
+- 3-month ATM implied vol: 14.2%
+- 6-month ATM implied vol: 15.0%
+- 12-month ATM implied vol: 16.5%
+
+Normal term structure: upward sloping (longer dated = more uncertain = higher vol). Inverted term structure: near-term vol higher than long-dated (markets expect near-term stress to resolve — currently the case in energy indices where Hormuz uncertainty is concentrated in front months).
+
+**The vol surface as a trading opportunity:**
+Dispersion trading: S&P 500 implied vol < weighted average implied vol of its components (because diversification reduces index vol below component average). Dispersion traders buy index options (cheap relative to components) and sell component options (expensive). In June 2026, the S&P 500 dispersion trade is at historically wide levels (~12% spread) due to Magnificent Seven concentration — the handful of AI stocks driving most index moves while other sectors are calm.
+
+---
+
+## Related
+
+- [[Black-Scholes-Option-Pricing-Model]] — pricing model for options strategies
+- [[derivatives-futures-and-forwards]] — derivatives context and valuation frameworks
+- [[hedge-funds-and-alternative-strategies]] — options-based hedge fund strategies (volatility arbitrage, convertible arb)
+- [[Value-at-Risk-and-CVaR]] — options position VaR using Greeks

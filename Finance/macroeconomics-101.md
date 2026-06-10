@@ -758,3 +758,97 @@ The IMF (2026 Fiscal Monitor) explicitly warned that the combination of elevated
 **Fiscal dynamics: the US debt trajectory.** The Congressional Budget Office's June 2026 update projects the federal deficit at $2.1 trillion for fiscal year 2026 (approximately 7.2% of GDP) — the highest peacetime deficit as share of GDP in US history (excluding COVID emergency spending). Interest payments on the national debt have reached $1.0 trillion annually — exceeding the entire defense budget. The debt-to-GDP ratio is projected to reach 124% of GDP by 2030 (vs. 98% in 2019) under current policy. **The Reinhart-Rogoff threshold debate:** Carmen Reinhart and Kenneth Rogoff's 2010 paper suggested a 90% debt/GDP threshold above which growth slows meaningfully. While their specific threshold has been debated (Herndon, Ash & Pollin 2013 found coding errors in the original), the general direction — that high debt imposes growth headwinds through higher real interest rates and reduced fiscal flexibility — remains broadly accepted and is increasingly relevant to US fiscal dynamics.
 
 **Modern Monetary Theory (MMT) in the 2026 policy debate.** MMT proponents (Stephanie Kelton, Warren Mosler) argue that the US government, as the issuer of the world's reserve currency, can sustain deficits as long as inflation is controlled — with taxation and interest rate policy being the corrective tools when inflation rises, not deficit reduction per se. The 2026 inflation episode is simultaneously an argument for and against MMT: for — the 2020–2021 fiscal expansion created inflation that the Fed has now substantially contained without a recession, suggesting deficits did not cause the feared debt spiral; against — the sticky services inflation and now the energy shock-driven second wave suggest that fiscal expansion into a supply-constrained economy does generate sustained inflationary consequences that prove harder to contain than MMT models typically acknowledge.
+
+---
+
+### GDP Accounting, the Multiplier Effect, and the Mundell-Fleming Model
+
+#### GDP: The Three Approaches and Why They Differ
+
+Gross Domestic Product measures the market value of all final goods and services produced within a country's borders in a given period. Three equivalent conceptual approaches produce the same result:
+
+**1. Expenditure Approach (most commonly cited):**
+```
+GDP = C + I + G + (X − M)
+```
+- **C** = Private consumption = ~70% of US GDP (2026)
+- **I** = Private investment (equipment, structures, residential, inventories) = ~18%
+- **G** = Government consumption and investment = ~17%
+- **(X−M)** = Net exports = approximately −5% (US runs a persistent trade deficit)
+
+Note: the components sum to more than 100% because the net export deficit means total spending includes foreign-produced goods that get subtracted.
+
+**2. Income Approach:**
+```
+GDP = Compensation of employees + Gross operating surplus + Gross mixed income + Taxes − Subsidies on production and imports
+```
+Measures GDP from the producer's side (who receives the income from production). Labor income accounts for approximately 58% of US GDP; capital income for approximately 32%; government production for 10%.
+
+**3. Output/Value-Added Approach:**
+```
+GDP = Σ (Output − Intermediate inputs) across all industries
+```
+Each industry reports the value it *adds* (avoids double-counting raw materials used as inputs). In 2026, services dominate: financial services + professional services + healthcare = approximately 45% of US GDP; manufacturing = 11%; construction = 5%.
+
+**The GDP deflator vs. CPI:** GDP growth is reported in "real" terms using the GDP deflator — a price index broader than CPI that covers all goods produced in the US (including investment goods), not just a consumer basket. In Q1 2026: nominal GDP growth was approximately 5.3% annualized, real GDP growth was approximately 2.2% → implied GDP deflator = 3.1%. CPI was approximately 3.4% for the same period — a 30 bps difference reflecting the different weights (CPI overweights shelter; deflator captures business investment goods which have been deflationary due to technology).
+
+#### The Fiscal Multiplier: How Government Spending Propagates
+
+The **Keynesian multiplier** captures the secondary effects of government spending. A $1 increase in government spending (G) produces more than $1 of GDP because the initial spending becomes income for others, who in turn spend a fraction of it, which becomes income for still others, ad infinitum.
+
+**The simple multiplier formula:**
+```
+Multiplier = 1 / (1 − MPC)
+```
+Where MPC (Marginal Propensity to Consume) = fraction of each additional dollar of income spent on consumption (vs. saved). US historical MPC ≈ 0.75 → Multiplier ≈ 1/0.25 = 4.
+
+**Real-world complication — the open economy multiplier:**
+In an open economy with imports and taxes:
+```
+Multiplier = 1 / (1 − MPC(1 − t) + MPM)
+```
+Where t = marginal tax rate (~25% in US), MPM = marginal propensity to import (~0.15). Plugging in:
+```
+Multiplier = 1 / (1 − 0.75(0.75) + 0.15) = 1 / (1 − 0.5625 + 0.15) = 1 / 0.5875 ≈ 1.70
+```
+
+A more realistic estimate. But even 1.70 may be too high in 2026. Empirical fiscal multiplier estimates (CBO, 2015; Christiano, Eichenbaum & Rebelo, 2011; Ramey & Zubairy, 2018) range from 0.5 to 1.5 depending on:
+- **Monetary policy response:** If the Fed tightens in response to fiscal expansion (raising rates to offset inflation), the multiplier can fall below 1.0 — monetary policy "crowds out" private investment
+- **Debt level:** Research (Ilzetzki, Mendoza & Végh, 2013) shows multipliers near zero in high-debt economies (>60% debt/GDP) — the US's 124% debt/GDP implies near-zero or negative multiplier effects at the margin
+- **Trade openness:** More open economies have lower multipliers (spending leaks abroad)
+
+#### The Mundell-Fleming Model: Open Economy Macro
+
+The Mundell-Fleming model (Robert Mundell, 1963; Marcus Fleming, 1962) extends Keynesian IS-LM analysis to the open economy with international capital flows. The key insight: the effectiveness of fiscal and monetary policy depends critically on the exchange rate regime.
+
+**Under flexible exchange rates (US, EU, Japan — current reality):**
+
+*Monetary expansion effect:* Fed cuts rates → capital outflows (investors seek higher yields abroad) → dollar depreciates → exports more competitive → net exports (X−M) rise → IS curve shifts right → GDP rises. **Monetary policy is highly effective.**
+
+*Fiscal expansion effect:* Government increases G → IS curve shifts right → GDP rises → demand for money increases → interest rates rise → capital inflows → dollar appreciates → exports fall → net exports (X−M) fall → IS curve partially shifts back → GDP effect is dampened. **Fiscal policy is partially offset by exchange rate crowding out.** This is the "Mundell-Fleming fiscal policy ineffectiveness" result under flexible exchange rates.
+
+**Under fixed exchange rates (Hong Kong dollar peg, GCC dollar pegs):**
+
+*Monetary expansion effect:* Fed (or local central bank) cuts rates → capital outflows → puts downward pressure on currency → central bank must intervene (sell reserves, buy domestic currency) → money supply contracts → monetary expansion is reversed. **Monetary policy is ineffective** in maintaining the exchange rate peg.
+
+*Fiscal expansion effect:* Government increases G → IS shifts right → GDP rises → interest rates rise → capital inflows → currency would appreciate → central bank buys foreign currency → money supply expands → LM shifts right → GDP effect is *amplified*. **Fiscal policy is highly effective** under fixed exchange rates.
+
+**2026 application:** The US runs expansionary fiscal policy (7.2% deficit/GDP) under flexible exchange rates. The Mundell-Fleming model predicts: strong dollar (capital attracted by US fiscal expansion and Fed-on-hold policy), which hurts US exports. The June 2026 DXY (dollar index) at ~106 is consistent with this prediction — fiscal expansion plus restrictive monetary policy is generating the exact "strong dollar with trade deficit" outcome the model predicts.
+
+#### International Trade Theory: Comparative Advantage and Modern Complications
+
+Ricardo's (1817) **comparative advantage** holds that countries should specialize in goods they produce at relatively lower opportunity cost, even if they have absolute disadvantages. The modern extension — **Heckscher-Ohlin (H-O)** — predicts countries export goods intensive in their abundant factors (labor-abundant countries export labor-intensive goods; capital-abundant countries export capital-intensive goods).
+
+**2026 complications to H-O:**
+1. **The Leontief paradox (still unresolved):** Leontief (1953) found the US — a capital-abundant country — exported more labor-intensive goods than capital-intensive ones. Explanations: skilled labor as a distinct factor; US exports embodying technology rather than physical capital.
+2. **Global value chains:** Modern trade is not "country A exports product to country B" but "country A contributes stage 4 of 10 stages in a multi-country production process." Apple's iPhone has design value-added in the US, semiconductor design in Taiwan, memory chips in South Korea, displays from Japan, assembly in China. H-O cannot explain this intra-product specialization.
+3. **New Trade Theory (Krugman, Nobel 2008):** Scale economies and market structure matter as much as factor endowments. Countries with large domestic markets can achieve scale economies that allow them to export goods even without comparative advantage — the US automobile industry, not because the US has abundant capital in the H-O sense, but because scale economies and consumer preferences reinforce domestic production.
+
+---
+
+## Related
+
+- [[Federal-Reserve-and-Monetary-Policy]] — monetary policy in the IS-LM-BP model
+- [[inflation-dynamics-and-investment]] — inflation's macro roots in AD-AS framework
+- [[currency-markets-and-fx]] — Mundell-Fleming exchange rate implications
+- [[yield-curve-and-bonds]] — term structure theories and monetary policy transmission

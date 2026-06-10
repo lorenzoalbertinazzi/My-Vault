@@ -302,3 +302,93 @@ The concentration of Japanese bank demand is flagged by regulators as a systemic
 **CMBS delinquency data (June 2026).** Trepp's CMBS delinquency tracker shows: office CMBS 30+ day delinquency rate at 8.7% (June 2026), up from 1.2% in January 2022. Retail CMBS: 6.3% (recovering from 10%+ COVID peak). Lodging CMBS: 4.1% (post-recovery normalization). Industrial/multifamily CMBS: 0.8% (structural strength). The office delinquency rate of 8.7% is the highest in CMBS history for office, though significantly below the CDO defaults of 2008–2009. Several major office property complex defaults are in workout: a $1.5 billion CMBS pool backed by San Francisco office properties (Brookfield default), a $750 million pool for Manhattan Class B office (WeWork-leased space), and several regional mall CMBS structures in legacy retail markets.
 
 **Historical analogy: the RTC (Resolution Trust Corporation) playbook.** The 1989–1995 savings and loan crisis required the US government's Resolution Trust Corporation to take over and liquidate failed thrift institutions holding $400 billion in commercial real estate assets. The RTC process took 6 years and resulted in ~40% average recovery on commercial real estate portfolios. The 2024–2027 office CMBS reckoning is not a systemic crisis on that scale — the losses are dispersed across institutional investors (not concentrated in insured depository institutions) and the amounts are smaller in GDP terms (~$180 billion in at-risk CMBS vs. $400 billion in RTC assets). But the workout process — extending loans, converting debt to equity, selling properties at distressed prices — will play out over 4–6 years, creating both risk and opportunity in the CMBS secondary market.
+
+---
+
+### Waterfall Mechanics, ABS vs. MBS Distinctions, and CDO² Structures
+
+#### The Waterfall: Priority of Payments in Structured Finance
+
+The defining feature of securitization is the **waterfall** — the precisely defined priority of cash flow distribution among tranche holders. The waterfall determines who gets paid first, who absorbs losses first, and how excess cash flow is trapped or released.
+
+**Standard sequential pay waterfall (simplified CLO example):**
+
+A $500M CLO has the following capital structure:
+- AAA Notes (Class A): $337.5M (67.5% of total) — SOFR + 135bps
+- AA Notes (Class B): $30M (6%) — SOFR + 210bps
+- A Notes (Class C): $25M (5%) — SOFR + 310bps
+- BBB Notes (Class D): $20M (4%) — SOFR + 520bps
+- BB Notes (Class E): $17.5M (3.5%) — SOFR + 850bps
+- Equity/Subordinated Notes: $70M (14%) — residual cash flows
+
+**Monthly waterfall (in strict priority order):**
+1. **Trustee and admin fees** (senior expenses): approximately $400K/year = $33K/month
+2. **Senior collateral manager fee** (~0.40% of collateral): ~$167K/month
+3. **Class A interest:** $337.5M × (SOFR + 135bps) / 12
+4. **Class A over-collateralization (OC) test:** If failing → divert cash from equity to pay down Class A principal until test passes
+5. **Class B interest** (only if Class A OC passes)
+6. **Class B OC test**
+7. **Class C interest** (only if Class B OC passes)
+8. **[Continues down through Class D, E...]**
+9. **Subordinated collateral manager performance fee** (~0.20% of collateral, conditional)
+10. **Equity noteholders** receive all residual cash flows — the "last in, first out" position
+
+**OC Tests — the ratchet mechanism:**
+The Overcollateralization test for Class A: OC_A = (Principal balance of performing loans) / (Outstanding Class A notes). Required minimum typically 135–138%. If loans default and the OC ratio falls below this threshold, the waterfall "turbo-charges" principal paydown: all interest cash flows that would have gone to equity instead flow to pay down Class A principal until the test passes again.
+
+This mechanism is the key innovation that makes senior CLO tranches so durable — defaults that impair the equity residual do not threaten AAA holders until the OC buffer is consumed, which requires very severe credit losses.
+
+**Worked example of OC test breach:**
+Initial: $500M collateral, $337.5M Class A → OC ratio = 500/337.5 = 148%. Required minimum = 137%. Current buffer: 11 percentage points.
+
+Assume 8% default rate × 50% LGD = 4% net loss → $20M in realized losses. New collateral balance = $480M → OC ratio = 480/337.5 = 142.2%. Still above 137% — no OC test failure.
+
+Assume 15% default rate × 55% LGD = 8.25% net loss → $41.25M → New balance = $458.75M → OC = 458.75/337.5 = 136.0% — breach! The waterfall now traps all cash (including interest for Class B–E and equity) and redirects to Class A principal until OC recovers above 137%.
+
+#### ABS vs. MBS: Structural and Risk Differences
+
+**Asset-Backed Securities (ABS)** are backed by non-mortgage consumer or commercial assets: auto loans, credit card receivables, student loans, equipment leases, aircraft leases, franchise royalty streams.
+
+**Mortgage-Backed Securities (MBS)** are backed by residential or commercial mortgage loans.
+
+**Key structural differences:**
+
+| Characteristic | ABS (Auto Loans) | Agency MBS | Non-Agency RMBS |
+|----------------|-----------------|-----------|-----------------|
+| Underlying asset | Auto loans | Residential mortgages | Residential mortgages |
+| Guarantee | None (senior/sub structure) | GSE guarantee (Fannie/Freddie/Ginnie) | None (senior/sub structure) |
+| Prepayment risk | Moderate (refinancing less common) | Very high (mortgage refinancing) | High (varies) |
+| Credit risk | Present | Negligible (GSE guarantee) | Significant |
+| Duration | 1–4 years (short) | 5–25 years (varies with prepayment) | 5–30 years |
+| Convexity | Positive | Negative (prepayment = negative convexity) | Negative |
+
+**The prepayment problem for agency MBS:**
+Agency MBS receive full and timely payment of principal and interest from Fannie Mae/Freddie Mac (regardless of mortgage borrower performance), but the investor bears **prepayment risk** — when borrowers refinance (paying off their mortgages early), the MBS holder receives principal back *at par* when the market price may be above par (because interest rates have fallen). This is "negative convexity": you want to hold the security when its value is highest (low rates), but borrowers prepay at exactly that moment, returning capital you must reinvest at lower rates.
+
+**Measuring prepayment risk — CPR and PSA:**
+- **Conditional Prepayment Rate (CPR):** Annualized fraction of outstanding loan balance expected to prepay each month. CPR = 6% means 6% of the remaining balance prepays annually.
+- **PSA (Public Securities Association) model:** Expresses CPR relative to a standard "PSA ramp": 100% PSA assumes CPR rises 0.2%/month from month 1 to month 30 (reaching 6% CPR), then remains flat at 6%. A pool prepaying at "200% PSA" is prepaying at twice the standard speed.
+
+When the Fed cut rates 75bps in late 2024, refinancing activity surged to 300% PSA on mid-2021-vintage mortgages (originated at 3%–4% rates, incentivized to refinance at current 5.5%–6.5% rates... wait, this doesn't make sense for 2021 borrowers at 3%). Actually, most 2020–2022 mortgages are "locked in" at sub-3% rates — they have *negative* prepayment incentive at current 6.5% rates (prepaying would mean losing a 3% mortgage for a 6.5% one). This "lock-in effect" has driven 2020–2022 vintage MBS to historically low prepayment speeds (30–50% PSA vs. the normal 150–200% PSA), extending their duration and creating unusual convexity dynamics.
+
+#### CDO² and the 2008 Structured Finance Failure
+
+The CDO-squared (CDO²) — a CDO backed primarily by tranches of other CDOs rather than by underlying loans — represented the extreme end of the structured finance leverage chain that collapsed in 2008.
+
+**The leverage amplification:** A standard CDO has 10–12% equity cushion absorbing losses before senior tranches are impaired. A CDO² holds BBB-rated tranches from multiple CDOs (each of which already used 10% equity leverage). If the underlying mortgage pools lose 8% of value:
+- Direct loan pool loss: 8% → absorbed by equity, senior tranches unimpaired
+- CDO tranche loss: the BBB tranche (first to absorb losses after equity is exhausted) in each CDO is impaired
+- CDO² loss: the CDO² holds the BBB tranches that are now impaired → the CDO² suffers large losses even in its "senior" tranches
+
+The problem: the CDO² model required CDOs to be *independent* of each other (so that defaults in one pool didn't correlate with defaults in another). In the 2005–2007 housing market, all CDOs referenced the same nationwide housing market — the "correlation went to 1" assumption failure destroyed the diversification premise.
+
+The Li copula formula (David X. Li, 2000), which modeled correlated defaults using a Gaussian copula, assigned near-zero correlation to geographically diverse mortgage pools. When nationwide US housing prices fell uniformly for the first time since the 1930s, the correlations that the model assumed were near-zero proved to be near-1 during the crisis — the model's single most consequential failure.
+
+---
+
+## Related
+
+- [[credit-markets-and-credit-risk]] — credit risk in securitized products
+- [[Value-at-Risk-and-CVaR]] — correlation assumptions and stress testing of structured finance positions
+- [[Federal-Reserve-and-Monetary-Policy]] — MBS as a key tool of Fed QE/QT
+- [[fixed-income-deep-dive]] — securitized credit in fixed income portfolio construction

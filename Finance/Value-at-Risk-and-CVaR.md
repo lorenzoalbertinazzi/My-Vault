@@ -151,3 +151,101 @@ The net effect: most globally systemically important banks (G-SIBs) saw market r
 - [[Black-Scholes-Option-Pricing-Model]] — Greeks (Delta, Gamma, Vega) feed into options VaR decomposition
 - [[Federal-Reserve-and-Monetary-Policy]] — interest rate VaR, regulatory capital environment shaped by Basel
 - [[Discounted-Cash-Flow-Analysis]] — scenario analysis parallels between DCF sensitivity and stress testing
+
+---
+
+### Historical Simulation VaR, Incremental VaR, and Component VaR Decomposition
+
+#### Historical Simulation VaR: The Non-Parametric Approach
+
+The **historical simulation** method computes VaR without assuming any return distribution. Instead, it applies the *actual* observed historical return series to the current portfolio:
+
+**Step-by-step procedure:**
+1. Collect T daily returns for each asset in the portfolio (typically T = 500 days, or about 2 years)
+2. For each historical day t = 1,...,T: apply that day's percentage returns to the *current* portfolio weights and calculate the hypothetical portfolio P&L
+3. Sort the T hypothetical P&L values from worst to best
+4. **99% 1-day VaR** = the 5th worst loss (5th percentile = bottom 1% of 500 observations)
+5. **CVaR (ES at 99%)** = average of the 5 worst losses
+
+**Worked example (expanding the portfolio from the parametric section):**
+Portfolio: $10M in 60% SPY, 20% QQQ, 20% TLT. Using 500 days of historical data (approximately January 2022 – December 2023), let's trace the actual return experience:
+
+The 5 worst daily portfolio returns in this period would include:
+- September 13, 2022 (CPI shock): SPY −4.3%, QQQ −5.2%, TLT −2.8% → portfolio −4.0%
+- June 13, 2022 (Fed shock): SPY −3.9%, QQQ −4.7%, TLT −2.1% → portfolio −3.8%
+- September 9, 2022: SPY −2.1%, QQQ −2.3%, TLT −1.8% → portfolio −2.1%
+- ...continuing to the 5th worst observation
+
+At 99% confidence, the historical simulation VaR would be approximately the 5th worst loss — say $380,000 for this portfolio and period. Note this can differ significantly from the parametric estimate ($191,000) computed earlier because the 2022 period contained unusually frequent large correlated drawdowns that the parametric normal distribution would underestimate.
+
+**Advantages of historical simulation:**
+- Captures actual fat tails and correlation structure experienced historically
+- No distributional assumption — automatically includes non-normality, correlation breaks, and heteroscedasticity
+- Regulators (Basel III IMA) prefer historical simulation over parametric for its conservative treatment of tails
+
+**Disadvantages:**
+- Dependent on the historical window: 500 days misses crises outside the window; 2500 days is computationally heavy and includes periods no longer representative
+- **Ghost effect:** A crisis that falls outside the window (e.g., 2008 crisis is 18 years ago — now outside standard 500-day windows) disappears from VaR suddenly, artificially reducing estimated risk
+- Equally weights each historical day — a stress day from 2022 gets the same weight as a normal day from 2021, despite the market regimes being dramatically different
+
+**Filtered Historical Simulation (FHS):** Barone-Adesi, Bourgoin & Giannopoulos (1998) proposed filtering out the time-varying heteroscedasticity (via GARCH model) before applying historical simulation, then re-scaling the historical residuals by current conditional volatility. This hybrid approach captures fat tails while being responsive to current volatility conditions.
+
+#### Incremental VaR: Measuring the Marginal Risk of Each Position
+
+**Incremental VaR (IVaR)** measures how much VaR *changes* when a specific trade is added to or removed from a portfolio — the cornerstone risk metric for position limits in a trading book.
+
+**Definition:**
+```
+IVaR(position i) = VaR(portfolio with position i) − VaR(portfolio without position i)
+```
+
+For a normally distributed portfolio:
+```
+IVaR_i ≈ (∂VaR/∂w_i) × Δw_i = z_α × (w_i × σᵢ² + Σⱼ≠ᵢ wⱼ × ρᵢⱼ × σᵢ × σⱼ) / σₚ × Δw_i
+```
+
+**Component VaR:** A complementary measure that decomposes total portfolio VaR into the contribution of each position:
+```
+CVaR_i = ρᵢₚ × VaR_i = (σᵢₚ / σₚ) × VaR_i
+```
+
+Where ρᵢₚ is the correlation of position i's returns with the total portfolio, and VaR_i is the standalone VaR of position i.
+
+**Key property:** Component VaRs sum exactly to portfolio VaR:
+```
+Σᵢ CVaR_i = VaR_portfolio
+```
+
+This additivity makes component VaR the preferred risk decomposition for performance attribution and capital allocation.
+
+**Worked example (three-asset portfolio):**
+For our $10M portfolio (60% SPY, 20% QQQ, 20% TLT), assuming daily vols and correlations as before:
+
+| Position | Standalone VaR | ρ with portfolio | Component VaR | % of Portfolio VaR |
+|----------|---------------|-----------------|---------------|-------------------|
+| SPY ($6M) | $125,600 | 0.97 | $121,832 | 63.9% |
+| QQQ ($2M) | $55,980 | 0.94 | $52,621 | 27.6% |
+| TLT ($2M) | $30,330 | −0.28 | −$8,492 | −4.5% |
+| **Portfolio** | | | **$190,741** | **100%** |
+
+The TLT position contributes **negative** component VaR — it actually *reduces* total portfolio risk by $8,492 despite having positive standalone risk. This is the mathematical expression of diversification. A risk manager seeing this table would know: removing TLT from the portfolio would *increase* total VaR by $8,492.
+
+#### Marginal CVaR and Risk Budgeting
+
+In the CVaR (Expected Shortfall) framework, the analogous decomposition is **Marginal CVaR (MCVaR)**:
+```
+MCVaR_i = E[Rᵢ | portfolio loss exceeds VaR threshold]
+```
+
+Summing position P&L contributions on the worst days (those where portfolio loss exceeds the VaR threshold) gives the contribution of each position to the expected tail loss. MCVaR is the preferred risk budgeting tool under Basel IV / FRTB because it uses CVaR rather than VaR as the primary risk measure.
+
+**Risk budgeting application:** A fund manager assigns risk budgets to portfolio segments based on MCVaR — ensuring no single segment consumes more than 25% of total portfolio risk. When a position's MCVaR percentage exceeds its weight (indicating it adds disproportionate tail risk), the position is reduced or hedged. This framework transforms risk management from a monitoring function to a portfolio construction input.
+
+---
+
+## Related
+
+- [[Modern-Portfolio-Theory]] — portfolio variance and diversification as the foundation of parametric VaR
+- [[Black-Scholes-Option-Pricing-Model]] — Greeks (Delta, Gamma, Vega) feed into options VaR decomposition
+- [[Federal-Reserve-and-Monetary-Policy]] — interest rate VaR, regulatory capital environment shaped by Basel
+- [[Discounted-Cash-Flow-Analysis]] — scenario analysis parallels between DCF sensitivity and stress testing

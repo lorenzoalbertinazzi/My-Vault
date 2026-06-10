@@ -130,3 +130,89 @@ The 2026 Special Issue of the *Journal of Portfolio Management* on factor-based 
 - [[Value-at-Risk-and-CVaR]] — alternative risk measures beyond variance
 - [[Discounted-Cash-Flow-Analysis]] — intrinsic value inputs to the value factor
 - [[Federal-Reserve-and-Monetary-Policy]] — interest rate environment shaping 60/40 correlations
+
+---
+
+### Black-Litterman in Practice, Mean-CVaR Optimization, and Factor Risk Parity
+
+#### The Black-Litterman Model: Fixing Mean-Variance Optimization
+
+The Black-Litterman (BL) model (Goldman Sachs, 1990; He & Litterman, 1999) addresses the core failure of raw mean-variance optimization: when expected returns are estimated from historical means, the optimizer produces extreme, unstable portfolios that are highly sensitive to estimation errors. BL replaces historical return estimates with a **Bayesian framework** blending market equilibrium returns with investor views.
+
+**Step 1 — Implied Equilibrium Returns:**
+Start from the market-capitalization-weighted portfolio (e.g., MSCI World) and "reverse-optimize" to find the expected returns that *would* rationalize that portfolio under mean-variance optimization:
+```
+μ_eq = λ × Σ × w_mkt
+```
+Where:
+- λ = risk aversion coefficient (typically estimated at 2.5–3.5 from equity market historical Sharpe)
+- Σ = covariance matrix of returns
+- w_mkt = market-cap weights
+
+The result μ_eq represents the "equilibrium" expected excess returns — the market's implicit forecast.
+
+**Step 2 — Investor Views:**
+Express N views in matrix form:
+```
+P × μ = Q + ε,  ε ~ N(0, Ω)
+```
+Where:
+- P = N×K "pick matrix" (which assets each view relates to)
+- Q = N×1 vector of view expected returns
+- Ω = N×N diagonal matrix of view uncertainties (higher Ω = less confident view)
+
+**Example view:** "I believe European equities will outperform US equities by 2% annually." In pick matrix notation: P = [−1, +1, 0, 0, ...] (short US equities, long European equities). Q = [0.02]. Ω = [0.001] (fairly confident view — 10% annualized tracking error squared).
+
+**Step 3 — Posterior Expected Returns:**
+The BL posterior blends equilibrium returns with views:
+```
+μ_BL = [(τΣ)⁻¹ + P'Ω⁻¹P]⁻¹ × [(τΣ)⁻¹μ_eq + P'Ω⁻¹Q]
+```
+Where τ = 0.025–0.05 (scaling the prior uncertainty). The posterior μ_BL tilts *toward* the view in proportion to view confidence (Ω), but never moves all the way to the view's implied expected return.
+
+**Step 4 — Portfolio Optimization on Posterior:**
+Run standard mean-variance optimization using μ_BL instead of historical means. The resulting portfolios are:
+- More diversified (less extreme tilts)
+- More stable over time (less sensitive to return estimation errors)
+- Economically intuitive (tilts in the direction of views, but proportionally to confidence)
+
+**Empirical validation:** Idzorek (2004) demonstrated BL outperforms historical-mean MVO in 85% of rolling out-of-sample optimization periods using institutional asset class data from 1970–2003. The improvement is largest precisely when historical returns are most misleading — after unusual return episodes (the dot-com bubble, the 2009 recovery) when extrapolating recent history creates the most dangerous concentrated positions.
+
+#### Mean-CVaR Optimization: Moving Beyond Variance
+
+As discussed in the VaR section, variance is an inadequate risk measure for fat-tailed return distributions. The natural extension: replace variance with CVaR as the risk objective:
+```
+Minimize CVaR_α(w)
+Subject to: E[Rₚ] ≥ μ_target
+            Σᵢ wᵢ = 1
+            wᵢ ≥ 0 (long-only constraint)
+```
+
+Rockafellar & Uryasev (2000) showed that minimizing CVaR is equivalent to solving a linear programming problem, making it computationally tractable:
+```
+CVaR_α ≈ VaR_α + (1/(1−α)) × E[max(−Rₚ − VaR_α, 0)]
+```
+
+**Practical difference from MVO:** Mean-CVaR portfolios reduce exposure to fat-tailed assets even when those assets have attractive mean-variance characteristics. For example, short-maturity corporate bonds have high Sharpe ratios but exhibit negative skewness (small gains most of the time, occasional large losses during credit events). Mean-CVaR explicitly penalizes this tail risk while MVO does not. The result: mean-CVaR portfolios typically underweight short-maturity credit and overweight assets with more symmetric return distributions.
+
+#### Factor Risk Parity: Diversifying Risk Across Factor Exposures
+
+A key insight from factor investing is that standard asset-class-based portfolios embed redundant risk exposures. A 60/40 portfolio allocates 60% of capital to equities but approximately 90%+ of total risk to equity risk — because bond volatility is so much lower. Risk parity addresses the capital imbalance by equalizing risk contributions. **Factor risk parity** takes this further: rather than equalizing asset class risk contributions, it equalizes factor risk contributions.
+
+**Factor risk parity procedure:**
+1. Decompose portfolio returns into factor exposures: β_mkt (market), β_val (value), β_mom (momentum), β_qual (quality), β_rate (interest rates), β_credit (credit risk)
+2. Estimate factor covariance matrix using time-series regressions
+3. Solve for portfolio weights that equalize each factor's contribution to total portfolio variance
+
+**Why this matters in 2026:** Standard factor investing creates unintended factor correlations. A "quality factor" tilt and a "momentum factor" tilt become highly correlated in AI-driven markets (the same AI stocks are both high-quality earnings growers and momentum names). Factor risk parity detects and reduces this unintended correlation by adjusting weights to achieve genuine factor orthogonality.
+
+AQR (Cliff Asness) has published extensive research showing factor risk parity portfolios have historically delivered Sharpe ratios of 0.90–1.10 vs. 0.60–0.70 for equal-weight or value-weight factor combinations — a 30–50% improvement from diversification alone.
+
+---
+
+## Related
+
+- [[Black-Scholes-Option-Pricing-Model]] — options overlay strategies for portfolio management
+- [[Value-at-Risk-and-CVaR]] — alternative risk measures beyond variance
+- [[Discounted-Cash-Flow-Analysis]] — intrinsic value inputs to the value factor
+- [[Federal-Reserve-and-Monetary-Policy]] — interest rate environment shaping 60/40 correlations

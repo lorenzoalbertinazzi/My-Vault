@@ -577,3 +577,100 @@ The key conclusion: technical analysis works as a systematic, quantified probabi
 **Elliott Wave Theory and the 2026 S&P 500 — a critical examination.** Elliott Wave Theory posits that markets move in a specific pattern of five impulse waves (in the direction of the primary trend) and three corrective waves (against the trend), based on the observation that crowd psychology follows recognizable, fractal patterns. The S&P 500 from its October 2022 low of 3,577 to its 2026 level of approximately 5,500 is being categorized by Elliott Wave practitioners as the "third wave up" of a larger bull market impulse — typically the strongest and longest wave. Elliott Wave analysts set a Wave 3 target of approximately 6,000–6,400 based on Fibonacci extension relationships (1.618× the Wave 1 length added to the Wave 1 bottom). The critical challenge for Elliott Wave analysis: wave counts are inherently ambiguous — the same price series can be labeled in multiple valid ways by different analysts, and the framework is unfalsifiable in retrospect (any count that doesn't match can be relabeled). Academic studies (Bhattacharya & Kumar, 2016; Ratner & Leal, 1999) find no statistically significant predictive power for Elliott Wave counts applied prospectively, despite the compelling visual pattern recognition the framework provides.
 
 **Volume-price divergence as a leading indicator.** Among the many technical signals, volume analysis provides some of the most theoretically grounded market microstructure insights. When price rises on declining volume ("distribution"), institutions are selling into retail buying — an early warning of trend exhaustion. When price falls on declining volume ("accumulation"), selling pressure is abating — a potential reversal signal. The S&P 500 in May–June 2026 has shown a textbook distribution pattern: price advancing modestly toward 5,500 but on below-average volume relative to January–March 2026. On Balanced Volume (OBV) indicator, which cumulates volume on up days and subtracts volume on down days, shows a negative divergence vs. price — a classical technical warning that the price advance lacks institutional conviction. This does not constitute a sell signal in isolation but adds one incremental layer to a weight-of-evidence technical framework.
+
+---
+
+### Market Breadth Indicators, Dow Theory, and Sentiment Indicators
+
+#### Market Breadth: Measuring the Health of a Market Move
+
+**Market breadth** measures the participation of individual stocks in a market move — distinguishing between moves driven by a few large-cap stocks (narrow, potentially fragile) versus moves supported by broad participation (healthy, potentially sustainable).
+
+**Advance-Decline Line (A-D Line):**
+The cumulative sum of daily advancing stocks minus declining stocks on an exchange (NYSE, Nasdaq):
+```
+A-D Line today = A-D Line yesterday + (Advances today − Declines today)
+```
+
+In June 2026, with the S&P 500 near 5,500 (approximately +8% YTD through May), the NYSE A-D Line is tracking closely with the index at all-time highs — a positive breadth confirmation. Contrast with late 2021, when the equal-weight S&P 500 (RSP) peaked in November while the cap-weight S&P 500 (SPY) continued to new highs through January 2022 — the "Magnificent Seven" masking deteriorating breadth that presaged the 2022 bear market.
+
+**Empirical validation:** Ned Davis Research (NDR) analysis of the 1928–2025 period shows that S&P 500 rallies accompanied by A-D Line new highs outperform those not confirmed by A-D highs by 3.8 percentage points over the subsequent 6 months — a statistically significant (t = 3.2) predictive relationship.
+
+**New 52-Week Highs/Lows:**
+The number of stocks making 52-week highs vs. 52-week lows is a breadth indicator focused on the distribution of strength:
+- **Bullish:** More stocks making highs than lows; the majority of the market is in uptrends
+- **Bearish:** More stocks making lows than highs despite index near highs — index leadership is masking broad deterioration
+
+In June 2026, the NYSE daily new highs are running approximately 120 vs. 45 new lows — a 2.7:1 ratio, consistent with a moderately healthy uptrend. During the March–April 2026 volatility spike (Hormuz disruption), new lows spiked to 280 while new highs collapsed to 15 — a classic stress signal that preceded the market's bottoming process.
+
+**McClellan Oscillator:**
+A short-term breadth oscillator using a 19-day vs. 39-day exponential moving average of daily net advances (advancing minus declining issues):
+```
+McClellan Oscillator = 19-day EMA(Net Advances) − 39-day EMA(Net Advances)
+```
+- Values above +150: Overbought — short-term rally likely to stall
+- Values below −150: Oversold — short-term bounce likely
+- Zero crossings: Intermediate trend signals
+
+The McClellan Oscillator readings of −200 in early April 2026 (during the Hormuz shock acute phase) were the most oversold reading since March 2020 — historically a high-confidence 1–3 week tactical buying signal.
+
+#### Dow Theory: The Foundational Framework
+
+Charles Dow (co-founder of the Wall Street Journal; the "Dow" in Dow Jones) articulated the first systematic theory of stock market behavior in a series of editorials in the late 1800s. William Hamilton and Robert Rhea formalized these into "Dow Theory" in the 1920s.
+
+**The six tenets of Dow Theory:**
+
+**1. The averages discount everything:**
+Current market prices reflect all available information — consistent with the efficient market hypothesis (which Fama would formalize 60 years later). Technical analysts using Dow Theory argue they don't need to understand *why* prices move — the price action itself is the sufficient summary.
+
+**2. The market has three trends:**
+- **Primary trend:** The major trend lasting months to years (the "tide")
+- **Secondary trend:** Corrections against the primary trend lasting weeks to months (the "waves")
+- **Minor trend:** Daily fluctuations (the "ripples")
+
+**3. Primary trends have three phases:**
+- Bull market: Accumulation phase (informed investors buy quietly), Public participation phase (trend becomes evident, broad participation), Distribution phase (informed investors sell to late participants)
+- Bear market: Distribution phase (informed investors sell), Public participation phase (panic selling), Absorption phase (value investors accumulate)
+
+**4. The averages must confirm each other:**
+Dow's original application: the Dow Jones Industrial Average (DJIA) must be confirmed by the Dow Jones Transportation Average (DJTA). If industrials make new highs but transports don't (or vice versa), the signal is not reliable. Rationale: in a healthy economy, manufacturers make goods AND railroads/trucks ship them; a divergence signals fundamental economic inconsistency.
+
+**5. Volume must confirm the trend:**
+Volume should increase in the direction of the primary trend. Rising markets on rising volume: healthy. Rising markets on declining volume: warning sign of potential trend exhaustion (fewer buyers willing to step in at higher prices).
+
+**6. A trend is in force until it clearly reverses:**
+The burden of proof is on the reversal — consecutive lower highs and lower lows confirm a downtrend reversal from an uptrend, and vice versa.
+
+**2026 Dow Theory read:**
+As of June 2026, the DJIA at ~41,800 is near year-to-date highs, but the DJTA (Dow Jones Transportation Average) at ~17,200 is approximately 8% below its December 2025 high — a **non-confirmation** that classic Dow Theory practitioners flag as a warning signal. The divergence reflects the specific dynamics of the energy shock: transportation companies (airlines, trucking) are seeing elevated fuel costs compress margins, while the DJIA's industrial components (aerospace, financials, tech) are less directly fuel-cost-dependent. Whether this non-confirmation is a genuine warning or a sector-specific artifact of the Hormuz disruption is the active debate among Dow Theory practitioners in June 2026.
+
+#### Sentiment Indicators: Measuring Fear and Greed
+
+**CNN Fear & Greed Index:**
+A composite index (0–100) incorporating seven indicators: (1) S&P 500 momentum vs. 125-day MA; (2) stock price strength (52-week highs vs. lows); (3) stock price breadth (McClellan Volume Summation); (4) put/call options ratio; (5) CBOE VIX level; (6) junk bond demand (HY yield vs. IG yield spread); (7) market volatility (S&P 500 implied vs. realized vol ratio).
+
+Current reading (June 2026): approximately 61 ("Greed") — suggesting moderate bullishness. The index dipped to 23 ("Extreme Fear") during the April 2026 Hormuz acute phase. Contrarian applications: readings below 20 have historically been strong 3-month forward return setups (average S&P 500 forward 3-month return: +7.8% from Extreme Fear readings, per CNN Business historical data 2012–2026).
+
+**Put/Call Ratio:**
+Daily total put options volume / call options volume:
+- Ratio > 1.0: More puts bought than calls — bearish sentiment (investors hedging or speculating on downside)
+- Ratio < 0.7: More calls than puts — bullish sentiment or complacency
+- Contrarian signal: CBOE equity-only P/C ratio of >1.0 has historically preceded 3-month equity gains (extreme hedging pressure resolves as the feared scenario doesn't materialize)
+
+June 2026: Equity-only P/C ratio at 0.81 — slightly bullish leaning, consistent with the modest 8% equity gains YTD. The index P/C ratio (including institutional hedging) is higher at 1.05, reflecting institutional managers buying S&P 500 index puts as protection against the Hormuz/geopolitical tail risk.
+
+**AAII Sentiment Survey:**
+The American Association of Individual Investors conducts weekly polls asking members: are you Bullish, Neutral, or Bearish for stocks over the next 6 months? Historical average: ~38% bullish, ~32% bearish. Extreme readings:
+- >60% bullish: Contrarian bearish signal (excessive optimism)
+- >55% bearish: Contrarian bullish signal (excessive pessimism)
+
+Current (June 10, 2026): 38% bullish, 34% bearish, 28% neutral — close to historical average. The muted individual investor sentiment (no extreme readings either way) is consistent with the market's moderate 8% YTD gain without either the euphoria of 2021 or the despair of 2022.
+
+---
+
+## Related
+
+- [[behavioral-finance-and-investor-psychology]] — sentiment indicators as measures of behavioral biases
+- [[options-basics]] — put/call ratio mechanics from options markets
+- [[quantitative-finance-and-algorithmic-trading]] — systematic trading signals using breadth and sentiment
+- [[Modern-Portfolio-Theory]] — market timing debate vs. passive investing

@@ -647,3 +647,103 @@ The disposition effect has been replicated in virtually every market studied: Ta
 **Overoptimism and the planning fallacy in corporate capital allocation.** Research on the behavioral finance of internal corporate decisions — as opposed to external investor behavior — has accelerated in 2025–2026. A systematic review by Malmendier and Taylor (*Journal of Finance*, 2026 Annual Survey) synthesizes 30 years of evidence on CEO overconfidence and capital misallocation. The core finding: firms led by CEOs classified as overconfident (using the Malmendier-Tate options-exercise measure, where CEOs who hold deeply in-the-money options too long are classified as overconfident) invest 20–40% more than firms with non-overconfident CEOs in the same industry, controlling for investment opportunities (Tobin's Q). Post-merger performance of overconfident-CEO acquisitions underperforms the industry benchmark by 3.5% over the subsequent 3 years. The 2026 dataset adds a new dimension: in AI-intensive industries, where genuine growth uncertainty is highest, overconfident CEOs are 2.3× more likely to make large AI infrastructure investments that subsequently fail to generate projected returns. This is the planning fallacy (Kahneman & Tversky) operating at corporate-strategy scale — the same cognitive mechanism that causes individuals to underestimate their home renovation costs causes institutional capital misallocation in sectors with novel technology risk.
 
 **Quantitative trading and behavioral "residue."** A significant debate in 2025–2026 academic finance concerns whether the proliferation of quantitative and algorithmic trading has reduced behavioral mispricings or merely transformed them. De Prado (2025) argues that systematic strategies have eliminated most exploitable behavioral patterns in liquid large-cap US equities but have simultaneously increased the behavioral mispricings in illiquid markets, small-cap equities, and cross-asset relationships that quant funds cannot trade at scale. This "behavioral residue" hypothesis predicts that the highest remaining behavioral alpha concentrates precisely where algorithmic arbitrage is most constrained — low-volume stocks, complex structured products, private markets — creating a segmented market where behavioral finance is simultaneously less relevant at the large-cap liquid frontier and more relevant at the illiquid periphery.
+
+---
+
+### Prospect Theory Formalization, Thaler's Nudge Applications, and Behavioral Corporate Finance
+
+#### Prospect Theory: The Mathematical Model of Loss Aversion
+
+Kahneman and Tversky's **Prospect Theory** (1979, *Econometrica*) provides the most influential formal alternative to expected utility theory in describing how people actually make decisions under risk. The two key innovations:
+
+**1. The Value Function:**
+```
+v(x) = { x^α           if x ≥ 0 (gains)
+        { −λ(−x)^β    if x < 0 (losses)
+```
+
+Where:
+- x is the outcome measured relative to a **reference point** (typically the current position, purchase price, or status quo)
+- α, β ≈ 0.88 (the concave gain function and convex loss function — explaining risk aversion for gains and risk seeking for losses)
+- **λ ≈ 2.25** — the **loss aversion coefficient**: losses are approximately 2.25× more painful than equivalent gains are pleasurable
+
+**Empirical calibration of λ:**
+From Kahneman & Tversky's original experiments:
+- Would you accept a 50/50 bet: win $150 or lose $100? Most people say no.
+- Would you accept: win $250 or lose $100? Most people say yes.
+- The midpoint (≈$175 for 50% probability) suggests λ ≈ 175/100 = 1.75
+
+More recent meta-analyses (Novemsky & Kahneman, 2005; Abdellaoui et al., 2008) estimate λ in the range 1.5–2.5, with 2.0 as the most commonly cited round number. Importantly, λ varies by domain:
+- Financial gains/losses: λ ≈ 2.0–2.5
+- Health outcomes: λ ≈ 3.0–4.0 (higher loss aversion for health)
+- Social status: λ ≈ 2.5–4.0
+
+**2. The Probability Weighting Function:**
+People do not evaluate probabilities linearly. The weighting function w(p) systematically:
+- **Overweights small probabilities** (lottery buying; terrorism fear disproportionate to actual probability)
+- **Underweights moderate-to-high probabilities** (insurance purchasing is rational because moderate loss probabilities are underweighted, making insurance feel cheaper than actuarially fair)
+
+The Tversky-Kahneman probability weighting function:
+```
+w(p) = p^γ / [p^γ + (1−p)^γ]^{1/γ}
+```
+
+With γ ≈ 0.65, this produces the characteristic inverse-S-shaped weighting function: steep near 0 and 1 (certainty effects), flatter in the middle.
+
+**Investment implications of probability weighting:**
+- IPO investing: Small probability of enormous gain (the "Amazon scenario") is overweighted → IPOs are systematically overvalued at issuance
+- Catastrophe bonds: Small probability of total loss is overweighted → catastrophe bonds offer higher yields than actuarially required
+- Deep OTM options: Lottery-like payoff structure is overweighted → deep OTM options are systematically overpriced (explaining why implied vol exceeds realized vol at extreme strikes)
+
+**The four-quadrant model:**
+Combining the value function (gains vs. losses) with the probability weighting function:
+
+| | Gains | Losses |
+|--|-------|--------|
+| High probability | Risk averse (take the sure thing) | Risk seeking (prefer the gamble over sure loss) |
+| Low probability | Risk seeking (buy lottery tickets) | Risk averse (buy insurance) |
+
+This four-quadrant structure explains behavior that expected utility theory cannot: the same person buys both lottery tickets (low prob gain) AND insurance (low prob loss) — inconsistent with any risk preference under expected utility but perfectly consistent with prospect theory's probability overweighting.
+
+#### Thaler's Nudge Theory and Its Financial Applications
+
+Richard Thaler (Nobel 2017) and Cass Sunstein's **nudge architecture** — the design of choice environments to promote beneficial decisions while preserving freedom of choice — has been extensively applied in pension design, savings programs, and financial regulation:
+
+**Application 1 — Default enrollment in 401(k) plans:**
+Madrian & Shea (2001, *Quarterly Journal of Economics*) showed that changing 401(k) enrollment from **opt-in** (employee must actively enroll) to **opt-out** (employee is automatically enrolled at a default contribution rate, can opt out) increased participation from 37% to 86% at a US company — without any change in the plan's financial terms. The pure power of defaults: inertia, status quo bias, and procrastination that prevent active enrollment no longer prevent passive participation.
+
+**Application 2 — Save More Tomorrow (SMarT) Program:**
+Thaler and Benartzi (2004) designed a retirement savings program that exploits procrastination and loss aversion:
+1. Employees precommit to increase their savings rate by 3 percentage points with each future pay raise
+2. Since the increase coincides with a raise, it doesn't feel like a cut in take-home pay (framing)
+3. Future commitment reduces present loss aversion (we discount future losses)
+
+Employees who enrolled in SMarT increased average savings rates from 3.5% to 11.6% over four years — a $6,000+ increase in annual savings without any perception of present sacrifice.
+
+**Application 3 — Automatic step-up features:**
+Many 401(k) plans now include automatic escalation — contribution rates increase by 1% per year unless the employee actively opts out. The UK's NEST (National Employment Savings Trust) auto-enrollment scheme, implemented in 2012, used similar design principles and increased UK private pension participation from 55% to 78% of employees — adding approximately £45 billion annually to UK retirement savings.
+
+**Application 4 — Behavioral debt design:**
+Credit card minimum payment amounts serve as powerful anchors — the minimum payment becomes the amount people pay rather than the full balance they could afford. Research shows that when the minimum payment field is removed from statements, average payment amounts increase significantly. The UK's FCA required credit card companies to offer an automatic minimum payment opt-out (where customers are automatically set to pay the full balance unless they opt into minimum payments) from 2020 — a nudge that has materially reduced outstanding credit card balances for auto-enrolled customers.
+
+**Policy limitations:**
+Nudge critics (Rizzo & Whitman, 2009; Glaeser, 2006) argue that: (1) behavioral biases are context-dependent — the same person may exhibit loss aversion for retirement savings but not for consumption spending; (2) paternalistic defaults may substitute government preferences for individual preferences; (3) nudges can be used by corporations to exploit consumers (dark patterns in digital UX — automatic subscription renewals, pre-ticked donation boxes). The EU's Digital Services Act (DSA, 2024) explicitly restricts corporate "dark nudges" while the UK's behavioral insights team continues to develop pro-social governmental nudge programs.
+
+#### Behavioral Corporate Finance: Inside the Boardroom
+
+**Behavioral finance within corporations** — how cognitive biases affect capital budgeting, M&A, and executive compensation decisions — has developed substantially since Shefrin's (2007) "Behavioral Corporate Finance":
+
+**Hubris in acquisitions (Roll, 1986):**
+Corporate CEOs who overestimate their ability to manage the combined entity overpay in acquisitions. The "hubris hypothesis" predicts: (1) bidder stock prices fall on acquisition announcement (market discounts overpayment); (2) more hubris-prone CEOs (measured by press coverage, airplane ownership, CEO pay ratio) make more value-destroying acquisitions. This is distinct from agency theory explanations (managers buying for size/prestige) — hubris is genuine overconfidence, not self-dealing.
+
+**The capital structure debt-equity puzzle:**
+Graham & Harvey (2001) surveyed 392 CFOs on capital structure decisions. Key findings: CFOs explicitly cite factors that corporate finance theory treats as irrelevant (earnings per share dilution, credit rating concerns, recent stock price performance) while underweighting theoretically optimal considerations (tax shields, financial distress costs). The survey evidence suggests capital structure decisions are substantially driven by behavioral factors — CFOs anchor to existing capital structures, avoid perceived complexity of optimal structuring, and make decisions based on peer firm benchmarking rather than internal optimization.
+
+---
+
+## Related
+
+- [[Modern-Portfolio-Theory]] — efficient markets vs. behavioral finance debate
+- [[technical-analysis-and-chart-patterns]] — sentiment indicators as behavioral measures
+- [[mergers-and-acquisitions]] — behavioral factors in M&A premium pricing
+- [[factor-investing-and-smart-beta]] — behavioral explanations for factor premium persistence

@@ -583,3 +583,108 @@ Where X₁=Working Capital/Total Assets, X₂=Retained Earnings/Total Assets, X�
 **2026 Private credit default rate analysis: The 6.0% Fitch reading.** The Fitch record 6.0% private credit default rate (twelve months ended April 2026) deserves deeper structural analysis. The defaulting borrowers are concentrated in: (a) consumer discretionary and leisure businesses leveraged in 2021 at 7–9× EBITDA when SOFR was near zero, now facing 500+ bps higher interest costs on their floating-rate loans; (b) technology-enabled services companies that achieved inflated valuations in 2020–2022 and were subsequently acquired by PE firms in leveraged buyouts at peak multiples; (c) healthcare services companies facing reimbursement rate compression from CMS (Centers for Medicare & Medicaid Services) and labor cost inflation. The common thread: leverage ratios calibrated to the zero-rate environment became unsustainable when SOFR-linked borrowing costs tripled. A Merton-model calculation for a typical 2021 LBO (5.5× EBITDA leverage at SOFR+0.1% = 5.6% all-in rate → 3.0× interest coverage) versus 2026 (same asset, SOFR+4.3% = 8.8% all-in rate → 1.9× interest coverage) shows a Distance-to-Default decline from approximately 3.8σ to 2.1σ — squarely in the elevated-risk zone that historically predicts 5–8% default rates.
 
 **Sovereign credit watch: Pakistan's IMF program stress.** Pakistan's Extended Fund Facility (EFF) review in June 2026 is at risk from the Hormuz-driven oil import cost surge. Pakistan imports approximately 200,000 barrels per day; at $91/barrel vs. the $75/barrel assumption embedded in the IMF's March 2026 program projections, the additional annual energy import cost is approximately $3.8 billion — roughly 20% of Pakistan's IMF program disbursements over the 3-year facility. This creates a direct sovereign credit linkage between oil market dynamics and EM sovereign creditworthiness that a mechanical credit spread model would miss.
+
+---
+
+### CDS Mechanics, Credit Spread Decomposition, and the CDX/iTraxx Index Ecosystem
+
+#### Credit Default Swaps: Insurance for Credit Risk
+
+A **Credit Default Swap (CDS)** is a bilateral derivatives contract where the **protection buyer** pays a periodic premium (the CDS spread) to the **protection seller** in exchange for a payment if the reference entity (the company or sovereign) experiences a credit event (bankruptcy, failure to pay, restructuring).
+
+**CDS mechanics:**
+```
+Protection Buyer pays: CDS Spread × Notional / 4 (quarterly)
+Protection Seller pays (upon credit event): Notional × (1 − Recovery Rate)
+```
+
+**Standard CDS contracts (ISDA 2014 Credit Definitions):**
+
+| Characteristic | Detail |
+|----------------|--------|
+| Tenor | 5 years (most liquid); 1, 3, 7, 10 year also trade |
+| Notional | $10M typical for single-name; $250M+ for index |
+| Premium payments | Quarterly (Mar/Jun/Sep/Dec 20) |
+| Credit events | Bankruptcy, failure to pay, restructuring, gov't intervention (financial entities) |
+| Settlement | Physical (deliver bonds, receive par) OR cash (auction-based recovery determination) |
+| Upfront payment | Since 2009, CDS standardized at 100bps or 500bps running coupon with upfront to equate |
+
+**Pricing a CDS:** The fair CDS spread s* satisfies:
+```
+PV(premium leg) = PV(protection leg)
+
+PV(premium leg) = Σₜ s × N × q(t) × D(t)   [probability of survival × discount × spread payment]
+PV(protection leg) = Σₜ (1−R) × N × Δq(t) × D(t)   [loss given default × probability of default at t × discount]
+```
+Where q(t) = survival probability to time t, R = recovery rate (typically assumed 40% for senior unsecured corporate), D(t) = risk-free discount factor.
+
+**Worked example — Ford Motor 5-year CDS (June 2026):**
+Ford Motor's 5-year CDS spread trades at approximately 285 basis points (2.85% annually). Assuming 40% recovery:
+- Implied default probability (per year, simplified): p ≈ s/(1−R) = 0.0285/0.60 = 4.75% per year
+- 5-year survival probability: (1 − 0.0475)^5 ≈ 78.4%
+- Implied 5-year cumulative default probability: 21.6%
+
+A $10M protection position costs: $10M × 0.0285 / 4 = $71,250 per quarter. If Ford defaults in Year 3 with a 45% recovery, the protection buyer receives: $10M × (1 − 0.45) = $5.5M.
+
+#### Credit Spread Decomposition
+
+A corporate bond's yield spread over the risk-free Treasury rate contains multiple components:
+
+```
+Corporate Spread = Default Risk Premium + Liquidity Premium + Tax Premium + Convenience Premium
+```
+
+**1. Default Risk Premium (DRP):**
+The compensation for expected credit losses: 
+```
+DRP ≈ (Probability of Default) × (1 − Recovery Rate)
+     + Risk Premium for Default Uncertainty (systematic + idiosyncratic components)
+```
+
+For investment-grade US corporate (A-rated): expected DRP ≈ 30–50 bps (matching the 10-year cumulative default rate of ~2% × 60% LGD × risk premium factor).
+
+**2. Liquidity Premium:**
+Corporate bonds trade far less frequently than Treasuries. In times of stress, bid-ask spreads for mid-size corporate bonds can widen from 5 bps to 100+ bps. Investors demand a premium for this illiquidity. Estimated:
+- IG corporate bonds: 20–40 bps liquidity premium
+- HY corporate bonds: 50–150 bps (much more illiquid)
+- Distressed: effectively unquantifiable — illiquidity can prevent exit entirely
+
+**3. Tax Component:**
+In the US, corporate bond interest is taxable at ordinary income rates (~37% federal). Munis are tax-exempt. The corporate-muni spread partially reflects this tax differential: corporate yield = muni yield / (1 − t) + credit spread.
+
+**4. Empirical spread decomposition (Longstaff, Mithal & Neis, 2005; updated 2023):**
+Using the CDS-bond basis to separate default risk from non-default risk: the CDS contract prices only default risk; the bond spread includes both default risk and liquidity. If the CDS spread is 120 bps for a bond yielding 180 bps over Treasuries, the non-default component (liquidity + tax + technical) = 60 bps.
+
+#### The CDX and iTraxx Index Ecosystem
+
+CDS indices allow investors to gain or shed exposure to credit markets in a single, highly liquid transaction — analogous to how equity investors use the S&P 500 futures rather than buying all 500 stocks.
+
+**Major CDS indices:**
+
+| Index | Composition | Tenor | Typical Spread (June 2026) |
+|-------|------------|-------|--------------------------|
+| CDX.NA.IG | 125 US investment grade names | 5Y | 68 bps |
+| CDX.NA.HY | 100 US high yield names | 5Y | 398 bps |
+| iTraxx Europe | 125 European IG names | 5Y | 82 bps |
+| iTraxx Crossover | 75 European sub-IG (HY) names | 5Y | 340 bps |
+| CDX.EM | 15 EM sovereign names | 5Y | varies |
+
+**Index mechanics:** Each index is reconstituted every 6 months (March and September) to replace defaulted or upgraded/downgraded names. "On-the-run" series is the current series (e.g., CDX.NA.IG Series 42 as of March 2026); "off-the-run" are prior series, which trade at smaller bid-ask but may contain names removed due to credit events.
+
+**The CDS-Bond Basis:** In theory, CDS spread = bond spread over risk-free rate. In practice, they diverge due to: (1) cheapest-to-deliver bond options in physical settlement CDS; (2) bond repo costs; (3) technical supply-demand imbalances in each market. A **negative basis** (bond spread > CDS spread) creates a "basis package trade": buy the bond, buy CDS protection → earn the basis with no directional risk. Investment banks run systematic basis arbitrage desks exploiting persistent negative basis in specific issuers.
+
+**Strategic use of CDX:**
+- **Risk hedge:** A corporate bond portfolio manager hedging $100M credit exposure against a credit selloff: buy $100M face CDX.NA.HY protection (pays 398bps/year running premium, receives protection on defaults)
+- **Directional credit view:** Sell CDX.NA.IG protection (receive 68bps/year) if expecting credit spreads to tighten in a risk-on environment
+- **Curve trade:** Buy 5Y CDX protection, sell 10Y CDX protection to position for near-term credit deterioration without committing to a persistent view
+
+In the June 2026 environment (private credit defaults at 6%, geopolitical uncertainty elevated), CDX.NA.HY has widened 45bps from January 2026 highs, reflecting rising stress even in the public high yield market — a notable divergence from equities which remain near all-time highs, creating the "credit-equity divergence" signal that fixed income portfolio managers watch closely as a leading indicator of equity market stress.
+
+---
+
+## Related
+
+- [[Federal-Reserve-and-Monetary-Policy]] — monetary policy driving base rates on which credit spreads are layered
+- [[yield-curve-and-bonds]] — base curve and term premium foundations of credit pricing
+- [[Value-at-Risk-and-CVaR]] — credit VaR models and regulatory capital for credit exposures
+- [[hedge-funds-and-alternative-strategies]] — credit hedge fund strategies using CDS

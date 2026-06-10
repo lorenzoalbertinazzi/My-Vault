@@ -323,3 +323,99 @@ By 2026, direct indexing AUM in the US exceeded $500 billion, up from $350 billi
 **Quantified benefit of direct indexing.** Academic research (Wealthfront, 2023; Parametric, 2024) estimates that daily tax-loss harvesting in a direct index portfolio generates an average tax alpha of **1.2–1.8 percentage points** annually in the first decade of the portfolio (when the cost basis is highest and losses most available), declining to 0.3–0.5% in later decades as the portfolio becomes predominantly unrealized gains. For a high-income investor in the 37% federal bracket + 3.8% NIIT + 9.3% California state tax = 50.1% marginal rate on short-term gains (effectively, the cost of not harvesting losses is 50 cents per dollar), the value of systematic loss harvesting is substantial. A $5 million direct index portfolio generating 1.5% tax alpha = $75,000/year in deferred tax liability compounding at the investment return rate — substantially exceeding the incremental cost of direct indexing vs. a comparable ETF.
 
 **Estate planning and the step-up in basis.** The Tax Cuts and Jobs Act preserved the step-up in basis at death — one of the most valuable provisions in the US tax code for wealth transfer. Assets transferred at death receive a new cost basis equal to fair market value at the date of death, eliminating the capital gains tax that would have been owed on appreciation during the decedent's lifetime. For a direct index portfolio with $3M in unrealized gains at death, the step-up eliminates potentially $1.5M in capital gains tax (at 23.8% federal rate for the highest bracket = $714,000 in federal tax alone). This creates a powerful incentive to hold appreciated positions until death rather than realizing and reinvesting — a structural factor that limits the "harvesting gains" side of tax management despite the economic optimality of rebalancing.
+
+---
+
+### Municipal Bond Analysis, Roth Conversion Strategies, and Wash Sale Rules
+
+#### Municipal Bond Taxation and Break-Even Tax Rate Analysis
+
+**Municipal bonds** (munis) — issued by US state, city, and other local governments — pay interest that is exempt from federal income tax and typically from state income tax in the issuer's state. This tax exemption makes munis more valuable to high-income investors than their nominal yield suggests.
+
+**Tax-equivalent yield (TEY) formula:**
+```
+Tax-Equivalent Yield = Muni Yield / (1 − Marginal Tax Rate)
+```
+
+For a California resident in the top marginal bracket (37% federal + 3.8% NIIT + 13.3% California = approximately 54.1% combined marginal rate on ordinary income):
+
+A 10-year California general obligation bond yields 3.2% tax-free:
+```
+TEY = 3.2% / (1 − 0.541) = 3.2% / 0.459 = 6.97%
+```
+
+The investor would need a taxable bond yielding 6.97% to match the after-tax return of the 3.2% California muni. The 10-year IG corporate bond at 5.2% is dramatically inferior on an after-tax basis for this investor.
+
+**Break-even tax rate:**
+The rate above which munis outperform taxable bonds:
+```
+Break-even rate = 1 − (Muni yield / Taxable yield) = 1 − 3.2% / 5.2% = 38.5%
+```
+
+Investors with total marginal rates above 38.5% should prefer munis; below 38.5%, taxable bonds are superior. This roughly corresponds to the 37% federal bracket threshold (approximately $578K in taxable income for married filing jointly in 2026), making munis primarily beneficial for investors in the top two tax brackets.
+
+**Municipal credit analysis:** Unlike corporate bonds (where the credit analysis focuses on free cash flow and debt coverage), muni credit analysis focuses on:
+1. **Revenue bonds:** Backed by specific revenue streams (toll roads, hospitals, utilities). Credit quality depends on the revenue stream's stability and legal priority of lien.
+2. **General obligation (GO) bonds:** Backed by the full faith, credit, and taxing power of the issuer. Credit quality depends on the local economy's wealth/income levels, property tax capacity, and budget management.
+3. **Key ratios:** Net pension liability / assessed valuation (critical — many muni issuers carry underfunded pension obligations that represent off-balance-sheet senior liabilities); debt service as % of budget; fund balances (rainy day reserves); and demographic trends in the local economy
+
+**Current muni environment (June 2026):** AAA muni yields stand at approximately 3.6% for 10 years. The muni-to-Treasury ratio (AAA muni yield / Treasury yield) = 3.6% / 4.40% = 81.8% — historically, this ratio ranges from 75% (expensive munis) to 100%+ (cheap munis). At 82%, munis are slightly below average value, though still attractive for top-bracket investors on a TEY basis.
+
+#### Roth Conversion: Strategic Tax Rate Arbitrage
+
+A **Roth IRA conversion** — moving assets from a traditional IRA (pre-tax) to a Roth IRA (after-tax) — generates ordinary income taxes in the current year in exchange for permanently eliminating taxes on future investment growth and withdrawals.
+
+**When Roth conversion makes sense:**
+1. Current year's marginal tax rate is *lower* than the expected rate at withdrawal (conversion is arbitrage on the tax rate difference)
+2. The investor has "room" in lower tax brackets (retired but not yet required minimum distributions; low-income year from business sale or early retirement)
+3. The investor has non-IRA assets to pay the conversion tax (paying the tax from IRA proceeds reduces the benefit)
+4. Long investment time horizon (more years of tax-free growth amplify the benefit)
+
+**Worked example — 10-year conversion ladder:**
+A retired investor at age 60 has: $2.5M traditional IRA, $500K taxable brokerage account, Social Security deferred to 70. Current annual income before conversion: $0 (retired). Tax brackets available for conversion (MFJ 2026): 12% up to $89,000 taxable income, 22% up to $190,750.
+
+**Annual conversion strategy:** Convert $89,000/year to fill the 12% bracket. After federal tax (12% × $89,000 = $10,680) and state tax (assume 5% = $4,450), total annual tax = $15,130. After 10 years:
+- $890,000 converted at average 12.5% effective rate = $111,250 total taxes paid
+- $890,000 now in Roth IRA: grows completely tax-free; no RMDs; heirs can inherit tax-free for 10 years
+
+If instead the $2.5M traditional IRA grows to $4.5M by age 72 (when RMDs begin), the RMDs could push the investor into the 37% bracket — paying $37,000 in taxes on every $100,000 of income vs. the $12,500 paid at conversion. The 10-year partial conversion saves an estimated $200,000–$400,000 in lifetime taxes for a typical high-net-worth retiree.
+
+#### Wash Sale Rule: The Precise Legal Boundaries
+
+The wash sale rule (IRC Section 1091) prevents investors from claiming a tax loss if they sell a security at a loss and buy a "substantially identical" security within 30 days before or after the sale — the 61-day window (30 days before + day of sale + 30 days after).
+
+**Triggered by:**
+- Selling Stock A at a loss and immediately buying Stock A (obvious)
+- Selling Stock A at a loss and buying call options on Stock A within 30 days
+- Selling shares in one brokerage account at a loss and buying identical shares in a spouse's account or IRA account within 30 days
+- Selling SPY ETF at a loss and buying IVV ETF (both track S&P 500 — potentially substantially identical despite different issuers; the IRS has never issued definitive guidance on ETF wash sales, creating planning uncertainty)
+
+**Not triggered by:**
+- Selling SPY ETF and buying VTI (tracks total stock market — includes S&P 500 but also small-caps; accepted as not substantially identical)
+- Selling Apple stock at a loss and buying Microsoft stock (different companies)
+- Selling a bond at a loss and buying a different bond (even from the same issuer at a different maturity — generally not substantially identical)
+
+**The ETF substitution pairs used in tax-loss harvesting:**
+
+| Selling (at loss) | Buying (to maintain exposure) | Substantially Identical? |
+|------------------|------------------------------|--------------------------|
+| SPY (S&P 500) | VOO (Vanguard S&P 500) | **Yes — avoid** |
+| SPY (S&P 500) | IVV (iShares S&P 500) | **Likely yes — caution** |
+| SPY (S&P 500) | VTI (Total Market) | No — acceptable |
+| QQQ (Nasdaq 100) | QQQM (same index) | **Yes — avoid** |
+| QQQ (Nasdaq 100) | SCHG (large-cap growth) | No — acceptable |
+| GLD (Gold) | IAU (same commodity) | **Likely yes — caution** |
+| GLD (Gold) | PHYS (physical gold trust) | Debated — consult tax advisor |
+
+**Disallowed loss treatment:** When a wash sale is triggered, the disallowed loss is added to the cost basis of the replacement shares. This defers (not permanently eliminates) the loss — it will be recognized when the replacement shares are eventually sold outside the wash sale window. This is relevant for year-end planning: wash sales can accidentally shift losses from December to the following tax year.
+
+**IRC § 1091 and retirement accounts:** Buying the same security in an IRA within the wash sale window following a taxable account loss is a wash sale — and unlike standard deferrals, the deferred loss is *permanently lost* (the IRA's non-deductible basis cannot absorb the disallowed loss). This makes IRA holdings of the same securities as taxable account holdings a coordination challenge.
+
+---
+
+## Related
+
+- [[wealth-management-and-family-office-strategies]] — comprehensive tax planning in family office context
+- [[Modern-Portfolio-Theory]] — direct indexing enables tax-efficient portfolio construction
+- [[Federal-Reserve-and-Monetary-Policy]] — interest rate environment affecting muni vs. taxable bond decision
+- [[real-assets-reits-and-commodities]] — REIT dividend taxation and tax-advantaged account strategies

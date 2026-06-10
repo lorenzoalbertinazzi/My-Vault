@@ -113,3 +113,66 @@ Quantitative desks are increasingly replacing Black-Scholes implied vol with **r
 - [[Value-at-Risk-and-CVaR]] — how options Greeks feed into VaR calculations
 - [[Federal-Reserve-and-Monetary-Policy]] — interest rate sensitivity (Rho, term structure)
 - [[Discounted-Cash-Flow-Analysis]] — risk-free rate assumptions shared with DCF
+
+---
+
+### Deep Hedging and Rough Volatility: The 2026 Model Frontier
+
+#### Rough Volatility: When Brownian Motion Is Not Rough Enough
+
+The classical Black-Scholes model assumes volatility is a constant (or at best a Markov process, as in the Heston stochastic volatility model). Empirical measurement of realized volatility's time-series properties has overturned this assumption. Gatheral, Jaisson & Rosenbaum (2018, *Quantitative Finance*) demonstrated that the log-volatility process behaves as a fractional Brownian motion with **Hurst parameter H ≈ 0.1** — dramatically rougher than standard Brownian motion (H = 0.5). This finding has profound implications:
+
+**The Hurst Exponent and Memory Structure:**
+- H < 0.5: "Rough" — the process is anti-persistent; large moves are *more likely* to be followed by reversals than continuations
+- H = 0.5: Standard Brownian motion — no memory
+- H > 0.5: Persistent (momentum) processes
+
+Log-volatility with H = 0.1 means that the variance of volatility increments scales as |Δt|^{2H} = |Δt|^{0.2} — far faster than the |Δt| scaling of standard diffusion. This produces the steep near-term volatility skew observed in short-dated options: as time-to-expiry shrinks from months to days, the implied vol skew steepens in a way that standard stochastic vol models cannot fit without adding multiple fast mean-reverting components.
+
+**The rBergomi Model:**
+The rough Bergomi (rBergomi) model, introduced by Bayer, Friz & Gatheral (2016), defines the variance process as:
+```
+dV(t) = ξ₀(t) × exp(η × W̃^H(t) − η²/2 × t^{2H})
+```
+Where:
+- ξ₀(t) is the initial forward variance curve (inferred from market option prices)
+- η is the vol-of-vol parameter
+- W̃^H is a fractional Brownian motion with H ≈ 0.1
+
+The model fits the entire volatility surface — including the ATM skew term structure and the smile across strikes — with just three parameters, compared to Heston's five and SABR's four. More importantly, it does so with genuine predictive power: rBergomi-implied parameters from one week forecast the following week's options market pricing with substantially lower error than Heston-implied parameters.
+
+**Practical implication for options desks:** Volatility risk management is now conducted under a rough volatility paradigm at major dealers (Goldman Sachs, JP Morgan, Société Générale). The key change: **vega risk** must be decomposed into sensitivities across the forward variance curve (ξ₀(t) at each expiry), not just a single sigma parameter. Hedging a rough vol exposure requires dynamic adjustments to the term structure of variance swaps — a more complex hedge than the simple ATM straddle used in the Black-Scholes world.
+
+#### Deep Hedging: Neural Networks Replace the Greeks
+
+Bühler, Gonon, Teichmann & Wood (2019, *Review of Financial Studies*) introduced **deep hedging** — training a neural network to learn optimal hedging strategies directly from market data, bypassing the analytical Greek-based framework entirely. The approach:
+
+1. **Objective:** Minimize CVaR of the hedged P&L over the option's life, subject to transaction costs
+2. **Input:** Current time t, option state (moneyness, time-to-expiry), market observables (spot, implied vol surface, recent vol-of-vol)
+3. **Output:** Hedge ratio (fractional shares to hold) at each time step
+4. **Training:** Simulate 100,000+ paths under a realistic joint model of returns and volatility; train the network to minimize the chosen loss function across all paths
+
+**Out-of-sample results (Siemssen & Lütkebohmert, 2025):** Deep hedging reduced CVaR of hedged P&L by 18–24% vs. delta-gamma-vega hedging under Black-Scholes on real S&P 500 options data, with superior performance concentrated in high-gamma regimes (near-ATM options close to expiry) and in the presence of volatility jumps. The improvement comes from the network learning to implicitly account for model misspecification rather than explicitly calculating Greeks under a potentially wrong model.
+
+**Production status (2026):** JPMorgan, Deutsche Bank, and BNP Paribas have implemented deep hedging pilots for vanilla options books as of Q1 2026. The limiting factor: interpretability. A neural-network hedge ratio cannot be audited the way an analytic Greek can be — regulators (FCA, BaFin, SEC) require explainability for risk management models, creating compliance friction that slows adoption despite demonstrated performance improvements.
+
+#### The Volatility Surface Calibration Workflow in Practice
+
+Options market-makers follow a five-step process to maintain a consistent, arbitrage-free implied vol surface:
+
+1. **Data ingestion (real-time):** Collect bid/ask implied vols for all liquid option strikes and expiries from multiple venues (CBOE, Nasdaq PHLX, AMEX, over-the-counter dealer quotes)
+2. **No-arbitrage conditions check:** Verify: (a) call spreads ≥ 0 (calendar arbitrage); (b) butterfly spreads ≥ 0 (convexity); (c) put-call parity consistency; flag and exclude any quote violating these conditions
+3. **Parametric surface fitting:** Fit an SVI (Stochastic Volatility Inspired, Gatheral 2004) parametrization separately for each expiry: total variance W(k) = a + b × [ρ(k-m) + √((k-m)² + σ²)], where k is log-moneyness. SVI guarantees no butterfly arbitrage by construction
+4. **Cross-expiry smoothing:** Apply calendar arbitrage constraints to ensure total variance is non-decreasing across expiries at each moneyness level
+5. **Delta calculation under surface:** Compute strike-consistent deltas (accounting for the smile/skew) rather than Black-Scholes deltas with a flat vol assumption — a correction of up to 15% for deep OTM options
+
+This calibration runs every 500 milliseconds for actively traded indices — a computational challenge requiring GPU-accelerated parameter optimization that became feasible only with modern CUDA-based libraries (QuantLib GPU port, 2024).
+
+---
+
+## Related
+
+- [[Modern-Portfolio-Theory]] — portfolio construction context for options overlays
+- [[Value-at-Risk-and-CVaR]] — how options Greeks feed into VaR calculations
+- [[Federal-Reserve-and-Monetary-Policy]] — interest rate sensitivity (Rho, term structure)
+- [[Discounted-Cash-Flow-Analysis]] — risk-free rate assumptions shared with DCF

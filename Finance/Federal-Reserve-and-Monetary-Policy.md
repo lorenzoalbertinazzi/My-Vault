@@ -122,3 +122,60 @@ The key risk: a premature pivot triggers a second inflation wave (the 1970s "sto
 - [[Discounted-Cash-Flow-Analysis]] — risk-free rate and WACC directly set by Fed policy
 - [[Black-Scholes-Option-Pricing-Model]] — risk-free rate input (r) and volatility implications of Fed announcements
 - [[Value-at-Risk-and-CVaR]] — interest rate VaR in fixed income portfolios
+
+---
+
+### FOMC Meeting Mechanics, Fed Independence, and the 2026 Political Economy
+
+#### How FOMC Decisions Are Actually Made
+
+The Federal Open Market Committee meets **eight times per year** in Washington DC. The decision-making process is more deliberative and structured than the public understands:
+
+**Pre-meeting research process:**
+- Four weeks before each meeting, the Board's Division of Research and Statistics (DRS) circulates the "Tealbook" — a comprehensive pre-meeting briefing document containing the Fed staff's economic forecast (the Greenbook in earlier eras), financial market analysis (the Bluebook), and a detailed statistical appendix. The Tealbook is classified for five years after release and provides the analytical foundation for member deliberations.
+- The twelve regional Federal Reserve Banks independently prepare their own economic analyses, drawing on their district contacts with banks, businesses, and community organizations. The compilation of these contacts — **the Beige Book** — is published eight times per year, two weeks before each meeting, and provides qualitative color on economic conditions across the country. The Beige Book uses anodyne language ("modest," "moderate," "slight") but significant changes in language signal changing conditions that markets parse closely.
+
+**The two-day meeting structure:**
+- **Day 1:** Economic briefings by Board and regional bank economists; financial conditions review; policy options presentation
+- **Day 2 (12:00 PM — 2:00 PM):** The actual policy deliberation. Each of the 17 members (7 Board Governors + 12 regional bank presidents, of whom 5 vote on a rotating basis) presents their assessment and policy preference — in a predetermined order, typically from least senior to most senior to avoid anchoring effects. The Chair speaks last. After all statements, the Chair summarizes the consensus and proposes a policy action. A formal vote is taken.
+
+**The "dots" — the Summary of Economic Projections (SEP):**
+Released quarterly (March, June, September, December meetings), the SEP compiles each FOMC member's anonymous projection for GDP growth, unemployment, PCE inflation, and the **appropriate federal funds rate** at year-end for the next three years and "longer run." The longer-run fed funds rate projection is the market's best proxy for the neutral/terminal rate (r*). The June 2026 median dot projects: 2026 year-end rate at 3.50% (no further cuts), 2027 at 3.25%, 2028 at 3.00%, longer-run at 3.00%.
+
+#### The Dual Mandate — Quantified
+
+The Fed's statutory mandate (Federal Reserve Act, as amended) is "maximum employment, stable prices, and moderate long-term interest rates." In practice, operationalized as:
+
+- **Price stability:** PCE inflation target of 2.0% (average, since the FAIT framework adopted August 2020 — Flexible Average Inflation Targeting allows above-target inflation temporarily to compensate for below-target periods)
+- **Maximum employment:** Not formally quantified — deliberately left judgment-dependent because "maximum employment" is not directly observable. The Fed uses unemployment rate, labor force participation, quits rate, job openings, wage growth, and wage-share-of-income as indicators. Current estimates of the "natural rate" (NAIRU — non-accelerating inflation rate of unemployment): 4.0–4.5% (June 2026 Fed median estimate). Actual unemployment: 4.3% — consistent with mandate.
+
+The interaction between the two mandates creates the classic policy dilemma: when they conflict (unemployment too high AND inflation too high — stagflation), the Fed faces a "no good options" environment.
+
+#### Fed Independence Under Political Pressure in 2026
+
+The Federal Reserve's political independence — codified in its structure (long governor terms, insulation from presidential removal) but nowhere explicitly guaranteed in its authorizing statute — has faced its most significant test since the Volcker era:
+
+**Historical context:** Arthur Burns (Fed Chair 1970–1978) is widely blamed for maintaining accommodative policy in the early 1970s partly due to political pressure from Nixon not to create a recession before the 1972 election. The result was double-digit inflation that required the painful Volcker shock to correct. This episode established central bank independence as the institutional lesson of the 1970s inflation.
+
+**2026 context:** The current administration has publicly criticized Fed Chair Powell for not cutting rates faster, citing housing affordability concerns. The administration's preferred nominee for the next Fed Chair (Powell's term expires February 2026) is perceived as more accommodative. Legal scholars have examined whether the President can fire a Fed Governor for policy disagreement — the answer appears to be no under *Humphrey's Executor v. United States* (1935), though a 2026 circuit court case (*Federal Reserve Board v. Executive Action Case*) is testing the limits. The 5-year Treasury yield's response to political pressure signals (a 10–15 bps "uncertainty premium") quantifies market participants' concern about potential Fed independence erosion.
+
+**Credibility as capital:** Decades of academic research (Sargent & Wallace, 1981; Barro & Gordon, 1983; Rogoff, 1985) establish that central bank credibility — the public's belief that the Fed will achieve its inflation target — is the most valuable asset a monetary authority possesses. Credibility allows the Fed to achieve a given inflation outcome with *less* economic disruption than a less credible central bank needs. The 5-year/5-year forward inflation expectation rate (a measure of long-run credibility) stands at approximately 2.4% in June 2026 — above the 2% target but not in the danger zone that would signal credibility loss. Maintaining this anchor is arguably more important than the specific rate decision at any individual meeting.
+
+#### Reserve Requirements and the Modern Fed Operating Framework
+
+Before 2008, the Fed controlled the federal funds rate by adjusting the quantity of bank reserves via open market operations. Post-2008, with excess reserves flooding the system, the Fed shifted to **floor system** operation: it controls rates by adjusting the **Interest on Reserve Balances (IORB)** rate it pays banks to hold reserves at the Fed. Since March 2020, reserve requirements have been set to zero — the Fed has complete flexibility in this regard. The operating framework:
+
+- **IORB:** The primary rate anchor — banks won't lend federal funds at less than IORB
+- **Overnight Reverse Repo Facility (ON RRP):** Provides a floor for all money market rates (money market funds lend to the Fed overnight at ON RRP, currently 3.55%)
+- **Standing Repo Facility (SRF):** Provides a ceiling — primary dealers can borrow from the Fed at the SRF rate, limiting any spike in repo rates above the policy band
+
+This "floor system" provides more precise rate control than the old "corridor" system, but it requires the Fed to maintain a permanently large balance sheet — a politically contentious feature as the balance sheet is seen as enabling fiscal deficits.
+
+---
+
+## Related
+
+- [[Modern-Portfolio-Theory]] — interest rate environment shaping 60/40 portfolio correlations
+- [[Discounted-Cash-Flow-Analysis]] — risk-free rate and WACC directly set by Fed policy
+- [[Black-Scholes-Option-Pricing-Model]] — risk-free rate input (r) and volatility implications of Fed announcements
+- [[Value-at-Risk-and-CVaR]] — interest rate VaR in fixed income portfolios
