@@ -267,3 +267,25 @@ The US-Iran Hormuz confrontation was the first major test of AI-enabled naval wa
 - [[2026-05-27-us-iran-conflict-global-energy-crisis]]
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
 - [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]]
+
+---
+
+### Update — June 10, 2026: Iran Strikes Jordan, US Hits Bandar Abbas, and the 1988 Praying Mantis Parallel
+
+**Iran Strikes Azraq Air Base, Jordan: Geographic Escalation Threshold Crossed**
+
+On June 9, 2026, Iranian forces struck Azraq Air Base in eastern Jordan — home to approximately 3,000 US military personnel — in what US CENTCOM characterized as a "ballistic missile and drone composite attack." The strike crossed a critical geographic threshold: for the first time in the conflict, Iran directly targeted sovereign territory of a third nation that was not in the Hormuz theater. Jordan had maintained studied neutrality despite hosting US forces since the Obama era, and the Azraq strike represented Iran's most explicit statement that neutrality is not a viable position for US-host nations: all US basing infrastructure in the region is a legitimate target.
+
+King Abdullah II of Jordan faces an extraordinarily difficult position. Jordan depends on US economic aid ($1.65 billion annually) and security guarantees; cannot militarily defend against Iran; and hosts a majority-Palestinian population with deep sympathies for Iranian regional resistance narratives. Abdullah's initial public statement called for "restraint from all parties" — the only language available to a leader facing domestic pressure from both directions. US Secretary of State Rubio's phone call to Abdullah reportedly included assurances that the US would "ensure Jordan does not bear the consequences of its alliance alone" — language that Jordan's security establishment interprets as a US commitment to absorb retaliatory strikes without escalating through Jordanian territory.
+
+**US Strike on Bandar Abbas: The First Direct Attack on an Iranian Port Since 1988**
+
+The US military response to the Jordan strike included attacks on Bandar Abbas port — Iran's largest commercial and naval harbor, on the northern Hormuz shoreline — on June 10. US CENTCOM cruise missiles and F/A-18 strikes (launched from USS Harry S. Truman) targeted two IRGCN (Islamic Revolutionary Guard Corps Navy) patrol boat berths and a fuel storage complex. The Bandar Abbas strike is the first direct US attack on a major Iranian port facility since Operation Praying Mantis on April 18, 1988 — when the Reagan administration sank or damaged half the Iranian navy in a single day in response to mine damage to USS Samuel B. Roberts.
+
+The Praying Mantis parallel is historically instructive: the 1988 operation was calibrated to be decisive enough to impose costs without triggering Iranian escalation to full conflict, relying on Iranian cost-benefit analysis that the US was willing and able to inflict significantly greater damage than Iran could absorb. The 2026 Bandar Abbas strike appears to follow the same template, with deliberate targeting of military assets rather than civilian port infrastructure to maintain escalation control. However, the 1988 context involved a clear US victory and Iranian de-escalation; in 2026, Iran's drone program gives it asymmetric capabilities absent in 1988, and domestic political constraints on the Iranian supreme leader make de-escalation politically costlier.
+
+**Day 103: The Hormuz Shipping Lane as Battlespace**
+
+The Strait of Hormuz's maritime geography remains the conflict's physical terrain. At its narrowest, the strait is 21 nautical miles wide with two 2-mile-wide shipping lanes (inbound and outbound) separated by a 2-mile buffer zone. Iran has not formally closed the strait — doing so would require physical interdiction of all traffic, triggering immediate US conventional military response that Iran's cost-benefit analysis still deters. Instead, Iran has maintained a "gray zone closure" strategy: IRGCN interdiction of vessels associated with countries supporting the US (primarily UK, Israel-connected ships, UAE-flagged vessels on occasion), mine-laying in approaches to Qeshm and Larak islands, and persistent drone harassment of US 5th Fleet surface vessels. This creates an effective 15-20% reduction in traffic flow through the strait (insurance and routing complications) without the political and military threshold of "formal closure" that would demand maximum US response.
+
+**last_updated: 2026-06-10**

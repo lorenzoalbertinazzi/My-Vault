@@ -277,3 +277,29 @@ Ebola outbreak response in 2026 deploys AI tools unavailable in the 2014-2016 We
 - [[federated-learning-and-privacy-preserving-ml]]
 - [[2026-05-30-horn-of-africa-sudan-ethiopia-regional-conflict]]
 - [[2026-05-30-sahel-crisis-russia-africa-corps-failure]]
+
+---
+
+### Update — June 10, 2026: PHEIC Declared, 515 Confirmed Cases, and the $518M Continental Response Plan
+
+**WHO Declares PHEIC: May 17, 2026**
+
+On May 17, 2026, the World Health Organization Director-General declared the Bundibugyo Ebola virus disease (BVD) outbreak in the Democratic Republic of the Congo and Uganda a Public Health Emergency of International Concern (PHEIC) — the highest alert level in international health law, last applied to COVID-19 in January 2020. The PHEIC declaration activates international coordination mechanisms, unlocks emergency WHO funding, and requires member states to report preparedness measures under International Health Regulations (IHR) obligations. It also signals that the outbreak has crossed thresholds suggesting national response capacity alone is insufficient.
+
+The Bundibugyo Ebola species — first identified in Uganda in 2007 — is one of the two Ebola virus species for which no approved vaccine exists. This distinguishes the 2026 outbreak sharply from the 2018-2020 DRC Kivu outbreak (caused by Ebola Zaire, for which the rVSV-ZEBOV Ervebo vaccine provided effective ring vaccination) and the 2022-2023 outbreaks where Merck's Ervebo was rapidly deployed. Against Bundibugyo virus, WHO and partners are running expedited Phase 2 trials of two candidate vaccines — INO-4212 (Inovio) and MVA-BN Filo (Bavarian Nordic) — but neither has Emergency Use Listing approval, meaning frontline responders cannot yet deploy a proven protective tool.
+
+**Case Numbers as of June 6, 2026: 534 Confirmed, 93 Deaths**
+
+As of the WHO situation report published June 6, 2026, the outbreak has recorded: 515 confirmed cases in the DRC (with 91 deaths among confirmed cases, case fatality rate approximately 17.7%) and 19 confirmed cases in Uganda (2 deaths, plus 1 probable death). DRC cases are distributed across 7 health zones in North Kivu, South Kivu, Maniema, and Kasai-Central provinces — indicating geographic spread beyond the original Beni epicenter that characterized prior DRC outbreaks. Uganda's case cluster is concentrated in Bundibugyo district (historically the virus's name origin) with two secondary cases in Kampala — the capital — triggering emergency response including contact tracing of 340+ individuals in Uganda's largest urban center.
+
+The cross-border transmission dynamic is the critical containment challenge. North Kivu province shares a highly porous border with Uganda's western districts, with an estimated 50,000+ daily cross-border movements for trade, family visits, and agricultural work. The same geographic and mobility characteristics that allowed Kivu's 2018-2020 outbreak to persist for 28 months and spread to six provinces are now present for Bundibugyo.
+
+**The $518 Million Continental Response Plan: June 5, 2026**
+
+WHO and the Africa CDC launched a joint Continental Strategic Preparedness and Response Plan on June 5, 2026, requesting $518 million from international donors to: fund ring vaccination with candidate vaccines under trial protocols; establish 24 additional treatment centers across high-risk DRC provinces; deploy 1,200 Community Health Workers (CHWs) for active case finding and safe burial teams; and fund preparedness activities in 11 "at-risk" African nations identified by WHO's geographic spread modeling (including Rwanda, Burundi, Tanzania, Republic of Congo, Central African Republic, and South Sudan). The contact tracing gap remains the most urgent operational vulnerability: only 45% of identified contacts are being followed up — WHO's threshold for meaningful containment is 90%+. The gap reflects the fundamental challenge of Bundibugyo geography: armed conflict in North Kivu (ongoing between FARDC forces and M23 rebels) restricts access to approximately 30% of the contact tracing operational area, making WHO's 90% target physically impossible under current security conditions.
+
+**Bundibugyo's Unusual Epidemiology: Lower Mortality, Higher Transmission Risk**
+
+One counterintuitive aspect of the Bundibugyo outbreak that the ECDC highlights: Bundibugyo virus has a lower case fatality rate (approximately 25-40% in historical outbreaks, running at ~18% in the current outbreak) than Ebola Zaire (60-90%). While lower mortality sounds reassuring, it creates a more dangerous transmission environment: infected individuals who survive longer and feel well enough to move around generate more secondary transmissions than Ebola Zaire patients, who become severely ill and bedridden more rapidly. The 2007 Bundibugyo outbreak in Uganda involved a significant cluster among healthcare workers — a pattern that ECDC warns is re-emerging in the current DRC data, where 23 healthcare workers have been infected across six health facilities.
+
+**last_updated: 2026-06-10**

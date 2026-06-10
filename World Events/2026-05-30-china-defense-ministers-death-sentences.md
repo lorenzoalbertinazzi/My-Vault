@@ -200,3 +200,25 @@ Defense procurement corruption directly undermines the AI-enabled military capab
 - [[2026-05-27-us-china-great-power-competition]]
 - [[2026-05-30-china-taiwan-strait-military-tensions]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: Zhang Youxia Removed, Rocket Force Purge Deepens, and Taiwan Readiness Assessment
+
+**Zhang Youxia Removal: The Purge Reaches the CMC Vice Chairman**
+
+The February 2026 removal of General Zhang Youxia — Vice Chairman of the Central Military Commission (CMC), the PLA's second-highest position — escalated China's anti-corruption purge to a level previously considered untouchable. Zhang, 74, had been one of Xi Jinping's oldest and most trusted military allies, having served alongside Xi's father in the 1979 Sino-Vietnamese War and been a member of Xi's inner circle since 2012. His removal (announced without charges, in the characteristically opaque manner of Chinese elite politics) was confirmed by CNN and The Diplomat in January-February 2026.
+
+Zhang's departure followed the May 7 death sentences for former Defense Ministers Wei Fenghe and Li Shangfu, creating a sequential purge of the PLA's most senior leadership within six months: two defense ministers convicted of bribery, the CMC Vice Chairman removed, and three former Rocket Force commanders (Generals Li Yuchao, Liu Guangbin, and Zhang Zhenzhong) under investigation or charged. The Rocket Force (People's Liberation Army Rocket Force, PLARF) — responsible for China's nuclear arsenal and conventional ballistic missiles — appears to be the primary corruption nexus, with procurement fraud involving missile fuel, maintenance contracts, and electronic warfare systems allegedly undermining operational readiness.
+
+**The Taiwan Readiness Question: Western Intelligence Assessment**
+
+The purge creates a genuine analytical puzzle for Western intelligence agencies and defense planners: does the exposure of deep corruption in China's most strategically critical military units (Rocket Force, missile procurement) increase or decrease the probability of a Taiwan conflict? Two competing interpretations dominate the intelligence community debate. The "capability degradation" school argues that the corruption revelations demonstrate that China's actual military readiness is substantially below its displayed capability — missiles with water in their fuel tanks, electronic warfare systems with falsified test results — making a Taiwan operation higher-risk than Xi's planners had modeled, therefore less likely in the near term.
+
+The "political pressure" school argues that Xi's demonstrated willingness to purge even his most loyal generals suggests a leader consolidating power for bold action rather than cautious inaction — and that the purge itself may be preparation for a different civil-military relationship that gives Xi more direct operational control, reducing the institutional friction that has historically constrained Chinese military adventurism. The Taiwan Ministry of National Defense's June 2026 assessment (partially public) leans toward the capability degradation interpretation: it explicitly identifies "reduced PLA Rocket Force readiness" as a factor that modestly reduces the tactical threat window for 2026-2027, while noting that the 2027-2030 window remains the primary concern as procurement integrity is restored.
+
+**The Stalin Parallel and Its Limits**
+
+The analogy between Xi's PLA purge and Stalin's 1937-1938 Red Army purges is widely invoked in Western analysis but requires careful qualification. Stalin's purges eliminated approximately 35,000 officers including three of five Marshals of the Soviet Union, decapitating operational military competence and contributing to catastrophic early losses in the 1941 German invasion. Xi's purge is targeted (corrupt procurement officials and their networks) rather than generalized (loyal competent officers are not being removed); is based on documented corruption rather than ideological suspicion; and is accompanied by active efforts to replace removed officials with trusted alternatives rather than leaving positions vacant. The more apt parallel may be Mao's post-Cultural Revolution military reconstruction: a purge that creates short-term disruption but aims at long-term institutional renewal. Whether that renewal succeeds — and on what timeline — is the central analytical uncertainty.
+
+**last_updated: 2026-06-10**

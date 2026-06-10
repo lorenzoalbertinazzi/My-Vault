@@ -216,3 +216,25 @@ AI tools are transforming economic forecasting during the 2026 slowdown. [[Machi
 - [[large-language-models-applications-and-limitations]]
 - [[2026-05-27-us-iran-conflict-global-energy-crisis]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: IMF "Global Economy in the Shadow of War," 3.1% Growth, and the Hormuz Inflation Premium
+
+**IMF April 2026 World Economic Outlook: "Global Economy in the Shadow of War"**
+
+The International Monetary Fund's April 2026 World Economic Outlook, titled "Global Economy in the Shadow of War," revised global growth projections to 3.1% for 2026 — down from the January 2026 update's 3.3% forecast and the lowest baseline projection since the COVID recovery period. The IMF's Chief Economist Pierre-Olivier Gourinchas characterized the revision as driven "overwhelmingly by the Hormuz disruption and its energy price pass-through," estimating that the US-Iran conflict alone subtracts 0.4-0.7 percentage points from global GDP relative to the pre-conflict baseline. The April headline — "War Darkens Global Economic Outlook" (IMF Blog, April 14) — is the bleakest framing the IMF has used since the 2020 "Great Lockdown" designation.
+
+The IMF's scenario analysis is particularly alarming for its downside cases: a "prolonged disruption" scenario (Hormuz restricted for 9-12 months) projects global growth at 2.4-2.7% — below the 3% threshold the IMF historically identifies as a "global recession" proxy. Emerging market and developing economies are projected to experience the sharpest growth compression: sub-Saharan Africa (oil import-dependent, already stressed by food inflation) at 3.5% (down from 4.2% baseline); South Asia at 5.1% (resilient but down from 6.2%); Latin America at 1.8% (Venezuela transition costs contributing).
+
+**Global Inflation: 4.4% Headline, The Hormuz Premium**
+
+Global headline inflation is projected at 4.4% for 2026 — a significant re-acceleration from the 2024-2025 disinflation trend that had brought global inflation toward 3.5%. The Hormuz conflict adds approximately 1.5-2.0 percentage points to global inflation through three channels: direct energy price increases (Brent at $127/barrel vs. $82 pre-conflict), shipping cost pass-through across all tradeable goods (container rates up 340% on some routes since Suez Canal diversion increased demand), and commodity price knock-on effects (fertilizer, plastics, chemicals with petroleum inputs). Central banks face the same "stagflationary supply shock" challenge as the 2022 Russia-Ukraine energy crisis: raising rates to fight inflation risks choking already-slowing growth, while accommodating inflation allows expectations to de-anchor.
+
+The Federal Reserve held rates at 4.75% at its May 2026 meeting, with Chair Powell's statement walking the "watch and assess" line. ECB maintained its 2.5% rate in June. Both institutions are modeling scenario branches: a conflict-resolution scenario where Hormuz disruption ends by September 2026 (base case, allowing disinflation to resume) versus a prolonged scenario requiring active rate hikes to prevent inflation re-entrenchment.
+
+**Recession Probability at 30%: The Markets' Assessment**
+
+Goldman Sachs and JPMorgan's June 2026 economic reports independently arrive at a 28-32% probability of global recession by Q4 2026 — defined as three consecutive quarters of below-trend growth for three or more G7 economies. This exceeds the 2019 pre-COVID elevated risk period (15-20%) but remains below 2022 Eurozone recession probability peaks (~45% for Europe alone). The key threshold variable: duration of Hormuz disruption. The Oman-mediated negotiation channel remains active but deadlocked on the core asymmetry — Iran demands US naval withdrawal from Gulf waters before any agreement, a condition the US characterizes as "surrendering freedom of navigation." Each month without resolution adds approximately 0.2% to 2026 global GDP loss.
+
+**last_updated: 2026-06-10**

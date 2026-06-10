@@ -188,3 +188,25 @@ The intelligence challenge of monitoring DPRK nuclear expansion drives AI-enable
 - [[2026-05-30-north-korea-nuclear-russia-china-axis]]
 - [[2026-05-27-us-china-great-power-competition]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: 90-Warhead Intelligence Estimate, MIRV Development, and the $18B GMD Expansion
+
+**Updated Intelligence Estimate: Material for 90 Warheads**
+
+A Congressional Research Service (CRS) report published in the week of June 3-8, 2026 — citing updated intelligence assessments — estimates North Korea's current fissile material stockpile is sufficient to produce approximately 90 nuclear warheads. This is a significant upward revision from the Bulletin of the Atomic Scientists' 2025 estimate of 50-80 warheads, reflecting the production capacity expansion that the new June 3 enrichment facility represents. If Kim Jong-un's claim that production capacity has "more than doubled" in five years approximates reality, North Korea could be producing fissile material for 12-15 warheads annually — putting it on track for a 100+ warhead arsenal by 2027.
+
+At that scale, North Korea transitions from a deterrent nuclear power (sufficient to threaten retaliation after absorbing a first strike) to a nuclear force with genuine second-strike survivability even against a US preemptive strike scenario. This threshold — 100+ survivable warheads — is what arms control scholars call the "minimum deterrence sufficiency threshold" above which a nuclear arsenal's primary vulnerability (all weapons could be destroyed in a first strike) is eliminated. North Korea crossing this threshold would fundamentally change the deterrence calculus on the Korean peninsula: the US option of a "counterforce" strike (destroying North Korean nuclear weapons before they can be used) becomes operationally implausible, removing the last military alternative to pure deterrence.
+
+**MIRV Technology: Multiplying the Threat Without More Missiles**
+
+South Korean and US joint intelligence assessments (released to Congressional briefers in May-June 2026) indicate North Korea is developing MIRV (Multiple Independently Targetable Reentry Vehicle) technology for its Hwasong-series ICBMs. MIRVs allow a single missile to carry multiple warheads directed to different targets — multiplying the effective arsenal size without requiring additional missiles. If North Korea MIRVs the Hwasong-17 or Hwasong-18 ICBM (both have throw-weight sufficient for 3-4 warheads), a notional 90-warhead stockpile mounted on 30 MIRVed ICBMs would have the same strategic deterrent value as 90 single-warhead missiles — but with significantly greater penetration capability against missile defense systems designed around single-warhead intercept trajectories.
+
+Kim Ju-ae's appearance at the new enrichment facility alongside her father — widely interpreted as succession signaling, with Kim seeking to demonstrate his daughter's involvement in the nuclear program's most sensitive facilities — suggests North Korea's nuclear program is being treated as a dynastic inheritance rather than a negotiable asset. This framing is significant for diplomacy: if the nuclear program is Kim Jong-un's bequest to his heir, denuclearization requires Kim to undo his legacy rather than make a pragmatic security calculation, making it even less likely than analysts had previously modeled.
+
+**Congressional GMD Expansion: 44 to 64 Interceptors, $18 Billion**
+
+The CRS report recommends expanding the Ground-based Midcourse Defense (GMD) system — the US mainland ballistic missile defense network — from 44 interceptors to 64, at approximately $18 billion. The expansion would add interceptors at Fort Greely, Alaska, and potentially a new East Coast site. At 44 interceptors with a 2:1 coverage ratio, current GMD can handle approximately 22 incoming warheads — insufficient against a MIRVed North Korean ICBM salvo that could deliver 60-90 warheads. The 64-interceptor expansion, while improving coverage, still faces the fundamental mathematics problem: North Korea can add warheads cheaper than the US can add interceptors (each ground-based interceptor costs approximately $70 million; each additional DPRK warhead costs approximately $1-5 million in fissile material and engineering).
+
+**last_updated: 2026-06-10**

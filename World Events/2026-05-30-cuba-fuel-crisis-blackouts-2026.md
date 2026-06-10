@@ -240,3 +240,23 @@ Cuba's fuel crisis directly impacts what minimal digital infrastructure exists. 
 - [[cryptography-fundamentals-and-zero-knowledge-proofs]]
 - [[2026-05-30-venezuela-operation-absolute-resolve-us-intervention]]
 - [[2026-06-06-latin-america-geopolitics-us-china-influence-2026]]
+
+---
+
+### Update — June 10, 2026: Grid Collapse on March 16, 22-Hour Daily Blackouts, and the US Fuel Blockade Deepening
+
+**March 16, 2026: Cuba's National Grid Collapses**
+
+Cuba's already-precarious electricity system crossed a catastrophic threshold on March 16, 2026 when the national power grid experienced a total collapse — plunging the entire island of 11 million people into darkness simultaneously for approximately 18 hours. The Wikipedia "2024-2026 Cuba Blackouts" article documents this as Cuba's third major grid collapse in 18 months (following October 2024 and January 2026 events), each reflecting the same structural failure: thermoelectric plants operating on degraded fuel supplies experience cascading failures as voltage regulation fails and protective systems trip offline in sequence.
+
+The March 16 collapse came as the Ministry of Energy and Mines was already warning of extreme fuel scarcity. NPR (May 14, 2026) reported Energy Minister Vincent De La O'levy's public statement that "Cuba has run out of oil and diesel" — extraordinary candor from a government that had previously framed energy shortages as "supply disruptions." The statement came as Cuba produced only 40% of its domestic fuel requirements — down from approximately 55% in 2023, reflecting accelerating decline in Cuba's own mature oilfields and the collapse of Venezuelan subsidized oil transfers following Maduro's capture.
+
+**The US Fuel Blockade: Executive Order January 29, 2026**
+
+Trump's January 29, 2026 Executive Order authorizing additional tariffs on countries supplying oil to Cuba directly targeted the Cuban economy's last remaining fuel lifeline. With Venezuela's subsidized oil transfers ended by Operation Absolute Resolve (January 3), Cuba was relying on Russian, Mexican, and Algerian oil — supplied at below-market rates through alternative arrangements. The tariff order specifically targeted vessels that had delivered fuel to Cuban ports within 180 days, effectively imposing a secondary boycott that made most shipping companies unwilling to risk US market access for the marginal commercial value of Cuba trade. The practical effect: Cuba's seaborne fuel imports dropped approximately 65% in February-March 2026 compared to the previous six-month average.
+
+**20-22 Hour Daily Blackouts and the Humanitarian Cascade**
+
+Al Jazeera (May 14, 2026, "Absolutely No Fuel: Cuba Hit by Blackouts") documented the human cost: 20-22 hour daily blackout periods across most of Cuba outside Havana's most critical infrastructure districts. The humanitarian cascade is multidimensional: food refrigeration failure is spoiling an estimated 30-40% of perishable food in a country already experiencing severe food shortages; hospital operating theaters cannot maintain surgical schedules, creating a backlog of 50,000+ scheduled procedures; one million people across eastern Cuba depend on electrically-pumped water systems — their water supply now requires trucking operations that consume the scarce diesel supplies they cannot obtain for electricity generation. Cuba's protest movement — which had re-emerged after the July 2021 uprising — intensified in May 2026, with demonstrations in Santiago de Cuba, Holguín, and Havana streets becoming more frequent and more openly anti-government in language, representing the most sustained challenge to the Communist Party since 2021.
+
+**last_updated: 2026-06-10**

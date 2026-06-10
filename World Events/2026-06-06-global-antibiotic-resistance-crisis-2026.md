@@ -113,3 +113,25 @@ AI is the most promising technological response to the AMR crisis. [[Machine-lea
 - [[moral-psychology-and-ethical-decision-making]]
 - [[2026-05-27-ebola-outbreak-drc-uganda-2026]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: WHO GLASS Report 2026, $518M AMR Fund Gap, and AI Drug Discovery Milestone
+
+**WHO GLASS Report 2026: Resistance Crossing Critical Thresholds**
+
+The WHO Global Antimicrobial Resistance and Use Surveillance System (GLASS) Report 2026 — released in May — documents the most alarming resistance trends since the O'Neill Commission's landmark 2016 projections. Key findings: carbapenem-resistant Klebsiella pneumoniae (CRKP) now exceeds 30% prevalence in ICUs in 15 countries including India, Brazil, Greece, and parts of sub-Saharan Africa — meaning the antibiotic of last resort for these infections fails in one-third of cases; extended-spectrum beta-lactamase (ESBL)-producing E. coli prevalence exceeds 60% in 23 countries, including many EU member states; methicillin-resistant Staphylococcus aureus (MRSA) bloodstream infections have increased 18% globally since 2020, reversing a decade of progress. The cumulative deaths directly attributable to AMR in 2025 are estimated at 1.4 million — up from 1.27 million in 2019 — tracking the O'Neill trajectory toward 10 million by 2050.
+
+The GLASS report's most concerning finding is the "resistance gap" in low-income countries: high-income countries show stabilization of some resistance trends (through stewardship programs, sewage treatment, agricultural antibiotic regulation) while low-income countries show acceleration — creating a global justice dimension where populations with least access to healthcare bear the greatest AMR burden. The WHO describes this as "AMR apartheid" — a loaded term that signals the moral framing the organization is deploying to shift global political attention.
+
+**The $518M CARB-X Gap and Antibiotic Market Failure**
+
+CARB-X (Combating Antibiotic Resistant Bacteria Biopharmaceutical Accelerator) — the global public-private partnership funding early-stage antibiotic development — published its 2025 annual report documenting a critical funding gap: the early-stage pipeline requires $518 million in new investment to maintain current development momentum, but traditional commercial investors have largely abandoned the antibiotic development sector. The market failure is structural: a new antibiotic, once developed, should be used sparingly (to prevent resistance) rather than broadly (which is how pharmaceutical companies recover development costs). This creates an "inverse market": the better an antibiotic is (broad-spectrum, highly effective), the more rapidly resistance evolves if it's used widely, and the more the public health system needs it reserved — creating commercial incentives that are perfectly misaligned with public health objectives.
+
+Multiple pull incentive mechanisms are under negotiation: the UK's PASTEUR Act equivalent (paying £10M for any antibiotic with new mechanisms), the EU's "Transferable Exclusivity Voucher" system (giving successful antibiotic developers extended exclusivity on other drugs as a reward), and a proposed WHO Global AMR Fund modeled on GAVI's vaccine purchase commitments. None of these mechanisms has been fully funded; the June 2026 G7 Health Ministers' Meeting is a key opportunity to secure the political commitments necessary to translate them into operational programs.
+
+**AI Drug Discovery: Halicin's Successors and the AlphaFold Pipeline**
+
+The 2020 discovery of halicin (an antibiotic effective against drug-resistant bacteria, identified by MIT's deep learning model) opened a new paradigm — AI-discovered antibiotics. By June 2026, three AlphaFold-adjacent AI drug discovery programs have advanced to Phase I clinical trials: ABX-501 (Insilico Medicine, targeting NDM-producing Enterobacteriaceae), CL-1032 (Pfizer/Recursion collaboration, targeting MRSA via novel membrane mechanism), and BacterAI-7 (academic consortium, targeting multidrug-resistant Pseudomonas). None have yet reached Phase II, meaning they remain 5-7 years from market — but the pipeline is the most promising in twenty years. Graph Neural Network models predicting antibiotic resistance mechanisms have achieved 89% accuracy in academic benchmarks, enabling "resistance-informed" drug design that anticipates how bacteria will evolve resistance before it occurs clinically.
+
+**last_updated: 2026-06-10**

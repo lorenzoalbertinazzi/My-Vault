@@ -191,3 +191,21 @@ Colombian elections in 2026 run through a highly polarized social media ecosyste
 - [[large-language-models-applications-and-limitations]]
 - [[2026-06-06-latin-america-geopolitics-us-china-influence-2026]]
 - [[2026-05-30-venezuela-operation-absolute-resolve-us-intervention]]
+
+---
+
+### Update — June 10, 2026: Eleven Days to Runoff, De la Espriella's 5-7 Point Lead, and the US Stakes
+
+**The Final Stretch: June 10-21 Campaign**
+
+With eleven days remaining before Colombia's June 21 presidential runoff, polls consistently show right-wing populist Abelardo de la Espriella leading left-wing candidate Iván Cepeda by 5-7 percentage points — a lead that is outside the margin of polling error for most surveys but not so large as to be insurmountable given Colombia's historically volatile electorate and the record-breaking first-round turnout (57.88%) that suggests high engagement from previously dormant voting blocs. AS/COA's June 9, 2026 poll tracker — the most respected aggregation source for Colombian electoral data — shows de la Espriella at approximately 50-52% and Cepeda at 43-45% in most recent polls, with the remaining fraction undecided or abstaining.
+
+The final campaign phase is being shaped by three variables. First, the Petro legacy question: incumbent President Gustavo Petro (constitutionally barred from re-election) has enthusiastically endorsed Cepeda, but Petro's approval rating stands at 29% — creating a politically toxic endorsement that Cepeda must manage by differentiating himself from Petro's most unpopular policies while maintaining the Historic Pact coalition's activist base. Second, the FARC dissidents ceasefire collapse: Petro's signature "total peace" strategy — negotiated ceasefires with FARC dissidents, ELN guerrillas, and criminal organizations — effectively ended in early 2026 when the FARC dissidents' Estado Mayor Central resumed kidnapping operations after a breakdown in peace talks. This collapse is de la Espriella's most powerful campaign issue, positioning his security-first platform as the only credible alternative. Third, coca eradication: US pressure for resumed aerial glyphosate spraying (suspended under Petro) creates a direct US-Colombia policy link that de la Espriella is leaning into aggressively.
+
+**Washington's Stake: Drug Policy, Venezuela Policy, and Plan Colombia 3.0**
+
+The Trump administration has a visible stake in the Colombia outcome — more than in any Latin American election since the Maduro capture. A de la Espriella victory would: (1) restore Colombia-US security cooperation to pre-Petro levels, including aerial eradication and extradition of drug traffickers; (2) provide Washington with a reliable partner on Venezuela reconstruction oversight (Colombia shares a 2,219km border with Venezuela and hosts 2.5 million Venezuelan migrants); and (3) signal that US hardline Latin America policy (Operation Absolute Resolve, Venezuela intervention, Cuba blockade) has not generated the hemispheric blowback that critics predicted. Secretary of State Rubio has taken an unusually activist role in Colombia outreach, with multiple calls to Colombian military leadership and a State Department delegation visiting Bogotá in late May — visits that Colombian opposition politicians have characterized as "electoral interference" and that de la Espriella's campaign has deliberately welcomed for its US-alignment signaling value.
+
+A Cepeda victory, by contrast, would complicate nearly every US Latin America policy priority: Colombia under Cepeda would likely restore diplomatic relations with Venezuela's Rodríguez government on Cepeda's own terms (rather than the US-dictated transitional framework), resist extradition, and resume the Global South coalition-building that Petro had pursued through CELAC and with BRICS observer status. The geopolitical stakes of a gubernatorial election in Bogotá have rarely been higher for Washington's hemispheric vision.
+
+**last_updated: 2026-06-10**

@@ -280,3 +280,25 @@ Post-intervention Venezuela faces digital infrastructure challenges requiring [[
 - [[2026-06-06-latin-america-geopolitics-us-china-influence-2026]]
 - [[2026-05-30-cuba-fuel-crisis-blackouts-2026]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: Rodríguez's Acting Presidency, $1 Billion in Oil Sales, and the $100 Billion Scramble
+
+**Delcy Rodríguez as Acting President: The Unexpected Continuity**
+
+One of the most surprising outcomes of Operation Absolute Resolve (January 3, 2026 capture of Nicolás Maduro) is that Venezuela's government structure survived the intervention largely intact. Under Venezuela's constitution, Vice President Delcy Rodríguez was sworn in as acting president on January 5 — creating a scenario where the US achieved its stated goal (removing Maduro) while the chavista governing apparatus remained in power. Rodríguez, a former Foreign Minister and one of Maduro's closest political allies, was herself under US sanctions for corruption and human rights violations. Yet the US lifted individual sanctions on Rodríguez in exchange for her government's cooperation with the transitional framework, including: releasing political prisoners (276 released by February 2026), passing a private investment law for the oil sector, and accepting a new US ambassador (first since 2019).
+
+The arrangement reflects a US calculation that a complete government collapse — as in Libya 2011 — would generate humanitarian catastrophe and mass migration dwarfing any political benefit. Rodríguez provides governance continuity while the US extracts its core objectives: Maduro's removal from Venezuelan political life and oil sector liberalization. Stimson Center's February 2026 analysis called the outcome "an intervention that achieved its narrow operational objective while creating a governance hybrid that satisfies no consistent political philosophy."
+
+**The $100 Billion Oil Scramble: February 2026 Licenses**
+
+US Energy Secretary Chris Wright's February 2026 Caracas visit, during which he announced that oil sales since Maduro's capture had already exceeded $1 billion, marked the beginning of the structured oil sector reconstruction. The US issued new operating licenses to: Chevron (which had maintained limited Venezuela operations under a pre-existing Treasury general license), ExxonMobil (returning to Venezuela for the first time since its nationalization in 2007), ConocoPhillips (seeking assets seized from its $8.7B arbitration award), and smaller independents. Venezuelan oil production at the time of the intervention was approximately 700,000 bpd — down from a peak of 3.2 million bpd in 1998.
+
+The "100 billion scramble" refers to the Financial Content analysis estimating that if Venezuela can recover production to 2.0-2.5 million bpd within five years (technically feasible given proven reserves of 303 billion barrels — the world's largest), the revenue value at $100-120/barrel would exceed $100 billion annually — the prize driving both US and Chinese interest. China's position is adversarial: CNPC's $55 billion in oil-for-loans gives it legal claims to production-sharing agreements that the Rodríguez government inherited from Maduro. The US insistence on prioritizing American company contracts creates a direct US-China legal confrontation embedded in Venezuela's reconstruction.
+
+**June 2026: Chavista Resistance and the Reconstruction's Political Complexity**
+
+Five months after the intervention, Venezuelan reconstruction faces three acute challenges. First, the Rodríguez government's political legitimacy is contested within chavismo itself: hardline Maduro loyalists in Anzoátegui and Zulia states (controlling PDVSA oilfield infrastructure) have not disarmed and are conducting slowdown strikes that reduce actual production to approximately 850,000 bpd — above the pre-intervention baseline but far below potential. Second, the 7.7 million diaspora Venezuelans are returning at approximately 80,000-100,000 per month — a managed return that is straining Caracas infrastructure (water, electricity, housing) while providing skilled labor for reconstruction. Third, the National Assembly — elected in the fraudulent 2020 elections the US had refused to recognize — is now being treated as the legislative body of record under the US framework, creating constitutional contradictions that Venezuelan legal scholars note could be challenged once US military presence recedes.
+
+**last_updated: 2026-06-10**

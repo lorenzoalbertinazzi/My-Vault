@@ -190,3 +190,25 @@ The papal encyclical on AI meets a profound [[positive-psychology-and-wellbeing-
 - [[positive-psychology-and-wellbeing-science]]
 - [[cialdini-influence]]
 - [[2026-05-30-global-ai-governance-race-to-regulate]]
+
+---
+
+### Update — June 10, 2026: Pope Leo XIV Consecrates Sagrada Família Today, June Consistory Focuses on AI, and the Industry's Response
+
+**June 10, 2026: Pope Leo XIV at Sagrada Família — A Day of Convergent Symbolism**
+
+In one of the most symbolically charged moments of the year, Pope Leo XIV today presided over the consecration of the Tower of Jesus Christ at Barcelona's Sagrada Família basilica — completing the 144-year construction project on the centenary of Antoni Gaudí's death. The Tower of Jesus Christ, at 172.5 meters, became both the tallest structure in Barcelona and the tallest church in the world upon its cross installation on February 20, 2026. Pope Leo XIV celebrated a Solemn Mass marking simultaneously: the architectural completion of Gaudí's life work, the centenary of the architect's death, and Gaudí's ongoing beatification cause. CNN's June 8, 2026 report characterized the event as "the most watched religious ceremony since the 2025 papal election" — bringing together themes of creation, beauty, human work, and divine aspiration that directly echo the Magnifica Humanitas encyclical's anthropology of technology as a human creative capacity that must serve transcendent human dignity.
+
+The symbolic resonance is not accidental: Leo XIV chose to schedule his Sagrada Família visit to coincide with the Gaudí centenary, and the basilica — designed through an organic process Gaudí himself described as "God's cathedral" — represents a model of technology serving spiritual and aesthetic values rather than purely functional or economic ones. In his Sagrada Família homily, Leo XIV quoted directly from Magnifica Humanitas: "As Gaudí gave his genius to a work that would outlast his body, so we are called to ensure that artificial intelligence serves generations we will never meet."
+
+**Late June Consistory: Cardinals to Discuss AI and Just War Theory**
+
+Following the encyclical's release, Pope Leo XIV called a papal consistory for late June 2026, with sessions explicitly addressing topics from Magnifica Humanitas: the development of Catholic doctrine on artificial intelligence in warfare (just war theory applied to autonomous weapons systems), the pastoral dimensions of AI in healthcare (algorithmic decision-making in end-of-life care — one of the encyclical's most detailed sections), and the governance framework for ensuring AI companies operating in Catholic institutional contexts (hospitals, schools, social services globally) meet the encyclical's human dignity standards.
+
+The consistory's just war theory session is particularly consequential: the encyclical's section on autonomous weapons explicitly argued that delegating lethal decisions to AI systems "violates the fundamental moral requirement that a human being bear personal moral responsibility for the taking of human life." This argument has direct implications for NATO members (including predominantly Catholic Poland, Italy, and Portugal) developing or deploying autonomous weapons systems, and has already prompted SIPRI to request a formal dialogue session with the Pontifical Academy of Sciences.
+
+**Industry Response: From Anthropic's Christopher Olah to NVIDIA's Jensen Huang**
+
+Anthropic co-founder Christopher Olah, who appeared alongside Leo XIV at the encyclical's launch, issued a statement calling the document "the most philosophically sophisticated engagement with AI safety from any major institution." NVIDIA's Jensen Huang described the encyclical as "a serious contribution to the AI governance conversation," while noting that his company's hardware is "a tool — like electricity — whose moral valence depends entirely on its application." The Catholic Health Association (representing 600+ US hospitals) announced a Magnifica Humanitas implementation committee to develop AI governance standards for Catholic healthcare institutions globally — potentially the largest single implementation context for a papal document since Rerum Novarum influenced the labor movement a century ago.
+
+**last_updated: 2026-06-10**

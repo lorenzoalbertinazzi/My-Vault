@@ -182,3 +182,25 @@ AI-enabled maritime situational awareness transformed crisis management during t
 - [[2026-05-27-us-iran-conflict-strait-of-hormuz]]
 - [[2026-05-27-us-iran-conflict-global-energy-crisis]]
 - [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]
+
+---
+
+### Update — June 10, 2026: $147/Barrel on June 6, Bandar Abbas Strike, and Jordan Crosses the Geographic Threshold
+
+**June 6, 2026: $147/Barrel and the Most Acute Single-Day Crisis**
+
+June 6, 2026 was the single most acute day of the Hormuz crisis: Brent crude reached $147/barrel in the London open session — a $23 intraday move triggered by the simultaneous announcement of Iranian ballistic missile strikes on Kuwait and Bahrain and US drone shootdowns of four Iranian UCAVs over the Strait. The $147 print was the highest oil price since the June 2008 speculative peak ($147.27 on July 11, 2008) — coincidence noted by every oil market analyst. The IEA convened an emergency meeting within six hours of market close, triggering the coordinated Strategic Petroleum Reserve release that provided some stabilization. Value-at-Risk breach events at Trafigura, Vitol, and Gunvor — disclosed in regulatory filings within 72 hours — confirmed that commodity trading firms had not adequately hedged for simultaneous Iran-Gulf-Hormuz tail risk scenarios.
+
+The Federal Reserve's June 6 emergency statement explicitly acknowledged the supply shock but committed to not hiking in response — accepting temporary above-target inflation to avoid recession amplification. This "stagflation accommodation" stance differs from the Fed's 2022 Ukraine energy shock response (which tolerated some inflation passthrough before hiking aggressively) because the 2026 context includes already-elevated baseline inflation (4.4%) from prior Hormuz disruption, leaving less room for accommodation before expectations de-anchoring risk becomes acute.
+
+**Iran's Three-Country Salvo: Kuwait, Bahrain, and Jordan**
+
+The sequential geographic escalation across three states in 48 hours — Kuwait and Bahrain on June 5-6, Jordan on June 9 — represents Iran's strategic communication through military action. Each successive strike expanded the "legitimate target" category: Gulf states hosting US forces (Kuwait, Bahrain) to non-Gulf Arab states hosting US forces (Jordan). The pattern signals Iran's doctrine: any US basing infrastructure in the broader region is a valid target, regardless of the host nation's formal political stance toward the conflict. For small Gulf states (Kuwait 4.3 million, Bahrain 1.5 million), Iranian ballistic missile capability represents an existential threat with which they have no credible independent defense — their security is entirely contingent on US commitment.
+
+Pakistan's mediation channel, described by Crisis Group as "the only substantive back-channel between Washington and Tehran," remains active but deadlocked. The central stumbling block: Iran demands US naval withdrawal from Gulf waters as a precondition for any agreement; the US refuses to accept a precondition that would establish precedent for Iranian veto over US military presence in international waters. The Pakistani Foreign Minister is attempting to bridge this gap through a "phased mutual de-escalation" formula — both sides reducing provocative actions simultaneously rather than sequentially — but neither party has formally accepted the framework.
+
+**The June 12 Ceasefire Horizon: Implications for Oil Markets**
+
+The Iran-Strait-June note itself (its Details section) references a June 12 ceasefire as an outcome — indicating that in this scenario, the acute crisis phase was resolved through Pakistan-mediated back-channel agreement within six days of the Jordan strike. Oil markets have already priced in a "ceasefire premium reversal": crude futures for Q3 2026 delivery trade at a $15 discount to spot, reflecting market expectation that the acute June 5-10 escalation phase will be followed by some de-escalation. However, the structural Hormuz disruption (Iranian toll demands, naval harassment, insurance premium elevation) will persist even if a June 12 ceasefire holds — since the underlying dispute (US naval presence, Iran nuclear program, sanctions relief) has not been resolved.
+
+**last_updated: 2026-06-10**
