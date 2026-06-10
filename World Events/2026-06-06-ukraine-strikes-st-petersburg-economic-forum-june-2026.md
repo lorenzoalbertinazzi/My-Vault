@@ -205,3 +205,27 @@ The June 3 SPIEF strike and June 6 Kronstadt/Tyumen strikes occurred in the same
 - [[Finance/geopolitical-risk-premium-and-markets]] — Russian sanction circumvention; SPIEF's role in Russia's international economic architecture
 - [[Psychology/social-psychology-and-group-dynamics]] — Information operations and domestic Russian morale
 - [[Tech & AI/generative-adversarial-networks-gans]] — AI-generated content in information operations surrounding the SPIEF strike
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: Investor Conference Disruption, Russian Business Psychology, and Sanctions**
+
+Ukraine's strikes on the St. Petersburg International Economic Forum (SPIEF) — Russia's premier annual showcase for attracting foreign investment — represent a high-value strategic communication operation with [[geopolitical-risk-premium-and-markets]] implications. SPIEF functions as Russia's annual demonstration of "business as usual" despite Western sanctions — attendance by non-Western companies (Chinese, Gulf, Southeast Asian, African) signals continued engagement with the Russian economy. The strikes' financial significance: any foreign executives present at SPIEF risk US/EU sanctions designation under "material support" provisions — creating compliance chilling effects on non-Western companies considering Russian engagement. [[Real-assets-reits-and-commodities]] signal: Russian oil and gas infrastructure project announcements at SPIEF typically move Arctic LNG and Russian commodity asset valuations — disruption reduces Russian ability to attract capital for resource development. [[Private-equity-and-venture-capital]] in Russia-adjacent markets (Central Asia, Caucasus) assesses SPIEF's disruption as a signal of Russian vulnerability that affects the risk premium for any Russia-adjacent investment. [[Macroeconomics-101]] analysis of Russian war economy: GDP growth despite sanctions has been driven by defense spending and energy revenues — SPIEF was designed to attract capital for the non-defense sectors that are actually struggling.
+
+**↔ Psychology: Prestige Attack, Deterrence Signaling, and Russian Elite Psychology**
+
+Striking SPIEF is a precision [[48-laws-of-power]] operation — targeting Russian prestige and the elite networks that sustain Putin's political coalition rather than purely military objectives. The psychological target is Russia's oligarchic-bureaucratic class: demonstrating that participation in Putinism's showcase events carries personal risk creates subtle defection incentives within the elite coalition. [[Psychology-of-leadership]] analysis: Putin's response to the SPIEF strikes — continuing the forum, maintaining composure, projecting normalcy — is rational authoritarian signaling that internal weakness cannot be shown. [[Social-psychology-and-group-dynamics]] of Putin's inner circle: the strikes create private conversations among Russian elites that wouldn't occur otherwise — safety calculations, exit option assessments, and loyalty recalibration that erode coalition cohesion at the margins. [[Negotiation-tactics]] dimension: the strike signals Ukrainian capability to reach high-value Russian civilian targets — a credibility demonstration that strengthens Ukraine's hand in any eventual peace negotiations by demonstrating consequences for Russia of continued war. [[Cognitive-biases]] in Russian public opinion: vivid, unexpected attacks on prestigious civilian events (unlike front-line combat) have higher availability heuristic impact — potentially more effective at shifting Russian public war assessment than equivalent battlefield losses.
+
+**↔ Tech & AI: Long-Range Strike Accuracy, GPS Denial, and Information Operations**
+
+Ukraine's ability to strike SPIEF in St. Petersburg — 1,400km from Ukrainian-controlled territory — demonstrates advanced [[agentic-ai-and-multi-agent-systems]] long-range strike capability. The strike required: satellite intelligence for target identification, mission planning AI for routing through Russian air defense corridors, [[computer-vision-and-convolutional-neural-networks]] terminal guidance for precision, and electronic warfare management to suppress air defense response. [[Edge-computing-and-on-device-ai]] navigation through GPS-denied environments (Russia operates extensive GPS jamming over its territory) relies on terrain-matching algorithms and inertial navigation with AI-assisted error correction. The information operations dimension: [[large-language-models-applications-and-limitations]] generate multiple simultaneous narratives around the strike — for Western audiences (Ukraine capability/resolve signal), Russian audiences (elite are not safe), and neutral audiences (war is escalating, diplomacy needed). [[Machine-learning-fundamentals]] was used in mission planning: predictive models of Russian air defense radar coverage, patrol timing, and response protocols enable identification of penetration windows that human planners would take weeks to develop manually.
+
+## Related
+- [[geopolitical-risk-premium-and-markets]]
+- [[48-laws-of-power]]
+- [[psychology-of-leadership]]
+- [[agentic-ai-and-multi-agent-systems]]
+- [[computer-vision-and-convolutional-neural-networks]]
+- [[2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]]
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]]
+- [[2026-06-06-russia-massive-attack-ukraine-kyiv-june-2026]]

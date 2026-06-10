@@ -252,3 +252,26 @@ The Outer Space Treaty (1967) prohibits national appropriation of celestial bodi
 
 **Materials Science and the Space Economy:**
 Tiangong's microgravity research is exploring manufacturing processes that are impossible or extremely difficult in Earth's gravitational field. Protein crystal growth in microgravity produces larger, more perfect crystals than Earth-based growth — enabling higher-resolution X-ray crystallography that accelerates drug discovery. Semiconductor manufacturing in microgravity can produce defect-free substrates (ZBLAN fiber optic cables produced in microgravity have 10–100x lower attenuation than Earth-produced fiber). These are not speculative future applications — they are commercially demonstrated. Varda Space (US) has conducted commercial microgravity drug manufacturing; other companies are developing orbital manufacturing as a near-term business. China's Tiangong microgravity research portfolio positions CASC (China Aerospace Science and Technology Corporation) for eventual commercial technology licensing from space-originated IP — a long-term revenue strategy that provides economic justification for the program independent of geopolitical prestige.
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: Space Economy, Launch Contracts, and Dual-Use Investment**
+
+China's Shenzhou-23 yearlong mission advances Chinese space station capabilities in ways that have direct [[geopolitical-risk-premium-and-markets]] and commercial implications. The space economy is a [[private-equity-and-venture-capital]] growth sector: SpaceX's Starship, Rocket Lab, and Chinese commercial equivalents (LandSpace, Galactic Energy) are competing for a launch services market projected to exceed $1T by 2040. Tiangong station data on long-duration human spaceflight has direct application to commercial space tourism and Mars mission planning — both investable [[real-assets-reits-and-commodities]]-adjacent themes. [[Factor-investing-and-smart-beta]] space sector ETFs now include Chinese commercial space companies previously excluded from US-listed vehicles; geopolitical risk management requires explicit China space exposure analysis. The dual-use nature of Shenzhou technology — military satellite servicing, reconnaissance, rendezvous-and-proximity operations — creates [[geopolitical-risk-premium-and-markets]] sensitivity that pure commercial space analysis misses. NASA's exclusion from ISS cooperation with China (Wolf Amendment) has pushed the US toward commercial partnerships (Axiom Station, Starlab), creating investment opportunities in the private space station sector.
+
+**↔ Psychology: Space Psychology, Long-Duration Isolation, and National Pride**
+
+Yearlong spaceflight produces the most extreme [[stress-physiology-and-performance-optimization]] conditions studied outside of Antarctic expeditions. Chinese taikonauts on yearlong missions provide valuable [[cognitive-load-theory-and-learning]] and performance data under prolonged isolation, confinement, and altered sleep cycles. [[Flow-state-and-peak-performance]] research has been applied to astronaut mission design: structured challenge progression, mastery experiences, and autonomy in scheduling maintain psychological engagement during repetitive orbital operations. National space achievement functions as a powerful [[social-psychology-and-group-dynamics]] in-group pride mechanism: Chinese state media coverage of Shenzhou missions is designed to activate national identity pride that compensates for domestic economic pressures. [[Evolutionary-psychology-and-human-behavior]] research on exploration motivation — the "explorer's premium" in human psychology — helps explain why space programs generate disproportionate national enthusiasm relative to their economic cost.
+
+**↔ Tech & AI: Space AI, On-Orbit Computing, and Technology Transfer**
+
+Tiangong station's research program includes explicit AI and ML experiments. [[Edge-computing-and-on-device-ai]] is critical for space operations: communication latency (10-20 second round trip to ground) means autonomous onboard AI must handle real-time decisions. [[Machine-learning-fundamentals]] models for medical diagnosis, equipment anomaly detection, and scientific data analysis run on-orbit with limited compute resources — driving efficiency innovations transferable to Earth applications. [[Agentic-ai-and-multi-agent-systems]] control robotic arms on Tiangong for experiments and maintenance tasks. China's space AI program feeds directly into its [[ai-governance-and-regulation-frameworks]] development — space AI applications are explicitly cited in Chinese national AI strategy as proof-of-concept for human-AI collaboration in extreme environments. [[Computer-vision-and-convolutional-neural-networks]] for Earth observation from Tiangong produce commercially valuable imagery that supplements Landsat and commercial satellite data.
+
+## Related
+- [[geopolitical-risk-premium-and-markets]]
+- [[real-assets-reits-and-commodities]]
+- [[stress-physiology-and-performance-optimization]]
+- [[edge-computing-and-on-device-ai]]
+- [[agentic-ai-and-multi-agent-systems]]
+- [[2026-05-27-us-china-great-power-competition]]
+- [[multipolar-world-order-and-future-of-global-governance]]

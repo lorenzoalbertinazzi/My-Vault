@@ -190,3 +190,26 @@ The 2026 World Cup's tri-national, 11-city US format creates an unusual competit
 - [[Psychology/social-psychology-and-group-dynamics]] — National identity, BIRG, collective emotion in global sporting events
 - [[Psychology/evolutionary-psychology-and-human-behavior]] — Coalition psychology and intergroup competition in sports
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Soft power and sports diplomacy; sports-washing and national prestige
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: Sports Economics, Host City Impact, and Media Rights Valuation**
+
+FIFA World Cup 2026 hosting in North America represents the largest single sports event economic analysis in history — with 48 teams, 16 host cities across US, Canada, and Mexico, and a projected $5B+ in direct economic activity. [[Private-equity-and-venture-capital]] in sports media has been transformed by World Cup rights: streaming rights (Apple TV+ secured rights for English-language in a landmark deal) represent a shift from traditional broadcast that changes [[Discounted-Cash-Flow-Analysis]] models for media company valuations. [[Real-assets-reits-and-commodities]] — specifically hotel real estate and short-term rental markets in host cities — show dramatic price premiums during tournament windows. FIFA's own financial structure — a Swiss-based nonprofit distributing $1B+ to member associations — represents a unique [[tax-efficient-investing]] entity whose governance failures have attracted regulatory scrutiny. [[Behavioral-finance-and-investor-psychology]] manifests clearly in sports betting markets: World Cup sports betting volumes dwarf normal patterns, and retail betting behavior (home country bias, recency bias from recent form) creates systematic pricing inefficiencies that sophisticated bettors exploit. [[Currency-markets-and-fx]] show measurable tourist spending effects in host cities — particularly notable for Mexican peso strength from fan spending in Guadalajara, Monterrey, and Mexico City matches.
+
+**↔ Psychology: National Identity, Flow States, and Mass Psychology**
+
+The World Cup is one of the world's most powerful [[social-psychology-and-group-dynamics]] experiments — creating shared emotional experiences across diverse populations within a simple in-group/out-group framework. [[Evolutionary-psychology-and-human-behavior]] explains the depth of sports tribalism: fan behavior during World Cup mirrors ancestral coalition support dynamics — the same neurological circuits activated by actual intergroup competition. Elite soccer players performing at World Cup level are prime subjects for [[flow-state-and-peak-performance]] research: the intersection of extreme skill, genuine stakes, and appropriate challenge creates measurable flow state performance boosts. [[Dopamine-reward-systems-neuroscience]] maps onto fan experience: anticipation (dopamine spike before matches), uncertainty (maintained engagement during close games), and result (reward or punishment signal) create an addictive engagement loop that explains extraordinary audience retention. [[Positive-psychology-and-wellbeing-science]] research documents "collective efficacy" boosts in countries whose teams advance — measurable increases in social trust, happiness scores, and even economic productivity in the weeks following national team success. [[Stress-physiology-and-performance-optimization]] is directly applicable to tournament performance: sleep protocols, travel adaptation, injury management, and psychological preparation under pressure distinguish World Cup contenders from first-round exits.
+
+**↔ Tech & AI: VAR, Performance Analytics, and Broadcasting AI**
+
+World Cup 2026 is the most AI-rich sports event in history. FIFA's Semi-Automated Offside Technology (SAOT) uses [[computer-vision-and-convolutional-neural-networks]] to provide sub-second offside determinations using 29 data points per player at 50 frames per second — making VAR offside checks near-instantaneous. Player tracking data generates [[machine-learning-fundamentals]] performance models that predict injury risk, optimal substitution timing, and tactical adjustment recommendations. [[Large-language-models-applications-and-limitations]] power multilingual commentary generation, real-time stat overlays, and personalized highlight reels in the viewer's native language. Broadcasting AI generates [[vector-databases-and-embeddings]]-powered "infinite replay" systems allowing viewers to query specific moments (e.g., "show me all of Mbappé's movement in the final third during the second half"). [[Agentic-ai-and-multi-agent-systems]] manage venue operations: crowd flow optimization, security threat detection, concession demand forecasting, and emergency response coordination across 16 stadiums simultaneously.
+
+## Related
+- [[real-assets-reits-and-commodities]]
+- [[behavioral-finance-and-investor-psychology]]
+- [[social-psychology-and-group-dynamics]]
+- [[flow-state-and-peak-performance]]
+- [[dopamine-reward-systems-neuroscience]]
+- [[computer-vision-and-convolutional-neural-networks]]
+- [[large-language-models-applications-and-limitations]]

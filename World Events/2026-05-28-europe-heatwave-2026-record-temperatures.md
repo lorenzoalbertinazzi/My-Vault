@@ -210,3 +210,27 @@ The physiological effects of heat on cognitive function have direct behavioral e
 - [[Psychology/stress-physiology-and-performance-optimization]] — Heat stress physiology; temperature-cognitive performance relationship
 - [[Tech & AI/edge-computing-and-on-device-ai]] — Data center heat vulnerability; edge AI thermal management
 - [[Geopolitics/2026-05-30-europe-rearmament-nato-russia-threat]] — European defense-climate budget competition; dual stress on European governance
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: Climate Finance, Insurance Losses, and Energy Market Impact**
+
+The 2026 European heatwave is a [[real-assets-reits-and-commodities]] and insurance markets event of the first order. Reinsurance companies (Munich Re, Swiss Re) are accumulating data on heatwave economic losses — crop destruction, excess mortality, infrastructure damage, labor productivity losses — that will reprice European physical climate risk in [[Value-at-Risk-and-CVaR]] models for real estate, agricultural, and infrastructure assets. [[Energy-transition-finance-and-green-capital-markets]] receives paradoxical signals: solar power generation surges during heatwaves (boosting solar investment case) while nuclear and thermal plants face forced derating (river cooling water temperatures exceeding regulatory limits), creating electricity price spikes. European electricity [[derivatives-futures-and-forwards]] showed extreme backwardation during the heatwave peak — forward power prices collapsed while spot prices spiked, as markets priced the temperature event as temporary. [[Inflation-dynamics-and-investment]] effects are measurable: food price CPI contributions from crop damage take 2-3 months to materialize, creating a "heatwave lag" in headline inflation that central banks must interpret correctly. [[Fixed-income-deep-dive]] investors in European sovereign bonds watch heatwave disaster declarations carefully — extraordinary fiscal responses (emergency cooling infrastructure, crop support) create off-budget expenditure that widens deficit projections.
+
+**↔ Psychology: Heat Stress, Cognitive Performance, and Climate Grief**
+
+Extreme heat has direct [[stress-physiology-and-performance-optimization]] impacts documented in occupational health research: above 32°C wet-bulb temperature, cognitive performance degrades measurably on complex tasks, reaction times slow, and emotional regulation deteriorates. [[Sleep-science-and-cognitive-performance]] research on heat's impact is particularly concerning: tropical nights (above 20°C minimum temperature) disrupt sleep architecture, creating cognitive debt that accumulates over multi-day heat events. [[Cognitive-biases]] shape public heatwave response: the "boiling frog" normalization tendency causes gradual temperature increases to be underweighted relative to sudden shocks — Europeans habituated to 38°C summers (previously rare) may underestimate the compounding mortality risk. [[Moral-psychology-and-ethical-decision-making]] around climate change is tested by heatwaves: vivid personal experience of extreme heat is more effective at shifting climate policy preferences than abstract statistics — the availability heuristic serving pro-climate communication for once. [[Trauma-resilience-and-post-traumatic-growth]] research on repeated disaster exposure (floods, fires, heatwaves in the same region) documents "cumulative climate trauma" as an emerging psychological diagnosis, particularly among elderly and socially isolated populations.
+
+**↔ Tech & AI: Climate Modeling, Early Warning, and Urban Heat Management**
+
+AI-powered climate services are demonstrating tangible life-saving value in the 2026 heatwave. European weather services using [[machine-learning-fundamentals]]-enhanced numerical weather prediction provided 10-day accurate extreme heat forecasts — enabling advance deployment of cooling centers, vulnerable population check-ins, and hospital surge preparation. [[Computer-vision-and-convolutional-neural-networks]] satellite thermal imagery identifies urban heat island hotspots at block level, enabling targeted intervention in city districts where mortality risk is highest. [[Large-language-models-applications-and-limitations]] power public-facing heat warning communication systems that generate locally-specific, language-appropriate guidance personalized to recipient vulnerability profiles. [[Edge-computing-and-on-device-ai]] enables wearable heat stress monitors for outdoor workers and elderly populations at home — providing real-time personal heat index alerts. [[Agentic-ai-and-multi-agent-systems]] coordinate city emergency response during heat events: dynamically routing ambulance resources, managing cooling center capacity, and communicating with vulnerable population registries simultaneously.
+
+## Related
+- [[real-assets-reits-and-commodities]]
+- [[energy-transition-finance-and-green-capital-markets]]
+- [[stress-physiology-and-performance-optimization]]
+- [[sleep-science-and-cognitive-performance]]
+- [[machine-learning-fundamentals]]
+- [[computer-vision-and-convolutional-neural-networks]]
+- [[arctic-geopolitics-and-climate-competition-2026]]
+- [[2026-05-30-europe-rearmament-nato-russia-threat]]

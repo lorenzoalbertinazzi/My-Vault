@@ -169,3 +169,27 @@ Japan's J-Alert system — the national emergency alert that reaches all mobile 
 - [[Finance/inflation-dynamics-and-investment]] — Supply chain disruption from natural disasters; inflation from reconstruction demand
 - [[Psychology/cognitive-biases]] — Availability heuristic and disaster risk perception; warning response psychology
 - [[Tech & AI/edge-computing-and-on-device-ai]] — J-Alert delivery via edge devices; AI for disaster early warning systems
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: Catastrophe Insurance, Supply Chain Disruption, and Climate Pricing**
+
+Tropical Storm Jangmi's Japan flooding is a [[real-assets-reits-and-commodities]] and insurance markets event with global supply chain implications. Japan hosts critical advanced manufacturing — automotive (Toyota, Honda Kumamoto semiconductor plants), electronics (Sony, Panasonic), and specialty chemicals — making regional flooding events with meaningful [[geopolitical-risk-premium-and-markets]] impact on global just-in-time supply chains. Japanese catastrophe bonds (J-CAT bonds) and reinsurance arrangements activated by Jangmi provide case study material for [[Discounted-Cash-Flow-Analysis]] of physical climate risk pricing. Munich Re and Swiss Re pricing adjustments after each major Japan natural disaster event are tracked by [[factor-investing-and-smart-beta]] insurance sector investors as indicators of structural climate risk re-rating. [[Fixed-income-deep-dive]] analysis of Japanese government bonds (JGBs) notes that disaster reconstruction spending creates temporary fiscal expansion — the "reconstruction Keynesianism" pattern documented in Kobe (1995) and Tohoku (2011) recessions followed by demand-stimulus recovery. [[Energy-transition-finance-and-green-capital-markets]] connection: flood damage to coastal infrastructure accelerates investment in climate adaptation — seawalls, elevated infrastructure, flood-resilient construction — creating a "physical adaptation" investment sub-sector distinct from mitigation finance.
+
+**↔ Psychology: Disaster Preparedness, Collective Response, and Japanese Resilience**
+
+Japan's disaster response culture — shaped by millennia of earthquakes, typhoons, and tsunamis — represents a [[positive-psychology-and-wellbeing-science]] case study in institutionalized resilience. [[Habit-formation]] of disaster preparedness is embedded in Japanese culture through regular drills, household emergency supply mandates, and community disaster response organizations (jichikai) that activate automatically when disaster strikes. [[Social-psychology-and-group-dynamics]] of Japanese disaster response is remarkably cohesive: studies of the 2011 Tohoku disaster documented minimal looting, spontaneous mutual aid, and rapid community self-organization — contrasting with less cohesive disaster responses in more individualistic societies. [[Trauma-resilience-and-post-traumatic-growth]] research on Japanese disaster survivors documents "post-traumatic growth" patterns: many survivors report stronger community bonds, clearer life priorities, and deeper appreciation for non-material values after surviving catastrophic events. [[Stress-physiology-and-performance-optimization]] in emergency responders: Japan Self-Defense Forces and Japan Coast Guard maintain high operational effectiveness under disaster conditions through training protocols that embed [[cognitive-load-theory-and-learning]] principles — reducing working memory demands in chaos through pre-practiced decision protocols.
+
+**↔ Tech & AI: Disaster AI, Early Warning, and Recovery Optimization**
+
+Japan leads global disaster response AI deployment. [[Machine-learning-fundamentals]] typhoon track prediction models developed by Japan Meteorological Agency provide 5-day forecast accuracy that enables evacuation decisions 72+ hours before landfall — compared to 24-hour reliable forecasting available 20 years ago. [[Computer-vision-and-convolutional-neural-networks]] damage assessment from aerial and satellite imagery after flooding provides rapid damage estimates that previously required weeks of manual survey — enabling faster insurance claims and reconstruction planning. [[Agentic-ai-and-multi-agent-systems]] coordinate Japan's disaster response: FDMA (Fire and Disaster Management Agency) systems automatically coordinate self-defense forces, coast guard, police, and municipal emergency services. [[Edge-computing-and-on-device-ai]] in flood early warning: river level sensors with onboard ML processing trigger autonomous alerts when flood thresholds are approached, even if central server communications are disrupted. [[Large-language-models-applications-and-limitations]] for survivor communication: multilingual LLM chatbots providing real-time evacuation guidance in the 14+ languages of Japan's growing foreign resident population (Chinese, Vietnamese, Filipino, English) are deployed through official emergency apps.
+
+## Related
+- [[real-assets-reits-and-commodities]]
+- [[energy-transition-finance-and-green-capital-markets]]
+- [[trauma-resilience-and-post-traumatic-growth]]
+- [[social-psychology-and-group-dynamics]]
+- [[machine-learning-fundamentals]]
+- [[agentic-ai-and-multi-agent-systems]]
+- [[arctic-geopolitics-and-climate-competition-2026]]
+- [[2026-05-28-europe-heatwave-2026-record-temperatures]]

@@ -84,3 +84,28 @@ Singapore's NEWater program (treating wastewater to potable standards) supplies 
 - [[Finance/energy-transition-finance-and-green-capital-markets]] — Renewable-powered desalination; water-energy nexus
 - [[Psychology/cognitive-biases]] — Scope insensitivity and slow-moving crisis response
 - [[Tech & AI/federated-learning-and-privacy-preserving-ml]] — Distributed hydrological monitoring; satellite data analysis for aquifer management
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: Water as Asset Class, Infrastructure Investment, and Scarcity Pricing**
+
+Water scarcity is transitioning from a background sustainability concern to a [[geopolitical-risk-premium-and-markets]] factor in frontier and emerging market investing. Water-stressed regions hosting critical manufacturing (semiconductor fab cooling water requirements, data center cooling, agricultural processing) face physical operational risk that [[Discounted-Cash-Flow-Analysis]] models increasingly must incorporate. [[Real-assets-reits-and-commodities]] water rights markets — most developed in the American West (Colorado River futures launched in 2020) — are the nascent price discovery mechanism for what has historically been treated as a free resource. [[Private-equity-and-venture-capital]] in water technology (desalination efficiency improvements, agricultural water efficiency, water recycling) is growing at 25-30% annually as the investment thesis aligns with both climate resilience and resource scarcity narratives. [[Energy-transition-finance-and-green-capital-markets]] intersection: renewable energy infrastructure (solar, wind) generally requires less water than thermal power generation — making the energy transition also a water resilience strategy. [[Infrastructure-finance]] for water systems — water utilities, treatment plants, distribution networks — represents a relatively defensive [[factor-investing-and-smart-beta]] infrastructure allocation with inflation-linked revenue streams and limited demand elasticity.
+
+**↔ Psychology: Resource Conflict, Scarcity Psychology, and Cooperation Conditions**
+
+Water scarcity generates distinctive psychological dynamics rooted in the fundamental survival importance of hydration. [[Evolutionary-psychology-and-human-behavior]] identifies water resource competition as one of the oldest drivers of intergroup conflict — modern water scarcity conflicts activate ancient neural circuits for resource defense. [[Prospect-theory-and-decision-making]] applied to water sharing negotiations: each party frames water allocation reductions as losses (from a prior entitlement baseline), making cooperative sharing agreements psychologically costly even when economically rational. [[Social-psychology-and-group-dynamics]] research on water conflict finds that preexisting intergroup tensions amplify water competition: historically hostile groups (Nile basin states, Mekong riparians, Indus treaty parties) will use water as leverage in broader geopolitical confrontations. [[Cognitive-biases]] including "optimism bias" about technological solutions (desalination will save us, water efficiency will close the gap) allows politicians to defer hard allocation decisions — a systematic delay pattern that [[moral-psychology-and-ethical-decision-making]] frameworks identify as intergenerational injustice. [[Positive-psychology-and-wellbeing-science]] research on water security as a wellbeing determinant: subjective water insecurity (anxiety about access) has larger wellbeing impacts than objective scarcity metrics, suggesting communication and institutional trust matter as much as physical supply.
+
+**↔ Tech & AI: Precision Agriculture, Desalination Optimization, and Leak Detection**
+
+AI is being deployed across the water value chain to address scarcity. [[Machine-learning-fundamentals]] models for agricultural water optimization — combining satellite soil moisture data, weather forecasts, crop growth models, and irrigation system control — are reducing agricultural water use (70% of global freshwater) by 20-30% in precision agriculture implementations. [[Computer-vision-and-convolutional-neural-networks]] analysis of satellite imagery detects surface water changes, monitors reservoir levels, and identifies illegal water extraction at scale. [[Agentic-ai-and-multi-agent-systems]] for smart water grid management optimize pressure, detect leaks (which account for 30-40% of urban water loss in developing countries), and schedule maintenance before catastrophic failure. Desalination optimization using [[reinforcement-learning-from-human-feedback]] approaches to membrane fouling management and energy scheduling reduces the energy cost of desalination — the primary barrier to widespread deployment. [[Federated-learning-and-privacy-preserving-ml]] enables transboundary river basin states to share hydrological data for joint management models without exposing politically sensitive national water resource assessments.
+
+## Related
+- [[real-assets-reits-and-commodities]]
+- [[energy-transition-finance-and-green-capital-markets]]
+- [[evolutionary-psychology-and-human-behavior]]
+- [[prospect-theory-and-decision-making]]
+- [[machine-learning-fundamentals]]
+- [[agentic-ai-and-multi-agent-systems]]
+- [[arctic-geopolitics-and-climate-competition-2026]]
+- [[2026-05-28-europe-heatwave-2026-record-temperatures]]
+- [[multipolar-world-order-and-future-of-global-governance]]

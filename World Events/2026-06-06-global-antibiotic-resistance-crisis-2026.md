@@ -89,3 +89,27 @@ The totality of resistance genes in an environment's bacterial communities is th
 - [[Tech & AI/machine-learning-fundamentals]] — ML in drug discovery; compound library screening
 - [[Psychology/cognitive-biases]] — Availability heuristic and slow-moving crisis attention
 - [[Geopolitics/multipolar-world-order-and-future-of-global-governance]] — Global commons governance and AMR; collective action problems
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: Pharmaceutical Investment, AMR Bonds, and Healthcare System Costs**
+
+Antimicrobial resistance (AMR) represents a [[geopolitical-risk-premium-and-markets]] scenario that dwarfs most conventional risk categories: the WHO estimates 10M deaths annually by 2050 from drug-resistant infections, with economic costs exceeding $100T. [[Private-equity-and-venture-capital]] in antibiotic development faces a structural market failure: new antibiotics are used sparingly (to preserve efficacy), meaning commercial returns are low despite massive social value — exactly the public goods problem that conventional VC models can't solve. Novel "pull incentives" (transferable exclusivity vouchers, subscription payment models paying for access rather than volume) are being designed by G7 health ministries to realign pharmaceutical investment incentives — a [[macroeconomics-101]] market failure correction. [[Sovereign-wealth-funds]] with long-horizon mandates (like Norway's GPFG and Singapore's GIC) are being engaged as potential "patient capital" investors in AMR R&D, accepting below-market returns for the systemic risk reduction benefit. [[Fixed-income-deep-dive]] analysis of healthcare sector bonds must now incorporate AMR scenario analysis: hospital systems, insurance companies, and pharmaceutical manufacturers all face materially different financial trajectories in a high-AMR vs. low-AMR world. [[Energy-transition-finance-and-green-capital-markets]] provides a template — the "green bond" precedent shows how public goods investment can be scaled through labeled debt instruments.
+
+**↔ Psychology: Risk Perception, Behavioral Change, and Global Cooperation Psychology**
+
+AMR is a slow-moving catastrophe that human psychology is poorly calibrated to address. [[Cognitive-biases]] including the "optimism bias" (it won't affect me), "temporal discounting" (future risks deeply discounted vs. present costs), and "availability heuristic" (invisible microbial threats feel less real than visible dangers) all reduce appropriate precautionary behavior. [[Behavioral-finance-and-investor-psychology]] applied to AMR: the same psychological mechanisms that cause individual underinvestment in retirement (hyperbolic discounting) cause under-investment in AMR prevention — both require system-level default-changing rather than information provision. [[Social-psychology-and-group-dynamics]] of AMR governance: 193 UN member states must coordinate antibiotic stewardship — a collective action problem where any single country's defection (over-prescribing for short-term political benefits) undermines the global commons. [[Habit-formation]] research is directly applicable to antibiotic stewardship: prescribing behavior change requires habit disruption and default-switching (automatic alternatives to antibiotics for viral infections) rather than persuasion-based approaches. [[Moral-psychology-and-ethical-decision-making]] framework for AMR: high-income countries that have used antibiotics liberally for decades bear historical responsibility for creating the resistance crisis — a justice argument for funding low-income country AMR responses.
+
+**↔ Tech & AI: Drug Discovery, Rapid Diagnostics, and Resistance Prediction**
+
+AI is the most promising technological response to the AMR crisis. [[Machine-learning-fundamentals]] applied to molecular drug discovery (AlphaFold-adjacent approaches) is accelerating antibiotic candidate identification from decades to years — DeepMind's drug discovery spinoffs and Insilico Medicine are leaders. [[Large-language-models-applications-and-limitations]] trained on scientific literature can generate novel antibiotic mechanism hypotheses that human researchers validate — dramatically expanding the search space. [[Graph-neural-networks]] model molecular interaction networks to predict resistance mechanism emergence before clinical deployment — potentially allowing "resistance-proof" antibiotic design. Rapid diagnostic AI — [[computer-vision-and-convolutional-neural-networks]] analyzing microbiological cultures — can identify pathogen and resistance profile in 4-6 hours vs. 48-72 hours currently, enabling targeted treatment that reduces broad-spectrum antibiotic use. [[Federated-learning-and-privacy-preserving-ml]] enables global AMR surveillance data sharing across hospitals and countries without exposing patient data — creating the comprehensive resistance tracking system that early warning requires.
+
+## Related
+- [[geopolitical-risk-premium-and-markets]]
+- [[machine-learning-fundamentals]]
+- [[graph-neural-networks]]
+- [[federated-learning-and-privacy-preserving-ml]]
+- [[cognitive-biases]]
+- [[moral-psychology-and-ethical-decision-making]]
+- [[2026-05-27-ebola-outbreak-drc-uganda-2026]]
+- [[multipolar-world-order-and-future-of-global-governance]]
