@@ -300,3 +300,22 @@ Walker et al.'s (2002, *Neuron*) "sleep to forget, sleep to remember" framework 
 **Sleep deprivation economics — the societal cost:**
 
 Rand Health's 2016 analysis of sleep deprivation costs in the US: workers sleeping fewer than 6 hours nightly cost the US economy $411 billion annually through mortality risk and productivity loss, compared to 7-9-hour sleepers. Among G7 nations, Japan showed the highest sleep deprivation burden (estimated $138 billion, 2.92% of GDP) linked to its documented culture of extreme work hours and social disapproval of sleep. A 2024 McKinsey Global Institute analysis updated these figures: with health outcome inclusion (increased diabetes, cardiovascular disease, obesity, cancer incidence attributable to chronic sleep deprivation), total economic burden in the US reached $670 billion annually — more than the entire US defense budget.
+
+---
+
+### June 2026 Vault Cross-Links: Sleep as the Foundation of Cognitive and Physical Performance
+
+**Sleep ↔ Finance/Decision-Making:** Sleep deprivation has quantified effects on financial decision quality. Killgore et al. (2006, *Journal of Sleep Research*) found that one night's total sleep deprivation increased risky financial choices by 40% in lottery paradigms, consistent with reduced prefrontal regulation of amygdala-driven reward seeking. More practically: trading room performance data from major banks shows that the most significant risk-limit breaches and trading errors cluster around Monday mornings (weekend recovery sleep) and after major overnight events (Middle East geopolitical news, Asian market openings) that disrupted sleep patterns. See [[behavioral-finance-and-investor-psychology]] for the broader behavioral finance context and [[stress-physiology-and-performance-optimization]] for cortisol interactions with sleep.
+
+**Sleep ↔ AI/Health Tech (2026):** Wearable sleep monitoring (Apple Watch Sleep Stages, Oura Ring) combined with LLM-powered coaching is creating personalized sleep optimization at scale. The clinical evidence base for wearable sleep staging accuracy has improved: Menghini et al. (2024, *Sleep Medicine*) validated Oura Ring against polysomnography with 87% epoch-level agreement for sleep/wake staging and 74% for specific sleep stage identification — clinically useful accuracy for population-level research. AI-personalized sleep coaching apps (SleepCycle's AI coach, Oura's Resilience Score) are demonstrating 15-20% sleep efficiency improvements in 8-week RCTs, better than generic sleep hygiene advice but not yet matching CBT-I efficacy for clinical insomnia.
+
+**Sleep ↔ Geopolitics/Military:** Sleep deprivation is the most pervasive and least discussed operational stressor in military contexts. US DARPA has invested $50M+ in sleep substitution research (TMS-based sleep induction, adenosine antagonists beyond caffeine) to reduce sleep requirements for combat soldiers. The Ukraine conflict provides real-world data on sustained military sleep deprivation — both Ukrainian and Russian forces have documented 4-6 hours average nightly sleep during intensive combat operations, with documented increases in tactical errors, friendly fire incidents, and post-combat PTSD rates that correlate with sleep deficit. See [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] and [[trauma-resilience-and-post-traumatic-growth]].
+
+**New wikilinks:**
+- [[stress-physiology-and-performance-optimization]] — cortisol-sleep interaction
+- [[memory-systems-and-learning-science]] — sleep's role in memory consolidation
+- [[dopamine-reward-systems-neuroscience]] — sleep deprivation and dopamine dysregulation
+- [[behavioral-finance-and-investor-psychology]] — sleep deprivation and risk-taking
+- [[cognitive-load-theory-and-learning]] — sleep and working memory capacity
+- [[trauma-resilience-and-post-traumatic-growth]] — sleep disruption in PTSD
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — military sleep deprivation

@@ -356,3 +356,21 @@ Chrysippus' solution to the determinism problem — how moral responsibility is 
 **Neuroscience and Stoic practice — what contemplative neuroscience shows:**
 
 Farb et al. (2007, *Social Cognitive and Affective Neuroscience*, N=36 mindfulness practitioners vs. novices) demonstrated that meditative practice reduces "narrative focus" (MPFC-centered self-referential processing linking current experience to past and future narrative self) relative to "experiential focus" (insular/right lateral PFC engagement with present-moment sensory experience). The Stoic practice of focusing on one's *hêgemonikon* (governing faculty) and distinguishing one's judgments from external events is structurally analogous to mindfulness decentering — both involve shifting from narrative self-engagement (this is bad for *me*, *my* life, *my* plans) to observational engagement (this impression appears bad — is that appearance accurate?). The neuroscience of mindfulness provides a biological mechanism for the psychological changes Stoic practice claims to produce, without requiring acceptance of Stoic metaphysics.
+
+---
+
+### June 2026 Vault Cross-Links: Stoicism in Practice
+
+**Stoicism ↔ Related vault notes:** This note complements [[stoicism-and-stoic-philosophy]] with practical applications. Key cross-disciplinary connections: The Stoic emphasis on clear-eyed acceptance of reality directly addresses [[cognitive-biases]]'s catalog of reality-distorting mental habits. Stoic journaling practices (reviewing the day's judgments and responses) are empirically validated as an effective form of metacognitive reflection — see [[memory-systems-and-learning-science]] for how reflective practice enhances learning consolidation. The Stoic meditation on death (memento mori) is functionally identical to terror management theory's research on mortality salience (Becker, 1973) — both the ancient philosophical tradition and modern empirical psychology converge on the insight that confronting mortality produces clearer values prioritization and more authentic living. See [[positive-psychology-and-wellbeing-science]] for the connection to meaning and eudaimonia.
+
+**Stoicism ↔ Performance:** The Stoic morning practice (previsualization of day's challenges, articulation of key virtues to embody) is structurally equivalent to the "implementation intentions" research in [[habit-formation]] — specifying in advance how one will respond to anticipated obstacles dramatically increases follow-through on planned behavior. Elite athletes and special forces operators independently converged on these practices as performance optimization tools, demonstrating the convergent validity of Stoic technique from both ancient wisdom and empirical behavioral science.
+
+**New wikilinks:**
+- [[stoicism-and-stoic-philosophy]] — companion deep-dive Stoicism note
+- [[cognitive-biases]] — Stoicism as antidote to cognitive distortions
+- [[mental-models]] — Stoic frameworks as practical mental models
+- [[habit-formation]] — implementation intentions and Stoic practice
+- [[positive-psychology-and-wellbeing-science]] — Stoic eudaimonia and wellbeing science
+- [[memory-systems-and-learning-science]] — reflective journaling and memory consolidation
+- [[stress-physiology-and-performance-optimization]] — Stoic stress management techniques
+- [[value-investing-methodology]] — Stoic emotional discipline in investing

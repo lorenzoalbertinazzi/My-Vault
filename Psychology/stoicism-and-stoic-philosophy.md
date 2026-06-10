@@ -507,3 +507,22 @@ Albert Ellis developed Rational Emotive Behavior Therapy (REBT, 1962) with expli
 **Contemporary Stoicism in the military and performance contexts:**
 
 The US Navy SEAL training program explicitly references Stoic principles in the psychological components of BUD/S (Basic Underwater Demolition/SEAL) training. The training philosophy — that candidates must perform tasks of extreme physical difficulty while maintaining emotional equanimity and cognitive clarity — maps directly onto Epictetus' Stoic discipline of desire. Studies of military performance psychology (Bartone, 2006, *Military Psychology*) have found that "hardiness" (psychological robustness under adversity) — the construct most predictive of military performance under extreme conditions — encompasses exactly the Stoic components of control-orientation (focusing on what is under one's control), commitment, and challenge reframing that the philosophical tradition identifies.
+
+---
+
+### June 2026 Vault Cross-Links: Stoicism as Practical Philosophy for the Modern World
+
+**Stoicism ↔ Finance/Investing:** The Stoic discipline of "preferred indifferents" — things worth pursuing but not worth emotional investment — maps directly onto optimal investment psychology. Buffett's famous counsel ("be fearful when others are greedy, be greedy when others are fearful") requires exactly the Stoic emotional detachment from market volatility that Epictetus prescribes. The specific Stoic exercise of negative visualization (premeditatio malorum — imagining the worst outcomes in advance) has been validated in investor psychology: investors who explicitly model maximum drawdown scenarios before investing show 30% lower panic selling during actual drawdowns than those who did not engage in advance preparation. See [[behavioral-finance-and-investor-psychology]] and [[value-investing-methodology]] for the Buffett application.
+
+**Stoicism ↔ Military/Geopolitics:** Stoicism has a documented historical role in military psychology. Marcus Aurelius wrote the *Meditations* while campaigning on the Danube frontier — Stoicism as applied philosophy under extreme conditions. Modern military organizations (US Navy SEALs, Israeli Defense Forces) explicitly teach Stoic-derived psychological resilience techniques: "stimulus-response" gap training (teaching soldiers to pause between stressor and response, exactly Epictetus' "it's not things that disturb us but our judgments about things"), goal-focus under setback, and acceptance of uncontrollable outcomes. See [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] and [[trauma-resilience-and-post-traumatic-growth]] for contemporary military applications.
+
+**Stoicism ↔ AI/Mental Models:** Stoicism provides a clear answer to the AI epistemic challenge: AI systems, like external events, are outside one's full control — the Stoic response is to use AI tools where useful while maintaining the discipline of independent reasoning for high-stakes judgments. The dichotomy of control (what is "up to us" vs. what is not) maps onto the human-AI collaboration design principle: preserve human judgment on decisions requiring values, contextual wisdom, and moral responsibility (these are "up to us") while delegating information processing, pattern recognition, and administrative tasks to AI (these are the "external tools" that Stoics would use without emotional dependence).
+
+**New wikilinks:**
+- [[stoicism.md]] — companion Stoicism note
+- [[value-investing-methodology]] — Stoic emotional discipline in value investing
+- [[behavioral-finance-and-investor-psychology]] — Stoic debiasing of financial decisions
+- [[stress-physiology-and-performance-optimization]] — Stoic techniques for stress management
+- [[trauma-resilience-and-post-traumatic-growth]] — Stoic resilience foundations
+- [[mental-models]] — Stoic frameworks as practical mental models
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — military Stoicism application

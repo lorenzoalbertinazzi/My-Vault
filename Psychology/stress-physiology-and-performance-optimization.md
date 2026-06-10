@@ -203,3 +203,23 @@ The Whitehall Studies (Marmot et al., 1978, 1991) — perhaps the most important
 **Heart rate variability as a recovery biomarker — practical applications:**
 
 HRV (heart rate variability — the variation in time intervals between consecutive heartbeats) reflects the relative balance of sympathetic and parasympathetic autonomic nervous system tone and has emerged as the most practical wearable biomarker for recovery status and stress load. Kiviniemi et al. (2007, *International Journal of Sports Medicine*) showed that HRV-guided training (adjusting intensity based on daily HRV readings) produced superior performance gains compared to pre-planned training programs — demonstrating that biological recovery feedback enables better training dose optimization than calendar-based plans alone. Thayer & Lane (2000, *Journal of Psychosomatic Research*) established the neurovisceral integration model: resting HRV (specifically RMSSD — root mean square of successive differences) predicts executive function, emotion regulation, and working memory capacity, with the vagal tone underlying HRV providing a physiological "resource" for frontal lobe regulation. Low resting HRV is associated with anxiety disorders, depression, PTSD, and cardiovascular disease, while high HRV predicts rapid recovery from emotional stressors and better performance under uncertainty.
+
+---
+
+### June 2026 Vault Cross-Links: Stress Physiology as Universal Performance Limiter
+
+**Stress ↔ Finance/Trading:** Physiological stress responses directly impair the neural circuits required for high-quality financial decision-making. Cortisol (the primary stress hormone) reduces prefrontal cortex activity and increases amygdala reactivity — specifically impairing working memory, flexible thinking, and long-horizon planning while increasing loss aversion and threat reactivity. Lo & Repin (2002, *Quantitative Finance*) attached biometric sensors to professional traders and found that increased heart rate variability correlated with better trading performance, while cortisol-driven stress responses correlated with decision errors. The practical application: high-performance trading firms are investing in biometric monitoring, structured recovery protocols, and stress-reduction environments (natural light, exercise facilities, meditation spaces) as performance optimization rather than welfare improvements. See [[behavioral-finance-and-investor-psychology]] and [[sleep-science-and-cognitive-performance]].
+
+**Stress ↔ Geopolitics/Military:** The Yerkes-Dodson curve (moderate arousal optimizes performance; too high or too low impairs it) is directly relevant to military decision-making under fire. Grossman's "killology" research (*On Killing*, 1995) documents the physiological cascade in combat: above a critical heart rate (~145 bpm), fine motor skills deteriorate; above ~175 bpm, complex cognitive processing becomes unreliable; above ~200 bpm, tunnel vision and vasoconstriction impair situational awareness. Modern military training explicitly conditions soldiers to perform habitual behaviors (see [[habit-formation]]) at high arousal states precisely because deliberate cognition fails — the goal is to make correct behavior automatic before stress overwhelms deliberate control. See [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] for the combat stress context.
+
+**Stress ↔ AI/Health Tech:** Real-time stress detection using wearable physiological sensors (HRV, EDA, body temperature, accelerometry) combined with AI classification models is enabling applications in workplace wellness monitoring, military stress management, and mental health early warning systems. See [[edge-computing-and-on-device-ai]] for on-device stress detection and [[federated-learning-and-privacy-preserving-ml]] for privacy-preserving health data sharing. The ethical concern: employer monitoring of physiological stress states invades worker privacy and may create perverse incentives (workers who appear "too stressed" may face adverse employment consequences).
+
+**New wikilinks:**
+- [[sleep-science-and-cognitive-performance]] — sleep as primary stress recovery mechanism
+- [[behavioral-finance-and-investor-psychology]] — stress and financial decision quality
+- [[habit-formation]] — stress-proofing behavior through automaticity
+- [[dopamine-reward-systems-neuroscience]] — dopamine-cortisol antagonism
+- [[flow-state-and-peak-performance]] — optimal arousal as flow prerequisite
+- [[edge-computing-and-on-device-ai]] — on-device stress monitoring
+- [[federated-learning-and-privacy-preserving-ml]] — privacy in biometric health monitoring
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — military stress physiology

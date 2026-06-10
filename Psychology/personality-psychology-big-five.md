@@ -324,3 +324,22 @@ The most comprehensive meta-analytic review (Soto & John, 2017, *Journal of Pers
 **The stability trajectory — personality change across the lifespan:**
 
 Roberts & Mroczek's (2008, *Current Directions in Psychological Science*) meta-analysis (92 studies, N=50,207) documented the "maturity principle": across the adult lifespan, Conscientiousness, Agreeableness, and Emotional Stability increase while Neuroticism decreases — the same trajectory across cultures. The pattern peaks around ages 50-70. However, personality also shows substantial mean-level change in response to life events, therapy, and deliberate self-development: Hudson et al. (2019, *PNAS*, 16-week RCT, N=377) found that participants who were specifically coached on changing their target trait (Extraversion or Conscientiousness) showed significantly larger mean-level changes than participants with other change goals — demonstrating intentional personality change is possible, though effects were modest (d≈0.15-0.30).
+
+---
+
+### June 2026 Vault Cross-Links: Personality Psychology as Predictive Infrastructure
+
+**Big Five ↔ Finance:** Conscientiousness is the personality trait most consistently predictive of financial outcomes across the lifespan. Higher-conscientiousness individuals save more, diversify better, make fewer impulsive financial decisions, and accumulate more retirement wealth at equivalent income levels. The effect size is meaningful: one standard deviation increase in conscientiousness is associated with 15-20% higher net worth at retirement in longitudinal studies (Heckman & Kautz, 2012). Neuroticism (emotional instability) is negatively associated with investor performance through loss aversion amplification — high-neuroticism investors sell during drawdowns more frequently and at worse prices. See [[behavioral-finance-and-investor-psychology]] for the investment behavior connection.
+
+**Big Five ↔ Leadership/Geopolitics:** Leader personality profiling is a standard intelligence community tool. Openness to experience (high in Churchill, Mandela, Obama) predicts flexible strategic thinking and the ability to incorporate novel information; low openness (high in Stalin, Hitler, Putin based on behavioral profiling) predicts rigid adherence to ideological frameworks and difficulty updating based on new evidence. Neuroticism in leaders creates crisis-amplifying behavior: under stress, high-neuroticism leaders show worse judgment, more impulsive decisions, and more aggressive responses — particularly dangerous in nuclear-armed states. See [[2026-05-27-us-china-great-power-competition]] and [[2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] for current leader personality-strategy connections.
+
+**Big Five ↔ AI/Tech:** Personality psychology is deployed in AI product design and recommendation personalization. Streaming platforms use inferred Big Five profiles (from content choices and interaction patterns) to serve different content to high-openness vs. low-openness users. Social media platforms segment political content by personality profile — serving outrage-inducing content to high-neuroticism users (who engage more with emotionally activating content) — with well-documented political polarization consequences. See [[ai-governance-and-regulation-frameworks]] for regulatory responses to personality-based targeting.
+
+**New wikilinks:**
+- [[behavioral-finance-and-investor-psychology]] — personality traits and investor behavior
+- [[psychology-of-leadership]] — Big Five in leadership effectiveness
+- [[emotional-intelligence]] — EI-personality interaction
+- [[self-determination-theory-intrinsic-motivation]] — personality moderation of SDT effects
+- [[ai-governance-and-regulation-frameworks]] — personality-based targeting regulation
+- [[2026-05-27-us-china-great-power-competition]] — leader personality profiling in geopolitics
+- [[2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]] — Putin personality profile analysis

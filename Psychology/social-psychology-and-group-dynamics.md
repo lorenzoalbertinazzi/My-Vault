@@ -406,3 +406,22 @@ Brewer's (1991) optimal distinctiveness theory provides an important complement:
 **The bystander effect — magnitude and moderating conditions:**
 
 Fischer et al.'s (2011, *Psychological Bulletin*, meta-analysis, 105 studies, N=7,700+) found the bystander effect (reduced helping with more bystanders) is real but with important moderators: the effect is substantially weaker in dangerous situations (where cost of not helping is high) and in situations where the victim's need is unambiguous. In clearly dangerous situations, bystander presence *increased* helping relative to alone conditions — people in groups were more likely to intervene in violent situations than individuals alone. The practical implication: the bystander effect is strongest for ambiguous, moderate-urgency situations; it is attenuated or reversed when the need is unambiguous and immediate. The 1964 Kitty Genovese case — the case study that launched bystander research — was substantially misreported: the 38-witness account was journalistic fabrication; the actual number who heard the attack was far smaller, and multiple calls to police were made.
+
+---
+
+### June 2026 Vault Cross-Links: Social Psychology as the Science of Collective Human Behavior
+
+**Social Psychology ↔ Finance/Markets:** Financial bubbles are social psychological phenomena that require group-level behavioral analysis. Shiller's "irrational exuberance" framework (2000) treats bubbles as narrative contagion events: a compelling story (Internet democratizes commerce, Bitcoin is digital gold, AI will add $10T in value) spreads through social networks, creating coordinated buying that drives prices above fundamental values. Cialdini's social proof principle (see [[cialdini-influence]]) is the transmission mechanism: rising prices themselves become "proof" that the narrative is correct, attracting successive waves of buyers. Herding behavior documented in [[behavioral-finance-and-investor-psychology]] is the group dynamics mechanism producing this coordinated irrationality.
+
+**Social Psychology ↔ Geopolitics (June 2026):** Information operations exploit social psychological mechanisms at unprecedented scale. Russia's IRA, China's "50 Cent Army," and Iranian influence operations all use: social proof (fake accounts amplifying "consensus"), authority appeals (impersonating news outlets, experts), and in-group/out-group dynamics (framing opponents as enemies of the in-group) — the classic social influence toolkit applied to geopolitical information warfare. The [[2026-05-30-nato-russia-gray-zone-war]] note documents current Russian information operations; research on inoculation against these operations (prebunking — see [[cialdini-influence]]) is the most promising counter-strategy.
+
+**Social Psychology ↔ AI/Multi-Agent Systems:** Multi-agent AI systems exhibit social psychological phenomena. LLMs that interact with each other in multi-agent architectures show emergent social conformity: agents that receive inputs from other agents show opinion shifts toward the consensus position, even when the consensus is factually wrong — an AI analog to Asch conformity effects. See [[agentic-ai-and-multi-agent-systems]] for multi-agent dynamics and the implications for distributed AI reasoning reliability.
+
+**New wikilinks:**
+- [[behavioral-finance-and-investor-psychology]] — social psychology of financial markets
+- [[cialdini-influence]] — influence principles in group behavior
+- [[cognitive-biases]] — cognitive mechanisms underlying social biases
+- [[agentic-ai-and-multi-agent-systems]] — social conformity analogs in multi-agent AI
+- [[2026-05-30-nato-russia-gray-zone-war]] — information operations as applied social psychology
+- [[game-theory-and-strategic-thinking]] — game theory of group coordination
+- [[evolutionary-psychology-and-human-behavior]] — evolutionary origins of social behavior

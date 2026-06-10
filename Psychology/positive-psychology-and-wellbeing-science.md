@@ -309,3 +309,22 @@ Martin Seligman himself, in *Flourish* (2011), acknowledged limitations of the o
 **Cross-cultural validity — serious challenges:**
 
 Kitayama et al. (1997, *Psychological Bulletin*) documented that positive self-evaluation, central to Western positive psychology measures, varies systematically across cultures: Japanese participants scored lower on self-esteem and positive affect than US participants but showed equivalent or higher psychological well-being on functional and social indicators. The construct of self-esteem — a cornerstone of positive psychology interventions — is largely culturally specific to individualistic Western contexts. Heine et al. (1999, *Psychological Review*) argued that the motivation for positive self-evaluation is substantially weaker or absent in East Asian cultures, where self-improvement motivation (motivated by discrepancy from ideal self) is more salient than self-enhancement motivation. Positive psychology interventions designed around self-esteem building, optimism cultivation, and individual strength identification may systematically underperform — or produce iatrogenic effects — in collectivist cultural contexts where interdependent self-concept and group-referencing are more psychologically central.
+
+---
+
+### June 2026 Vault Cross-Links: Wellbeing Science Across Domains
+
+**Wellbeing ↔ Finance/Economics:** The Easterlin Paradox (1974) — within countries, richer people are happier, but richer countries are not happier than poorer ones — initiated decades of research on money and happiness. Kahneman & Deaton's (2010) seminal study found that emotional wellbeing plateaus at ~$75,000 annual income (updated by Killingsworth, 2021 to ~$100,000, with high earners showing continued but diminishing returns). The policy implication: above moderate income levels, how money is spent matters more than how much is earned. Spending on experiences (rather than objects), others (rather than oneself), and time-savings (buying back time from unpleasant tasks) produces disproportionate wellbeing per dollar — a finding with direct personal finance implications. See [[wealth-management-and-family-office-strategies]] for the application in high-net-worth financial planning.
+
+**Wellbeing ↔ AI/Technology (June 2026):** The relationship between AI-augmented productivity and worker wellbeing is a frontier research question. Microsoft's 2025 Work Trend Index (N=31,000) found that workers using AI assistants reported 28% higher job satisfaction and 25% lower stress on routine tasks — but also reported 15% higher anxiety about job security and 18% higher "always on" pressure. The net wellbeing effect depends on whether AI is deployed as a tool (augmenting human capability, preserving autonomy) or as a monitor (tracking productivity, reducing discretion). See [[self-determination-theory-intrinsic-motivation]] for the autonomy dimension and [[ai-governance-and-regulation-frameworks]] for the regulatory context of AI worker monitoring.
+
+**Wellbeing ↔ Geopolitics:** National wellbeing indices (Gallup World Happiness Report) correlate strongly with peace and stability. Countries in active conflict show dramatic wellbeing declines: Ukraine's World Happiness Score fell from 3.88 (2021) to 2.95 (2024), among the largest single-country declines ever recorded. The wellbeing-conflict causation runs both directions: unhappy populations are more susceptible to authoritarian mobilization, and conflict creates mass wellbeing destruction. See [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] for current conflict wellbeing impacts.
+
+**New wikilinks:**
+- [[self-determination-theory-intrinsic-motivation]] — SDT as wellbeing mechanism
+- [[flow-state-and-peak-performance]] — flow as wellbeing state
+- [[stress-physiology-and-performance-optimization]] — stress as wellbeing threat
+- [[sleep-science-and-cognitive-performance]] — sleep as foundational wellbeing variable
+- [[wealth-management-and-family-office-strategies]] — money and wellbeing in financial planning
+- [[ai-governance-and-regulation-frameworks]] — AI worker wellbeing regulation
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — conflict wellbeing impact

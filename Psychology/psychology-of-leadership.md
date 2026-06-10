@@ -356,3 +356,23 @@ Padilla, Hogan & Kaiser's (2007, *The Leadership Quarterly*) "toxic triangle" fr
 **Distributed and shared leadership — the network turn:**
 
 Carson et al. (2007, *Journal of Applied Psychology*, N=59 consulting teams): teams with higher shared leadership (peer influence and coordination distributed across members rather than concentrated in a formal leader) significantly outperformed teams with lower shared leadership on client-rated project quality (r=0.39), controlling for individual expertise and vertical leader quality. The neural mechanism: prefrontal cortex social prediction networks that model others' intentions (mirror neuron systems, mentalizing networks) are activated in distributed leadership contexts — leadership in this view is a cognitive and social phenomenon distributed across a team's collective cognitive architecture, not a property of an individual's neural endowment.
+
+---
+
+### June 2026 Vault Cross-Links: Leadership Psychology Across Institutions
+
+**Leadership ↔ Finance/Organizations:** The financial performance impact of CEO leadership quality is substantial and measurable. Bertrand & Schoar (2003, *Quarterly Journal of Economics*) tracked manager fixed effects across firms and found that individual manager style (conservatism, risk tolerance, strategic orientation) explains 5-8% of firm investment, financial, and organizational policy variance — a significant portion of the total variation. High-quality leaders at Fortune 500 companies are estimated to add 3-8% in annual stock returns relative to median leaders (McKinsey, 2023), making CEO selection one of the highest-ROI governance decisions available to a board. See [[mergers-and-acquisitions]] for how CEO quality affects M&A outcomes and [[behavioral-finance-and-investor-psychology]] for behavioral biases in CEO decision-making.
+
+**Leadership ↔ Geopolitics (June 2026):** Leadership quality is a determinative variable in geopolitical outcomes that structural analysis underweights. The contrast between Zelensky's communicative mobilization (maintaining Western support through personal leadership visibility in 2022-2026) and Putin's isolated decision-making (increasingly insulated from accurate information per leaked intelligence assessments) represents a leadership style divergence with measurable strategic consequences. See [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] for current dynamics and [[2026-05-27-us-china-great-power-competition]] for Xi Jinping's leadership consolidation effects on Chinese strategic decision-making.
+
+**Leadership ↔ AI (2026):** The emergence of AI executive decision support is creating new questions about leadership in the AI era. CEOs at Microsoft, Anthropic, and Google report using LLM assistants for scenario analysis, board communication drafting, and organizational problem-framing — effectively creating AI-augmented leadership. The theoretical question: does AI decision support improve or reduce leadership quality? Initial evidence suggests AI improves analytical quality (scenario completeness, logical consistency) while reducing the relational and emotional dimensions of leadership (AI assistance makes leaders less likely to seek human expert input, reducing organizational buy-in). See [[large-language-models-applications-and-limitations]] and [[agentic-ai-and-multi-agent-systems]].
+
+**New wikilinks:**
+- [[personality-psychology-big-five]] — Big Five traits in leadership effectiveness
+- [[emotional-intelligence]] — EI as core leadership competency
+- [[social-psychology-and-group-dynamics]] — group dynamics in organizational leadership
+- [[behavioral-finance-and-investor-psychology]] — CEO behavioral biases and firm performance
+- [[mergers-and-acquisitions]] — leadership quality in M&A decision-making
+- [[large-language-models-applications-and-limitations]] — AI-augmented leadership
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — Zelensky vs. Putin leadership contrast
+- [[2026-05-27-us-china-great-power-competition]] — Xi's leadership consolidation effects

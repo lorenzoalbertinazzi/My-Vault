@@ -589,3 +589,23 @@ The boundary condition for inversion: it works best for problem types with clear
 **The 2025 model validation challenge — AI-assisted mental model application:**
 
 A growing concern in the mental models community is what might be called "model matching without understanding." Large language models can suggest that a situation resembles "first-principles reasoning," "inversion," or "second-order effects" with high confidence — but the suggestion is pattern-matched to linguistic structure rather than derived from genuine structural analysis of the problem. Users who adopt AI-suggested mental model labels without independently verifying the structural match are at risk of a new form of motivated reasoning: confident application of prestigious-sounding frameworks to problems they don't actually fit. The safeguard: require explicit articulation of *how* the model's structure maps onto the problem's structure — not just which model seems relevant.
+
+---
+
+### June 2026 Vault Cross-Links: Mental Models as the Architecture of Expert Thinking
+
+**Mental Models ↔ Finance:** The most valuable mental models in finance are those that transfer across asset classes and market regimes. "Mean reversion" applies to currencies, commodities, interest rate spreads, and earnings margins simultaneously. "Feedback loops" apply to debt-deflation spirals, bank runs, and currency crises. "Optionality" applies to corporate real options, career decisions, and geopolitical strategy. Munger's "latticework of mental models" is the explicit recognition that expert financial judgment requires multiple overlapping frameworks, each illuminating a different aspect of a complex situation. The single-model failure mode — applying only one analytical framework — is a major source of professional investment error. See [[value-investing-methodology]] for Munger's applied mental model framework and [[cognitive-biases]] for the availability bias that makes recently-used models feel disproportionately relevant.
+
+**Mental Models ↔ AI (the meta-model problem):** AI systems trained on human text have absorbed the mental models embedded in that text without the ability to evaluate their quality or applicability. An LLM applying "confirmation bias" mental model language to a situation it doesn't actually fit has worse epistemic performance than a human who doesn't know the terminology but reasons carefully from first principles. The "mental model matching without understanding" concern noted in previous vault entries (see [[large-language-models-applications-and-limitations]]) is precisely this failure mode. See [[prompt-engineering]] for techniques that force AI systems to decompose their reasoning into explicit model application — partially mitigating the pattern-matching substitution for genuine structural analysis.
+
+**Mental Models ↔ Geopolitics:** Geopolitical analysis depends critically on which mental models analysts apply. The "balance of power" model predicts coalition formation against hegemons; the "bandwagoning" model predicts alignment with the strongest power; the "Democratic Peace" model predicts peace between democracies regardless of power balance. All three are empirically supported in different contexts, making model selection — not analysis within a model — the critical skill. See [[multipolar-world-order-and-future-of-global-governance]] for competing models of the emerging world order and [[2026-05-27-us-china-great-power-competition]] for the balance-of-power vs. economic interdependence model contest.
+
+**New wikilinks:**
+- [[cognitive-biases]] — availability bias in model selection
+- [[value-investing-methodology]] — Munger's latticework as applied mental models
+- [[behavioral-finance-and-investor-psychology]] — mental models in investment analysis
+- [[prompt-engineering]] — structured reasoning as mental model application for AI
+- [[large-language-models-applications-and-limitations]] — AI mental model pattern-matching failure
+- [[multipolar-world-order-and-future-of-global-governance]] — competing geopolitical models
+- [[2026-05-27-us-china-great-power-competition]] — balance-of-power vs. interdependence model
+- [[game-theory-and-strategic-thinking]] — game theory as meta-framework for strategic analysis

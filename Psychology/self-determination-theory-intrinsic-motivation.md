@@ -318,3 +318,22 @@ The economic implications: Whillans et al. (2017, *Social Psychological and Pers
 **The continuum of self-determination — why motivation quality outweighs motivation quantity:**
 
 SDT's most theoretically important claim is that motivation type matters more than motivation amount. Rigby & Ryan (2018, *Motivation Science*) analyzed professional athletes across team sports (N=1,200): athletes high in identified and integrated regulation (autonomous motivation) showed greater peak performance, better maintenance of effort during slumps, and faster recovery from injury than athletes equivalent on overall motivation level but higher on introjected (ego-contingent) or external regulation. The mechanism: autonomous motivation sustains effort through genuine enjoyment and personal relevance; controlled motivation sustains effort only while the external conditions that impose it are present. The well-being implications are identical: Nix et al. (1999) showed that equivalent performance achievements produced higher well-being when autonomously motivated and lower well-being when externally motivated — the same outcome, opposite psychological impact depending on the regulatory mode that produced it.
+
+---
+
+### June 2026 Vault Cross-Links: Self-Determination as Universal Human Need
+
+**SDT ↔ Finance/Work Design:** SDT's three basic psychological needs (autonomy, competence, relatedness) predict financial outcome quality across professional domains. Studies of financial advisors (Ryan & Deci, 2017, applied SDT research) show that advisors motivated by intrinsic regulatory styles (genuine interest in client outcomes, identified value of fiduciary role) achieve better client retention, higher recommendation compliance, and better risk assessment quality than advisors motivated by extrinsic regulation (commission income). The "fee-only" financial advice model (eliminating commission incentives) is partly a behavioral design choice aligned with SDT: removing conflicting extrinsic motivators increases the salience of intrinsic motivation and improves advice quality. See [[wealth-management-and-family-office-strategies]] for the financial advice model context.
+
+**SDT ↔ AI/Tech (2026):** The design of human-AI collaboration systems is increasingly informed by SDT. AI that performs tasks autonomously (without human direction) satisfies user needs for ease but undermines autonomy satisfaction — the same mechanism by which "helicopter parenting" undermines children's autonomy need. Microsoft Research's 2025 study of Copilot users found that professionals who used AI as an autonomous agent (AI makes decisions independently) reported lower autonomy satisfaction and lower overall job engagement than those who used AI as a tool (AI augments human decision-making). The SDT design implication: AI systems should preserve user control points and visible decision opportunities, even when full automation would be more efficient. See [[agentic-ai-and-multi-agent-systems]] for the autonomous AI design context.
+
+**SDT ↔ Geopolitics:** SDT's organismic integration theory (internalization of external values into autonomous regulation) explains political legitimacy dynamics. Authoritarian regimes that successfully internalize their ideology — making citizens genuinely identify with state values rather than merely comply — create more stable, efficient governance than those relying on purely external regulation (surveillance, punishment). China's "ideological education" system attempts this internalization; the SDT research suggests it succeeds where citizens genuinely identify with collective prosperity goals (high in identified regulation) and fails where only compliance from fear is achieved.
+
+**New wikilinks:**
+- [[habit-formation]] — habit as internalization of external regulation
+- [[flow-state-and-peak-performance]] — intrinsic motivation as flow prerequisite
+- [[positive-psychology-and-wellbeing-science]] — SDT and wellbeing science overlap
+- [[psychology-of-leadership]] — SDT in transformational leadership
+- [[wealth-management-and-family-office-strategies]] — intrinsic motivation in fiduciary advice quality
+- [[agentic-ai-and-multi-agent-systems]] — autonomy need in human-AI collaboration design
+- [[2026-05-27-us-china-great-power-competition]] — internalization vs. compliance in Chinese governance

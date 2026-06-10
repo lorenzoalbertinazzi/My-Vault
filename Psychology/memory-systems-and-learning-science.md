@@ -494,3 +494,23 @@ Walker & Stickgold (2006, *Annual Review of Psychology*) meta-analysis of sleep 
 **The generation effect and testing effect — competing explanations:**
 
 The testing effect (Roediger & Karpicke, 2006, *Psychological Science*, students who tested themselves after study recalled 56% after one week vs. 42% for students who re-read) has two competing mechanistic explanations. The *desirable difficulty* account (Bjork, 1994): retrieval practice is difficult and this difficulty itself drives consolidation through elaborated encoding. The *transfer-appropriate processing* account (Morris et al., 1977): testing enhances later test performance specifically because both engage retrieval processing — the match between encoding and retrieval context is the operative factor. Karpicke & Roediger (2008, *Science*, N=80) found that free recall practice (which approximates the retrieval format of subsequent tests) showed larger benefits than elaborative study strategies for cued recall tests — consistent with transfer-appropriate processing. Both mechanisms likely operate; the most effective learning systems explicitly structure varied retrieval practice matching intended use.
+
+---
+
+### June 2026 Vault Cross-Links: Memory Systems as Universal Knowledge Architecture
+
+**Memory ↔ Finance/Decision-Making:** The encoding specificity principle (Tulving & Thompson, 1973) — memories are best retrieved when retrieval context matches encoding context — explains a well-documented phenomenon in investment decision-making: investors who made decisions during market stress (high cortisol, sympathetic activation) are more likely to revisit similar stress-induced decisions when market conditions are again stressful. Mood-congruent memory retrieval (Bower, 1981) produces "flashbulb memories" of financial crises that distort subsequent risk perception — investors who lived through 2008 systematically overestimate crash probabilities relative to investors whose memory encodes only post-2009 recovery periods. See [[behavioral-finance-and-investor-psychology]] and [[cognitive-biases]].
+
+**Memory ↔ AI/Machine Learning:** The analogy between human memory systems and AI memory architecture is increasingly precise. Episodic memory (specific experience records) maps to retrieval-augmented generation (RAG — see [[retrieval-augmented-generation]]): both involve storing specific experiences and retrieving relevant ones based on query similarity. Semantic memory (general knowledge) maps to LLM parametric memory: general knowledge encoded in model weights during training. The "catastrophic forgetting" problem in neural networks (learning new tasks destroys performance on old ones) has no analog in human memory at equivalent timescales — human memory's consolidated long-term storage is more robust to interference, suggesting architectures that more closely approximate human memory consolidation may solve key AI learning challenges.
+
+**Memory ↔ Geopolitics:** Collective memory determines which historical grievances remain politically mobilizing. Russian political culture's activation of "Great Patriotic War" collective memory frames the Ukraine conflict as existential rather than strategic — a framing that motivates sacrifice levels inconsistent with rational cost-benefit calculation. See [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]]. The Chinese Communist Party's systematic cultivation of "century of humiliation" collective memory (1839-1949) creates enduring nationalist motivations for Taiwan reunification and South China Sea territorial claims that rational deterrence calculations underestimate. See [[2026-05-27-us-china-great-power-competition]].
+
+**New wikilinks:**
+- [[cognitive-load-theory-and-learning]] — memory systems and instructional design
+- [[cognitive-biases]] — memory-based biases (availability, hindsight)
+- [[behavioral-finance-and-investor-psychology]] — mood-congruent memory in investment
+- [[retrieval-augmented-generation]] — RAG as episodic memory architecture for AI
+- [[large-language-models-applications-and-limitations]] — parametric vs. retrieval-based AI memory
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — collective war memory mobilization
+- [[2026-05-27-us-china-great-power-competition]] — historical grievance collective memory
+- [[sleep-science-and-cognitive-performance]] — sleep's role in memory consolidation

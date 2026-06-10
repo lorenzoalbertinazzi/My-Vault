@@ -512,3 +512,23 @@ Kahneman, Knetsch & Thaler's (1990) endowment effect — the inflated valuation 
 **The dual-concern model and long-term relationship investment:**
 
 Pruitt & Carnevale's (1993) dual-concern model identifies four negotiation strategies by crossing concern for self (assertiveness) with concern for the other party (cooperativeness): contending (high self, low other), yielding (low self, high other), problem-solving (high self, high other), and inaction (low self, low other). Problem-solving — the Fisher-Ury principled negotiation analog — consistently produces highest joint gains in laboratory experiments. But the model's key practical finding: problem-solving only dominates when *both* parties adopt it. A problem-solving negotiator facing a contending counterpart typically achieves worse outcomes than a contending negotiator in the same scenario (Pruitt & Lewis, 1975). This game-theoretic feature of negotiation creates coordination challenges: the individually dominant strategy often depends on the counterpart's strategy, making negotiation approach choice a strategic rather than purely principled decision.
+
+---
+
+### June 2026 Vault Cross-Links: Negotiation as Applied Multi-Disciplinary Science
+
+**Negotiation ↔ Finance/M&A:** M&A deal negotiations represent some of the highest-stakes applications of negotiation tactics. The tactical dynamics: acquirer's anchoring strategy (first bid establishes reference point), target's BATNA (comparable company valuations, standalone strategic plan, alternative bidders), bracketing (target requests a number well above fair value to leave room for compromise). Behavioral research on M&A negotiations (Malhotra, 2010, Harvard Business School cases) shows that emotion management — specifically the ability to appear enthusiastic without revealing information about the BATNA — is a critical tactical skill that distinguishes effective from ineffective deal-makers. See [[mergers-and-acquisitions]] for the M&A process context and [[behavioral-finance-and-investor-psychology]] for behavioral dynamics in deal-making.
+
+**Negotiation ↔ Geopolitics:** International diplomatic negotiations follow the same structural dynamics as commercial negotiations but with the added complexity of public commitments (what leaders say publicly constrains what they can accept privately), domestic political constraints (what domestic audiences will accept limits the achievable deal), and credible commitment problems (how do parties ensure compliance without third-party enforcement?). The Iran nuclear negotiations (JCPOA 2015, subsequent collapse and partial revival) demonstrate all three: Iran could not publicly accept explicit "right to enrich" limitations, US negotiators were constrained by Congressional opposition, and verification mechanisms were the key credibility mechanism. See [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] for 2026 status.
+
+**Negotiation ↔ AI (2026 frontier):** AI negotiation agents are being deployed in commercial contexts — automated supplier negotiation, software license renegotiation, salary negotiation coaching. Key findings from 2025 research: AI negotiation agents perform better than median human negotiators in purely distributive (single-issue) negotiations but significantly worse in integrative multi-issue negotiations — because integrative gains require identifying which issues the other party values most, which requires genuine theory-of-mind inference that AI systems handle poorly. See [[large-language-models-applications-and-limitations]] for LLM limitations in multi-party reasoning.
+
+**New wikilinks:**
+- [[mergers-and-acquisitions]] — negotiation in M&A deal-making
+- [[game-theory-and-strategic-thinking]] — game theory foundations of negotiation
+- [[cialdini-influence]] — influence principles in negotiation
+- [[emotional-intelligence]] — EI in negotiation emotional management
+- [[behavioral-finance-and-investor-psychology]] — behavioral dynamics in deal negotiations
+- [[large-language-models-applications-and-limitations]] — AI negotiation agents and limitations
+- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — international nuclear negotiation
+- [[multipolar-world-order-and-future-of-global-governance]] — negotiation in multilateral diplomacy

@@ -650,3 +650,25 @@ The interpretation remains contested (methodological concerns about the sample s
 **Post-traumatic growth — the evidence base and the "growth narrative" critique:**
 
 Tedeschi & Calhoun's (1996) PTG Inventory documents growth in five domains (relating to others, new possibilities, personal strength, spiritual change, appreciation of life) following highly adverse events. Meta-analysis by Prati & Pietrantoni (2009, *Journal of Loss and Trauma*, 103 studies): mean PTG endorsement rates are high (60-80% of trauma survivors report some growth), but the relationship between PTG endorsement and actual functional improvement is more complex. Hobfoll et al. (2007, *Applied & Preventive Psychology*) distinguish authentic growth (lasting behavioral and functional improvements) from illusory growth (narrative construction that reduces distress by meaning-making without changing behavior or relationships). Rosen et al. (2020, *PTSD Research Quarterly*) documented that US veterans who reported high PTG on self-report measures showed equivalent or worse functional outcomes (employment, relationship quality, substance use) than veterans reporting low PTG — suggesting that the "growth narrative" sometimes functions as a coping-by-meaning-making strategy that reduces measured distress without producing actual behavioral improvement. The clinical implication: PTG endorsement should be evaluated alongside functional outcome measures rather than treated as a treatment success indicator in its own right.
+
+---
+
+### June 2026 Vault Cross-Links: Trauma and Resilience Across Human Systems
+
+**Trauma ↔ Geopolitics/Conflict (June 2026):** Mass trauma from active conflict creates demographic-scale psychological impacts with decades-long societal consequences. Ukraine's current population is experiencing collective trauma at a scale comparable to WWII survivors — with an estimated 10 million internally displaced persons and 8 million international refugees (UNHCR data, 2026) carrying high rates of PTSD, complex trauma, and grief. Historical precedents (Bosnia post-Dayton, post-WWII Europe) suggest that unprocessed collective trauma creates generational cycles of conflict-prone political psychology — making post-conflict psychological recovery an essential component of sustainable peace, not merely a humanitarian concern. See [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]].
+
+The India-Pakistan 2025 war (see [[2026-05-27-india-pakistan-2025-war-and-aftermath]]) created acute mass trauma in border communities on both sides, with Kashmiri civilians experiencing the most severe exposure. WHO regional estimates suggest 2-3 million people in conflict-affected areas meeting diagnostic criteria for PTSD — requiring mental health infrastructure investment on a scale that neither country's healthcare system currently has capacity for.
+
+**Trauma ↔ Finance:** Financial trauma (significant investment losses, bankruptcy, unemployment) activates the same stress-response systems as physical trauma and can create persistent behavioral changes analogous to PTSD symptoms. "Post-Traumatic Financial Disorder" (Shapiro, 2014) describes the avoidance behavior (refusing to look at account statements), hypervigilance (checking prices compulsively), and intrusive cognition (recurring thoughts about financial loss) that many retail investors who lived through 2008 or the 2020 COVID crash show for years afterward. The treatment parallel: structured re-exposure to financial information (analogous to exposure therapy) combined with cognitive restructuring (CBT techniques — see [[cognitive-behavioral-therapy-cbt]]) is more effective than avoidance.
+
+**Trauma ↔ AI/Tech:** Trauma-informed AI design is an emerging field that requires AI systems interacting with vulnerable populations (mental health apps, crisis hotlines, refugee assistance) to recognize trauma indicators and respond without retraumatization. LLMs that respond to trauma disclosures with structured information requests (rather than first acknowledging the emotional content) violate trauma-informed care principles. See [[large-language-models-applications-and-limitations]] for AI mental health application challenges.
+
+**New wikilinks:**
+- [[cognitive-behavioral-therapy-cbt]] — CBT treatments for trauma
+- [[attachment-theory-and-relationships]] — attachment trauma and adult functioning
+- [[stress-physiology-and-performance-optimization]] — physiological trauma response
+- [[sleep-science-and-cognitive-performance]] — sleep disruption in PTSD
+- [[behavioral-finance-and-investor-psychology]] — financial trauma and investment behavior
+- [[large-language-models-applications-and-limitations]] — trauma-informed AI design
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — mass trauma from Ukraine conflict
+- [[2026-05-27-india-pakistan-2025-war-and-aftermath]] — trauma from India-Pakistan war

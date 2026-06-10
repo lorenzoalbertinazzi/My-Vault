@@ -449,3 +449,22 @@ Prospect theory's reference dependence requires a reference point from which gai
 **Cumulative prospect theory vs. the original — why the upgrade matters:**
 
 The 1979 formulation of prospect theory applied probability weighting to individual outcome probabilities — but this violated first-order stochastic dominance (a decision could be preferred to a better alternative). Tversky & Kahneman's (1992) cumulative prospect theory (CPT) fixed this by applying the weighting function to cumulative probability distributions rather than individual probabilities. CPT preserved all the original empirical predictions while making the theory formally consistent with basic rationality axioms. The key quantitative addition: CPT explicitly models four-fold risk attitudes arising from the interaction of the value function and the weighting function — explaining risk-seeking for small-probability gains (lottery behavior) and risk-aversion for large-probability losses (insurance behavior) within a single consistent framework. Barberis et al. (2016, *Journal of Finance*, structural calibration to US equity market data) found that CPT with reference point at prior-year portfolio value and loss aversion coefficient λ=2.5 explained the equity premium puzzle, the value premium, and momentum effects simultaneously — matching key empirical patterns that rational expected utility models cannot.
+
+---
+
+### June 2026 Vault Cross-Links: Prospect Theory as Universal Decision Architecture
+
+**Prospect Theory ↔ Finance (extended connections):** Every major financial market anomaly has a prospect theory explanation. The disposition effect (selling winners, holding losers — see [[behavioral-finance-and-investor-psychology]]) directly reflects reference-dependent valuation: realized gains produce a value function gain (pleasurable), while unrealized losses below the purchase price remain in the steeper loss domain of the S-shaped value curve (too painful to realize). The premium for low-volatility stocks (see [[factor-investing-and-smart-beta]]) reflects loss aversion: investors prefer stocks with steady small gains over those with equivalent expected returns but higher variance, paying a premium for psychological comfort that generates a systematic opportunity for disciplined contrarian investors.
+
+**Prospect Theory ↔ Insurance/Risk Transfer:** The insurance industry is built entirely on loss aversion and probability weighting. People systematically pay insurance premiums that exceed expected loss — the actuarially unfair premium is psychologically rational from a prospect theory perspective because losses are felt more intensely than gains and small probabilities of catastrophic loss are overweighted. The optimal insurance deductible from a prospect theory perspective is lower than the classically rational level, because loss aversion creates a disproportionate psychological cost from losses even in the "safe" zone. See [[Value-at-Risk-and-CVaR]] for the institutional risk management parallel.
+
+**Prospect Theory ↔ Geopolitics:** Prospect theory's domain effects (risk-seeking in the loss domain, risk-averse in the gain domain) explain asymmetric escalation patterns in international conflict. Leaders who frame their country as "losing" (currently below reference point) exhibit greater risk-tolerance for military escalation than leaders who frame their country as "winning" — the behavioral prediction is that Russia's leadership, framing the Ukraine conflict as a loss of strategic assets, would take greater military risks than the US framing its position as one of maintaining advantage. See [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] for the current conflict dynamics and [[game-theory-and-strategic-thinking]] for the formal model.
+
+**New wikilinks:**
+- [[behavioral-finance-and-investor-psychology]] — financial market anomalies through prospect theory
+- [[factor-investing-and-smart-beta]] — low-volatility premium and loss aversion
+- [[Value-at-Risk-and-CVaR]] — institutional risk management and loss aversion
+- [[cognitive-biases]] — heuristics underlying prospect theory's components
+- [[game-theory-and-strategic-thinking]] — prospect theory in strategic conflict decisions
+- [[negotiation-tactics]] — reference point framing in negotiations
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — domain effects in Russian risk-taking

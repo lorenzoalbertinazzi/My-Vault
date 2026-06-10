@@ -632,3 +632,24 @@ Real-world mechanism design applications include: (1) the FCC spectrum auction (
 Schelling's focal point concept — that coordination without communication converges on culturally prominent solutions — has important empirical validation. Mehta, Starmer & Sugden (1994, *American Economic Review*) ran experiments asking subjects to choose from a list of numbers or locations without communicating; subjects converged on culturally focal options (round numbers, well-known locations) at 3-10× chance rates. The real-world application: labor negotiations, territorial disputes, and commercial pricing often converge on Schelling-focal solutions (round numbers, geographic landmarks, historical precedents) not because these solutions are optimal on any dimension but because they are prominently visible to both parties without communication.
 
 The 2025 application in AI negotiation systems: algorithmic agents trained on historical human negotiation data learned to identify and exploit Schelling focal points in commercial contract negotiations, achieving 15-23% better outcomes for their principals compared to agents optimizing only local expected-value calculations — demonstrating that focal point reasoning represents extractable strategic value even for computational agents.
+
+---
+
+### June 2026 Vault Cross-Links: Game Theory as the Mathematics of Strategic Interaction
+
+**Game Theory ↔ Finance:** Options pricing (see [[Black-Scholes-Option-Pricing-Model]]) is founded on no-arbitrage — a game-theoretic equilibrium where no player can earn riskless profit. Auction theory (Vickrey, 1961; Milgrom & Wilson, 2020 Nobel) has transformed bond auctions (US Treasury uniform-price auctions), spectrum auctions (Google's $4.7B FCC spectrum purchase using Vickrey-Clarke-Groves mechanism), and initial coin offerings. The revenue equivalence theorem — that under standard conditions all common auction formats yield the same expected revenue — is one of game theory's most elegant results and has shaped how central banks and governments design large-scale asset auctions. See [[derivatives-futures-and-forwards]] for options pricing as equilibrium and [[Federal-Reserve-and-Monetary-Policy]] for Treasury auction mechanics.
+
+**Game Theory ↔ Geopolitics (June 2026):** Deterrence theory is applied game theory: the US-Iran standoff (see [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]]) is a repeated game between Iran (who has a Hormuz closure threat as leverage) and the US-GCC coalition (who have economic pressure and military deterrence as countervailing threats). The Nash equilibrium in this game (mutual restraint, continued Iranian oil flow, continued US sanctions pressure) has held through repeated cycles of near-escalation — demonstrating that iterative deterrence games can sustain cooperation-like outcomes (non-closure of Hormuz) even without explicit agreement. The Taiwan Strait (see [[2026-05-30-china-taiwan-strait-military-tensions]]) is a structurally different game: China's "long game" of gradually shifting the status quo may be a "boiling frog" strategy exploiting the West's short time-horizon preferences — a sophisticated iterated game against time-inconsistent opponents.
+
+**Game Theory ↔ AI (multi-agent equilibria):** AI research has produced significant advances in computing Nash equilibria for large, complex games. AlphaGo and its successors demonstrated that superhuman strategic play emerges from self-play reinforcement learning — AI discovering optimal strategies without human game theory knowledge. Multi-agent reinforcement learning (see [[reinforcement-learning-from-human-feedback]]) applied to markets has produced AI agents that discover equilibrium bidding strategies in complex mechanism designs that human theorists had not previously identified. See [[agentic-ai-and-multi-agent-systems]] for multi-agent strategic dynamics.
+
+**New wikilinks:**
+- [[Black-Scholes-Option-Pricing-Model]] — no-arbitrage as game-theoretic equilibrium
+- [[derivatives-futures-and-forwards]] — options as strategic contingent claims
+- [[Federal-Reserve-and-Monetary-Policy]] — Treasury auction mechanism design
+- [[negotiation-tactics]] — game theory applied to negotiation
+- [[evolutionary-psychology-and-human-behavior]] — evolutionary stability of strategies
+- [[agentic-ai-and-multi-agent-systems]] — AI multi-agent game-playing
+- [[reinforcement-learning-from-human-feedback]] — RL for game-theoretic strategy discovery
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — deterrence as repeated game
+- [[2026-05-30-china-taiwan-strait-military-tensions]] — Taiwan as iterated strategic game
