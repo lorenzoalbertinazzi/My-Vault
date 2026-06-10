@@ -1,0 +1,11 @@
+# Obsidian local UI-state — volatile, rewritten constantly, not meant to sync.
+# These are the usual cause of Obsidian-Git merge conflicts.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/cache
+
+# Trash and OS cruft
+.trash/
+.DS_Store
+Thumbs.db
