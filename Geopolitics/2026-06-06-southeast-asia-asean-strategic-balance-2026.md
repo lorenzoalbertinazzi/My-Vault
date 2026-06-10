@@ -214,3 +214,31 @@ ASEAN is becoming a contested arena for AI platform dominance between US, Chines
 - [[2026-06-06-myanmar-civil-war-resistance-junta-2026]]
 - [[2026-05-27-us-china-great-power-competition]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: SCEF Resistance Alliance, ASEAN Chairmanship Pressure, and Singapore's AI Governance Leadership
+
+**SCEF: Myanmar Resistance Achieves Strategic Unification**
+
+The most significant institutional development in Southeast Asia in 2026 arrived on March 30 when Myanmar's resistance established the Steering Council for the Emergence of a Federal Democratic Union (SCEF) — a unified command framework bringing together the National Unity Government (NUG), the People's Defence Force (PDF), and four of Myanmar's most capable Ethnic Armed Organizations (EAOs), including the Kachin Independence Army (KIA), the Karen National Union (KNU), the Chin National Front (CNF), and the Arakan Army (AA). The FDD (Foundation for Defense of Democracies) characterized SCEF as "the most credible attempt at unified resistance command since the 1948 Union fracture" — a structure that grants operational military authority to ethnic armies while providing a shared political platform for international legitimacy.
+
+SCEF's strategic importance for ASEAN is profound. The bloc's consensus principle — which effectively gives Myanmar's junta representative (seated by default at ASEAN tables despite the 2021 coup) a veto over anti-junta measures — is now under direct pressure from a resistance entity that controls an estimated 42% of Myanmar's territory compared to the junta's 21%. The Irrawaddy's June 2026 territorial mapping confirmed resistance control of significant portions of Chinese, Indian, and Thai border regions — precisely the areas ASEAN partners use for overland trade. Thailand, which shares the longest border with Myanmar and hosts approximately 120,000 Myanmar refugees, faces the most immediate pressure to adjust its junta-neutral posture.
+
+**ASEAN's Five-Point Consensus: Stalemate and Legitimacy Crisis**
+
+ASEAN's Five-Point Consensus on Myanmar — adopted April 2021, calling for dialogue, ceasefire, humanitarian access, special envoy appointment, and constructive engagement — has produced zero measurable progress in five years. The Philippines, as 2026 ASEAN Chair, is the first chairmanship country to explicitly acknowledge the consensus has failed, with Philippine Foreign Secretary Manalo stating in April 2026 that ASEAN must "recalibrate its approach or risk permanent irrelevance on Myanmar." Indonesia and Malaysia have privately supported excluding the junta from high-level meetings until measurable progress is demonstrated, while Cambodia and Laos maintain that any exclusion violates ASEAN's non-interference norm.
+
+The deadlock crystallizes the bloc's central challenge: ASEAN was designed for post-colonial state sovereignty protection, but Myanmar's junta is neither the state in a functioning sense (controlling only 21% of territory) nor a legitimate government by any democratic standard. The institution's norms are better suited to maintaining sovereignty against external interference than to managing internal state collapse — a problem ASEAN's founding architects never anticipated.
+
+**Vietnam's Bamboo Diplomacy 2.0: The Economic Hedge Master**
+
+Vietnam has emerged as perhaps the most sophisticated practitioner of ASEAN's multi-alignment strategy in 2026. Hanoi is simultaneously: deepening US security ties (receiving advanced F-16 variants as part of a $4.8B defense package approved by Congress in March 2026), hosting Chinese President Xi Jinping's first Vietnam visit since 2023 (April 2026, signing 36 cooperation agreements), and negotiating EU market access expansion under the EVFTA framework. Vietnam's success reflects geography (South China Sea border state with independent strategic value to both superpowers), economic complementarity (manufacturing supply chains serve both US and Chinese corporate customers), and historical experience (having successfully navigated great power competition as a buffer state for 2,000 years). Vietnamese GDP growth of 7.3% in Q1 2026 — among the highest in Asia — suggests the bamboo diplomacy model is working economically even as it requires extraordinary diplomatic agility.
+
+**Thailand's Political Transition and Strategic Recalculation**
+
+Thailand's political landscape shifted substantially in late 2025-2026 with the Constitutional Court's dissolution of the progressive Move Forward Party (rebranded as People's Party) creating a new political configuration. Prime Minister Paetongtarn Shinawatra's government — representing the Pheu Thai party — is navigating between royalist-military establishment demands for China-leaning neutrality and a business community increasingly concerned about supply chain risks from over-dependence on Chinese manufacturing. Thailand's 2026 foreign policy review — leaked to Bloomberg in May — explicitly identified "ASEAN multi-alignment fatigue" as a strategic risk: the country can no longer sustain simultaneously hedging on Myanmar, South China Sea, and US-China trade without coherent strategic prioritization.
+
+Singapore's Institute of Southeast Asian Studies (ISEAS) June 2026 survey — the annual "State of Southeast Asia" report — found that 57.6% of regional elites would choose alignment with China over the US if forced, down from 61% in 2025, suggesting a marginal but consistent trend toward US positioning among Southeast Asian strategic elites as China's South China Sea assertiveness accumulates.
+
+**last_updated: 2026-06-10**

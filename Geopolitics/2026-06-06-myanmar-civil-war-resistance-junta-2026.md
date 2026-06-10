@@ -233,3 +233,33 @@ Myanmar's conflict has become a demonstration case for warfare technology democr
 - [[2026-06-06-southeast-asia-asean-strategic-balance-2026]]
 - [[2026-05-27-us-china-great-power-competition]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: SCEF Unified Command, Junta's 21% Territory Reality, and China's Recalculated Position
+
+**SCEF: The Resistance Achieves Institutional Coherence**
+
+The March 30, 2026 establishment of the Steering Council for the Emergence of a Federal Democratic Union (SCEF) marks the most structurally significant development in Myanmar's civil war since the resistance's battlefield gains of Operation 1027 in late 2023. SCEF consolidates four major Ethnic Armed Organizations — Kachin Independence Army (KIA), Karen National Union (KNU), Chin National Front (CNF), and Arakan Army (AA) — with the National Unity Government (NUG) and its People's Defence Force (PDF) under a single political-military command framework. The structure is deliberately asymmetric: operational military authority resides with the ethnic armies (recognizing their superior ground capability and territorial control), while the NUG provides the federal democratic political framework for international legitimacy and foreign policy representation.
+
+The FDD analysis (April 15, 2026) identifies SCEF's core strategic purpose: it transforms the resistance from a fragmented collection of organizations with incompatible ethnic interests into a unified actor capable of sustained military operations, international engagement, and post-conflict governance planning. The resistance now controls an estimated 42% of Myanmar's territory according to FDD and Irrawaddy mapping — including critical border regions with China (Shan and Kachin states), India (Chin state and Sagaing division), and Thailand (Karen and Mon states). The junta controls only 21% of territory, with the remainder contested.
+
+**The Junta's January 2026 Elections: Legitimacy Theater**
+
+The military junta (State Administration Council, SAC) conducted elections on January 12, 2026 — its first formal electoral exercise since the February 2021 coup. The military-backed Union Solidarity and Development Party (USDP) won a predictable landslide in a competition from which the National League for Democracy (NLD) and all major opposition parties were banned, with Aung San Suu Kyi still imprisoned. International observers from Western nations boycotted entirely; only representatives from Russia, China, Belarus, and several AES-aligned African states attended. ASEAN collectively declined to endorse the results.
+
+The elections' primary purpose was domestic and international legitimacy narrative: the junta needed a "democratic transition" claim to justify participation in ASEAN forums and pursue international recognition. The outcome — widely condemned by human rights organizations including Human Rights Watch and Amnesty International — actually accelerated resistance consolidation: previously wavering NLD-aligned communities that had hoped for electoral compromise now recognize that no electoral pathway exists under SAC rule, increasing PDF recruitment.
+
+**The Displacement Crisis: 5.2 Million and Accelerating**
+
+The UN High Commissioner for Refugees (UNHCR) June 2026 report places Myanmar's internally displaced population at 5.2 million — the highest total since the country's independence in 1948, surpassing even the worst periods of military governance in the 1980s-90s. An additional 1.4 million Rohingya remain in Bangladesh's Cox's Bazar camps from the 2017 ethnic cleansing (never returned; Bangladesh-Myanmar repatriation negotiations collapsed in 2025). The total displacement footprint of Myanmar's conflict — 6.6 million people across internal displacement and cross-border refugees — creates one of Asia's most severe protracted humanitarian crises.
+
+Thailand hosts the largest external refugee population (120,000+ in formal camps, an estimated 2-3 million undocumented migrant workers with ambiguous refugee status), creating a Bangkok-Naypyidaw-ASEAN triangle of dependency: Thailand cannot push for strong ASEAN action against the junta without risking disruption to labor flows and border commerce that have economic value for Thai business interests.
+
+**China's Recalculated Position: From Junta Support to Pragmatic Engagement**
+
+China's Myanmar policy has undergone a quiet but significant reassessment in 2025-2026. Beijing's initial post-coup stance favored the SAC (providing UN Security Council cover, maintaining economic ties, limiting sanctions exposure), but three factors have forced recalculation. First, the resistance's territorial control of Chinese border regions — particularly the Kokang and Wa special administrative zones in Shan State — means China's border security and Yunnan Province drug/smuggling interdiction now depends on ethnic resistance groups rather than the junta. Second, the Myitkyina-Muse pipeline and rail corridor (China-Myanmar Economic Corridor, CMEC) passes through resistance-controlled territory, creating infrastructure vulnerability. Third, China's "scam center" problem — criminal networks operating from SAC-tolerated special economic zones forcing tens of thousands of Chinese nationals into online fraud operations — has become a domestic Chinese law enforcement crisis requiring cooperation with ethnic armed groups (specifically the MNDAA) that the junta cannot provide.
+
+The International Crisis Group's June 2026 brief characterizes China as now maintaining "dual-track engagement" — formal diplomatic relations with the SAC while conducting operational coordination with ethnic armed groups on border security and scam center crackdowns. This dual-track mirrors China's broader regional approach of maintaining formal state-to-state relationships while building ground-level ties with non-state actors who control the actual territory.
+
+**last_updated: 2026-06-10**

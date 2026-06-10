@@ -223,3 +223,31 @@ China's artificial island network in the Spratly Islands functions as a distribu
 - [[2026-06-06-southeast-asia-asean-strategic-balance-2026]]
 - [[2026-05-27-us-china-great-power-competition]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: ASEAN Code of Conduct Deadline, YJ-20 Live-Fire, and the Philippines' 500-Exercise Year
+
+**Philippines Targets End-2026 Code of Conduct: The ASEAN Chairmanship Gambit**
+
+The Philippines — holding the 2026 ASEAN chairmanship — is pushing for a binding South China Sea Code of Conduct (COC) finalized before year's end, a deadline that would coincide with the conclusion of Manila's rotating chairmanship and create maximum diplomatic pressure on Beijing. Philippine Foreign Secretary Enrique Manalo outlined the timeline in a May 2026 speech at the ASEAN Foreign Ministers' Retreat in Kuala Lumpur, arguing that ongoing Chinese assertiveness has made voluntary delay morally untenable. The COC negotiations have been ongoing since 2002 — 24 years — making even the aspiration of a 2026 conclusion historically significant. Analysts at CSIS assess the probability of meaningful COC completion at 20-25%: Beijing's traditional negotiating posture treats COC talks as a pressure-management tool rather than a genuine governance framework, and China has consistently insisted that the COC must explicitly exclude non-ASEAN parties (i.e., the United States) from its implementation mechanism, a provision Manila categorically rejects.
+
+The Philippine chairmanship strategy is to use the COC deadline to crystallize ASEAN members' positions — forcing a visible split between those (Vietnam, the Philippines, Indonesia) who want a substantive COC and those (Cambodia, Laos, Myanmar's junta) who defer to Chinese preferences. The strategic value is not the COC itself but the diplomatic record it creates: documenting which ASEAN members side with China under pressure.
+
+**500-Plus US-Philippines Exercises: The Normalization of High-Tempo Alliance**
+
+The bilateral exercise count between the United States and the Philippines in 2026 crossed 500 by early June — a figure that represents roughly a 40% increase from 2024 baseline levels and reflects the post-Marcos Sr. strategic realignment under Ferdinand Marcos Jr. The exercise schedule includes BALIKATAN (its largest iteration, with 17,500 troops and the first live-fire exercise involving HIMARS systems on Philippine soil), SALAKNIB (special forces interoperability), and a new series of maritime domain awareness exercises in the West Philippine Sea explicitly designed around Chinese Coast Guard encounter scenarios. The Mutual Defense Treaty — invoked by the Philippines in 2023 when Chinese water cannons injured Filipino sailors at Second Thomas Shoal — is increasingly treated as an active rather than deterrent instrument.
+
+The exercise surge serves both parties' deterrence objectives but also creates escalation risks. China's PLA Southern Theater Command has publicly labeled the HIMARS exercises "direct threats to Chinese territorial integrity" — using language that suggests Beijing is treating Philippine territory provisionally within its claimed sphere rather than as a sovereign state. The Washington-Manila-Beijing triangle is developing the characteristics of a security dilemma where each side's defensive measures read as offensive by the other.
+
+**YJ-20 Hypersonic Live-Fire: China's Anti-Access Demonstration**
+
+In a particularly provocative intelligence finding reported by Philippine defense officials in late May 2026, China's PLA Navy conducted a live-fire test of its YJ-21 (Eagle Strike-21) hypersonic anti-ship missile in waters east of the Philippines, in an area within the Philippines' Exclusive Economic Zone as defined under UNCLOS. The YJ-21, which China publicly unveiled in 2022, has a reported range of 1,000km+ and terminal speeds of Mach 6-8, making it effectively immune to current US and Philippine missile defense systems. The test's geographic positioning — within Philippine EEZ waters — appears deliberately chosen to signal that Chinese A2/AD (Anti-Access/Area Denial) capability now extends across the Philippine archipelago and into waters previously considered beyond practical Chinese power projection.
+
+The Philippine National Security Council's assessment, shared with CSIS, characterizes the YJ-21 test as a "strategic communication" — China demonstrating that US carrier battle groups operating from Philippine bases would be within range and vulnerable. This transforms the operational calculus for any US military response in a Taiwan contingency scenario involving Philippine basing access.
+
+**Second Thomas Shoal: The Gravel and Steel Standoff**
+
+At Second Thomas Shoal (Ayungin Shoal in Filipino, Ren'ai Reef in Chinese), the Philippines maintains the BRP Sierra Madre — a deliberately grounded WWII-era rust hulk serving as an inhabited military outpost — as its primary territorial marker. Chinese Coast Guard and maritime militia vessels have maintained a near-continuous blockade of resupply missions since early 2024. In May 2026, Philippine resupply boats successfully delivered personnel using high-speed inflatable craft after Chinese water cannons disabled their larger vessel — a tactical adaptation that sustained the outpost's garrison but escalated the physical confrontation. The Sierra Madre's structural integrity is deteriorating; Philippine engineers assess it could become uninhabitable within 12-18 months without significant repair materials that China is blocking. The choice Manila faces is stark: reinforce the hulk (requiring a resupply breakthrough China will resist) or withdraw (surrendering the territory claim China is targeting). Neither option avoids escalation.
+
+**last_updated: 2026-06-10**

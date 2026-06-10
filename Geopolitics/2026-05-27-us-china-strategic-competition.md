@@ -270,3 +270,27 @@ The strategic competition's sharpest edge is [[llm-inference-optimization]] and 
 - [[2026-05-27-us-china-great-power-competition]]
 - [[2026-05-30-china-taiwan-strait-military-tensions]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: Renminbi Internationalization Advances, AUKUS Pillar II Milestone, and China's Rare Earth Leverage
+
+**Renminbi Internationalization: 4.7% SWIFT Share and the Petrodollar Alternative**
+
+The BIS Triennial Survey preliminary data (June 2026) documents renminbi internationalization reaching 4.7% of global SWIFT payment flows — a tripling from 1.7% in 2019 — driven primarily by Russia-China bilateral settlement (oil, gas, military equipment), China-ASEAN manufacturing supply chain payments, and China-Middle East energy transactions. Saudi Arabia's March 2026 announcement accepting renminbi for 10% of its Chinese oil sales represents the most symbolically significant petrodollar erosion since the 1975 Yamani-Kissinger agreement: even partial de-dollarization of oil pricing by the world's largest oil exporter weakens the structural mechanism underpinning dollar reserve demand. Saudi Finance Minister Mohammed Al-Jadaan framed it as "portfolio diversification" — the same language used when countries reduce dollar reserve holdings.
+
+However, renminbi internationalization faces structural limits Beijing cannot easily resolve. Capital account convertibility remains restricted: foreign holders of renminbi assets cannot freely repatriate funds, making the currency unsuitable as a reserve asset for countries that may need emergency access. China's capital controls — designed to prevent domestic savings flight — create an inherent contradiction: a truly international reserve currency requires open capital flows that Beijing is unwilling to provide for domestic stability reasons. The MacroStrategy Partnership's June 2026 assessment: renminbi internationalization will continue growing in trade settlement but will plateau below 15% of global reserves until China reforms capital controls, a reform Beijing has deferred for two consecutive five-year plans.
+
+**AUKUS Pillar II: Advanced Capabilities Sharing Milestone**
+
+The AUKUS security partnership (Australia, UK, US) reached a significant operational milestone in April 2026: the first joint hypersonic weapons test conducted at Woomera, Australia, under AUKUS Pillar II (advanced capabilities sharing — as distinct from Pillar I's submarine program). The test involved a modified US Air Force hypersonic air-launched concept demonstrator with Australian atmospheric re-entry guidance software integrated, demonstrating the practical technology transfer that AUKUS was designed to achieve. China's Foreign Ministry condemned the test as "a direct escalation of the Asia-Pacific arms race," but the test's significance lay in what it demonstrated about the Indo-Pacific alliance architecture: AUKUS is creating an Australian hypersonic strike capability that covers the South China Sea approaches from bases outside US territory, complicating Chinese A2/AD calculations significantly.
+
+Pillar I — the nuclear-powered submarine program — maintained its Virginia-class delivery timeline: Australia will receive the first US Virginia-class submarine in 2031-2033, with Australian-built submarines under AUKUS design following in the late 2030s. The intermediate "force posture" — US and UK submarine rotations through HMAS Stirling near Perth — began in 2027 schedule pre-approval, creating an effective early AUKUS submarine presence in the Indian Ocean before the formal program deliveries.
+
+**China's Rare Earth Leverage: The Critical Minerals Counter-Gambit**
+
+China's response to US semiconductor export controls has included a systematic escalation of critical mineral leverage. In March 2026, Beijing imposed export licensing requirements on seven rare earth elements essential for defense and clean energy applications: neodymium, praseodymium, dysprosium, terbium, holmium, erbium, and yttrium. These elements are essential for F-35 actuators, submarine sonar systems, electric vehicle motors, and wind turbine generators. China controls approximately 60% of global rare earth production and 85% of rare earth processing — a supply chain concentration that the US, EU, and Japan have been racing to address through the Minerals Security Partnership (MSP) but have not yet meaningfully reduced.
+
+The MSP's June 2026 progress report shows rare earth processing projects in Canada, Australia, Greenland, and Namibia totaling $22 billion in committed investment — but most will not reach production capacity until 2029-2031. The 3-5 year gap between Chinese leverage and Western alternative capacity is Beijing's strategic window: maximum coercive potential before Western diversification reduces dependency. The US Department of Defense's rare earth stockpile assessments, partially declassified in April 2026, showed critical shortfalls in seven minerals — validating the urgency of the MSP timeline.
+
+**last_updated: 2026-06-10**

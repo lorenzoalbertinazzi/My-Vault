@@ -326,3 +326,27 @@ US-China competition is most acute in [[llm-training-and-scaling-laws]] and [[qu
 - [[2026-05-27-us-china-strategic-competition]]
 - [[2026-05-30-china-taiwan-strait-military-tensions]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: Tariff Truce Fragility, SMIC's 5nm Breakthrough, and the May Trump-Xi Summit Aftermath
+
+**The Tariff Truce: 90-Day Suspension Extended to November 2026**
+
+The Trump administration announced in late May 2026 that the 90-day reciprocal tariff suspension (24% tariff on Chinese goods paused) would be extended to November 10, 2026 — buying time for a more comprehensive trade framework negotiation. The overall US tariff on Chinese imports now stands at 31% (reduced from 41% after the fentanyl-linked 20% tariff was halved to 10% as part of a tactical deal). Coface assessed the arrangement as "a tactical truce, not a strategic shift" — both sides retain the ability to escalate rapidly, and the underlying structural disputes (intellectual property, state subsidies, market access, technology transfer) remain unresolved.
+
+The May 14, 2026 Trump-Xi summit in Beijing produced one concrete deliverable: a joint statement pledging "managed competition" — the first time both governments explicitly acknowledged that competition rather than cooperation would define the relationship, but that it should be "managed" to prevent accidental escalation. Former National Security Advisor Jake Sullivan characterized the framework as "structurally identical to Cold War détente but without the ideological clarity that made détente operational." The Trump administration's preference is transactional — narrowing disputes to trade arithmetic — while Beijing insists any deal must address what China calls "hegemonic behavior" in semiconductor restrictions and Taiwan arms sales.
+
+**The Semiconductor Front: SMIC's 5nm Advance and US Policy Response**
+
+China Briefing and CNBC (December 2025-June 2026) document SMIC's continued advancement despite export controls: using DUV multi-patterning techniques (stacking multiple lithography steps to achieve sub-7nm feature sizes), SMIC has achieved functional 5nm-class production. The chips produced are not competitive with TSMC's EUV-enabled 3nm or 2nm processes in performance-per-watt, but are sufficient for many AI inference and consumer electronics applications. Huawei's Kirin 9100 processor — mass-produced at SMIC — has powered a line of smartphones and AI servers that perform within 15-20% of equivalent US-chip products for domestic enterprise customers.
+
+The US response is being calibrated: the Trump administration has delayed new semiconductor-specific tariffs until June 2027 (at zero rate for 18 months), while simultaneously approving exports of NVIDIA H200 and AMD MI325X (less capable than current frontier chips) to Chinese customers meeting verification conditions. The strategic logic is preserving some US market presence while preventing Chinese military AI applications from accessing the most advanced training-class hardware. NVIDIA's China revenue has declined from 25% of total to approximately 12% since the export controls began, representing a $8-10 billion annual market loss — a significant commercial pressure on the US chip industry's domestic export advocates.
+
+**Taiwan Strait: The $31.72 Billion Arms Backlog and TSMC Arizona's 2nm Milestone**
+
+The Biden-era Taiwan arms sales backlog has grown to $31.72 billion worth of approved-but-undelivered weapons systems under Congressional appropriation, now being accelerated under the Taiwan Enhanced Resilience Act (passed March 2026). Priority deliveries include 400 Harpoon Block II coastal defense missiles (the most operationally relevant anti-invasion weapon), 32 F-16V Block 70 fighters (replacing aging F-16A/Bs), and HIMARS rocket artillery batteries. The Taiwanese defense community has focused particular attention on the Harpoon systems: with 400 launchers covering coastlines from multiple approaches, Taiwan's anti-ship capability creates a mining-equivalent deterrence layer that raises the cost of any amphibious operation beyond what PLA modeling has previously accounted for.
+
+TSMC's Arizona fab achieved a production milestone in May 2026: successfully completing risk production of 2nm chips at its Phoenix facility, making the US the second country (after Taiwan) capable of sub-3nm semiconductor manufacturing. The milestone is strategically significant for reducing Taiwan Strait conflict risk: as TSMC Arizona's capacity grows (targeting 10% of global 2nm output by 2028), the catastrophic cost calculation of a Taiwan conflict for global semiconductor supply chains — previously a near-total disruption — becomes marginally more survivable for Western economies. This subtly reduces one constraint on US willingness to defend Taiwan, which Beijing understands.
+
+**last_updated: 2026-06-10**

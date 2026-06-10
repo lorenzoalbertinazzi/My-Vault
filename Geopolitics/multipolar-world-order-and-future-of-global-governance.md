@@ -156,3 +156,27 @@ The multipolar world order is most acutely contested in AI governance — where 
 - [[2026-05-27-us-china-great-power-competition]]
 - [[2026-05-27-us-china-strategic-competition]]
 - [[arctic-geopolitics-and-climate-competition-2026]]
+
+---
+
+### Update — June 10, 2026: BRICS+ Governance Claims, UN Security Council Deadlock, and the Dollar's Contested Hegemony
+
+**BRICS+ Foreign Ministers Outcome Document: A Governance Counter-Claim**
+
+At the May 2026 BRICS Foreign Ministers' Meeting hosted in Moscow, the expanded BRICS+ grouping — now comprising Brazil, Russia, India, China, South Africa, Egypt, Ethiopia, Iran, Saudi Arabia, and the UAE as full members, plus 13 partner nations — released an Outcome Document explicitly calling for "improved global governance" framed around multipolar principles. The document's three core demands represent a direct challenge to the post-1945 institutional order: (1) restructuring the UN Security Council to give permanent or rotating seats to African, Latin American, and South Asian nations proportional to their current economic weight; (2) reducing the dollar's structural advantage in international trade by developing BRICS+ clearing mechanisms in member currencies; (3) reforming IMF and World Bank voting weights to reflect the current distribution of global GDP rather than the 1944 Bretton Woods power distribution.
+
+The Centre for International Governance Innovation (CIGI) analysis identifies the Outcome Document's fundamental tension: BRICS+ members are deeply divided between genuine multipolarity advocates (Russia, which stands to benefit from any erosion of Western institutional dominance) and institutional reformers (Brazil, India, South Africa) who want greater voice within existing structures rather than their replacement. India's position is particularly ambiguous: New Delhi chairs the G20 in 2026 and has used that platform to advocate for Global South inclusion within the existing order, rather than the parallel structure Beijing and Moscow prefer.
+
+**The UN Security Council: Triple Veto Gridlock**
+
+The UN Security Council has experienced its most acute legitimacy crisis since the Iraq War in a single six-month period: the US has vetoed resolutions on Gaza seven times; Russia and China jointly vetoed resolutions on Myanmar (twice), Sudan, and North Korea; and Russia alone vetoed Ukraine-related resolutions repeatedly. The result is a Security Council that has produced no binding Chapter VII resolutions on any active major conflict in 2026 — a complete governance paralysis. Secretary-General António Guterres' June 5, 2026 address to the General Assembly used language unprecedented in UN history: he characterized the P5 veto as "the primary mechanism by which the world's most powerful states exempt their conduct and their allies' conduct from international accountability," calling for a General Assembly resolution invoking the "Uniting for Peace" procedure (Resolution 377) to route around P5 paralysis.
+
+"Uniting for Peace" was last used systematically during the Cold War and requires a two-thirds General Assembly majority — achievable in theory (the US and its close allies are a minority in the 193-member GA) but diplomatically extraordinary. Whether the Secretary-General's call catalyzes action or remains rhetorical will be a defining test of whether the UN can adapt to multipolar reality.
+
+**Dollar Hegemony: Contested but Durable**
+
+The BIS Triennial Survey (June 2026 preliminary release) documents the dollar's paradoxical position: it remains the world's primary reserve currency (58% of global reserves) and dominant invoicing currency (48% of global trade), yet it faces structural erosion from multiple directions simultaneously. BRICS+ currency settlement mechanisms (bypassing SWIFT for Russia-India oil trade, China-Brazil soy trade) now handle approximately $380 billion annually — a meaningful but still marginal alternative. The renminbi's share of global payments (SWIFT data) has risen to 4.7% from 2.1% in 2021, but remains far behind the dollar's 40% share.
+
+The paradox: dollar weaponization (freezing Russian central bank reserves in 2022, sanction mechanisms) has simultaneously made the dollar more powerful short-term (as a coercion tool) and more vulnerable long-term (as it motivates adversaries and neutral states to build alternatives). The FPRI (May 2026) assessment characterizes this as a "hollowing from the margins" — the dollar's core reserve currency function remains robust while its peripheral transaction currency role erodes in sanctioned and Russia-adjacent economies. The critical threshold is if China achieves full renminbi convertibility — which Beijing has repeatedly deferred due to capital flight risks — at which point the renminbi becomes a credible dollar alternative rather than a managed substitute.
+
+**last_updated: 2026-06-10**

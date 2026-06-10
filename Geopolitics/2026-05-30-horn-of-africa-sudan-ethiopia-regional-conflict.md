@@ -202,3 +202,31 @@ Drone warfare has transformed the Horn of Africa's conflict dynamics. Ethiopian 
 - [[blockchain-and-distributed-ledger]]
 - [[2026-05-30-sahel-crisis-russia-africa-corps-failure]]
 - [[multipolar-world-order-and-future-of-global-governance]]
+
+---
+
+### Update — June 10, 2026: Sudan-Ethiopia Drone War, Khartoum Strikes, and the "Regional Mega-War" Warning
+
+**Sudan Accuses Ethiopia and UAE of Drone Attacks on Khartoum Airport**
+
+The Horn of Africa reached a dangerous new threshold in early May 2026 when Sudan's military government formally accused both Ethiopia and the United Arab Emirates of orchestrating drone strikes against Khartoum International Airport. Al Jazeera (May 5-6) and Bloomberg (May 5) confirmed Sudanese military claims of four separate drone attacks since March 1, 2026, all allegedly originating from Bahir Dar Airport in Ethiopia's Amhara region. Sudan's Armed Forces (SAF) released what they described as electronic intercept evidence — trajectory data and communications fragments — pointing to Ethiopian and Emirati coordination. Ethiopia's Ministry of Foreign Affairs categorically denied the accusations, labeling them "baseless" and countercharging that Sudan's military was harboring and arming remnants of the Tigray People's Liberation Front (TPLF) operating alongside RSF forces in the Blue Nile state.
+
+The Khartoum airport strikes represent a qualitative escalation: for the first time in the three-year Sudan civil war, a foreign state actor has allegedly struck infrastructure in the capital itself. The airport is one of the SAF's primary logistics nodes — its partial disruption for 72 hours in early May interrupted humanitarian aid deliveries coordinated by the World Food Programme, which was already running below 30% of assessed need. Egypt's reaction was swift and alarmed: Cairo called an emergency foreign ministry meeting, recognizing that an SAF weakened by external drone attack could collapse its preferred buffer state on the Nile's southern flank.
+
+**The Al-Fashaga Triangle and the Water War Backdrop**
+
+Analysts at The EastAfrican note that the Sudan-Ethiopia drone exchange does not exist in isolation — it is the military expression of three overlapping disputes. First, the al-Fashaga fertile triangle on the Sudan-Ethiopia border has been contested since 2020, with Ethiopian Amhara farmers and militias occupying Sudanese territory that SAF forces retook in operations from 2020-2021 but never fully consolidated. Second, the Grand Ethiopian Renaissance Dam (GERD) dispute — in which Sudan is officially more conciliatory than Egypt but privately fears downstream flow manipulation — has given Khartoum a structural grievance against Addis Ababa that Ethiopian officials underestimate. Third, the RSF-Ethiopia connection: credible reporting from ACLED (Armed Conflict Location & Event Data Project) and The New Humanitarian identifies Tigrayan fighters captured in Blue Nile province fighting alongside RSF units, suggesting Ethiopia is proxying against SAF through non-state actors even as SAF attempts to do the same through TPLF remnants.
+
+**June 9 Omdurman: Escalation Continues**
+
+On June 9, 2026 — one day before this update — Sudan Tribune confirmed that SAF air defense systems intercepted an RSF drone over northwestern Omdurman, with explosions audible across Khartoum North. The incident illustrates the dual-track nature of Sudan's security crisis: the SAF simultaneously fights the RSF in an ongoing civil war while managing what it characterizes as Ethiopian-Emirati external aggression. Military analysts assess that SAF operational capacity to sustain both fronts simultaneously is increasingly strained — its air defense inventory is Russian-supplied and running low on interceptor missiles, with no resupply route immune to Gulf Arab pressure.
+
+**The "Regional Mega-War" Assessment**
+
+The International Crisis Group (ICG) published its most alarming Horn of Africa assessment in over a decade in late May 2026, warning of a "regional mega-war" scenario in which Sudan-Ethiopia bilateral military conflict merges with ongoing civil conflicts in both countries, drawing in Egypt (Nile water interests), the UAE (RSF patron), Eritrea (SAF ally), and Somalia (state collapse spillover). The ICG's four-war convergence model — Sudan civil war + Ethiopia internal conflicts (Amhara, Oromo) + Ethiopia-Sudan interstate + Red Sea Houthi disruption — identifies the Horn as the world's highest-density active conflict zone by both geographic concentration and number of simultaneous actors. The model's most dangerous pathway: SAF strikes Ethiopian territory in response to drone attacks, triggering a conventional war between Africa's 3rd and 12th largest armies, each nuclear-power-neighboring and each with great power patrons (UAE/Egypt for SAF; China/UAE ambiguously for Ethiopia).
+
+**Humanitarian Arithmetic: The Numbers Behind the Crisis**
+
+Sudan's displacement figure crossed 10.7 million in May 2026 — the largest internally displaced population on Earth, surpassing Syria. The UN's Integrated Food Security Phase Classification (IPC) declares 25 of Sudan's 18 states in IPC Phase 4 (Emergency) or Phase 5 (Catastrophe), the latter applying to the entirety of Darfur. The Sudanese pound has lost 98% of its value since the April 2023 conflict onset, making conventional economic analysis meaningless — the economy operates on barter, gold, and diaspora remittances. Against this backdrop, Ethiopia's Tigray reconstruction — itself requiring $20 billion over ten years according to the World Bank — is being prioritized by Addis Ababa over Sudan diplomacy, creating a governance attention deficit that Sudan interprets as hostile intent.
+
+**last_updated: 2026-06-10**
