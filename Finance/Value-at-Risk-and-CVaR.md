@@ -283,3 +283,53 @@ Jorion (2009, *Financial Analysts Journal*) analyzed the 2008 VaR failures at ma
 **The FRTB transition and CVaR mandate (Basel III/IV, effective January 2023):**
 
 The Fundamental Review of the Trading Book (FRTB) eliminated 99th percentile VaR as the primary regulatory risk measure and replaced it with 97.5th percentile Expected Shortfall (CVaR). The regulatory rationale: CVaR's coherence property (sub-additivity — the portfolio measure can never exceed the sum of component measures) and its explicit consideration of tail shape make it a more robust risk measure during crises. FRTB additionally introduced: (1) desk-level model approval (each trading desk must pass independent backtesting to use internal models); (2) P&L attribution testing (model risk charges if modeled P&L does not track actual P&L closely enough); (3) non-modellable risk factors (risk factors with insufficient price history must be capitalized at stress-period loss estimates). The FRTB regime substantially increased risk capital requirements at large dealer banks — estimated at 30-60% increase in market risk capital — driving consolidation in market-making businesses toward the largest institutions.
+
+---
+
+## Cross-Disciplinary Connections
+
+### VaR/CVaR ↔ Psychology: How Humans Psychologically Misperceive Risk Numbers
+
+Risk managers present VaR as a single number ("our daily VaR is $50M") — but human psychological processing of risk statistics creates systematic overconfidence in what that number means.
+
+**The VaR illusion and false precision:** Research in [[cognitive-biases]] documents the "precision heuristic" — people assign more credibility to precise numbers than to ranges, even when the precision is spurious. A VaR number expressed as "$47.3M" generates more psychological confidence than "$40-60M" despite having equivalent or greater uncertainty. This leads risk managers to mentally anchor on VaR as a loss ceiling rather than as a threshold exceeded 1% of days — a critical misinterpretation. When Deutsche Bank CRO reported a $47M daily VaR in September 2008, trading losses exceeded $1B in a single day — a 21× VaR breach that surprised management despite being theoretically possible (though with estimated probability of <10⁻¹²).
+
+**Availability heuristic and tail risk underestimation:** Nassim Taleb's Black Swan framework (2007) is essentially an application of the availability heuristic: risk managers estimate tail event probabilities based on how easily they can recall examples, leading to dramatic underestimation of tail events that haven't occurred recently. The [[cognitive-biases]] note documents this mechanism. Practical implication: risk models calibrated on 10-year data windows (the industry standard) estimated near-zero probability for 2008-style crises in early 2007, because the 2008-scale stress had no recent precedent in the calibration window.
+
+**Loss aversion and VaR limit-setting:** Loss aversion causes risk committees to set VaR limits conservatively (relative to expected returns) when losses are recent and liberally when gains are recent — a pattern documented by Stulz (2008) at major banks. The psychological mechanism: recent large losses increase the salience of potential future losses (availability + loss aversion), causing overly conservative risk limits that reduce profitability; recent large gains reduce this salience, causing limits to be relaxed precisely when portfolios are largest and most exposed. See [[prospect-theory-and-decision-making]] for loss aversion quantification.
+
+### VaR/CVaR ↔ Geopolitics: Geopolitical Events as Stress Scenarios
+
+Geopolitical events are the dominant driver of "model exception" days — VaR breaches caused by sudden, correlated moves that historical calibration did not anticipate.
+
+**Geopolitical stress testing (2026):** Standard internal stress tests at major banks include explicit geopolitical scenarios: Taiwan Strait closure (estimates: $500B-$1T in global trade disruption, corresponding S&P 500 drawdown of 20-30%), Russia-NATO escalation (European bank exposure to frozen Russian assets crystallizes at partial recovery rates), and Iran-Hormuz closure (oil at $140-180/barrel, energy sector equity volatility spikes). Each scenario is mapped to a hypothetical P&L for all trading book positions to estimate maximum loss under the geopolitical tail. See [[2026-05-30-nato-russia-gray-zone-war]] and [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] for current scenario parameters.
+
+**Sanctions risk as a "non-modellable risk factor" under FRTB:** The FRTB framework's concept of non-modellable risk factors (NMRFs) — risk factors with insufficient historical price data to calibrate a model — directly captures geopolitical disruption risk. Russian ruble/asset positions post-2022 had no historical precedent for sovereign asset freeze at this scale; the FRTB rightly classified them as NMRFs requiring stress-period capital charges rather than model-based VaR.
+
+### VaR/CVaR ↔ Tech & AI: Neural Networks for VaR Estimation
+
+ML methods are replacing parametric and historical simulation VaR in several application areas:
+
+**Deep learning for copula estimation:** The correlation structure between assets (the copula) is the key input to portfolio VaR. Traditional Gaussian copulas underestimate tail dependence (the tendency of assets to co-crash). ML-estimated non-parametric copulas using variational autoencoders capture tail dependence more accurately than parametric alternatives. See [[machine-learning-fundamentals]] and [[quantitative-finance-and-algorithmic-trading]].
+
+**RL-based dynamic risk budgeting:** Reinforcement learning agents trained on historical market data learn to adjust position risk budgets in response to market regime changes — effectively implementing time-varying VaR limits. As of 2026, Citadel and Two Sigma have deployed RL-based risk management systems that dynamically tighten exposure during detected stress regimes before human risk managers would intervene. See [[reinforcement-learning-from-human-feedback]] for the RL framework.
+
+---
+
+## Related
+
+- [[Modern-Portfolio-Theory]] — portfolio variance and diversification as the foundation of parametric VaR
+- [[Black-Scholes-Option-Pricing-Model]] — Greeks (Delta, Gamma, Vega) feed into options VaR decomposition
+- [[Federal-Reserve-and-Monetary-Policy]] — interest rate VaR, regulatory capital environment shaped by Basel
+- [[Discounted-Cash-Flow-Analysis]] — scenario analysis parallels between DCF sensitivity and stress testing
+- [[quantitative-finance-and-algorithmic-trading]] — algorithmic implementation of VaR and risk management
+- [[hedge-funds-and-alternative-strategies]] — VaR limits as hedge fund portfolio management tools
+- [[credit-markets-and-credit-risk]] — credit VaR and the role of default correlation in tail risk
+- [[fixed-income-deep-dive]] — duration/convexity as linear/quadratic risk measures analogous to Delta/Gamma
+- [[cognitive-biases]] — precision heuristic and availability bias in risk misperception
+- [[prospect-theory-and-decision-making]] — loss aversion distorting risk limit-setting
+- [[behavioral-finance-and-investor-psychology]] — systematic behavioral failures in institutional risk management
+- [[geopolitical-risk-premium-and-markets]] — geopolitical stress scenarios in VaR models
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — current geopolitical VaR stress scenario
+- [[machine-learning-fundamentals]] — ML copula estimation and RL risk management
+- [[reinforcement-learning-from-human-feedback]] — RL for dynamic VaR-based position sizing

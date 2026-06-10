@@ -784,3 +784,23 @@ The International Energy Agency's (IEA) 2024 Global Critical Minerals Outlook do
 | Rare earth elements | 350 | 1,100 | 3.1× |
 
 The supply response timeline for copper (the most broadly consumed transition metal): a typical copper mine takes 15-20 years from discovery to production. The current pipeline of copper projects in development globally would supply approximately 60% of the projected 2040 demand — implying a structural supply deficit that takes 15-20 years to fully resolve. This is the physical basis for the "copper supercycle" thesis: unlike demand shifts driven by industrial production cycles (which can reverse in 1-3 years), the energy transition demand shift is durable and certain enough to justify long-duration capital commitments in mining — but the supply response will be lumpy and geographically concentrated in politically complex regions (DRC for cobalt, Chile/Peru for copper, Indonesia for nickel).
+
+---
+
+### June 2026 Vault Cross-Connections: Real Assets as the Physical Foundation of the Global Economy
+
+**Real Assets ↔ Geopolitics (June 2026):** Physical assets are uniquely exposed to geopolitical disruption because they cannot be relocated like financial capital. Three June 2026 examples: (1) **Red Sea shipping disruption** — Iran-backed Houthi attacks on Red Sea shipping (see [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]]) forced container shipping to reroute around Cape of Good Hope, adding 10-14 days to Europe-Asia routes and approximately $2,500 per 40-foot container in additional costs — a direct commodity inflation pass-through of ~0.2% to European consumer goods prices. (2) **Critical mineral supply chains** — the DRC (80% of global cobalt) and Chile (29% of global copper) are geopolitically sensitive suppliers for the energy transition. China's 2023 export restrictions on gallium and germanium (used in semiconductors) demonstrated how critical mineral supply can be weaponized — a playbook increasingly applied to lithium processing (China controls 65% of global refining capacity). See [[2026-05-27-us-china-great-power-competition]]. (3) **Arctic resource competition** — warming Arctic temperatures are opening new shipping routes and resource extraction opportunities. See [[arctic-geopolitics-and-climate-competition-2026]] for the geopolitical competition over Arctic resource access.
+
+**Real Assets ↔ Macro/Inflation:** Commodities are the most direct hedge against supply-side inflation — when oil or food prices rise, commodity futures positions gain dollar-for-dollar. The [[inflation-dynamics-and-investment]] note documents commodity's role as the highest-beta inflation hedge. The commodity supercycle thesis — driven by energy transition demand for copper, lithium, cobalt — represents a structural, multi-decade demand shift that is more persistent than cyclical commodity demand spikes. Macroeconomic modeling of the energy transition (IEA, BloombergNEF) consistently projects copper demand to double, lithium demand to 8× by 2040, creating secular commodity demand that will intersect with short-cycle supply constraints.
+
+**Real Assets ↔ Tech:** Satellite imagery (see [[computer-vision-and-convolutional-neural-networks]]) is now standard in commodity investment analysis: crop yield estimation from multispectral satellite data generates more accurate harvest forecasts than USDA surveys, giving commodity traders a 2-4 week information advantage. Oil storage levels (inferred from tanker positioning via AIS/vessel tracking), mining operations (inferred from thermal infrared of smelter activity), and construction progress (inferred from residential building patterns) are all now standard inputs to commodity fundamental analysis.
+
+**New wikilinks:**
+- [[inflation-dynamics-and-investment]] — commodity as inflation hedge
+- [[energy-transition-finance-and-green-capital-markets]] — green energy mineral demand
+- [[sovereign-wealth-funds]] — SWF commodity and infrastructure investments
+- [[computer-vision-and-convolutional-neural-networks]] — satellite imagery for commodity analysis
+- [[geopolitical-risk-premium-and-markets]] — commodity disruption from geopolitical events
+- [[arctic-geopolitics-and-climate-competition-2026]] — Arctic resource competition
+- [[2026-05-27-us-china-great-power-competition]] — critical mineral weaponization
+- [[2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Red Sea shipping disruption

@@ -537,3 +537,25 @@ A MAC clause (also called a Material Adverse Effect or MAE clause) allows a buye
 **CFIUS — the national security review that has reshaped M&A:**
 
 The Committee on Foreign Investment in the United States (CFIUS) reviews foreign acquisitions of US businesses for national security implications. Historically a narrow screening mechanism, FIRRMA (2018, Foreign Investment Risk Review Modernization Act) dramatically expanded CFIUS jurisdiction to include: (1) non-controlling minority investments in technology companies; (2) real estate transactions near military bases; (3) mandatory filing requirements for any transaction touching sensitive sectors (semiconductors, AI, biotechnology, critical infrastructure). CFIUS filing volume increased from ~150 cases in 2017 to ~400 in 2025. The impact on M&A deal economics: CFIUS risk requires 3-6 month additional deal timelines for affected transactions, mitigation agreements (technology transfer restrictions, government board seats, data segregation requirements), and in some cases creates undisclosable national security conditions in purchase agreements. A 2024 survey (Sullivan & Cromwell M&A review) found CFIUS concerns were a material factor in 23% of all inbound US acquisitions above $100M.
+
+---
+
+### June 2026 Vault Cross-Connections: M&A at the Intersection of Strategy, Psychology, and Geopolitics
+
+**M&A ↔ Psychology:** Acquisitions are among the most heavily studied domains for executive behavioral biases because the stakes are high and the errors are documented in stock price reactions. The CEO hubris hypothesis (Roll, 1986) — that CEOs overestimate their ability to manage the combined entity — is now robustly confirmed: Malmendier & Tate (2008, *Journal of Finance*) found that overconfident CEOs (measured by personal option exercise delay, press portrayal as "confident" or "optimistic") make 65% more acquisitions and destroy more value per deal than less overconfident peers. The mechanism: overconfident CEOs genuinely believe they are making rational decisions but their models of synergy realization and integration success are systematically optimistic. See [[cognitive-biases]] for overconfidence and [[behavioral-finance-and-investor-psychology]] for institutional manifestations.
+
+The framing effect (see [[prospect-theory-and-decision-making]]) shapes acquisition negotiations: deal terms framed as "gains for the acquirer" generate different risk tolerance than terms framed as "avoiding losses to the target's stockholders." Investment bankers exploit this systematically in fairness opinion presentations — presenting the acquisition price as "adequate" relative to a depressed recent stock price (gain framing) rather than relative to intrinsic value (a more honest but less palatable reference point).
+
+**M&A ↔ Geopolitics (June 2026):** The CFIUS review regime has transformed M&A deal dynamics for cross-border transactions. Key 2026 developments: (1) NVIDIA's proposed acquisition of ARM (2020, blocked by FTC/EU) established that semiconductor-AI infrastructure deals face near-absolute regulatory barriers between the US and any strategic rival. (2) The "CFIUS-equivalent" European approach — the EU's Foreign Direct Investment Screening Regulation — blocked multiple Chinese acquisitions of European semiconductor and defense companies in 2024-2025. (3) Gulf sovereign wealth funds (PIF, Mubadala) are acquiring stakes in US AI and defense-adjacent technology companies, creating CFIUS filings that explicitly balance Saudi/UAE strategic interests against US national security — with outcomes negotiated through mitigation agreements rather than outright blocking. See [[2026-05-27-us-china-strategic-competition]] for the broader technology competition context.
+
+**M&A ↔ AI/Tech:** AI is both transforming M&A targets (companies with AI capabilities commanding large premiums) and transforming M&A processes (due diligence automation, contract review AI). In 2025-2026, AI-driven companies (open-source model training firms, AI infrastructure players) represent the highest-premium acquisition targets — tech companies with AI moats are trading at 15-25x revenue vs. 4-8x for traditional software. The due diligence process itself is being automated: AI contract review tools (Kira, Luminance, Contract Logix) reduce M&A due diligence from 400 associate-hours to 40 hours for standard contract review, compressing timelines and reducing law firm profitability.
+
+**New wikilinks:**
+- [[cognitive-biases]] — overconfidence in CEO acquisition decisions
+- [[behavioral-finance-and-investor-psychology]] — hubris hypothesis and acquisition value destruction
+- [[prospect-theory-and-decision-making]] — framing effects in M&A negotiations
+- [[private-equity-and-venture-capital]] — PE-driven M&A and leveraged buyouts
+- [[valuation-fundamentals]] — acquisition valuation methods
+- [[Discounted-Cash-Flow-Analysis]] — DCF as primary M&A valuation tool
+- [[2026-05-27-us-china-strategic-competition]] — CFIUS and technology M&A restrictions
+- [[large-language-models-applications-and-limitations]] — AI contract review in M&A due diligence

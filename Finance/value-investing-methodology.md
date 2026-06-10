@@ -671,3 +671,25 @@ Michael Porter's (1980) five forces framework provides the analytical vocabulary
 **Deep value vs. quality-growth — the 2010-2025 divergence:**
 
 From 2010 to 2021, pure statistical value investing significantly underperformed growth investing in US markets — the longest value drawdown in the factor's recorded history. The explanations: (1) duration: in zero-rate environments, distant earnings (growth companies) are more valuable relative to near-term earnings; (2) platform economics: network-effect businesses generate accelerating returns rather than mean-reverting profitability — standard mean-reversion value models undervalue them; (3) accounting distortions: R&D intensive companies appear expensive on book-value screens but are genuinely investing in durable intangible capital. The partial recovery of value from 2022-2025 (as rates rose) confirmed that some of the value underperformance reflected rate distortions rather than a permanent structural shift.
+
+---
+
+### June 2026 Vault Cross-Connections: Value Investing as Psychology, Philosophy, and Economics
+
+**Value Investing ↔ Psychology:** Graham's "Mr. Market" allegory is the most powerful behavioral finance insight ever encapsulated in a paragraph: the market is a manic-depressive business partner who daily offers to buy your shares or sell you his at widely varying prices — and you can either exploit his irrationality or be infected by it. This is a direct description of the [[prospect-theory-and-decision-making]] framework: Mr. Market in a loss-aversion panic sells at prices below intrinsic value; Mr. Market in an overconfident mania buys at prices above it. Successful value investing is behaviorally about *not* being Mr. Market — maintaining a stable, intrinsic-value anchor when social proof (market prices, media narrative) is screaming otherwise. See [[stoicism-and-stoic-philosophy]] for the Stoic psychological disciplines (temperance, equanimity, detachment from outcomes) that Graham's approach implicitly requires.
+
+The "value trap" problem — buying cheap stocks that become cheaper — is also behavioral: confirmation bias causes value investors to hold losing positions too long by seeking confirming evidence for their original thesis and dismissing contrary evidence. The Buffett evolution from Graham's statistical "cigar-butt" value approach to "wonderful companies at fair prices" reflects an implicit behavioral insight: high-quality businesses have more durable competitive advantages that are resistant to the confirmation-bias-driven thesis drift that value investors experience over long holding periods.
+
+**Value Investing ↔ Geopolitics (2026):** Deep value opportunities are clustered in geopolitically-stressed markets. Pakistani equities trading at 3-4× earnings post-India-Pakistan conflict (see [[2026-05-27-india-pakistan-2025-war-and-aftermath]]); Russian natural resource companies priced for zero recovery; EM energy companies with 30% FCF yields on depressed commodity price assumptions. The question that distinguishes great from mediocre value investors: is this cheap because of recoverable overreaction (the behavioral opportunity) or because of permanent capital impairment risk (the value trap)? Geopolitical analysis is required to answer this question — a pure financial model cannot distinguish between Pakistan in 2026 (recoverable normalization likely, historical precedent) and Russia in 2022 (permanent structural impairment from sanctions, contested).
+
+**Value Investing ↔ AI (the intangibles challenge):** The biggest structural challenge to traditional value investing in 2026 is accounting for intangible assets that standard financial statements understate. AI companies invest in model training (expensed immediately), data acquisition (largely expensed), and talent (compensation expensed). These "investments" create durable competitive advantages that do not appear on the balance sheet, making book-value-based valuation metrics systematically undervalue AI-intensive companies. Damodaran (2020) and Morgan Stanley Research (2025) have developed "intangibles-adjusted" value metrics that capitalize R&D and SG&A appropriately, producing lower but more accurate "value" rankings for technology companies. See [[large-language-models-applications-and-limitations]] for AI company competitive moat dynamics.
+
+**New wikilinks:**
+- [[prospect-theory-and-decision-making]] — Mr. Market as behavioral finance embodiment
+- [[behavioral-finance-and-investor-psychology]] — value investing as applied behavioral finance
+- [[stoicism-and-stoic-philosophy]] — Stoic psychological disciplines for value investors
+- [[cognitive-biases]] — confirmation bias in value trap failures
+- [[valuation-fundamentals]] — valuation methods in value investing
+- [[Discounted-Cash-Flow-Analysis]] — DCF in value investing framework
+- [[large-language-models-applications-and-limitations]] — intangible value in AI companies
+- [[2026-05-27-india-pakistan-2025-war-and-aftermath]] — geopolitical value opportunities

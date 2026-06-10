@@ -837,3 +837,23 @@ The September 2022 LDI crisis was triggered by UK Prime Minister Liz Truss's "mi
 *The liquidity spiral:* Pension funds needed to post collateral to meet swap margin calls. To raise cash quickly, they sold gilts — the most liquid fixed income asset. But many funds were selling simultaneously, pushing gilt yields higher, triggering further mark-to-market losses on remaining swap positions, requiring further gilt sales. A self-reinforcing selling spiral threatened to exhaust the gilt market's liquidity.
 
 *The Bank of England intervention:* On September 28, 2022, the BoE announced emergency gilt purchases of up to £65B over 13 trading days to restore market orderly function. The intervention halted the spiral. The ultimate lesson: LDI strategies that use leverage create liquidity mismatches between daily mark-to-market margin calls and pension funds' long-horizon investment mandates — a structural vulnerability that materialized catastrophically in the 2022 rate shock environment.
+
+---
+
+### June 2026 Vault Cross-Connections: Portfolio Theory as Applied Systems Science
+
+**Portfolio Theory ↔ Psychology (extended):** Beyond the standard behavioral finance critique of MVO, two deep psychological insights connect to portfolio theory: First, the "tyranny of the expected return" — portfolio theory requires expected return inputs that are psychologically impossible to estimate reliably. Kahneman & Lovallo's (1993) "inside view" research shows experts systematically overestimate their ability to forecast unique outcomes; applying this to portfolio construction means that even sophisticated investors should apply heavy shrinkage toward equal-weight or risk-parity allocations. Second, the "concentration illusion" — investors experience concentrated portfolios as more "in control" and comfortable than diversified ones, even when diversification demonstrably reduces risk. See [[cognitive-biases]] and [[stress-physiology-and-performance-optimization]] for the cognitive cost of managing complex portfolios.
+
+**Portfolio Theory ↔ Network Science/AI:** Modern portfolio theory assumes assets' correlations can be estimated from historical time series. Network science offers an alternative: model the correlation structure as a graph (assets as nodes, correlations as edges) and use graph neural networks (see [[graph-neural-networks]]) to identify clusters of highly correlated assets and "bridge" assets that connect otherwise separate clusters. This approach, used at Bridgewater and Two Sigma, provides more stable correlation estimates than simple rolling window estimates and better captures regime-dependent correlation changes.
+
+**Portfolio Theory ↔ Geopolitics (2026):** The sanctions exclusion of Russian, Belarusian, and increasingly Chinese assets from institutional portfolios represents the largest forced deviation from global mean-variance efficiency since the 1970s OPEC crisis. MSCI's removal of Russian equities (March 2022) forced $5B+ in immediate selling by passive funds; the ongoing restrictions on Chinese technology equities (Semiconductor Manufacturing International, Hikvision, Huawei-adjacent) represent an estimated $200-400B deviation from theoretically optimal global allocations. The geopolitical constraint on portfolio construction — "allocate optimally except in countries designated as adversaries" — is now a permanent feature of institutional investment mandates for US-based funds. See [[2026-05-27-us-china-great-power-competition]] and [[geopolitical-risk-premium-and-markets]].
+
+**New wikilinks:**
+- [[Modern-Portfolio-Theory]] — the foundational companion note
+- [[risk-parity-and-all-weather-portfolios]] — risk-based portfolio construction alternative
+- [[factor-investing-and-smart-beta]] — factor models as MPT successors
+- [[graph-neural-networks]] — network-based correlation modeling
+- [[cognitive-biases]] — concentration illusion and inside view in asset allocation
+- [[stress-physiology-and-performance-optimization]] — cognitive cost of complex portfolio management
+- [[geopolitical-risk-premium-and-markets]] — sanctions-forced portfolio deviations
+- [[2026-05-27-us-china-great-power-competition]] — Chinese equity restrictions

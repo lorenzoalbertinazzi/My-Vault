@@ -431,3 +431,23 @@ When yields rise by 1% across the curve: Bond P&L = -20 × 1% = -20% × 55% port
 **The post-2022 adaptation — multi-asset inflation-sensitive risk parity:**
 
 After 2022, asset managers including Invesco, Wealthfront, and several hedge funds rebuilt risk parity with an explicit inflation-sensitive component: rotating bond allocation from nominal long bonds to TIPS when 5-year breakeven inflation exceeds 2.3%, adding systematic commodity exposure through futures rolls, and incorporating real assets (infrastructure, commodity-linked equities). The revised framework more explicitly addresses all four of Dalio's economic "seasons" rather than implicitly assuming a disinflationary growth regime as the base case. Early backtests show that inflation-adaptive risk parity would have reduced the 2022 drawdown to approximately -11% — still worse than the intended 6-8% annual volatility target but substantially improved from the -21% All-Weather outcome.
+
+---
+
+### June 2026 Vault Cross-Connections: Risk Parity as Macro Philosophy and Mathematical Framework
+
+**Risk Parity ↔ Psychology:** The All-Weather Portfolio's philosophical foundation — that no one can reliably predict macro environments, so portfolios should be prepared for all environments — is a direct application of epistemic humility, a cognitive virtue discussed in [[mental-models]]. Dalio's "radical open-mindedness" (from *Principles*) is the same concept applied to portfolio management: the willingness to hold positions that perform in environments diametrically opposed to one's base-case forecast. This meta-cognitive stance is psychologically rare — most investors concentrate on positions that confirm their current worldview. The behavioral finance connection: risk parity is a systematic debiasing mechanism that prevents overconfidence in macro forecasts from translating into concentrated portfolio bets. See [[behavioral-finance-and-investor-psychology]] for overconfidence and [[cognitive-biases]] for confirmation bias.
+
+**Risk Parity ↔ Geopolitics (2026):** Risk parity's worst-performing environment is one where asset class correlations break down — specifically, when bonds and equities both sell off simultaneously due to supply-side shocks. The 2022 episode (bonds -17%, equities -18%) was caused by geopolitically-driven energy inflation requiring monetary tightening (Russia-Ukraine → energy shock → Fed forced to hike). The June 2026 Hormuz crisis (see [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]]) represents a potential repeat: oil supply disruption → CPI above 4% → Fed unable to cut → bonds and equities under pressure simultaneously. Risk parity portfolios that added explicit geopolitical risk hedges (long energy, long commodities, long gold) in 2024-2025 have significantly outperformed pure mathematical risk parity in 2026 — demonstrating that geopolitical awareness must be added to the risk parity framework for 21st century conditions.
+
+**Risk Parity ↔ AI/Optimization:** The optimization problem underlying risk parity — equalize risk contribution across assets — is a quadratic program that, for large portfolios with many assets, requires sophisticated numerical methods. Recent advances in convex optimization (CVXPY, first-order methods) and GPU-based matrix operations have made risk parity optimization tractable for portfolios of 500+ assets — enabling risk parity application to multi-factor portfolios rather than just 4-5 asset class portfolios. See [[machine-learning-fundamentals]] for the optimization methods.
+
+**New wikilinks:**
+- [[Modern-Portfolio-Theory]] — mean-variance as risk parity's predecessor
+- [[inflation-dynamics-and-investment]] — inflation regime in All-Weather framework
+- [[behavioral-finance-and-investor-psychology]] — overconfidence as risk parity motivation
+- [[cognitive-biases]] — confirmation bias prevented by All-Weather approach
+- [[mental-models]] — epistemic humility applied to portfolio management
+- [[machine-learning-fundamentals]] — convex optimization for risk parity
+- [[geopolitical-risk-premium-and-markets]] — geopolitical enhancement to risk parity
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — 2026 supply shock risk parity test

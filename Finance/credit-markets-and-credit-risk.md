@@ -734,3 +734,25 @@ The KMV model (developed by Kealhofer, McQuown & Vasicek at KMVLLC, acquired by 
 - Expected Default Frequency (EDF, from historical mapping): DD=3.07 → approximately 0.4% annualized default probability
 
 The Merton model's key advantage: it updates in real-time with equity prices, giving a forward-looking default signal that lags rating agency reviews by months. During the 2008 crisis, Merton-based EDFs for major banks spiked to 5-10% months before rating agencies downgraded them from AAA/AA.
+
+---
+
+### June 2026 Vault Cross-Connections: Credit Markets Linking Finance, Geopolitics, and Human Behavior
+
+**Credit Markets ↔ Geopolitics (June 2026):** The geopolitical fragmentation of global credit markets is accelerating. Three mechanisms connect credit risk to geopolitical dynamics: (1) **Sanctions contagion** — when G7 nations sanctioned Russia in 2022, banks with Russian exposure faced forced write-downs on $400B in Russian loans, triggering ratings downgrades for Austrian, Italian, and French banks disproportionately exposed. The [[2026-05-27-russia-central-asia-influence-and-decline]] note documents the ongoing restructuring of Russia-linked credit exposure. (2) **Geopolitical CDS premiums** — sovereign CDS spreads for Ukraine, Taiwan, and Iran now embed explicit geopolitical risk that cannot be modeled from historical default data. Ukrainian sovereign CDS spiked from 400 bps (2021) to 12,000+ bps (March 2022) and have settled around 1,800 bps (June 2026), reflecting a "ceasefire probability" pricing mechanism rather than traditional credit fundamentals. (3) **Supply chain credit stress** — the India-Pakistan 2025 conflict (see [[2026-05-27-india-pakistan-2025-war-and-aftermath]]) froze credit lines for Pakistani textile exporters and Indian pharmaceutical suppliers simultaneously, creating cascading defaults on trade credit instruments.
+
+**Credit Markets ↔ Psychology:** Credit rating processes are vulnerable to the same behavioral biases that afflict individual investors. Darbellay & Partnoy (2012) documented "rating inflation" as a competitive bias: rating agencies that gave higher ratings won more mandates from issuers, creating systematic upward bias in structured credit (CDO/ABS) ratings before 2008. The mechanism is institutional loss aversion — rating agencies feared losing business more than they feared reputational damage from inflated ratings, a textbook example of short-horizon evaluation distorting incentives. See [[behavioral-finance-and-investor-psychology]] for institutional behavioral failures. The [[cognitive-biases]] note's "anchoring" section explains why initial ratings are so sticky: once a company is rated BBB, analysts anchor on that rating and require significant evidence to downgrade, creating "fallen angel" cliff effects when the anchor finally breaks.
+
+**Credit Markets ↔ AI/ML:** Deep learning models for credit scoring (see [[machine-learning-fundamentals]]) are transforming retail and SME lending. XGBoost and neural network models trained on alternative data (transaction patterns, social media activity, mobile phone usage patterns) achieve Gini coefficients of 0.65-0.75 for consumer credit scoring, compared to 0.55-0.65 for traditional FICO scores. The regulatory question: alternative data models may encode socioeconomic discrimination indirectly — using zip code, phone model, or spending pattern as proxies for protected characteristics — creating compliance exposure under fair lending regulations. The CFPB's 2025 AI Credit Scoring Framework requires model explainability and adverse action reason generation for any ML-based credit decision.
+
+**Credit Markets ↔ Fixed Income Connection:** Credit spread risk is the primary differentiator between [[fixed-income-deep-dive]] (interest rate risk) and credit markets (default risk). The investment-grade credit spread (typically 50-150 bps over Treasuries) is economically driven by expected loss (PD × LGD × EAD) but traded by supply-demand dynamics that can decouple spreads from fundamentals for extended periods. The 2025 IG spread compression to 75 bps (near post-GFC tights) despite elevated geopolitical risk reflects the "wall of money" problem — institutional demand for credit exposure exceeds supply of creditworthy issuance, compressing spreads beyond fundamentally justified levels.
+
+**New wikilinks:**
+- [[fixed-income-deep-dive]] — credit spreads within the broader fixed income risk framework
+- [[behavioral-finance-and-investor-psychology]] — rating inflation as institutional behavioral failure
+- [[cognitive-biases]] — anchoring in credit ratings process
+- [[machine-learning-fundamentals]] — AI credit scoring revolution
+- [[securitization-abs-mbs-cdo]] — credit risk transformation via structured products
+- [[geopolitical-risk-premium-and-markets]] — geopolitical CDS and sovereign credit risk
+- [[2026-05-27-russia-central-asia-influence-and-decline]] — Russian credit exposure restructuring
+- [[2026-05-27-india-pakistan-2025-war-and-aftermath]] — trade credit disruption from conflict

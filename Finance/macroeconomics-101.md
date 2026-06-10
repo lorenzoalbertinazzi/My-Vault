@@ -882,3 +882,25 @@ The mainstream critique (Summers, Blanchard, Mankiw, Rogoff): (1) *The inflation
 US federal debt/GDP reached 99% in 2025 (OMB data), with CBO projecting 120% by 2035 under current policy. The Blanchard-Summers debate (2019) reframed the conversation: Blanchard argued that with r (interest rates) < g (nominal GDP growth), the government's debt-to-GDP ratio is self-stabilizing — positive primary deficits are sustainable. The 2022-2025 rate increases have dramatically changed this calculus: with 10-year Treasury yields at 4.65% and nominal GDP growth at approximately 5.5%, the r-g spread is roughly -0.85% — barely negative and potentially turning positive.
 
 The Congressional Budget Office (CBO, May 2025 Update): under current policy, net interest payments reach 3.7% of GDP by 2035 — exceeding defense spending. The primary deficit (deficit excluding interest) must be reduced by approximately 1.5% of GDP annually to stabilize the debt ratio at current rates. This implies either $450 billion in annual spending cuts or revenue increases — a fiscal adjustment of approximately the size of the entire US discretionary defense budget. The market-implied fiscal sustainability assessment: 10-year Treasury term premium has risen from approximately -0.5% (2021) to +0.75% (June 2026), incorporating a "fiscal risk premium" of approximately 0.50-0.75% that adds directly to government borrowing costs.
+
+---
+
+### June 2026 Vault Cross-Connections: Macroeconomics as the System-Level Framework
+
+**Macroeconomics ↔ Geopolitics (June 2026):** The June 2026 global macro environment is shaped by three geopolitical macroeconomic forces operating simultaneously: (1) **Energy shock channel** — Iran-Hormuz tensions (see [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]]) add $6-10/barrel to oil prices, transmitting as 0.4% CPI uplift and -0.2% GDP drag. (2) **Defense spending boom** — European NATO members raised average defense spending from 1.7% of GDP (2022) to 2.4% (2026), adding approximately €150B in annual fiscal stimulus to the European economy — a Keynesian demand boost that is partly offsetting the drag from high energy prices (see [[2026-05-30-europe-rearmament-nato-russia-threat]]). (3) **Trade fragmentation** — the US-China technology trade restrictions add an estimated 0.3-0.5% to US consumer electronics prices annually, a structural drag from geopolitical "friendshoring" that represents a permanent partial reversal of globalization's deflationary benefit (see [[2026-05-27-us-china-great-power-competition]]).
+
+**Macroeconomics ↔ Psychology:** Macroeconomic outcomes are partly self-fulfilling through expectation channels — the connection between macro and behavioral psychology is not metaphorical but mechanistically real. Consumer sentiment surveys (University of Michigan, Conference Board) forecast GDP growth with statistically significant predictive power beyond fundamental indicators, because consumer confidence directly affects spending decisions. The "animal spirits" concept (Keynes, 1936; Akerlof & Shiller, 2009) captures this: investment decisions depend partly on confidence that is not reducible to expected return calculations. See [[behavioral-finance-and-investor-psychology]] for the behavioral foundations and [[emotional-intelligence]] for how emotional state affects economic decision-making.
+
+**Macroeconomics ↔ Tech/AI:** AI's macroeconomic implications are increasingly debated. The IMF's 2024 "AI and the Future of Work" report estimated AI could automate 40% of current jobs globally (60% in advanced economies), with productivity gains of 0.5-1.5% annual TFP growth if adoption proceeds rapidly. The challenge: the benefits accrue to capital owners and high-skill workers while lower-skill workers face wage pressure — a distributional impact that creates political economy pressures for redistribution and potentially protectionist responses. See [[agentic-ai-and-multi-agent-systems]] for AI deployment dynamics and [[ai-governance-and-regulation-frameworks]] for regulatory responses.
+
+**New wikilinks:**
+- [[Federal-Reserve-and-Monetary-Policy]] — monetary policy within macro framework
+- [[inflation-dynamics-and-investment]] — inflation as macro variable
+- [[currency-markets-and-fx]] — Mundell-Fleming open economy extension
+- [[behavioral-finance-and-investor-psychology]] — animal spirits and expectations
+- [[emotional-intelligence]] — emotional state in economic decision-making
+- [[agentic-ai-and-multi-agent-systems]] — AI macroeconomic implications
+- [[ai-governance-and-regulation-frameworks]] — regulatory responses to AI labor displacement
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — energy shock transmission
+- [[2026-05-30-europe-rearmament-nato-russia-threat]] — defense spending fiscal stimulus
+- [[2026-05-27-us-china-great-power-competition]] — trade fragmentation deflationary reversal

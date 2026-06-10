@@ -242,3 +242,52 @@ Where Π = implied equilibrium returns, Q = investor view returns, P = pick matr
 **The CAPM's empirical legacy — factor model evolution:**
 
 Fama & French's (1992) empirical demolition of the CAPM — showing that beta alone explained little cross-sectional return variation once size and value factors were included — triggered a transition from equilibrium pricing models to empirical factor models. The current state: the six-factor Fama-French model (2018, adding profitability, investment, momentum) explains ~90% of cross-sectional US equity return variation, up from ~70% for the original CAPM. But this explanatory power is in-sample — out-of-sample factor returns are substantially lower due to factor crowding, data mining concerns, and changing factor risk premiums with investor awareness.
+
+---
+
+## Cross-Disciplinary Connections
+
+### MPT ↔ Psychology: Why Rational Portfolio Construction Fails in Practice
+
+Modern Portfolio Theory assumes that investors have well-defined utility functions over mean and variance, process information rationally, and optimize portfolios objectively. The behavioral evidence — documented across [[behavioral-finance-and-investor-psychology]], [[cognitive-biases]], and [[prospect-theory-and-decision-making]] — shows each assumption fails systematically.
+
+**Mental accounting and portfolio segmentation:** Thaler's (1999) mental accounting framework explains why investors maintain separate "buckets" (emergency fund, retirement savings, speculative account) rather than optimizing a single integrated portfolio as MPT prescribes. This sub-optimal structure is not irrational from a behavioral perspective — it provides loss-aversion protection (the emergency bucket is never risked) and motivation for long-horizon saving (the retirement bucket is psychologically ring-fenced). But it systematically underperforms a single optimized portfolio by an estimated 0.5-1.5% annually due to missed diversification and tax-inefficient asset location.
+
+**Home bias and familiarity heuristic:** MPT predicts that investors should hold internationally diversified portfolios approximating the world market portfolio. In practice, US investors hold ~75% of their portfolios in US assets (which represent ~60% of world market cap) — a modest home bias compared to Japan (85%) or Germany (70%). The behavioral explanation: familiarity reduces *perceived* risk even when actual statistical risk is unchanged — investors feel more comfortable with assets they recognize, regardless of risk-return properties. See [[cognitive-biases]] for the availability heuristic (familiar assets seem "safer" because they come to mind easily).
+
+**Myopic loss aversion and the equity premium:** Benartzi & Thaler (1995) explained the "equity premium puzzle" (why equities earn 5-6% more than bonds when MPT-consistent risk aversion implies a 2-3% premium) through myopic loss aversion: investors evaluate portfolio performance at annual or shorter horizons, and loss aversion causes them to demand large premiums for enduring the frequent short-term losses that equity volatility generates, even when long-run equity returns dominate. Extending the evaluation horizon (from annual to 10-year) substantially reduces the equity premium demanded — a result used to design defined-contribution plan default options with long-term horizons.
+
+### MPT ↔ Geopolitics: Home Bias, Sanctions Risk, and Political Risk Premiums
+
+MPT's assumption of a single global mean-variance efficient frontier is broken by geopolitical barriers to capital flows. The optimal global portfolio cannot be held if certain markets become inaccessible.
+
+**Sanctions-induced exclusion:** The exclusion of Russian equities from major indices (MSCI, FTSE Russell) in March 2022 forced passive index funds to sell at distressed prices — a forced deviation from optimal diversification imposed by geopolitical event. Investors holding Russian equities (which had low correlation with US equities — theoretically attractive for MPT diversification) suffered near-100% losses. The lesson: correlation benefits from "politically risky" assets come with binary tail risks that MPT does not capture. See [[2026-05-27-russia-central-asia-influence-and-decline]] and [[geopolitical-risk-premium-and-markets]].
+
+**China exposure and 2026 decoupling:** US regulatory restrictions on investment in Chinese technology companies (CISA Section 702, OFAC SDN listings) are forcing institutional portfolios to underweight China relative to its MPT-optimal global weight (~10-12% of world market cap). The [[2026-05-27-us-china-great-power-competition]] note describes the ongoing decoupling dynamic. Fund managers must now explicitly model "geopolitical constraint" as a portfolio optimization input — a second-order constraint alongside the standard variance minimization.
+
+### MPT ↔ Tech & AI: Machine Learning-Augmented Portfolio Optimization
+
+ML is transforming the estimation of the covariance matrix — the most unstable input in MPT. Key developments documented in [[machine-learning-fundamentals]] and [[quantitative-finance-and-algorithmic-trading]]:
+
+**Hierarchical Risk Parity (HRP):** Introduced by López de Prado (2016, *Journal of Portfolio Management*), HRP uses hierarchical clustering (a machine learning technique) to group assets by correlation structure and then allocates risk proportionally within and across clusters. HRP avoids inverting the covariance matrix (which amplifies estimation error in standard MVO) and produces more stable, diversified portfolios than classical Markowitz optimization. As of 2026, HRP is standard in quantitative asset management at AQR, Man Group, and Renaissance.
+
+**Deep RL for portfolio rebalancing:** Reinforcement learning agents trained on market data have demonstrated portfolios that adapt their rebalancing frequency based on market regime — trading less in trending markets (where MPT rebalancing creates momentum drag) and more in mean-reverting markets. See [[reinforcement-learning-from-human-feedback]] for RL fundamentals.
+
+---
+
+## Related
+
+- [[Black-Scholes-Option-Pricing-Model]] — options overlay strategies for portfolio management
+- [[Value-at-Risk-and-CVaR]] — alternative risk measures beyond variance
+- [[Discounted-Cash-Flow-Analysis]] — intrinsic value inputs to the value factor
+- [[Federal-Reserve-and-Monetary-Policy]] — interest rate environment shaping 60/40 correlations
+- [[portfolio-theory]] — extended MPT applications and factor models
+- [[risk-parity-and-all-weather-portfolios]] — risk-based portfolio construction as MPT alternative
+- [[factor-investing-and-smart-beta]] — empirical factor models as MPT successors
+- [[behavioral-finance-and-investor-psychology]] — behavioral deviations from MPT-rational behavior
+- [[cognitive-biases]] — availability heuristic, familiarity bias, home bias
+- [[prospect-theory-and-decision-making]] — loss aversion and myopic evaluation horizons
+- [[geopolitical-risk-premium-and-markets]] — political risk as a non-diversifiable portfolio input
+- [[2026-05-27-us-china-great-power-competition]] — regulatory constraints on global portfolio construction
+- [[machine-learning-fundamentals]] — HRP and ML covariance estimation
+- [[quantitative-finance-and-algorithmic-trading]] — ML portfolio optimization in practice

@@ -579,3 +579,25 @@ The Fed's retrospective analysis (September 2023 Fed review, with additional com
 **The commodity super-cycle and inflation transmission:**
 
 A super-cycle (Rogers, 2004; S&P GSCI commodity index analysis) is a period of sustained above-trend commodity prices lasting 10-35 years, driven by demand from industrializing economies absorbing commodity stocks faster than new supply can respond. Previous super-cycles: 1900-1929 (US industrialization), 1950s-1970s (post-war reconstruction), 1996-2014 (China's infrastructure buildout). The energy transition cycle: demand for copper, lithium, cobalt, nickel, and rare earth metals from EV and grid buildout is projected to require 2-5× current mining capacity by 2040. If supply investment proves insufficient, commodity inflation could persist as a structural feature of the 2030s inflation environment — with direct implications for break-even inflation pricing in bond markets.
+
+---
+
+### June 2026 Vault Cross-Connections: Inflation at the Nexus of Macro, Behavior, and Geopolitics
+
+**Inflation ↔ Geopolitics (June 2026):** The April 2026 CPI reading of 3.8% YoY is substantially driven by energy prices — the Brent crude geopolitical premium (~$8/barrel above supply/demand fundamental) adds approximately 0.4-0.6% to headline CPI through fuel and transportation cost channels. The Hormuz crisis (see [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]]) and continued Russia-Ukraine supply disruptions (see [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]]) represent a structural "geopolitical inflation tax" — a persistent addition to consumer prices that no domestic monetary policy can eliminate. The Fed faces an impossible tradeoff: tightening to bring geopolitical energy inflation to target would require generating a US recession to reduce overall demand sufficiently to offset the supply-side price shock.
+
+The 1970s "imported inflation" episode (OPEC oil embargoes 1973, 1979) provides the historical parallel: the Fed's failure to distinguish between supply-side inflation (which monetary tightening cannot cure without extreme output sacrifice) and demand-side inflation (which tightening does address efficiently) contributed to the decade's stagflation. The correct policy response to supply-side inflation is tolerance (accepting above-target CPI for a supply shock duration) rather than tightening — a lesson applied by the Bundesbank in the 1973 episode but violated by the Fed. See [[Federal-Reserve-and-Monetary-Policy]] for 2026 Fed deliberations.
+
+**Inflation ↔ Psychology:** Inflation expectations are the most important psychological variable in macroeconomics — when people believe prices will rise, they raise wages and prices preemptively, creating the inflation they expect (a self-fulfilling prophecy). The Fed's entire credibility framework is designed to anchor these expectations at 2%. From a behavioral perspective, inflation expectation formation follows the availability heuristic: prices of frequently purchased goods (groceries, gasoline) have outsized influence on overall inflation expectations, while infrequently purchased goods (furniture, automobiles) are underweighted. This explains why gasoline prices are politically explosive: they are visible daily, creating strong inflation perceptions that may exceed actual overall CPI. See [[cognitive-biases]] and [[behavioral-finance-and-investor-psychology]] for expectation formation biases.
+
+**Inflation ↔ Investment Strategy:** The canonical inflation-hedging assets form a clear hierarchy by inflation beta: oil and commodities (highest beta, direct sensitivity), TIPS real yields (direct contractual link), real estate (rents reprice with CPI), equities (mixed — pricing power varies by sector), gold (inconsistent beta, works in hyperinflationary scenarios but not moderate inflation), nominal bonds (negative inflation beta — worst hedge). See [[real-assets-reits-and-commodities]] for the real asset inflation connection and [[risk-parity-and-all-weather-portfolios]] for how the All-Weather portfolio positions across inflation regimes.
+
+**New wikilinks:**
+- [[Federal-Reserve-and-Monetary-Policy]] — Fed's supply vs. demand inflation dilemma
+- [[macroeconomics-101]] — AD-AS model of inflation dynamics
+- [[real-assets-reits-and-commodities]] — inflation-hedging real asset allocation
+- [[risk-parity-and-all-weather-portfolios]] — inflation regime portfolio positioning
+- [[cognitive-biases]] — availability bias in inflation expectations
+- [[behavioral-finance-and-investor-psychology]] — expectation anchoring and inflation psychology
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — energy supply shock inflation
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — Russian energy supply disruption

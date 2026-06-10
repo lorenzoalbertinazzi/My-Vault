@@ -425,3 +425,23 @@ CLO default rates: 0.0% for AAA-rated CLO tranches from 2004-2025 (Moody's data)
 **The synthetic CDO's selective return (2024-2025):**
 
 Synthetic CDOs — which reference portfolios of CDS rather than actual loans — largely disappeared after 2008 due to regulatory capital charges, reputational concerns, and dealer risk appetite reduction. However, a selective return has occurred: bespoke tranche opportunity (BTO) products, structured as synthetic CDOs but with smaller, higher-quality reference portfolios and more transparent structure, reached approximately $150 billion in outstanding notional by mid-2025. The key buyers: relative value hedge funds and insurance company CLO credit desks seeking leveraged exposure to investment-grade credit spreads. The regulatory treatment under FRTB assigns substantially higher capital charges to complex structured products than to the underlying reference obligations — creating a significant hurdle for bank dealers to warehouse or intermediate these products.
+
+---
+
+### June 2026 Vault Cross-Connections: Securitization as Information Engineering
+
+**Securitization ↔ Psychology:** The 2008 securitization crisis is partly a story of institutional behavioral failures. Rating agency analysts exhibited classic groupthink (see [[social-psychology-and-group-dynamics]]): teams assigned AAA ratings to CDO tranches based on mathematical models that all used similar correlation assumptions, and no individual analyst questioned the consensus because social proof (everyone else rates it AAA) suppressed dissent. The principal-agent problem — analysts were not financially harmed by incorrect ratings — removed the personal cost of error that normally disciplines individual judgment. See [[behavioral-finance-and-investor-psychology]] for institutional limits to arbitrage and [[cognitive-biases]] for overconfidence in model-based ratings.
+
+**Securitization ↔ AI/ML:** Machine learning is transforming securitization analysis. (1) **Prepayment modeling:** Mortgage prepayment prediction (the primary driver of MBS duration and yield) using random forests trained on loan-level data achieves 15-20% lower prediction error than traditional PSA prepayment models, by capturing non-linear interactions between rate levels, loan age, LTV, and borrower characteristics. (2) **Credit loss modeling:** Deep learning models trained on RMBS loan-level performance now predict 24-month cumulative losses for new originations with significantly lower RMSE than traditional logistic regression scorecards. (3) **CLO analytics:** NLP analysis of loan agreement covenants (see [[large-language-models-applications-and-limitations]]) enables systematic comparison of covenant protection across CLO collateral pools — previously a labor-intensive manual process. See [[machine-learning-fundamentals]] for the underlying ML methods.
+
+**Securitization ↔ Geopolitics:** Geopolitical risk creates "geographic concentration risk" in securitized products — a factor increasingly explicit in rating agency models. Climate risk in real estate (see [[2026-06-06-global-water-crisis-2026-scarcity-conflicts]] and [[2026-05-28-europe-heatwave-2026-record-temperatures]]) is now an explicit input to RMBS credit models: Moody's and S&P apply geographic stress to properties in flood zones, wildfire risk areas, and extreme heat regions. More acutely, geopolitical shocks can impair the collateral backing ABS: the Russia sanctions froze assets of Russian aircraft lessors whose planes were on Russian territory — aircraft ABS backed by Russian-leased planes became effectively uncollectable, creating ~$9B in ABS losses.
+
+**New wikilinks:**
+- [[credit-markets-and-credit-risk]] — securitization within credit risk framework
+- [[fixed-income-deep-dive]] — ABS/MBS as structured fixed income
+- [[machine-learning-fundamentals]] — ML in prepayment and loss modeling
+- [[large-language-models-applications-and-limitations]] — NLP for covenant analysis
+- [[social-psychology-and-group-dynamics]] — groupthink in rating agency analysis
+- [[behavioral-finance-and-investor-psychology]] — institutional behavioral failures in securitization
+- [[2026-06-06-global-water-crisis-2026-scarcity-conflicts]] — climate risk in RMBS collateral
+- [[2026-05-28-europe-heatwave-2026-record-temperatures]] — extreme heat as real estate collateral risk

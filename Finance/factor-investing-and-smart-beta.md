@@ -535,3 +535,25 @@ The most significant structural development of 2023-2025: AI-related mega-cap co
 | Enhanced index (active quantitative) | 0.40-0.75% | 2-5% | Moderate-high | 50-100%/yr |
 
 The smart beta ETF captures factor premiums at low cost but with significant dilution of factor exposure due to long-only constraints, market-cap weighting of the factor-selected universe, and rebalancing frequency constraints. Pure long-short factor portfolios maximize factor exposure but require leverage, short-selling, and significantly higher fees.
+
+---
+
+### June 2026 Vault Cross-Connections: Factor Investing Across Disciplines
+
+**Factor Investing ↔ Psychology:** Factor premiums are most compelling when grounded in a behavioral explanation for *why* they persist. The value premium persists because investors systematically extrapolate past growth too far into the future (representativeness heuristic — see [[cognitive-biases]]) and are overly pessimistic about "ugly" cheap stocks that have recently disappointed. The momentum premium persists because investors *underreact* initially to new information (anchoring on prior prices), with full adjustment occurring slowly over 3-12 months. Understanding the behavioral source of each factor premium helps assess its durability: factors with behavioral foundations are less likely to be arbitraged away than purely statistical patterns, because the behavioral biases that generate them are persistent human traits, not one-time anomalies. See [[behavioral-finance-and-investor-psychology]] for the limits-to-arbitrage framework explaining why behavioral mispricings persist despite professional traders.
+
+**Factor Investing ↔ Geopolitics:** Factor performance varies dramatically across geopolitical regimes. The value factor has chronically underperformed in "financialization" regimes (low rates, abundant liquidity — 2010-2021) but outperformed in rate-normalization and inflationary regimes (2022-2025). The quality factor (profitable, low-leverage companies) dramatically outperforms during geopolitical stress and market drawdowns — companies with strong balance sheets survive supply chain disruptions and sanctions-related cost increases better than leveraged competitors. The [[2026-05-27-us-china-great-power-competition]] note describes how US-China decoupling is creating a new "geopolitical quality" factor: companies with diversified supply chains and low China revenue exposure are trading at a premium to single-geography-dependent competitors. This emerging factor is not yet formalized in academic literature but is actively priced by institutional investors.
+
+**Factor Investing ↔ AI/ML:** Machine learning is systematically used to identify new factors and test their robustness. Gu, Kelly & Xiu (2020, *Review of Financial Studies*) applied neural networks to 94 characteristic-based factors and found that ML-based combinations of known factors outperform any single factor by ~30% in out-of-sample Sharpe ratio. The [[machine-learning-fundamentals]] note explains the overfitting risk: the "factor zoo" (315+ published factors as of 2016, per Harvey et al.) is substantially populated by spurious findings from multiple testing, but ML techniques with proper regularization can identify the genuine subset. Hierarchical Risk Parity (López de Prado, 2016 — described in [[Modern-Portfolio-Theory]]) uses hierarchical clustering to construct factor portfolios without inverting an estimated covariance matrix, avoiding the "error maximization" problem of standard MVO.
+
+**Factor Investing ↔ Sovereign Wealth Funds:** Norway's GPFG (see [[sovereign-wealth-funds]]) has systematically harvested factor premiums since 2016: their "expected returns" framework allocates to value, quality, and low-volatility factors across global equities, with documented 0.25% annual alpha from factor tilts over passive benchmarks. At $1.7T AUM, even small factor tilts generate $4B+ in additional annual return — making factor investing one of the most economically significant academic-to-practice knowledge transfers in finance.
+
+**New wikilinks:**
+- [[cognitive-biases]] — behavioral roots of value and momentum premiums
+- [[behavioral-finance-and-investor-psychology]] — limits to arbitrage preserving factor premiums
+- [[machine-learning-fundamentals]] — ML factor discovery and robustness testing
+- [[Modern-Portfolio-Theory]] — HRP as factor-aware covariance estimation
+- [[sovereign-wealth-funds]] — Norway GPFG as largest-scale factor investor
+- [[quantitative-finance-and-algorithmic-trading]] — factor model implementation
+- [[2026-05-27-us-china-great-power-competition]] — geopolitical quality factor emergence
+- [[risk-parity-and-all-weather-portfolios]] — factor risk parity as complement to asset class parity

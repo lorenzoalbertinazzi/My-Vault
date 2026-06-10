@@ -706,3 +706,24 @@ Empirical tests with proper data-mining corrections identify a small number of t
 **What does not work — chart pattern specifics:**
 
 Brock, Lakonishok & LeBaron (1992, *Journal of Finance*, the most cited technical analysis paper) found 26 trading rules (including head-and-shoulders, double-top, various moving average rules) generated returns above the buy-and-hold in data through 1989. Sullivan, Timmermann & White (1999, *Journal of Finance*, using data mining correction) applied the same rules out-of-sample to 1987-1996 data: essentially no trading rule generated significant excess returns after correcting for multiple testing. Specific named chart patterns (cup-and-handle, pennant, flag formation) have been tested in several studies with consistently null results when applied with predetermined classification criteria rather than after-the-fact identification.
+
+---
+
+### June 2026 Vault Cross-Connections: Technical Analysis as Applied Cognitive Psychology
+
+**Technical Analysis ↔ Psychology (deepened):** Technical analysis works *because* it is self-fulfilling among a sufficiently large population of believers — a direct demonstration of social reality construction. If enough traders watch the 200-day moving average and sell when price crosses below it, then price *will* exhibit mean-reversion around that level, confirming the pattern for the next generation of technical analysts. This is the Keynesian beauty contest applied to financial markets: prices reflect what traders believe *other traders* will do, not fundamental value. See [[social-psychology-and-group-dynamics]] for self-fulfilling prophecy mechanisms and [[behavioral-finance-and-investor-psychology]] for the implications for market efficiency.
+
+The neurological underpinning: human pattern recognition (visual cortex plus temporal lobe) is hyperactive — designed to detect predators in noise, it generates false positives from random price charts. Researchers at Dartmouth showed that people see meaningful patterns in randomly generated financial charts at the same rate as in actual market data, suggesting that much technical analysis is confabulation — the brain's storytelling system (see [[memory-systems-and-learning-science]]) constructing explanatory narratives from noise.
+
+**Technical Analysis ↔ AI:** Machine learning has definitively tested technical analysis's predictive claims. Zhu & Zhou (2009, *Journal of Empirical Finance*) found that moving average rules have statistically significant predictive power for US equity markets over 1926-2008 — but only at monthly horizons, not daily. Neely, Rapach, Tu & Zhou (2014, *Review of Financial Studies*) showed that macroeconomic fundamentals and technical indicators together predict stock returns out-of-sample at the monthly level, with each adding incremental value. The emerging synthesis: technical indicators are informative *proxies* for behavioral regime information (momentum, mean-reversion) rather than standalone predictive tools — useful as features in ML models rather than as standalone trading rules. See [[machine-learning-fundamentals]] for ML feature engineering.
+
+**Technical Analysis ↔ Geopolitics:** In geopolitically-volatile environments, traditional chart patterns break down because political events create discrete jumps (gaps) in price series that violate the continuous-movement assumption behind pattern formation. The June 2026 Hormuz crisis created gap openings in oil stocks that rendered 6-month chart patterns irrelevant — the "support level" at Brent $95 was gapped through in a single session. Technical traders focused on pattern-based entries during geopolitical events systematically underperform macro-aware fundamental traders because the "signal" they track is overwhelmed by news flow. See [[geopolitical-risk-premium-and-markets]].
+
+**New wikilinks:**
+- [[behavioral-finance-and-investor-psychology]] — self-fulfilling prophecy as TA mechanism
+- [[social-psychology-and-group-dynamics]] — Keynesian beauty contest and social reality construction
+- [[cognitive-biases]] — pattern recognition errors generating false TA signals
+- [[memory-systems-and-learning-science]] — brain's confabulation in chart reading
+- [[machine-learning-fundamentals]] — ML testing of TA effectiveness
+- [[geopolitical-risk-premium-and-markets]] — TA breakdown during geopolitical gaps
+- [[quantitative-finance-and-algorithmic-trading]] — TA as feature in quant models

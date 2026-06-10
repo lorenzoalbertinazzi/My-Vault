@@ -749,3 +749,28 @@ Scenario analysis approach: geopolitical risk modelers at major banks (JPMorgan,
 **Oil geopolitical premium — historical quantification:**
 
 Kilian (2009, *American Economic Review*) decomposed oil price changes into: (1) aggregate demand shocks (global growth); (2) oil-specific demand shocks (precautionary/speculative demand driven by geopolitical fears); (3) oil supply shocks. Barsky & Kilian (2004, *Quarterly Journal of Economics*) and subsequent updates quantified the geopolitical supply risk premium: historically, geopolitical risk adds approximately $3-8/barrel to oil prices during moderate tension periods and $15-35/barrel during acute crisis periods. The 2022-2023 Russian invasion premium reached approximately $25-30/barrel in March 2022 before partially retreating as Russian oil continued to flow (to China, India, Turkey). As of June 2026, the geopolitical premium in Brent crude (relative to demand/supply fundamentals) is estimated at approximately $6-10/barrel, reflecting the cumulative impact of Russian supply uncertainty, Middle East tensions, and Red Sea shipping disruptions.
+
+---
+
+### June 2026 Vault Cross-Connections: Geopolitical Risk as a Multi-System Phenomenon
+
+**Geopolitical Risk ↔ Psychology:** Geopolitical risk is particularly subject to psychological distortions because its outcomes are low-probability, high-consequence, and temporally uncertain — exactly the profile that triggers the worst systematic cognitive errors. The availability heuristic causes investors to overestimate risks that are currently in the news (Hormuz closure, Taiwan Strait) while underestimating risks that are building quietly (European infrastructure sabotage, sub-threshold gray-zone operations). See [[cognitive-biases]] for the availability mechanism and [[behavioral-finance-and-investor-psychology]] for the limits-to-arbitrage reason why these mispricings persist.
+
+The narrative fallacy (Taleb, 2007) is particularly acute for geopolitical analysis: investors construct compelling causal stories about geopolitical events that feel more predictive than they are. The belief that "Russia would not invade Ukraine because the economic costs are too high" was a narrative that blocked consideration of Putin's non-economic motivations — demonstrating how narrative construction substitutes for genuine probability estimation. See [[mental-models]] for the map-territory distinction applied to geopolitical analysis.
+
+**Geopolitical Risk ↔ Energy/Commodities (June 2026):** The Strait of Hormuz crisis (see [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]]) and the Russia-Ukraine conflict (see [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]]) are the two dominant geopolitical drivers of commodity prices in 2026. The Kilian (2009) decomposition identifies "precautionary demand" — oil bought and stored due to supply disruption fears — as a component of oil prices that can be $6-10/barrel even in the absence of actual supply disruption. This precautionary premium is directly tied to geopolitical risk perceptions, creating a feedback loop: geopolitical risk → higher oil prices → energy inflation → monetary tightening → weaker growth → reduced geopolitical risk-taking capacity.
+
+**Geopolitical Risk ↔ Defense/Industrial Stocks:** Europe's rearmament program (see [[2026-05-30-europe-rearmament-nato-russia-threat]]) has created the most sustained outperformance of defense stocks since the post-9/11 period. Rheinmetall (German defense) is up 580% since February 2022; BAE Systems, Leonardo, and Dassault have similarly outperformed broad market indices by 150-300%. The investment implication: geopolitical risk creates sector rotation opportunities that persist for 3-5 years, far longer than single-event mispricings.
+
+**Geopolitical Risk ↔ AI Forecasting:** Machine learning models trained on geopolitical event databases (ACLED conflict data, GDELT event data, UN Security Council voting records) now provide probabilistic forecasts of conflict escalation events with track records competitive with expert consensus. See [[machine-learning-fundamentals]] for the NLP tools and [[agentic-ai-and-multi-agent-systems]] for AI-driven geopolitical monitoring agents. JPMorgan's proprietary geopolitical risk model uses satellite imagery analysis, social media sentiment, and defense procurement data to construct real-time risk scores for 60+ country pairs.
+
+**New wikilinks:**
+- [[cognitive-biases]] — availability heuristic in geopolitical risk assessment
+- [[behavioral-finance-and-investor-psychology]] — narrative fallacy and limits to arbitrage
+- [[mental-models]] — map-territory distinction in geopolitical analysis
+- [[real-assets-reits-and-commodities]] — commodity price channels for geopolitical risk
+- [[machine-learning-fundamentals]] — AI geopolitical risk forecasting
+- [[agentic-ai-and-multi-agent-systems]] — AI agents for geopolitical monitoring
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — Hormuz oil premium
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — Russia-Ukraine market impact
+- [[2026-05-30-europe-rearmament-nato-russia-threat]] — European defense investment thesis

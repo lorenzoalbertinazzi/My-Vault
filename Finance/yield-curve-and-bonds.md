@@ -683,3 +683,25 @@ The Federal Reserve Bank of New York's ACM model (Adrian, Crump & Moench, 2013, 
 - **Term premium** (compensation for bearing interest rate duration risk)
 
 As of June 2026: 10-year yield ≈ 4.65%; ACM model estimates expected short rates = 3.90%; term premium = +0.75%. The positive term premium reflects markets requiring additional compensation for 10-year duration given elevated inflation uncertainty and fiscal supply concerns — a reversal from the negative term premiums observed in 2016-2021 when QE suppressed the term premium.
+
+---
+
+### June 2026 Vault Cross-Connections: The Yield Curve as the Economy's Vital Sign
+
+**Yield Curve ↔ Fed Policy/Macro (June 2026):** The June 2026 yield curve (2s-10s spread ~+45 bps, 10-year at 4.65%, term premium ~+75 bps) reflects a specific macroeconomic reading: markets expect short rates to fall modestly over the next 2-3 years (pricing 2 cuts in 2026-2027) but are demanding a meaningful term premium for holding duration. The term premium's rise from -50 bps (2021) to +75 bps (2026) reflects: (1) fiscal sustainability concerns (CBO debt projections, see [[macroeconomics-101]]); (2) reduced Fed balance sheet suppression of term premium (QT has removed ~$1.3T in Treasury holdings from the Fed balance sheet); (3) geopolitical uncertainty about the inflation path. See [[Federal-Reserve-and-Monetary-Policy]] for the operating framework.
+
+**Yield Curve ↔ Geopolitics:** The "safe haven" bond dynamic — where geopolitical crises drive capital into US Treasuries, suppressing yields even as inflation risks rise — represents a structural tension between geopolitical demand and inflation-based supply dynamics. The June 2026 Hormuz crisis (see [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]]) produced a $15B single-day inflow into Treasury ETFs (TLT) despite the energy price shock implying higher future inflation. This creates a "flight-to-safety premium" in Treasury yields: yields are artificially low during crises relative to inflation fundamentals, creating buying opportunities for inflation-aware investors who can distinguish geopolitical demand from fundamental value.
+
+**Yield Curve ↔ Psychology:** The yield curve is a rare financial instrument where academic economists and practitioners agree on its predictive power — the inverted yield curve (2s-10s negative) has preceded every US recession since 1950. Yet investors systematically underweight this signal, particularly at the peak of expansion. The "it's different this time" rationalization (famously identified as "the four most dangerous words in investing" by John Templeton) is a classic availability/overconfidence bias: investors construct explanations for why the yield curve inversion won't predict recession this cycle, anchoring on the most recent example where the inversion persisted longer than expected (2022-2023 inversion, 18-month prediction lag). See [[cognitive-biases]] for overconfidence and the availability heuristic.
+
+**Yield Curve ↔ AI:** Deep learning models (LSTM networks — see [[machine-learning-fundamentals]]) trained on macroeconomic indicator time series predict yield curve shape changes with statistically significant out-of-sample power at 3-6 month horizons. The Federal Reserve Bank of New York now publishes a machine learning-based yield curve model supplement alongside the traditional Nelson-Siegel parametric model, with the ML model showing lower out-of-sample forecasting error for short-horizon yield changes.
+
+**New wikilinks:**
+- [[Federal-Reserve-and-Monetary-Policy]] — Fed rate decisions as short-end yield driver
+- [[fixed-income-deep-dive]] — yield curve within broader fixed income framework
+- [[macroeconomics-101]] — yield curve as recession predictor and macro indicator
+- [[inflation-dynamics-and-investment]] — inflation expectations embedded in yield curve
+- [[behavioral-finance-and-investor-psychology]] — "it's different this time" rationalization
+- [[cognitive-biases]] — availability heuristic in yield curve interpretation
+- [[machine-learning-fundamentals]] — ML yield curve forecasting
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — flight-to-safety Treasury demand

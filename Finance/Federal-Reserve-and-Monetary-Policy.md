@@ -208,3 +208,52 @@ Between meetings, the NY Fed's Open Market Desk (the "Desk") implements policy t
 **The 2026 Fed independence challenge:**
 
 As of June 2026, three developments create the most serious threat to Fed independence since the 1970s: (1) The administration has publicly criticized FOMC decisions and suggested the President has firing authority over the Chair for cause; (2) A Senate Banking Committee confirmation hearing for Powell's potential successor has become a de facto referendum on whether rate policy should be subordinated to housing affordability objectives; (3) Two circuit courts have issued conflicting rulings on executive removal power over independent agency heads following the administration's removal of FTC and NLRB chairs. The 10-year inflation expectations premium embedded in Treasury yield curves (approximately 35 bps above pre-2025 norms) reflects markets' discounting of some probability of reduced Fed credibility — with each 10 bps increase in break-even inflation equivalent to approximately $25 billion in annual Treasury borrowing costs.
+
+---
+
+## Cross-Disciplinary Connections
+
+### Federal Reserve ↔ Psychology: Credibility, Signaling, and the Communication Game
+
+Modern central banking is fundamentally a psychological exercise: the Fed's ability to achieve its mandate depends almost entirely on whether economic actors *believe* it will achieve its mandate. This is a direct application of game theory and expectation dynamics from behavioral science.
+
+**Forward guidance as commitment device:** The Fed's practice of signaling future rate paths (first formalized under Bernanke in 2012 via explicit forward guidance) is an application of the psychological principle of commitment and consistency — described in [[cialdini-influence]]. By announcing expected future paths and then following them, the Fed builds a track record that makes future announcements more credible. When Fed Chairs deviate from communicated paths without clear justification, markets assign higher uncertainty premiums to future communications — a loss of credibility that is psychologically slow to rebuild (see loss aversion asymmetry in [[prospect-theory-and-decision-making]]: credibility losses are felt more acutely than equivalent credibility gains).
+
+**Anchoring and inflation expectations:** Central banks anchor long-run inflation expectations by consistently repeating a target (2%) and describing policy in terms of convergence to that target. The mechanism is precisely anchoring (see [[cognitive-biases]]): by providing a salient reference point repeatedly and credibly, the Fed influences how households and firms form price-setting decisions. When this anchoring succeeds, realized inflation converges to target with less output sacrifice — the "sacrifice ratio" (percentage points of unemployment per percentage point reduction in inflation) falls for credible central banks. Sargent's (1982) analysis of hyperinflation endings showed that announced credible regime changes can reduce inflation rapidly with minimal output loss — pure expectation management.
+
+**The psychology of FOMC deliberation:** Research by Meade & Stasavage (2008) on FOMC transcripts found that the introduction of *transcript publication* (with a 5-year lag) changed the deliberative behavior of committee members: members spoke less candidly, dissented less, and more often aligned with the Chair's expressed views — a conformity effect analogous to those documented in social psychology's Asch line experiments. See [[social-psychology-and-group-dynamics]] for conformity mechanisms.
+
+### Federal Reserve ↔ Geopolitics: Dollar Hegemony and the Weaponization of Monetary Policy
+
+The Fed sets global monetary conditions, not just American ones — because the US dollar is the world's primary reserve and trade currency, Fed rate decisions transmit globally in ways that create geopolitical tensions.
+
+**The dollar milkshake effect:** When the Fed raises rates, dollar assets become more attractive, capital flows to the US from emerging markets, the dollar strengthens, and dollar-denominated debt (most sovereign and corporate EM debt) becomes more expensive to service. The 2022-2023 Fed hiking cycle caused ~20 currency crises in EM economies (Pakistan, Sri Lanka, Egypt, Argentina, Ghana) simultaneously — a geopolitical destabilization attributable partly to US domestic monetary policy. The [[multipolar-world-order-and-future-of-global-governance]] note describes how this dollar transmission mechanism is fueling efforts to create alternative reserve currencies and payment systems.
+
+**SWIFT exclusions as monetary weapons:** The 2022 exclusion of Russian banks from SWIFT and the 2024 freezing of $300B in Russian sovereign reserves (held at Western central banks) represented the first major use of dollar-system access as a geopolitical weapon against a major power. The consequence is a structural shift: China, Saudi Arabia, and India are accelerating dedollarization of bilateral trade, creating parallel systems that reduce the Fed's global monetary leverage. See [[2026-05-27-us-china-great-power-competition]].
+
+**June 2026 rate status:** The FOMC held rates at 3.50-3.75% at its April 2026 meeting, with markets pricing near-zero probability of a June change as energy-driven inflation (CPI at 3.8% YoY) keeps the Fed on hold. Two 25bp cuts are priced for late 2026 — each Fed decision ripples through global FX markets, affecting every country carrying dollar-denominated debt.
+
+### Federal Reserve ↔ Tech & AI: Machine Learning in Monetary Policy Forecasting
+
+The Fed's Research & Statistics Division and the NY Fed now use ML models (gradient boosting, NLP on earnings calls and news feeds) to supplement traditional DSGE macroeconomic models. The [[machine-learning-fundamentals]] note describes the toolkit. Key connection: the Fed's "nowcasting" models (real-time GDP tracking) use ML on high-frequency data (credit card spending, satellite images of parking lots, shipping container tracking) to construct GDP estimates weeks before official data — changing the information set available to policymakers and by extension to markets.
+
+---
+
+## Related
+
+- [[Modern-Portfolio-Theory]] — interest rate environment shaping 60/40 portfolio correlations
+- [[Discounted-Cash-Flow-Analysis]] — risk-free rate and WACC directly set by Fed policy
+- [[Black-Scholes-Option-Pricing-Model]] — risk-free rate input (r) and volatility implications of Fed announcements
+- [[Value-at-Risk-and-CVaR]] — interest rate VaR in fixed income portfolios
+- [[fixed-income-deep-dive]] — Fed rate decisions as the primary driver of bond yields
+- [[yield-curve-and-bonds]] — yield curve inversion as recession signal closely tracked by Fed
+- [[inflation-dynamics-and-investment]] — Fed's primary mandate is inflation control
+- [[macroeconomics-101]] — monetary policy transmission mechanisms
+- [[central-bank-digital-currencies-cbdc]] — Fed's research into CBDC as a new monetary tool
+- [[cognitive-biases]] — anchoring in inflation expectation formation
+- [[cialdini-influence]] — commitment psychology in forward guidance
+- [[social-psychology-and-group-dynamics]] — conformity in FOMC deliberations
+- [[prospect-theory-and-decision-making]] — asymmetric credibility loss/gain dynamics
+- [[multipolar-world-order-and-future-of-global-governance]] — dollar hegemony challenges
+- [[2026-05-27-us-china-great-power-competition]] — dedollarization and geopolitical dollar weaponization
+- [[machine-learning-fundamentals]] — ML in Fed nowcasting models

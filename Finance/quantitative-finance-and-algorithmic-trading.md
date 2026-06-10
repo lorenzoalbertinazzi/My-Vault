@@ -807,3 +807,24 @@ The application of machine learning (LASSO, random forests, gradient boosting, L
 *Overfitting and the length of financial history:* With ~70 years of monthly data (~840 observations) and potentially hundreds of features, regularization is essential. Lopez de Prado (2018, *Advances in Financial Machine Learning*) documented that standard train/test splits dramatically overstate out-of-sample performance in financial data because of serial correlation — proper walk-forward cross-validation (preserving temporal ordering) is required.
 
 *Interpretability vs. performance:* Institutional investors face a specific ML challenge: "black box" models that generate returns but cannot be explained violate risk management and compliance requirements. The FRTB requires models to be explainable; UCITS regulations require interpretable risk disclosures. The practical resolution: most institutional quant funds use ML for feature discovery and interaction detection, then regularize to simple factor exposures that can be explained and reported — using ML as a research tool rather than a production trading model.
+
+---
+
+### June 2026 Vault Cross-Connections: Quant Finance as Applied Interdisciplinary Science
+
+**Quant Finance ↔ AI/ML (2026 frontier):** The frontier between "quantitative finance" and "AI finance" has dissolved — all major quant funds now use deep learning components. The most significant 2026 development: **multi-modal trading signals** combining traditional financial data (price, volume, fundamentals) with LLM-derived text signals from earnings calls, FOMC statements, and geopolitical news. See [[large-language-models-applications-and-limitations]] for LLM signal generation and [[transformer-architecture]] for the transformer architecture that enables efficient text processing. The alpha decay problem — where quantitative signals erode as more capital uses them — is accelerating: signals that had 18-month half-lives in 2010 now have 6-9 month half-lives in 2026 as the industry converges on similar signal sources.
+
+**Quant Finance ↔ Psychology:** Statistical arbitrage strategies implicitly exploit psychological biases — momentum trading exploits underreaction (anchoring), mean-reversion strategies exploit overreaction (representativeness heuristic), value strategies exploit emotional extrapolation of recent bad results. Understanding the behavioral source of each signal (see [[behavioral-finance-and-investor-psychology]] and [[cognitive-biases]]) helps predict signal durability: behavior-driven signals degrade more slowly than pure statistical regularities because the cognitive biases generating them are persistent. The practical implication: quant funds that can articulate "this factor persists because of X behavioral bias" have a more reliable out-of-sample thesis than funds that rely on pure statistical mining.
+
+**Quant Finance ↔ Geopolitics (2026):** Geopolitical event-driven signals are among the highest-Sharpe and lowest-crowded opportunities in quant finance because they are resistant to algorithmic replication (no clean historical data, non-recurring events, requires geopolitical domain knowledge). Macro quant funds at Citadel and Point72 have built dedicated geopolitical signal teams combining satellite image processing (see [[computer-vision-and-convolutional-neural-networks]]), OSINT (open-source intelligence) analysis, and political science expertise to generate tradeable signals around conflict escalation, sanctions announcements, and leadership transitions. The [[geopolitical-risk-premium-and-markets]] note provides the theoretical framework; quantitative implementation requires integrating that framework with real-time data feeds and execution algorithms.
+
+**New wikilinks:**
+- [[machine-learning-fundamentals]] — ML fundamentals applied in quant strategies
+- [[large-language-models-applications-and-limitations]] — LLM text signal extraction
+- [[transformer-architecture]] — transformer for NLP signal generation
+- [[computer-vision-and-convolutional-neural-networks]] — satellite imagery for geopolitical signals
+- [[behavioral-finance-and-investor-psychology]] — behavioral sources of quant signal durability
+- [[cognitive-biases]] — specific biases exploited by different strategy types
+- [[geopolitical-risk-premium-and-markets]] — geopolitical signal opportunities
+- [[reinforcement-learning-from-human-feedback]] — RL for adaptive strategy optimization
+- [[vector-databases-and-embeddings]] — similarity search for document-based signals

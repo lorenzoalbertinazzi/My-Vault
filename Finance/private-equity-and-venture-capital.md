@@ -784,3 +784,25 @@ The secondary market (where LP interests in PE funds are bought and sold before 
 GP-led structures include: *Continuation funds* — a GP moves one or several high-quality assets from an older fund into a new "continuation vehicle," allowing existing LPs to roll their interest forward or receive cash (provided by secondary buyers who purchase the rolled-forward interest). *Single-asset transactions* — the most common form in 2024-2025: a GP transfers a single high-performing portfolio company into a new vehicle, effectively extending ownership in the company beyond the fund's term.
 
 The controversy: GP-led transactions create a conflict of interest — the GP simultaneously represents the buyer (the continuation fund, in which the GP typically has an increased carry stake) and the seller (the original fund's LPs). Independent valuations and LP advisory committee approvals are required but are frequently insufficient to eliminate conflicts, as the GP has superior information about the asset's prospects than the LP committee members. IRR "reset" is the most criticized feature: the GP's carry (20% of profits above the hurdle) restarts in the new vehicle, potentially converting one profitable exit for LPs into two carry-generating events for the GP.
+
+---
+
+### June 2026 Vault Cross-Connections: Private Markets as Geopolitical and Technological Frontier
+
+**PE/VC ↔ Geopolitics (June 2026):** Private equity and venture capital are increasingly shaped by geopolitical forces operating at the investment thesis level. Three transformative dynamics: (1) **"Dual-use" technology investment** — US VC funds are restricted from investing in Chinese AI, semiconductor, and quantum computing startups (OFAC's "Outbound Investment Rule," effective January 2025). This has bifurcated the global VC ecosystem into US-allied and Chinese-aligned tracks. See [[2026-05-27-us-china-great-power-competition]]. (2) **Defense tech VC** — the Russia-Ukraine war catalyzed a wave of VC investment in defense technology: Anduril Industries (now valued at $28B), Shield AI, Sarcos, and dozens of smaller companies raised capital to build drones, autonomous systems, and AI-enabled targeting. See [[2026-05-30-europe-rearmament-nato-russia-threat]]. (3) **Critical mineral PE** — private equity funds (Blackstone, KKR, Brookfield) are acquiring mining assets for lithium, cobalt, and rare earth elements, driven by the energy transition demand thesis intersecting with geopolitical supply chain diversification mandates. See [[real-assets-reits-and-commodities]] and [[energy-transition-finance-and-green-capital-markets]].
+
+**PE/VC ↔ Psychology:** The VC decision-making process is exceptionally vulnerable to cognitive biases because: (a) the information environment is sparse (early-stage companies have limited financial track records); (b) outcomes are highly uncertain (most VCs are wrong about individual investments even when right about the portfolio); (c) social proof is powerful (investors pattern-match to successful founders and co-investors rather than analyzing businesses independently). The availability heuristic drives VC investing toward recent success archetypes — the "10 years ago we missed Uber, we can't miss the next Uber" reasoning that causes VCs to over-fund similar companies at peak valuations. See [[behavioral-finance-and-investor-psychology]] and [[cognitive-biases]]. The psychology of failure is also under-studied: Sahlman (Harvard Business School) has documented that experienced VCs are better calibrated on downside risk precisely because they have personally experienced the visceral pain of failure — a form of "experiential learning" that formal models cannot replicate. See [[memory-systems-and-learning-science]].
+
+**PE/VC ↔ AI (2026 frontier):** AI is both the dominant investment theme and a disruptive force for the industry itself. In 2025-2026, AI/ML company investments represent 35% of total US VC activity (up from 15% in 2021). Simultaneously, AI is being deployed for PE due diligence (contract review, management interview analysis, predictive default modeling) and for LP-GP communications (automated reporting, portfolio performance attribution). See [[agentic-ai-and-multi-agent-systems]] for autonomous AI in financial analysis workflows.
+
+**New wikilinks:**
+- [[quantitative-finance-and-algorithmic-trading]] — quant methods applied to PE analytics
+- [[Discounted-Cash-Flow-Analysis]] — DCF as primary PE valuation tool
+- [[agentic-ai-and-multi-agent-systems]] — AI agents in PE due diligence
+- [[cognitive-biases]] — availability heuristic in VC pattern-matching
+- [[behavioral-finance-and-investor-psychology]] — social proof and herding in VC investment
+- [[memory-systems-and-learning-science]] — experiential learning from failure in VC
+- [[energy-transition-finance-and-green-capital-markets]] — clean energy PE investment
+- [[real-assets-reits-and-commodities]] — critical mineral PE thesis
+- [[2026-05-27-us-china-great-power-competition]] — VC geopolitical bifurcation
+- [[2026-05-30-europe-rearmament-nato-russia-threat]] — defense tech VC

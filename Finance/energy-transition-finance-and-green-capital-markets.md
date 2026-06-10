@@ -300,3 +300,27 @@ Blended finance uses concessional public or philanthropic capital to reduce risk
 **The transition finance debate — financing dirty-to-clean vs. only clean:**
 
 A critical debate in green finance: should capital markets support "transition" activities — fossil fuel companies or heavy industry in the process of decarbonizing — or only already-clean activities? The International Capital Market Association (ICMA) published its Climate Transition Finance Handbook (2020) endorsing transition bonds for "hard-to-abate" sectors (steel, cement, chemicals, aviation) making credible decarbonization commitments. Opponents argue transition bonds provide "green washing" cover for continued fossil fuel investment without clear accountability. The EU Taxonomy's tiered approach (green/transition/enabling) attempts to resolve this by defining specific technical screening criteria, but the inclusion of natural gas as a "transitional" activity in the EU Taxonomy (2022, the so-called "brown taxonomy") generated a backlash from environmental groups and the European Parliament. The governance tension at the heart of transition finance: the private capital markets cannot decarbonize the global economy if they only finance already-clean activities, but permissive standards create greenwashing that destroys market credibility.
+
+---
+
+### June 2026 Vault Cross-Connections: Energy Finance at the Nexus of Climate, Geopolitics, and Capital
+
+**Energy Transition Finance ↔ Geopolitics (June 2026 developments):** The [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] crisis demonstrates how fossil fuel supply disruptions directly affect the economics of clean energy investment: oil at $130+/barrel makes offshore wind and utility-scale solar projects NPV-positive at discount rates previously too high to justify them, creating a perverse incentive structure where geopolitical instability *accelerates* clean energy investment. The IEA's May 2026 update projects that every $10/barrel increase in oil price above $90 generates approximately $85 billion in additional clean energy investment commitments annually — the geopolitical risk premium on fossil fuels functionally subsidizes their replacements.
+
+The Russia-Ukraine war and European energy crisis (2022-2025) has been the single largest accelerant of European renewable investment in history: Germany's offshore wind capacity grew from 8 GW (2022) to 22 GW (2026), and the EU's €300B REPowerEU program directed public capital to accelerate independence from Russian gas. See [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] for 2026 conflict dynamics that continue to shape European energy policy.
+
+**Energy Transition Finance ↔ Sovereign Wealth Funds:** Norway's Government Pension Fund Global (GPFG, $1.7 trillion AUM) — discussed in [[sovereign-wealth-funds]] — has become a test case for transition finance: the fund simultaneously derives its capital from North Sea oil revenues and is legally mandated to divest from pure-play oil companies, holding the tension between fossil-fuel origin and low-carbon destination in a single institution. The GPFG's 2024 decision to divest from companies deriving >30% of revenue from thermal coal created $40 billion in forced selling — demonstrating how SWF ESG policies create capital market impacts at scale.
+
+**Energy Transition Finance ↔ Real Assets:** Green infrastructure (offshore wind farms, solar utility assets, transmission networks) is increasingly classified as an institutional real asset class alongside traditional [[real-assets-reits-and-commodities]]. Infrastructure funds have raised over $250 billion specifically for clean energy infrastructure globally in 2025-2026, treating these assets as inflation-linked, long-duration, stable cash-flow instruments analogous to toll roads and regulated utilities — which they structurally resemble when government-contracted via Power Purchase Agreements (PPAs).
+
+**Energy Transition Finance ↔ Psychology of Risk:** The "stranded asset" risk — that fossil fuel reserves and infrastructure will become economically worthless before end of natural life — is a classic long-tail risk that institutional investors systematically underweight due to the availability heuristic (no major stranded asset event has occurred yet at full scale) and short-horizon evaluation periods. See [[behavioral-finance-and-investor-psychology]] for the myopic loss aversion that creates undersaving for long-run risks. The 2020-2022 ESG fund performance reversal (energy stocks dramatically outperformed due to commodity price rises, making ESG-underweight energy portfolios lose to benchmark) created a behavioral recency bias against ESG that is now fading as energy prices moderate.
+
+**New wikilinks:**
+- [[sovereign-wealth-funds]] — GPFG as case study in transition finance at scale
+- [[real-assets-reits-and-commodities]] — green infrastructure as a new real asset category
+- [[geopolitical-risk-premium-and-markets]] — geopolitical premium accelerating clean energy investment
+- [[behavioral-finance-and-investor-psychology]] — myopic loss aversion in stranded asset underpricing
+- [[macroeconomics-101]] — energy transition macroeconomic implications
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — oil price spike → clean energy acceleration
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — European energy independence policy driver
+- [[arctic-geopolitics-and-climate-competition-2026]] — Arctic resource competition vs. climate imperatives

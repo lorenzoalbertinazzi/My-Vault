@@ -750,3 +750,24 @@ SOTP valuation is appropriate when: (1) a company operates genuinely distinct bu
 **The precedent transaction premium — deal vs. stock multiples:**
 
 Precedent transactions (acquisition multiples from completed M&A deals) consistently trade at 20-40% premiums to comparable trading multiples for the same sector. This "control premium" compensates sellers for: (1) the surrender of optionality (the ability to sell later at potentially higher prices); (2) the loss of the public market premium (public shares trade at a liquidity premium); (3) the capture of synergy value by the acquirer. The control premium is largest in sectors with active strategic consolidators (healthcare, technology, financial services) and smallest in cyclical sectors with few natural buyers (mining, chemicals). Blending precedent transaction and trading comps in a valuation — with appropriate weighting for the transaction's purpose (acquisition pricing vs. minority interest valuation vs. intrinsic value assessment) — requires explicit judgment about which comparables are most relevant for the specific valuation question.
+
+---
+
+### June 2026 Vault Cross-Connections: Valuation as Cross-Disciplinary Synthesis
+
+**Valuation ↔ Psychology:** Every valuation method embeds assumptions that are systematically distorted by cognitive biases. Comparable company analysis (trading comps) is anchored to current market pricing — if the overall market is overvalued (2000, 2021), comps-based valuations inherit the market's irrationality. Precedent transactions embed acquisition premium psychology — the pressure to "win" deals (competitive anxiety, sunk cost fallacy after months of due diligence) drives acquirers to overpay. DCF is subject to overconfidence in forecasts and anchoring on current price (see [[Discounted-Cash-Flow-Analysis]] and [[cognitive-biases]]). The valuation triangle (comps, precedents, DCF) is therefore not a convergence on fundamental truth but a triangulation of different behavioral noise sources — which is why professional valuations consistently end up with wide "fairness ranges" that can justify almost any transaction price.
+
+**Valuation ↔ Geopolitics:** Country risk premiums directly embed geopolitical analysis into valuation. For companies with significant operations in conflict zones or sanctioned countries, standard valuation methodologies fail because: (1) discount rates must incorporate sovereign risk premiums that can exceed 15-20% (making DCF terminal values negligible); (2) earnings visibility is low when supply chains, customer access, or regulatory environment is uncertain; (3) precedent transactions in high-risk geographies are sparse and may not be comparable. The [[geopolitical-risk-premium-and-markets]] note and [[Discounted-Cash-Flow-Analysis]] note cover the country risk premium methodology. A practical 2026 example: valuing a Pakistani garment manufacturer requires explicit modeling of the post-India-Pakistan conflict normalization timeline (see [[2026-05-27-india-pakistan-2025-war-and-aftermath]]).
+
+**Valuation ↔ AI:** AI companies represent the most challenging valuation problem in current markets because they violate standard valuation assumptions: they have rapidly changing business models, network effects that create winner-take-all dynamics incompatible with mean-reversion assumptions, and intangible assets (trained AI models, proprietary data) that are not reflected in book value. OpenAI's 2024 fundraise at $157B valuation (at that point pre-revenue for its largest products) represents a pure "real options" valuation — paying for the right to participate in AGI development, not a present-value calculation. See [[agentic-ai-and-multi-agent-systems]] and [[large-language-models-applications-and-limitations]] for the technology context.
+
+**New wikilinks:**
+- [[Discounted-Cash-Flow-Analysis]] — DCF as primary valuation method
+- [[mergers-and-acquisitions]] — valuation in M&A context
+- [[private-equity-and-venture-capital]] — PE valuation methodology
+- [[cognitive-biases]] — biases corrupting valuation assumptions
+- [[behavioral-finance-and-investor-psychology]] — anchoring and overconfidence in valuation
+- [[geopolitical-risk-premium-and-markets]] — country risk in international valuations
+- [[large-language-models-applications-and-limitations]] — AI company valuation challenges
+- [[agentic-ai-and-multi-agent-systems]] — real options valuation of AGI development
+- [[2026-05-27-india-pakistan-2025-war-and-aftermath]] — geopolitical risk in EM company valuation

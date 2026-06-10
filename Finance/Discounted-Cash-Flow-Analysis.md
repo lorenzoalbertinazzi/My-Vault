@@ -331,3 +331,48 @@ Aswath Damodaran (NYU Stern, whose publicly available valuation spreadsheets are
 **The exit multiple cross-check — preventing terminal value illusions:**
 
 Best practice requires cross-checking the Gordon Growth terminal value against an exit multiple terminal value (EV/EBITDA × exit year EBITDA). When the two approaches diverge by more than 15-20%, the analyst should examine whether the perpetuity growth rate implies unrealistic long-run competitive dynamics. A 3% perpetuity growth rate for a company in a 2% GDP-growth economy implies the company will eventually consume all economic output — a terminal value that "makes sense" mathematically but implies increasingly implausible market dominance. The exit multiple approach anchors the terminal value in observable market pricing rather than mathematical extrapolation, providing a useful sanity check.
+
+---
+
+## Cross-Disciplinary Connections
+
+### DCF ↔ Psychology: Cognitive Biases That Corrupt Forecast Quality
+
+DCF analysis appears rigorous but is uniquely vulnerable to cognitive biases because it requires precisely the type of long-horizon, multi-variable forecasting that human cognition handles worst.
+
+**Overconfidence in forecast precision:** Analysts constructing 5-year revenue forecasts typically present three scenarios (bear/base/bull) with the base case reflecting their genuine view. Research by Kahneman, Lovallo & Sibony (2011, *Harvard Business Review*) on the "inside view" versus "outside view" distinction shows that detailed inside-view forecasting systematically underestimates variance — the same cognitive process that makes individual analysts feel they understand a company's trajectory better than statistical base rates would suggest. The "reference class forecasting" correction (use historical base rates for comparable situations before adjusting for specifics) consistently produces more accurate DCF inputs than unaided expert judgment. See [[cognitive-biases]] for overconfidence mechanisms and [[mental-models]] for the outside-view framework.
+
+**Anchoring on current price:** When a stock trades at $100 and an analyst builds a DCF model, the assumptions are frequently adjusted until the output is "in the right ballpark" — a process that Bradshaw (2011) showed produces DCF target prices closely correlated with current prices, defeating the purpose of independent valuation. The anchoring heuristic (described in [[prospect-theory-and-decision-making]]) causes analysts to anchor on the price they observe before constructing the model, then reverse-engineer assumptions that justify that anchor.
+
+**Narrative fallacy in WACC construction:** The discount rate (WACC) is often calibrated to the analyst's prior belief about whether the company is a "good" or "risky" investment — a classic confirmation bias. A believer in Tesla's trajectory uses a 7% WACC; a skeptic uses 12%. The same cash flow assumptions produce a 70% difference in enterprise value from this single input. The [[behavioral-finance-and-investor-psychology]] note documents systematic overconfidence and confirmation bias in analyst forecasts, which directly undermines DCF's apparent objectivity.
+
+### DCF ↔ Geopolitics: Country Risk Premium and Sovereign Events
+
+DCF's WACC framework requires a country-specific risk premium for investments in emerging or frontier markets — a direct channel through which geopolitical analysis feeds into financial valuation.
+
+**Damodaran's country risk premium (CRP) methodology:** Aswath Damodaran (NYU Stern) calculates country risk premiums as: CRP = Sovereign CDS spread × (σ_equity / σ_bonds). For June 2026: Ukraine's CRP based on war conditions ≈ 18-22%; Iran's CRP post-nuclear tensions ≈ 15-20%; Pakistan's CRP post-India-Pakistan 2025 conflict ≈ 8-12% (see [[2026-05-27-india-pakistan-2025-war-and-aftermath]]). A manufacturing company building a factory in Ukraine must add ~20% to its hurdle rate — effectively requiring a 20% annual return premium over US equivalents to justify the investment. This geopolitical risk premium channel means that any deterioration in a country's security environment directly raises the cost of capital for every investment within its borders, compressing valuations and deferring investment.
+
+**Geopolitical scenario analysis in DCF:** The proper treatment of geopolitical risk in DCF is not a single risk-adjusted rate but scenario analysis with probability weights: a "base case" (no escalation), a "disruption case" (sanctions/conflict), and a "resolution case" (peace dividend), weighted by assessed probabilities. The [[geopolitical-risk-premium-and-markets]] note documents how geopolitical events create systematic repricing of risk premiums across entire regions.
+
+### DCF ↔ Tech & AI: Machine Learning as an Alternative Forecasting Engine
+
+AI models are beginning to replace or augment human-constructed DCF forecasts in quantitative equity research. Key 2026 development: Renaissance Technologies and Two Sigma have deployed transformer-based earnings forecasting models that predict near-term revenue growth more accurately than sell-side consensus estimates, with these forecasts then fed into automated DCF models. The [[machine-learning-fundamentals]] and [[transformer-architecture]] notes describe the underlying technology. The risk: ML forecasting models optimize on historical patterns and may fail during structural breaks — exactly the regime changes that make DCF forecasting hard in the first place.
+
+---
+
+## Related
+
+- [[Black-Scholes-Option-Pricing-Model]] — real options extend DCF to handle strategic optionality
+- [[Value-at-Risk-and-CVaR]] — DCF sensitivity as a form of scenario analysis
+- [[valuation-fundamentals]] — DCF within the broader valuation toolkit
+- [[Federal-Reserve-and-Monetary-Policy]] — risk-free rate and WACC set by Fed policy
+- [[Modern-Portfolio-Theory]] — WACC and CAPM beta derive from MPT equilibrium
+- [[macroeconomics-101]] — GDP growth rate informs terminal value perpetuity assumption
+- [[private-equity-and-venture-capital]] — DCF is the core PE valuation methodology
+- [[mergers-and-acquisitions]] — DCF as primary M&A valuation tool
+- [[cognitive-biases]] — overconfidence and anchoring in DCF forecast construction
+- [[prospect-theory-and-decision-making]] — price anchoring in analyst models
+- [[behavioral-finance-and-investor-psychology]] — systematic biases in analyst DCF assumptions
+- [[geopolitical-risk-premium-and-markets]] — country risk premium inputs to WACC
+- [[machine-learning-fundamentals]] — AI-augmented earnings forecasting replacing manual DCF inputs
+- [[2026-05-27-india-pakistan-2025-war-and-aftermath]] — country risk premium example

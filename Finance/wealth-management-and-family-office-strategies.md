@@ -298,3 +298,23 @@ Dynasty trusts (perpetual trusts available in states including South Dakota, Nev
 **The 2025-2026 regulatory environment — estate and gift tax cliff:**
 
 The Tax Cuts and Jobs Act (2017) doubled the estate and gift tax exemption from $5.49M to $11.18M per person (indexed to inflation — reaching $13.99M per person in 2026). These provisions sunset December 31, 2025, unless extended, reverting to ~$7M per person. Congress has thus far not passed a permanent extension as of June 2026, creating the largest estate planning opportunity in a generation: transferring assets from taxable estates before the potential reversion. Estimated value of transfers completed in 2024-2025 in anticipation of sunset: $1.4 trillion (Internal Revenue Service data), primarily through Spousal Lifetime Access Trusts (SLATs), charitable lead trusts, and grantor retained annuity trusts (GRATs).
+
+---
+
+### June 2026 Vault Cross-Connections: Wealth Management at the Intersection of Psychology, Tax, and Strategy
+
+**Wealth Management ↔ Psychology:** The primary challenge in wealth management is not analytical but psychological: maintaining client relationships through inevitable periods of underperformance, managing clients' emotional responses to market volatility, and structuring conversations that produce rational long-term decisions despite short-term emotional pressures. This is fundamentally applied emotional intelligence (see [[emotional-intelligence]]) and negotiation skill (see [[negotiation-tactics]]). The "wealth destruction event" that most commonly devastates client relationships is not market underperformance but divorce — the most common trigger for high-net-worth asset deconstruction. Attachment theory (see [[attachment-theory-and-relationships]]) applied to family office clients helps explain why some wealthy families maintain intergenerational cohesion while others fragment across generations.
+
+**Wealth Management ↔ Geopolitics:** Ultra-high-net-worth clients are increasingly driven by geopolitical risk to "citizenship diversification" — holding multiple passports, establishing offshore trusts, and maintaining residence qualifications in multiple jurisdictions. The drivers: (1) US FATCA (Foreign Account Tax Compliance Act) compliance requirements have made US citizenship expensive for international investors, driving some to renounce; (2) EU Golden Visa programs (Portugal, Malta, Cyprus) offered citizenship-by-investment until 2023-2024 when most were terminated under EU pressure; (3) UAE, Singapore, and Switzerland have emerged as primary "safe haven" domiciles for global wealth. The geopolitical context: the weaponization of financial systems against Russia (see [[geopolitical-risk-premium-and-markets]]) has accelerated demand for "geopolitically neutral" asset and residency structures among non-Western wealthy families.
+
+**Wealth Management ↔ Technology:** AI-driven wealth management platforms (Betterment, Wealthfront, Schwab Intelligent Portfolios) have democratized access to sophisticated portfolio construction, tax-loss harvesting, and rebalancing that previously required $1M+ minimums. The competitive response from traditional wealth managers: offering "hyper-personalized" services using AI for client communication (LLM-drafted personalized market commentary), behavioral coaching (monitoring client app behavior to detect emotional decision-making), and tax optimization (direct indexing). See [[large-language-models-applications-and-limitations]] for AI client communication tools.
+
+**New wikilinks:**
+- [[tax-efficient-investing]] — tax strategy within wealth management
+- [[emotional-intelligence]] — EI in client relationship management
+- [[negotiation-tactics]] — structuring difficult financial conversations
+- [[attachment-theory-and-relationships]] — family dynamics in multi-generational wealth
+- [[behavioral-finance-and-investor-psychology]] — client behavioral coaching
+- [[geopolitical-risk-premium-and-markets]] — citizenship diversification and geopolitical wealth protection
+- [[large-language-models-applications-and-limitations]] — AI in personalized wealth management
+- [[private-equity-and-venture-capital]] — PE within family office alternative allocation

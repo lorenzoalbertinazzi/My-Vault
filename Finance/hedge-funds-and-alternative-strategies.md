@@ -614,3 +614,26 @@ The high-water mark provision: investors don't pay performance fees until prior 
 - Citadel: +38% (multi-strategy)
 
 The opportunity: the simultaneous collapse in equities (-18% S&P 500), bonds (-17% 10yr Treasury), and credit (-10% IG, -15% HY) created abundant directional short opportunities for hedge funds positioned for regime change — while the 2022 experience was catastrophic for risk parity, long-only, and 60/40 strategies. The 2022 environment validated the core hedge fund value proposition: the ability to hold short positions and profit from market dislocations in ways that long-only strategies cannot.
+
+---
+
+### June 2026 Vault Cross-Connections: Hedge Funds at the Intersection of Finance, Psychology, and Technology
+
+**Hedge Funds ↔ Psychology:** Hedge fund management is the domain where behavioral biases among institutional managers are most costly and most documented. The disposition effect (holding losers, selling winners) documented in [[behavioral-finance-and-investor-psychology]] affects even sophisticated fund managers: Frazzini (2006) found mutual fund managers' returns were reduced ~0.8% annually by this bias; equivalent research on hedge fund managers (Cici, 2012) finds similar effects, despite the much higher fees and presumed sophistication of hedge fund investors.
+
+The psychology of risk-taking at hedge funds is shaped by the asymmetric incentive structure: managers earn 20% of profits but bear none of the losses beyond their own invested capital. This creates a convex payoff — equivalent to holding a call option on the fund's performance — which rationally incentivizes excessive risk-taking ("swinging for the fences" with OPM). The academic term: "moral hazard in asset management." See [[prospect-theory-and-decision-making]] for how loss aversion interacts with this incentive structure: a manager who has lost 10% in a quarter may either become excessively risk-averse (protecting remaining capital to avoid further personal humiliation) or excessively aggressive (doubling down to recover the loss before year-end bonus measurement). Both responses deviate from rational risk management.
+
+**Hedge Funds ↔ AI/Quant (2026 frontier):** The distinction between "quantitative hedge funds" and "systematic AI hedge funds" is collapsing. Two Sigma, Citadel Securities, and Man AHL now run production trading models based on deep learning architectures rather than traditional factor models. The key 2026 development: LLM-based natural language processing on earnings call transcripts, central bank speeches, and geopolitical news has become a standard signal source at multi-strategy funds. See [[large-language-models-applications-and-limitations]] and [[transformer-architecture]] for the underlying technology. The competitive moat is increasingly data infrastructure — proprietary alternative data (satellite imagery, web scraping, credit card transaction data) rather than superior modeling, which has become commoditized.
+
+**Hedge Funds ↔ Geopolitics (June 2026):** Macro hedge funds were the biggest beneficiaries of geopolitical risk in 2022-2026. Rokos Capital Management +51%, Citadel +38%, Caxton +29% in 2022, all through directional positions in currencies, energy, and rates driven by the Russia-Ukraine conflict and its economic consequences. The pattern continues in 2026: funds with long energy (Hormuz risk, see [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]]), short EM (India-Pakistan conflict, see [[2026-05-27-india-pakistan-2025-war-and-aftermath]]), and long European defense (see [[2026-05-30-europe-rearmament-nato-russia-threat]]) have generated significant alpha against passive benchmarks. Geopolitical macro is becoming a distinct strategy allocation within multi-strategy platforms.
+
+**New wikilinks:**
+- [[behavioral-finance-and-investor-psychology]] — disposition effect and institutional behavioral failures
+- [[prospect-theory-and-decision-making]] — hedge fund incentive structure and risk-taking psychology
+- [[large-language-models-applications-and-limitations]] — NLP signal generation
+- [[transformer-architecture]] — transformer models in quantitative hedge funds
+- [[quantitative-finance-and-algorithmic-trading]] — quant strategy implementation
+- [[geopolitical-risk-premium-and-markets]] — macro hedge fund geopolitical positioning
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — energy macro positioning
+- [[2026-05-27-india-pakistan-2025-war-and-aftermath]] — EM short thesis
+- [[2026-05-30-europe-rearmament-nato-russia-threat]] — European defense long thesis

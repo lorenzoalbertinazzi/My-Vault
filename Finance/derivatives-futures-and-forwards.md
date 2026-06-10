@@ -673,3 +673,27 @@ Credit Valuation Adjustment (CVA) and Debit Valuation Adjustment (DVA) are the a
 *DVA:* The bank's own credit standing creates a symmetric adjustment from the counterparty's perspective. When a bank's credit quality deteriorates, its own DVA increases — producing a positive P&L impact on its derivatives book (the bank's liabilities are worth less). This creates a perverse accounting outcome: Citigroup reported in 2007 that it had generated $1.5 billion in DVA gains from the deterioration of its own credit — its financial difficulties improved its reported earnings.
 
 *FVA (Funding Valuation Adjustment):* The cost of funding uncollateralized derivative positions. While CVA/DVA are standard GAAP/IFRS, FVA's treatment remains contested — academic finance (Hull & White) argues FVA should not be included in fair value; banking practitioners argue it captures real economic costs. The Bank of Baroda case (2013) and Morgan Stanley's $1.5B FVA charge created a practical necessity for FVA even without consensus theory.
+
+---
+
+### June 2026 Vault Cross-Connections: Derivatives as the Connective Tissue of Global Risk Transfer
+
+**Derivatives ↔ Geopolitics (June 2026):** Derivatives markets are the fastest-responding financial instrument to geopolitical news, as they can express directional views with defined risk at low capital cost. Three June 2026 examples: (1) **Oil futures during Hormuz crisis** — Brent crude futures spiked $8 in one session following Iran's strait closure threat, with open interest in short-dated oil calls (bets on further rises) increasing 40% in three days (see [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]]). Geopolitical traders used futures to express short-term directional views on supply disruption probability. (2) **Defense equity options** — Unusual options activity in defense contractor stocks (Lockheed Martin, Raytheon, Rheinmetall) consistently precedes major defense budget announcements and conflict escalation events — a pattern documented by financial intelligence firms monitoring "smart money" flow (see [[2026-05-30-europe-rearmament-nato-russia-threat]]). (3) **Sovereign CDS and tail hedging** — Macro hedge funds actively trade CDS on Taiwan's sovereign debt as a proxy for Taiwan Strait conflict risk, creating a market for geopolitical tail risk that is increasingly liquid and informative (see [[2026-05-30-china-taiwan-strait-military-tensions]]).
+
+**Derivatives ↔ Psychology:** The retail options boom of 2020-2021 (0DTE — zero days to expiry — options becoming the majority of S&P 500 options volume by 2023) exemplifies dopamine-driven financial behavior. Short-dated options function psychologically as lottery tickets: small premium, large potential payoff, binary outcome. The same neurological reward circuitry activated by gambling (see [[dopamine-reward-systems-neuroscience]]) drives retail options speculation, with platform gamification (Robinhood's confetti animation) deliberately designed to reinforce dopamine reward loops. The social contagion dimension — Reddit's WallStreetBets coordinating options buying to create gamma squeezes — is a documented case of herding behavior in derivatives markets, analyzed in [[social-psychology-and-group-dynamics]].
+
+**Derivatives ↔ AI/Quant Finance:** The proliferation of algorithmic options market-making (see [[quantitative-finance-and-algorithmic-trading]]) means that options prices in 2026 are increasingly set by machine learning models rather than human intuition. The consequence: when ML models experience "regime change" (market conditions outside training distribution), options mispricing can persist or amplify rather than being corrected by human judgment. The March 2020 "volmageddon 2.0" episode — when algorithmic vol-targeting strategies simultaneously deleveraged — demonstrated the systemic risk created when many ML models share similar architectures and triggers. See [[agentic-ai-and-multi-agent-systems]] for the multi-agent coordination risk.
+
+**Derivatives ↔ Game Theory:** Derivatives pricing is fundamentally a game-theoretic problem: the no-arbitrage price is set at the point where no player can earn a risk-free profit by trading against the market. This game-theoretic foundation — analyzed in [[game-theory-and-strategic-thinking]] — explains why derivatives markets are among the most "efficient" in the empirical sense: sophisticated players with aligned incentives quickly eliminate mispricings, creating a competitive equilibrium approximating the theoretical no-arbitrage price.
+
+**New wikilinks:**
+- [[Black-Scholes-Option-Pricing-Model]] — the theoretical pricing foundation
+- [[options-basics]] — retail-facing options concepts
+- [[quantitative-finance-and-algorithmic-trading]] — algorithmic market-making in derivatives
+- [[agentic-ai-and-multi-agent-systems]] — systemic risk from correlated ML strategies
+- [[game-theory-and-strategic-thinking]] — no-arbitrage as game-theoretic equilibrium
+- [[dopamine-reward-systems-neuroscience]] — neurological basis of retail options speculation
+- [[social-psychology-and-group-dynamics]] — herding and gamma squeezes
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — oil futures as geopolitical risk vehicle
+- [[2026-05-30-europe-rearmament-nato-russia-threat]] — defense equity options flow
+- [[2026-05-30-china-taiwan-strait-military-tensions]] — Taiwan CDS as conflict probability proxy

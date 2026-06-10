@@ -200,3 +200,45 @@ The Black-Scholes-Merton model did not merely describe options markets — it he
 (5) **No transaction costs:** The theoretical replication portfolio requires continuous trading, which in practice requires an infinite number of trades. Real hedging is discrete, creating a residual hedge error that is proportional to gamma and the square of the hedging interval.
 
 **The practical correction — the "practitioner Black-Scholes":** Traders do not use Black-Scholes as written; they use it as a *quoting convention*, expressing option prices in terms of their implied volatility (the σ that makes the Black-Scholes formula yield the market price). The implied volatility surface (IV as a function of strike and expiry) encodes all the market's corrections for Black-Scholes' failures. A trader who says "I'll buy the 90-strike put at 22 vol" is using Black-Scholes as a common language for price communication, with the actual pricing theory embedded in how the vol surface is shaped and interpolated.
+
+---
+
+## Cross-Disciplinary Connections
+
+### Black-Scholes ↔ Psychology: Why Human Brains Systematically Misprice Options
+
+The assumptions embedded in Black-Scholes are violated not just statistically but *psychologically* — human traders exhibit systematic biases that create persistent mispricings options theory cannot fully explain.
+
+**Overconfidence and implied volatility:** Research by Barber & Odean (2000) demonstrates that individual investors are systematically overconfident in their ability to forecast stock movements. In options markets, this manifests as persistent overpricing of out-of-the-money calls (lottery tickets), documented by Barberis & Huang (2008) in the *Journal of Finance* — retail investors pay a premium for OTM calls because they overweight small probabilities of large gains, exactly the probability weighting distortion described in [[prospect-theory-and-decision-making]]. Market-makers who sell these overpriced OTM calls extract a persistent behavioral risk premium that pure no-arbitrage theory cannot price.
+
+**Anchoring and the volatility smile:** The volatility smile partly reflects anchoring — traders anchor on the current ATM implied vol when pricing OTM options, rather than independently estimating tail risk. When a spike in realized volatility occurs (e.g., a flash crash), the entire smile surface reprices upward anchored on the new ATM level, creating momentum in implied volatility that persists for days even as realized vol subsides. This anchoring dynamic means implied volatility is a biased forecast of realized volatility, not the rational Bayesian estimate the model assumes. See [[cognitive-biases]] for anchoring mechanisms.
+
+**Loss aversion and the put skew:** The persistent negative skew in equity options (OTM puts trade at higher implied vol than ATM) is partly a behavioral phenomenon: portfolio managers are willing to overpay for downside protection because losses generate roughly 2.25× the psychological pain of equivalent gains ([[prospect-theory-and-decision-making]]). This loss aversion premium embeds a behavioral tax into any put-buying hedging strategy — the rational price of tail risk insurance is lower than what loss-averse investors will pay.
+
+### Black-Scholes ↔ Geopolitics: How State-Level Events Disrupt Continuous Trading Assumptions
+
+The Black-Scholes model's assumption of continuous, liquid trading collapses precisely during geopolitical crises — the tail events that options are most often purchased to hedge.
+
+**Hormuz closure scenario (June 2026):** The [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] note documents how Iranian threats to close the Strait produced an oil price jump of $8/barrel in a single trading session. For energy company options, this violates the continuous trading assumption: overnight gaps of 10-15% in oil-linked equities during geopolitical escalations render delta-hedging impossible — the hedge rebalancing cannot occur at intermediate price levels between day's close and next day's open. Dealers who sold "cheap" protection on energy stocks had naked jump risk that Black-Scholes deltas did not capture.
+
+**Currency options and capital controls:** When countries impose capital controls during political crises (Argentina 2019, Turkey 2021, Russia 2022), the FX options market freezes entirely — the assumed continuous market ceases to exist. The [[currency-markets-and-fx]] note describes how onshore USD/RUB options became untradeable after February 2022 sanctions, leaving hedgers with theoretical delta hedges they could not execute. Black-Scholes assigns zero probability to this scenario by construction.
+
+### Black-Scholes ↔ Tech & AI: Deep Learning Replaces Closed-Form Solutions
+
+As described in the rough volatility section above, neural network-based deep hedging (Bühler et al., 2019) and ML-calibrated vol surfaces are replacing the closed-form Black-Scholes framework in production systems. The [[large-language-models-applications-and-limitations]] and [[machine-learning-fundamentals]] notes document the general ML toolset; its application to options is one of the most commercially significant uses of deep learning in quantitative finance. Key development for 2026: JPMorgan's LOXM system and Deutsche Bank's ML options pricing engine both now run transformer-based vol surface calibration, achieving 50× faster surface fitting than traditional SVI parametrization — enabling real-time repricing of full books as market conditions shift intraday.
+
+---
+
+## Related
+
+- [[Modern-Portfolio-Theory]] — portfolio construction context for options overlays
+- [[Value-at-Risk-and-CVaR]] — how options Greeks feed into VaR calculations
+- [[Federal-Reserve-and-Monetary-Policy]] — interest rate sensitivity (Rho, term structure)
+- [[Discounted-Cash-Flow-Analysis]] — risk-free rate assumptions shared with DCF
+- [[derivatives-futures-and-forwards]] — options as a class within the broader derivatives universe
+- [[options-basics]] — foundational concepts underlying the BSM framework
+- [[quantitative-finance-and-algorithmic-trading]] — computational implementation and vol surface calibration
+- [[prospect-theory-and-decision-making]] — behavioral pricing anomalies in options markets
+- [[cognitive-biases]] — anchoring effects on implied volatility
+- [[machine-learning-fundamentals]] — deep hedging and ML-based vol surface calibration
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — geopolitical jump risk scenario

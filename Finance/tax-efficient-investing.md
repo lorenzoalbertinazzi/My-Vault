@@ -455,3 +455,23 @@ A Charitable Remainder Trust (CRT) is an irrevocable split-interest trust that a
 - Net benefit: $428,400 deferred capital gains + $600K × (37% top bracket) = $222,000 immediate tax savings from charitable deduction = approximately $650K+ total tax advantage vs. immediate sale
 
 The economic trade-off: the CRT remainder goes to charity, so this strategy makes sense only for donors with charitable intent and illiquid, highly-appreciated assets.
+
+---
+
+### June 2026 Vault Cross-Connections: Tax Efficiency Across Systems and Disciplines
+
+**Tax-Efficient Investing ↔ Psychology:** Tax optimization requires behavior that runs directly against human psychological instincts. Tax-loss harvesting requires selling positions at a loss — which loss aversion (see [[prospect-theory-and-decision-making]]) makes psychologically painful even when the after-tax benefit is clear. The disposition effect (selling winners, holding losers — [[behavioral-finance-and-investor-psychology]]) is actually the *opposite* of what tax efficiency requires: you should harvest losses (sell losers) and hold winners to defer capital gains recognition. The fact that actual investor behavior inverts the optimal tax strategy is a clean empirical demonstration of prospect theory's real-world influence on financial decisions.
+
+Behavioral nudge design is transforming tax-efficient investing: Wealthfront, Betterment, and Schwab Intelligent Portfolios have automated tax-loss harvesting, removing the psychological friction of selling at a loss by making it algorithmic and invisible to the investor. The automation removes the pain of deliberate loss realization while capturing the economic benefit — a direct application of [[habit-formation]] principles and default design from behavioral economics.
+
+**Tax-Efficient Investing ↔ Geopolitics:** The 2025-2026 estate tax "cliff" (the TCJA exemption sunset from $14M to ~$7M per person) has created a massive one-time estate planning opportunity. The political dynamic: Democratic opposition to permanent extension (treating the estate tax reduction as a "gift to the wealthy") vs. Republican support creates geopolitical-domestic policy uncertainty that is directly financial. For ultra-high-net-worth families, the uncertainty itself has behavioral value: it creates a "deadline effect" that motivates estate planning action that might otherwise be deferred indefinitely. See [[behavioral-finance-and-investor-psychology]] for how deadlines overcome status quo bias.
+
+**Tax-Efficient Investing ↔ Tech:** Direct indexing — owning individual stocks rather than ETFs, enabling custom tax-loss harvesting — has been transformed by technology. Portfolio management systems (Aperio, Parametric, O'Shaughnessy) now automate daily tax-loss harvesting across 500+ individual stock positions, harvesting losses at the individual security level while maintaining market exposure through substitution securities. This was computationally impractical before algorithmic rebalancing and fractional shares. See [[machine-learning-fundamentals]] for the optimization algorithms enabling this.
+
+**New wikilinks:**
+- [[prospect-theory-and-decision-making]] — loss aversion as barrier to tax-loss harvesting
+- [[behavioral-finance-and-investor-psychology]] — disposition effect inverts optimal tax strategy
+- [[habit-formation]] — automation as behavioral design in tax-optimized investing
+- [[wealth-management-and-family-office-strategies]] — tax strategy within holistic wealth management
+- [[macroeconomics-101]] — tax policy within macroeconomic fiscal framework
+- [[machine-learning-fundamentals]] — optimization algorithms for direct indexing

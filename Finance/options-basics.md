@@ -795,3 +795,25 @@ The CBOE Options Clearing Corporation (OCC) calculates margin requirements using
 *Cash-secured puts:* Strike price × 100 shares per contract must be in the account. Selling 1 AAPL $185 put: $18,500 in cash required.
 
 *Portfolio margin:* Sophisticated investors with large, diversified options portfolios can qualify for portfolio margining (FINRA Rule 4210) which calculates margin on net portfolio risk rather than position-by-position — typically reducing margin requirements 50-70% for hedged positions. The risk: portfolio margining can enable excessive leverage that concentrates around correlated scenarios that the SPAN model treats as diversifying.
+
+---
+
+### June 2026 Vault Cross-Connections: Options as a Universal Framework for Contingent Value
+
+**Options ↔ Neuroscience/Psychology:** The retail options explosion of 2020-2021 (0DTE options accounting for >50% of S&P 500 options volume by 2023) is best understood through neurological and behavioral lenses. Options function as amplified lottery tickets — small premium outlay, large potential payoff — activating dopamine reward circuits (see [[dopamine-reward-systems-neuroscience]]) more intensely than equivalent equity investments because the binary outcome structure creates anticipatory arousal. Financial research on retail options behavior (Kumar, 2009, *Journal of Finance*, on individual investor lottery-stock preferences) confirms that retail options buyers disproportionately purchase OTM calls with negative expected value — a behavioral pattern indistinguishable from lottery ticket purchasing.
+
+The gamification of options trading on Robinhood and similar platforms deliberately exploited these dopamine mechanisms: confetti animations, push notifications on profitable positions, and simplified "buy call/buy put" interfaces removed friction and increased engagement at the expense of investor welfare. See [[habit-formation]] for the behavioral design principles used and [[cognitive-biases]] for the availability heuristic making recent large options wins seem representative.
+
+**Options ↔ Geopolitics:** Options on commodity ETFs and index options on defense and energy sectors serve as the primary vehicle for geopolitical risk expression among institutional investors. The VIX index (S&P 500 30-day implied volatility) spikes during geopolitical crises — rising from 15 (baseline) to 30+ during the Hormuz closure threat in May 2026 (see [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]]). Sophisticated geopolitical traders use options "risk reversals" (buy OTM calls, sell OTM puts, or vice versa) to express asymmetric views on conflict outcomes: a trader who believes Iran will close the Strait might buy $120 OTM Brent crude calls while selling $80 puts, expressing conviction that the outcome is asymmetric (more upside from closure than downside from de-escalation).
+
+**Options ↔ Real Options in Corporate Strategy:** Real options theory (Myers, 1977; Dixit & Pindyck, 1994) extends the financial options framework to corporate investment decisions: the option to delay, expand, or abandon a project is a genuine economic option with calculable value. A semiconductor fab investment in Taiwan carries a "geopolitical put" — the embedded option to shut down and relocate, whose value is currently high given Taiwan Strait tensions (see [[2026-05-30-china-taiwan-strait-military-tensions]]). TSMC's $65B investment in US fabs (Arizona, 2024-2026) can be partially valued as an exercise of this geopolitical put — the willingness to pay a "geopolitical risk premium" for manufacturing redundancy. See [[Discounted-Cash-Flow-Analysis]] for the real options complement to DCF valuation.
+
+**New wikilinks:**
+- [[Black-Scholes-Option-Pricing-Model]] — theoretical pricing framework
+- [[dopamine-reward-systems-neuroscience]] — neurological basis of retail options speculation
+- [[cognitive-biases]] — availability heuristic in options trading decisions
+- [[habit-formation]] — gamification design in trading apps
+- [[Discounted-Cash-Flow-Analysis]] — real options as DCF complement
+- [[derivatives-futures-and-forwards]] — options within the broader derivatives taxonomy
+- [[2026-06-06-iran-strait-of-hormuz-crisis-june-2026]] — VIX spike and options positioning
+- [[2026-05-30-china-taiwan-strait-military-tensions]] — geopolitical put in semiconductor investments
