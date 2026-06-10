@@ -688,3 +688,49 @@ In the June 2026 environment (private credit defaults at 6%, geopolitical uncert
 - [[yield-curve-and-bonds]] — base curve and term premium foundations of credit pricing
 - [[Value-at-Risk-and-CVaR]] — credit VaR models and regulatory capital for credit exposures
 - [[hedge-funds-and-alternative-strategies]] — credit hedge fund strategies using CDS
+
+---
+
+### The Credit Cycle, Distressed Debt Investing, and Merton Model Default Probability Mechanics
+
+Credit markets operate in cycles driven by risk appetite, lending standards, and economic fundamentals — with systematic patterns that create both risk and opportunity for informed investors.
+
+**The credit cycle — phases and indicators:**
+
+Hyman Minsky's (1986, *Stabilizing an Unstable Economy*) financial instability hypothesis describes the credit cycle: (1) *Hedge finance* — borrowers can service both principal and interest from current cash flows (conservative lending); (2) *Speculative finance* — borrowers can service interest but require refinancing/asset sales to repay principal (leverage increasing); (3) *Ponzi finance* — borrowers require asset price appreciation or new borrowing to service even interest (speculative excess). Minsky's prediction: periods of stability generate risk-taking that eventually produces instability — the "Minsky moment" is the sudden transition from speculative to Ponzi to collapse.
+
+Investment-grade credit spreads (Bloomberg US Corporate Investment Grade OAS) have followed this cycle historically:
+- 2007 peak tight: 87 bps OAS (speculative finance phase)
+- 2009 peak wide: 621 bps OAS (Minsky moment aftermath)
+- 2020 peak wide: 373 bps OAS (COVID Minsky moment, rapidly reversed by Fed)
+- 2021 peak tight: 82 bps OAS (post-Fed rescue complacency)
+- 2023 peak wide: 162 bps OAS (rate shock concerns)
+- 2025 current: approximately 100 bps OAS (mildly tight historically)
+
+**Distressed debt investing — the Howard Marks framework:**
+
+Distressed debt (bonds trading below 70 cents or at spreads > 1,000 bps) is the most alpha-intensive credit strategy because information advantages and analytical errors are largest in this complex, illiquid corner of the market. The Oaktree Capital framework (Howard Marks, *The Most Important Thing*, 2011):
+
+1. *Buy at maximum pessimism:* Distressed bonds are cheap because market participants fear default and the price reflects pessimistic recovery assumptions. The analytical edge: recover rates are more predictable than default timing — a bond trading at 35 cents that recovers at 65 cents generates +86% return regardless of whether bankruptcy takes 6 or 18 months to resolve.
+
+2. *Seniority analysis:* In the capital structure waterfall, senior secured debt (first lien) recovers first and most completely. The average senior secured recovery rate (Moody's, 1983-2024): 61.4%. Senior unsecured: 38.8%. Subordinated: 28.6%. Junior subordinated: 15.1%. The analytical work in distressed investing: model the enterprise value at emergence from bankruptcy and allocate it through the capital structure to determine which debt tranches will receive par, partial recovery, or nothing.
+
+3. *Control investing:* Large distressed investors who hold a majority of a given tranche can influence the restructuring outcome — using the absolute priority rule (higher-rank classes must be paid in full before lower-rank classes receive anything) to maximize recovery for their tranche. This requires legal expertise, negotiation skill, and patience — the holding periods in distressed debt are 2-4 years on average.
+
+**The Merton structural model — default probability from equity market data:**
+
+Robert Merton (1974, *Journal of Finance*) modeled a firm's equity as a call option on its assets: equity holders receive V_A - D if V_A > D (face value of debt) at maturity, and zero otherwise. This implies:
+
+*Distance to Default (DD):* DD = (ln(V_A/D) + (μ - σ²_A/2) × T) / (σ_A × √T)
+
+Where V_A = asset value (unobservable), D = debt face value, μ = expected asset return, σ_A = asset volatility.
+
+The KMV model (developed by Kealhofer, McQuown & Vasicek at KMVLLC, acquired by Moody's 2002) solved the observability problem: using a system of two equations in two unknowns (equity price and equity volatility from market data → asset value and asset volatility via option pricing formulas), KMV estimated V_A and σ_A for any public company using current equity market data.
+
+*Worked example:* A company with $100M market cap (equity), $150M face value debt, equity volatility 35%, and 1-year horizon:
+- Estimated asset value: ~$230M (via Merton inversion)
+- Estimated asset volatility: ~15%
+- Distance to Default: (ln(230/150) + (0.05 - 0.015) × 1) / (0.15) = (0.426 + 0.035) / 0.15 ≈ **3.07 standard deviations**
+- Expected Default Frequency (EDF, from historical mapping): DD=3.07 → approximately 0.4% annualized default probability
+
+The Merton model's key advantage: it updates in real-time with equity prices, giving a forward-looking default signal that lags rating agency reviews by months. During the 2008 crisis, Merton-based EDFs for major banks spiked to 5-10% months before rating agencies downgraded them from AAA/AA.

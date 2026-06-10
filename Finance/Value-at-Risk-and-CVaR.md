@@ -249,3 +249,37 @@ Summing position P&L contributions on the worst days (those where portfolio loss
 - [[Black-Scholes-Option-Pricing-Model]] — Greeks (Delta, Gamma, Vega) feed into options VaR decomposition
 - [[Federal-Reserve-and-Monetary-Policy]] — interest rate VaR, regulatory capital environment shaped by Basel
 - [[Discounted-Cash-Flow-Analysis]] — scenario analysis parallels between DCF sensitivity and stress testing
+
+---
+
+### VaR's Regulatory History, the Basel Backtesting Requirement, and the 2008 Failure Autopsy
+
+VaR's rise to regulatory dominance was driven by JP Morgan's internal risk management innovation and its subsequent adoption by the Basel Committee — a process that concentrated systemic risk in ways that VaR's inventors did not anticipate.
+
+**The Basel Market Risk Amendment (1996) and the internal models approach:**
+
+The original Basel Accord (1988) used simplistic standardized approaches for market risk capital — fixed percentage charges on position notionals. The 1996 Market Risk Amendment allowed banks to use internal VaR models to calculate market risk capital requirements, with the capital charge equal to 3× the 10-day 99th percentile VaR (plus a potential multiplier based on backtesting performance). This was the first time a regulatory framework explicitly authorized internal risk models for capital calculation — a profound delegation of regulatory authority to private institutions. The Basel II framework (2004) extended internal models to credit risk; the 2008 crisis validated that this delegation created dangerous incentives for model optimism.
+
+**The Basel backtesting requirement — Green/Yellow/Red zone framework:**
+
+Under the 1996 Amendment, banks must backtest their daily 99th percentile 1-day VaR against actual daily P&L. The expected exceedance rate: 2.5 days per year (1% × 250 trading days). The Basel traffic light framework:
+
+| # Exceptions (250 days) | Zone | Capital Multiplier |
+|---|---|---|
+| 0-4 | Green | 3.0 (minimum) |
+| 5 | Yellow | 3.4 |
+| 6 | Yellow | 3.5 |
+| 7 | Yellow | 3.65 |
+| 8 | Yellow | 3.75 |
+| 9 | Yellow | 3.85 |
+| 10+ | Red | 4.0 (maximum) |
+
+The limitation: the backtesting framework tests unconditional coverage (whether the average exceedance rate is correct) but not conditional coverage (whether exceptions cluster during stress periods, as they do if the model fails during crises). A model that generates 5 exceptions on 5 consecutive crisis days is treated identically to one that generates 5 exceptions spread across the year — even though the former indicates tail dependence and model failure precisely when it matters most.
+
+**The 2008 VaR failure — forensic analysis:**
+
+Jorion (2009, *Financial Analysts Journal*) analyzed the 2008 VaR failures at major financial institutions. Key findings: (1) Banks' reported 99th percentile 1-day VaR for their trading books was typically 0.2-0.5% of trading book notional; (2) During October-November 2008, several banks experienced daily trading losses of 2-5% of notional — 4-10× their reported 99th percentile VaR, corresponding to 99.99th percentile events or beyond on a model that assumed normal returns; (3) The fundamental model failure was correlation: positions across desks (rates, credit, equities, FX) that were modeled as moderately correlated under normal conditions became highly correlated (correlations approaching 1.0) during the crisis — the diversification that the VaR models relied on evaporated precisely when it was needed.
+
+**The FRTB transition and CVaR mandate (Basel III/IV, effective January 2023):**
+
+The Fundamental Review of the Trading Book (FRTB) eliminated 99th percentile VaR as the primary regulatory risk measure and replaced it with 97.5th percentile Expected Shortfall (CVaR). The regulatory rationale: CVaR's coherence property (sub-additivity — the portfolio measure can never exceed the sum of component measures) and its explicit consideration of tail shape make it a more robust risk measure during crises. FRTB additionally introduced: (1) desk-level model approval (each trading desk must pass independent backtesting to use internal models); (2) P&L attribution testing (model risk charges if modeled P&L does not track actual P&L closely enough); (3) non-modellable risk factors (risk factors with insufficient price history must be capitalized at stress-period loss estimates). The FRTB regime substantially increased risk capital requirements at large dealer banks — estimated at 30-60% increase in market risk capital — driving consolidation in market-making businesses toward the largest institutions.

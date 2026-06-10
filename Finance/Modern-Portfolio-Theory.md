@@ -216,3 +216,29 @@ AQR (Cliff Asness) has published extensive research showing factor risk parity p
 - [[Value-at-Risk-and-CVaR]] — alternative risk measures beyond variance
 - [[Discounted-Cash-Flow-Analysis]] — intrinsic value inputs to the value factor
 - [[Federal-Reserve-and-Monetary-Policy]] — interest rate environment shaping 60/40 correlations
+
+---
+
+### MPT's Critics, the Black-Litterman Extension, and the Estimation Error Problem
+
+Modern Portfolio Theory is both the foundation of institutional asset management and the most frequently criticized model in finance — for legitimate empirical reasons.
+
+**The Roll critique (1977, Journal of Financial Economics):** Richard Roll's critique devastated the empirical testability of CAPM — the key output of MPT. Roll showed that the CAPM cannot be tested because the "true" market portfolio (the theoretically required value-weighted portfolio of all investable assets, including private equity, real estate, human capital, and international assets) is unobservable. Any test of CAPM is simultaneously a test of (1) the pricing theory and (2) the adequacy of the proxy used for the market portfolio (typically the S&P 500 or a broad equity index). If the test fails, we cannot distinguish whether the theory is wrong or the proxy is wrong. The empirical consequence: 50 years of CAPM tests showing that the Security Market Line is too flat (low-beta stocks outperform, high-beta stocks underperform expectations) could reflect either a CAPM violation or inadequate market portfolio measurement.
+
+**The estimation error problem — why optimized portfolios perform poorly out of sample:**
+
+Markowitz's mean-variance optimization requires three inputs: expected returns, variances, and covariances. The problem: all three must be estimated from historical data, and expected return estimates are notoriously unreliable. Michaud (1989, *Financial Analysts Journal*) documented that standard MVO is an "error maximization" procedure — small errors in expected return estimates are amplified into large allocation errors because the optimizer confidently assigns heavy weights to assets with (erroneously) high estimated returns. In practice, MVO solutions are highly concentrated, frequently corner solutions (100% in one or two assets), and extremely sensitive to small input changes.
+
+The empirical consequence: a naive equal-weight portfolio of assets outperforms mean-variance optimized portfolios out of sample in the majority of published backtests (DeMiguel, Garlappi & Uppal, 2009, *Review of Financial Studies*, 14 portfolio models across 7 datasets: equal-weight portfolio has higher Sharpe ratio in 11 of 14 models, despite being theoretically dominated by the MVE portfolio). This is the estimation error problem in its starkest form.
+
+**The Black-Litterman model (1990, Fischer Black & Robert Litterman, Goldman Sachs):**
+
+Black and Litterman solved the estimation error problem by inverting the optimization: rather than using estimated expected returns as inputs, they start with the market equilibrium expected returns (implied by the current market portfolio weights via reverse optimization) and then blend them with the investor's expressed "views" using Bayesian updating. The formula:
+
+Expected Return Vector = [(τΣ)⁻¹ + PᵀΩ⁻¹P]⁻¹ × [(τΣ)⁻¹Π + PᵀΩ⁻¹Q]
+
+Where Π = implied equilibrium returns, Q = investor view returns, P = pick matrix mapping views to assets, Ω = view uncertainty matrix, τ = scaling factor. The Black-Litterman model produces portfolios that are: (1) close to the market portfolio when views are weak, (2) diverge from the market portfolio proportionally to view conviction, (3) diversified even with strong views (avoiding corner solutions). This is the standard approach at major institutional investment managers including Goldman, JPMorgan, and large sovereign wealth funds.
+
+**The CAPM's empirical legacy — factor model evolution:**
+
+Fama & French's (1992) empirical demolition of the CAPM — showing that beta alone explained little cross-sectional return variation once size and value factors were included — triggered a transition from equilibrium pricing models to empirical factor models. The current state: the six-factor Fama-French model (2018, adding profitability, investment, momentum) explains ~90% of cross-sectional US equity return variation, up from ~70% for the original CAPM. But this explanatory power is in-sample — out-of-sample factor returns are substantially lower due to factor crowding, data mining concerns, and changing factor risk premiums with investor awareness.

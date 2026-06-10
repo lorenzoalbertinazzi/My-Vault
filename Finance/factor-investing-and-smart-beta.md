@@ -488,3 +488,50 @@ This explains why the momentum factor's theoretical premium largely disappears i
 - [[quantitative-finance-and-algorithmic-trading]] — systematic factor implementation and signal processing
 - [[behavioral-finance-and-investor-psychology]] — behavioral explanations for factor premiums
 - [[hedge-funds-and-alternative-strategies]] — factor-based hedge fund strategies (AQR, LSV, DFA)
+
+---
+
+### The Fama-French Timeline, Factor Zoo Problem, and 2025 Factor Performance Landscape
+
+Factor investing's intellectual history spans over five decades of competing explanations for the same empirical phenomena — and the proliferation of "discovered" factors has created a reproducibility crisis within financial economics.
+
+**The factor timeline — from single beta to the factor zoo:**
+
+- **1964 — CAPM:** Sharpe, Lintner, Mossin independently derived the Capital Asset Pricing Model, proposing beta (covariance with the market) as the single risk factor pricing cross-sectional expected returns.
+- **1972-1977 — size and value anomalies identified:** Banz (1981, *Journal of Financial Economics*, data through 1975) documented the small-firm effect; Basu (1977) documented the P/E effect; Stattman (1980) and Rosenberg, Reid & Lanstein (1985) documented the book-to-market effect.
+- **1992 — Fama-French three-factor model:** Fama & French (*Journal of Finance*, 1992) systematically documented that beta had no additional explanatory power once size (SMB) and value (HML) were controlled for — explicitly refuting the CAPM. Their 1993 paper added a formal three-factor asset pricing model.
+- **1997 — momentum:** Carhart (1997, *Journal of Finance*) added momentum (UMD — up minus down) to create the four-factor model; Jegadeesh & Titman (1993) had documented the underlying momentum effect.
+- **2015 — Fama-French five-factor model:** Added profitability (RMW — robust minus weak) and investment (CMA — conservative minus aggressive), addressing key empirical failures of the three-factor model.
+- **2018 — six-factor model:** Added momentum to the Fama-French five, creating the current "canonical" six-factor model.
+
+**The factor zoo problem — 400+ published factors:**
+
+Harvey, Liu & Zhu (2016, *Review of Financial Studies*) catalogued 315 factors published in top academic journals as of 2015 — a number that exceeded 400 by 2020. They argued that the standard 5% significance threshold was grossly insufficient given this level of multiple testing: with 400 trials, chance alone produces 20 "significant" results at the 5% level. They proposed a t-statistic threshold of ≥3.0 (equivalent to p<0.003) for newly discovered factors given the cumulative multiple testing burden. Applying this standard, the majority of published factors fail — their apparent statistical significance is an artifact of data mining.
+
+McLean & Pontiff (2016, *Journal of Finance*, 97 equity strategies): returns decay by approximately 26% out-of-sample after academic publication and by 58% further once the paper is published — consistent with arbitrage trading away genuinely exploitable mispricings, combined with in-sample overfitting explaining a portion of published returns.
+
+**The 2025 factor performance landscape — a quantitative snapshot:**
+
+Factor performance in the 2023-2025 period (calendar year returns for US long-short factor portfolios, AQR data):
+
+| Factor | 2023 | 2024 | 2025 (Jan-Dec) |
+|---|---|---|---|
+| Value (HML) | +5.8% | +2.1% | +4.3% |
+| Momentum (UMD) | +9.4% | +11.2% | +6.8% |
+| Quality (Profitability) | +7.1% | +8.9% | +5.4% |
+| Low Volatility | +4.2% | +3.8% | +2.1% |
+| Size (SMB) | -2.1% | +1.4% | -0.8% |
+| Market (Beta) | +21.3% | +24.7% | +12.1% |
+
+The most significant structural development of 2023-2025: AI-related mega-cap concentration has severely impaired both the small-cap size factor (small stocks underperform as capital concentrates in mega-caps) and the value factor in US markets (AI platform companies trade at extreme valuation multiples that value screens systematically short). Factor diversification between US markets (where factor performance has been difficult) and international developed/emerging markets (where value and momentum have performed better) has been the key risk management theme.
+
+**Smart beta vs. pure factor — fee and implementation comparison:**
+
+| Vehicle | Fees | Tracking Error | Factor Purity | Turnover |
+|---|---|---|---|---|
+| Pure factor (long-short) hedge fund | 1.5% + 15% | N/A | High | 100-200%/yr |
+| Smart beta ETF (e.g., VLUE) | 0.15-0.25% | 4-6% | Moderate | 20-40%/yr |
+| Factor tilt via direct indexing | 0.20-0.40% | 2-4% | Low-moderate | 10-20%/yr |
+| Enhanced index (active quantitative) | 0.40-0.75% | 2-5% | Moderate-high | 50-100%/yr |
+
+The smart beta ETF captures factor premiums at low cost but with significant dilution of factor exposure due to long-only constraints, market-cap weighting of the factor-selected universe, and rebalancing frequency constraints. Pure long-short factor portfolios maximize factor exposure but require leverage, short-selling, and significantly higher fees.

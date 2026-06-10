@@ -689,3 +689,29 @@ The Federal Reserve has been more cautious than most major central banks on CBDC
 - [[Federal-Reserve-and-Monetary-Policy]] — Fed's role in designing and potentially issuing CBDC
 - [[currency-markets-and-fx]] — CBDC implications for international payments and reserve currency status
 - [[macroeconomics-101]] — monetary economics of CBDC issuance and its macroeconomic effects
+
+---
+
+### The Digital Yuan's Progress, Project mBridge, and the Privacy-Programmability Tension
+
+CBDC development has moved from theoretical to operational in the world's largest economy — with the design choices made in China, Europe, and the US embedding fundamentally different values about monetary surveillance and financial inclusion.
+
+**China's e-CNY (digital yuan) — operational status 2025:**
+
+The People's Bank of China's e-CNY pilot, formally launched in 2021, reached a critical mass milestone in 2024: 260 million individual wallets activated, 5.5 trillion CNY ($760 billion) in cumulative transactions processed. As of June 2026, e-CNY is accepted at approximately 35 million merchant locations across 26 provinces and 17 cities, including integration with major platforms (WeChat Pay, Alipay). The PBoC's stated design features: (1) "controlled anonymity" — small transactions are anonymous, large transactions require identity verification; (2) programmability — governments can issue e-CNY with spending restrictions (e.g., stimulus vouchers valid only for food and essential goods); (3) two-tier distribution — PBoC issues to commercial banks, which distribute to consumers (preserving commercial bank intermediation); (4) no interest payment on e-CNY balances.
+
+The surveillance implications: while "controlled anonymity" sounds benign, the PBoC retains full transaction visibility above small thresholds — providing the Chinese government unprecedented insight into economic activity at the individual level. The programmability feature has been used for targeted stimulus distribution (e.g., COVID-era consumption vouchers that expired within 30 days, preventing saving) and could be used for social scoring integration (restricting e-CNY use by individuals with low social credit scores). This design reflects a fundamentally different values orientation from Western CBDC proposals emphasizing privacy protection.
+
+**Project mBridge — the multi-CBDC cross-border payments infrastructure:**
+
+The Bank for International Settlements Innovation Hub's Project mBridge (2021-present) is testing a shared ledger platform enabling central banks to issue and exchange CBDCs directly for cross-border payments, eliminating correspondent banking intermediaries. Participants: PBoC (China), HKMA (Hong Kong), Bank of Thailand, Central Bank of UAE, and Saudi Central Bank (joining 2024). The 2024 pilot transactions totaled $22 billion in cross-border value — demonstrating operational feasibility.
+
+The geopolitical significance: mBridge creates a SWIFT-alternative settlement infrastructure among participating central banks that could, in principle, bypass US dollar clearing. The current SWIFT-based correspondent banking system gives the US Treasury leverage over international financial flows through secondary sanctions (the threat of cutting off access to USD clearing). An operational mBridge alternative would erode this leverage for participating nations. The US Treasury has explicitly flagged this risk; it is one reason the US has not joined the mBridge platform.
+
+**The Federal Reserve's digital dollar — the political impasse:**
+
+The Federal Reserve's 2022 "Money and Payments: The U.S. Dollar in the Digital Age" report outlined potential CBDC designs without committing to implementation. As of June 2026, the US is the most technically capable major economy and the least advanced in CBDC development — primarily due to political opposition. The key objections: (1) privacy concerns (Republican opposition to government surveillance of transactions); (2) bank disintermediation risk (commercial banks oppose direct Fed accounts that would compete with deposits); (3) financial inclusion arguments for vs. against (CBDCs could bank the unbanked, but mobile money like Venmo/Cash App already provide near-CBDC functionality). Congress introduced the CBDC Anti-Surveillance State Act (2023, passed House) — prohibiting the Fed from issuing a retail CBDC without explicit Congressional authorization. The Act has not been passed by the Senate, but it reflects the depth of political resistance to retail CBDC in the US political environment.
+
+**The privacy-programmability trade-off — fundamental design tension:**
+
+Every CBDC design faces a core tension: the features that make CBDCs valuable for policy purposes (programmability, traceability, real-time intervention capability) are precisely the features that threaten privacy and financial autonomy. The ECB's digital euro design (detailed requirements published 2023, expected launch 2028-2030) attempts to resolve this through: (1) offline capability (allowing privacy-preserving small transactions without internet connection); (2) pseudonymous online transactions (users' identity not revealed to merchants or the ECB, but revealed to the user's intermediary bank); (3) no central database of individual transaction history at the ECB level — a genuine design constraint rather than a policy choice, implemented through privacy-preserving cryptography. Whether these architectural commitments will survive contact with law enforcement requests, tax authority requirements, and national security concerns is an open political question.

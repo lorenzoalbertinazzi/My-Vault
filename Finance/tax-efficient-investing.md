@@ -419,3 +419,39 @@ The wash sale rule (IRC Section 1091) prevents investors from claiming a tax los
 - [[Modern-Portfolio-Theory]] — direct indexing enables tax-efficient portfolio construction
 - [[Federal-Reserve-and-Monetary-Policy]] — interest rate environment affecting muni vs. taxable bond decision
 - [[real-assets-reits-and-commodities]] — REIT dividend taxation and tax-advantaged account strategies
+
+---
+
+### Step-Up in Basis, QSBS Tax Treatment, and the Mechanics of Charitable Remainder Trusts
+
+Tax-efficient investing requires mastery of three advanced mechanisms that interact with investment decisions in non-obvious ways: the step-up in basis at death, QSBS treatment for startup investors, and the CRT's unique income-deferral architecture.
+
+**The step-up in basis — the most powerful tax benefit in the US code:**
+
+Under IRC §1014, assets inherited at death receive a "step-up" in cost basis to the fair market value at the date of death, completely eliminating capital gains tax on appreciation that occurred during the decedent's lifetime. This is economically equivalent to a 100% capital gains tax forgiveness.
+
+*Numerical example:* 
+- Amazon stock purchased in 2005 at $40/share, now worth $185/share
+- Unrealized capital gain per share: $145 × 23.8% federal LTCG tax = $34.51 tax owed if sold today
+- If held until death and bequeathed to heirs: new basis = $185; when heirs sell, they owe zero capital gains tax on the $145 appreciation
+- Tax saving per share: $34.51 (or $34,510 per 1,000-share block)
+
+The step-up in basis creates a powerful "lock-in effect": wealthy investors rationally hold highly appreciated positions despite diversification and rebalancing arguments because selling triggers capital gains tax that holding and bequeathing avoids entirely. The estate tax (40% on assets above the $13.99M exemption) is a partial offset, but for estates under the exemption threshold, the step-up provides complete capital gains forgiveness.
+
+**QSBS: the Section 1202 exclusion — startup investors' most valuable tax benefit:**
+
+Section 1202 of the Internal Revenue Code (enacted 1993, expanded by the JOBS Act 2010) provides for exclusion of 100% of capital gains (up to the greater of $10M or 10× the investment) on the sale of Qualified Small Business Stock (QSBS) held for at least 5 years. Qualifying conditions: (1) C-corporation with less than $50M in assets at time of issuance; (2) active trade or business (not a holding company, investment company, or professional service firm); (3) stock acquired at original issuance (not secondary market purchase); (4) held for 5+ years. The tax saving can be enormous: a $1M investment that grows to $50M (50× return) generates a $49M taxable gain. With QSBS treatment, $0 federal capital gains tax is owed on the full $49M — a saving of approximately $11.6M at the 23.8% LTCG + NIIT rate.
+
+Stacking QSBS: each individual taxpayer (not each household) can separately exclude up to $10M per investment. Gifting QSBS shares to family members before the exit creates additional exclusion capacity — a $1M investment gifted equally to spouse and three adult children before a $50M exit creates up to $50M in total exclusion across five taxpayers.
+
+**Charitable Remainder Trusts — the tax deferral and charitable planning tool:**
+
+A Charitable Remainder Trust (CRT) is an irrevocable split-interest trust that allows a donor to: (1) transfer appreciated assets to the trust; (2) receive an income stream for life or a term; (3) take a partial charitable deduction at funding; (4) designate a charity to receive the remainder. The key tax benefit: the CRT can sell the appreciated asset without triggering capital gains tax — the gain is spread across the income distributions over time (the trust itself is tax-exempt).
+
+*Numerical example:* 
+- $2M of Apple stock with $200K cost basis ($1.8M unrealized gain)
+- Immediate sale trigger: $1.8M gain × 23.8% = $428,400 federal tax, leaving $1,571,600 to invest
+- CRT structure: $2M transferred, charitable deduction of approximately $600K (present value of remainder), $2M invested and growing; 5% annual distributions over 20 years = $100,000/year; distributed gain taxed only as received over 20 years
+- Net benefit: $428,400 deferred capital gains + $600K × (37% top bracket) = $222,000 immediate tax savings from charitable deduction = approximately $650K+ total tax advantage vs. immediate sale
+
+The economic trade-off: the CRT remainder goes to charity, so this strategy makes sense only for donors with charitable intent and illiquid, highly-appreciated assets.

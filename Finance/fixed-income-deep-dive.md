@@ -800,3 +800,48 @@ With PCE inflation at ~2.8% (current) vs. 2.50% breakeven, TIPS are earning appr
 - [[Federal-Reserve-and-Monetary-Policy]] — Fed funds rate and SOFR relationship
 - [[inflation-dynamics-and-investment]] — TIPS as inflation protection in portfolio construction
 - [[derivatives-futures-and-forwards]] — OIS swaps and SOFR curve mechanics
+
+---
+
+### OAS Calculation, Duration Contribution Analysis, and the Post-LIBOR Transition World
+
+Fixed income's analytical toolkit has undergone fundamental structural changes since 2021: the elimination of LIBOR and the global adoption of risk-free rates (SOFR, SONIA, ESTR) has required repricing of trillions of dollars of floating-rate instruments and derivatives.
+
+**Option-Adjusted Spread — stripping the embedded option:**
+
+Most fixed income instruments contain embedded options: callable corporate bonds (issuer can call at par on specified dates), mortgage-backed securities (borrowers can prepay at any time), putable bonds (investor can demand repayment). These options mean that simple yield-to-maturity comparisons across instruments are misleading — a callable bond at 6% yield is not equivalent to a non-callable bond at 6% yield because the callable bond's duration shortens when rates fall (the call option is exercised).
+
+The Option-Adjusted Spread (OAS) removes the option's value to create an apples-to-apples spread comparison. The calculation uses Monte Carlo simulation of interest rate paths:
+
+1. Generate 1,000+ interest rate paths using a term structure model (e.g., Hull-White, Black-Karasinski)
+2. For each rate path, determine when the option is exercised (call, put, prepayment) based on the issuer/borrower's rational exercise behavior
+3. Calculate the bond's cash flows along each path given option exercise
+4. Find the spread (OAS) that, when added to the risk-free rate on each path, discounts the option-adjusted cash flows to the observed market price
+
+A mortgage-backed security trading at 95 with a Z-spread of +180 bps might have an OAS of only +120 bps after the 60 bps of "option cost" (prepayment risk premium) is separated out. The OAS is the spread compensation for credit and liquidity risk net of option risk.
+
+**Duration contribution analysis — portfolio risk attribution:**
+
+For a multi-sector fixed income portfolio, duration contribution analysis decomposes total portfolio interest rate sensitivity:
+
+Duration Contribution = Position Duration × (Position Weight / Portfolio Weight) × Duration Multiplier
+
+For a typical insurance company fixed income portfolio ($500M, Duration = 8.5 years):
+
+| Sector | Market Value | Weight | Duration | Duration Contribution |
+|---|---|---|---|---|
+| US Treasuries | $100M | 20% | 7.2 | 1.44 years |
+| Investment Grade Corp | $175M | 35% | 8.9 | 3.12 years |
+| CMBS | $75M | 15% | 5.3 | 0.80 years |
+| RMBS/ABS | $75M | 15% | 3.8 | 0.57 years |
+| EM Sovereign | $50M | 10% | 9.5 | 0.95 years |
+| Cash/Short | $25M | 5% | 0.3 | 0.02 years |
+| **Total** | **$500M** | **100%** | | **6.90 years** |
+
+The DV01 (Dollar Value of a 1 basis point increase): 6.90 × 0.0001 × $500M = **$345,000**. For every basis point the yield curve shifts up in parallel, the portfolio loses $345,000 in market value.
+
+**The LIBOR transition — systemic scope and implementation:**
+
+LIBOR (London Interbank Offered Rate), the benchmark rate for approximately $300 trillion in floating-rate contracts (loans, derivatives, bonds), was found to have been systematically manipulated by major banks during 2005-2012 (Barclays: $452M penalty in 2012 settlement; UBS, RBS, JPMorgan, Deutsche Bank among others). The manipulation involved submitting false borrowing rates to benefit their own derivatives positions — a scandal that undermined LIBOR's legitimacy as a market benchmark. UK FCA and CFTC mandated LIBOR cessation for most tenors by December 2021, with the most critical USD LIBOR tenors (3-month, 6-month) ceasing June 30, 2023.
+
+The replacement rates — SOFR (Secured Overnight Financing Rate) for USD, SONIA (Sterling Overnight Index Average) for GBP, ESTR (Euro Short-Term Rate) for EUR — are overnight rates based on actual transactions (not survey-based like LIBOR), making them manipulation-resistant. The structural difference: LIBOR incorporated credit risk (banks' borrowing costs included a credit spread above the risk-free rate); SOFR is risk-free (secured by Treasury collateral). The SOFR-to-LIBOR spread (LIBOR = SOFR + credit adjustment spread) was approximately 25-35 bps in normal conditions and 100+ bps during the 2008 crisis — a spread that all LIBOR-to-SOFR contract conversions had to address through the ARRC's prescribed spread adjustment methodology.

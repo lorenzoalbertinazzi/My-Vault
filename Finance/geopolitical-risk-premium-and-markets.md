@@ -723,3 +723,29 @@ Pakistan's June 2026 IMF program stress (Hormuz-driven energy import cost surge 
 - [[currency-markets-and-fx]] — geopolitical risk premium in FX markets
 - [[energy-transition-finance-and-green-capital-markets]] — DFC role in clean energy finance in developing countries
 - [[sovereign-wealth-funds]] — SWF exposure to geopolitical risk
+
+---
+
+### The Russia 2022 Asset Freeze Precedent, Taiwan Strait Risk Pricing, and Oil Premium Models
+
+Geopolitical risk was repriced fundamentally in 2022 — when the G7's freezing of Russian central bank reserves demonstrated that financial assets are not independent of political alliances.
+
+**The Russia asset freeze — the "nuclear option" deployed (February 2022):**
+
+When Russia invaded Ukraine on February 24, 2022, the G7 and EU imposed a financial sanctions package unprecedented in scope for a nuclear-armed major power: (1) removal of major Russian banks from SWIFT; (2) prohibition on transactions with the Central Bank of Russia, freezing approximately $300 billion of its foreign exchange reserves held in Western custodians (Euroclear, Federal Reserve, ECB); (3) asset seizure of oligarch property. The Russian response demonstrated partial reserve currency risk mitigation: Russia had pre-positioned approximately 21% of reserves in gold (not seizable if held domestically), 13% in Chinese yuan (not frozen), and 5% in yuan-denominated Chinese sovereign bonds — the portion in G7 currencies that was frozen was smaller than it would have been absent pre-emptive diversification.
+
+The geopolitical market signal: reserve managers globally updated their assessment of political risk in reserve holdings. The PBoC's gold purchases accelerated from ~50 tonnes/year (2018-2021) to ~180 tonnes/year (2022-2024). Saudi Arabia, India, Turkey, Brazil, and most BRICS+ members reduced their dollar-denominated reserve holdings. The direct market impact: gold rose from $1,800 to $2,400+ between February 2022 and end-2024 — a portion of this premium reflects reserve manager demand rather than traditional safe-haven or inflation demand.
+
+**Geopolitical risk models — Caldara & Iacoviello GPR index:**
+
+Caldara & Iacoviello (2022, *American Economic Review*, GPR Index available from Fed) constructed a Geopolitical Risk Index from text-mining of newspaper articles covering geopolitical threats. The GPR index shows that elevated geopolitical risk is associated with: (1) reduced investment (a 1 standard deviation GPR increase → 0.7% reduction in investment rate, 3 months lag); (2) stock market volatility (same GPR shock → 0.8% decline in US equities, immediate); (3) oil price spike (1 SD GPR increase → +2.3% oil price, decaying over 6 months). The index helps distinguish between geopolitical risk as a broad risk-off signal (that elevates safe havens uniformly) and sector-specific geopolitical risk (that differentially affects defense stocks, energy, supply-chain-sensitive technology).
+
+**Taiwan Strait risk — market pricing methodology:**
+
+Options market-based risk assessment: OTC options on TSMC ADR implied volatility provides a direct market measure of Taiwan Strait risk. The difference between TSMC ADR implied volatility and comparable non-Taiwan semiconductor companies (Intel, Qualcomm) after controlling for fundamental differences is approximately 8-12 vol points of "Taiwan risk premium" that appeared after 2022 and has persisted. Portfolio managers use this spread as a cost-of-insurance calculation: buying TSMC put options at the elevated implied vol price tags the explicit cost of maintaining Taiwan-exposed semiconductor positions.
+
+Scenario analysis approach: geopolitical risk modelers at major banks (JPMorgan, Goldman Sachs) typically price Taiwan Strait scenarios as: (1) status quo maintained (65-70% probability, assigned to current market pricing); (2) escalated tensions without kinetic conflict (15-20%, premium of 15-25% on Taiwan-exposed assets, discount of same on China-exposed assets); (3) naval blockade scenario (10-15%, temporary disruption of TSMC production, $40-70 oil spike, tech sector -30-40%, defense +20-30%); (4) kinetic conflict scenario (3-5%, TSMC factories at risk, catastrophic supply chain disruption, GDP impact comparable to 2008 GFC). The expected market impact = sum of probability × scenario impact across all four scenarios — approximately -8 to -12% for broad US equity market implied by these scenario weights.
+
+**Oil geopolitical premium — historical quantification:**
+
+Kilian (2009, *American Economic Review*) decomposed oil price changes into: (1) aggregate demand shocks (global growth); (2) oil-specific demand shocks (precautionary/speculative demand driven by geopolitical fears); (3) oil supply shocks. Barsky & Kilian (2004, *Quarterly Journal of Economics*) and subsequent updates quantified the geopolitical supply risk premium: historically, geopolitical risk adds approximately $3-8/barrel to oil prices during moderate tension periods and $15-35/barrel during acute crisis periods. The 2022-2023 Russian invasion premium reached approximately $25-30/barrel in March 2022 before partially retreating as Russian oil continued to flow (to China, India, Turkey). As of June 2026, the geopolitical premium in Brent crude (relative to demand/supply fundamentals) is estimated at approximately $6-10/barrel, reflecting the cumulative impact of Russian supply uncertainty, Middle East tensions, and Red Sea shipping disruptions.

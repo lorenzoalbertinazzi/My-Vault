@@ -674,3 +674,35 @@ Current (June 10, 2026): 38% bullish, 34% bearish, 28% neutral — close to hist
 - [[options-basics]] — put/call ratio mechanics from options markets
 - [[quantitative-finance-and-algorithmic-trading]] — systematic trading signals using breadth and sentiment
 - [[Modern-Portfolio-Theory]] — market timing debate vs. passive investing
+
+---
+
+### Technical Analysis and Market Microstructure: EMH Critique, Order Flow, and Quantitative Evidence
+
+Technical analysis occupies a contested epistemological position in finance — dismissed by efficient market theorists, used extensively by practitioners, and partially validated by behavioral finance research.
+
+**The EMH critique of technical analysis — and its limits:**
+
+Fama's (1970) efficient market hypothesis in its weak form states that past prices contain no information about future returns — directly implying that technical analysis cannot generate systematic excess returns. The empirical basis for this claim: early random walk tests (Kendall, 1953; Roberts, 1959) found autocorrelations near zero in weekly stock price changes. The theoretical basis: if technical patterns reliably predicted price movements, rational traders would exploit them until they were eliminated — the strategy-destroys-itself argument.
+
+The critique of the critique: Lo & MacKinlay (1988, *Review of Financial Studies*) documented statistically significant positive autocorrelation in weekly returns for small-cap stocks — inconsistent with the random walk null. Jegadeesh & Titman (1993) documented momentum over 3-12 month horizons in a large sample of US stocks — a "technical" signal (price trend) that generates persistent risk-adjusted returns. The reconciliation: momentum (a technical concept) has been formally incorporated into factor pricing models and widely accepted as a genuine return premium. The weak form of EMH is technically false in US stock markets over multi-decade samples.
+
+**Order flow and price impact — microstructure foundations of chart patterns:**
+
+The Kyle (1985, *Econometrica*) and Glosten-Milgrom (1985) market microstructure models provide a theoretical mechanism for why price patterns form: informed traders with private information trade strategically to minimize price impact, while market makers adjust prices based on the order flow they observe. This creates predictable price dynamics: heavy buying in the face of resistance (a technical concept) reflects informed accumulation before a move; the exhaustion of informed buying creates the "distribution" pattern that technical analysts identify at tops.
+
+Volume-price relationships that technical analysts use (e.g., volume should confirm price trends; high-volume breakouts are more reliable than low-volume breakouts) have theoretical grounding in order flow models: a price move accompanied by high volume reflects more fundamental information than a price move on thin volume, which may reflect noise trading. Blume, Easley & O'Hara (1994, *Journal of Finance*) demonstrated formally that volume provides information about trade quality (informed vs. uninformed) beyond what prices alone reveal.
+
+**The most quantitatively validated technical signals:**
+
+Empirical tests with proper data-mining corrections identify a small number of technical signals with reproducible out-of-sample evidence:
+
+*Momentum (1-12 month return):* As documented above, this is the most robustly validated technical signal across the broadest international sample. Asness, Moskowitz & Pedersen (2013, *Journal of Finance*) found momentum effects in equities, bonds, commodities, and currencies across 40 markets and 3 decades.
+
+*Moving average crossover signals:* Han, Zhou & Zhu (2016, *Journal of Financial Economics*, 55 markets, 40 years): simple 1/12 moving average crossover strategies generated Sharpe ratios of 0.33 vs. 0.21 for buy-and-hold, with the excess return concentrated in drawdown avoidance during the worst market environments.
+
+*52-week high as anchor:* George & Hwang (2004, *Journal of Finance*): stocks trading near their 52-week high earn significantly higher forward 6-12 month returns than stocks far below their 52-week high, after controlling for standard momentum and value factors. The mechanism: investors use the 52-week high as a reference point (Kahneman's anchoring) and resist buying stocks already at their high — creating predictable underreaction to positive news near the 52-week high.
+
+**What does not work — chart pattern specifics:**
+
+Brock, Lakonishok & LeBaron (1992, *Journal of Finance*, the most cited technical analysis paper) found 26 trading rules (including head-and-shoulders, double-top, various moving average rules) generated returns above the buy-and-hold in data through 1989. Sullivan, Timmermann & White (1999, *Journal of Finance*, using data mining correction) applied the same rules out-of-sample to 1987-1996 data: essentially no trading rule generated significant excess returns after correcting for multiple testing. Specific named chart patterns (cup-and-handle, pennant, flag formation) have been tested in several studies with consistently null results when applied with predetermined classification criteria rather than after-the-fact identification.

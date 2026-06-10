@@ -391,3 +391,43 @@ The bond exposure is typically achieved through: (1) long positions in bond futu
 - [[Modern-Portfolio-Theory]] — risk parity as extension of Markowitz's diversification framework
 - [[yield-curve-and-bonds]] — long-duration bond mechanics central to risk parity implementation
 - [[hedge-funds-and-alternative-strategies]] — Bridgewater as the world's largest hedge fund deploying risk parity
+
+---
+
+### Risk Parity's 2022 Crisis, Dalio's All-Weather Origins, and the Inflation-Duration Trade-Off
+
+Risk parity's theoretical elegance was stress-tested severely in 2022 — the first environment in 40 years where both equities and bonds fell simultaneously, testing the strategy's fundamental diversification premise.
+
+**The 2022 risk parity crisis — forensic analysis:**
+
+In 2022, the Federal Reserve raised the federal funds rate from 0.25% to 4.50% — the fastest rate increase since 1981. The simultaneous impact: (1) S&P 500 returned -18.1%; (2) 10-year Treasury bond returned -17.8%; (3) 30-year Treasury bond returned -31.2%. Risk parity strategies with typical 3:1 bond-to-equity leverage ratios experienced approximately: -18.1% (equity) × 0.25 weight + (-31.2%) (30yr bonds) × 0.75 weight = approximately **-27.8% blended loss**, with borrowing costs adding additional drag.
+
+The All-Weather Fund (Bridgewater's flagship risk parity product): -21.0% in 2022, its worst annual performance since inception. The core issue: risk parity's bond allocation requires bonds and equities to be either uncorrelated or negatively correlated. This relationship held from 1998-2021 (a 23-year period of secular rate decline). When the inflation shock of 2021-2022 caused both asset classes to decline together — both are nominal assets with negative real return in high-inflation environments — the diversification relationship broke down completely.
+
+**Dalio's conceptual framework — four economic seasons:**
+
+Ray Dalio developed the All-Weather concept in 1996 with the explicit framework that four economic "seasons" are possible: (1) higher-than-expected growth, (2) lower-than-expected growth, (3) higher-than-expected inflation, (4) lower-than-expected inflation. The All-Weather portfolio allocates 25% risk exposure to each quadrant:
+
+| Environment | Good Assets |
+|---|---|
+| Higher growth | Equities, corporate bonds |
+| Lower growth | Treasuries, nominal bonds |
+| Higher inflation | TIPS, commodities, gold |
+| Lower inflation / deflation | Long bonds, deflation-protected assets |
+
+The 2022 problem in this framework: both the equity allocation (hurt by lower growth expectations from rate hikes) AND the nominal bond allocation (hurt by higher inflation) faced headwinds simultaneously — a scenario where three of the four "seasons" produce negative returns. Only the inflation assets (commodities, TIPS) performed positively. The standard All-Weather implementation has insufficient weight in inflation assets to fully offset this simultaneous adverse scenario.
+
+**The inflation-duration trade-off — quantitative mechanics:**
+
+Modified Duration (D) measures a bond's price sensitivity to yield changes: %ΔP ≈ -D × ΔY. For a typical risk parity bond allocation:
+
+- 30% equity (S&P 500 equity duration: ~25-30 years for the aggregate)
+- 55% long-duration bonds (30-year Treasury, D≈20)
+- 7.5% gold
+- 7.5% commodities
+
+When yields rise by 1% across the curve: Bond P&L = -20 × 1% = -20% × 55% portfolio weight = -11% contribution from bonds. Equity P&L (assuming 15× multiple compression): -15% × 30% weight = -4.5%. Total portfolio loss from a 1% rate rise: approximately -15.5% before leverage adjustment. For a 3× leveraged version: approximately -46.5% gross of financing costs.
+
+**The post-2022 adaptation — multi-asset inflation-sensitive risk parity:**
+
+After 2022, asset managers including Invesco, Wealthfront, and several hedge funds rebuilt risk parity with an explicit inflation-sensitive component: rotating bond allocation from nominal long bonds to TIPS when 5-year breakeven inflation exceeds 2.3%, adding systematic commodity exposure through futures rolls, and incorporating real assets (infrastructure, commodity-linked equities). The revised framework more explicitly addresses all four of Dalio's economic "seasons" rather than implicitly assuming a disinflationary growth regime as the base case. Early backtests show that inflation-adaptive risk parity would have reduced the 2022 drawdown to approximately -11% — still worse than the intended 6-8% annual volatility target but substantially improved from the -21% All-Weather outcome.

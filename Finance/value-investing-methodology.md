@@ -643,3 +643,31 @@ Warren Buffett's annual letters to Berkshire shareholders (1965–2025) contain 
 - [[valuation-fundamentals]] — intrinsic value estimation methodologies
 - [[mergers-and-acquisitions]] — M&A as a value realization catalyst
 - [[behavioral-finance-and-investor-psychology]] — value premium's behavioral explanations
+
+---
+
+### Graham's NCAV Method, Buffett's Evolution, and the Quality-Value Integration
+
+Value investing's history is not linear but involves a fundamental intellectual evolution from Graham's statistical cheapness approach to Munger's quality emphasis — a transition that happened within Warren Buffett's investment career.
+
+**Graham's Net-Net Working Capital methodology — the quantitative foundation:**
+
+Benjamin Graham's most conservative value approach: Net Current Asset Value (NCAV) investing, developed during and after the 1929-1932 crash when stocks routinely traded below liquidation value. NCAV = Current Assets - Total Liabilities. Graham's rule: buy stocks trading at two-thirds or less of NCAV per share; diversify across 20-30 such stocks; sell when price reaches NCAV or after holding 3 years without reaching NCAV.
+
+*Numerical example:* A manufacturing company in 1936 with: Cash $500K, Receivables $800K, Inventory $600K (Total current assets $1.9M), All liabilities $700K. NCAV = $1.9M - $700M = $1.2M. If shares outstanding = 500,000 and market price = $1.50, market cap = $750K. NCAV per share = $2.40. Since $1.50 is 62.5% of NCAV ($2.40), this qualifies as a Graham net-net. Graham's expectation: either the company resolves its operational problems and the stock recovers toward NCAV, or the company liquidates and returns cash above the purchase price.
+
+Oppenheimer (1986, *Journal of Finance*, 1970-1983): a Graham-style NCAV portfolio returned 29.4% annually vs. 11.5% for the market. The catch: the strategy requires finding stocks trading at less than two-thirds of liquidation value — a condition that almost never holds in efficient markets except among tiny micro-cap companies with poor liquidity and high bankruptcy risk.
+
+**Graham-Dodd value vs. Munger quality — the intellectual break:**
+
+Buffett's Berkshire Hathaway letters document his public intellectual evolution away from pure Graham toward quality investing. The watershed: See's Candies acquisition (1972, $25M, now generating $80M+ in annual after-tax earnings). Buffett paid 3× book value for See's — a price Graham would have rejected as overvalued. The quality characteristics that justified the premium: See's dominant brand, minimal capital intensity, pricing power, and customer loyalty produced returns on invested capital of 50%+. The insight: a business earning 50% ROIC at 3× book is cheaper on a 10-year DCF than a 1× book business earning 8% ROIC, once you account for the compounding of reinvested earnings.
+
+Charlie Munger's formulation: "Forget what you know about buying fair businesses at wonderful prices; it's far better to buy wonderful businesses at fair prices." The Munger-Buffett synthesis: the business's qualitative characteristics (moat, management, capital allocation track record) determine whether growth creates value, and paying a reasonable price for a truly excellent business beats finding statistical bargains in mediocre businesses.
+
+**The moat concept — competitive advantage measurement:**
+
+Michael Porter's (1980) five forces framework provides the analytical vocabulary; Buffett and Morningstar's Pat Dorsey (2008, *The Little Book That Builds Wealth*) translated it into investable criteria. Morningstar's economic moat methodology classifies companies as wide moat (15+ years of expected excess returns), narrow moat (5-15 years), or no moat based on five sources: (1) switching costs (SAP, Salesforce — customers cannot cheaply switch); (2) network effects (Visa, Mastercard, stock exchanges — value grows with user base); (3) cost advantages (Costco, Nucor — structural cost position); (4) efficient scale (airport operators, regulated utilities — market structure prevents entry); (5) intangible assets (brand, patent, regulatory license — Hermès, Pfizer, NYSE). Wide-moat companies compound ROIC above cost of capital for extended periods — the financial expression of durable competitive advantage. Long-term excess returns (ROIC - WACC) spread summed across estimated competitive advantage period captures this value quantitatively.
+
+**Deep value vs. quality-growth — the 2010-2025 divergence:**
+
+From 2010 to 2021, pure statistical value investing significantly underperformed growth investing in US markets — the longest value drawdown in the factor's recorded history. The explanations: (1) duration: in zero-rate environments, distant earnings (growth companies) are more valuable relative to near-term earnings; (2) platform economics: network-effect businesses generate accelerating returns rather than mean-reverting profitability — standard mean-reversion value models undervalue them; (3) accounting distortions: R&D intensive companies appear expensive on book-value screens but are genuinely investing in durable intangible capital. The partial recovery of value from 2022-2025 (as rates rose) confirmed that some of the value underperformance reflected rate distortions rather than a permanent structural shift.

@@ -283,3 +283,51 @@ Expected value: 0.20 × $363M + 0.40 × $145M + 0.40 × $0 = $72.6M + $58M = **$
 - [[Modern-Portfolio-Theory]] — beta estimation and cost of equity via CAPM
 - [[Black-Scholes-Option-Pricing-Model]] — real options extend DCF to handle strategic optionality
 - [[Value-at-Risk-and-CVaR]] — DCF sensitivity as a form of scenario analysis
+
+---
+
+### DCF Terminal Value Sensitivity: The 80% Problem and Damodaran's Industry-Adjusted Framework
+
+In most corporate DCF valuations, the terminal value — the estimated value of all cash flows beyond the explicit forecast period — constitutes 60-90% of total firm value. This concentration means that DCF valuations are primarily bets on terminal assumptions, not detailed near-term forecasts.
+
+**The Terminal Value dominance — numerical demonstration:**
+
+Consider a $10B revenue industrial company with 3% revenue growth, 12% EBIT margins, 25% tax rate, $500M annual capex, $400M D&A, and 20% change in working capital as % of revenue change. With WACC = 9% and terminal growth = 2.5%:
+
+| Year | Free Cash Flow | PV Factor (9%) | PV of FCF |
+|---|---|---|---|
+| 1 | $620M | 0.917 | $569M |
+| 2 | $638M | 0.842 | $537M |
+| 3 | $657M | 0.772 | $507M |
+| 4 | $676M | 0.708 | $479M |
+| 5 | $696M | 0.650 | $452M |
+| Sum of explicit period PVs | | | $2,544M |
+| Terminal Value = $696M × 1.025 / (0.09 − 0.025) | | | = **$10,968M** |
+| PV of Terminal Value | = $10,968M × 0.650 | | = **$7,129M** |
+| **Enterprise Value** | | | **$9,673M** |
+
+Terminal value represents $7,129M / $9,673M = **73.7% of total enterprise value** even with a mature, slow-growing industrial company. For high-growth technology companies with 10-year explicit periods, the terminal value fraction rises to 85-95%.
+
+**The Gordon Growth Model sensitivity table for the above example:**
+
+| WACC \ Terminal Growth | 1.5% | 2.0% | 2.5% | 3.0% | 3.5% |
+|---|---|---|---|---|---|
+| 8.0% | $9,804M | $10,623M | $11,619M | $12,905M | $14,694M |
+| 8.5% | $9,058M | $9,673M | $10,435M | $11,409M | $12,715M |
+| 9.0% | $8,387M | $8,899M | $9,501M | $10,225M | $11,127M |
+| 9.5% | $7,782M | $8,213M | $8,712M | $9,292M | $9,986M |
+| 10.0% | $7,233M | $7,598M | $8,013M | $8,491M | $9,049M |
+
+Moving from the central case (WACC=9.0%, g=2.5% → $9,501M) to a moderately different assumption (WACC=8.0%, g=3.0% → $12,905M) produces a 36% increase in enterprise value — with no change in near-term forecasts. This is the "precision illusion" of DCF: the appearance of analytical rigor masks extreme sensitivity to assumptions that are themselves quite uncertain.
+
+**Damodaran's practitioner framework — industry-specific adjustments:**
+
+Aswath Damodaran (NYU Stern, whose publicly available valuation spreadsheets are used globally) has developed industry-specific DCF conventions:
+- **Financial services companies:** Book equity is the natural base; Return on Equity − Cost of Equity is the value driver; dividend discount models or excess return models replace free cash flow approaches because "capex" and "working capital" are not meaningful for banks
+- **Commodity companies:** Separate forecasts at spot commodity price (intrinsic value) vs. normalized commodity price (investment value); use of Monte Carlo simulation over commodity price distributions
+- **Intangible-heavy companies:** R&D as capital investment (not expense) — add back R&D expensed, amortize it as a capital asset over the average payback period (typically 10-15 years for pharmaceutical R&D, 3-5 years for software R&D)
+- **Young/startup companies:** Survivor bias correction — the expected value of the firm should be discounted for the probability of failure, which is substantial for early-stage companies regardless of optimistic base-case forecasts
+
+**The exit multiple cross-check — preventing terminal value illusions:**
+
+Best practice requires cross-checking the Gordon Growth terminal value against an exit multiple terminal value (EV/EBITDA × exit year EBITDA). When the two approaches diverge by more than 15-20%, the analyst should examine whether the perpetuity growth rate implies unrealistic long-run competitive dynamics. A 3% perpetuity growth rate for a company in a 2% GDP-growth economy implies the company will eventually consume all economic output — a terminal value that "makes sense" mathematically but implies increasingly implausible market dominance. The exit multiple approach anchors the terminal value in observable market pricing rather than mathematical extrapolation, providing a useful sanity check.

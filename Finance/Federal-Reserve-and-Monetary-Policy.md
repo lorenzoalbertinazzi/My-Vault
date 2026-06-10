@@ -179,3 +179,32 @@ This "floor system" provides more precise rate control than the old "corridor" s
 - [[Discounted-Cash-Flow-Analysis]] — risk-free rate and WACC directly set by Fed policy
 - [[Black-Scholes-Option-Pricing-Model]] — risk-free rate input (r) and volatility implications of Fed announcements
 - [[Value-at-Risk-and-CVaR]] — interest rate VaR in fixed income portfolios
+
+---
+
+### The Fed's Institutional Evolution: From Political Capture to Independence to the 2026 Threat
+
+The Federal Reserve's status as an independent institution is the product of hard historical lessons — and its current independence faces the most direct political challenge since the 1970s.
+
+**The Federal Reserve Act (1913) and original design:** The Fed was established not primarily to manage monetary policy but to prevent bank panics — the 1907 Panic, where J.P. Morgan personally organized a private banking bailout, demonstrated that the country needed a public lender of last resort. The original Fed structure reflected deep American suspicion of centralized power: 12 regional Reserve Banks with private bank shareholders, a Board of Governors in Washington (Federal Reserve Board), and the Federal Open Market Committee (FOMC) created only in 1933 after the banking failures of 1929-1933. The initial design gave regional commercial banks substantial power over monetary policy — the failure of this structure during the Great Depression led to the Banking Acts of 1933 and 1935 that centralized FOMC authority in Washington.
+
+**The Treasury-Fed Accord (1951) — the birth of independence:** From 1942 through 1951, the Fed pegged interest rates to support Treasury financing of WWII and then the Korean War debt. The yield peg (2.5% cap on long-term Treasuries) required the Fed to purchase unlimited Treasuries — surrendering monetary policy to fiscal dominance. Inflation reached 8.8% in 1951, forcing the Treasury-Fed Accord of March 1951: the Fed was released from the yield peg and restored to policy independence. The Accord is the foundational precedent for Fed independence, demonstrating both that independence can be surrendered and that the inflationary consequences of surrender create eventual political pressure to restore it.
+
+**The Volcker shock — quantitative detail:**
+
+Paul Volcker became Fed Chair in August 1979 with inflation running at 11.3%. His approach was radical: shift the Fed's operating target from the fed funds rate to non-borrowed bank reserves (allowing the funds rate to rise as high as necessary to hit the money supply target). The practical effect:
+- Fed funds rate peak: 20.0% (June 1981)
+- Prime rate peak: 21.5% (December 1980)
+- Unemployment peak: 10.8% (December 1982)
+- S&L industry losses from duration mismatch: ~$300 billion
+- Result: Inflation fell from 14.8% (March 1980) to 3.2% (December 1983)
+
+The Volcker shock established the empirical case that sufficient monetary tightening can defeat any inflation — at enormous social cost. The 1990s Greenspan-era "great moderation" (2.2% average CPI, 5.6% average unemployment from 1995-2005) was partly a credibility dividend from Volcker's demonstrated willingness to accept severe recessions to control prices.
+
+**FOMC decision mechanics — the less-visible machinery:**
+
+Between meetings, the NY Fed's Open Market Desk (the "Desk") implements policy through repo and reverse repo operations in the $25 trillion Treasury market. The Desk's daily operations maintain the fed funds rate within the FOMC's target range by adjusting bank reserves. The Greenbook (now Tealbook) — the 200+ page briefing document prepared by Fed staff before each FOMC meeting — represents the most sophisticated macroeconomic forecast produced by any institution in the world. Minutes are released 3 weeks after each meeting; the full transcripts are published with a 5-year lag — providing historians with verbatim records of policy debates. The 2008 transcripts (released 2014) revealed that FOMC members significantly underestimated the severity of the developing crisis through September 2008.
+
+**The 2026 Fed independence challenge:**
+
+As of June 2026, three developments create the most serious threat to Fed independence since the 1970s: (1) The administration has publicly criticized FOMC decisions and suggested the President has firing authority over the Chair for cause; (2) A Senate Banking Committee confirmation hearing for Powell's potential successor has become a de facto referendum on whether rate policy should be subordinated to housing affordability objectives; (3) Two circuit courts have issued conflicting rulings on executive removal power over independent agency heads following the administration's removal of FTC and NLRB chairs. The 10-year inflation expectations premium embedded in Treasury yield curves (approximately 35 bps above pre-2025 norms) reflects markets' discounting of some probability of reduced Fed credibility — with each 10 bps increase in break-even inflation equivalent to approximately $25 billion in annual Treasury borrowing costs.

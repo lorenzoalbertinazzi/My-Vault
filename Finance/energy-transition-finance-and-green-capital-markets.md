@@ -274,3 +274,29 @@ A major challenge for ESG-based investing is the remarkable divergence between d
 - [[factor-investing-and-smart-beta]] — ESG as a factor in quantitative investing
 - [[sovereign-wealth-funds]] — SWF sustainability mandates and ESG integration
 - [[mergers-and-acquisitions]] — climate due diligence in M&A transactions
+
+---
+
+### Green Bond Market Mechanics, Blended Finance Architecture, and the Transition Finance Debate
+
+The green capital markets have developed specific structural innovations to channel private capital toward climate objectives — each with distinct economics, verification requirements, and controversies.
+
+**Green bond market size and evolution (2025-2026):**
+
+The global green bond market reached $2.2 trillion in cumulative issuance as of end-2025 (Climate Bonds Initiative data). Annual issuance has grown from $11 billion (2013) to $610 billion (2023) to approximately $820 billion (2025). The major issuers are: (1) supranational institutions (EIB, IBRD/World Bank — approximately 20% of cumulative market); (2) financial institutions/banks (35% — funding green loan portfolios); (3) corporate issuers (30% — capex for renewable energy, clean transportation, green buildings); (4) sovereign/quasi-sovereign issuers (15% — growing rapidly since EU's debut €12 billion green bond in 2021, followed by UK, Germany, France, and Japan).
+
+**The greenium — when does green labeling produce lower borrowing costs?**
+
+The "greenium" (yield discount on green bonds vs. conventional bonds from the same issuer) averages approximately 3-6 basis points in European markets but is close to zero for many corporate issuers in the US. The greenium exists because: (1) dedicated ESG investment mandates create captive demand that exceeds supply in the green bond market (structural supply-demand imbalance); (2) green bonds offer reputational benefits to issuers that accept lower yields. A numerical example: if Volkswagen issues a €500M 5-year green bond at a yield of 3.15% vs. 3.20% for a conventional bond, the 5 bps greenium saves €250,000 per year (€1.25M over the bond's life) — minor relative to VW's €5 billion annual interest expense but meaningful as a signaling mechanism.
+
+**Blended finance architecture — derisking private capital:**
+
+Blended finance uses concessional public or philanthropic capital to reduce risk for private investors, enabling financing for climate projects that would otherwise not attract private capital due to risk-return profile. The Convergence Blended Finance database tracks ~1,200 transactions (2026), with the following structural archetypes:
+
+*First-loss tranching:* Development Finance Institutions (OPIC/DFC, IFC, FMO) take the first loss position in a structured fund, absorbing early losses up to 20% of fund value. Private investors occupy senior positions. DFC committed $3 billion in first-loss capital to emerging market climate funds in 2024, catalyzing an estimated $12 billion in private investment (4:1 catalysis ratio).
+
+*Guarantee instruments:* The World Bank's MIGA (Multilateral Investment Guarantee Agency) provides political risk guarantees for renewable energy investments in developing countries, covering risks including currency non-convertibility, expropriation, and political violence. MIGA's $4 billion in new guarantees in FY2025 enabled ~$14 billion in total renewable investment in Sub-Saharan Africa, Southeast Asia, and Central America.
+
+**The transition finance debate — financing dirty-to-clean vs. only clean:**
+
+A critical debate in green finance: should capital markets support "transition" activities — fossil fuel companies or heavy industry in the process of decarbonizing — or only already-clean activities? The International Capital Market Association (ICMA) published its Climate Transition Finance Handbook (2020) endorsing transition bonds for "hard-to-abate" sectors (steel, cement, chemicals, aviation) making credible decarbonization commitments. Opponents argue transition bonds provide "green washing" cover for continued fossil fuel investment without clear accountability. The EU Taxonomy's tiered approach (green/transition/enabling) attempts to resolve this by defining specific technical screening criteria, but the inclusion of natural gas as a "transitional" activity in the EU Taxonomy (2022, the so-called "brown taxonomy") generated a backlash from environmental groups and the European Parliament. The governance tension at the heart of transition finance: the private capital markets cannot decarbonize the global economy if they only finance already-clean activities, but permissive standards create greenwashing that destroys market credibility.

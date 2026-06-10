@@ -552,3 +552,30 @@ One offsetting risk: the Atlanta Fed's Wage Growth Tracker (June 2026) shows job
 - [[yield-curve-and-bonds]] — TIPS as inflation-indexed instruments; nominal yield decomposition
 - [[macroeconomics-101]] — inflation in the AS-AD framework
 - [[real-assets-reits-and-commodities]] — commodity prices as inflation drivers
+
+---
+
+### The Wage-Price Spiral Mechanics, Fisher Equation Applications, and the 2021-2023 Inflation Post-Mortem
+
+Understanding the 2021-2023 inflation episode requires integrating macroeconomic theory, supply-chain data, and monetary policy response timing in ways that no single framework fully predicted.
+
+**The Fisher equation and real rate decomposition:**
+
+Irving Fisher's (1930) equation: Nominal Interest Rate = Real Interest Rate + Expected Inflation (i = r + πᵉ). The ex-ante Fisher equation: i = r* + πᵉ, where r* is the natural/neutral real rate consistent with full employment. The ex-post Fisher equation: i = r + π_actual. When inflation is unanticipated (π_actual > πᵉ), the realized real rate falls below expected — a wealth transfer from lenders to borrowers. The 2021-2022 episode: US 10-year Treasury yield rose from 1.6% (January 2021) to 4.2% (October 2022), while realized CPI averaged 6.8% in 2021 and 8.0% in 2022. The ex-post 10-year real yield in 2022: approximately 4.2% - 8.0% = **-3.8%** — one of the most negative real yields in modern US history. Holders of nominal 10-year Treasuries at January 2021 prices experienced -17% total returns (price decline + negative real income) by December 2022.
+
+**The wage-price spiral — conditions and evidence:**
+
+The wage-price spiral (Samuelson & Solow, 1960; Blanchard & Bernanke, 2023) occurs when: (1) initial price increases reduce real wages; (2) workers demand and receive nominal wage increases; (3) increased labor costs are passed through to prices; (4) the cycle repeats. The conditions for spiral dynamics: tight labor markets (where workers have bargaining power to extract wage increases), indexation mechanisms (wages formally linked to CPI), and accommodative monetary policy (central bank allows the expansion to continue). The 1970s cycle: oil shocks in 1973 and 1979 triggered supply-side inflation; easy money policy (Burns Fed) accommodated it; COLA (cost-of-living adjustment) contracts in 50-60% of large US union contracts automatically indexed wages to CPI; wage-price spiral amplified supply shocks into 14% headline CPI by March 1980.
+
+The 2021-2023 episode: An IMF working paper (Alvarez, Caselli, et al., 2023) found that less than 25% of US core CPI inflation could be attributed to wage-price dynamics — the dominant driver was corporate profit margins expanding during supply shortages ("profit-price spiral"). Nominal wages did rise 5-6% annually in 2022-2023, but this largely reflected labor market tightening from pandemic-related retirements and immigration restriction, not union wage indexation. The lack of formal indexation mechanisms (US private sector union density: ~6%) prevented the 1970s-style amplification, contributing to the faster-than-expected inflation decline in 2023-2024.
+
+**The 2021-2023 Fed post-mortem:**
+
+The Fed's retrospective analysis (September 2023 Fed review, with additional commentary from Bernanke-Blanchard 2023 paper) identified several policy errors:
+1. *The "transitory" mistake (2021):* The Fed described 2021 inflation as "transitory" through November 2021, based on models that assigned supply chain disruptions as the primary driver. Supply chain resolution was expected to reduce inflation by year-end 2021. The model error: demand side stimulus (fiscal transfers of ~$5 trillion over 2020-2021 equivalent to ~22% of GDP) drove demand-pull inflation that persisted after supply chain normalization.
+2. *Late liftoff timing:* The Fed's first rate hike was March 2022, when CPI had already reached 8.5%. By comparison, 1994 Greenspan's preemptive tightening cycle (raising rates before inflation actually appeared) avoided a sustained inflation episode.
+3. *Model dependence on pre-2020 data:* Estimated NAIRU (non-accelerating inflation rate of unemployment) from pre-pandemic data was ~4.0%; post-pandemic labor market shifts reduced NAIRU to approximately 4.5-5.0%, meaning the Fed was measuring labor market tightness against a benchmark that understated inflationary pressure.
+
+**The commodity super-cycle and inflation transmission:**
+
+A super-cycle (Rogers, 2004; S&P GSCI commodity index analysis) is a period of sustained above-trend commodity prices lasting 10-35 years, driven by demand from industrializing economies absorbing commodity stocks faster than new supply can respond. Previous super-cycles: 1900-1929 (US industrialization), 1950s-1970s (post-war reconstruction), 1996-2014 (China's infrastructure buildout). The energy transition cycle: demand for copper, lithium, cobalt, nickel, and rare earth metals from EV and grid buildout is projected to require 2-5× current mining capacity by 2040. If supply investment proves insufficient, commodity inflation could persist as a structural feature of the 2030s inflation environment — with direct implications for break-even inflation pricing in bond markets.

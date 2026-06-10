@@ -775,3 +775,35 @@ Where ADV is average daily volume and η ≈ 0.5–1.0 (a market-impact coeffici
 - [[factor-investing-and-smart-beta]] — factor premiums targeted by quantitative strategies
 - [[behavioral-finance-and-investor-psychology]] — behavioral mispricing as quant signal source
 - [[hedge-funds-and-alternative-strategies]] — quantitative hedge fund strategies using stat arb
+
+---
+
+### Statistical Arbitrage Mechanics, the Factor Zoo Replication Crisis, and Machine Learning in Finance
+
+Quantitative finance has evolved through three distinct generations — each with different signal sources, implementation constraints, and failure modes.
+
+**Statistical arbitrage mechanics — pairs trading and mean reversion:**
+
+The foundational statistical arbitrage strategy is *pairs trading*: identify two historically co-integrated securities (e.g., Coca-Cola and PepsiCo), model their spread as a mean-reverting process, go long the underperformer and short the outperformer when the spread exceeds a statistical threshold (typically 2 standard deviations), and exit when the spread reverts to the mean. The Ornstein-Uhlenbeck process models the spread dynamics:
+
+dS_t = κ(μ - S_t)dt + σdW_t
+
+Where κ = mean reversion speed (half-life = ln(2)/κ), μ = long-run mean, σ = volatility. The trade entry at ±2σ, exit at ±0.5σ or 0 generates: expected return per trade = (entry-exit spread) / (margin) ≈ 1.5σ / max-drawdown. With κ corresponding to a 5-day half-life and 2σ entry, the average time to convergence is approximately 5 days — enabling high trade frequency and portfolio-level diversification.
+
+The strategy's edge source: the co-integration relationship reflects a genuine economic connection (both companies sell cola, so demand substitution and cost similarities create fundamental price correlation) that persists over time. When the spread widens, it's either noise (mean-reverts quickly) or structural change (the fundamental link is broken — the strategy loses). Detecting which is occurring requires continuous model monitoring.
+
+**The factor zoo replication crisis — quant finance's data mining problem:**
+
+Harvey, Liu & Zhu (2016) documented 315 quantitative factors with published statistical significance. Subsequent replication studies have been damaging: Hou, Xue & Zhang (2020, *Review of Financial Studies*) attempted to replicate 452 anomalies from published papers using modern data and methodology; only 65 (14%) survived at the 5% significance level when tested out-of-sample. The most common failure modes: (1) look-ahead bias in data construction; (2) survivorship bias in sample selection; (3) multiple testing without correction; (4) overfitting to one specific sample period or market regime.
+
+The surviving anomalies after rigorous replication: momentum (Jegadeesh & Titman: confirmed), quality/profitability (Novy-Marx: confirmed), short-term reversal (confirmed), value (Fama-French: confirmed with reduced magnitude), low-volatility/low-beta (confirmed), accruals (Sloan: confirmed). Most "exotic" factors (50-150 of them) fail out-of-sample. The practical implication for quant strategies: only factors with theoretical motivation AND robust out-of-sample evidence deserve significant allocation weight.
+
+**Machine learning in finance — signal quality vs. model complexity:**
+
+The application of machine learning (LASSO, random forests, gradient boosting, LSTM networks) to financial prediction has generated a literature that is more cautionary than enthusiastic in its empirical findings. Key findings:
+
+*Feature engineering matters more than model choice:* In Gu, Kelly & Xiu (2020, *Review of Financial Studies*, 30,000 US stocks, 50+ years): gradient boosting and neural networks provide small improvements over OLS in return prediction when applied to the same feature set (~0.5% annualized Sharpe improvement). The finding: well-chosen fundamental features drive most of the predictive signal; ML models' primary contribution is capturing interactions between features that linear models miss.
+
+*Overfitting and the length of financial history:* With ~70 years of monthly data (~840 observations) and potentially hundreds of features, regularization is essential. Lopez de Prado (2018, *Advances in Financial Machine Learning*) documented that standard train/test splits dramatically overstate out-of-sample performance in financial data because of serial correlation — proper walk-forward cross-validation (preserving temporal ordering) is required.
+
+*Interpretability vs. performance:* Institutional investors face a specific ML challenge: "black box" models that generate returns but cannot be explained violate risk management and compliance requirements. The FRTB requires models to be explainable; UCITS regulations require interpretable risk disclosures. The practical resolution: most institutional quant funds use ML for feature discovery and interaction detection, then regularize to simple factor exposures that can be explained and reported — using ML as a research tool rather than a production trading model.

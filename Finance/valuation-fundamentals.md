@@ -709,3 +709,44 @@ The premium of precedent transactions over trading comps (approximately 30–40%
 - [[private-equity-and-venture-capital]] — LBO mechanics and PE return calculation
 - [[mergers-and-acquisitions]] — valuation methodologies in M&A advisory context
 - [[factor-investing-and-smart-beta]] — value factor as a systematic screen using valuation multiples
+
+---
+
+### Valuation Multiples: Sources of Dispersion, Sum-of-Parts Methodology, and the Terminal Value Conundrum
+
+Valuation is more art than science at any specific moment — but understanding the systematic sources of multiple variation reveals when market-implied assumptions are realistic and when they are not.
+
+**Why multiples vary across companies — the decomposition:**
+
+An EV/EBITDA multiple can be decomposed as: EV/EBITDA = (1 - Tax Rate) × (1 - Reinvestment Rate) / (WACC - Growth Rate). This formula reveals that two companies can trade at different EV/EBITDA multiples for three legitimate reasons: (1) different WACC (risk); (2) different growth rate (g); (3) different capital efficiency (reinvestment rate = capex + ΔWC / EBITDA × (1-t)). A company generating 15% ROIC that must reinvest 67% of NOPAT to grow at 10% has a reinvestment rate of 67% and should trade at a higher multiple than a company generating only 8% ROIC that must reinvest 100% to grow at 8% (and should actually trade at a discount to replacement cost since it destroys value with growth).
+
+*Numerical comparison:*
+- Company A: WACC 9%, g=10%, reinvestment 67% (ROIC=15%): EV/EBITDA = 0.75 × 0.33 / (0.09-0.10) → undefined (negative denominator, company is worth infinity with these assumptions? No — the formula breaks down; at g=WACC, terminal value formula is not valid; practical upper bound ~35-50×)
+- Company B: WACC 9%, g=3%, reinvestment 37.5% (ROIC=8%): EV/EBITDA = 0.75 × 0.625 / (0.09-0.03) = 0.469 / 0.06 = **7.8×**
+- Company C: WACC 9%, g=3%, reinvestment 20% (ROIC=15%): EV/EBITDA = 0.75 × 0.80 / 0.06 = **10.0×**
+
+The implication: Company C's 10× vs. Company B's 7.8× multiple premium is entirely explained by higher ROIC enabling the same growth with less reinvestment — a quality premium that is fully justified by fundamentals.
+
+**Sum-of-parts (SOTP) valuation — when and how:**
+
+SOTP valuation is appropriate when: (1) a company operates genuinely distinct business segments with different risk profiles and growth rates; (2) the segments would trade at materially different multiples if independent; (3) there is a "conglomerate discount" or "conglomerate premium" to be measured. The SOTP procedure:
+
+1. Identify distinct business segments (by reported segment financials or analytical decomposition)
+2. Apply segment-appropriate multiples from comparable pure-play companies
+3. Sum segment values, deduct corporate overhead at an appropriate multiple, add non-operating assets (excess cash, investments), subtract net debt
+4. Compare to consolidated trading multiple to identify embedded discount or premium
+
+*Worked example — Alphabet 2025:*
+- Google Search/Ads: $130B revenue, ~45% EBITDA margin; peer multiple 15× EBITDA = ~$877B
+- YouTube: $40B revenue, ~30% margin; peer streaming/video multiple 12× EBITDA = ~$144B  
+- Google Cloud: $45B revenue, ~25% margin; peer cloud multiple 8× revenue = ~$360B
+- Other Bets (Waymo, Verily): options value ~$50B
+- Total operations: ~$1.43T
+- Net cash: ~$100B
+- **SOTP Enterprise Value: ~$1.53T**
+- Actual market cap (June 2025): ~$2.0T
+- Implied premium: ~31% — reflecting AI optionality and Gemini/infrastructure upside not captured in current segment multiples
+
+**The precedent transaction premium — deal vs. stock multiples:**
+
+Precedent transactions (acquisition multiples from completed M&A deals) consistently trade at 20-40% premiums to comparable trading multiples for the same sector. This "control premium" compensates sellers for: (1) the surrender of optionality (the ability to sell later at potentially higher prices); (2) the loss of the public market premium (public shares trade at a liquidity premium); (3) the capture of synergy value by the acquirer. The control premium is largest in sectors with active strategic consolidators (healthcare, technology, financial services) and smallest in cyclical sectors with few natural buyers (mining, chemicals). Blending precedent transaction and trading comps in a valuation — with appropriate weighting for the transaction's purpose (acquisition pricing vs. minority interest valuation vs. intrinsic value assessment) — requires explicit judgment about which comparables are most relevant for the specific valuation question.

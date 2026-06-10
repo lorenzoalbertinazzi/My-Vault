@@ -852,3 +852,33 @@ Ricardo's (1817) **comparative advantage** holds that countries should specializ
 - [[inflation-dynamics-and-investment]] — inflation's macro roots in AD-AS framework
 - [[currency-markets-and-fx]] — Mundell-Fleming exchange rate implications
 - [[yield-curve-and-bonds]] — term structure theories and monetary policy transmission
+
+---
+
+### The Mundell-Fleming Trilemma, Modern Monetary Theory's Claims, and the 2025 Fiscal Sustainability Debate
+
+Macroeconomic policy operates within hard institutional and mathematical constraints — but competing schools of thought disagree profoundly about where the binding constraints lie.
+
+**The Mundell-Fleming trilemma — the open economy constraint:**
+
+The Mundell-Fleming model (Mundell, 1963, *Canadian Journal of Economics and Political Science*; Fleming, 1962, *IMF Staff Papers*) extended IS-LM to the open economy, establishing the "impossible trinity": a country cannot simultaneously maintain (1) free capital mobility, (2) fixed exchange rate, and (3) independent monetary policy. The intuition: if capital is perfectly mobile and the exchange rate is fixed, any interest rate differential between the domestic economy and the world rate will trigger capital flows that force the exchange rate off its peg — or require the central bank to match world rates (abandoning monetary independence). Countries must choose any two:
+
+*Corner 1 (Currency union / dollarization):* Fixed exchange rate + open capital → abandon monetary policy. Eurozone members, Ecuador, Panama.
+
+*Corner 2 (Capital controls):* Monetary independence + fixed exchange rate → abandon capital mobility. China (managed exchange rate with significant capital controls), Bretton Woods era US.
+
+*Corner 3 (Float + open capital):* Monetary independence + free capital → abandon fixed exchange rate. US, UK, Japan, Canada, Australia — current dominant model for advanced economies.
+
+*Numerical example of the constraint:* Brazil (2022) maintained open capital markets and an independent central bank (BCB raised rates from 2% to 13.75%). If Brazil had tried to maintain a fixed BRL/USD rate with these conditions, capital inflows from the high Brazilian rate would have forced BRL appreciation — inconsistent with the peg — or required BCB to buy dollars and sell reais without limit, creating uncontrolled money supply expansion. The float absorbs the trilemma by allowing BRL to appreciate rather than forcing the BCB to choose between the exchange rate and the interest rate.
+
+**Modern Monetary Theory — the claims and the critique:**
+
+Modern Monetary Theory (Kelton, 2020, *The Deficit Myth*; Wray, 2015, *Modern Money Theory*) argues that monetary sovereign governments (those that issue their own currency, float the exchange rate, and have no foreign-currency debt) are not financially constrained by deficits — they can always create money to service debt. The operative constraint is *real resource availability* (labor, capital, goods and services), not nominal money availability. Inflation — not budget constraints — is the binding limit on spending.
+
+The mainstream critique (Summers, Blanchard, Mankiw, Rogoff): (1) *The inflation constraint is real and binding:* MMT acknowledges that too much spending causes inflation, but the proposed corrective mechanism (raising taxes to reduce money supply) is politically difficult and operationally slow — the inflation may be substantial before the fiscal response is effective. (2) *Exchange rate and capital flight risk:* For countries other than the US (and arguably for the US as well), aggressive money-financed fiscal deficits risk exchange rate depreciation and capital flight that imports inflation through higher import prices — the Turkish lira and Argentine peso experiences demonstrate the reality of this risk even for governments with nominal monetary sovereignty. (3) *Interest rate dynamics:* If nominal rates rise (either from inflation expectations or from the policy response to inflation), debt service costs for money-creating governments also rise — the constraint that MMT claims doesn't exist re-emerges through interest rate channels.
+
+**The 2025-2026 US fiscal sustainability debate:**
+
+US federal debt/GDP reached 99% in 2025 (OMB data), with CBO projecting 120% by 2035 under current policy. The Blanchard-Summers debate (2019) reframed the conversation: Blanchard argued that with r (interest rates) < g (nominal GDP growth), the government's debt-to-GDP ratio is self-stabilizing — positive primary deficits are sustainable. The 2022-2025 rate increases have dramatically changed this calculus: with 10-year Treasury yields at 4.65% and nominal GDP growth at approximately 5.5%, the r-g spread is roughly -0.85% — barely negative and potentially turning positive.
+
+The Congressional Budget Office (CBO, May 2025 Update): under current policy, net interest payments reach 3.7% of GDP by 2035 — exceeding defense spending. The primary deficit (deficit excluding interest) must be reduced by approximately 1.5% of GDP annually to stabilize the debt ratio at current rates. This implies either $450 billion in annual spending cuts or revenue increases — a fiscal adjustment of approximately the size of the entire US discretionary defense budget. The market-implied fiscal sustainability assessment: 10-year Treasury term premium has risen from approximately -0.5% (2021) to +0.75% (June 2026), incorporating a "fiscal risk premium" of approximately 0.50-0.75% that adds directly to government borrowing costs.

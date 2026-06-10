@@ -746,3 +746,41 @@ The correct comparison: Pooled IRR for all PE funds with the same vintage year (
 - [[sovereign-wealth-funds]] — SWF co-investment in PE funds; Yale model allocation
 - [[mergers-and-acquisitions]] — PE exit via strategic sale; CFIUS in PE cross-border deals
 - [[valuation-fundamentals]] — LBO valuation methodology; comparable company analysis for PE exits
+
+---
+
+### The Endowment Model History, J-Curve Mechanics, and GP-Led Secondaries
+
+Private equity's institutional context — particularly the Yale endowment model and the evolution of secondaries markets — is essential for understanding both its historical returns and its current structural transformation.
+
+**The Yale endowment model — Swensen's institutional revolution:**
+
+David Swensen took over Yale's endowment in 1985 with $1.0 billion in assets. When he died in 2021, Yale's endowment had grown to $42.3 billion. The annualized return from 1985-2021: 13.7% — versus the 60/40 portfolio's ~8.5% and the average university endowment's ~8.9%. The model Swensen developed, described in *Pioneering Portfolio Management* (2000), had three distinctive features:
+
+1. *Equity orientation:* Maximum allocation to equity-like risk premiums (private equity, venture capital, real assets) and minimal allocation to bonds (typically 5-10% vs. endowments' historical 30-40%)
+2. *Illiquidity premium capture:* Endowments with long time horizons and no near-term liquidity needs can accept illiquidity in exchange for a premium — PE and VC offer 3-5% annualized excess returns vs. public equity partly as compensation for a 10-year lock-up
+3. *Manager selection:* Allocation to top-quartile private managers generates alpha; bottom-quartile managers destroy value. Swensen's central claim (validated empirically): the inter-quartile spread in PE returns (5-7% between top and bottom quartile) exceeds the comparable spread in public equity (~1%), making manager selection high-value in PE but low-value in public markets
+
+**The J-curve — PE fund lifecycle mechanics:**
+
+The J-curve describes the characteristic negative early returns followed by strongly positive later returns in PE fund performance, arising from the fund lifecycle: fees are charged during years 1-3 on committed capital while investments are still being made and no exits have occurred. The typical J-curve:
+
+| Fund Year | Cash Flow | Cumulative IRR (Quarterly) |
+|---|---|---|
+| 1 | -$5M (mgmt fee) | -20% |
+| 2 | -$40M (investments + fees) | -12% |
+| 3 | -$30M (investments + fees) | -6% |
+| 4 | -$10M (investments + fees) | -2% |
+| 5 | +$20M (first exits) | +4% |
+| 7 | +$80M (exits accelerate) | +15% |
+| 10 | +$120M (final distributions) | +22% |
+
+The J-curve creates an institutional buyer selection problem: investors who evaluate PE managers on 3-year IRR will systematically undervalue excellent funds in their investment phase. Most sophisticated institutional investors use TVPI (Total Value to Paid-in Capital) and DPI (Distributions to Paid-in Capital) as primary metrics rather than IRR for funds less than 5 years old.
+
+**GP-led secondaries — the market structure transformation:**
+
+The secondary market (where LP interests in PE funds are bought and sold before fund maturity) grew from ~$25 billion annually (2015) to ~$140 billion (2025). More significant than the volume growth is the structural transformation: the market has shifted from LP-led sales (LPs selling to rebalance) to GP-led transactions (GPs initiating liquidity solutions for their own portfolios).
+
+GP-led structures include: *Continuation funds* — a GP moves one or several high-quality assets from an older fund into a new "continuation vehicle," allowing existing LPs to roll their interest forward or receive cash (provided by secondary buyers who purchase the rolled-forward interest). *Single-asset transactions* — the most common form in 2024-2025: a GP transfers a single high-performing portfolio company into a new vehicle, effectively extending ownership in the company beyond the fund's term.
+
+The controversy: GP-led transactions create a conflict of interest — the GP simultaneously represents the buyer (the continuation fund, in which the GP typically has an increased carry stake) and the seller (the original fund's LPs). Independent valuations and LP advisory committee approvals are required but are frequently insufficient to eliminate conflicts, as the GP has superior information about the asset's prospects than the LP committee members. IRR "reset" is the most criticized feature: the GP's carry (20% of profits above the hurdle) restarts in the new vehicle, potentially converting one profitable exit for LPs into two carry-generating events for the GP.

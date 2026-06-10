@@ -641,3 +641,35 @@ The sum (XVA = CVA + DVA + FVA + KVA + MVA + ColVA) explains why OTC derivative 
 - [[yield-curve-and-bonds]] — IRS curve as the foundation of fixed income pricing
 - [[Federal-Reserve-and-Monetary-Policy]] — SOFR as the benchmark for floating legs of swaps
 - [[hedge-funds-and-alternative-strategies]] — derivatives strategies used by macro and fixed income funds
+
+---
+
+### CDS Mechanics, the AIG Failure Case Study, and CVA/DVA in Bank Accounting
+
+Credit Default Swaps and the accounting treatment of counterparty risk represent the most technically complex and systemically important aspects of modern derivatives markets.
+
+**CDS mechanics — the insurance-that-isn't:**
+
+A Credit Default Swap (CDS) is a bilateral contract in which the *protection buyer* pays a periodic premium (the CDS spread, expressed in bps per year on notional) and receives from the *protection seller* compensation upon a *credit event* (default, bankruptcy, restructuring) by the *reference entity*. The settlement is either physical delivery (buyer delivers defaulted bonds; seller pays par) or cash settlement (seller pays par minus recovery rate). Key parameters:
+
+- *Notional:* Face amount of reference obligation (not the premium amount)
+- *Tenor:* 5-year is standard; 1-year is most liquid for high-yield
+- *CDS spread:* Reflects probability of default × (1 - recovery rate). A 5-year CDS trading at 250 bps implies, under simplifying assumptions, approximately: annual default probability ≈ 250 bps / (1 - 40% recovery) ≈ 4.17% per year, or cumulative 5-year default probability ≈ 19%
+
+**The AIG failure — the world's most expensive unhedged short put:**
+
+AIG Financial Products (AIGFP) sold approximately $440 billion in CDS protection on "super-senior" tranches of CDO-of-ABS structures between 2003-2007 — the top 1-3% of the capital structure of diversified portfolios of AAA-rated mortgage-backed securities. AIGFP's analysis: these tranches had never experienced credit events; they were rated AAA; default correlation was low. The CDS premium received: approximately 8-12 bps per year (a very cheap premium for "risk-free" protection).
+
+The failure: when nationwide US housing prices fell and mortgage defaults surged in 2007-2008, CDO correlation spiked from ~0.3 to ~0.9. The AAA super-senior tranches fell in market value from par to 40-60 cents, triggering *margin calls* from CDS counterparties (Goldman Sachs, Deutsche Bank, Société Générale) demanding collateral against the mark-to-market loss even without actual credit events. AIGFP had not anticipated needing to post collateral for market value changes (only for actual defaults) and had no liquidity to meet the calls. AIG's collapse required a US government bailout of $182 billion — subsequently recovered but not before AIG's counterparties were paid at par ($12.9 billion to Goldman Sachs, $11.9 billion to Société Générale), not at market-clearing prices.
+
+The systemic lesson: CDS creates interconnectedness that amplifies rather than distributes credit risk when multiple protection sellers have identical exposures.
+
+**CVA and DVA — accounting for counterparty risk in derivatives:**
+
+Credit Valuation Adjustment (CVA) and Debit Valuation Adjustment (DVA) are the accounting adjustments to mark derivative positions to fair value accounting for the risk of counterparty default.
+
+*CVA:* The present value of expected losses from counterparty default. For a bank with $100M of positive mark-to-market exposure to a counterparty trading at 300 bps CDS spread and 40% recovery rate: CVA ≈ $100M × (300 bps / 10,000) / (1 - 40%) = $100M × 0.50% = **$500,000**. This amount is subtracted from the asset value — the bank's derivative asset is worth $100M - $500K = $99.5M.
+
+*DVA:* The bank's own credit standing creates a symmetric adjustment from the counterparty's perspective. When a bank's credit quality deteriorates, its own DVA increases — producing a positive P&L impact on its derivatives book (the bank's liabilities are worth less). This creates a perverse accounting outcome: Citigroup reported in 2007 that it had generated $1.5 billion in DVA gains from the deterioration of its own credit — its financial difficulties improved its reported earnings.
+
+*FVA (Funding Valuation Adjustment):* The cost of funding uncollateralized derivative positions. While CVA/DVA are standard GAAP/IFRS, FVA's treatment remains contested — academic finance (Hull & White) argues FVA should not be included in fair value; banking practitioners argue it captures real economic costs. The Bank of Baroda case (2013) and Morgan Stanley's $1.5B FVA charge created a practical necessity for FVA even without consensus theory.

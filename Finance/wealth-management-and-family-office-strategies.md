@@ -267,3 +267,34 @@ For HNW philanthropic giving, two structures dominate:
 - [[private-equity-and-venture-capital]] — family office alternative investment allocation
 - [[Federal-Reserve-and-Monetary-Policy]] — interest rate environment affecting trust investment returns
 - [[factor-investing-and-smart-beta]] — investment strategies used in family office portfolios
+
+---
+
+### Family Office History, SFO vs. MFO Economics, and Dynasty Trust Mechanics
+
+The family office industry's modern form emerged from specific historical necessities — and its structure reveals important principles about the economics of wealth preservation across generations.
+
+**The Rockefeller Single Family Office — the institutional template (1882):**
+
+When John D. Rockefeller's Standard Oil trust was generating more cash than any investment vehicle of the era could absorb, his aide Frederick Gates established what is generally recognized as the first true single-family office in 1882 — a dedicated entity managing the investment, philanthropy, tax, and estate planning of the Rockefeller wealth. The Rockefeller family office eventually became a multi-family office when it opened its services to other ultra-high-net-worth families in the 1970s, becoming Rockefeller Capital Management. The institutional features established by the Rockefeller model — investment committee governance, dedicated legal counsel, coordinated philanthropy, family constitution and mission documentation — became the template for subsequent SFOs.
+
+**SFO vs. MFO economics — when each structure is optimal:**
+
+The break-even analysis for maintaining a dedicated single-family office versus using a multi-family office or private bank depends primarily on asset level and complexity:
+
+| Parameter | SFO Cost | MFO Cost |
+|---|---|---|
+| Setup | $500K-$2M (one-time) | Minimal |
+| Annual operating (staff, tech, legal) | $2M-$10M+ | None (included in fees) |
+| Investment management fee | Typically 0.25-0.50% (institutional) | 0.50-1.25% all-in |
+| Break-even point | ~$200-400M in assets | < $200M in assets |
+
+The SFO economics improve substantially above $500M in assets because: (1) the fixed operating cost as a % of assets falls; (2) institutional alternative investment access (PE, VC, hedge fund minimum investments of $10-25M) becomes accessible; (3) direct investment capability (investing alongside GPs in co-investments) generates better returns than fund-of-fund structures. For most $100-300M families, an MFO provides better economics and access than a standalone SFO would.
+
+**Dynasty trust mechanics — wealth across generations:**
+
+Dynasty trusts (perpetual trusts available in states including South Dakota, Nevada, Delaware, and Alaska) are the structural cornerstone of multi-generational wealth preservation. Key features: (1) GST tax avoidance — assets transferred into a perpetual trust can avoid the Generation-Skipping Transfer Tax (40%) for as long as the trust exists, potentially across unlimited generations; (2) spendthrift protection — trust assets are protected from beneficiaries' creditors because beneficiaries do not own trust assets outright; (3) divorce protection — inherited trust assets maintained separately from marital property are typically excluded from marital estate in most jurisdictions. A dynasty trust funded with $10M in a high-growth asset (e.g., founder stock) growing at 10% annually produces $174M after 30 years completely outside the estate tax system — a present-value estate tax saving of approximately $70M at the 40% rate on the $174M.
+
+**The 2025-2026 regulatory environment — estate and gift tax cliff:**
+
+The Tax Cuts and Jobs Act (2017) doubled the estate and gift tax exemption from $5.49M to $11.18M per person (indexed to inflation — reaching $13.99M per person in 2026). These provisions sunset December 31, 2025, unless extended, reverting to ~$7M per person. Congress has thus far not passed a permanent extension as of June 2026, creating the largest estate planning opportunity in a generation: transferring assets from taxable estates before the potential reversion. Estimated value of transfers completed in 2024-2025 in anticipation of sunset: $1.4 trillion (Internal Revenue Service data), primarily through Spousal Lifetime Access Trusts (SLATs), charitable lead trusts, and grantor retained annuity trusts (GRATs).

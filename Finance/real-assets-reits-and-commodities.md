@@ -740,3 +740,47 @@ The VanEck Gold Miners ETF (GDX) has significantly underperformed physical gold 
 - [[sovereign-wealth-funds]] — SWF allocation to infrastructure and real assets
 - [[energy-transition-finance-and-green-capital-markets]] — renewable energy infrastructure overlap
 - [[private-equity-and-venture-capital]] — infrastructure private equity structures and fund mechanics
+
+---
+
+### Infrastructure Asset Class Taxonomy, REIT Valuation NAV vs. FFO, and the Commodity Super-Cycle
+
+Real assets form a diverse asset class with distinct valuation frameworks and risk-return profiles that often appear similar on the surface but reflect fundamentally different underlying economics.
+
+**Infrastructure asset taxonomy — economic characteristics:**
+
+Infrastructure assets are distinguished by two key economic features: (1) essential services that create captive demand (airports, toll roads, water utilities cannot be easily substituted); (2) regulatory or concession frameworks that control pricing in exchange for service quality obligations. The taxonomy by return-risk profile:
+
+| Sub-type | Example | Revenue Model | Typical Equity IRR | Risk Profile |
+|---|---|---|---|---|
+| Regulated utilities | Water, electric distribution | Rate-of-return regulation | 6-8% | Low (regulatory predictability) |
+| Contracted infrastructure | Renewable energy PPAs, LNG terminals | Long-term take-or-pay contracts | 7-10% | Low-medium (counterparty risk) |
+| Concession/user-pay | Airports, toll roads | Volume × tariff | 8-12% | Medium (traffic volume risk) |
+| Merchant/market-linked | Gas storage, merchant power | Market prices | 10-15% | High (commodity price, volume) |
+| Greenfield/construction | New infrastructure builds | Completion + operations | 12-18% | High (construction, ramp-up) |
+
+The Cambridge Associates Infrastructure Benchmark (2025): listed infrastructure averaged 8.7% annual return with 0.67 Sharpe ratio (2005-2024). Unlisted infrastructure (private funds): 9.8% annual return with 0.94 Sharpe ratio — the illiquidity premium partially explains the difference.
+
+**REIT valuation — NAV vs. FFO vs. AFFO:**
+
+REITs are unique among equities in that three separate metrics are used for valuation, each capturing different aspects of value:
+
+*Net Asset Value (NAV):* Sum of the private market value of all properties minus debt. The most conceptually sound measure — it anchors REIT valuation to the underlying real estate market. The challenge: individual properties must be appraised (typically annually), and appraisals lag market prices. REITs trade at premiums to NAV (5-20% premium) when capital markets are loose and investors expect continued property appreciation; at discounts (5-30%) during real estate downturns.
+
+*Funds From Operations (FFO):* Net income + depreciation - property gains = the primary REIT operating metric. GAAP net income is misleading for REITs because real estate depreciation (the accounting reduction in asset value) actually represents appreciation in most markets — adding back depreciation restores the true cash generation. NAREIT standard FFO eliminates this distortion.
+
+*Adjusted FFO (AFFO):* FFO - recurring capital expenditures (maintenance capex) - lease renewal costs + other adjustments. AFFO approximates distributable cash flow — the amount actually available for dividends after maintaining the portfolio. The typical "REIT payout math": REITs must distribute 90% of taxable income. If AFFO = $1.00/share and the REIT pays $0.90, the P/AFFO multiple is $20/$1.00 = 20× — comparable to a P/E ratio for non-REIT equities. A P/AFFO of 15-20× is historically normal; below 12× suggests the market is pricing significant credit risk or fundamental deterioration.
+
+**Commodity super-cycle analysis — the energy transition demand shock:**
+
+The International Energy Agency's (IEA) 2024 Global Critical Minerals Outlook documents the unprecedented metals demand from clean energy transition:
+
+| Metal | 2024 Demand (kt) | 2040 Demand (NZE scenario) | Multiple |
+|---|---|---|---|
+| Lithium | 180 | 2,000 | 11× |
+| Cobalt | 210 | 430 | 2× |
+| Nickel | 3,400 | 5,600 | 1.6× |
+| Copper | 25,000 | 39,000 | 1.6× |
+| Rare earth elements | 350 | 1,100 | 3.1× |
+
+The supply response timeline for copper (the most broadly consumed transition metal): a typical copper mine takes 15-20 years from discovery to production. The current pipeline of copper projects in development globally would supply approximately 60% of the projected 2040 demand — implying a structural supply deficit that takes 15-20 years to fully resolve. This is the physical basis for the "copper supercycle" thesis: unlike demand shifts driven by industrial production cycles (which can reverse in 1-3 years), the energy transition demand shift is durable and certain enough to justify long-duration capital commitments in mining — but the supply response will be lumpy and geographically concentrated in politically complex regions (DRC for cobalt, Chile/Peru for copper, Indonesia for nickel).

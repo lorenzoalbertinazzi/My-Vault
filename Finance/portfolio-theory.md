@@ -805,3 +805,35 @@ The Bank of England's emergency 65bp yield rise (triggered by the "mini-budget" 
 - [[yield-curve-and-bonds]] — duration and convexity — the currency of LDI
 - [[Value-at-Risk-and-CVaR]] — risk measures in the liability framework
 - [[derivatives-futures-and-forwards]] — interest rate swaps as LDI overlay instruments
+
+---
+
+### Liability-Driven Investment History, Pension Funding Mechanics, and the LDI Crisis of 2022
+
+Portfolio theory applied to pension funds — Liability-Driven Investment (LDI) — represents the most significant practical application of duration matching theory, and its near-catastrophic failure in the UK in 2022 is the most important institutional risk management event of the decade.
+
+**LDI's intellectual origins — from surplus optimization to immunization:**
+
+Pension fund liability management evolved from two independent intellectual traditions. Redington's (1952, *Journal of the Institute of Actuaries*) immunization theory — developed for UK life insurance companies — established that a portfolio is immunized against parallel yield curve shifts if its duration equals the liability duration and its convexity exceeds the liability convexity. Fisher & Weil (1971, *Journal of Business*) formalized duration matching for bond portfolios. The crucial insight: a pension fund's "risk" is not the volatility of asset returns in isolation but the tracking error of asset returns against liability value changes — if liabilities and assets move together, the surplus (assets - PV of liabilities) is stable.
+
+**Pension liability measurement — PBO vs. ABO:**
+
+Two accounting measures of pension obligations create different economic incentives:
+
+*Accumulated Benefit Obligation (ABO):* Present value of pension benefits earned to date, based on current salary levels. Does not include expected future salary increases.
+
+*Projected Benefit Obligation (PBO):* Present value of all pension benefits expected to be paid under the plan, including projected future salary increases until retirement. PBO > ABO because future salary increases increase the ultimate benefit payout.
+
+SFAS 87 (US GAAP) requires PBO disclosure and uses corporate bond rates to discount liabilities. IFRS 19 similarly uses high-quality corporate bond yield as the discount rate. The regulatory rationale: corporate bonds approximate the funding cost of a liability with the same risk profile as a pension obligation (long-dated, credit-risk-matched).
+
+*Numerical example:* A 50-year-old employee is entitled to 2% × years of service × final salary at retirement age 65. Current salary: $100K; expected final salary at 65: $160K (3% annual growth). Service years at 65: 30. Annual pension benefit: 2% × 30 × $160K = $96K/year. Life expectancy: 85. PV of this annuity at 5% discount rate: $96K × [1-(1.05)^{-20}]/0.05 = $96K × 12.46 = **$1.196M per employee**. For a 10,000-employee workforce at similar career stage, total PBO ≈ **$12 billion** — a significant long-duration liability requiring careful asset-liability matching.
+
+**The UK LDI Crisis (September 2022) — near-systemic failure:**
+
+The September 2022 LDI crisis was triggered by UK Prime Minister Liz Truss's "mini-budget" of September 23, 2022, which announced unfunded tax cuts of £45 billion. UK gilt yields (30-year) rose from 3.7% to 4.99% in a single week — an extraordinary move that should, under the LDI framework, have *reduced* pension fund liability values (falling present value of future payments). Instead, it created a liquidity crisis:
+
+*The leverage problem:* UK pension funds used highly leveraged LDI strategies (via derivatives overlays, typically interest rate swaps) to achieve their liability-matching duration without committing all assets to low-yielding gilts. A pension fund with £1B in assets might have had £3B in notional interest rate swap exposure — effective 3:1 leverage. When rates rose, the mark-to-market value of the received-fixed swaps fell sharply, triggering margin calls.
+
+*The liquidity spiral:* Pension funds needed to post collateral to meet swap margin calls. To raise cash quickly, they sold gilts — the most liquid fixed income asset. But many funds were selling simultaneously, pushing gilt yields higher, triggering further mark-to-market losses on remaining swap positions, requiring further gilt sales. A self-reinforcing selling spiral threatened to exhaust the gilt market's liquidity.
+
+*The Bank of England intervention:* On September 28, 2022, the BoE announced emergency gilt purchases of up to £65B over 13 trading days to restore market orderly function. The intervention halted the spiral. The ultimate lesson: LDI strategies that use leverage create liquidity mismatches between daily mark-to-market margin calls and pension funds' long-horizon investment mandates — a structural vulnerability that materialized catastrophically in the 2022 rate shock environment.

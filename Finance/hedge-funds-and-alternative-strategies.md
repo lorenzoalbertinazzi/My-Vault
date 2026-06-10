@@ -572,3 +572,45 @@ Most hedge funds have no minimum hurdle rate — any profit above the high-water
 - [[factor-investing-and-smart-beta]] — factor-based "hedge fund replication" strategies
 - [[risk-parity-and-all-weather-portfolios]] — Bridgewater as dominant risk parity hedge fund
 - [[derivatives-futures-and-forwards]] — derivative instruments used by hedge fund strategies
+
+---
+
+### The LTCM Autopsy, Fee Structure Economics, and the 2022 Macro Hedge Fund Renaissance
+
+Long-Term Capital Management's collapse in 1998 remains the most instructive single case study in hedge fund risk management — and its lessons were only partially absorbed by the industry before 2008.
+
+**LTCM: the mechanics of failure (1994-1998):**
+
+LTCM was founded in 1994 by John Meriwether (former Salomon Brothers head of fixed income arbitrage), Robert Merton and Myron Scholes (Nobel laureates in economics, 1997), and a team of elite traders and academics. Its strategy: long-short relative value trades in fixed income (convergence of prices on similar instruments like on-the-run vs. off-the-run Treasuries, corporate bonds vs. swaps, equity volatility spreads) with very high leverage.
+
+*The leverage:* By late 1997, LTCM had $125 billion in balance sheet assets against $4.7 billion in equity — a leverage ratio of approximately 27:1. Including off-balance-sheet derivatives (primarily interest rate swaps and equity options), notional exposure exceeded $1.25 trillion — more than 5% of US GDP.
+
+*The crisis:* The August 1998 Russian ruble default triggered a global flight to quality. Spreads that LTCM expected to converge widened dramatically as liquidity dried up — the exact opposite of LTCM's positions. Because the same trades were on in other relative value hedge funds, the unwinding created price cascades: every position LTCM needed to reduce, other funds also needed to reduce, producing market-clearing prices far outside any historical distribution.
+
+*The losses:* LTCM lost 44% of NAV in August 1998 alone, -52% in total by September 30, 1998. With 27:1 leverage, a 4% adverse move in position-weighted returns produced total capital loss. The Federal Reserve Bank of New York organized a $3.625 billion private sector bailout (by 14 major financial institutions) on September 23, 1998 — not a government rescue but a private-sector coordination to prevent disorderly liquidation.
+
+*The lesson:* Strategies with high Sharpe ratios in historical data and low apparent probability of loss can be simultaneously held by dozens of leveraged players — creating crowding risk that does not appear in historical volatility measures. When liquidity crises force simultaneous deleveraging, the "convergence" never occurs because capital flees before prices reconverge.
+
+**Hedge fund fee structure economics — the 2-and-20 erosion:**
+
+The standard hedge fund fee structure (2% annual management fee + 20% performance fee above a hurdle rate, with high-water mark) has compressed to approximately 1.5-and-17 for most new launches as of 2025, with top-tier funds maintaining 2-and-20 or higher. The economics:
+
+For a $1B fund at 2-and-20 with 8% hurdle rate earning 15% gross:
+- Management fee: $1B × 2% = **$20M** (paid regardless of performance)
+- Performance above hurdle: (15% - 8%) × $1B = $70M eligible performance
+- Incentive allocation: $70M × 20% = **$14M**
+- Total GP revenue: $34M
+- Investor net return: (15% - 2%) × (1 - 20% × (15%-8%)/13%) ≈ 11.7%
+
+The high-water mark provision: investors don't pay performance fees until prior losses are fully recovered. A 30% drawdown followed by a 40% recovery still leaves the fund below its high-water mark ($0.70 × 1.40 = $0.98 vs. $1.00 peak). The GP earns no performance fee on the recovery — creating asymmetric incentives that can cause fund liquidation when large drawdowns eliminate the embedded option value of the incentive fee.
+
+**The 2022 macro hedge fund renaissance:**
+
+2022 was the best year for discretionary macro hedge funds since the Volcker shock. Top performers:
+- Brevan Howard: +22% (macro/rates)
+- Caxton Associates: +25% (discretionary macro)
+- Rokos Capital Management: +51% (rates/macro)
+- Millennium Management: +12% (diversified multi-strat)
+- Citadel: +38% (multi-strategy)
+
+The opportunity: the simultaneous collapse in equities (-18% S&P 500), bonds (-17% 10yr Treasury), and credit (-10% IG, -15% HY) created abundant directional short opportunities for hedge funds positioned for regime change — while the 2022 experience was catastrophic for risk parity, long-only, and 60/40 strategies. The 2022 environment validated the core hedge fund value proposition: the ability to hold short positions and profit from market dislocations in ways that long-only strategies cannot.

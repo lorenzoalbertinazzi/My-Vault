@@ -629,3 +629,57 @@ Portfolio managers use KRDs to ensure their positions express exactly the intend
 - [[fixed-income-deep-dive]] — credit spread on top of Treasury base curve
 - [[Value-at-Risk-and-CVaR]] — interest rate DV01 feeds directly into VaR calculations
 - [[Modern-Portfolio-Theory]] — bond allocation in multi-asset portfolios
+
+---
+
+### The Nelson-Siegel-Svensson Framework, Roll-Down Return, and Inverted Curve Predictive Record
+
+The yield curve is more than a rate visualization — it is a forward-looking pricing mechanism encoding market beliefs about growth, inflation, and monetary policy that can be decomposed, extrapolated, and exploited.
+
+**The Nelson-Siegel-Svensson (NSS) parametrization:**
+
+The Nelson-Siegel (1987, *Journal of Business*) model parametrizes the yield curve with three factors:
+
+y(τ) = β₀ + β₁ × (1 - e^(-τ/λ))/(τ/λ) + β₂ × [(1 - e^(-τ/λ))/(τ/λ) - e^(-τ/λ)]
+
+- **β₀** = long-run level (the 10+ year yield the curve converges to)
+- **β₁** = slope factor (difference between short and long yields; negative = inverted curve)
+- **β₂** = curvature factor (magnitude of the "hump" in intermediate maturities)
+- **λ** = decay rate parameter
+
+The Svensson (1994) extension adds a fourth term (β₃) for additional curvature flexibility. The ECB, Bundesbank, and Federal Reserve all use NSS models to estimate zero-coupon yield curves from observable coupon bond prices. The practical importance: interpolating yields for any maturity from sparse observable data points (where bonds exist only at standard maturities like 2, 5, 10, 30 years) requires a parametric curve that imposes smoothness while fitting observable prices.
+
+**Roll-down return — the forgotten source of bond returns:**
+
+A bond's total return has three components: (1) coupon income; (2) price change from yield changes (duration effect); (3) **roll-down return** — price appreciation as the bond "rolls down the yield curve" toward shorter maturity in an unchanged yield environment.
+
+*Numerical example:* In a normal upward-sloping yield curve where:
+- 5-year Treasury yield: 4.80%
+- 4-year Treasury yield: 4.50%
+- Assume yields don't change over one year
+
+Purchasing the 5-year Treasury at 4.80% and holding for one year: the bond is now a 4-year bond, and (by the unchanged yield curve assumption) it should now yield 4.50%. The price impact of this yield decline: Modified Duration ≈ 4 years × -0.30% = **+1.2% price return** from roll-down alone. Total 1-year return = 4.80% coupon + 1.2% roll-down = **6.0%** vs. just buying the 4-year bond at 4.50%.
+
+This "roll-down carry" is the primary reason that investors often prefer to hold bonds slightly longer than their target duration — particularly in steep yield curve environments. The roll-down analysis is the key analytical technique for identifying which maturity sector offers the most attractive risk-adjusted carry.
+
+**The inverted yield curve — predictive accuracy and recession lead time:**
+
+The inverted yield curve (2-year yield > 10-year yield) is often described as the most reliable recession predictor in economics. The empirical record:
+
+| Inversion Period | Recession Start | Lead Time |
+|---|---|---|
+| Dec 1988 - Jul 1989 | Jul 1990 | 6-19 months |
+| Mar 2000 - Feb 2001 | Mar 2001 | 0-12 months |
+| Dec 2005 - Jun 2007 | Dec 2007 | 18 months |
+| Aug 2019 - Feb 2020 | Mar 2020 | 7 months (COVID) |
+| Jul 2022 - Dec 2024 | No recession yet | — |
+
+The 2022-2024 inversion is notable: the 2-year/10-year spread inverted in July 2022 (reaching -109 bps in March 2023, the deepest inversion since 1981) and remained inverted for over 26 months — the longest inversion on record — without a formal recession declaration as of mid-2025. This has generated significant debate: (1) Has the "Sahm Rule" (recession signal from rising unemployment) made the yield curve obsolete? (2) Did aggressive Fed rate cuts in 2024 prevent the recession the curve signaled? (3) Has the relationship between inversions and recessions changed structurally due to QE distortions? The honest answer: yield curve inversions have 100% sensitivity (all recessions since 1969 have been preceded by an inversion) but approximately 20-30% false positive rate and highly variable lead times.
+
+**Term premium decomposition — the Adrian-Crump-Moench (ACM) model:**
+
+The Federal Reserve Bank of New York's ACM model (Adrian, Crump & Moench, 2013, *Journal of Finance*) decomposes the 10-year Treasury yield into:
+- **Expected short-term rate path** (market expectations of Fed policy over 10 years)
+- **Term premium** (compensation for bearing interest rate duration risk)
+
+As of June 2026: 10-year yield ≈ 4.65%; ACM model estimates expected short rates = 3.90%; term premium = +0.75%. The positive term premium reflects markets requiring additional compensation for 10-year duration given elevated inflation uncertainty and fiscal supply concerns — a reversal from the negative term premiums observed in 2016-2021 when QE suppressed the term premium.

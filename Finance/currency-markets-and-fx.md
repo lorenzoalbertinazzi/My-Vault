@@ -690,3 +690,37 @@ Economically, the CCS converts USD borrowing costs into EUR borrowing costs — 
 - [[Federal-Reserve-and-Monetary-Policy]] — US interest rate policy driving USD dynamics
 - [[derivatives-futures-and-forwards]] — forward and swap instruments used in FX hedging
 - [[geopolitical-risk-premium-and-markets]] — geopolitical factors in FX market dynamics
+
+---
+
+### Covered Interest Parity Violations, FX Carry Trade Mechanics, and the Dollar Hegemony Debate
+
+FX markets are theoretically the most efficient in the world — yet several robust deviations from no-arbitrage conditions have persisted for decades, revealing important structural features of global financial plumbing.
+
+**Covered Interest Parity — the "risk-free" arbitrage that isn't:**
+
+Covered Interest Parity (CIP) states that the difference between forward and spot exchange rates exactly equals the interest rate differential between two currencies:
+
+F/S = (1 + r_domestic) / (1 + r_foreign), or approximately: F - S = r_d - r_f
+
+Where F = forward rate, S = spot rate. If this holds, there is no arbitrage profit from borrowing in a low-rate currency, converting to high-rate currency, investing at the high rate, and locking in the forward conversion back. For decades, CIP held within transactions costs for major currency pairs — considered one of the most robust no-arbitrage conditions in finance.
+
+The post-2008 discovery: Du, Tepper & Verdelhan (2018, *Journal of Finance*) documented persistent CIP violations of 10-50 basis points in major currency pairs (EUR/USD, USD/JPY, USD/GBP) — an arbitrage profit that should have been immediately eliminated but persisted for years. The explanation: CIP arbitrage requires balance sheet capacity (borrowing dollars, lending in foreign currency, holding the hedge). Post-Basel III regulations (leverage ratio, supplemental leverage ratio) constrained banks' balance sheets, preventing arbitrageurs from scaling up to close the deviation. The CIP "basis" (deviation from parity) has since become a key indicator of global dollar funding stress — it widens when dollar funding is scarce and narrows when abundant.
+
+**FX carry trade mechanics — risk and return:**
+
+The carry trade borrows in low-yield currencies (historically: JPY, CHF, EUR) and invests in high-yield currencies (historically: AUD, NZD, Brazilian Real, Turkish Lira). The expected return is the interest rate differential. The Uncovered Interest Parity (UIP) hypothesis predicts this excess return should be zero — the high-yield currency should depreciate to offset the interest advantage. Empirically, UIP is violated: high-yield currencies on average do not depreciate as much as UIP predicts, generating a carry trade premium of approximately 4-6% annually in diversified portfolios.
+
+*Numerical example (2024):* 
+- Borrow JPY at 0.25% per year; convert to USD (spot: ¥150/$)
+- Invest in US 1-year T-bills at 5.25%
+- Lock in forward rate? No — that would eliminate the return (CIP would hold; any locked-in forward covers the interest differential)
+- Unhedged carry: +5.00% interest differential; JPY movement: if yen stays flat, +5%; if yen appreciates 5%, 0%; if yen depreciates 5%, +10%
+
+The carry crash risk: carry trades are exposed to sudden, violent reversals during risk-off events. The JPY carry unwind of August 2024 (triggered by Bank of Japan rate hike and US recession fears) appreciated JPY from ¥161 to ¥143 in three weeks — a 11% move that generated roughly $55 billion in estimated carry trade losses globally, contributing to a 15% decline in the Nikkei. This "negative skewness" characteristic — small positive returns most of the time, large losses during crises — is the carry trade's fundamental risk profile.
+
+**The dollar hegemony debate — structural underpinnings:**
+
+The US dollar's reserve currency status rests on three structural pillars: (1) *financial depth* — US capital markets ($55T equities, $50T bonds) are the deepest, most liquid in the world, enabling large-scale foreign investment; (2) *security* — US Treasury bonds are the world's most liquid risk-free asset; (3) *network effects* — commodity invoicing, correspondent banking, and trade finance are denominated in dollars, creating self-reinforcing network externalities that are costly to abandon unilaterally.
+
+The challenges to dollar hegemony in 2025-2026: (1) the Russia asset freeze (February 2022, $300B in Russian central bank reserves frozen by G7) has accelerated reserve diversification among nations concerned about geopolitical risk of dollar holdings — China, Saudi Arabia, India, and Brazil have increased gold reserves and reduced dollar holdings; (2) mBridge's cross-border CBDC system threatens SWIFT-based dollar clearing dominance in participating nations; (3) BRICS+ payment system development aims for a non-dollar trade settlement mechanism. However, the dollar's share of FX reserves has declined only from 71% (2001) to 58% (2024) — a gradual rather than sudden shift, and euro (20%), yen (6%), and sterling (5%) have not gained substantially. The "dollar milkshake theory" (Brent Johnson, 2018) argues the dollar paradoxically strengthens during global financial stress because global dollar-denominated debt forces dollar demand for repayment during crises — a view partially validated by the 2022 dollar rally.
