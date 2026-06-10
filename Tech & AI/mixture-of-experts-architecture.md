@@ -3,7 +3,7 @@ title: Mixture of Experts (MoE) Architecture
 date: 2026-06-06
 tags: [ai, machine-learning, mixture-of-experts, moe, sparse-moe, transformer, llm, scaling, efficiency, routing, mistral, switch-transformer]
 source: Shazeer et al. (2017) "Outrageously Large Neural Networks: The Sparsely-Gated MoE Layer"; Fedus et al. (2022) "Switch Transformers"; Jiang et al. (2024) "Mixtral of Experts"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -209,6 +209,56 @@ Standard top-K is non-differentiable; researchers exploring smooth alternatives 
 
 **Multi-modal MoE:**
 Vision-language models using MoE to route image tokens vs. text tokens to specialized experts. Example: Mixtral vision variants; LLaVA-MoE.
+
+### 2026 MoE Developments: DeepSeek V3, Llama 4, and the Open-Source MoE Revolution
+
+**DeepSeek V3 (December 2025, DeepSeek AI — China):**
+DeepSeek V3 is the most technically sophisticated open-weight MoE model as of mid-2026 and represents a significant departure from prior MoE architecture through two innovations introduced alongside the model:
+
+**Multi-head Latent Attention (MLA):** Instead of caching the full K,V matrices per attention head in the KV cache (standard approach requiring enormous memory), MLA compresses K,V through a learned low-rank projection into a shared latent vector that is much smaller:
+```
+Compressed KV: c_KV = W_DKV × h  (downprojection, d_c << d_model)
+At generation: K = W_UK × c_KV, V = W_UV × c_KV  (upproject on demand)
+```
+This reduces KV cache memory by 5–13× versus standard MHA, enabling longer effective context windows and higher batch sizes at fixed GPU memory. MLA fundamentally changes the inference economics of large MoE models.
+
+**DeepSeekMoE fine-grained routing:** DeepSeek V3 uses **256 experts** with **8 active per token** (versus Mixtral's 8 experts, 2 active). With 671B total parameters and only 37B active per token (5.5% activation ratio), DeepSeek V3 achieves:
+
+| Benchmark | DeepSeek V3 | Llama 2 70B | GPT-4 (approx) |
+|-----------|-------------|-------------|----------------|
+| MMLU-Redux | 89.1% | 68.9% | 87.5% |
+| HumanEval-Mul (code) | 82.6% | 29.9% | 82.0% |
+| AIME 2024 (math) | 39.2% | ~8% | ~30% |
+| DROP (reading comprehension) | 91.6% | 71.0% | 87.2% |
+
+**Training cost:** DeepSeek V3's total training cost was approximately **$5.5M** — a figure that caused industry-wide reassessment of efficient training methodology. For comparison, estimates for GPT-4 training range from $50M–$100M. The efficiency was achieved through optimized MoE routing, FP8 training, and custom CUDA kernels.
+
+**Llama 4 (Meta, April 2025 — active as of 2026):**
+Meta's Llama 4 family introduced MoE architecture to Meta's open-source model series for the first time:
+
+**Llama 4 Scout:** 109B total parameters, 17B active per token. Key differentiator: **10 million token context window** — the longest of any production MoE model. Architecture uses 16 experts with top-2 routing; the extreme context window is enabled by attention sparsity techniques (local + global attention pattern) combined with the MoE compute savings. Use cases: analyzing entire large codebases, processing multi-year document archives.
+
+**Llama 4 Maverick:** Larger flagship variant optimized for multimodal workflows (vision + language). Uses natively multimodal MoE routing where image tokens and text tokens are routed to partially distinct expert subsets — an early implementation of cross-modal expert specialization.
+
+**Cost comparison (2026 API pricing, per 1M tokens input/output):**
+
+| Model | Input | Output | Active Params |
+|-------|-------|--------|---------------|
+| DeepSeek V3.2 | $0.04 | $0.04 | 37B |
+| Llama 4 Maverick (API) | $0.20 | $0.65 | — |
+| GPT-5.5 (OpenAI) | $2.50 | $10.00 | ~100B+ |
+| Claude Opus 4.8 | $15.00 | $75.00 | — |
+
+DeepSeek V3's $0.04/1M token pricing (4× cheaper than the next cheapest frontier-quality model) demonstrates MoE's potential to radically lower the cost of frontier intelligence — though enterprise buyers pay premiums for the compliance, reliability, and support guarantees that open-source API providers cannot match.
+
+**Qwen 3 (Alibaba, 2025–2026):**
+Alibaba's Qwen 3 family extends the MoE paradigm with **thinking mode** variants that combine MoE efficiency with test-time compute scaling (chain-of-thought internal reasoning). Qwen3-235B-A22B (235B total, 22B active) achieves competitive performance on Chinese-language benchmarks while maintaining strong English and coding performance — evidence that MoE's expert specialization naturally accommodates multilingual differentiation.
+
+**The 2026 Inference Infrastructure Response:**
+The proliferation of large MoE models has driven development of specialized inference infrastructure:
+- **Megablocks** and **MegaScale-Infer** (ByteDance, 2025): fused CUDA kernels for MoE token dispatch that reduce GPU idle time during expert routing by 60–70%
+- **Expert offloading** (ExpertFlow, 2024): dynamically offload infrequently-used experts from GPU to CPU or NVMe, trading latency for memory capacity — enabling single-GPU inference of 400B+ MoE models
+- **Disaggregated prefill/decode** for MoE: since prefill (processing input) uses all experts nearly uniformly and decode (token generation) uses sparser routing, splitting these phases across specialized hardware clusters improves utilization
 
 ## Related
 

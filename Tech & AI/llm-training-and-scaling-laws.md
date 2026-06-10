@@ -3,7 +3,7 @@ title: LLM Training & Scaling Laws
 date: 2026-05-30
 tags: [ai, LLM, scaling-laws, pre-training, transformers, compute, chinchilla, GPT, neural-scaling, emergence, deep-learning, infrastructure, data-parallelism, tensor-parallelism, pipeline-parallelism, MFU, gradient-checkpointing, mixed-precision, FLOP-budget, synthetic-data, tokenization]
 source: "Kaplan et al. (2020) Scaling Laws for Neural Language Models (arXiv:2001.08361); Hoffmann et al. (2022) Chinchilla (arXiv:2203.15556); Brown et al. (2020) GPT-3 (arXiv:2005.14165); Wei et al. (2022) Emergent Abilities of LLMs (arXiv:2206.07682); Rajbhandari et al. (2020) ZeRO (arXiv:1910.02054); Shoeybi et al. (2019) Megatron-LM (arXiv:1909.08053)"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -421,6 +421,40 @@ The Chinchilla scaling law's emphasis on matched parameter and data growth also 
 The scaling law literature has an exact parallel in [[quantitative-finance-and-algorithmic-trading]]: the phenomenon of **alpha decay**, where the predictive power of a discovered trading signal decays over time as more capital is allocated to exploit it and the market prices in the information. In LLM training, the analogous phenomenon is diminishing returns at the data frontier: as the training corpus approaches exhaustion of high-quality human-generated text, each additional token added to the corpus contains less novel information, and marginal improvements in validation perplexity become smaller. Renaissance Technologies and Two Sigma manage this through continuous signal discovery — constantly adding new data sources as old ones become crowded. The AI training analogue is exactly the current frontier challenge: expanding to synthetic data, video, code, and scientific literature as the text-only corpus approaches saturation. Both problems share the structure of a returns-to-scale curve with a clear inflection point.
 
 The cognitive biases analyzed in [[cognitive-biases]] also operate powerfully in how the field interprets scaling law results. The smooth power-law curves published in 2020–2022 produced an industry-wide **availability bias** effect: the vivid images of smooth capability improvement made it psychologically difficult to believe the curve would flatten or break discontinuously, even as theoretical reasons for breaks multiplied. The Chinchilla paper itself was a correction to this overconfidence — GPT-3 was dramatically undertrained relative to its parameter count, and the entire field had been scaling in the wrong direction because the prior data made one extrapolation more cognitively available than the correct one.
+
+### 2026 Training Developments: Test-Time Compute Scaling, DeepSeek Efficiency, and Synthetic Data
+
+**The Third Scaling Axis: Test-Time Compute:**
+The Kaplan et al. (2020) scaling laws identified training compute, parameters, and data as the three primary scaling axes — all applied at training time. OpenAI's o1 (September 2024) and o3 (January 2025) demonstrated a fourth axis: **test-time compute scaling**, where allocating more inference-time computation to reasoning produces accuracy improvements that compete with training-time scale.
+
+**Empirical results (o3, January 2025):**
+- AIME 2024: 96.7% (vs. human top contestant ~95%)
+- ARC-AGI (abstract reasoning): 88% (vs. prior AI best of 55%, vs. human average of 85%)
+- SWE-bench Verified: 71.7% (first model to exceed 70%)
+
+The mechanism: **Process Reward Models (PRMs)** score the quality of intermediate reasoning steps (not just final answers); search over multiple reasoning chains guided by PRM scores finds better solutions. This is analogous to Monte Carlo Tree Search in AlphaGo — spending inference compute to search rather than just sampling.
+
+**The training implication:** Training o3-style reasoning models requires generating large corpora of verified long reasoning chains (often using formally verifiable domains: mathematics, coding, logic) and training PRMs to score them. This creates a new data generation pipeline: rather than human-annotated reasoning, models self-generate candidates and formal verifiers (code executors, math proof checkers) provide ground-truth feedback — a form of scalable oversight that bypasses the bottleneck of human labeling for complex reasoning tasks.
+
+**DeepSeek's Efficiency Revolution (2025):**
+DeepSeek V3 (671B MoE, 37B active, ~$5.5M training cost) and DeepSeek R1 (reasoning model competitive with o1) jointly demonstrated that frontier AI training does not require frontier AI infrastructure budgets. The key efficiency innovations:
+
+**FP8 training pipeline:** DeepSeek V3 used FP8 precision throughout training (not just inference), reducing memory bandwidth by 2× and enabling larger effective batch sizes. The custom FP8 training infrastructure required careful gradient scaling and loss scaling to prevent numerical instability — engineering that DeepSeek published in detail, enabling industry-wide replication.
+
+**Multi-Token Prediction (MTP) auxiliary objective:** During pretraining, DeepSeek V3 trains an auxiliary head to predict the next N tokens (not just the next 1), improving sample efficiency — each forward-backward pass provides gradient signal for N future predictions simultaneously. This is conceptually related to Google's "Multi-Token Prediction" paper (Gloeckle et al., 2024), which independently showed 2× sample efficiency improvement from this approach.
+
+**Synthetic Data and the Post-Chinchilla Regime:**
+The Chinchilla scaling law (Hoffmann et al., 2022) established that optimal training requires roughly 20 tokens per parameter — for a 70B model, approximately 1.4T tokens. As the highest-quality human text on the internet becomes increasingly "used up" (multiple training runs of major models have now covered most of the accessible internet), **synthetic data** has become the critical frontier:
+
+- **Phi series (Microsoft, 2023–2026):** Phi-1 (1.3B parameters) trained on "textbook quality" synthetic data generated by GPT-4 outperformed 3× larger models on coding tasks, demonstrating that data quality can substitute for data quantity. Phi-3 (3.8B parameters, 2024) achieved GPT-3.5-level performance on MMLU by training on carefully filtered and model-generated synthetic data
+- **Nemotron (NVIDIA, 2024):** Synthetic preference data generation pipeline that creates instruction-following training data using a generator-verifier loop — LLMs generate candidate responses, trained reward models score them, and the high-scoring subset becomes training data. This pipeline produces training data of comparable or superior quality to human-annotated data at 100× lower cost per example
+- **The quality-quantity frontier:** By 2026, the Pareto frontier of synthetic data has shifted dramatically. Training 1B parameter models on 1T tokens of carefully curated (model-filtered + model-augmented) synthetic data now outperforms training on 1T tokens of raw internet text — a reversal of the prior assumption that raw internet scale always dominates quality curation
+
+**The Data Contamination Problem at Scale:**
+As frontier models have been trained on increasingly comprehensive internet snapshots, benchmark contamination — where test set examples appear in the training data — has become a serious validity concern. Studies in 2025 (Xu et al., Deng et al.) documented that:
+- GPT-4 shows statistically significant performance discontinuities at dates corresponding to test set creation dates — evidence of data contamination
+- MMLU (created 2020) contamination rates in 2023–2024 model training corpora estimated at 15–25% of test questions
+- This has driven development of "live" benchmarks: SWE-bench (continuously updated with new GitHub issues), LiveBench (monthly-rotating questions), and AIME (new problems each year)
 
 ## Related
 - [[transformer-architecture]] — The architecture pre-training scales

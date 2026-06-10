@@ -3,7 +3,7 @@ title: Prompt Engineering — Techniques and Principles
 date: 2026-05-26
 tags: [ai, LLM, prompt-engineering, chain-of-thought, few-shot, zero-shot, in-context-learning, tree-of-thoughts, ReAct, DSPy, extended-thinking, system-prompts, structured-output, jailbreaking, constitutional-prompting, meta-prompting, self-consistency]
 source: "Wei et al. (2022) Chain-of-Thought Prompting Elicits Reasoning in LLMs (arXiv:2201.11903); Yao et al. (2022) Tree of Thoughts (arXiv:2305.10601); Yao et al. (2022) ReAct (arXiv:2210.03629); Brown et al. (2020) Few-Shot Learners — GPT-3 (arXiv:2005.14165); Wang et al. (2022) Self-Consistency CoT (arXiv:2203.11171); Anthropic Prompt Engineering Guide (2024)"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -501,6 +501,46 @@ The extended thinking paradigm — where models like o1/o3 and Claude with exten
 The neuroscience of reward and engagement described in [[dopamine-reward-systems-neuroscience]] illuminates both why effective prompting works and how to design prompts that elicit high-quality responses. The dopamine system's response to **prediction error** — firing more strongly when outcomes exceed expectations, and suppressing below baseline when expectations are violated — explains the surprising power of specificity in prompting. When a prompt precisely specifies the desired output format, tone, and scope, the model generates toward a narrow target; the "prediction error" between a vague expectation and the specific delivery is minimized. But when a prompt deliberately creates a contrast between the established context ("Most analysts believe X") and the requested analysis ("Now, argue for the contrary view"), it creates the cognitive equivalent of a positive prediction error — the model must generate content that is specifically discontinuous with the established prior, which exercises higher-level reasoning circuits.
 
 The parallel to memory formation is equally instructive. The [[memory-systems-and-learning-science]] literature establishes that **elaborative interrogation** — asking "why is this true?" rather than simply stating facts — dramatically improves retention. Applied to prompting: asking the model "Why does this argument hold? What are the mechanisms?" before asking for a conclusion produces richer, more accurately grounded answers than asking for the conclusion directly. This is because the intermediate reasoning steps force the model to activate the associative knowledge structure underlying the claim, rather than retrieving a surface-level pattern from its training distribution. Chain-of-thought prompting is, in effect, a form of elaborative interrogation applied to the model's own reasoning process. Understanding this mechanism — that quality prompting elicits mechanistic reasoning rather than surface pattern completion — is what separates expert prompt engineers from those who discover effective prompts through trial and error without understanding why they work. See [[llm-training-and-scaling-laws]] for how the RLHF and SFT training that shapes model behavior determines what prompt patterns are reinforced, and [[agentic-ai-and-multi-agent-systems]] for how prompt engineering scales into the system prompt design that governs autonomous agent behavior. See [[reinforcement-learning-from-human-feedback]] for how the reward signals during training are shaped by human preference judgments — which means the "effective" prompting patterns the model has learned to respond well to are precisely those that generated the highest preference ratings from human raters during training.
+
+### 2026 Prompt Engineering Evolution: Meta-Prompting, DSPy, and Agentic System Design
+
+**The Shift from Manual to Automated Prompt Optimization:**
+Manual prompt engineering — iteratively testing prompt variants until a desirable output is achieved — is giving way to systematic optimization frameworks that treat prompt design as an optimization problem:
+
+**DSPy (Stanford, 2023–2026):** DSPy (Declarative Self-improving Language Programs) abstracts prompting into declarative "signatures" (input/output specifications) and automatically optimizes the actual prompt text using bootstrap few-shot learning and gradient-based prompt optimization. Rather than writing "Let's think step by step" manually, a DSPy developer specifies: `Predict("question -> answer")` and DSPy's optimizer generates the optimal few-shot examples and instruction prefix through systematic evaluation. In controlled comparisons, DSPy-optimized prompts outperform manually written prompts by 10–25% on standard benchmarks (HotpotQA, GSM8K) with no human prompt engineering effort after the initial signature definition. DSPy reached v2.6 in 2026 with support for multi-agent pipeline optimization.
+
+**Automatic Prompt Optimization (APO) and Meta-Prompting:**
+A related paradigm uses LLMs themselves to optimize prompts — a form of meta-learning where the optimizer model (often the same or a larger model) suggests prompt improvements based on failure analysis:
+1. Generate candidate prompt P₀
+2. Evaluate P₀ on validation set → collect failing examples
+3. Feed failing examples to optimizer LLM: "Here are cases where the prompt failed. Suggest an improved prompt."
+4. Accept improvement if validated performance increases → repeat
+
+This "LLM as optimizer" (OPRO, Yang et al. 2023) approach has discovered prompts that outperform human-crafted prompts by 15–30% on reasoning tasks. The most counter-intuitive finding: optimal prompts often bear no resemblance to what a human would write — they contain seemingly odd phrasings, unusual orderings, or formatting choices that humans wouldn't choose but that happen to align well with the model's training distribution.
+
+**Structured Output and Constrained Generation (2025–2026):**
+Production LLM applications increasingly require structured, machine-parseable outputs (JSON, YAML, specific schema formats). Three approaches have matured:
+
+**Grammar-constrained decoding:** Libraries like `outlines` (dottxt-ai) and `llguidance` (Microsoft) intercept the token sampling process and only allow tokens that continue a valid partial completion of the target grammar. At each step: compute valid next tokens from the grammar state → mask the logits distribution → sample only from valid tokens. This approach guarantees well-formed output (never invalid JSON, never schema violations) at a typically <5% latency overhead.
+
+**JSON Schema-native support:** OpenAI's Structured Outputs API (2024), Anthropic's tool_use constrained output mode, and Google's `responseMimeType="application/json"` parameter all implement constrained generation at the API level. Reliability: >99.9% schema compliance for well-specified schemas.
+
+**Function/tool calling as structured prompting:** The most widely deployed form of structured prompting — providing tool/function schemas in the system prompt enables models to generate structured tool call arguments reliably. By 2026, tool calling is the standard integration pattern for LLM-powered applications, replacing the fragile "extract JSON from this text" approach of 2022–2023.
+
+**Contextual Prompt Engineering in Agentic Systems:**
+As LLMs become orchestrators of multi-step workflows, prompt engineering has expanded from single-query optimization to **agentic system design** — crafting the system prompts, tool descriptions, and handoff protocols that govern autonomous agent behavior:
+
+**System prompt architecture for agents:** Best-practice agent system prompts in 2026 are structured documents rather than monolithic instruction strings:
+- **Identity section:** Model persona, role, communication style
+- **Capabilities section:** Explicit list of tools with usage examples and failure modes
+- **Behavioral constraints:** What the agent should not do, how to handle edge cases
+- **Output format specifications:** How to signal task completion, error states, and requests for clarification
+- **Context management instructions:** How to handle long-running tasks, what to summarize vs. preserve verbatim
+
+**Prompt injection defense patterns:** Defending agentic systems against prompt injection (malicious instructions embedded in retrieved documents or tool outputs) has become a core prompt engineering discipline:
+- **Trust anchoring:** Explicit instructions that distinguish the system prompt (trusted) from all other input (untrusted)
+- **Structured delimiters:** XML tags (`<user_input>`, `<document>`) with model training to treat differently-tagged content with different trust levels
+- **Self-consistency checking:** Instructing the agent to verify that planned actions are consistent with its original goal and system prompt before execution
 
 ## Related
 - [[transformer-architecture]]

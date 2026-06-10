@@ -3,7 +3,7 @@ title: Docker and Containerization
 date: 2026-05-28
 tags: [devops, docker, containers, infrastructure, deployment, OCI, containerd, namespaces, cgroups, eBPF, Cilium, service-mesh, MLOps, Dockerfile, container-registry, multi-stage-build, rootless-containers, BuildKit]
 source: "Docker Inc. documentation (2013–2026); OCI Runtime Specification v1.0; Merkel (2014) Docker: Lightweight Linux Containers for Consistent Development and Deployment (Linux Journal); Burns et al. (2016) Borg, Omega, and Kubernetes (ACM Queue); Docker Security Best Practices (NIST SP 800-190)"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -592,6 +592,46 @@ The emergence of containerized AI inference as a product — where a company's I
 Docker and [[kubernetes-and-container-orchestration]] form a tightly coupled technology stack — Docker solves the packaging problem (what runs), Kubernetes solves the orchestration problem (where, when, and how many run). Understanding this division is essential for any AI/ML deployment. A Docker image is an immutable artifact: it captures a specific version of an application with all its dependencies frozen at build time. This makes it ideal for ML model serving, where reproducing exact behavior requires exact software versions. Kubernetes then treats these immutable images as atomic deployment units, managing their lifecycle across a cluster: scheduling them onto nodes with available GPU capacity (essential for LLM inference), autoscaling the number of running instances based on request queue depth (KEDA for ML workloads), and routing traffic with zero-downtime rolling updates when new model versions are released.
 
 The deep cross-reference is in **distributed LLM training**: large model training (see [[llm-training-and-scaling-laws]]) runs as Kubernetes jobs where each pod handles a specific pipeline parallel or tensor parallel shard. Kubeflow (the Kubernetes-native ML platform) and Ray (distributed Python framework) both use Kubernetes as their compute substrate. A training run for a 70B parameter model might involve 512 GPU pods, each running the same Docker image pinned to exact PyTorch/CUDA versions, coordinated by Kubernetes to restart failed pods and rebalance the training topology. Without container isolation and Kubernetes orchestration, the fault-tolerance that makes such large-scale training economically viable would require bespoke distributed systems engineering at each organization. **Agentic AI systems** (see [[agentic-ai-and-multi-agent-systems]]) similarly depend on Docker + Kubernetes for safe execution: each agent tool call that executes code (e.g., a code interpreter agent) runs in an isolated container with limited network access and filesystem permissions — Kubernetes NetworkPolicy enforces which agents can communicate with which external services, providing the security boundary that makes agentic AI deployable in production environments.
+
+### 2026 Container Security, WebAssembly, and AI/ML Containerization
+
+**Container Security Maturation: Rootless Containers and Supply Chain Hardening:**
+The 2023–2025 wave of supply chain attacks (XZ Utils backdoor 2024, tj-actions GitHub Action compromise 2025) has dramatically accelerated security practices in container ecosystems:
+
+**Rootless containers (Podman/containerd 1.7+):** Running container daemons as non-root users eliminates the privilege escalation risk where a container escape yields root on the host. Rootless containers use user namespace mapping: container PID 0 maps to an unprivileged user on the host. By 2026, rootless container operation is the default recommendation in NIST SP 800-190 (revised 2025) and CIS Docker Benchmark v1.7. Production adoption: Red Hat OpenShift enforces rootless containers by policy; AWS ECS Fargate runs all containers as non-root users.
+
+**Sigstore and supply chain security:** Sigstore (Linux Foundation, 2021–2026) provides a free, transparent certificate authority for signing container images. The Cosign tool (part of Sigstore) enables:
+- Keyless signing: developers sign images using ephemeral certificates tied to their OIDC identity (GitHub Actions token, Google Workload Identity) — no long-lived private key to manage or compromise
+- Transparency log: every signature is recorded in Rekor (a Merkle tree transparency log) enabling audit of who signed what and when
+- Verification: `cosign verify myimage:tag --certificate-identity=github-actions@...` checks the image was signed by the expected CI pipeline
+
+By 2026, Sigstore has been adopted by: Python (PyPI package signing), Kubernetes (all official container images), the Linux kernel (module signing experiments), and 70%+ of Fortune 500 companies in their CI/CD pipelines.
+
+**Software Bill of Materials (SBOM):** US Executive Order 14028 (2021) mandated SBOMs for federal software; the requirement has driven industry adoption:
+- **SPDX and CycloneDX:** The two dominant SBOM formats, now both supported natively by Docker (`docker sbom`), Syft, and Trivy
+- **Grype and Trivy:** Container vulnerability scanners that cross-reference SBOMs against CVE databases; integrated into GitHub Actions, GitLab CI, and AWS ECR scanning
+- **VEX (Vulnerability Exploitability eXchange):** Companion format to SBOM allowing vendors to declare whether specific CVEs affect their software in context — reducing false-positive alert fatigue from vulnerable dependencies that are not actually exploitable
+
+**WebAssembly (WASM) as Container Alternative for Edge:**
+WebAssembly has matured from browser technology to server-side container alternative for specific use cases:
+
+**WASIp2 (WebAssembly System Interface Preview 2, 2024):** Defines a comprehensive interface between WASM modules and the operating system — network access, filesystem, threading — enabling WASM modules to replace containers for sandboxed computation:
+- **Cold start:** WASM modules start in <1ms vs. 100–500ms for containers — critical for edge serverless (Cloudflare Workers, Fastly Compute, Wasmer Edge)
+- **Size:** WASM modules: 100KB–10MB vs. container images: 100MB–5GB
+- **Security:** WASM's capability-based security model (must explicitly pass in filesystem and network handles) provides stronger-than-container sandboxing
+- **Limitation:** Currently impractical for GPU workloads (no WASM GPU standard); containers remain necessary for AI/ML inference
+
+**AI/ML Container Patterns (2026 Production Standards):**
+The intersection of containerization and AI/ML has produced several standardized patterns:
+
+**GPU containers:** NVIDIA Container Toolkit (nvidia-container-runtime) exposes GPU devices to containers with automatic driver compatibility checking. The `--gpus all` flag grants container access to all host GPUs. By 2026, CUDA 12.x containers are the standard for ML inference; multi-instance GPU (MIG) partitioning allows a single A100/H100 to serve multiple containerized inference processes simultaneously.
+
+**Model registry as container registry:** Large ML models are increasingly distributed as OCI (Open Container Initiative) artifacts in standard container registries — using `oras push/pull` to store arbitrary artifacts. This enables: consistent model versioning alongside code, standard authentication and access control (same as container images), and geographically distributed pull-through caches. HuggingFace's new Hub 2.0 supports OCI-compatible model distribution.
+
+**Inference microservice patterns:**
+- **One model per container:** Each model version is an independent microservice with its own container lifecycle — enables independent scaling, A/B testing between model versions, and fault isolation
+- **Model pooling containers:** One container hosts multiple models (vLLM's multi-model mode, Triton Inference Server) — amortizes the CUDA runtime startup overhead across models; better for low-traffic models
+- **Sidecar pattern for monitoring:** Model serving containers deploy with sidecar containers running OpenTelemetry collectors for capturing inference latency distributions, token throughput, and batch utilization metrics
 
 ## Related
 - [[machine-learning-fundamentals]]

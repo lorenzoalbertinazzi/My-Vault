@@ -3,7 +3,7 @@ title: Vector Databases and Embeddings
 date: 2026-05-27
 tags: [ai, machine-learning, embeddings, vector-databases, semantic-search, HNSW, ANN, contrastive-learning, word2vec, CLIP, ColBERT, MRL, MTEB, FAISS, DiskANN, SPLADE, bi-encoders, cross-encoders, dense-retrieval]
 source: "Mikolov et al. (2013) Word2Vec (arXiv:1301.3781); Malkov & Yashunin (2018) HNSW (arXiv:1603.09320); Khattab & Zaharia (2020) ColBERT (arXiv:2004.12832); Radford et al. (2021) CLIP (arXiv:2103.00020); Johnson et al. (2021) FAISS (arXiv:1702.08734); Kusupati et al. (2022) Matryoshka Representation Learning — MRL (arXiv:2205.13147)"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -478,6 +478,42 @@ The infrastructure layer of vector search — who controls the embedding models,
 The design choices in modern vector retrieval systems mirror, with striking precision, the architecture of human semantic memory as described in [[memory-systems-and-learning-science]]. Human semantic memory is organized around a high-dimensional associative structure: concepts with similar meaning or co-occurrence histories are represented in nearby regions of neural activation space, enabling rapid retrieval through pattern completion rather than sequential search. The hippocampal-neocortical system implements something functionally equivalent to HNSW: hierarchical organization of memories by semantic distance, with fast approximate retrieval from coarse categorical representations followed by finer-grained pattern matching in specific cortical regions. When you try to recall "the French philosopher who wrote about the social contract," your memory system doesn't scan every stored fact — it rapidly narrows to the relevant conceptual neighborhood (French + philosophy + social theory) and retrieves Rousseau through associative pattern completion. HNSW performs an algorithmically equivalent search: navigate a hierarchical graph from coarse layers to fine layers, pruning branches based on distance estimates.
 
 The **encoding specificity principle** from memory science (Tulving & Thomson, 1973) — that retrieval is most effective when the retrieval cue matches the encoding context — has a direct counterpart in embedding systems: a model trained on general web text will produce optimal retrieval when both queries and documents come from similar distributions to its training data. When deployed in specialized domains (legal contracts, medical literature, financial filings), the encoding mismatch degrades retrieval quality just as state-dependent memory effects degrade recall when the retrieval context differs from the encoding context. The solution — domain-adaptive fine-tuning of embedding models on in-domain pairs — is the exact analog of elaborative encoding strategies in memory science: deliberately processing new information in the context where you'll need to retrieve it. See [[llm-training-and-scaling-laws]] for how the same models that generate embeddings are trained, and [[agentic-ai-and-multi-agent-systems]] for how vector databases serve as the episodic and semantic memory systems that give agents access to knowledge beyond their context windows.
+
+### 2026 Embedding and Vector DB Developments: Multimodal Embeddings, GraphRAG, and Production Scale
+
+**Multimodal Embeddings — Beyond Text:**
+The 2025–2026 generation of embedding models has transcended text to produce unified semantic spaces across modalities:
+
+**Imagebind (Meta, 2023) and successors:** Imagebind demonstrated joint embedding of text, images, audio, video, depth, thermal, and IMU data in a single 1024-dimensional space — enabling cross-modal retrieval ("find images that sound like this audio clip"). By 2026, production multimodal embedding models include:
+- **Jina CLIP v2 (2025):** Text-image embeddings trained on 1.4B pairs; achieves 89.1% on MSCOCO zero-shot retrieval; supports 89 languages; 512-dimensional output enabling efficient storage
+- **E5-Mistral (Microsoft, 2024):** Text-only but unprecedented scale (7B parameter embedding model); achieves MTEB (Massive Text Embedding Benchmark) SOTA at 66.6% average across 56 tasks
+- **Gecko (Google, 2024):** 1.2B parameter embedding model with 768 dimensions; trained with distillation from Gemini; achieves 66.3% MTEB — competitive at 5× smaller parameter count than E5-Mistral
+
+**Production Vector Database Scale (2026):**
+
+| System | Max Vectors (production) | ANN Algorithm | Notable Deployments |
+|--------|--------------------------|---------------|---------------------|
+| Pinecone | 50B+ | HNSW + PQ | OpenAI, Notion, Grammarly |
+| Weaviate | 1B+ | HNSW | Millions of vectors in 1-click cloud |
+| Milvus/Zilliz Cloud | 100B+ | DiskANN, HNSW, IVF | Salesforce, eBay, Roblox |
+| Qdrant | 100M+ | HNSW | Airbnb, Deutsche Telekom |
+| pgvector | ~10M practical | Exact + IVF | Any PostgreSQL deployment |
+
+The most significant infrastructure trend of 2026: **vector search is increasingly integrated into traditional databases** rather than maintained as a separate vector-specialized system. PostgreSQL's pgvector extension (v0.7, 2025) supports HNSW indexing natively; Elasticsearch added approximate vector search in v8.0; MongoDB Atlas Vector Search processes 500M+ vector similarity queries monthly. The vector database specialist market is being commoditized from below by general-purpose database extensions.
+
+**GraphRAG: Graph-Enhanced Retrieval (Microsoft, 2024–2026):**
+Microsoft Research's GraphRAG (Edge et al., 2024) addresses a fundamental weakness of flat vector search: it retrieves semantically similar chunks but cannot answer questions that require synthesizing information distributed across multiple documents or understanding entity relationships. GraphRAG augments the standard RAG pipeline with knowledge graph extraction:
+
+1. **Knowledge graph extraction:** LLM extracts entities (people, places, concepts, events) and relationships from each document chunk → builds a graph database
+2. **Community detection:** Graph community algorithms (Louvain method) identify clusters of closely related entities → generates community summaries via LLM
+3. **Hierarchical retrieval:** Queries that need broad understanding route through community summaries; specific factual queries use vector search against individual chunks
+
+**GraphRAG performance improvement:** On the MSMARCO benchmark subset requiring multi-document synthesis, GraphRAG achieves 23% higher precision vs. naive RAG; on community-level questions ("What were the major themes in these 500 documents?"), only GraphRAG can answer while flat RAG fails entirely. Microsoft deployed GraphRAG in Copilot for Microsoft 365 in 2025 for knowledge management scenarios.
+
+**Embedding Dimension Trends and Matryoshka Embeddings:**
+The tension between embedding quality (higher dimensions = more expressivity) and storage/compute cost (higher dimensions = larger index) is being resolved by **Matryoshka Representation Learning (MRL)** — training embedding models to produce representations where the first N dimensions are useful at any truncation point:
+
+A standard 1536-dimensional OpenAI embedding can be truncated to 512 or 256 dimensions with <3% retrieval quality loss — enabling 6–8× storage reduction for applications where storage or search latency is the binding constraint. OpenAI's text-embedding-3-small and text-embedding-3-large support Matryoshka truncation natively. This enables tiered retrieval: use 256-dimensional embeddings for fast first-pass filtering, then re-rank candidates with full 1536-dimensional embeddings.
 
 ## Related
 - [[retrieval-augmented-generation]]

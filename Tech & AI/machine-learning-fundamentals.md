@@ -3,7 +3,7 @@ title: Machine Learning Fundamentals
 date: 2026-05-26
 tags: [ai, machine-learning, deep-learning, neural-networks, backpropagation, gradient-descent, Adam, supervised-learning, reinforcement-learning, self-supervised-learning, MoE, distillation, quantization, ZeRO, DPO, regularization, bias-variance-tradeoff, transfer-learning, fine-tuning]
 source: "Rumelhart, Hinton & Williams (1986) Learning Representations by Back-Propagating Errors (Nature); Krizhevsky et al. (2012) AlexNet (NeurIPS); He et al. (2015) Deep Residual Learning — ResNet (arXiv:1512.03385); Kingma & Ba (2015) Adam optimizer (arXiv:1412.6980); Goodfellow et al. 'Deep Learning' textbook (2016); Rajbhandari et al. (2020) ZeRO (arXiv:1910.02054)"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -554,6 +554,37 @@ The most consequential divergence is in **sample efficiency**. A human child dev
 **Catastrophic forgetting** is the starkest asymmetry: biological memory systems use interleaved replay (hippocampal replay during sleep consolidates new memories into neocortex without disrupting prior knowledge through complementary learning systems theory), while artificial neural networks, when fine-tuned on new data, destructively overwrite previously learned representations. Elastic Weight Consolidation (EWC, Kirkpatrick et al., 2017) attempts to mimic biological memory by identifying "important" weights and penalizing large changes to them — but the scale gap remains enormous. Humans accumulate 80 years of distinct memories; current continual learning benchmarks consider 10–100 tasks a meaningful test.
 
 **Overfitting as a cognitive analog**: The ML concept of overfitting — fitting the training noise rather than the underlying signal — has a precise parallel in human confirmation bias (see [[cognitive-biases]]). A model overfit to its training distribution cannot generalize to new inputs; a human overfit to their prior experiences cannot revise beliefs in the face of contradicting evidence. In both cases, the system has learned the specific rather than the general, trading future robustness for past accuracy. Regularization techniques (dropout, weight decay, early stopping) are the ML equivalent of actively seeking disconfirming evidence — artificial mechanisms to prevent the optimizer from memorizing rather than learning. The [[quantitative-finance-and-algorithmic-trading]] literature uses the same language: an overfit trading strategy with high in-sample Sharpe ratio and poor out-of-sample performance is said to have been "backfit" to noise — the same bias-variance problem in a financial context.
+
+### 2026 ML Fundamentals: New Optimizers, Fine-Tuning Paradigms, and Mechanistic Insights
+
+**The Muon Optimizer: Challenging Adam's Decade-Long Dominance:**
+Adam (Kingma & Ba, 2014) has been the default optimizer for deep learning training for over a decade. In 2024–2025, **Muon** (Momentum + Nesterov Updates for Online Normalization) emerged as a competitive alternative for transformer pre-training:
+
+**Muon mechanism:** Muon applies Nesterov momentum to the gradient and then *orthogonalizes* the update via Newton-Schulz iteration — projecting the gradient update onto the manifold of orthogonal matrices. The motivation: in transformers, the weight matrices' singular value spectra determine expressivity; Muon's orthogonalization preserves the useful singular value structure of weight matrices rather than compressing it as Adam does.
+
+**Empirical results:** Modular training runs (Peng et al., 2024, arXiv:2409.20616) found that Muon achieves identical validation perplexity with **40% less compute** than Adam on language model pretraining benchmarks — a result that, if reproducible at frontier scale, would represent the most significant optimizer improvement since Adam itself. DeepSeek V3's training infrastructure incorporated Muon-like orthogonalization principles, partly explaining its exceptional compute efficiency.
+
+**The theoretical connection:** Muon's orthogonalization relates to **spectral normalization** (Miyato et al., 2018) and the **Sharpness-Aware Minimization** (SAM) optimization landscape smoothing — both of which improve generalization by biasing toward flat minima of the loss landscape. Muon can be interpreted as a second-order method approximation that avoids the full Hessian computation required by Newton's method.
+
+**Parameter-Efficient Fine-Tuning (PEFT) — The 2026 Standard Toolkit:**
+The era of fine-tuning entire foundation models has given way to parameter-efficient approaches that update only a small fraction of parameters:
+
+**LoRA (Low-Rank Adaptation, Hu et al. 2022):** The dominant PEFT method. Freezes pretrained weights W₀ and adds trainable low-rank matrices: `h = W₀x + BAx`, where B ∈ ℝ^{d×r} and A ∈ ℝ^{r×k} with r << min(d,k). For Llama 3 70B with r=16: trainable parameters ≈ 2 × 70B × (16/7000) ≈ 320M — less than 0.5% of total parameters. LoRA adapters are fully composable: multiple LoRA adapters can be merged or switched, enabling efficient multi-task deployment from a single base model.
+
+**QLoRA (Dettmers et al., 2023):** Quantizes the frozen base model to 4-bit (NF4 format) before training LoRA adapters in BF16. Enables fine-tuning of 65B+ models on consumer hardware (single 24GB GPU): 65B at 4-bit requires ~35GB VRAM + LoRA adapter gradients. QLoRA democratized fine-tuning, enabling researchers without cluster access to adapt frontier-class models.
+
+**DoRA (Liu et al., 2024):** Decomposes weight updates into magnitude and direction components, training them separately: `W = (m / ‖W₀ + BA‖) × (W₀ + BA)` where m is a learnable magnitude vector. DoRA achieves better quality than LoRA at the same rank, especially for complex tasks requiring significant behavior change (code generation, instruction following in new languages).
+
+**LoRA-GA (Wang et al., 2024):** Initializes LoRA matrices using gradient-aligned initialization (eigendecomposition of the pre-training gradient matrix) rather than random initialization — accelerating convergence by 2–4× for domain-specific fine-tuning tasks.
+
+**The Grokking Phenomenon and Double Descent:**
+Two empirical phenomena have reshaped the theory of neural network generalization:
+
+**Double descent (Belkin et al., 2019; Nakkiran et al., 2020):** Classical statistics predicts that model complexity beyond the optimal regime causes overfitting. Deep learning shows that increasing model complexity *past the interpolation threshold* (where the model perfectly fits training data) leads to a second regime of improving generalization — "benign overfitting." The classic bias-variance tradeoff curve has a second descent beyond the interpolation threshold. Practically: very large models (which always interpolate training data) generalize better than intermediate-size models, contradicting classical intuition.
+
+**Grokking (Power et al., 2022):** Transformers trained on modular arithmetic tasks (e.g., compute (a+b) mod 97) appear to memorize the training set initially (training accuracy 100%, validation accuracy random). Then, long after apparent convergence, validation accuracy suddenly jumps to 100% — "grokking" — as the model discovers a compact algorithmic solution. The delay can be hundreds of thousands of additional training steps after training accuracy saturates. Mechanistic interpretability reveals: the model initially implements a "memorization" circuit and gradually replaces it with a Fourier-based algorithm circuit — a phase transition in internal representations with sudden external behavioral manifestation. Understanding grokking requires mechanistic interpretability; surface-level training metrics are misleading.
+
+**Practical implication:** Long training runs continue to improve generalization even when validation loss appears to have converged — challenging the common early-stopping heuristic and supporting the "Chinchilla revisited" finding that current frontier models may still be undertrained.
 
 ## Related
 - [[transformer-architecture]]

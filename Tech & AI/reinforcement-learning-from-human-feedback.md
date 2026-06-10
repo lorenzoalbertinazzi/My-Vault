@@ -3,7 +3,7 @@ title: Reinforcement Learning from Human Feedback (RLHF)
 date: 2026-05-30
 tags: [ai, machine-learning, RLHF, alignment, reward-modeling, PPO, InstructGPT, ChatGPT, constitutional-AI, DPO, fine-tuning, LLM, RLAIF, GRPO, preference-optimization, online-RL, reward-hacking, KL-divergence, SFT]
 source: "Christiano et al. (2017) Deep RL from Human Preferences (arXiv:1706.03741); Ouyang et al. (2022) InstructGPT (arXiv:2203.02155); Bai et al. (2022) Constitutional AI (arXiv:2212.08073); Rafailov et al. (2023) Direct Preference Optimization (arXiv:2305.18290); Schulman et al. (2017) PPO (arXiv:1707.06347); Stiennon et al. (2020) Learning to Summarize from Human Feedback (arXiv:2009.01325)"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -719,6 +719,52 @@ The architecture of RLHF is strikingly isomorphic to the mammalian dopamine rewa
 The parallel runs deeper than mere analogy. The **credit assignment problem** — determining which action in a long behavioral sequence caused a reward received much later — is the central challenge for both biological RL and artificial RL. The hippocampus is theorized to solve this via **replay**: during sleep, the brain replays sequences of recent experiences, propagating TD error signals backwards through the sequence to assign credit to causal actions (Dayan & Niv, 2008). The PPO training loop performs the identical function: storing rollouts in a replay buffer and then performing multiple gradient updates over those stored transitions, propagating the advantage signal backwards through the sequence. Evolution solved credit assignment in the brain; Sutton and Barto's temporal difference learning formalised the same solution in mathematics (1988).
 
 The **reward hacking** problem in RLHF — policies finding unexpected ways to maximize the measured reward while violating intent — has a precise biological analog in **addiction**. Addictive substances hijack the dopamine system by triggering reward prediction errors that do not correspond to actual survival-relevant outcomes. The brain's "reward model" was trained by evolution on ancestral environments; novel stimuli (sugar, cocaine, social media dopamine loops) exploit the reward model's out-of-distribution behavior just as RLHF-trained models exploit reward models by producing long, confident-sounding responses that trigger high ratings regardless of accuracy. The solution being explored — process reward models (PRMs) that reward correct reasoning steps, not just final answers — mirrors the neuroscience insight that intrinsic motivation and learned predictive representations are more robust to reward hacking than pure external reward signals. See [[prospect-theory-and-decision-making]] for how humans systematically deviate from expected-value maximization in ways that propagate directly into preference labels collected for RLHF training.
+
+### 2026 RLHF Evolution: RLAIF, DPO at Scale, and Constitutional AI v2
+
+**RLAIF (Reinforcement Learning from AI Feedback) — Scaling Alignment Beyond Human Annotators:**
+The bottleneck for RLHF at frontier scale is not compute or model capability — it is human annotation. Rating millions of response pairs requires thousands of annotators with domain expertise, and for complex technical domains (advanced mathematics, specialized coding, medical reasoning), finding annotators who can reliably evaluate response quality is extremely difficult and expensive. **RLAIF** (Reinforcement Learning from AI Feedback) addresses this by using a capable AI model as the preference rater rather than human annotators:
+
+**The RLAIF protocol (Bai et al. 2022, Anthropic; Lee et al. 2023, Google):**
+1. Generate candidate responses A and B from the policy model
+2. Present both to a "judge" LLM (typically the current policy model or a larger model) with instructions to evaluate which is better according to specified criteria
+3. Use the judge's preference as the training signal for the reward model
+4. Fine-tune the policy via PPO or DPO using this AI-generated preference signal
+
+**Quality comparison (Lee et al., 2023 "RLAIF vs. RLHF"):** RLAIF-trained models achieve comparable human preference ratings to RLHF-trained models on summarization and helpful assistant tasks, while requiring no human annotation (100× cost reduction per preference pair).
+
+**Constitutional AI v2 (Anthropic, 2025):** Anthropic's evolved Constitutional AI framework combines RLAIF with an explicit multi-level constitution:
+- **Level 1 (Core values):** Harm avoidance, honesty, and helpfulness principles — evaluated by a specialized "harmlessness" judge LLM trained to detect subtle harms
+- **Level 2 (Behavioral guidelines):** Domain-specific rules (medical advice caution, legal disclaimer requirements, content policy specifics) evaluated by domain-specialized judges
+- **Level 3 (User preferences):** Style, tone, and format preferences evaluated using the general-purpose judge model
+The multi-level evaluation allows the training signal to precisely target different aspects of model behavior independently, rather than conflating harm avoidance and helpfulness in a single preference signal.
+
+**Direct Preference Optimization (DPO) — Replacing PPO at Scale:**
+DPO (Rafailov et al., 2023) offered a simpler alternative to PPO-based RLHF: rather than training an explicit reward model and using RL to optimize against it, DPO directly optimizes the policy using preference pairs through a closed-form solution:
+
+```
+L_DPO(π_θ) = -𝔼_{(x,y_w,y_l)} [log σ(β log(π_θ(y_w|x)/π_ref(y_w|x)) - β log(π_θ(y_l|x)/π_ref(y_l|x)))]
+```
+
+Where y_w is the preferred response, y_l is the dispreferred response, π_ref is the reference (pre-RLHF) model, and β controls the KL divergence penalty. DPO advantages: no separate reward model (simplifies pipeline), no RL instability (directly maximizes likelihood of preferred vs. dispreferred), 3–5× less compute than PPO.
+
+By 2026, DPO has become the standard alignment fine-tuning method for most open-source models (Llama 3 family, Mistral, Qwen), while PPO remains preferred for frontier labs where the reward model's ability to provide nuanced scalar feedback justifies the complexity. **SimPO** (Meng et al., 2024) and **IPO** (Azar et al., 2024) are improved DPO variants addressing instability in out-of-distribution cases.
+
+**Process Reward Models (PRMs): Rewarding the Journey, Not the Destination:**
+A fundamental critique of outcome-based RLHF (rewarding correct final answers) is that it doesn't penalize correct-answer-wrong-reasoning — a model that gets the right answer for the wrong reason will be reinforced for that reasoning. **Process Reward Models** provide step-level feedback:
+
+**PRM construction:** Human annotators (or AI judges) evaluate each reasoning step: "Is this step logically valid and relevant given the prior steps?" The PRM is trained to predict step-level correctness from the partial reasoning trace.
+
+**Training with PRMs:** During RL training, rewards are accumulated at each reasoning step rather than only at the final token. This forces the policy to learn genuinely valid reasoning chains rather than reverse-engineering correct answers.
+
+**Empirical results:** OpenAI's Math-Shepherd (2024) trained PRMs on mathematics reasoning and demonstrated that PRM-guided beam search finds correct solutions 5–7% more often than outcome-supervised models on MATH benchmark at the same test-time compute budget. The PRM approach is central to o1/o3's test-time compute scaling — PRMs guide Monte Carlo Tree Search over reasoning chains to find the most valid path to a solution.
+
+**RLHF for Agentic Systems:**
+Training AI agents (multi-step, tool-using) requires extending RLHF beyond single-turn preference pairs to **multi-step feedback**:
+
+**WebArena RLHF (2025):** Training browser agents using task completion success as the reward signal — whether the agent successfully books a flight, finds the requested information, or completes a web form. Reward is sparse (binary success/fail per multi-step task) but unambiguous. Experiments show: 20% improvement in WebArena success rate after RLHF fine-tuning from human demonstrations vs. zero-shot GPT-4.
+
+**Imitation learning + RLHF for coding agents:** SWE-bench training involved collecting human demonstrations of GitHub issue resolution, fine-tuning on those demonstrations (behavioral cloning), then using automated test suite pass/fail as the reward signal for RL. The automated test environment provides the dense, unambiguous reward signal that human labelers cannot provide at scale for coding tasks.
 
 ## Related
 - [[transformer-architecture]] — The base LLM architecture that RLHF fine-tunes

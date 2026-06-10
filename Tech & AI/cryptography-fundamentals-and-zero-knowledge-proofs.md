@@ -3,7 +3,7 @@ title: Cryptography Fundamentals and Zero-Knowledge Proofs
 date: 2026-05-30
 tags: [cryptography, zero-knowledge-proofs, ZKP, encryption, public-key, blockchain, privacy, mathematics, AES, RSA, ECC, TLS, PKI, STARKs, Plonk, LWE, post-quantum, hash-functions, digital-signatures, elliptic-curves, symmetric-encryption]
 source: "Goldwasser, Micali & Rackoff (1985) The Knowledge Complexity of Interactive Proof Systems; Boneh & Shoup 'A Graduate Course in Applied Cryptography' (2023); Ben-Sasson et al. (2018) STARKs (arXiv:1501.04722); Gabizon et al. (2019) PlonK (arXiv:1912.01216); Bernstein & Lange (2017) Post-quantum cryptography survey (Nature)"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -415,6 +415,47 @@ The practical implication is the **harvest now, decrypt later** attack: adversar
 The intersection with [[central-bank-digital-currencies-cbdc]] is direct and high-stakes: every CBDC system currently designed or deployed uses elliptic curve cryptography for transaction signing and key exchange. If a CRQC becomes available, all ECC-based CBDC transaction signatures would become forgeable — an adversary could cryptographically impersonate any wallet holder. The Bank for International Settlements (BIS) and the IMF have both published analyses identifying post-quantum cryptographic migration as an existential infrastructure challenge for CBDCs. Countries (particularly China, the US, and the EU) racing to deploy CBDCs must either build in post-quantum crypto from the start or plan for a painful migration on a compressed timeline dictated by quantum hardware progress — which is, notably, being driven fastest by the same geopolitical adversaries. The US-China dynamic analyzed in [[2026-05-27-us-china-great-power-competition]] thus directly intersects with cryptographic infrastructure: China's substantial quantum computing investment is partly motivated by its implications for breaking adversary cryptographic infrastructure, and conversely by the desire to deploy quantum-resistant cryptography before adversaries can exploit it.
 
 The relationship between cryptography and AI training (see [[llm-training-and-scaling-laws]]) is emerging through **federated learning with differential privacy**: training LLMs on distributed private data (medical records, financial data) requires cryptographic protocols that guarantee privacy of individual training examples. Secure Multi-Party Computation (SMPC) and Homomorphic Encryption (HE) enable computation on encrypted data — training gradients can be computed on ciphertext and aggregated without any party seeing others' raw data. The computational overhead is enormous (HE is currently 10,000–1,000,000× slower than plaintext computation), making current applications limited to small models, but active research (CKKS scheme optimizations, GPU-accelerated HE) is reducing this gap steadily.
+
+### 2026 Cryptography Developments: NIST PQC Standards in Deployment and ZK Proofs at Scale
+
+**NIST Post-Quantum Cryptography Standards — Deployment Status (2026):**
+NIST finalized its first three post-quantum cryptographic algorithm standards in August 2024:
+- **FIPS 203 (ML-KEM / CRYSTALS-Kyber):** Key encapsulation mechanism based on Module Learning with Errors (MLWE) hardness. Designed to replace RSA and Diffie-Hellman for key exchange. Key sizes: ML-KEM-768 uses ~1.2KB public keys vs. RSA-3072's 384B — larger but manageable
+- **FIPS 204 (ML-DSA / CRYSTALS-Dilithium):** Digital signature algorithm, also lattice-based. Signature size: ~2.4KB vs. Ed25519's 64B — a significant overhead for high-frequency signing (TLS handshakes, blockchain transactions)
+- **FIPS 205 (SLH-DSA / SPHINCS+):** Hash-based signature scheme; conservative design based only on hash function security (well-understood). Larger signatures (~8–50KB) but quantum-resistant based on well-studied assumptions
+
+**Deployment velocity in 2026:**
+- **Google Chrome:** Deployed hybrid TLS key exchange (ML-KEM + X25519) in Chrome 124 (April 2024); over 50% of TLS connections now use PQC hybrid key exchange
+- **Apple:** iOS 18 added PQC key agreement to iMessage, providing post-quantum forward secrecy for messages — first consumer messaging PQC deployment at scale
+- **US Federal Agencies (NSM-10, 2022; CNSS 15, 2022):** National Security Systems must complete PQC migration by 2033; civilian agencies must inventory and assess by 2027. CISA has developed a "PQC migration playbook" guiding agencies through crypto agility assessment
+- **Banking sector:** SWIFT launched a PQC migration working group in 2025; target: PQC-capable interbank messaging infrastructure by 2030. The complexity of migrating a global financial messaging network with >200 member countries and multiple legacy protocol versions makes this one of the most complex institutional cryptographic migrations in history
+
+**The "Harvest Now, Decrypt Later" Risk Quantification:**
+Intelligence assessments (publicly acknowledged by NSA, GCHQ, and BfV) confirm that sophisticated state actors are actively conducting large-scale TLS traffic interception for future quantum decryption. The primary targets are:
+- Long-lived classified government communications
+- Intellectual property in semiconductor, pharmaceutical, and defense industries
+- Biometric and health data with 20+ year sensitivity windows
+
+NIST's 2026 guidance explicitly states that organizations should treat data with >10-year sensitivity windows as already threatened, requiring immediate PQC migration for data at rest (encryption of stored sensitive data) independent of the timeline for network protocol migration.
+
+**Zero-Knowledge Proofs in Production (2026):**
+
+**Ethereum ZK Rollups at scale:**
+ZK rollup adoption on Ethereum has grown dramatically following Dencun (EIP-4844) blob fees:
+- **zkSync Era:** Processing 2–5M transactions/day, generating ZK-SNARK proofs (Groth16 / PLONK) for validity of transaction batches submitted to Ethereum L1. Proof generation time: ~5–10 minutes for batches of 10,000 transactions using GPU-accelerated provers (NVIDIA A100 farms)
+- **Polygon zkEVM:** First EVM-equivalent ZK rollup; compatible with existing Ethereum smart contracts without modification. Deployed in production 2023, processing 500K+ transactions/day by 2026
+- **Starknet:** Uses STARKs (transparent, no trusted setup, quantum-resistant proofs) rather than SNARKs. Cairo language enables custom constraint systems; deployed for on-chain gaming, DeFi, and NFT applications
+
+**ZK proofs for identity and privacy:**
+- **Worldcoin's World ID (2023–2026):** Biometric ZK proof scheme where iris scans generate a "semaphore" ZK proof that the holder is a unique human without revealing their biometric data or linking to any identity. By 2026, 12M+ World IDs issued; deployed for Sybil-resistant voting in DAO governance and selective credential verification
+- **Private credential systems:** EU's EUDI (European Digital Identity) wallet, deploying to all EU citizens by 2026, uses selective disclosure ZK proofs based on the SD-JWT-VC standard — allowing citizens to prove specific credential attributes (age ≥18, EU residency, driving license validity) without revealing the underlying identity document
+
+**The Prover Cost Economics:**
+ZK proof generation costs have fallen dramatically but remain non-trivial:
+- Groth16 proof for 1M constraints: ~10 seconds on NVIDIA A100, cost ~$0.001 per proof at cloud GPU rates
+- PLONK proof for 1M constraints: ~30 seconds, cost ~$0.003 per proof
+- STARK proof for 1M constraints: ~60 seconds, $0.005 per proof (but transparent, no trusted setup)
+- Hardware acceleration: Ingonyama, Cysic, and Fabric Cryptography are developing FPGAs and ASICs specifically for ZK proof generation, targeting 100–1000× speedup over GPU provers — which would make per-proof cost negligible and enable new use cases currently blocked by proof generation latency
 
 ## Related
 - [[machine-learning-fundamentals]] — zkML applications, federated learning privacy

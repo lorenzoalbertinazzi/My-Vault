@@ -3,7 +3,7 @@ title: LLM Inference Optimization — Quantization, KV Cache, Speculative Decodi
 date: 2026-06-06
 tags: [tech, AI, LLM, inference, optimization, quantization, speculative-decoding, kv-cache, vllm, flash-attention, serving]
 source: research synthesis — Dettmers et al., Leviathan et al., Dao et al., vLLM paper, academic ML literature
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -246,6 +246,60 @@ GPT-4's estimated training cost: ~$100M of compute, ~500–1,000 MWh of energy.
 Inference at scale: a model serving 100M users daily at 1K tokens/query consumes ~50–100 MWh/day (rough estimate depending on model size). Inference energy is now comparable to or greater than training energy across a model's deployment lifetime.
 
 ---
+
+### 2026 Inference Stack: FP8 Quantization, SGLang, and the Combined Optimization Ceiling
+
+**FP8 Quantization: The 2026 Standard:**
+NVIDIA's H100 GPU introduced native FP8 (8-bit floating point, two formats: E4M3 and E5M2) tensor core acceleration in 2023, but production deployment at scale required 12–18 months of framework maturation. By 2026, FP8 training and inference has become the default precision for frontier model inference on H100/H200 hardware:
+
+**FP8 format comparison:**
+- **E4M3:** 4 exponent bits, 3 mantissa bits; range [-448, 448]; preferred for activations (moderate range, higher precision)
+- **E5M2:** 5 exponent bits, 2 mantissa bits; range [-57344, 57344]; preferred for gradient storage (wider range, lower precision)
+
+**Quality vs. speedup:** FP8 inference achieves approximately 1.5–1.8× throughput improvement over BF16 on H100 with <0.5% quality degradation on standard benchmarks (MMLU, HumanEval) for models ≥7B parameters. The throughput gain is primarily from reduced memory bandwidth consumption (FP8 weights and activations = 1 byte vs. 2 bytes for BF16) and faster tensor core execution (H100 delivers 3.9 PFLOPS FP8 vs. 2.0 PFLOPS BF16).
+
+**Combined optimization stack performance (empirical, H100 SXM5):**
+The production-proven combined optimization stack — FP8 quantization + Flash Attention 3 + continuous batching + speculative decoding with a 7B draft model — achieves **5–8× better cost-efficiency** than naive FP16 inference with static batching on a 70B-parameter model:
+
+| Optimization | Individual Contribution |
+|---|---|
+| FP8 vs. FP16 | 1.5–1.8× throughput |
+| Flash Attention 3 vs. standard | 1.3–1.5× (long context) |
+| Continuous vs. static batching | 2–4× throughput |
+| Speculative decoding (7B draft → 70B) | 2–3.9× latency reduction |
+| Combined effect (multiplicative) | 5–8× overall cost efficiency |
+
+A concrete measured result (Rodrigo Ekstein, 2025, reproduced in Zylos Research 2026): speculative decoding reduced a 70B model's inference time from **136.14 seconds to 35.17 seconds** for a standardized long-form generation task — a **3.87× speedup** with identical output quality.
+
+**vLLM and SGLang: The 2026 Production Infrastructure Duopoly:**
+Two frameworks dominate production LLM serving in 2026:
+
+**vLLM (Berkeley, 2023–):** The industry reference implementation for production LLM serving. As of v0.6 (2026), vLLM supports: PagedAttention + prefix sharing, FP8/INT4/INT8 quantization via GPTQ/AWQ/GGUF, speculative decoding with multiple draft strategies (Eagle, Medusa, n-gram), disaggregated prefill/decode, and native MoE expert parallelism. Used in production by Azure OpenAI, Amazon Bedrock, and hundreds of self-hosted deployments.
+
+**SGLang (Stanford, 2024–):** Designed specifically for **compound AI systems** — pipelines where multiple LLM calls are structured and depend on each other. SGLang's key innovation is **RadixAttention**, which extends PagedAttention's prefix caching to tree-structured KV cache sharing across a radix tree of request prefixes:
+```
+Request 1: [System prompt A] + [User Q1]  → shares System prompt A KV
+Request 2: [System prompt A] + [User Q2]  → with request 1
+Request 3: [System prompt B] + [User Q3]  → independent
+```
+RadixAttention enables **2–5× higher throughput for structured generation workloads** (multi-turn conversations, RAG, multi-agent pipelines) versus PagedAttention because the shared system prompt and document context KV cache is stored once and reused across all requests using that context. By 2026, SGLang has become the preferred framework for agentic AI serving deployments.
+
+**Staircase Streaming for Multi-Agent Inference (arXiv 2510.05059):**
+An emerging serving optimization for multi-agent pipelines where multiple LLM calls execute in a pipeline: rather than waiting for each agent's full response before passing to the next, staircase streaming enables the downstream agent to begin processing the upstream agent's partial output token-by-token. For pipelines where agent A's early tokens determine agent B's task setup, this reduces end-to-end latency by 30–50% without changing output quality. Currently implemented in research versions of LangGraph and will reach production frameworks in 2026.
+
+### The Inference Economics Trajectory (2023–2026)
+
+A structured view of how inference costs have declined for GPT-4-class intelligence:
+
+| Date | Provider/Model | Cost/1M Output Tokens | Key Optimization |
+|------|---------------|----------------------|-----------------|
+| Mar 2023 | OpenAI GPT-4 | $60.00 | Baseline |
+| Nov 2023 | OpenAI GPT-4 Turbo | $30.00 | Hardware + batching |
+| May 2024 | OpenAI GPT-4o | $15.00 | Distillation + quant |
+| Jan 2025 | DeepSeek V3 | $0.28 | MoE + FP8 training |
+| Jun 2026 | DeepSeek V3.2 | $0.04 | Full stack optimization |
+
+This 1500× cost reduction over 39 months is the most rapid decline in the cost of a specific cognitive capability in recorded technological history. The economic implication: AI inference is approaching the commodity range where embedding intelligence into every application interaction is economically trivial.
 
 ## Related
 - [[transformer-architecture]]

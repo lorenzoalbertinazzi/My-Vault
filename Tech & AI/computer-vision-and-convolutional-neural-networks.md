@@ -3,7 +3,7 @@ title: Computer Vision and Convolutional Neural Networks
 date: 2026-05-30
 tags: [ai, computer-vision, CNN, deep-learning, image-recognition, object-detection, AlexNet, ResNet, ViT, CLIP, SAM, YOLO, ImageNet, image-segmentation, transfer-learning, vision-transformer, multimodal]
 source: "Krizhevsky et al. (2012) ImageNet Classification with Deep CNNs — AlexNet (NeurIPS); He et al. (2015) Deep Residual Learning — ResNet (arXiv:1512.03385); Dosovitskiy et al. (2020) ViT — An Image is Worth 16x16 Words (arXiv:2010.11929); Radford et al. (2021) CLIP (arXiv:2103.00020); Kirillov et al. (2023) SAM — Segment Anything (arXiv:2304.02643); Redmon et al. (2016) YOLO (arXiv:1506.02640)"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 ## Summary
 Computer vision is the field enabling machines to interpret visual information from images and video. The 2012 AlexNet breakthrough — demonstrating that deep convolutional neural networks (CNNs) could dramatically outperform all prior methods on ImageNet — triggered a decade of exponential progress that has produced systems exceeding human performance on image classification (2015), surpassing radiologists at cancer detection (2017), enabling autonomous vehicles, and powering facial recognition at planetary scale. CNNs leverage the spatial structure of images through local connectivity, weight sharing, and hierarchical feature learning — a biologically-inspired architecture matching how the mammalian visual cortex processes information.
@@ -392,6 +392,36 @@ CNNs trained on ImageNet face an analogous challenge: the distribution of traini
 ### Computer Vision and the AI Governance Landscape
 
 The regulatory implications of CV extend far beyond medical imaging. Facial recognition is the most politically contested CV application, with complete bans enacted in several EU cities and US states, and active deployment by law enforcement and authoritarian governments simultaneously. The [[2026-05-30-global-ai-governance-race-to-regulate]] analysis shows that CV is one of the domains where the EU AI Act has the most concrete provisions: real-time remote biometric identification in public spaces is classified as unacceptable risk (prohibited in principle, with narrow security exceptions). The technical capabilities of state-of-the-art facial recognition — matching faces from CCTV footage to databases of millions of individuals in real-time — are already deployed in China (Sensetime, Megvii: technologies that survived export controls and are operational in Xinjiang surveillance infrastructure) and increasingly in democratic contexts (Clearview AI in US law enforcement). The governance question is not whether the technology works but whether it should be permitted, and under what constraints — a question that requires both the technical precision about capability limits (accuracy under bad lighting, demographic disparities in false positive rates) and normative clarity about privacy, due process, and proportionality.
+
+### 2026 Computer Vision Frontiers: Vision-Language Models, Medical Clearances, and Autonomous Driving Progress
+
+**Vision-Language Foundation Models — The CLIP Successor Generation:**
+OpenAI's CLIP (2021) established the paradigm of training image encoders using natural language supervision — contrastive learning on 400M image-text pairs from the internet. The 2025–2026 generation of vision-language models represents a dramatic qualitative leap:
+
+**SigLIP 2 (Google, 2025):** Trained on 10B image-text pairs using a sigmoid loss (rather than softmax contrastive loss), SigLIP 2 achieves zero-shot ImageNet accuracy of 84.3% — compared to CLIP ViT-L's 75.5%. More importantly, SigLIP 2 shows dramatic improvements on compositional understanding (identifying "dog chasing cat" vs. "cat chasing dog" — a known weakness of CLIP-style models).
+
+**GPT-4V / GPT-4o Vision and Claude 3.5 Sonnet Vision:** Native multimodal frontier models have replaced two-stage vision-language pipelines (vision encoder → LLM) with fully end-to-end vision encoders trained jointly with the language model. GPT-4o demonstrates: OCR of handwritten medical prescriptions at 97% character accuracy, architectural blueprint reading (identifying structural elements, measuring annotated dimensions), chart/graph interpretation with quantitative reasoning about the data shown. Clinical studies from Mayo Clinic (2025) found GPT-4o's diagnostic agreement with radiologists was 73% on chest X-ray abnormality classification — lower than specialist radiologist accuracy but significantly higher than non-specialist physicians.
+
+**FDA Medical Device AI Clearances: The 2026 Landscape:**
+The FDA's De Novo and 510(k) clearance programs for AI/ML-based medical devices have dramatically accelerated:
+- **Total FDA-cleared AI medical devices as of Q1 2026:** 882 (up from 521 in 2022, 692 in 2023) — growing at approximately 150 new clearances per year
+- **Radiology dominates (72%):** Chest X-ray abnormality detection, CT scan hemorrhage identification, mammography density assessment, retinal OCR for diabetic retinopathy
+- **Notable 2025–2026 clearances:**
+  - Paige Prostate AI (prostate cancer detection from pathology slides): De Novo clearance; first AI diagnostic aid cleared specifically for pathology slide reading
+  - Viz.ai pulmonary embolism detection: expanded to right-heart strain analysis from CT angiography
+  - iCAD PowerLook 1000: mammography AI combined with physician review showed 20% reduction in interval cancers in European health system deployment
+- **Regulatory evolution:** FDA's 2025 "Digital Health Center of Excellence" guidance codified the "predetermined change control plan" — allowing AI medical devices to update their models within pre-specified bounds without new 510(k) review, resolving the longstanding regulatory obstacle of how to handle model updates
+
+**Autonomous Driving Computer Vision — The 2026 Deployment State:**
+- **Waymo One:** Fully autonomous commercial robotaxi service in San Francisco, Phoenix, and Los Angeles (2024–2026 expansion). Fleet size: 700+ vehicles; passenger rides: >5M cumulative. The CV pipeline processes 7 cameras, 1 LiDAR, and 6 radar units at 100Hz; the perception system uses a hierarchical feature pyramid network backbone (FPN) trained on Waymo's 1,950km of annotated driving data — one of the largest real-world driving datasets in existence
+- **Tesla FSD v12 (Dojo-trained, 2024–2026):** End-to-end neural network from camera inputs to steering/throttle/brake commands, trained on ~50B video clips from the Tesla fleet. Avoids explicit 3D reconstruction — predicts actions directly from video features. FSD v12 showed a documented 5× improvement in miles between critical intervention vs. v11, demonstrating end-to-end video-trained CV's viability
+- **The LiDAR vs. camera-only debate:** Waymo (LiDAR + camera fusion) and Tesla (camera-only) represent two architectural philosophies. The consensus in 2026 is shifting toward Tesla's camera-first approach for urban autonomy (cameras provide sufficient resolution for object classification and lane geometry) while LiDAR retains advantage for adverse weather and long-range detection in highway contexts
+
+**Vision Transformers vs. CNNs: The Architecture Convergence (2026):**
+The ViT-vs-CNN debate has largely resolved: modern production vision systems use **hybrid architectures** that combine the efficiency of CNN feature extraction in early layers with Transformer attention for global context integration in later layers. Examples:
+- ConvNeXT v2: CNN architecture with modern design choices (GELU, LayerNorm, larger kernels) matching ViT performance at lower compute cost
+- EfficientViT (MIT, 2023–2025): Linear attention ViT variant achieving 95% of ViT quality at 10× inference speed
+- MaxViT (Google): Multi-axis ViT alternating local window attention with global dilated attention, enabling long-range dependencies without quadratic attention cost
 
 ## Related
 - [[transformer-architecture]] — Vision Transformers apply BERT/GPT architecture to image patches; critical for understanding ViT, CLIP, DALL-E

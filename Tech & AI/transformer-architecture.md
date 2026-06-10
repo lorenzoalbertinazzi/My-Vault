@@ -3,7 +3,7 @@ title: Transformer Architecture — How LLMs Work
 date: 2026-05-26
 tags: [ai, machine-learning, deep-learning, transformer, self-attention, multi-head-attention, NLP, LLM, GPT, BERT, RoPE, flash-attention, MoE, KV-cache, speculative-decoding, positional-encoding, scaling-laws, causal-masking, pre-norm, SwiGLU]
 source: "Vaswani et al. (2017) Attention Is All You Need (arXiv:1706.03762); Kaplan et al. (2020) Scaling Laws for Neural Language Models (arXiv:2001.08361); Hoffmann et al. (2022) Training Compute-Optimal LLMs — Chinchilla (arXiv:2203.15556); Dao et al. (2022) FlashAttention (arXiv:2205.14135); Su et al. (2021) RoPE (arXiv:2104.09864); Kwon et al. (2023) Efficient Memory Management for LLM Serving with PagedAttention"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -529,6 +529,52 @@ The divergence is instructive: biological working memory is subject to **chunkin
 ### Transformers as the Foundation for Downstream Intelligence Systems
 
 Understanding the transformer is prerequisite to understanding how modern AI safety and alignment work. The [[reinforcement-learning-from-human-feedback]] methodology that aligns language models takes a pretrained transformer and fine-tunes it via PPO or DPO — the transformer's weights provide the representational substrate that RLHF reshapes toward human preferences. Constitutional AI (Anthropic), debate (DeepMind), and process reward models all operate on transformer internals: they modify the probability distribution over next tokens, not some separate "reasoning module." This means that alignment interventions must work within the constraints of attention-based computation — they cannot add logical verification steps or formal reasoning layers; they can only shift the statistical tendencies of a sequence prediction machine. This architectural constraint is one of the key challenges analyzed in [[ai-safety-and-alignment]]. Separately, the agentic systems described in [[agentic-ai-and-multi-agent-systems]] are built entirely on transformer inference: each "reasoning step" in a ReAct loop is a forward pass through a transformer, and the quality of multi-step planning is bounded by the quality of the underlying language model's contextual reasoning within its attention window.
+
+### 2026 Transformer Architecture Frontiers: MLA, State Space Models, and Hybrid Architectures
+
+**Multi-Head Latent Attention (MLA) — DeepSeek's KV Cache Revolution:**
+DeepSeek's Multi-head Latent Attention (MLA), introduced in DeepSeek-V2 (2024) and refined in V3 (2025), represents the most significant modification to the standard multi-head attention mechanism since Grouped Query Attention (GQA). MLA addresses the KV cache memory problem that limits batch sizes during inference:
+
+**Standard MHA KV cache:** For each token and each layer, stores K and V tensors of shape `[num_heads, head_dim]`. For a 70B model with 64 heads and 128 head_dim, this is 64×128×2 (K+V)×2 bytes (BF16) = 32KB per token per layer, or ~100GB for a batch of 1024 tokens across 96 layers.
+
+**MLA KV cache:** Projects K and V through a learned low-rank bottleneck:
+```
+c_KV = W_down × h_t  (compress to d_c dimensions, d_c << d_model)
+K = W_UK × c_KV  (upproject at attention time)
+V = W_UV × c_KV  (upproject at attention time)
+```
+The cache stores only `c_KV` (dimension d_c) rather than full K,V per head — reducing KV cache memory by 5–13× with minimal quality impact. In DeepSeek-V3, d_c = 512 versus d_model = 7168, enabling 14× KV cache compression.
+
+**The inference economics impact:** Smaller KV cache = larger batch sizes at fixed GPU memory = higher throughput per GPU = lower inference cost. This architectural choice is why DeepSeek V3 can serve more requests per GPU than equivalent dense architectures, contributing to its dramatically lower serving cost ($0.04/1M tokens vs. $15/1M for Claude Opus 4.8 at comparable quality).
+
+**State Space Models (Mamba) vs. Transformers: The 2026 Verdict:**
+Mamba (Gu & Dao, 2023) proposed replacing attention with **selective state space models** — recurrent sequence processors that scale O(L) in sequence length versus transformer's O(L²) attention complexity:
+
+**Mamba mechanism:**
+```
+h_t = A × h_{t-1} + B × x_t  (state update; A is selective, B is input-dependent)
+y_t = C × h_t               (output projection)
+```
+Where A, B, C are generated from the input x_t by a small neural network — making the recurrence "selective" (the model decides how much to forget the hidden state based on the current input). This achieves transformers' long-range modeling without quadratic attention complexity.
+
+**The 2026 verdict:** Mamba and its successors (Mamba 2, Jamba, Zamba) have established a clear competitive niche but have not displaced transformers:
+- **Long context (>100K tokens):** Mamba is ~3–5× faster than attention due to O(L) scaling; competitive quality on tasks that don't require precise retrieval of specific earlier content
+- **Precise retrieval from long context:** Transformers retain an advantage — the attention mechanism allows direct access to any prior position; Mamba must compress all prior information into a fixed-size hidden state, losing precision for precise retrieval tasks
+- **Hybrid architectures (Jamba, Zamba):** Alternating Mamba layers with sparse attention layers achieves the best of both: O(L) scaling for most tokens with attention for precise retrieval when needed. By 2026, hybrid SSM-attention models achieve parity with pure transformers on standard benchmarks while being 2–3× more efficient for long-sequence tasks
+
+**Sparse Attention and Long Context Innovations (2025–2026):**
+
+**Ring Attention (Liu et al., 2023):** Distributes long sequences across multiple GPUs — each GPU holds only a portion of the sequence and passes KV activations in a ring topology. Enables sequences of millions of tokens without quadratic memory on a single GPU. Llama 4 Scout's 10M context window uses ring attention distributed across 256+ GPUs.
+
+**Sliding Window Attention (SWA):** Each token attends only to the W previous tokens (window size W). Combined with some "global" attention tokens (attending to all positions), SWA achieves O(L×W) complexity. Used in Mistral 7B v0.1 (window=4096 per layer, effective context extended via sliding). Quality degradation is minimal for locally-coherent content but significant for tasks requiring cross-document integration.
+
+**Flash Attention 3 on H100 (Dao et al., 2024):** The H100's asynchronous execution engine and TMA (Tensor Memory Accelerator) enable Flash Attention 3 to achieve >750 TFLOPS on H100 SXM5 — 1.5× over Flash Attention 2 and 75% hardware utilization. This is particularly significant for inference of models with very long contexts (>32K tokens), where attention is the dominant compute cost.
+
+**Vision Transformers and the Multimodal Frontier:**
+The transformer architecture has fully colonized non-text modalities by 2026:
+- **DiT (Diffusion Transformer, Peebles & Xie, 2023):** Replaced the U-Net backbone in diffusion models with a pure Transformer, achieving better scaling and enabling DALL-E 3, Stable Diffusion 3, and Flux.1 — all use DiT architectures
+- **Video transformers:** Sora (OpenAI), Veo 2 (Google), and Kling (Kuaishou) use spatiotemporal transformers operating on video patch sequences, maintaining temporal coherence through 3D attention over spatial + temporal positions
+- **Protein and molecular transformers:** ESM-3 (EvolutionaryScale, 2024) — 98B parameter transformer trained on protein sequences, structures, and functions — achieves state-of-the-art protein structure prediction, generation, and functional annotation in a single foundation model
 
 ## Related
 - [[prompt-engineering]]

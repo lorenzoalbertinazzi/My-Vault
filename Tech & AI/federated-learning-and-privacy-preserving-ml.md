@@ -3,7 +3,7 @@ title: Federated Learning and Privacy-Preserving Machine Learning
 date: 2026-06-06
 tags: [tech, AI, federated-learning, privacy, differential-privacy, secure-aggregation, machine-learning, distributed-ml, data-privacy, GDPR, healthcare-AI, edge-computing]
 source: "McMahan et al. (2017) 'Communication-Efficient Learning of Deep Networks from Decentralized Data'; Dwork & Roth (2014) 'The Algorithmic Foundations of Differential Privacy'; Bonawitz et al. (2019) 'Towards Federated Learning at Scale'; Kairouz et al. (2021) 'Advances and Open Problems in Federated Learning'"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -250,6 +250,50 @@ The emergence of billion-parameter LLMs creates new FL challenges:
 4. **"FL solves the data governance problem"**: FL reduces legal friction but does not eliminate it. GDPR obligations (right to erasure, data subject access rights) apply even when training is federated. "Machine unlearning" — removing the influence of a specific person's data from a trained model — remains an open research problem.
 
 5. **"Secure aggregation makes FL completely secure"**: SecAgg prevents the server from seeing individual gradients but does not protect against a server that observes multiple rounds (reconstruction attacks across rounds are possible).
+
+### 2026 Federated Learning Developments: Governance Integration, New Consortia, and LLM Fine-Tuning
+
+**Dual-Enabler Framework: FL + AI Governance (2026):**
+The most significant conceptual advance in FL deployment methodology in 2026 is the emergence of **AI governance-integrated federated learning** — architectures that embed compliance mechanisms (differential privacy accounting, fairness auditing, consent tracking, data subject rights) directly into the FL training pipeline rather than treating them as separate post-hoc additions.
+
+The dual-enabler framework, documented in the *IEEE Transactions on Privacy* (2026), jointly integrates:
+1. **Federated learning** as the privacy-preserving training mechanism (data stays local)
+2. **AI governance controls** embedded in the model lifecycle: automated differential privacy budget tracking (ensuring ε-budget is not exceeded across the full model lifetime); per-client consent enforcement (excluding data from clients whose data subjects have exercised GDPR right-to-be-forgotten); algorithmic fairness audits run at the aggregation server on global model performance disaggregated by demographic group attributes provided by consenting clients
+
+This architecture enables organizations to demonstrate GDPR Article 22 compliance (automated decision-making transparency), GDPR Article 17 compliance (right to erasure via machine unlearning), and EU AI Act conformity assessment documentation — all generated automatically from the FL training process rather than requiring retrospective auditing.
+
+**Canada's Interprovincial Health Data Federation (Royal Society Open Science, 2026):**
+A landmark *Royal Society Open Science* paper (March 2026) documents the design and preliminary results of Canada's **national interprovincial health data federation** — a cross-silo FL deployment spanning 10 provincial health ministries that was authorized under Canada's 2025 Digital Health Infrastructure Act:
+
+- **Problem addressed:** Canadian health AI development has been hampered by provincial data sovereignty — each province's health records are protected under provincial privacy law (equivalent to HIPAA-level restrictions) and cannot be centralized federally
+- **FL architecture:** FEDn framework (Scaleout Systems) deployed with CKKS homomorphic encryption for intermediate gradient protection; provincial health ministries act as "silo" clients retaining full control over their population health data
+- **Model types trained:** Sepsis prediction (trained on 2.3M ICU episodes across 10 provinces without any cross-provincial data sharing), type 2 diabetes progression models, and pandemic early-warning surveillance models
+- **Performance:** The federated sepsis model achieved AUROC = 0.847 on held-out provincial data, compared to AUROC = 0.791 for the best single-province model — a 7.1% improvement from federation
+
+This deployment represents the most politically significant FL implementation: direct government adoption as national digital health infrastructure, with FL prescribed in legislation as the technical mechanism for data-sovereign AI collaboration.
+
+**Melody Project Drug Discovery: Published Results (2024–2026):**
+The MELLODDY Consortium (rebranded Melody Project in 2024) published its comprehensive results in *Nature Machine Intelligence* (2025): 10 pharmaceutical companies (Bayer, GSK, Janssen, Novartis, Pfizer, Sanofi, AstraZeneca, Boehringer Ingelheim, Almirall, Merck KGaA) trained federated multi-task learning models on a combined 20+ billion molecular activity datapoints without any company seeing another's proprietary assay data.
+
+**Key findings:**
+- Federated models outperformed single-company models by **20–35%** on external validation benchmarks for rare disease targets (where any single company has limited data)
+- The activity prediction accuracy improvement was largest for targets with fewer than 1,000 known active compounds — exactly the difficult cases where data sharing has the most value
+- **Practical implication:** The Melody Project models are now in production use at participating companies for early-stage compound screening, with participating companies reporting 3–5 month reductions in candidate identification timelines for targets where FL data provides the accuracy advantage
+
+**Federated Fine-Tuning of Large Language Models (2025–2026):**
+The intersection of federated learning with large language models is the most technically active research frontier in FL:
+
+**Federated LoRA (Google, 2024–2026):** Google demonstrated federated fine-tuning of Gemma 7B across Android devices using Low-Rank Adaptation (LoRA):
+- Each client trains only the LoRA adapter parameters (A ∈ ℝ^{r×d}, B ∈ ℝ^{d×r}, r=16): ~2M parameters vs. 7B total
+- Update communication: ~8MB per round vs. ~28GB for full weight sharing
+- Privacy: DP-SGD applied to LoRA updates only; ε≈3 budget
+- Application: Gboard Android personalization — adapting Gemma 7B to individual user's vocabulary, writing style, and frequent contacts without any user text leaving the device
+
+**FEDn Framework (2026 Production Standard):**
+Scaleout Systems' FEDn framework has emerged as the 2026 production standard for enterprise cross-silo FL deployments, addressing critical gaps in the earlier Flower/PySyft ecosystem:
+- **Round-trip efficiency:** FEDn's architecture separates the model reducer (aggregation), model validation, and client communication into independently scalable components — enabling rounds that complete in <60 seconds even with 500+ silo clients
+- **Framework agnosticism:** FEDn wraps training in a compute package that abstracts the underlying framework (PyTorch, TensorFlow, JAX, XGBoost) — enabling FL across silos with different ML stacks
+- **Production observability:** Built-in round-level metrics, client dropout tracking, gradient norm monitoring, and privacy budget accounting dashboards
 
 ## Related
 - [[Tech & AI/machine-learning-fundamentals]] — SGD, backpropagation, neural network training; prerequisites for understanding FL

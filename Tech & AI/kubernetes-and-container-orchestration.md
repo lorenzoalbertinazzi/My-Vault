@@ -3,7 +3,7 @@ title: Kubernetes and Container Orchestration
 date: 2026-05-30
 tags: [kubernetes, containers, devops, cloud, orchestration, microservices, etcd, HPA, VPA, RBAC, GitOps, CNI, Borg, ArgoCD, eBPF, service-mesh, Helm, operators, declarative-config, control-plane]
 source: "Verma et al. (2015) Large-scale cluster management at Google with Borg (EuroSys); Burns et al. (2016) Borg, Omega, and Kubernetes (ACM Queue); Kubernetes official documentation (CNCF, 2026); Hightower et al. 'Kubernetes: Up and Running' (O'Reilly); Beyer et al. 'Site Reliability Engineering' (Google, 2016)"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 ## Summary
 Kubernetes (K8s) is the dominant open-source container orchestration platform, managing the deployment, scaling, networking, and lifecycle of containerized applications across clusters of machines. Born from Google's internal Borg/Omega systems and open-sourced in 2014, Kubernetes solved the fundamental challenge of running applications at scale without tying them to specific infrastructure. By 2026, Kubernetes is the de facto standard for cloud-native application deployment, running on all major cloud platforms and forming the foundation of the modern DevOps and platform engineering disciplines. Understanding Kubernetes requires understanding both its declarative control-plane architecture and the distributed systems principles underpinning it.
@@ -418,6 +418,58 @@ Kubernetes cluster resource allocation is fundamentally an economic resource all
 ### Geopolitical Infrastructure and Sovereign Kubernetes
 
 The Kubernetes ecosystem has become infrastructure for national-level strategic competition, directly connected to the dynamics analyzed in [[2026-05-27-us-china-great-power-competition]]. China has developed Kubernetes distributions optimized for domestic requirements: Alibaba Cloud's ACK (Alibaba Container Service for Kubernetes), Huawei's CCE, and Tencent's TKE collectively orchestrate a substantial fraction of China's cloud-native workloads. These distributions differ from upstream Kubernetes in areas that matter for sovereignty: they integrate with domestic identity and authentication systems, comply with China's Data Security Law by restricting cross-border data flows at the orchestration layer, and increasingly incorporate domestic hardware accelerators (Huawei Ascend NPUs, Cambricon chips) as GPU alternatives subject to US export controls. The US response — tightening export controls on advanced semiconductors — accelerates this divergence: Chinese Kubernetes deployments must be designed around the hardware that is available domestically, creating a bifurcated cloud-native ecosystem where the same Kubernetes API conceals radically different underlying compute architectures. Diffusion model and LLM inference workloads (see [[diffusion-models-and-image-generation]]) are the most GPU-intensive Kubernetes deployments, making them the primary focus of this hardware-level geopolitical competition. Similarly, [[vector-databases-and-embeddings]] serving infrastructure — the retrieval backbone of RAG systems — requires high-throughput vector similarity search hardware that is increasingly available in China via domestic alternatives to NVIDIA.
+
+### 2026 Kubernetes for AI: GPU Operators, LLM Serving at Scale, and Platform Engineering
+
+**Kubernetes for LLM Serving: The Production Architecture (2026):**
+Running large language models in production on Kubernetes requires a specialized stack that has matured significantly in 2025–2026:
+
+**NVIDIA GPU Operator:** The GPU Operator Helm chart (maintained by NVIDIA, v23.9+) automates the installation and lifecycle management of GPU drivers, CUDA toolkit, container runtime, device plugin, and monitoring components on Kubernetes nodes. Without the GPU Operator, deploying GPU-enabled Kubernetes required manual driver installation on each node — a significant operational burden at scale. With the GPU Operator: adding a GPU node to a cluster automatically provisions all required software within 3–5 minutes, and the `nvidia.com/gpu: 1` resource request in a Pod spec is sufficient to schedule the pod on a GPU node.
+
+**Multi-Instance GPU (MIG) in Kubernetes:** NVIDIA's A100/H100 MIG mode partitions a single GPU into 2–7 independent GPU instances, each with dedicated memory and compute. The GPU Operator exposes MIG partitions as distinct Kubernetes resources (`nvidia.com/mig-2g.20gb: 1`), enabling multiple small inference pods to share a single expensive GPU:
+- H100 SXM5 (80GB) in 7-instance MIG mode: seven 10GB instances, each serving a dedicated 7B INT4 model
+- H100 SXM5 in 3-instance MIG mode: three 27GB instances, each serving a dedicated 13B BF16 model
+- Scheduling flexibility: Kubernetes can place a compute-intensive training pod on a full H100 (no MIG) while serving pods use MIG instances on adjacent nodes
+
+**KEDA for AI Workload Autoscaling:**
+Standard Kubernetes HPA (Horizontal Pod Autoscaler) scales on CPU/memory utilization — metrics poorly suited to LLM inference workloads where GPU utilization and request queue depth are the binding constraints. KEDA (Kubernetes-based Event-Driven Autoscaling) scales on arbitrary metrics:
+
+```yaml
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+spec:
+  scaleTargetRef:
+    name: vllm-inference
+  triggers:
+  - type: prometheus
+    metadata:
+      query: avg(vllm:num_requests_waiting)  # queue depth
+      threshold: "5"  # scale up when >5 requests waiting
+```
+
+KEDA-based autoscaling of vLLM deployments enables: scale-to-zero during off-peak hours (eliminating idle GPU cost), aggressive scale-out when queue depth increases (maintaining SLO targets), and Spot/preemptible instance integration (using 70–90% cheaper preemptible H100s for inference with KEDA to handle interruptions).
+
+**The Inference Gateway Pattern (2026):**
+A standard architecture pattern has emerged for enterprise LLM serving:
+1. **Inference Gateway** (LiteLLM Proxy, PortKey, Kong AI Gateway): Provides a unified OpenAI-compatible API endpoint that routes to multiple model backends, handles authentication, enforces rate limits, logs requests for compliance, and implements model-level circuit breaking
+2. **Model serving pods** (vLLM, SGLang): One deployment per model, auto-scaled by KEDA
+3. **Model registry** (Seldon MLServer, BentoML, HuggingFace Inference Endpoints): Tracks model versions, handles model loading from object storage, exposes standard inference interfaces
+4. **Observability stack** (Prometheus + Grafana + OpenTelemetry): Captures per-model metrics (TTFT, TPOT, GPU utilization, request queue depth, error rates)
+
+**Platform Engineering: The Kubernetes Abstraction Layer:**
+The Gartner Emerging Technologies report (2024) identified "platform engineering" as the primary organizational response to Kubernetes complexity. Platform engineering teams build Internal Developer Platforms (IDPs) that abstract Kubernetes from application developers:
+
+**Backstage (Spotify, CNCF 2022):** The dominant open-source IDP framework. Provides: service catalog (every microservice/model with documentation, ownership, and deployment status), templating for new services, and plugin ecosystem. By 2026, Backstage is deployed at 3,000+ organizations; the AI plugin ecosystem includes model serving templates, LLM evaluation dashboards, and prompt version tracking integrations.
+
+**CNOE (Cloud Native Operational Excellence, 2024):** AWS, Intuit, Nike, and Twilio collaboration defining an opinionated Kubernetes-based platform engineering stack: ArgoCD (GitOps), Argo Workflows (ML pipelines), Backstage (developer portal), Crossplane (infrastructure-as-code), and Keycloak (identity). Provides a reference implementation that significantly reduces "cold start" time for organizations building internal platforms.
+
+**The AI/ML pipeline on Kubernetes (production 2026):**
+```
+Data Ingestion → Feature Store (Feast) → Training (Kubeflow Pipelines) 
+→ Evaluation (MLflow) → Model Registry → Serving (vLLM/TGI) 
+→ Monitoring (Evidently AI) → Retraining trigger
+```
+All stages run as Kubernetes workloads, with ArgoCD managing deployment promotion from staging to production and KEDA managing inference auto-scaling.
 
 ## Related
 - [[docker-and-containerization]] — Containers are the foundation of Kubernetes; Docker image building and container runtime concepts

@@ -3,7 +3,7 @@ title: "Quantum Computing: From Qubit Physics to Quantum Advantage in 2026"
 date: 2026-05-30
 tags: [quantum-computing, qubits, quantum-advantage, error-correction, IBM, Google, hardware, cryptography, drug-discovery, algorithms, superconducting-qubits, trapped-ions, surface-code, Shor-algorithm, Grover-algorithm, NISQ, fault-tolerant, quantum-error-correction, photonic-qubits, topological-qubits]
 source: "Shor (1994) Algorithms for Quantum Computation (FOCS); Grover (1996) A fast quantum mechanical algorithm for database search (STOC); Preskill (2018) Quantum Computing in the NISQ Era and Beyond (arXiv:1801.00862); Google Quantum AI — Willow chip (Nature, 2024); IBM Quantum roadmap (2025); Arute et al. (2019) Quantum Supremacy (Nature)"
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -801,6 +801,45 @@ The urgency is heightened by the **harvest now, decrypt later** dynamic applied 
 ### Quantum Computing and the AI Governance Landscape
 
 The development of quantum computing is a distinct dimension of the technology governance challenge analyzed in [[2026-05-30-global-ai-governance-race-to-regulate]], with important parallels to AI governance but different technical characteristics. Unlike AI, where capabilities are highly accessible (a $10/month API subscription gives anyone access to frontier model capabilities), quantum computing capabilities remain highly centralized — IBM, Google, IonQ, and a handful of national laboratories control essentially all meaningful quantum hardware. This makes governance substantially easier in some dimensions: export controls on quantum hardware are enforceable in a way that export controls on AI model weights are not. The US Bureau of Industry and Security has applied export controls to specific quantum computing components (cryogenic equipment, qubit arrays) with more traction than the ongoing GPU export control battles. However, the [[2026-05-30-north-korea-nuclear-russia-china-axis]] dimension is relevant: the proliferation risk for quantum computing is not unauthorized access to hardware but unauthorized access to the algorithms (which are mathematically specified and freely published) and to the simulation environments that can test quantum algorithms on classical computers. A nation with sufficient classical compute could optimize quantum algorithms for adversarial cryptanalysis before having access to a CRQC — the software advances ahead of the hardware. Governance of quantum computing therefore requires both hardware controls (limiting CRQC access) and algorithmic controls (restricting development and export of cryptanalytic quantum software tools), with the latter being substantially harder to enforce.
+
+### 2026 Quantum Computing Progress: Google Willow, IBM Quantum System Two, and Error Correction Milestones
+
+**Google Willow (December 2024) — The Error Correction Threshold Breakthrough:**
+Google's Willow quantum processor, announced December 2024, achieved the most significant quantum computing milestone since Sycamore's quantum supremacy demonstration (2019):
+
+**The error correction breakthrough:** Willow demonstrated that adding more physical qubits to an error-corrected logical qubit *reduces* logical error rates — below the quantum error correction threshold. Specifically:
+- Logical qubit error rate with 3×3 surface code (9 physical qubits): 2.9% per round
+- Logical qubit error rate with 5×5 surface code (25 physical qubits): 1.4% per round
+- Logical qubit error rate with 7×7 surface code (49 physical qubits): 0.7% per round
+
+This exponential error rate reduction with qubit count confirms that **fault-tolerant quantum computing is achievable** with current hardware technology — the threshold has been crossed. The quantum error correction overhead remains enormous (hundreds to thousands of physical qubits per logical qubit), but the fundamental feasibility of error correction has been demonstrated.
+
+**Willow's quantum supremacy claim:** Willow performed a Random Circuit Sampling (RCS) computation in under 5 minutes that Google claims would take a classical supercomputer 10 septillion years (10²⁵ years). The caveat: RCS is a computational task specifically designed to be hard for classical computers but not useful for any practical application — the "quantum advantage" is real but task-specific.
+
+**IBM Quantum System Two (2024–2026):**
+IBM's roadmap has shifted from qubit count milestones to error-corrected logical qubit milestones:
+
+**Heron processors (2024):** IBM's first quantum processors with tunable couplers achieving 2-qubit gate error rates of 0.1–0.3% (10–30× improvement over Falcon processors) — approaching the threshold for efficient error correction. Heron's architecture eliminates always-on qubit coupling that created parasitic interactions in earlier designs.
+
+**IBM Quantum Network (2026):** IBM operates a 27-node quantum network through its IBM Quantum Premium Plan, with the largest publicly accessible quantum computer at 1,386 qubits (Condor+ processor). For practical applications: the "utility scale" regime (50–100+ logical error-corrected qubits) remains ~3–5 years away based on current roadmaps.
+
+**IonQ Forte Enterprise (2025):** IonQ's trapped-ion quantum computers achieve algorithmic qubit counts of 35+ AQ (Algorithmic Qubits — a measure of error-corrected effective performance). The IonQ Forte is accessible via AWS Braket, Azure Quantum, and Google Cloud, making quantum computing accessible to enterprise researchers without hardware access.
+
+**Near-Term Quantum Applications (NISQ Era, 2026):**
+While fault-tolerant quantum computing remains years away, Noisy Intermediate-Scale Quantum (NISQ) devices have demonstrated practical advantage in specific domains:
+
+**Quantum chemistry simulation:** Quantinuum's H2 processor (56 qubits, all-to-all connectivity) performed the first quantum advantage demonstration on a commercially relevant chemistry problem: estimating the energy of the bicyclo[1.1.0]butane molecule (a pharmaceutical intermediate) more accurately than the best classical methods at comparable computational cost. Published in *Nature Chemistry* (2025) — the first peer-reviewed quantum advantage claim for a practical chemistry problem.
+
+**Quantum approximate optimization (QAOA):** Riven Quantum and Zapata Computing have deployed QAOA-based portfolio optimization and logistics routing for specific problem instances where quantum sampling provides measurable (2–5%) solution quality improvements over classical heuristics. Not yet practical for general use; applicable only to specific problem structures.
+
+**Quantum machine learning (QML):** Theoretical advantages exist for specific QML algorithms (quantum kernel methods, quantum principal component analysis) but remain undemonstrated in practice due to data encoding overhead — the cost of loading classical data into quantum state. The field has tempered early optimism: the "quantum machine learning winter" of 2023–2024 (multiple groups failing to find practical QML advantage) has led to more targeted investigation of genuinely quantum data (molecular spectra, particle physics signals) where quantum data encoding is natural.
+
+**The 2030 Quantum Roadmap:**
+Based on disclosed roadmaps from IBM, Google, and IonQ, and independent analysis from The Quantum Insider (2026):
+- **2026–2027:** Error-corrected logical qubit demonstrations (10–100 logical qubits); first quantum advantage on small-scale optimization problems
+- **2028–2029:** 1,000 logical qubit systems; early pharmaceutical and materials simulation applications providing commercial value
+- **2030–2032:** 10,000+ logical qubit fault-tolerant systems; practical quantum advantage for chemistry, cryptanalysis (requiring ~4,000 logical qubits for RSA-2048 breaking), and potentially financial optimization
+- **CRQC timeline for RSA-2048:** Most expert estimates: 2034–2040, with meaningful uncertainty range of 2030–2050
 
 ## Related
 

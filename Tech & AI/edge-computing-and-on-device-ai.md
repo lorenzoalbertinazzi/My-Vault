@@ -3,7 +3,7 @@ title: Edge Computing and On-Device AI Inference
 date: 2026-06-06
 tags: [tech, AI, edge-computing, on-device-AI, TinyML, model-compression, inference, hardware, quantization, pruning]
 source: Warden & Situnayake (2019), MCUNet (Han Lab MIT), MLPerf benchmarks, Qualcomm AI Research
-last_updated: 2026-06-06
+last_updated: 2026-06-10
 ---
 
 ## Summary
@@ -247,6 +247,51 @@ On-device inference for tasks currently handled by cloud AI would, at scale, rep
 - **[[neuromorphic-computing]]:** Neuromorphic chips (Intel Loihi, IBM TrueNorth) represent an alternative approach to energy-efficient edge inference with fundamentally different architectural principles
 - **[[quantum-computing-architecture-and-applications]]:** Quantum sensing at the edge (quantum gravimeters, magnetometers) will generate data requiring local quantum-classical hybrid processing
 - **[[agentic-ai-and-multi-agent-systems]]:** On-device AI agents that plan and execute tasks locally represent the next frontier of personal computing
+
+### 2026 On-Device LLM State: 20B+ Models, Local RAG, and the Privacy Architecture Maturation
+
+**The 20B Parameter Barrier Falls (2026):**
+Qualcomm's Snapdragon 8 Elite and MediaTek's Dimensity 9400 — the dominant 2026 flagship Android SoC platforms — have broken the 20B parameter barrier for on-device inference at consumer-grade power budgets:
+
+- **Qualcomm Snapdragon 8 Elite:** 75 TOPS Hexagon NPU; with INT4 quantization, supports 20B parameter models at 15–25 tokens/second at 1.5–2W power draw
+- **MediaTek Dimensity 9400:** 50 TOPS APU; 20B INT4 models at 12–18 tokens/second
+- **Samsung Galaxy S26 (Exynos 2600):** Ships with Gemini Nano 2 (4.7B) pre-loaded; optional download of Gemini Nano XL (14B) for enhanced capabilities
+
+**On-Device RAG with Local Vector Stores:**
+The combination of 20B on-device LLMs with local vector databases (MiniLM-L6 embeddings, 384-dimensional; FAISS or HNSWLIB index stored in 200–500MB) enables **on-device retrieval-augmented generation** — queries against a personal knowledge base that never leaves the device:
+- Apple's Notes app (iOS 18.4) uses on-device vector search for semantic note retrieval, embedding note content with a 128-dimensional MobileNet-based text encoder
+- Samsung's Circle to Search (2026 update) maintains a local embedding index of the user's recent app content for contextual search without cloud transmission
+- Obsidian and Notion (mobile clients, 2026) offer local semantic search using quantized embedding models running on the device NPU
+
+**Multi-Modal Edge AI (2026):**
+The frontier of edge AI has moved beyond text to multi-modal inference:
+- **Vision-language models on device:** PaLiGemma 2 (3B parameters, vision + language) runs at real-time speeds (10+ queries/second) on Apple A18 Pro Neural Engine and Qualcomm Hexagon, enabling on-device image understanding, document OCR, and scene description
+- **On-device audio intelligence:** Whisper v3-turbo (39M parameters) runs at 50× real-time speed on Apple A17/A18, enabling continuous transcription, language identification, and meeting summarization at <100mW power draw
+- **Gesture control AI:** Qualcomm's Always Sensing NPU (a low-power island drawing <5mW) runs continuous hand gesture detection models to enable UI control without touch — deployed in Samsung and Motorola devices in 2026
+
+**Apple's Private Cloud Compute: Setting the Privacy Standard:**
+Apple's Private Cloud Compute (PCC) architecture — deployed with iOS 18.1 and enhanced in iOS 18.4 — represents the most sophisticated privacy engineering in consumer AI deployment. The three-tier architecture:
+
+**Tier 1 (On-device):** Small, fast models for common tasks (2–3B parameter, Apple proprietary). Example tasks: email summarization, Siri query routing, proofread suggestions. Zero data leaves the device.
+
+**Tier 2 (Private Cloud Compute):** When Tier 1 capability is insufficient, queries route to PCC servers running larger models (estimated 15–30B parameter). PCC servers:
+- Run only Apple-approved, cryptographically verified software (attestation published via Apple's transparency log)
+- Have no persistent storage — data exists only during request processing
+- Are air-gapped from Apple's internal networks (independent security boundary)
+- Binary images are published for independent security researcher review (Apple Bug Bounty covers PCC)
+
+**Tier 3 (Third-party AI):** ChatGPT integration and future partners. Requires explicit per-request user consent; clearly labeled in the UI; governed by the third party's privacy policy.
+
+**The regulatory implication:** Apple's PCC architecture demonstrates that GDPR's "data minimization" and HIPAA's "minimum necessary" principles can be satisfied even for cloud-based AI inference, through technical design rather than contractual controls. The EU AI Office has cited PCC as a reference implementation for privacy-by-design in AI systems.
+
+**Autonomous Military Edge AI: The Unresolved Legal Question:**
+The most ethically contested edge AI deployment domain is autonomous weapons systems. Documented 2026 deployments:
+
+- **Russia:** Lancet-3M loitering munition incorporates on-board image processing to identify and home on military vehicles using a compact CNN running on a Xilinx FPGA at <20W
+- **Ukraine:** AI-augmented drone navigation systems (Saker Scout, Vyriy) use on-board INS + visual odometry when GPS is jammed — a direct edge AI navigation application
+- **US DoD:** Project Maven's edge deployment (classified specifications) processes electro-optical and infrared sensor data on unmanned aircraft using NVIDIA Jetson Orin compute modules
+
+The International Committee of the Red Cross (ICRC) published updated guidance in March 2026 calling for binding international rules on autonomous weapons under IHL (International Humanitarian Law), noting that current edge AI capabilities make meaningful human control technically optional in a way that was not true even five years ago. No binding international agreement exists; the UN Convention on Certain Conventional Weapons (CCW) discussions remain stalled.
 
 ## Related
 - [[llm-inference-optimization]]
