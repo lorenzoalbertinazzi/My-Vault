@@ -242,3 +242,30 @@ The US, Ukraine, and Russia held **three rounds of negotiations in the UAE and S
 
 **US Congress and Aid Politics — June 4 Vote:**
 On June 4, 2026, the US House voted **218–204** on a discharge petition to advance military aid to Ukraine combined with tougher Russia sanctions — one of the closest votes on Ukraine support in the current Congress. The margin reflects the continued strain within the Republican caucus between Trump loyalists (skeptical of Ukraine support) and more traditional internationalists. Ukraine's full defense budget requirement for 2026 stands at **$120 billion** — against committed support of roughly $50–60 billion from all Western sources combined. The gap is partially closed by frozen Russian asset interest income (~$3–4B annually from Euroclear) and EU budget support, but remains the single greatest structural risk to Ukraine's sustained resistance.
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: War Economy Finance, Reconstruction Bonds, and Sanctions Architecture**
+
+The Russia-Ukraine war has created a new template for [[geopolitical-risk-premium-and-markets]] in wartime — one that financial markets are still learning to price. Ukraine's war economy, sustained by $100B+ in Western financial support, has developed novel instruments: war bonds (Ukrainian government hryvnia bonds marketed to diaspora and ESG investors), frozen Russian asset interest income channeled to reconstruction, and IMF/World Bank extraordinary facility access. Russian frozen assets (~$300B held by Euroclear in Belgium) represent the most significant [[sovereign-wealth-funds]] seizure debate in history — the legal, financial, and precedent-setting dimensions examined in [[credit-markets-and-credit-risk]] and international law circles simultaneously. Russian war economy finance has been surprisingly resilient: elevated oil/gas revenues (despite discounted prices in the shadow market), domestic defense industry spending, and capital controls have sustained fiscal operations. [[Inflation-dynamics-and-investment]] analysis of Russia shows a wartime inflation pattern: 8-12% CPI, labor market tightening from military mobilization, and supply shortages for imported goods — a classic guns-and-butter constraint. Ukraine's [[currency-markets-and-fx]] management — maintaining a pegged hryvnia despite pressure — is a textbook case of wartime monetary management using international reserve support.
+
+**↔ Psychology: War Fatigue, Moral Injury, and National Resilience**
+
+Ukraine's societal resilience under three years of full-scale invasion has become a reference case for [[trauma-resilience-and-post-traumatic-growth]] research globally. Ukrainian society shows paradoxical post-traumatic growth patterns: national identity cohesion has strengthened dramatically (pre-war Ukrainian-language identity was ~55%; post-invasion it exceeds 80%), social trust among Ukrainians has increased relative to pre-war baselines, and purpose-driven motivation ([[self-determination-theory-intrinsic-motivation]]) is measurably elevated among combatants and civilians alike. Russian society exhibits the "authoritarian information bubble" phenomenon — [[cognitive-biases]] regarding the war's purpose and progress are systematically distorted by state media control, creating a population whose mental model of reality diverges increasingly from objective conditions. [[Moral-psychology-and-ethical-decision-making]] analysis of Russia's conduct — targeting civilian infrastructure, documented war crimes — fits the "moral disengagement" pattern Bandura described, where ideological framing of victims enables normally moral individuals to participate in atrocity. Putin's continued mobilization and territorial escalation despite costs demonstrates [[prospect-theory-and-decision-making]] loss-aversion at the leadership level: the subjective cost of admitting defeat exceeds the objective cost of continued war.
+
+**↔ Tech & AI: Drone Warfare Revolution, AI Targeting, and Satellite Intelligence**
+
+Ukraine-Russia has been the defining conflict for AI-enabled warfare. Ukrainian Brave1 initiative has produced 200+ drone and AI startups adapting commercial technology for warfare — the most concentrated defense-tech innovation ecosystem since DARPA's early days. [[Computer-vision-and-convolutional-neural-networks]] models trained on millions of surveillance drone frames can now identify tank models, artillery positions, and command post locations with sub-10-second classification. [[Edge-computing-and-on-device-ai]] is critical for drone operations under GPS jamming and communications interdiction — onboard processing allows autonomous navigation in degraded signal environments. [[Machine-learning-fundamentals]] models trained on artillery impact data optimize counterbattery fire timing and positioning. Starlink's role — satellite communications enabling Ukrainian military operations — demonstrates how [[agentic-ai-and-multi-agent-systems]] for communications depend on commercial space infrastructure in ways that create novel dependencies. [[Federated-learning-and-privacy-preserving-ml]] enables allied intelligence sharing without exposing sources: 40+ nations sharing threat intelligence through NATO systems without revealing national collection methods.
+
+## Related
+- [[geopolitical-risk-premium-and-markets]]
+- [[inflation-dynamics-and-investment]]
+- [[trauma-resilience-and-post-traumatic-growth]]
+- [[prospect-theory-and-decision-making]]
+- [[cognitive-biases]]
+- [[computer-vision-and-convolutional-neural-networks]]
+- [[edge-computing-and-on-device-ai]]
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]]
+- [[2026-05-30-europe-rearmament-nato-russia-threat]]
+- [[2026-05-30-nato-russia-gray-zone-war]]
+- [[multipolar-world-order-and-future-of-global-governance]]

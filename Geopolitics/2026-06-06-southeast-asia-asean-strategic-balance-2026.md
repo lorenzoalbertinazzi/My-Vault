@@ -187,3 +187,30 @@ For foreign policy, Vietnam under To Lam is expected to maintain the "bamboo dip
 
 **Indonesia's Prabowo — Strategic Autonomy with Chinese Investment:**
 President Prabowo Subianto (inaugurated October 2024) has maintained strategic autonomy while pursuing maximum economic benefit from both superpowers: **Chinese BRI investment** in nickel smelting and infrastructure (Indonesia controls 40%+ of global nickel reserves, critical for EV batteries) alongside **US defense cooperation** (joint exercises, F-15EX fighter procurement discussions). Indonesia's **"million-friend, zero-enemy" foreign policy doctrine** represents the most explicit formulation of ASEAN multi-alignment — and Prabowo's military background (former Kopassus special forces general) gives him the credibility to conduct robust US defense exercises without being characterized as pro-Western.
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: ASEAN Manufacturing Hub, FDI Flows, and China+1 Beneficiaries**
+
+ASEAN has emerged as the primary beneficiary of the US-China supply chain decoupling — a [[geopolitical-risk-premium-and-markets]] transformation reshaping regional FDI flows at historic pace. Vietnam, Malaysia, Indonesia, and Thailand are competing aggressively for manufacturing relocation: semiconductor assembly in Malaysia, electronics in Vietnam, automotive in Thailand, and data centers across Singapore. [[Private-equity-and-venture-capital]] investment into ASEAN tech reached record levels in 2025-2026, with Southeast Asian "super apps" (Grab, Sea Group, GoTo) competing with Chinese platforms for regional dominance. [[Macroeconomics-101]] analysis shows ASEAN's structural advantage: 680M population, $3.6T combined GDP, demographic youth dividend, and improving regulatory harmonization through the ASEAN Economic Community. [[Currency-markets-and-fx]] dynamics in ASEAN reflect differentiated China exposure: Vietnamese dong, Malaysian ringgit, and Thai baht all show complex correlations with yuan movements that reflect both trade competition and supply chain integration simultaneously. [[Fixed-income-deep-dive]] investors find ASEAN sovereign bonds attractive: Indonesian, Malaysian, and Philippine government bonds offer yield pickup over developed market equivalents with improving credit trajectories. [[Energy-transition-finance-and-green-capital-markets]] sees massive ASEAN opportunity: the region's renewable energy transition requires $2T+ in investment through 2035, with green bonds and sustainability-linked loans as primary instruments.
+
+**↔ Psychology: ASEAN Consensus Culture, Non-Alignment Psychology, and Identity**
+
+ASEAN's famous "ASEAN Way" — consensus decision-making, non-interference, and deliberate ambiguity — reflects deep regional [[social-psychology-and-group-dynamics]] norms shaped by colonial history and postcolonial nationalism. The region's non-alignment instinct is best understood through [[prospect-theory-and-decision-making]]: small and medium states facing a US-China binary choice experience the choice as forced loss regardless of which way they lean, driving preference for "strategic ambiguity" that preserves maximum option value. [[Cognitive-biases]] analysis of ASEAN elite decision-making shows heavy reliance on historical analogies: the Cold War "Finlandization" concept, the post-WWII "bamboo diplomacy" tradition, and Thai "bending with the wind" strategy all represent heuristic shortcuts that may mislead in novel great power competition contexts. Singapore's leadership style — technocratic, long-horizon, institutionally sophisticated — is a [[psychology-of-leadership]] exemplar that other ASEAN states study but struggle to replicate due to different institutional contexts. [[Negotiation-tactics]] within ASEAN are dominated by face-saving frameworks: direct confrontation is avoided through procedural delay, technical working groups, and "agreed language" that allows all parties to claim victory — an approach that works for trade disputes but strains under security pressure.
+
+**↔ Tech & AI: Digital Economy Race, Platform Competition, and AI Governance Emergence**
+
+ASEAN is becoming a contested arena for AI platform dominance between US, Chinese, and emerging indigenous technology ecosystems. Singapore functions as the region's AI governance laboratory: the PDPA (Personal Data Protection Act) evolution, AI Ethics Framework, and MAS FinTech regulatory sandbox are building governance infrastructure that neighboring states are adapting. [[Large-language-models-applications-and-limitations]] deployment in ASEAN faces unique multilingual challenges: 1,000+ languages and dialects across the region mean that English-centric LLMs systematically underserve non-English speakers, creating demand for language-specific models. [[Vector-databases-and-embeddings]] enable cross-lingual semantic search — a genuinely transformative capability for the region's business and government users navigating multiple language environments. [[Federated-learning-and-privacy-preserving-ml]] is being explored for cross-border financial intelligence sharing among ASEAN central banks — allowing AML/CFT pattern detection across borders without full data sovereignty concessions. [[Blockchain-and-distributed-ledger]] cross-border payment systems (Project Nexus, backed by BIS) are connecting ASEAN real-time payment networks, reducing dollar dependency and creating a regional payment infrastructure that reduces vulnerability to SWIFT weaponization.
+
+## Related
+- [[geopolitical-risk-premium-and-markets]]
+- [[private-equity-and-venture-capital]]
+- [[energy-transition-finance-and-green-capital-markets]]
+- [[social-psychology-and-group-dynamics]]
+- [[negotiation-tactics]]
+- [[large-language-models-applications-and-limitations]]
+- [[federated-learning-and-privacy-preserving-ml]]
+- [[2026-06-06-south-china-sea-philippines-china-tensions-2026]]
+- [[2026-06-06-myanmar-civil-war-resistance-junta-2026]]
+- [[2026-05-27-us-china-great-power-competition]]
+- [[multipolar-world-order-and-future-of-global-governance]]

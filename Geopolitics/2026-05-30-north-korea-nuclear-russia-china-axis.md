@@ -332,3 +332,30 @@ On **January 4, 2026**, North Korea launched multiple ballistic missiles in its 
 
 **Russia-DPRK Technology Transfer — The Nuclear and Space Exchange:**
 US Forces Korea Commander testimony to Congress in **April 2026** confirmed what intelligence analysts had long suspected: **Russia is sharing space, nuclear, and missile-applicable technology with North Korea** in exchange for North Korea's arms deliveries to Russia. Specific technology transfers reported include: satellite reconnaissance data sharing (DPRK gains access to Russian military satellite coverage of US bases in Japan and South Korea), solid-fueled rocket propulsion technology (advancing North Korea's ICBM development timeline), and potentially tactical nuclear warhead miniaturization technology. The DPRK's deployment of **10,000–15,000 troops to Kursk Oblast** (confirmed October 2024) — Russia's most costly military commitment in terms of exposing a nuclear partner's military directly — is being compensated through technology transfers that will outlast the Ukraine war and fundamentally alter the strategic balance on the Korean Peninsula for decades.
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: Sanctions Evasion, Illicit Finance, and Rare Earth Leverage**
+
+North Korea's deepening integration into a Russia-China axis creates unique [[geopolitical-risk-premium-and-markets]] dynamics rooted in sanctions evasion finance. DPRK has developed sophisticated [[cryptocurrency-and-digital-assets]] laundering networks — Lazarus Group cryptocurrency theft (estimated $3B+ since 2017) funds nuclear and missile programs by converting stolen crypto through mixer services and Chinese OTC desks, creating a [[blockchain-and-distributed-ledger]] threat to the entire crypto ecosystem's financial legitimacy. Russian-DPRK weapons trade (artillery shells, Hwasong missiles) operates through barter and shadow financial channels that [[credit-markets-and-credit-risk]] and correspondent banking compliance teams must monitor. China's economic lifeline to North Korea (representing ~90% of DPRK trade) is visible in [[currency-markets-and-fx]] flows through Dandong border crossings — a rare observable signal of an otherwise opaque economy. North Korea's mineral resources (rare earths, uranium) are increasingly relevant to [[real-assets-reits-and-commodities]] markets as the Russia-China axis seeks to develop DPRK resources as a sanctions-resistant supply chain. [[Islamic-finance-and-shariah-compliant-investing]] institutions face novel compliance challenges as DPRK sanctions evasion increasingly routes through Middle Eastern intermediaries.
+
+**↔ Psychology: Totalitarian Control, Information Deprivation, and Elite Defection Psychology**
+
+North Korea represents the most extreme [[social-psychology-and-group-dynamics]] experiment in human history — a society where complete information control has been maintained for 70+ years. [[Cognitive-biases]] research on information-deprived populations shows that individuals who lack external reference points construct reality from available signals with extraordinary loyalty to regime narratives, explaining why North Korean defector testimony consistently reveals genuine ideological belief (not just performative compliance) even among educated elites. Kim Jong-un's leadership style represents a pure [[psychology-of-leadership]] autocracy case: the executions of family members and senior officials (including his uncle Jang Song-thaek) demonstrate "power through fear" strategies from [[48-laws-of-power]] (Laws 1 and 2 — never outshine the master, never trust friends too much). Elite defection psychology is studied through the framework of [[prospect-theory-and-decision-making]]: defectors consistently describe a moment when the perceived probability of discovery exceeded the subjective threshold where survival instinct overrides loyalty — a probabilistic threshold crossing. [[Attachment-theory-and-relationships]] research on cult psychology offers the closest civilian analogs to North Korean societal psychology.
+
+**↔ Tech & AI: Cyber Weapons, Nuclear Command, and Technology Acquisition**
+
+North Korea's technology acquisition strategy — combining cyber theft, front companies, and academic espionage — is one of the most successful asymmetric programs globally. DPRK's Reconnaissance General Bureau uses [[large-language-models-applications-and-limitations]] for enhanced social engineering in targeted cyber attacks, generating context-aware phishing content that bypasses organizational security training. North Korean [[machine-learning-fundamentals]] expertise is surprisingly deep: defector testimony and leaked documents suggest domestically-trained ML engineers are applying deep learning to missile guidance system optimization. [[Cryptography-fundamentals-and-zero-knowledge-proofs]] is relevant to DPRK nuclear command-and-control: Western analysts debate whether DPRK has achieved second-strike survivable command systems or remains vulnerable to decapitation strikes that remove command authority — a critical unknown in deterrence calculations. The Russia-DPRK technical exchange is accelerating: Russian hypersonic technology transfer in exchange for DPRK ammunition supply is expanding to include drone warfare capabilities and [[computer-vision-and-convolutional-neural-networks]] targeting systems.
+
+## Related
+- [[geopolitical-risk-premium-and-markets]]
+- [[blockchain-and-distributed-ledger]]
+- [[cognitive-biases]]
+- [[psychology-of-leadership]]
+- [[48-laws-of-power]]
+- [[prospect-theory-and-decision-making]]
+- [[large-language-models-applications-and-limitations]]
+- [[cryptography-fundamentals-and-zero-knowledge-proofs]]
+- [[2026-05-27-us-china-great-power-competition]]
+- [[2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]]
+- [[multipolar-world-order-and-future-of-global-governance]]

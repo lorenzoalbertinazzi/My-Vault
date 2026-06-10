@@ -243,3 +243,30 @@ AUKUS Pillar I submarine cooperation — the US-UK-Australia nuclear-powered sub
 
 **War on the Rocks Assessment — Semiconductor Controls vs. Rare Earth Leverage:**
 War on the Rocks' analysis ("The Burn and the Choke") provides the most analytically precise framework for assessing which side holds the stronger long-term position in the strategic technology competition. The "burn" (US semiconductor controls) is a slow-acting structural constraint: China can access 7nm chips at significant efficiency cost for 2–3 years, but the gap compounds over time as US frontier chips advance to 2nm and below. The "choke" (Chinese rare earth controls) is rapid-acting: rare earth magnet supply interruption affects defense production within weeks, not years. But the asymmetry favors the US in the long run: semiconductor capability compounds; rare earth substitution (synthetic magnets, alternative materials, processing capacity expansion in Australia and Canada) is technically achievable within 10–15 years. The War on the Rocks conclusion: China's rare earth leverage is the most powerful near-term tool, but the semiconductor controls are the most consequential long-term weapon — and both sides understand this.
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: Trade War Economics, Tariff Incidence, and Industrial Policy**
+
+US-China strategic competition has fundamentally transformed trade finance and [[macroeconomics-101]] assumptions about comparative advantage. The layered tariff regimes — US tariffs on Chinese goods now averaging 45-60% across key categories — have altered [[inflation-dynamics-and-investment]] by raising imported goods prices for US consumers while simultaneously incentivizing domestic manufacturing investment that is structurally inflationary. [[Valuation-fundamentals]] for US multinationals with China exposure (Apple, Tesla, Nike) now require explicit scenario modeling for decoupling scenarios that would have been considered tail risks five years ago. Chinese companies listed on US exchanges face delisting risk under the HFCAA, driving a restructuring of [[equity-markets]] cross-listings toward Hong Kong and Singapore. The Belt and Road Initiative's second phase — more focused on digital infrastructure than physical — competes directly with US-backed Partnership for Global Infrastructure (PGI), creating a bifurcated [[project-finance]] ecosystem in the Global South. [[Fixed-income-deep-dive]] investors must navigate Chinese government bonds, which offer attractive yields but carry political risk: Western institutional ownership of Chinese CGBs dropped from $400B peak to under $250B by mid-2026 as geopolitical risk premiums overwhelmed yield differentials.
+
+**↔ Psychology: Strategic Patience, Face, and the Thucydides Trap**
+
+The Thucydides Trap dynamic between the US and China operates through psychological mechanisms beyond pure power calculations. Chinese strategic culture emphasizes "mianzi" (face) and [[negotiation-tactics]] based on long-term patience — a "waiting out" strategy rooted in [[stoicism-and-stoic-philosophy]]-adjacent traditions of endurance under adversity. American political culture, shaped by [[positive-psychology-and-wellbeing-science]] emphasis on immediate feedback and tangible wins, produces policy cycles that Chinese strategists exploit through deliberate timeline mismatches. [[Moral-psychology-and-ethical-decision-making]] frameworks diverge: US frameworks emphasize rule-based order and individual rights; Chinese frameworks emphasize sovereign equality and non-interference — neither is purely cynical, both reflect genuine moral frameworks that make negotiated middle grounds philosophically unstable. [[Emotional-intelligence]] at the diplomatic level is chronically underdeveloped: both sides' lead negotiators routinely misread emotional cues and cultural signals, leading to miscalibrated escalation responses. [[Mental-models]] built on Cold War US-Soviet competition actively mislead — China's integration into the global economy creates interdependencies the Soviet rivalry never had.
+
+**↔ Tech & AI: Semiconductor Chokepoints and the Battle for AI Infrastructure**
+
+The strategic competition's sharpest edge is [[llm-inference-optimization]] and chip design. Taiwan's TSMC — producing 92% of sub-5nm chips globally — sits at the center of both the [[2026-05-30-china-taiwan-strait-military-tensions]] risk and the AI infrastructure competition. US investment in domestic chip fabrication (CHIPS Act fabs now ramping in Arizona and Ohio) is attempting to reduce this chokepoint dependence, with [[transformer-architecture]] training workloads increasingly running on domestically produced chips. China's SMIC has achieved 7nm production despite export controls, demonstrating the limits of technological containment — but the gap in cutting-edge EUV lithography remains a genuine constraint. [[Quantum-computing-architecture-and-applications]] represents a second frontier: Chinese quantum investment (~$15B cumulative through 2026) threatens cryptographic foundations that [[cryptography-fundamentals-and-zero-knowledge-proofs]] relies upon, accelerating post-quantum cryptography standardization globally. [[Docker-and-containerization]] and [[kubernetes-and-container-orchestration]] standards — predominantly US-originated open-source — remain one domain of genuine technical cooperation, as both nations' developers contribute to shared infrastructure.
+
+## Related
+- [[geopolitical-risk-premium-and-markets]]
+- [[macroeconomics-101]]
+- [[inflation-dynamics-and-investment]]
+- [[cognitive-biases]]
+- [[negotiation-tactics]]
+- [[stoicism-and-stoic-philosophy]]
+- [[llm-training-and-scaling-laws]]
+- [[quantum-computing-architecture-and-applications]]
+- [[2026-05-27-us-china-great-power-competition]]
+- [[2026-05-30-china-taiwan-strait-military-tensions]]
+- [[multipolar-world-order-and-future-of-global-governance]]

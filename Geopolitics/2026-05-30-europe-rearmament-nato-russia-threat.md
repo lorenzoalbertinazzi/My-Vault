@@ -244,3 +244,30 @@ The US House vote of **218–204** on June 4, 2026 to advance Ukraine military a
 
 **AI and Technology Integration in European Defense:**
 The Ukraine war's drone lessons have accelerated European investment in **AI-assisted targeting, FPV drone swarms, and electronic warfare**. Germany's Bundeswehr has committed €3.2 billion to AI defense research through 2030; France's SGDSN (national security general secretariat) published a military AI roadmap in January 2026. The core operational insight from Ukraine, being incorporated into European doctrine: the primary military application of AI in peer-adversary conflict is not autonomous weapons but **kill-chain compression** — using AI-assisted image recognition and decision support to reduce the time from sensor (drone observation) to shooter (artillery, missiles) from minutes to seconds. European firms including Helsing (Munich), Thales (France), and MBDA (multi-nation) are developing AI targeting packages specifically calibrated to the Ukraine-observed kill-chain model, with Finland, Estonia, and Norway leading on testing given their proximity to the Russian threat.
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: Defense Spending, Bonds, and Industrial Policy Windfall**
+
+Europe's rearmament is the largest discretionary fiscal expansion in NATO's history — a [[macroeconomics-101]] supply-side shock wrapped in a demand stimulus. Germany's constitutional debt brake suspension to fund the €100B+ Sondervermögen defense fund has repriced Bund yields meaningfully, as markets now price a permanently higher German fiscal deficit trajectory. [[Fixed-income-deep-dive]] investors have had to revise "risk-free rate" assumptions for European sovereigns: French OAT, Italian BTP, and Polish government bond spreads versus Bunds have all narrowed as defense spending replaces the implicit fiscal hierarchy where Germany's austerity anchored European rates. [[Private-equity-and-venture-capital]] has created an entirely new sub-sector: "European defense tech" — covering drone manufacturers, C4ISR systems, ammunition production, and satellite communications. Rheinmetall, Leonardo, BAE Systems and domestic champions have seen [[valuation-fundamentals]] multiples re-rate toward US defense prime levels as order books extend 5-7 years. [[Energy-transition-finance-and-green-capital-markets]] faces partial crowding-out as defense capital competes with green investment for both government budget space and industrial capacity — though energy security and decarbonization increasingly align in reducing Russian gas dependency. [[Factor-investing-and-smart-beta]] defense factor exposures have outperformed dramatically; momentum and quality factors were particularly strong in European defense equities through 2025-2026.
+
+**↔ Psychology: Threat Recalibration, Social Cohesion, and War Preparedness**
+
+Europe's rearmament is as much a psychological as a material transformation. After 30 years of post-Cold War "peace dividend" psychology — where defense was seen as waste and military service as anachronistic — European publics are undergoing rapid [[cognitive-biases]] correction: the availability heuristic has reset as images of Ukrainian cities under bombardment made abstract Russian threat concrete. [[Social-psychology-and-group-dynamics]] research on collective threat response predicts the in-group solidarity boost Europe is experiencing — "rally around the flag" effects extend to European identity, not just national identity, in a historically unusual development. [[Psychology-of-leadership]] is central: leaders like Poland's Tusk and the Baltic state premiers who correctly diagnosed Russian threat early have gained credibility that creates a template for credible threat communication. Germany's psychological shift is most profound — moving from "Nie wieder Krieg" (never again war) pacifism to accepting rearmament as moral necessity required confronting [[moral-psychology-and-ethical-decision-making]] frameworks embedded since 1945. [[Habit-formation]] theory predicts that the one-time rearmament surge will persist as defense spending habits institutionalize in budget processes, creating structural floors to European military investment.
+
+**↔ Tech & AI: Defense Innovation, Dual-Use AI, and Cyber Resilience**
+
+European rearmament is driving unprecedented defense-tech startup formation. [[Agentic-ai-and-multi-agent-systems]] capabilities are being procured for NATO's command and control modernization — Palantir, Anduril, and European equivalents are competing for C2 platform contracts. [[Edge-computing-and-on-device-ai]] is critical for battlefield systems that can't rely on cloud connectivity in contested electromagnetic environments — a key NATO requirement. The EU's AI Act creates a regulatory complexity for defense AI: military systems are explicitly excluded from its scope, creating a legal gap that [[ai-governance-and-regulation-frameworks]] researchers are urgently filling with proposed military AI ethics frameworks. [[Cryptography-fundamentals-and-zero-knowledge-proofs]] capabilities are central to NATO's post-quantum cryptography migration — Russian and Chinese advances in quantum computing are accelerating the timeline for upgrading military communication systems. [[Federated-learning-and-privacy-preserving-ml]] enables NATO allies to share threat intelligence derived from national sensor networks without sharing raw classified data — a critical capability for coalition warfare.
+
+## Related
+- [[geopolitical-risk-premium-and-markets]]
+- [[macroeconomics-101]]
+- [[fixed-income-deep-dive]]
+- [[cognitive-biases]]
+- [[psychology-of-leadership]]
+- [[moral-psychology-and-ethical-decision-making]]
+- [[agentic-ai-and-multi-agent-systems]]
+- [[ai-governance-and-regulation-frameworks]]
+- [[2026-05-30-russia-ukraine-war-2026-frontlines-and-diplomacy]]
+- [[2026-05-30-nato-russia-gray-zone-war]]
+- [[multipolar-world-order-and-future-of-global-governance]]

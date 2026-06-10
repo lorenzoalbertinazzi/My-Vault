@@ -220,3 +220,30 @@ China's April–May 2026 military activities introduced two capabilities of majo
 
 **PLA Taiwan Strait Pattern — 300+ ADIZ Incursions Per Month:**
 Since President Lai Ching-te took office in May 2024, PLA ADIZ incursions around Taiwan have averaged over **300 aircraft sorties per month** — representing a sustained normalization of median-line violations that were treated as significant escalations before 2020. The June 3, 2026 single-day patrol involved **18 PLA aircraft sorties and 8 PLAN ships**, with 14 of 18 aircraft crossing the Taiwan Strait median line. The systematic normalization follows a documented PRC strategy: desensitize international response to intrusions, making each successive escalation appear incremental rather than alarming. China's **2026 defense budget: 1.94 trillion yuan (~$277 billion)**, up 7% — the 11th consecutive year of single-digit but sustained growth, maintaining consistent military modernization despite the corruption purge disruption.
+
+### June 2026 Vault Cross-Links
+
+**↔ Finance: TSMC Risk, Supply Chain Insurance, and War Scenario Pricing**
+
+Taiwan hosts the world's most strategically concentrated industrial asset: TSMC's fab network producing >90% of sub-5nm semiconductors. [[Geopolitical-risk-premium-and-markets]] analysts have developed explicit "Taiwan invasion scenario" models that estimate 2-4% global GDP impact from a full blockade, dwarfing the COVID supply shock for technology-dependent industries. [[Real-assets-reits-and-commodities]] investors watch Taiwanese equity markets (specifically TSMC's NYSE ADR spread versus Taipei listing) as a real-time indicator of invasion probability pricing. [[Derivatives-futures-and-forwards]] markets lack a direct Taiwan conflict hedge, forcing sophisticated investors to use a basket of proxies: long gold, short Korean Won, long defense contractors, short semiconductor equipment stocks. [[Private-equity-and-venture-capital]] "Taiwan risk transfer" has been a major theme in 2025-2026 as semiconductor companies pursue geographic diversification (Intel Ohio, TSMC Arizona, Samsung Texas) — each announced fab reduces the concentration risk priced into the global economy. [[Fixed-income-deep-dive]] investors in Taiwanese corporate bonds face embedded political risk that standard [[Discounted-Cash-Flow-Analysis]] models don't capture: a forced interruption scenario would trigger cross-default clauses across TSMC's $30B+ bond issuance. [[Currency-markets-and-fx]] position the Taiwan Dollar as a leading geopolitical barometer — significant TWD weakness relative to Asian peers signals elevated invasion risk pricing.
+
+**↔ Psychology: Red Lines, Ambiguity, and the Psychology of Deterrence**
+
+Taiwan's deterrence posture rests on deliberate strategic ambiguity — a psychological strategy rooted in [[game-theory-and-strategic-thinking]]. US "strategic ambiguity" (refusing to explicitly commit to military defense) creates uncertainty in Chinese planning that aims to deter invasion without provoking it — exploiting the loss-aversion dynamic from [[prospect-theory-and-decision-making]] where Xi's potential losses from failed invasion (international isolation, economic devastation, regime delegitimization) must outweigh gains. However, as [[cognitive-biases]] research shows, leaders who have publicly committed to reunification as a core legitimacy claim face "sunk cost" psychology that makes rational de-escalation increasingly costly. Taiwan's population shows remarkable [[stress-physiology-and-performance-optimization]] resilience — surveys show surprisingly high civil defense preparedness and relatively low acute anxiety despite objective risk levels — potentially reflecting [[positive-psychology-and-wellbeing-science]] adaptation to chronic threat. Chinese military planners face [[social-psychology-and-group-dynamics]] challenges: PLA combat readiness assessments are distorted by the same hierarchical information filtering that corrupts all authoritarian military intelligence systems, meaning Xi may be receiving systematically optimistic invasion scenario assessments.
+
+**↔ Tech & AI: Semiconductor Sovereignty, AI Weapons, and Information War**
+
+The Taiwan strait is simultaneously the world's most critical technology chokepoint and a live testing ground for AI-enabled military systems. Chinese PLA drone swarms use [[computer-vision-and-convolutional-neural-networks]] trained on years of strait reconnaissance data; Taiwanese air defense integrates [[machine-learning-fundamentals]]-based radar fusion to distinguish civilian from military threats at high decision tempo. [[Llm-training-and-scaling-laws]] is directly shaped by Taiwan strait risk: every major AI lab's compute planning includes a "Taiwan disruption scenario" that would eliminate global GPU supply. The conflict's information dimension runs through [[large-language-models-applications-and-limitations]]: Chinese influence operations targeting Taiwanese public opinion use LLM-generated content at scale, tested through [[prompt-engineering]] optimization. [[Quantum-computing-architecture-and-applications]] has a Taiwan angle: TSMC fabricates quantum processor chips for IBM and Google — a Taiwan contingency would set back quantum computing timelines by 5-8 years. [[Ai-safety-and-alignment]] researchers highlight Taiwan as a scenario where autonomous weapons systems operating faster than human decision loops create genuine accident escalation risk.
+
+## Related
+- [[geopolitical-risk-premium-and-markets]]
+- [[real-assets-reits-and-commodities]]
+- [[game-theory-and-strategic-thinking]]
+- [[prospect-theory-and-decision-making]]
+- [[cognitive-biases]]
+- [[llm-training-and-scaling-laws]]
+- [[computer-vision-and-convolutional-neural-networks]]
+- [[2026-05-27-us-china-great-power-competition]]
+- [[2026-05-27-us-china-strategic-competition]]
+- [[2026-06-06-south-china-sea-philippines-china-tensions-2026]]
+- [[multipolar-world-order-and-future-of-global-governance]]
