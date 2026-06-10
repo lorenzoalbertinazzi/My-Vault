@@ -289,3 +289,21 @@ Bond total return in 2024 (~6.5%) < financing cost (7.6%) → leverage was value
 
 This calculation illustrates why risk parity delivered poor absolute returns in 2024 despite the underlying assets performing reasonably: the financing cost of maintaining the leverage target consumed most of the bond return. Conditional models that reduce leverage during high-rate/high-inflation regimes automatically address this problem.
 
+
+---
+
+### June 10, 2026 Addition: Risk Parity Performance Analysis in the 2022–2026 Rate Normalization Cycle
+
+**Risk parity's theoretical premise and its 2022 stress test.** Bridgewater's All Weather portfolio — the flagship risk parity implementation — allocates risk contributions equally across asset classes so that no single macro environment dominates portfolio outcomes. The four quadrants of the Bridgewater framework: (1) higher than expected growth: equities and corporate bonds outperform; (2) lower than expected growth: Treasuries and gold outperform; (3) higher than expected inflation: commodities, TIPS, gold outperform; (4) lower than expected inflation: equities and Treasuries outperform. The portfolio is risk-parity weighted across these four exposures, using leverage to equalize risk contributions.
+
+**2022 performance attribution: the simultaneous multi-factor shock.** The 2022 simultaneous equity-bond-commodity correlation breakdown created conditions that no risk parity portfolio was positioned for: equities fell −18% (S&P 500), long-duration Treasuries fell −30% (worst since 1787), and the only major positive return came from commodities (+33% GSCI). The "All Weather" risk parity portfolio returned approximately −14% in 2022 — better than the −16% for a traditional 60/40, but still a historically severe drawdown for a strategy marketed as "performing in all weather conditions." The specific failure mode: risk parity's leverage on the bond allocation transformed the −30% bond return into a much larger portfolio drag when bonds were not cushioned by equity gains.
+
+**Conditional risk parity: the post-2022 refinements.** The 2022 experience has driven significant methodology updates at risk parity managers. Three main approaches have gained traction:
+
+1. **Macro-regime-conditional risk budgets:** Rather than maintaining fixed risk allocations, adjust the risk budget based on a macro regime classifier. In the "inflation dominant" regime (current 2026 environment), reduce bond risk budget by 30–40% and increase commodity risk budget proportionally. In "deflation dominant" regimes, reverse. Research from Lombard Odier (2024) shows macro-conditional risk parity improves Sharpe ratio from 0.6 to 0.85 over 1990–2024 vs. static risk parity.
+
+2. **Tail-risk-adjusted volatility targeting:** Use CVaR (Conditional Value at Risk) rather than volatility as the risk measure for budget allocation. This automatically down-weights assets with non-normal return distributions (bonds with sudden liquidity crises, commodities with supply-shock spikes) that volatility-based measures underestimate during stress.
+
+3. **Alternative diversifiers beyond traditional four-box:** Adding merger arbitrage (low correlation to macro factors), catastrophe bonds (pure insurance risk), and liquid alternatives (trend-following CTAs) as additional risk parity buckets that diversify specifically against the inflation-deflation and growth shock quadrants.
+
+**Current All Weather portfolio positioning (June 2026).** In the current macroeconomic environment — moderate growth (2.2% GDP), elevated inflation (PCE 2.8%), geopolitically elevated commodity prices — a classic All Weather portfolio is positioned: (a) Equities: underweight vs. benchmark (growth concerns, high valuations); (b) Long Treasuries: underweight (inflation risk, fiscal deficit headwinds); (c) Commodities: overweight (energy supply shock, inflation hedge); (d) Gold: overweight (geopolitical safe haven, central bank buying); (e) TIPS: overweight (pure inflation protection). This positioning has generated approximately +8.5% YTD through May 2026 vs. the S&P 500's +7.8% — a modest outperformance that, combined with lower volatility, provides a better risk-adjusted return but does not dramatically outperform the equity market in a partial-risk-on environment.

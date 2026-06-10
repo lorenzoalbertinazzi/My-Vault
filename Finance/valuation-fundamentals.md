@@ -568,3 +568,25 @@ OpenAI hypothetical steady-state (year 2030):
 
 This framework illustrates how the "obscenely high" multiples paid for AI companies can be rationalized — but also how sensitive they are to terminal growth and margin assumptions, making even 20% changes in assumptions move valuations by 30–50%.
 
+
+---
+
+### June 10, 2026 Addition: Enterprise Value Multiples Across the 2026 Macro Environment — Sector Analysis
+
+**EV/EBITDA multiples in June 2026: the sector divergence.** Equity valuations in June 2026 present an extraordinary cross-sector divergence driven by AI-related growth premiums and the interest rate environment. Current S&P 500 trailing twelve-month EV/EBITDA multiples by sector:
+
+| Sector | EV/EBITDA (June 2026) | 2019 Average | Premium/Discount |
+|--------|----------------------|--------------|-----------------|
+| Technology (AI-exposed) | 32× | 18× | +78% |
+| Healthcare | 14× | 13× | +8% |
+| Energy | 6× | 7× | −14% |
+| Financials | 9× | 10× | −10% |
+| Industrials | 16× | 13× | +23% |
+| Consumer Staples | 15× | 14× | +7% |
+| Materials | 10× | 9× | +11% |
+
+The AI technology premium is extreme by any historical standard. Nvidia (NVDA), the dominant GPU manufacturer for AI training, trades at approximately 38× forward EV/EBITDA — implying the market expects EBITDA margins and growth rates to remain extraordinarily elevated for a decade+. Energy's discount reflects both the "stranded assets" narrative (long-term fossil fuel demand declining) and the market's view that the current oil price elevation is temporary.
+
+**The quality spread and earnings quality assessment in 2026.** In the current environment where corporate debt costs have risen 200–400 bps since 2021, "earnings quality" — the degree to which reported earnings reflect durable, cash-based economic profit rather than accounting adjustments — has become a more critical valuation input. A comprehensive earnings quality framework involves: (1) **accruals ratio** = (Net Income − CFO) / Average Net Operating Assets — a high positive accruals ratio indicates earnings are accruing faster than cash generation, a warning sign; (2) **EBITDA-to-Free-Cash-Flow bridge**: a healthy company converts >80% of EBITDA to FCF; conversion below 60% warrants investigation of capex intensity, working capital drag, or interest cost burden; (3) **Maintenance vs. growth capex distinction**: companies that conflate maintenance capex with growth capex in investor disclosures overstate "normalized" FCF.
+
+**Sum-of-the-parts (SOTP) valuation — practical application for conglomerates.** Sum-of-the-parts analysis values a diversified company by valuing each business segment independently and summing them, often revealing a "conglomerate discount" — the tendency of diversified companies to trade at less than the sum of their parts. Google parent Alphabet provides a current example: breaking down Alphabet's implied valuation reveals the "conglomerate discount" from its Other Bets (Waymo, DeepMind as standalone businesses) relative to Google Search/YouTube/Cloud as the core businesses. Analysts applying SOTP: (1) Google Services (Search, YouTube, Maps): $1.6T (20× EBITDA); (2) Google Cloud: $400B (15× revenue, reflecting AWS/Azure comparable); (3) Waymo (robotaxi): $100–200B (discounted DCF on 2030+ revenues); (4) Alphabet Capital (25% stake in SpinCo assets): $50B. Total SOTP: $2.15–2.25T vs. current market cap ~$2.0T — suggesting modest upside from sum-of-parts realization. The discount largely reflects market uncertainty about how to value the optionality in emerging businesses.
