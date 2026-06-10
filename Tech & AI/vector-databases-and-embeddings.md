@@ -545,3 +545,21 @@ Vector embeddings have transformed financial alternative data analysis. Earnings
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — Embedding-based alternative data; semantic similarity search in investment research
 - [[Psychology/memory-systems-and-learning-science]] — Semantic memory as high-dimensional similarity space; embedding models as computational semantic memory
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Embedding model provenance and data sovereignty; Chinese vs. Western semantic representation spaces
+
+---
+
+### June 2026 Vault Cross-Links: Vector Databases as the Memory Infrastructure of AI
+
+**Vector Databases ↔ Finance:** Semantic search over financial documents is the primary enterprise vector database application in 2026. Pinecone, Weaviate, and Milvus are deployed at major investment banks for: (1) earnings call transcript similarity search ("Find all management comments about supply chain disruption in the past 5 years"); (2) bond prospectus covenant comparison ("Find all bonds with covenant structures similar to this new issuance"); (3) regulatory change impact assessment ("Which policies in our trading book are affected by the new FRTB requirements?"). The [[quantitative-finance-and-algorithmic-trading]] note describes signal generation; the [[credit-markets-and-credit-risk]] note covers covenant analysis applications.
+
+**Vector Databases ↔ Geopolitics/Intelligence:** Intelligence agencies use vector databases for cross-lingual entity matching — identifying the same person, organization, or location mentioned in documents across languages through semantic embedding rather than string matching. This enables Arabic, Mandarin, Farsi, and Russian OSINT to be queried against English databases through semantic similarity, dramatically expanding the scope of automated intelligence analysis. See [[2026-05-27-us-china-great-power-competition]] for intelligence capability implications and [[retrieval-augmented-generation]] for the RAG system that vector databases enable.
+
+**Vector Databases ↔ Neuroscience:** The embedding space that vector databases index has a remarkable parallel to hippocampal memory organization. The hippocampus encodes memories as distributed patterns of neural activity across cells, with similar experiences encoded as similar activity patterns — effectively implementing a biological vector similarity search when retrieving related memories. The "context-associative retrieval" property of vector databases (returning documents semantically related to a query) mirrors the "pattern completion" function of hippocampal memory described in [[memory-systems-and-learning-science]].
+
+**New wikilinks:**
+- [[retrieval-augmented-generation]] — RAG using vector database retrieval
+- [[large-language-models-applications-and-limitations]] — LLM + vector DB for memory augmentation
+- [[quantitative-finance-and-algorithmic-trading]] — semantic search in financial research
+- [[credit-markets-and-credit-risk]] — covenant analysis via vector search
+- [[memory-systems-and-learning-science]] — hippocampal memory parallel to vector search
+- [[2026-05-27-us-china-great-power-competition]] — cross-lingual intelligence vector search

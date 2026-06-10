@@ -321,3 +321,21 @@ The rise of data sovereignty laws (China's PIPL, India's PDPB, EU's GDPR, Brazil
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Data sovereignty and AI development fragmentation; federated learning as sovereignty-preserving collaboration
 - [[Finance/central-bank-digital-currencies-cbdc]] — Privacy-preserving financial transaction monitoring; ZKP and federated learning for AML compliance
 - [[Psychology/cognitive-biases]] — Privacy bias and willingness to share data; behavioral economics of privacy consent
+
+---
+
+### June 2026 Vault Cross-Links: Federated Learning at the Intersection of Privacy, Technology, and Policy
+
+**Federated Learning ↔ Geopolitics (data sovereignty):** Data sovereignty — the principle that data generated within a jurisdiction is subject to that jurisdiction's laws — is creating a major driver for federated learning adoption. China's Personal Information Protection Law (2021), the EU's GDPR, and India's DPDP Act (2023) all contain provisions restricting cross-border data transfer — making cloud-based centralized ML training legally problematic for applications touching personal data in multiple jurisdictions. Federated learning, by keeping data local and sharing only model updates, provides a technical solution to data sovereignty requirements. See [[2026-05-27-us-china-great-power-competition]] for the strategic data sovereignty context and [[ai-governance-and-regulation-frameworks]] for regulatory requirements.
+
+**Federated Learning ↔ Finance:** The key financial application of FL is cross-institutional fraud detection. Individual banks can improve fraud detection accuracy by learning from each other's fraud patterns — but sharing actual transaction data violates competitive confidentiality and regulatory requirements. FL enables banks to jointly train a fraud detection model (each bank trains on its own data, shares model gradients, receives updated model) without ever exposing actual transaction data. Mastercard's FL-based global fraud detection network (deployed 2024, 9 banks in pilot) demonstrated 10-15% reduction in false negatives while maintaining strict data isolation. See [[credit-markets-and-credit-risk]] for fraud risk context.
+
+**Federated Learning ↔ Healthcare (June 2026):** The COVID-19 pandemic catalyzed FL in healthcare: HealthFL Consortium (23 hospitals across 6 countries) used FL to train predictive models for ICU deterioration on combined but never-shared patient data, achieving AUC 0.89 — significantly outperforming any single hospital's model. By 2026, FL is standard for multi-site clinical AI development at major academic medical centers. Connection to [[2026-06-06-global-antibiotic-resistance-crisis-2026]]: FL allows antibiotic resistance pattern surveillance across hospitals in multiple countries without requiring actual patient data sharing — critical for tracking emerging resistant strains before they become global threats.
+
+**New wikilinks:**
+- [[edge-computing-and-on-device-ai]] — edge deployment as FL prerequisite
+- [[cryptography-fundamentals-and-zero-knowledge-proofs]] — secure aggregation cryptography in FL
+- [[credit-markets-and-credit-risk]] — cross-bank FL for fraud detection
+- [[ai-governance-and-regulation-frameworks]] — data sovereignty driving FL adoption
+- [[2026-06-06-global-antibiotic-resistance-crisis-2026]] — FL in antibiotic resistance surveillance
+- [[2026-05-27-us-china-great-power-competition]] — data sovereignty and AI fragmentation

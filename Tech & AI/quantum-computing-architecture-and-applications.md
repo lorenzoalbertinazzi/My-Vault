@@ -867,3 +867,20 @@ Quantum computing's most consequential near-term application is cryptanalysis: S
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — Quantum Monte Carlo for derivatives pricing; quantum optimization for portfolio construction
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Quantum computing as strategic competition; China's quantum satellite network; CRQC race
 - [[Tech & AI/cryptography-fundamentals-and-zero-knowledge-proofs]] — Post-quantum cryptography standards; Kyber and Dilithium quantum-resistant algorithms
+
+---
+
+### June 2026 Vault Cross-Links: Quantum Computing at the Frontier of Technology and Geopolitics
+
+**Quantum Computing ↔ Geopolitics (June 2026 update):** The quantum computing race has intensified. Google's Willow chip (December 2024) demonstrated quantum error correction progress — qubits' error rates decrease as system size increases, the key threshold for practical quantum advantage. China's QUESS satellite (2016) and Micius quantum network demonstrated quantum key distribution (QKD) over 1,200 km — China leads in deployed quantum communication infrastructure. See [[2026-05-27-us-china-great-power-competition]] for the broader strategic technology competition. The US-China Quantum Initiative Act (2026) restricts quantum technology exports with even stricter controls than semiconductor restrictions.
+
+**Quantum Computing ↔ Finance:** Quantum algorithms for Monte Carlo simulation could reduce derivatives pricing computation from hours to minutes — directly impacting options trading, VaR calculation, and structured product valuation. See [[Black-Scholes-Option-Pricing-Model]] and [[Value-at-Risk-and-CVaR]]. JPMorgan and Goldman Sachs have quantum computing research teams specifically focused on financial optimization problems: portfolio optimization (quantum annealing), risk simulation (quantum Monte Carlo), and fraud pattern detection (quantum machine learning). Timeline estimates: practical quantum advantage in financial simulation by 2030-2035; the near-term reality (2026) is quantum-classical hybrid algorithms running on 1000+ qubit noisy devices.
+
+**Quantum Computing ↔ Cryptography:** The "harvest now, decrypt later" (HNDL) threat is real and pressing. State adversaries are recording encrypted communications now with the intention of decrypting them when cryptographically relevant quantum computers (CRQCs) become available — potentially in the 2030s. This creates an immediate security concern for data with long-term sensitivity (classified government communications, 30-year bond issuance terms, pharmaceutical R&D) that must be protected against future quantum decryption. See [[cryptography-fundamentals-and-zero-knowledge-proofs]] for post-quantum cryptography migration.
+
+**New wikilinks:**
+- [[cryptography-fundamentals-and-zero-knowledge-proofs]] — post-quantum cryptography necessity
+- [[Black-Scholes-Option-Pricing-Model]] — quantum Monte Carlo for options pricing
+- [[Value-at-Risk-and-CVaR]] — quantum algorithms for risk simulation
+- [[machine-learning-fundamentals]] — quantum machine learning applications
+- [[2026-05-27-us-china-great-power-competition]] — quantum technology as strategic battleground

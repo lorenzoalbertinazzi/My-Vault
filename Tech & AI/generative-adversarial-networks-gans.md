@@ -255,3 +255,20 @@ GAN-generated deepfakes are now a primary tool of state-sponsored disinformation
 - [[Geopolitics/2026-05-30-nato-russia-gray-zone-war]] — Deepfake deployment in hybrid warfare information operations
 - [[Psychology/social-psychology-and-group-dynamics]] — Deepfake-mediated social proof manipulation; synthetic media and mass opinion formation
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — GAN for synthetic financial data generation; data augmentation for rare market event modeling
+
+---
+
+### June 2026 Vault Cross-Links: GANs as Competitive Generation Systems
+
+**GANs ↔ Finance:** Conditional GAN architectures generate synthetic financial time series data that preserves statistical properties (volatility clustering, fat tails, leverage effect) of real market data. TimeGAN (Yoon et al., 2019) and FinGAN (Wiese et al., 2020) demonstrated that GAN-generated equity return series are statistically indistinguishable from real data by standard tests, while providing unlimited training data for rare event scenarios. See [[quantitative-finance-and-algorithmic-trading]] and [[Value-at-Risk-and-CVaR]] for the risk management applications.
+
+**GANs ↔ Information Operations (Geopolitics):** GAN-generated "deepfake" imagery and video is deployed in active information operations. The [[2026-05-30-nato-russia-gray-zone-war]] note documents Russian use of face-swapped video in fabricated military atrocity claims. The detection arms race: GAN discriminators trained on real/fake pairs achieve >95% detection accuracy in controlled settings but drop to 60-70% on novel GAN architectures — because GANs are specifically trained to fool discriminators. The C2PA provenance standard (digital content credentials) is the more robust countermeasure than detection AI. See [[diffusion-models-and-image-generation]] for the newer generation of synthetic media.
+
+**GANs ↔ Medicine:** GANs for medical image augmentation (generating additional training examples for rare pathology classes) are validated in multiple specialties: CycleGAN-generated synthetic dermoscopy images for rare melanoma subtypes improved classification models by 8-12% in external validation. GAN-generated synthetic CT scans with known tumor characteristics enable radiation therapy planning algorithm training without patient data privacy exposure — a direct application of [[federated-learning-and-privacy-preserving-ml]] principles.
+
+**New wikilinks:**
+- [[diffusion-models-and-image-generation]] — diffusion models as GAN successor
+- [[quantitative-finance-and-algorithmic-trading]] — synthetic financial data for strategy testing
+- [[Value-at-Risk-and-CVaR]] — GAN-generated stress scenarios
+- [[federated-learning-and-privacy-preserving-ml]] — synthetic data as privacy alternative
+- [[2026-05-30-nato-russia-gray-zone-war]] — deepfake deployment in information operations

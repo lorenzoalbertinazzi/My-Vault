@@ -325,3 +325,20 @@ The parallel between LLM inference and human cognition extends to computational 
 - [[Finance/macroeconomics-101]] — Energy economics of AI inference; AI compute as strategic resource with macro implications
 - [[Tech & AI/neuromorphic-computing]] — Spike-based computation approaching thermodynamic efficiency limits
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — AI chip export controls and inference optimization as strategic competitive dimensions
+
+---
+
+### June 2026 Vault Cross-Links: Inference Optimization as the Economic Backbone of AI
+
+**LLM Inference ↔ Finance:** The economics of AI deployment are fundamentally inference economics. OpenAI's API revenue depends on reducing inference cost per token — the business model only scales if inference cost falls faster than demand grows. The Jevons Paradox applies: as LLM inference becomes cheaper (driven by KV-cache optimization, quantization, speculative decoding), demand for LLM services increases faster, with the net effect that total compute spend on inference is *increasing* despite per-token cost decreasing. For financial services firms, inference cost is the primary variable cost of AI-powered products — firms that achieve 10× inference efficiency have 10× lower marginal cost of AI services, a sustainable competitive advantage. See [[macroeconomics-101]] for the Jevons Paradox economics and [[private-equity-and-venture-capital]] for the AI infrastructure investment thesis.
+
+**LLM Inference ↔ Geopolitics:** Inference optimization is a key mechanism through which China partially compensates for chip export controls. NVIDIA H100/H800 export restrictions limit Chinese AI training compute, but inference optimization (distillation, quantization, MoE architecture — see [[mixture-of-experts-architecture]]) allows Chinese models to approach frontier performance on smaller compute budgets. DeepSeek's January 2025 release demonstrated that inference-efficient architectures could match GPT-4 class performance at 1/30th of the training cost — validating the China-as-innovator thesis under compute constraints. See [[2026-05-27-us-china-great-power-competition]] for the strategic implications.
+
+**LLM Inference ↔ Energy/Environment:** The energy footprint of LLM inference is a material sustainability concern. Training GPT-4 is estimated to have consumed 50+ GWh of electricity; inference across GPT-4's user base is estimated at 500-1,000 GWh annually — comparable to the electricity consumption of a medium-sized city. Inference optimization (reducing FLOPs per token) is the most environmentally impactful technical efficiency lever available. The connection to [[energy-transition-finance-and-green-capital-markets]]: Microsoft, Google, and Amazon have all committed to matching AI compute energy consumption with renewable energy purchases, creating substantial demand for clean energy that is reshaping renewable energy procurement markets.
+
+**New wikilinks:**
+- [[llm-training-and-scaling-laws]] — training-inference efficiency tradeoffs
+- [[mixture-of-experts-architecture]] — MoE as inference-efficient architecture
+- [[macroeconomics-101]] — Jevons Paradox in AI compute economics
+- [[energy-transition-finance-and-green-capital-markets]] — AI energy demand and green procurement
+- [[2026-05-27-us-china-great-power-competition]] — DeepSeek inference efficiency as strategic response

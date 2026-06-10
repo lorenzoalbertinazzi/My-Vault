@@ -608,3 +608,21 @@ The transformer architecture's success across language, code, mathematics, scien
 - [[Finance/macroeconomics-101]] — AI labor market displacement and macroeconomic implications; structural unemployment risk
 - [[Psychology/self-determination-theory-intrinsic-motivation]] — Intrinsic motivation in knowledge work being augmented by AI; autonomy and meaning in AI-augmented roles
 - [[Geopolitics/2026-06-06-southeast-asia-asean-strategic-balance-2026]] — AI-driven labor market disruption in manufacturing-dependent ASEAN economies
+
+---
+
+### June 2026 Vault Cross-Links: Transformers as the Foundation of Modern AI
+
+**Transformers ↔ Finance:** Transformer architectures are being applied to every structured prediction problem in finance. Temporal Fusion Transformers (Lim et al., 2020) outperform LSTMs for multivariate time series forecasting in financial applications — with demonstrated improvements of 15-20% in quarterly earnings prediction accuracy and 25-30% in volatility forecasting. The self-attention mechanism's ability to capture long-range dependencies (ignoring intervening time steps) solves the key limitation of RNNs for financial time series: events from 3-6 months ago may be more relevant than recent events, and transformers naturally discover these non-local dependencies. See [[quantitative-finance-and-algorithmic-trading]] for production deployment and [[fixed-income-deep-dive]] for fixed income applications.
+
+**Transformers ↔ Science/Biology (cross-domain impact):** AlphaFold2 (Jumper et al., 2021, *Nature*) used transformer architecture to predict protein structure from amino acid sequence, solving a 50-year grand challenge in structural biology. AlphaFold3 (2024) extended this to protein-DNA and protein-small molecule interactions — revolutionizing pharmaceutical drug discovery. The connection to [[2026-06-06-global-antibiotic-resistance-crisis-2026]]: AlphaFold-predicted protein structures are accelerating the discovery of novel antibiotic targets by revealing previously unknown binding sites in antibiotic-resistant bacterial proteins. The transformer architecture has had greater impact in biology than in any other domain besides NLP.
+
+**Transformers ↔ Geopolitics:** Chinese AI research has produced transformer variants (Baidu's ERNIE, Tencent's HunyuanProLLM) that perform comparably to US models on Chinese-language tasks and increasingly on multilingual benchmarks. The geopolitical implication: China's AI capability is not lagging as much as US export controls on H100/H800 chips suggest — Chinese researchers are optimizing architecture efficiency to compensate for compute constraints. See [[llm-training-and-scaling-laws]] for training compute dynamics and [[2026-05-27-us-china-great-power-competition]] for the technology competition context.
+
+**New wikilinks:**
+- [[quantitative-finance-and-algorithmic-trading]] — temporal fusion transformers in finance
+- [[fixed-income-deep-dive]] — transformer models for yield curve analysis
+- [[llm-training-and-scaling-laws]] — scaling laws governing transformer capability
+- [[large-language-models-applications-and-limitations]] — transformers as LLM architecture
+- [[2026-06-06-global-antibiotic-resistance-crisis-2026]] — AlphaFold in antibiotic discovery
+- [[2026-05-27-us-china-great-power-competition]] — transformer architecture competition

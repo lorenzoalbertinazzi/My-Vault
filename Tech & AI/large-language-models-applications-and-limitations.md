@@ -175,3 +175,22 @@ OpenAI's o1 (2024) and its successors introduced a new scaling axis beyond model
 - [[Psychology/cognitive-biases]] — Sycophancy and cognitive biases in LLM behavior; automation bias in LLM adoption
 - [[Geopolitics/2026-05-30-nato-russia-gray-zone-war]] — LLM-enabled information warfare
 - [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — Current AI regulation developments affecting LLM deployment
+
+---
+
+### June 2026 Vault Cross-Links: LLMs as Universal Knowledge Tools with Systemic Limitations
+
+**LLMs ↔ Finance (June 2026):** LLM deployment in financial services has accelerated dramatically. Bloomberg's "BloombergGPT" (2023, retrained on 363B financial tokens) demonstrated domain-specific LLM superiority on financial NLP tasks. By 2026, every major financial institution has deployed LLM infrastructure for: compliance document review, earnings call analysis, credit memo generation, and client communication drafting. The productivity gains are quantified: Goldman Sachs reports 20-30% reduction in junior analyst document production time; JP Morgan's AI assistant reduces investment banking pitch preparation time by 40%. The [[quantitative-finance-and-algorithmic-trading]] note documents the signal generation applications; the [[wealth-management-and-family-office-strategies]] note covers client communication automation.
+
+**LLMs ↔ Geopolitics (June 2026):** LLMs are increasingly deployed in geopolitical intelligence analysis. OSINT analysis (processing thousands of news sources, social media, government documents) is now routinely LLM-augmented at major intelligence agencies. The limitation: LLMs excel at pattern recognition in text but struggle with the counterfactual reasoning and strategic deception detection that quality geopolitical analysis requires. Russia's information operations (see [[2026-05-30-nato-russia-gray-zone-war]]) have explicitly adapted to exploit LLM limitations: generating high-volume, lexically diverse disinformation that evades semantic similarity-based detection while pursuing consistent narrative goals that require semantic coherence analysis to identify.
+
+**LLMs ↔ Psychology (cognitive bias analogs):** The systematic "cognitive bias analogs" in LLMs — recency effects (overweight recent context), availability analogs (overrepresent common training patterns), anchoring effects (first tokens disproportionately influence outputs) — are increasingly studied using the same methodologies applied to human cognitive bias research. This has created a new subfield of "LLM psychology" that borrows concepts, measures, and theoretical frameworks from human cognitive science. See [[cognitive-biases]] for the human baseline and [[behavioral-finance-and-investor-psychology]] for specific financial manifestations of both.
+
+**New wikilinks:**
+- [[quantitative-finance-and-algorithmic-trading]] — LLM-based signal generation
+- [[wealth-management-and-family-office-strategies]] — LLM client communication
+- [[cognitive-biases]] — LLM cognitive bias analogs
+- [[behavioral-finance-and-investor-psychology]] — financial LLM bias manifestations
+- [[2026-05-30-nato-russia-gray-zone-war]] — information operations exploiting LLM limitations
+- [[2026-05-30-global-ai-governance-race-to-regulate]] — LLM regulation 2026
+- [[retrieval-augmented-generation]] — RAG as memory augmentation for LLMs

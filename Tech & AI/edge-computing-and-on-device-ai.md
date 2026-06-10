@@ -318,3 +318,21 @@ The distinction between cloud AI (centralized processing, high latency, high ban
 - [[Geopolitics/2026-05-30-nato-russia-gray-zone-war]] — Autonomous weapons edge AI; drone navigation in contested electromagnetic environments
 - [[Psychology/stress-physiology-and-performance-optimization]] — Wearable HRV edge AI for real-time stress monitoring
 - [[Finance/wealth-management-and-family-office-strategies]] — Wearable health AI in executive wellness programs; biometric monitoring infrastructure
+
+---
+
+### June 2026 Vault Cross-Links: Edge AI as Distributed Intelligence Infrastructure
+
+**Edge AI ↔ Geopolitics/Military (June 2026):** Edge AI is the critical enabler of autonomous military systems in GPS-denied environments. Ukrainian drone operations (see [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]]) rely on edge AI for navigation when GPS jamming makes satellite guidance unreliable — the drone's onboard computer vision and inertial navigation system maintain course using landmarks. DARPA's OFFSET (Offensive Swarm-Enabled Tactics) program is deploying edge AI in drone swarms that coordinate locally without cloud connectivity. The proliferation of edge-AI-enabled autonomous weapons is dramatically lowering the technical barrier to precision strike capability — making previously state-only capabilities accessible to non-state actors.
+
+**Edge AI ↔ Finance/Payments:** Edge AI in point-of-sale fraud detection (processing payment card data on the terminal rather than sending to cloud for analysis) reduces fraud decision latency from 100ms to <5ms while improving privacy by keeping transaction data on-device. Visa and Mastercard's edge fraud models deployed in 2025 process 500+ feature vectors per transaction locally, achieving 99.3% fraud detection accuracy with 0.1% false positive rate — outperforming the previous cloud-based systems at 1/10th the latency. See [[credit-markets-and-credit-risk]] for fraud risk context.
+
+**Edge AI ↔ Healthcare (June 2026):** Edge AI medical devices are transforming point-of-care diagnostics in low-resource settings. The WHO's AI Diagnostic Initiative deployed 15,000 AI-enabled handheld ultrasound devices (Butterfly Network iQ3 with edge AI interpretation) in 2025-2026 to frontline healthcare workers in sub-Saharan Africa and South Asia — enabling diagnosis of conditions (cardiac abnormalities, obstetric complications, pneumonia) that previously required specialist radiologist review. Connection to [[2026-06-06-global-antibiotic-resistance-crisis-2026]]: edge AI culture readers for point-of-care pathogen identification reduce unnecessary antibiotic prescribing by enabling rapid bacterial vs. viral differentiation.
+
+**New wikilinks:**
+- [[neuromorphic-computing]] — neuromorphic edge AI for ultra-low-power deployment
+- [[federated-learning-and-privacy-preserving-ml]] — federated learning for privacy-preserving edge training
+- [[credit-markets-and-credit-risk]] — edge AI in real-time fraud detection
+- [[stress-physiology-and-performance-optimization]] — wearable edge AI for biometric monitoring
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — edge AI in autonomous weapons
+- [[2026-06-06-global-antibiotic-resistance-crisis-2026]] — edge AI diagnostics in healthcare

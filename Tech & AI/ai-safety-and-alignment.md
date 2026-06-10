@@ -490,3 +490,22 @@ The AI safety problem is not merely technical but geopolitical: competitive pres
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — AI safety-capability race dynamics; US-China coordination problem on AI governance
 - [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — Global AI governance landscape; multilateral safety frameworks
 - [[Psychology/moral-psychology-and-ethical-decision-making]] — Moral psychology foundations for AI ethical constraints; constitutional AI as applied ethics
+
+---
+
+### June 2026 Vault Cross-Links: AI Safety as the Central Technical-Philosophical Challenge of Our Era
+
+**AI Safety ↔ Geopolitics (June 2026):** The AI safety-capability race has a geopolitical dimension that changes its fundamental dynamics. If the US slows frontier AI development for safety reasons while China proceeds without equivalent safety constraints, the security-safety tradeoff becomes existential for Western policymakers. See [[2026-05-27-us-china-great-power-competition]] for the strategic AI competition context. Conversely, catastrophically unsafe AI developed by any nation poses global risks — making AI safety a rare area where US-China coordination interests should theoretically align, but coordination is blocked by mutual distrust and competitive dynamics. The [[multipolar-world-order-and-future-of-global-governance]] note describes the multilateral governance challenges.
+
+**AI Safety ↔ Psychology:** Alignment research is increasingly drawing on moral psychology frameworks (see [[moral-psychology-and-ethical-decision-making]]). Constitutional AI (Anthropic, 2022) attempts to encode a set of values analogous to Kohlberg's post-conventional moral reasoning — principles derived from meta-level ethical reasoning rather than direct rule specification. The challenge: human moral reasoning exhibits Haidt's "moral foundations" diversity (loyalty, authority, purity alongside care and fairness), and different cultures weight these foundations differently. An AI system aligned to Western liberal moral intuitions may be misaligned for users in different cultural contexts. See [[evolutionary-psychology-and-human-behavior]] for the cross-cultural moral variation baseline.
+
+**AI Safety ↔ Finance:** "AI doom" risk is increasingly priced by institutional investors. A 2025 survey of institutional AI risk premiums found that 15-20% of LPs in AI-focused venture funds explicitly adjust their portfolio for catastrophic AI risk scenarios — the first time existential risk has been explicitly incorporated into institutional asset allocation models. Conversely, frontier AI safety research organizations (Anthropic, DeepMind safety team, Redwood Research) are increasingly well-funded from institutional and philanthropic sources, suggesting the market is partially pricing safety as genuine commercial and existential value. See [[private-equity-and-venture-capital]] for the VC investment context.
+
+**New wikilinks:**
+- [[ai-governance-and-regulation-frameworks]] — regulatory operationalization of safety
+- [[moral-psychology-and-ethical-decision-making]] — moral psychology foundations for alignment
+- [[evolutionary-psychology-and-human-behavior]] — cross-cultural moral variation in alignment
+- [[private-equity-and-venture-capital]] — AI safety investment thesis
+- [[2026-05-27-us-china-great-power-competition]] — safety-capability race geopolitical dynamics
+- [[multipolar-world-order-and-future-of-global-governance]] — multilateral AI safety governance
+- [[2026-05-30-global-ai-governance-race-to-regulate]] — 2026 safety regulation developments

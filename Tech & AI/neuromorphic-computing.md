@@ -291,3 +291,20 @@ The application of neuromorphic computing to high-frequency trading is commercia
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — Neuromorphic chips for ultra-low-latency HFT; event-driven spike processing for market data
 - [[Tech & AI/edge-computing-and-on-device-ai]] — Neuromorphic edge AI for ultra-low-power deployment
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Neuromorphic chip development as AI hardware frontier; DARPA SyNAPSE vs. China's Tianjic program
+
+---
+
+### June 2026 Vault Cross-Links: Neuromorphic Computing as Brain-Inspired Architecture
+
+**Neuromorphic ↔ Edge AI/Military:** Neuromorphic chips (Intel Loihi 2, IBM NorthPole, BrainScaleS 2) offer 100-1000× energy efficiency improvement over GPU inference for specific neural network architectures — making them ideal for always-on, battery-powered edge devices. Military applications: autonomous drone navigation that runs 24+ hours on a single battery charge using neuromorphic event-camera processing (detecting movement without redundant background frame capture). DARPA's SyNAPSE program has produced chips with ~2-4 watts power consumption for neural inference workloads that would require 50-100W on GPU equivalents. See [[edge-computing-and-on-device-ai]] and [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] for the weapons deployment context.
+
+**Neuromorphic ↔ Finance:** High-frequency trading requires neural inference latency measured in nanoseconds — a domain where neuromorphic chips' event-driven computation offers genuine advantages. Intel's Loihi 2 chip processes spike-based neural networks in 50-100ns (vs. 1-10μs for GPU neural inference), potentially enabling ML-based market microstructure analysis at HFT-relevant timescales. See [[quantitative-finance-and-algorithmic-trading]] for the HFT latency context.
+
+**Neuromorphic ↔ Neuroscience:** Neuromorphic computing is the most direct implementation of neuroscientific findings in hardware. Carver Mead (1990, who coined the term) designed analog circuits that implement biological neural dynamics — leaky integrate-and-fire neurons, synaptic plasticity, spike-timing-dependent plasticity. Studying neuromorphic chips' failure modes and emergent behaviors provides insights into biological neural function that pure computational neuroscience cannot — a cross-disciplinary feedback loop between [[dopamine-reward-systems-neuroscience]] and engineering.
+
+**New wikilinks:**
+- [[edge-computing-and-on-device-ai]] — neuromorphic chips for ultra-low-power edge AI
+- [[quantitative-finance-and-algorithmic-trading]] — neuromorphic HFT latency applications
+- [[dopamine-reward-systems-neuroscience]] — biological inspiration for neuromorphic design
+- [[machine-learning-fundamentals]] — neuromorphic as alternative to standard ML hardware
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — neuromorphic in autonomous weapons

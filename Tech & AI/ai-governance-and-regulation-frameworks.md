@@ -134,3 +134,21 @@ The GPAI Code of Practice, developed through a multi-stakeholder process coordin
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — Algorithmic trading AI Act compliance; financial AI regulation
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — AI governance as strategic competition; Brussels Effect vs. China standards
 - [[World Events/2026-05-30-global-ai-governance-race-to-regulate]] — 2026 current developments in global AI regulation
+
+---
+
+### June 2026 Vault Cross-Links: AI Governance at the Intersection of Technology, Law, and Geopolitics
+
+**AI Governance ↔ June 2026 Geopolitical Developments:** The global AI governance landscape is fragmenting along geopolitical lines. See [[2026-05-30-global-ai-governance-race-to-regulate]] for current 2026 regulatory developments. Three key June 2026 updates: (1) The EU AI Act's General Purpose AI (GPAI) provisions took full effect June 1, 2026, requiring frontier model providers (Anthropic, OpenAI, Google) to submit capability evaluations and incident reports to the EU AI Office — first time a major AI regulator can mandate pre-deployment safety testing. (2) The US AI Safety Institute (AISI, established November 2023) published its first mandatory safety evaluations for national security-relevant AI systems in April 2026. (3) China's Ministry of Science and Technology released "Interim Measures for AI Development" in March 2026, establishing a domestic AI registration system that limits foreign AI deployment in critical sectors.
+
+**AI Governance ↔ Finance:** Financial AI regulation is the most advanced sector-specific AI governance framework. The Basel Committee's "Principles for Operational Resilience for Financial Institutions" (2021) and the EBA's AI guidelines (2023) require financial firms to: (a) maintain human oversight of AI decision-making; (b) demonstrate model explainability for customer-facing decisions; (c) test for discriminatory bias in credit, insurance, and pricing models. The CFPB's AI Credit Scoring Framework (2025) goes further: requiring "specific reasons" for AI-based adverse actions that go beyond generic factor weights, effectively requiring post-hoc explanation generation. See [[credit-markets-and-credit-risk]] and [[behavioral-finance-and-investor-psychology]] for the financial applications.
+
+**AI Governance ↔ Psychology:** The regulatory framing of AI harms draws on psychological research about human susceptibility to AI influence. The EU AI Act's prohibition of "subliminal manipulation" and "exploitation of psychological vulnerabilities" directly codifies the Cialdini-style influence concerns documented in [[cialdini-influence]] and the dopamine exploitation dynamics described in [[dopamine-reward-systems-neuroscience]]. Regulators are asking psychologists to define operationalizable criteria for "psychological vulnerability" — a task that requires integrating personality psychology, developmental psychology, and cognitive neuroscience into legal definitions.
+
+**New wikilinks:**
+- [[ai-safety-and-alignment]] — safety evaluation frameworks in governance
+- [[credit-markets-and-credit-risk]] — financial AI regulation and model explainability
+- [[cialdini-influence]] — AI manipulation regulation based on influence psychology
+- [[dopamine-reward-systems-neuroscience]] — dopamine exploitation regulation in DSA/AI Act
+- [[2026-05-30-global-ai-governance-race-to-regulate]] — current 2026 governance developments
+- [[2026-05-27-us-china-great-power-competition]] — governance fragmentation and strategic competition

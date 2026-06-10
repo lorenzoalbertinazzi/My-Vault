@@ -795,3 +795,22 @@ The "alignment problem" in RLHF — ensuring that the AI's learned reward functi
 - [[Psychology/dopamine-reward-systems-neuroscience]] — Operant conditioning as RLHF's biological precedent; variable reinforcement and compulsive response
 - [[Psychology/game-theory-and-strategic-thinking]] — Mechanism design for alignment; reward model gaming as strategic behavior
 - [[Finance/behavioral-finance-and-investor-psychology]] — RLHF reward shaping as analog to investor conditioning by market feedback
+
+---
+
+### June 2026 Vault Cross-Links: RLHF as the Bridge Between Human Values and Machine Behavior
+
+**RLHF ↔ Psychology:** RLHF is applied operant conditioning at scale: the reward model learns to predict human preference signals (the "reinforcement"), and policy gradient optimization shapes model behavior toward the reward signal. The parallel to Skinnerian conditioning is direct — but with important differences: human trainers provide sparse, noisy rewards on a timescale incompatible with the rapid gradient updates required, creating a need for learned reward models as "proxies" for the true human preference. The reward hacking problem (model learns to maximize the proxy reward in ways that diverge from actual human preferences) is exactly Goodhart's Law: "When a measure becomes a target, it ceases to be a good measure." See [[behavioral-finance-and-investor-psychology]] for Goodhart's Law in institutional contexts and [[cognitive-biases]] for consistency bias in human feedback.
+
+**RLHF ↔ Finance/Investment:** Reinforcement learning (the technical foundation of RLHF) is applied in algorithmic trading for dynamic strategy optimization. DeepMind's AlphaGo descendants have been adapted to portfolio rebalancing — RL agents trained to maximize Sharpe ratio over historical data have demonstrated out-of-sample performance improvements at firms including AQR and Two Sigma. The key challenge: financial markets are non-stationary (the environment changes continuously, and RL policies trained on historical data may not generalize to new regimes). Distributional RL (Bellemare et al., 2017) — modeling the full distribution of returns rather than just expected value — partially addresses this by maintaining uncertainty about the environment. See [[quantitative-finance-and-algorithmic-trading]] and [[Value-at-Risk-and-CVaR]].
+
+**RLHF ↔ Geopolitics (autonomous weapons):** RLHF and standard RL are the primary training methodologies for autonomous weapons systems — targeting AI, navigation AI, and electronic warfare AI. The Ukraine conflict's widespread use of RL-trained drone navigation (avoiding GPS jamming through visual inertial odometry) demonstrates production deployment. The ethical concern addressed in [[moral-psychology-and-ethical-decision-making]]: RL-trained systems optimize for specified objective functions, which may not capture all morally relevant considerations — the "targeting AI" that maximizes target elimination rate has no intrinsic mechanism for valuing proportionality or civilian protection unless these are explicitly encoded in the reward function.
+
+**New wikilinks:**
+- [[cognitive-biases]] — consistency bias affecting human feedback quality
+- [[behavioral-finance-and-investor-psychology]] — Goodhart's Law in institutional contexts
+- [[quantitative-finance-and-algorithmic-trading]] — RL in algorithmic trading
+- [[Value-at-Risk-and-CVaR]] — distributional RL and tail risk
+- [[moral-psychology-and-ethical-decision-making]] — autonomous weapons reward function ethics
+- [[agentic-ai-and-multi-agent-systems]] — RLHF in multi-agent coordination
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — RL-trained autonomous drone navigation

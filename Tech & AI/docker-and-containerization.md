@@ -664,3 +664,20 @@ Container orchestration (Kubernetes) enables the granular resource allocation th
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — Container-based trading system architecture; elastic compute for risk calculations
 - [[Finance/hedge-funds-and-alternative-strategies]] — Hedge fund technology infrastructure; pod model isomorphism with containerized microservices
 - [[Psychology/psychology-of-leadership]] — Conway's Law and organizational design; technical architecture as leadership tool
+
+---
+
+### June 2026 Vault Cross-Links: Containerization as Operational Infrastructure
+
+**Docker ↔ Finance/AI Production:** Container infrastructure is the invisible backbone of every AI-powered financial service. When a hedge fund deploys a new ML model (see [[machine-learning-fundamentals]]), the model runs in a Docker container; when a bank processes 10 million credit decisions daily (see [[credit-markets-and-credit-risk]]), the inference service runs in containers orchestrated by Kubernetes (see [[kubernetes-and-container-orchestration]]); when a trading system needs to scale during market volatility spikes (see [[quantitative-finance-and-algorithmic-trading]]), container auto-scaling allows compute resources to expand in seconds. The DevOps standardization that Docker enabled is the prerequisite for the AI deployment speed that characterizes the 2026 financial technology landscape.
+
+**Docker ↔ Geopolitics/Critical Infrastructure:** Container security is a national security concern. The SolarWinds supply chain attack (2020) compromised containerized software distribution pipelines; the MOVEit vulnerability (2023) exploited container orchestration weaknesses in government agencies. As of 2026, US CISA's "Secure by Design" guidance explicitly addresses container security as a critical infrastructure protection requirement. See [[2026-05-30-nato-russia-gray-zone-war]] for Russian cyber operations targeting Western critical infrastructure.
+
+**Docker ↔ AI/ML Dev:** The reproducibility crisis in AI research is substantially addressed by container-based experiment management. Papers published with Docker containers showing exact experimental setups have 3-4× higher replication rates than those without — because the same software environment can be recreated identically across different compute infrastructure. The ML research community's shift to container-first development (Weights & Biases, MLflow, DVC all containerize workflows) has improved research reproducibility while also creating standardized deployment pipelines.
+
+**New wikilinks:**
+- [[kubernetes-and-container-orchestration]] — container orchestration extending Docker
+- [[machine-learning-fundamentals]] — containerized ML model deployment
+- [[quantitative-finance-and-algorithmic-trading]] — container infrastructure for trading systems
+- [[edge-computing-and-on-device-ai]] — lightweight containers for edge deployment
+- [[2026-05-30-nato-russia-gray-zone-war]] — container security in critical infrastructure defense

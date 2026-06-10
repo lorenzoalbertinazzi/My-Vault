@@ -500,3 +500,20 @@ Kubernetes has become the infrastructure standard for financial services cloud m
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — Kubernetes for trading infrastructure; elastic compute for risk model execution
 - [[Psychology/self-determination-theory-intrinsic-motivation]] — Developer autonomy through Kubernetes operator ownership; intrinsic motivation from operational control
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Cloud infrastructure sovereignty; Chinese Kubernetes alternatives and US cloud platform competition
+
+---
+
+### June 2026 Vault Cross-Links: Kubernetes as the Infrastructure Plane of Modern Computing
+
+**Kubernetes ↔ AI/Finance Production:** Every large-scale AI deployment in financial services runs on Kubernetes. The ML inference serving infrastructure for real-time credit scoring (see [[credit-markets-and-credit-risk]]) requires sub-100ms response at 10,000+ requests per second — exactly the high-availability, auto-scaling, load-balancing profile that Kubernetes provides. The major ML serving frameworks (TensorFlow Serving, TorchServe, Triton Inference Server) are all Kubernetes-native, making container orchestration the default production infrastructure for AI. See [[machine-learning-fundamentals]] and [[llm-inference-optimization]] for the AI deployment context.
+
+**Kubernetes ↔ Geopolitics/Sovereignty:** Cloud infrastructure sovereignty is a geopolitical concern that Kubernetes addresses through portability. European governments' "GAIA-X" initiative and France's "Sovereign Cloud" requirements mandate that government data remain on EU-controlled infrastructure — Kubernetes' cloud-agnostic architecture enables organizations to run identical workloads on any cloud provider or on-premises, making compliance with data sovereignty requirements technically feasible. See [[2026-05-27-us-china-great-power-competition]] for the US-China cloud platform competition context and [[federated-learning-and-privacy-preserving-ml]] for data sovereignty in AI.
+
+**Kubernetes ↔ Reliability/Psychology:** The "reliability engineering" culture that Kubernetes enables has a behavioral psychology dimension. Site Reliability Engineering (SRE) at Google, which pioneered Kubernetes, explicitly uses "error budgets" to balance reliability against velocity of development — a mechanism that transforms risk management from a compliance exercise into a quantitative incentive system. The psychological mechanism: giving engineers a concrete "budget" for unreliability creates healthy acceptance of imperfection and investment in reliability infrastructure rather than avoidance of deployment.
+
+**New wikilinks:**
+- [[docker-and-containerization]] — Docker as Kubernetes container runtime
+- [[llm-inference-optimization]] — Kubernetes for LLM serving infrastructure
+- [[machine-learning-fundamentals]] — production ML on Kubernetes
+- [[federated-learning-and-privacy-preserving-ml]] — federated learning infrastructure
+- [[2026-05-27-us-china-great-power-competition]] — cloud sovereignty competition

@@ -576,3 +576,21 @@ Prompt injection attacks — malicious instructions embedded in user-provided co
 - [[Geopolitics/2026-05-30-nato-russia-gray-zone-war]] — Prompt injection as information warfare vector; AI system security in government deployment
 - [[Psychology/cialdini-influence]] — Rhetorical influence principles in prompt design; ethos, pathos, logos as LLM elicitation tools
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — Prompt engineering for LLM-based financial analysis; automated research report generation
+
+---
+
+### June 2026 Vault Cross-Links: Prompt Engineering as Applied Communication Science
+
+**Prompt Engineering ↔ Psychology:** Effective prompt engineering is applied cognitive and communication psychology. Chain-of-thought prompting (Wei et al., 2022) works because it forces the LLM to generate intermediate reasoning steps — analogous to the "think aloud" protocol in cognitive psychology that improves problem-solving performance by slowing down System 1 automatic processing and engaging System 2 deliberate reasoning (see [[cognitive-biases]]). Role specification ("You are an expert financial analyst...") exploits the LLM's training distribution to invoke contextually appropriate knowledge — analogous to the priming effects studied in social psychology (see [[social-psychology-and-group-dynamics]]). The "few-shot" learning paradigm parallels [[cognitive-load-theory-and-learning]]'s worked examples effect.
+
+**Prompt Engineering ↔ Finance:** Financial prompt engineering is a specialized skill increasingly demanded in investment banking and asset management. Specific techniques: (1) "Financial statement generation" prompts that reliably extract structured data from natural language earnings releases; (2) "Sector analysis" prompts that generate systematic competitive analysis frameworks; (3) "Risk identification" prompts using counterfactual reasoning ("What would have to go wrong for this investment thesis to fail?"). The [[quantitative-finance-and-algorithmic-trading]] note documents systematic signal generation through NLP, while [[wealth-management-and-family-office-strategies]] covers client communication applications.
+
+**Prompt Engineering ↔ Geopolitics/Adversarial:** Prompt injection attacks — adversarial inputs designed to hijack AI system behavior — are a growing information security and geopolitical concern. State-level adversaries have demonstrated the ability to embed hidden instructions in web pages, documents, and images that LLM-based agents encounter during task execution, causing them to exfiltrate information or perform unauthorized actions. See [[2026-05-30-nato-russia-gray-zone-war]] for state-level AI system exploitation and [[ai-governance-and-regulation-frameworks]] for regulatory responses to adversarial AI attacks.
+
+**New wikilinks:**
+- [[large-language-models-applications-and-limitations]] — prompt engineering as LLM use skill
+- [[cognitive-biases]] — chain-of-thought as System 2 activation
+- [[cognitive-load-theory-and-learning]] — few-shot prompts as worked examples
+- [[quantitative-finance-and-algorithmic-trading]] — financial NLP prompt engineering
+- [[ai-governance-and-regulation-frameworks]] — prompt injection security regulation
+- [[2026-05-30-nato-russia-gray-zone-war]] — adversarial prompts in state-level AI attacks

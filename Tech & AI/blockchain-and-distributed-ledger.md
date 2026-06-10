@@ -311,3 +311,21 @@ The blockchain technology layer is separable from the decentralization philosoph
 - [[Finance/central-bank-digital-currencies-cbdc]] — CBDC architecture choices; blockchain-based digital currencies
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Crypto regulation as geopolitical battleground; China's CBDC vs. US crypto regulatory approach
 - [[Psychology/game-theory-and-strategic-thinking]] — Mechanism design in DeFi; governance attack game theory
+
+---
+
+### June 2026 Vault Cross-Links: Blockchain as Trustless Infrastructure
+
+**Blockchain ↔ Finance (June 2026):** Tokenization of real-world assets (RWA) is the most significant blockchain-finance development of 2025-2026. BlackRock's BUIDL fund ($1B+ AUM, tokenized money market fund on Ethereum) and Franklin Templeton's OnChain US Government Money Fund ($380M AUM) demonstrate institutional acceptance of blockchain settlement. The total RWA market reached $7.5B in on-chain tokenized value by mid-2026 (DeFiLlama data). The specific advantage: 24/7 settlement, fractional ownership, and programmable transfer conditions that traditional securities cannot offer. See [[securities markets topics]] and [[central-bank-digital-currencies-cbdc]] for the complementary CBDC infrastructure.
+
+**Blockchain ↔ Geopolitics:** North Korea's Lazarus Group has stolen $3.4 billion in cryptocurrency through exchange hacks and DeFi exploits since 2016, using crypto to fund its ballistic missile and nuclear weapons programs while circumventing SWIFT-based sanctions. See [[2026-05-30-north-korea-nuclear-russia-china-axis]] for the weapons proliferation context. The UN Security Council's resolution mechanisms cannot stop blockchain-based sanctions evasion — creating a fundamental tension between blockchain's censorship-resistance (a feature for legitimate users) and its utility for rogue state financing (a systemic risk for nonproliferation regimes).
+
+**Blockchain ↔ Democracy/Governance:** Blockchain-based voting is being piloted in several jurisdictions (West Virginia, Colorado for overseas military voters; Sierra Leone national elections in 2018) as a transparent, tamper-evident voting infrastructure. The tension: cryptographic security guarantees (blockchain provides) vs. coercion resistance (blockchain does not provide, as receipts that prove how you voted enable vote-buying). The current academic consensus (Chaum, 2022) is that end-to-end verifiable voting systems can provide both — but practical deployment remains limited. See [[cryptography-fundamentals-and-zero-knowledge-proofs]] for ZKP-based coercion-resistant voting designs.
+
+**New wikilinks:**
+- [[central-bank-digital-currencies-cbdc]] — CBDC vs. decentralized blockchain architecture
+- [[cryptography-fundamentals-and-zero-knowledge-proofs]] — ZKP applications in blockchain
+- [[credit-markets-and-credit-risk]] — DeFi credit markets and smart contract risk
+- [[2026-05-30-north-korea-nuclear-russia-china-axis]] — North Korea crypto sanctions evasion
+- [[2026-05-27-us-china-great-power-competition]] — crypto regulation as geopolitical battleground
+- [[geopolitical-risk-premium-and-markets]] — RWA tokenization and market infrastructure

@@ -622,3 +622,21 @@ The 2026 geopolitical landscape treats machine learning capability as a strategi
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — ML as strategic technology; chip export controls and AI capability competition
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — ML in systematic finance; factor discovery using deep learning
 - [[Psychology/memory-systems-and-learning-science]] — Biological memory systems paralleling ML architectures; catastrophic forgetting solutions
+
+---
+
+### June 2026 Vault Cross-Links: Machine Learning as Applied Mathematical Intelligence
+
+**ML ↔ Finance (June 2026 update):** The Bank of England's June 2026 survey found that 75% of major UK financial institutions deploy ML in live production operations — up from 53% in 2022. The fastest-growing application: real-time credit scoring (replacing FICO with ensemble models), now live at 8 of the 10 largest US credit card issuers. The accuracy improvement translates directly to P&L: a 1% improvement in default prediction reduces credit losses by approximately $2-4 billion annually for a large consumer bank. See [[credit-markets-and-credit-risk]] for the credit application and [[quantitative-finance-and-algorithmic-trading]] for the trading applications.
+
+**ML ↔ Geopolitics:** ML-powered weapons systems are reshaping military balance of power. The US DoD's Joint Artificial Intelligence Center (JAIC, now Chief Digital and Artificial Intelligence Office) is deploying ML for target recognition in Project Maven (restarted 2022 after initial Google withdrawal), logistics optimization, and maintenance prediction. Ukraine's use of ML-enhanced drone targeting (see [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]]) demonstrates that ML-enabled precision dramatically reduces the cost of effective military operations — creating asymmetric advantages that smaller, technically capable forces can leverage against conventionally superior adversaries.
+
+**ML ↔ Psychology (learning analogs):** The bias-variance tradeoff in ML — underfitting (too simple, high bias) vs. overfitting (too complex, high variance) — has a direct parallel in human learning theory. "Underfitting" in human cognition corresponds to schema formation without sufficient nuance; "overfitting" corresponds to memorizing specific examples without generalizable understanding. The regularization techniques that combat ML overfitting (L1/L2 penalties, dropout) have pedagogical analogs in [[cognitive-load-theory-and-learning]] (varying difficulty, spaced practice, interleaving) — both aim to build generalizable representations rather than context-specific recall.
+
+**New wikilinks:**
+- [[credit-markets-and-credit-risk]] — ML credit scoring applications
+- [[quantitative-finance-and-algorithmic-trading]] — ML in systematic finance
+- [[cognitive-load-theory-and-learning]] — bias-variance tradeoff pedagogy parallel
+- [[memory-systems-and-learning-science]] — ML learning architecture and human memory analogs
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — ML-enhanced drone warfare
+- [[ai-governance-and-regulation-frameworks]] — ML regulation and explainability requirements

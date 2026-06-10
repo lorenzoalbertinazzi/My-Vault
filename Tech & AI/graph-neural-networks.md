@@ -296,3 +296,20 @@ Financial transaction networks — where nodes are accounts/entities and edges a
 - [[Finance/credit-markets-and-credit-risk]] — Financial contagion network modeling; GNN for systemic risk assessment
 - [[Geopolitics/2026-05-28-usa-iran-conflict-2026-war-and-nuclear-negotiations]] — Sanctions evasion network detection; GNN-based OFAC compliance monitoring
 - [[Psychology/social-psychology-and-group-dynamics]] — Social network influence modeling; GNN for information cascade prediction
+
+---
+
+### June 2026 Vault Cross-Links: Graph Neural Networks for Relational AI
+
+**GNNs ↔ Finance (June 2026):** Financial networks are inherently graph-structured: banks (nodes) connected by interbank lending (edges), companies connected by supply chains, securities connected by cross-ownership. GNNs applied to these structures enable systemic risk detection — identifying which nodes are critical (too connected to fail) and how contagion would propagate through the network. The ECB's SNAP (Systemic Network Analysis Platform) uses GNNs to model European interbank exposure graphs in real-time, providing early warning of contagion risk that aggregate statistics miss. The connection to [[credit-markets-and-credit-risk]] and [[Value-at-Risk-and-CVaR]]: network-aware risk measures substantially outperform standalone counterparty risk measures for predicting systemic stress episodes.
+
+**GNNs ↔ Geopolitics/Sanctions:** The most commercially valuable GNN application in 2026 is sanctions compliance and financial crime investigation. GNNs applied to beneficial ownership graphs (networks of company ownership structures used to conceal illicit funds) can identify circular ownership patterns, unexpected connections between nominally unrelated entities, and suspicious clustering that indicates sanctions evasion or money laundering. Refinitiv's World-Check and Dow Jones Risk & Compliance have deployed GNN-based beneficial ownership analysis, processing 200M+ entity relationships. See [[2026-05-30-north-korea-nuclear-russia-china-axis]] for North Korea sanctions evasion context.
+
+**GNNs ↔ Drug Discovery:** GNNs applied to molecular graphs (atoms as nodes, chemical bonds as edges) have become the standard tool for drug-target interaction prediction. The connection to [[2026-06-06-global-antibiotic-resistance-crisis-2026]]: GNNs are used to predict which novel molecular structures will bind to bacterial proteins targeted for antibiotic development — dramatically accelerating the screening step that previously required synthesizing and physically testing thousands of compounds.
+
+**New wikilinks:**
+- [[credit-markets-and-credit-risk]] — systemic risk network analysis
+- [[Value-at-Risk-and-CVaR]] — network-aware risk measures
+- [[machine-learning-fundamentals]] — GNN within broader ML framework
+- [[2026-05-30-north-korea-nuclear-russia-china-axis]] — GNN sanctions evasion detection
+- [[2026-06-06-global-antibiotic-resistance-crisis-2026]] — GNN drug discovery

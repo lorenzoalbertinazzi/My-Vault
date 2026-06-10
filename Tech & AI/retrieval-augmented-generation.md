@@ -703,3 +703,22 @@ Financial applications of RAG are among the most commercially significant: Bloom
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — RAG for real-time financial data access; LLM-based research analyst augmentation
 - [[Finance/hedge-funds-and-alternative-strategies]] — Alternative data RAG pipelines; earnings call transcript retrieval for fundamental analysis
 - [[Psychology/memory-systems-and-learning-science]] — External memory systems and extended cognition; RAG as artificial episodic memory
+
+---
+
+### June 2026 Vault Cross-Links: RAG as the Infrastructure of Knowledge-Grounded AI
+
+**RAG ↔ Finance (June 2026):** RAG is the dominant architecture for financial AI applications because it solves the hallucination problem that makes pure LLMs unreliable for regulatory and compliance contexts. When an LLM generates financial regulatory guidance, errors can create legal liability — but a RAG system that retrieves specific regulatory text and generates responses grounded in it creates an auditable knowledge source. Bloomberg's BAsE (Bloomberg AI System for Enterprises) RAG architecture, deployed at 50+ financial institutions by 2026, processes 10,000+ financial documents daily to maintain a continuously updated knowledge base for compliance, research, and client advisory applications. See [[quantitative-finance-and-algorithmic-trading]] and [[credit-markets-and-credit-risk]] for the specific applications.
+
+**RAG ↔ Medicine/Crisis Response (June 2026):** The antibiotic resistance crisis (see [[2026-06-06-global-antibiotic-resistance-crisis-2026]]) is deploying RAG for clinical decision support: systems that retrieve the most current antibiotic resistance profiles from WHO's GLASS database, local hospital antibiograms, and recent clinical trial data to recommend optimal antibiotic regimens at the point of care. The WHO's AMR Action Fund (2026 annual report) documents that AI-assisted antibiotic stewardship programs using RAG architectures have reduced inappropriate antibiotic prescribing by 22-35% in pilot hospitals in Europe and Southeast Asia.
+
+**RAG ↔ Geopolitics:** Government intelligence agencies are deploying classified RAG systems to process high-volume OSINT (open-source intelligence) and provide analysts with retrieved-and-synthesized reports. The UK's GCHQ, US NSA, and multiple NATO intelligence services deployed classified document RAG systems in 2024-2025. The capability advantage: an analyst who previously could review 50-100 documents per day can now access synthesis from 5,000-10,000 documents, dramatically accelerating the intelligence analysis cycle. See [[2026-05-27-us-china-great-power-competition]] for the intelligence capability implications.
+
+**New wikilinks:**
+- [[vector-databases-and-embeddings]] — vector search as RAG retrieval infrastructure
+- [[large-language-models-applications-and-limitations]] — RAG as LLM augmentation
+- [[quantitative-finance-and-algorithmic-trading]] — RAG in financial research automation
+- [[credit-markets-and-credit-risk]] — RAG for compliance document analysis
+- [[2026-06-06-global-antibiotic-resistance-crisis-2026]] — RAG in antibiotic stewardship
+- [[2026-05-27-us-china-great-power-competition]] — RAG in intelligence analysis
+- [[memory-systems-and-learning-science]] — RAG as episodic memory architecture

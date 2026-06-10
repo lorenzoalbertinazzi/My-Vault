@@ -485,3 +485,21 @@ The scaling laws have direct implications for the largest capital allocation dec
 - [[Finance/macroeconomics-101]] — AI infrastructure investment as structural capex cycle; semiconductor and energy demand macroeconomic impacts
 - [[Finance/private-equity-and-venture-capital]] — AI infrastructure VC and hyperscaler investment; scaling bet as venture capital thesis
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Compute access as strategic capability lever; chip export controls targeting training compute
+
+---
+
+### June 2026 Vault Cross-Links: Scaling Laws as the Physics of AI Development
+
+**Scaling Laws ↔ Finance/Investment:** Understanding scaling laws is essential for AI investment valuation. The Chinchilla scaling law (Hoffmann et al., 2022) established that optimal model performance requires scaling training data and model size equally — producing a quantitative prediction of performance at any compute budget. This gives AI investors a principled basis for: (a) estimating the compute budget required to reach specific capability thresholds; (b) valuing frontier model providers based on their ability to raise and deploy capital efficiently at scale; (c) identifying the "compute frontier" — where the marginal return on additional training compute is still positive. The [[private-equity-and-venture-capital]] and [[macroeconomics-101]] notes cover the macro investment implications.
+
+**Scaling Laws ↔ Geopolitics:** The compute requirements implied by scaling laws make large-scale AI training an activity only a handful of actors globally can afford. GPT-4-class training costs $50-100M; GPT-5 class is estimated at $500M-$2B. This creates a de facto oligopoly in frontier model development — currently concentrated in the US (Anthropic, OpenAI, Google, Meta), with China (Baidu, Alibaba, Tencent, DeepSeek) as the only other nation with comparable capability. Export controls on H100/H800 chips directly attack the compute substrate for Chinese scaling, attempting to widen the capability gap before it closes. See [[2026-05-27-us-china-great-power-competition]] for the strategic context.
+
+**Scaling Laws ↔ Neuroscience:** The scaling law's prediction of emergent capabilities (qualitatively new abilities appearing at certain model scales) has a loose neuroscientific parallel: the human brain's capability curve is not smooth but exhibits phase transitions corresponding to the development of language (~18-24 months), abstract reasoning (~6-7 years), and formal operations (~12 years). These developmental phase transitions — long studied in cognitive development psychology (see [[cognitive-load-theory-and-learning]]) — are now being interpreted through the scaling law lens: they represent thresholds where sufficient neural connectivity enables qualitatively new information processing modes.
+
+**New wikilinks:**
+- [[llm-inference-optimization]] — inference efficiency as scaling law application
+- [[mixture-of-experts-architecture]] — MoE as efficient scaling approach
+- [[private-equity-and-venture-capital]] — scaling law as AI investment framework
+- [[cognitive-load-theory-and-learning]] — developmental phase transitions paralleling scaling emergences
+- [[2026-05-27-us-china-great-power-competition]] — compute frontier and AI capability race
+- [[macroeconomics-101]] — AI capex cycle and macroeconomic implications

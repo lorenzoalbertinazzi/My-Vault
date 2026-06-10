@@ -484,3 +484,20 @@ Zero-knowledge proofs (ZKPs) are transforming the privacy landscape of financial
 - [[Finance/central-bank-digital-currencies-cbdc]] — ZKP-based CBDC privacy architecture; selective disclosure for regulatory compliance
 - [[Tech & AI/blockchain-and-distributed-ledger]] — Cryptographic foundations of blockchain; ZKP applications in DeFi
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Cryptographic standards as geopolitical battleground; China's post-quantum standards competition
+
+---
+
+### June 2026 Vault Cross-Links: Cryptography as the Foundation of Digital Trust
+
+**Cryptography ↔ Geopolitics (June 2026):** Post-quantum cryptography (PQC) standardization is a geopolitical contest. NIST finalized its first PQC standards in August 2024 (CRYSTALS-Kyber for key encapsulation, CRYSTALS-Dilithium for digital signatures). China's OSCCA has standardized different PQC algorithms (SM2, SM9, SM3) creating incompatible national standards. The strategic consequence: if the post-quantum internet bifurcates along US vs. Chinese cryptographic standards, two incompatible secure communication ecosystems may emerge — with profound implications for cross-border commerce, diplomacy, and intelligence. See [[2026-05-27-us-china-great-power-competition]] and [[quantum-computing-architecture-and-applications]].
+
+**Cryptography ↔ Finance:** ZKP-based privacy in financial systems is moving from research to production. The BIS Innovation Hub's Project Aurora (2024) demonstrated ZKP-based AML/CFT compliance where transaction legitimacy can be proven to regulators without revealing transaction parties — a potential solution to the fundamental privacy-compliance tradeoff in [[central-bank-digital-currencies-cbdc]]. ZKP rollups (Ethereum's zkEVM ecosystem) are processing $15B+ in daily transaction volume as of June 2026 — demonstrating scalable, privacy-preserving financial infrastructure. See [[blockchain-and-distributed-ledger]] for the DeFi context.
+
+**Cryptography ↔ AI/LLMs:** Fully Homomorphic Encryption (FHE) — computing on encrypted data without decrypting — is moving toward practical AI inference applications. Microsoft SEAL and IBM HElib libraries now support neural network inference on encrypted data with 10-100× overhead (versus unencrypted inference), down from 10,000× overhead in 2019. This enables privacy-preserving AI services: a diagnostic AI can analyze encrypted medical data without ever seeing the patient's identity — directly addressing the privacy concerns in [[federated-learning-and-privacy-preserving-ml]].
+
+**New wikilinks:**
+- [[central-bank-digital-currencies-cbdc]] — ZKP-based CBDC privacy
+- [[blockchain-and-distributed-ledger]] — cryptographic foundations of blockchain
+- [[quantum-computing-architecture-and-applications]] — post-quantum cryptography necessity
+- [[federated-learning-and-privacy-preserving-ml]] — FHE for privacy-preserving AI
+- [[2026-05-27-us-china-great-power-competition]] — cryptographic standards as geopolitical battleground

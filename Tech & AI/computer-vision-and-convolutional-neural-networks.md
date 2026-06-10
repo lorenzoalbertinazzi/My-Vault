@@ -452,3 +452,21 @@ Computer vision applied to medical imaging is the area with the most validated c
 - [[Geopolitics/2026-05-27-us-china-great-power-competition]] — Surveillance technology exports; Chinese computer vision companies and authoritarian diffusion
 - [[Psychology/cognitive-biases]] — Automation bias in AI-assisted medical diagnosis; over-reliance on computer vision outputs
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — Chart pattern recognition using CNNs; technical analysis automation
+
+---
+
+### June 2026 Vault Cross-Links: Computer Vision as Universal Sensing Technology
+
+**Computer Vision ↔ Geopolitics (June 2026):** Satellite imagery analysis using CNNs has become the primary OSINT tool for real-time conflict monitoring. The [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] note's documentation of Ukrainian deep-strike campaigns relies substantially on Maxar/Planet Labs satellite imagery analyzed by computer vision models at Bellingcat and the Institute for the Study of War — enabling real-time battle damage assessment that was previously only available to intelligence services. Chinese military buildup in the South China Sea (see [[2026-06-06-south-china-sea-philippines-china-tensions-2026]]) is tracked via commercial satellite CV analysis showing rate of construction on artificial islands, identification of weapon system deployments, and supply chain monitoring.
+
+**Computer Vision ↔ Finance:** "Alternative data" satellite imagery analysis is now standard in commodity investment management. Computer vision models trained on satellite thermal infrared imagery can estimate oil storage levels at tank farms globally (by measuring oil-floating-on-water "shade signatures" in storage tanks), achieving 85-90% accuracy in estimating oil inventories 2-3 weeks before EIA weekly petroleum status reports are published. This information asymmetry creates trading edges worth $50-200M annually for the funds deploying it — but raises questions about market fairness when the same information is unavailable to retail investors. See [[real-assets-reits-and-commodities]] and [[quantitative-finance-and-algorithmic-trading]].
+
+**Computer Vision ↔ Medicine (June 2026):** AI radiology models trained on large imaging datasets (CheXpert: 224,316 chest X-rays; UK Biobank: 50,000+ MRI scans) now match or exceed radiologist accuracy on specific diagnostic tasks. The WHO has certified three AI radiology platforms for deployment in low-resource healthcare settings (Sub-Saharan Africa, South Asia) where radiologist access is severely limited — with early evidence showing CV-assisted diagnosis improving disease detection rates by 30-40% in underserved settings. This has direct implications for pandemic preparedness and the antibiotic resistance monitoring discussed in [[2026-06-06-global-antibiotic-resistance-crisis-2026]].
+
+**New wikilinks:**
+- [[real-assets-reits-and-commodities]] — satellite imagery for commodity analysis
+- [[quantitative-finance-and-algorithmic-trading]] — CV alternative data in quant finance
+- [[machine-learning-fundamentals]] — CNN architecture within broader ML
+- [[2026-06-06-russia-ukraine-summer-2026-deep-strikes-escalation]] — satellite CV for conflict monitoring
+- [[2026-06-06-south-china-sea-philippines-china-tensions-2026]] — satellite monitoring of militarization
+- [[2026-06-06-global-antibiotic-resistance-crisis-2026]] — AI diagnostics in healthcare

@@ -287,3 +287,21 @@ MoE models are extreme ensemble methods — combining multiple specialized model
 - [[Finance/factor-investing-and-smart-beta]] — MoE-inspired conditional factor activation; regime-dependent factor selection
 - [[Finance/quantitative-finance-and-algorithmic-trading]] — Ensemble methods in systematic trading; expert activation analogous to regime-conditional strategy selection
 - [[Psychology/personality-psychology-big-five]] — Cognitive specialization and individual differences; modular intelligence vs. general factor g
+
+---
+
+### June 2026 Vault Cross-Links: Mixture of Experts as Efficient Specialized Intelligence
+
+**MoE ↔ Finance:** The MoE architecture's specialization principle has direct financial portfolio analogs. Risk parity (see [[risk-parity-and-all-weather-portfolios]]) allocates across asset classes based on their risk contribution — each "expert" asset class handles different economic regimes. Factor investing (see [[factor-investing-and-smart-beta]]) routes different stock characteristics to different factor "experts" (value, momentum, quality). The routing mechanism in MoE — learning which expert should process which input — is structurally analogous to regime-conditional factor selection in quantitative finance. Both optimize performance by specializing components without losing the ability to handle diverse inputs.
+
+**MoE ↔ Geopolitics:** China's Mixture-of-Experts models (Mistral/DeepSeek MoE variants trained domestically) have achieved GPT-3.5 class performance at significantly lower compute costs than dense models — partially compensating for the H100 export restrictions. The MoE architecture is uniquely efficient for inference (only 10-15% of parameters are activated per token) while maintaining large total parameter counts — making it the strategic architecture for nations with compute-constrained training environments. See [[2026-05-27-us-china-great-power-competition]] for the strategic technology competition context and [[llm-inference-optimization]] for the inference efficiency connection.
+
+**MoE ↔ Neuroscience:** The MoE architecture has a compelling neural analogy: the brain's modular organization (different cortical regions specialized for vision, language, motor control, social cognition) is structurally similar to MoE's expert specialization. The gating mechanism (routing inputs to relevant experts) resembles the thalamo-cortical gating that selects which sensory information receives conscious attention. This architecture may be convergently optimal for general intelligence — both biological evolution and AI scaling have arrived at similar modular, gated architectures for handling diverse input types efficiently.
+
+**New wikilinks:**
+- [[llm-inference-optimization]] — MoE as inference-efficient architecture
+- [[llm-training-and-scaling-laws]] — MoE impact on scaling efficiency
+- [[factor-investing-and-smart-beta]] — regime-conditional factor routing as MoE analog
+- [[risk-parity-and-all-weather-portfolios]] — expert specialization in portfolio construction
+- [[neuromorphic-computing]] — biological modular architecture parallel
+- [[2026-05-27-us-china-great-power-competition]] — MoE as China's compute-efficient strategy
